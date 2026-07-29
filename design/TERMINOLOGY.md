@@ -62,7 +62,31 @@ The distinct, continuous metaphysical identity connecting all of its incarnation
 
 ## Soul Constellation
 
-A recurring pattern of relationships between souls across multiple lives.
+A persistent relational pattern among distinct souls, formed when meaningful reciprocal transformation is renewed across multiple incarnational contexts. It preserves connection without determining present roles or consent.
+
+## Constellation Thread
+
+The persistent relationship between two member souls, represented on each soul by its own history, Soul Imprints, and Relational Resonance Link without merging their identities or perspectives.
+
+## Constellation Pattern
+
+The full configuration of a Soul Constellation, including its member souls, Threads, recurring encounters, changing roles, tensions, and integrated transformations.
+
+## Constellation Recognition
+
+Awareness that another soul, current incarnation, or group belongs to a recurring Constellation Pattern. Recognition may be partial or one-sided and creates no present claim.
+
+## Constellation Convergence
+
+A causally valid situation in which current incarnations or other present expressions of member souls come into contact and the Constellation can become relevant.
+
+## Constellation Commons
+
+A consensual shared metaphysical meeting structure maintained through scoped Soul Gates among members of a recognized Soul Constellation. It connects separate Soul Spaces without merging them.
+
+## Constellation Release
+
+A member's current decision to end active participation in part or all of a Constellation Pattern without erasing shared history, world consequences, or the underlying Threads.
 
 ## Soul Depth
 

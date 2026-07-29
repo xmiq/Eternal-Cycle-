@@ -242,7 +242,7 @@ The current incarnation may normally narrow or revoke voluntary access. A visito
 
 Gods, World Spirits, Archive custodians, Weapon Souls, recurring souls, and other powerful beings receive no automatic exception. Power may support a valid method, but it does not create consent, a Resonance Basis, or unrestricted scope.
 
-A Gate does not merge souls, establish ownership, or create a permanent shared Soul Space. Any true shared domain requires its own explicit rule and the continuing agency of every participating soul.
+A Gate does not merge souls, establish ownership, or create a permanent shared Soul Space. A [Constellation Commons](SOUL_CONSTELLATIONS.md#constellation-commons-rules) is the defined shared meeting structure for recurring souls and requires its own formation rules and the continuing agency of every participant.
 
 ## Soul Intrusion
 
@@ -340,7 +340,7 @@ The GM should track only Regions and Constructs that matter to play. Soul Space 
 - **Reincarnation:** Persistent structure survives transition while current-life presentation and embodiment-linked features may change.
 - **Soul Titles:** Titles may shape symbols and reactions without becoming simple bonuses or automatic inhabitants.
 - **Retained instincts:** Instincts may be perceived and reconciled without being mistaken for Echoes or independent souls.
-- **Soul Constellations:** Recurring relationships may support Gates or future shared structures but do not compel entry or intimacy.
+- **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Recurring relationships may support Gates or a consensual Constellation Commons but do not compel entry, disclosure, or intimacy.
 - **Soul Weapons:** An intertwined Weapon Soul may maintain a consensual Region while remaining a distinct person.
 - **Akashic Archive:** Soul Space may host an established Archive interface, but it cannot create access or objective truth.
 - **Development and evolution:** Internal practice and interfaces remain subject to present-life effort, embodiment, and system-specific requirements.
@@ -407,6 +407,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Echoes](SOUL_ECHOES.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

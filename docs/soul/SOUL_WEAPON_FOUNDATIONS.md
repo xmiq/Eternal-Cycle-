@@ -46,4 +46,5 @@ If intertwining is incomplete, the awakened weapon may remain in the world. Futu
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Reincarnation](REINCARNATION.md)

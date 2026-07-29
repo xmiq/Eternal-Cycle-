@@ -101,7 +101,7 @@ The current incarnation makes present decisions and bears their consequences.
 
 - A Soul Echo may advise or influence but does not automatically control the incarnation.
 - A Weapon Soul remains a distinct person even after intertwining.
-- A Soul Constellation creates connection, not ownership or compulsory affection.
+- A [Soul Constellation](SOUL_CONSTELLATIONS.md) creates connection, not ownership or compulsory affection.
 - Memories of an old relationship do not restore its former legal, social, or emotional claims.
 - Copying memories, mannerisms, or skills does not by itself duplicate a soul.
 
@@ -159,7 +159,7 @@ Those questions belong to later Soul Engine rules, Reincarnation rules, or setti
 - **[Soul Echoes](SOUL_ECHOES.md)** preserve perspectives from completed incarnations without replacing current agency.
 - **[Soul Space](SOUL_SPACE.md)** provides the internal metaphysical environment in which parts of the soul may be encountered.
 - **Soul Titles** preserve identity-bearing recognition rather than simple numerical bonuses.
-- **Soul Constellations** preserve relational patterns without compelling present relationships.
+- **[Soul Constellations](SOUL_CONSTELLATIONS.md)** preserve recurring relational patterns without compelling present relationships or replacing world causality.
 - **Soul Weapons** persist through a bond between distinct souls.
 - **The Akashic Archive** may preserve or reveal records beyond one soul's personal history.
 - **The World Engine** receives the external consequences of each life even when the soul continues.
@@ -184,6 +184,7 @@ A hostile ritual tears at the bond between an incarnation and a deeply held Soul
 - [Reincarnation](REINCARNATION.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

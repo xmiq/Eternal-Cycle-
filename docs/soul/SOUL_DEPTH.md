@@ -185,7 +185,7 @@ Choosing timing, destination, or incarnation direction still requires Reincarnat
 - **[Soul Space](SOUL_SPACE.md):** Depth supports greater stability and complexity within the internal metaphysical world.
 - **Soul Titles:** Depth may support titles carrying broader or conflicting identity without turning them into bonuses.
 - **Retained instincts:** Depth helps distinguish, reconcile, and adapt instincts from different bodies.
-- **Soul Constellations:** Depth supports relationships that change form across many lives without compelling them.
+- **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Depth supports the complexity of relationships that change form across many lives without creating recognition, reunion, or consent.
 - **Soul Weapons:** Depth can sustain more complex intertwining while never replacing mutual trust or compatibility.
 - **Akashic Archive:** Depth limits how much world-deep truth can be integrated without severe harm.
 - **Development and skills:** Depth may qualify a soul for advanced combinations, but practice and system-specific requirements remain necessary.
@@ -235,6 +235,7 @@ A dragon inherits extraordinary natural power and dominates its territory withou
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

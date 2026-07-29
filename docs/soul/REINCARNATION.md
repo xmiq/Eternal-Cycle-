@@ -32,7 +32,7 @@ The agreed method used to determine the next valid incarnation. A mode controls 
 
 Possessing a soul does not by itself guarantee reincarnation.
 
-Capitalized **Reincarnation** is the soul-level capability that reliably carries continuity into another incarnation. Other beings may reincarnate through setting-specific laws, divine systems, Soul Constellations, or unknown causes, but those possibilities do not grant them the named capability.
+Capitalized **Reincarnation** is the soul-level capability that reliably carries continuity into another incarnation. Other beings may reincarnate through setting-specific laws, divine systems, [Soul Constellations](SOUL_CONSTELLATIONS.md), or unknown causes, but those possibilities do not grant them the named capability.
 
 Reincarnation may improve through meaningful use and soul development. Improvement may provide greater transition stability, broader awareness during Interlife, more influence over valid candidates, or better access to retained imprints. It does not award power merely for dying.
 
@@ -265,6 +265,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

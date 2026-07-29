@@ -38,7 +38,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Resonance
 - [x] Define Soul Echoes
 - [x] Define Soul Space
-- [~] Define Soul Constellations
+- [x] Define Soul Constellations
 - [~] Define Soul Titles
 - [~] Define retained instincts
 - [~] Define Akashic Archive

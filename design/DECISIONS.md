@@ -197,3 +197,39 @@ Forced entry must name its target, route, purpose, scope, resistance, risks, and
 ## D-049 — Soul Space Persists but Its Presentation Can Change
 
 Latent Soul Space and genuinely persistent Regions survive Reincarnation and World Resets. Embodiment-linked surfaces and symbols may dissolve or translate for a new incarnation. Damage and repair must follow actual soul-level causes; cosmetic destruction or restoration does not erase or heal the underlying structure.
+
+## D-050 — Constellation Formation Requires Recurrence and Reciprocal Transformation
+
+A Soul Constellation forms only when a relationship meaningfully and reciprocally transforms at least two distinct souls and is renewed or transformed in more than one incarnational context. Reciprocal transformation requires each soul to participate in responding to and redefining the relationship as an agent. A single meaningful life may establish genuine Relational Resonance Links, while one-sided interpretation or involuntary impact may leave consequences or Soul Wounds; none substitutes for reciprocal participation and recurrence.
+
+## D-051 — Constellations Preserve Patterns Rather Than Destiny
+
+A Soul Constellation preserves relational history and future potential without guaranteeing reunion, fixing roles, or compelling trust, affection, hostility, loyalty, forgiveness, obedience, or consent. Former legal, social, familial, or intimate claims do not automatically return in a current incarnation.
+
+## D-052 — Constellation Recognition Creates No Claim
+
+Recognition operates through target-specific Soul Resonance and may be partial or one-sided. It reveals only what the recognizing soul can validly access and does not make another member remember, reciprocate, disclose private information, or accept contact.
+
+## D-053 — Constellation Convergence Obeys Causality
+
+Member souls meet only through a valid world route. A Constellation may influence otherwise-valid Reincarnation candidates only when an explicit rule permits it; it cannot create impossible embodiments, bypass Reincarnation Mode, teleport participants, or replace World Engine causality.
+
+## D-054 — Group Constellations Preserve Individual Souls
+
+A group Constellation has recurring relational meaning as a group, and every member must reciprocally participate in and be transformed by that Pattern. It creates no collective soul, group mind, pooled progression, combined action economy, inherited membership, or majority authority over a member. Each Thread, permission, and effect remains specific to the affected souls.
+
+## D-055 — A Constellation Commons Connects Without Merging
+
+A Constellation Commons is a consensual shared meeting structure maintained through scoped Soul Gates. Each participant retains a separate Soul Anchor, private Soul Space, identity, and right to withdraw. A Commons grants no automatic mind reading, storage, time advantage, extra actions, resurrection, or unrestricted access.
+
+## D-056 — Release Preserves Agency Without Rewriting History
+
+Constellation Release may end present participation, close Gates, leave a Commons, or reject a former role without erasing memories, world consequences, or the underlying history. Permanent Thread severance requires an explicit soul-level rule, fair warning, meaningful resistance, and effects assessed separately for each participant.
+
+## D-057 — Constellations Resist Manufactured Recurrence
+
+Suicide, rapid reincarnation, stalking, confinement, repeated harm, reenactment, and engineered meetings do not form or strengthen a Soul Constellation by themselves. Growth follows genuine reciprocal transformation and integration rather than repetition, intensity, involuntary impact, or abuse.
+
+## D-058 — Membership Requires a Distinct Persistent Soul
+
+Reincarnating souls, persistent spirits, immortals, and awakened Weapon Souls may participate when they satisfy the formation rules. Soul Echoes, descendants, successors, copied memories, possessed bodies, and imitations do not inherit membership automatically, and a Soul Weapon bond does not create a Constellation by itself.

@@ -284,7 +284,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **[Soul Space](SOUL_SPACE.md):** Resonance reveals pathways, Regions, Constructs, visitors, and conflicts within the internal world.
 - **Soul Titles:** Resonance determines when identity-bearing recognition becomes active or relevant.
 - **Retained instincts:** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
-- **Soul Constellations:** Resonance permits recognition and voluntary interaction across recurring relationships.
+- **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Resonance permits recognition and voluntary interaction across recurring relationships without determining present roles.
 - **Soul Weapons:** Mutual Resonance supports awakening, intertwining, communication, and coordinated expression.
 - **Akashic Archive:** Resonance supplies a valid connection to a record while Depth limits safe integration.
 - **Skills and evolution:** Resonance may reveal or support dormant, crossover, hybrid, or hidden possibilities but never replaces their other requirements.
@@ -342,6 +342,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
