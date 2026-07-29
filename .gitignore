@@ -1,0 +1,17 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local tooling
+.env
+.env.*
+*.log
+
+# Campaign data must not enter the rules repository
+campaign/
+campaigns/
+saves/
+world-state/
+player-data/
