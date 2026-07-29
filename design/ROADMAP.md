@@ -34,7 +34,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 - [x] Define soul fundamentals
 - [x] Define reincarnation
-- [~] Define Soul Depth
+- [x] Define Soul Depth
 - [~] Define Soul Resonance
 - [~] Define Soul Echoes
 - [~] Define Soul Space

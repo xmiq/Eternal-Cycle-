@@ -6,7 +6,7 @@ This file is a non-canonical workshop. Record uncertainties, balance concerns, a
 
 - Should repeated choices within one species family change future candidate weighting?
 - Should a self-sacrificial Final Death influence candidates differently from an accidental death without becoming a farming bonus?
-- Can advanced soul development deliberately shorten, extend, or navigate Interlife?
+- Should Depth Horizons be directly visible to players, recognized only through in-world signs, or configurable by campaign tone?
 - How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
 - What prevents a soul from collecting unlimited weak skills?
 - Which actions permanently damage Soul Resonance?

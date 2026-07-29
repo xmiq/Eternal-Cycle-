@@ -81,3 +81,23 @@ Interlife may last from moments to Ages. The World Engine continues throughout t
 ## D-020 — Reincarnation Memory Is Layered
 
 Continuity, personal memory, practiced memory, body memory, and sealed memory may return differently. Total recall is not the default, but memory limits cannot arbitrarily erase protected progression.
+
+## D-021 — Soul Depth Is Qualitative Capacity
+
+Soul Depth measures how much meaning and complexity a soul can integrate coherently. It is not a statistic, currency, moral score, or universal measure of power.
+
+## D-022 — Deepening Requires Transformation and Integration
+
+Time, power, suffering, death, repetition, and collection do not create Soul Depth by themselves. A Deepening Event requires meaningful pressure, transformation, integration, and persistence.
+
+## D-023 — Depth Horizons Are Descriptive
+
+An ordinary soul begins within the Nascent Horizon unless an explicit origin rule establishes otherwise. Nascent, Rooted, Layered, Vast, Mythic, and World-Deep are qualitative Horizons describing demonstrated capacity. They have no fixed event or life counts and grant no automatic package of abilities.
+
+## D-024 — Soul Depth Persists and Is Not Spent
+
+Soul Depth normally persists through reincarnation and World Resets. It cannot be spent, transferred, stolen, or consumed under the default rules; Soul Wounds may suppress its expression without normally erasing it.
+
+## D-025 — Capacity Does Not Grant Access
+
+Soul Depth may make advanced memory, crossover, Interlife navigation, Echo relationships, or Archive contact survivable, but the relevant system must separately provide access, compatibility, and control.

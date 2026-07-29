@@ -46,7 +46,15 @@ A recurring pattern of relationships between souls across multiple lives.
 
 ## Soul Depth
 
-The maturity, complexity, and existential capacity of a soul. It is not simple power and cannot be reliably farmed.
+The qualitative maturity, complexity, and existential capacity of a soul. It persists, is not spent, and does not function as a universal power level.
+
+## Deepening Event
+
+An experience or connected sequence of experiences that permanently expands a soul's perspective, identity, or capacity after meaningful integration.
+
+## Depth Horizon
+
+A broad qualitative description of the complexity a soul can coherently integrate: Nascent, Rooted, Layered, Vast, Mythic, or World-Deep.
 
 ## Soul Imprint
 

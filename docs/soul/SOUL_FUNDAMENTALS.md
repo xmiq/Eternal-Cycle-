@@ -154,7 +154,7 @@ Those questions belong to later Soul Engine rules, Reincarnation rules, or setti
 
 - **Reincarnation** ends one incarnation, reconciles persistent imprints, and begins another.
 - **Development** determines how practice and experience become retained potential.
-- **Soul Depth** will govern existential capacity and the integration of complexity.
+- **[Soul Depth](SOUL_DEPTH.md)** governs existential capacity and the integration of complexity.
 - **Soul Resonance** will govern alignment and access among identity, history, and potential.
 - **Soul Echoes** preserve perspectives from completed incarnations without replacing current agency.
 - **Soul Space** provides the internal metaphysical environment in which parts of the soul may be encountered.
