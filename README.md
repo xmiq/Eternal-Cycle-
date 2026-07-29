@@ -32,8 +32,10 @@ Contributors and coding agents should read, in order:
 2. [`design/ROADMAP.md`](design/ROADMAP.md)
 3. [`design/DECISIONS.md`](design/DECISIONS.md)
 4. [`design/TERMINOLOGY.md`](design/TERMINOLOGY.md)
-5. [`docs/core/DESIGN_PHILOSOPHY.md`](docs/core/DESIGN_PHILOSOPHY.md)
+5. [`design/REPOSITORY_CONVENTIONS.md`](design/REPOSITORY_CONVENTIONS.md)
+6. [`design/UNRESOLVED_QUESTIONS.md`](design/UNRESOLVED_QUESTIONS.md)
+7. [`docs/core/DESIGN_PHILOSOPHY.md`](docs/core/DESIGN_PHILOSOPHY.md)
 
 ## Current Status
 
-The repository foundation is complete. The current roadmap target is the **Soul Engine**. Detailed subsystems should be expanded in roadmap order.
+The repository foundation is complete. The current phase is **Phase 1 — Soul Engine**, and the sole active task is **Define Soul Titles**.

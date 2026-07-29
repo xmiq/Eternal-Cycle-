@@ -6,7 +6,8 @@ Find contradictions, duplicated authority, undefined terms, broken links, and un
 
 ## Audit Checklist
 
-- Compare statements against `design/DECISIONS.md`.
+- Compare playable rules under `docs/` against `design/DECISIONS.md` without assuming either silently overrides the other.
+- Treat any unresolved conflict between playable rules and authoritative design governance as an internal-consistency failure.
 - Check capitalization and definitions against `design/TERMINOLOGY.md`.
 - Verify reset and persistence rules agree across systems.
 - Verify humans and monsters remain distinct where intended.

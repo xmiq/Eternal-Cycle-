@@ -1,0 +1,28 @@
+# Unresolved Questions
+
+This file records open design questions that have not yet become canonical decisions.
+
+## Blocking
+
+Questions that prevent a roadmap task from being completed.
+
+No blocking questions are currently recorded.
+
+## Non-Blocking
+
+Questions that may remain open while current work continues.
+
+- Should repeated choices within one species family change future candidate weighting?
+- Should a self-sacrificial Final Death influence candidates differently from an accidental death without becoming a farming bonus?
+- Should Depth Horizons be directly visible to players, recognized only through in-world signs, or configurable by campaign tone?
+- How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
+- What prevents a soul from collecting unlimited weak skills?
+- Can a Weapon Soul reject reincarnation with its wielder?
+- What prevents hidden evolution requirements from feeling arbitrary?
+- How should the World Engine choose detail level when simulating centuries?
+
+## Resolved
+
+Resolved questions should be moved here temporarily and their accepted outcomes recorded in `design/DECISIONS.md`.
+
+No resolved questions are currently awaiting archival.

@@ -2,16 +2,20 @@
 
 ## Current Target
 
-**Phase 1 — Soul Engine**
+**Current phase: Phase 1 — Soul Engine**
 
-Agents must work on the current target unless the user explicitly selects another task.
+**Current task: Define Soul Titles**
+
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Retained Instincts, the Akashic Archive, or the final Soul Engine audit until Soul Titles is complete unless the project owner explicitly changes the target.
 
 ## Status Legend
 
-- `[ ]` Not started
-- `[~]` In progress
-- `[x]` Complete
-- `[!]` Blocked or requires a design decision
+- `[ ]` — Not started
+- `[~]` — Intentionally started and substantially implemented
+- `[x]` — Complete, reviewed, linked, and internally consistent
+- `[!]` — Blocked by an unresolved design decision
+
+A passing mention, dependency, constraint, placeholder, or reference in another file does not make a later roadmap task `[~]`. When a task is `[!]`, its blocker must be recorded in [Unresolved Questions](UNRESOLVED_QUESTIONS.md).
 
 ## Phase 0 — Repository Foundation
 
@@ -39,21 +43,21 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Echoes
 - [x] Define Soul Space
 - [x] Define Soul Constellations
-- [~] Define Soul Titles
-- [~] Define retained instincts
-- [~] Define Akashic Archive
-- [~] Document interactions among soul systems
-- [~] Review exploit resistance and narrative consequences
+- [ ] Define Soul Titles
+- [ ] Define retained instincts
+- [ ] Define Akashic Archive
+- [ ] Document interactions among soul systems
+- [ ] Review exploit resistance and narrative consequences
 
 ## Phase 2 — Development System
 
 - [~] Define development philosophy
-- [~] Define physical development
-- [~] Define skill development
+- [ ] Define physical development
+- [ ] Define skill development
 - [ ] Define profession development
 - [ ] Define magical development
-- [~] Define social development
-- [~] Define species development
+- [ ] Define social development
+- [ ] Define species development
 - [~] Define retained Stat XP
 - [~] Define diminishing returns
 - [ ] Define mastery thresholds
@@ -62,8 +66,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 ## Phase 3 — Skill Engine
 
-- [~] Define human skill trees
-- [~] Define monster skill trees
+- [ ] Define human skill trees
+- [ ] Define monster skill trees
 - [~] Define crossover through Reincarnation
 - [ ] Define adaptive skill creation
 - [ ] Define skill evolution
@@ -75,13 +79,13 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 ## Phase 4 — Monster Evolution
 
-- [~] Define monster ecology
+- [ ] Define monster ecology
 - [ ] Define species stages
-- [~] Define branching evolution
-- [~] Define hidden evolution conditions
+- [ ] Define branching evolution
+- [ ] Define hidden evolution conditions
 - [ ] Define mutations
 - [ ] Define hybrid evolutions
-- [~] Define retained instincts
+- [ ] Define retained instincts
 - [ ] Define apex monsters
 - [ ] Define monster civilizations
 - [x] Create evolution-tree template
@@ -104,11 +108,11 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [~] Define soul intertwining
 - [~] Define weapon personalities
 - [~] Define weapon evolution
-- [~] Define Weapon Echoes
+- [ ] Define Weapon Echoes
 - [~] Define Legacy Weapons
 - [ ] Define compatibility
 - [ ] Define avatars
-- [~] Define unconventional Soul Weapons
+- [ ] Define unconventional Soul Weapons
 
 ## Phase 7 — Magic
 
@@ -126,14 +130,14 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 ## Phase 8 — World Engine
 
 - [x] Define Rule Zero
-- [~] Define world-state variables as rules, not campaign data
+- [ ] Define world-state variables as rules, not campaign data
 - [~] Define causal event chains
 - [ ] Define populations
 - [ ] Define resources and food
 - [ ] Define economies
-- [~] Define ecology and migration
+- [ ] Define ecology and migration
 - [ ] Define faction behaviour
-- [~] Define war and unrest
+- [ ] Define war and unrest
 - [ ] Define disease evolution
 - [ ] Define technology and magical advancement
 - [ ] Define dungeon activity
@@ -159,7 +163,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 ## Phase 10 — Templates and Validation
 
 - [ ] Character template
-- [~] Species template
+- [ ] Species template
 - [x] Evolution-tree template
 - [ ] Skill template
 - [ ] Soul Weapon template

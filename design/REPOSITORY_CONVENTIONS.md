@@ -1,0 +1,45 @@
+# Repository Conventions
+
+## Authority and Material
+
+- Files under `docs/` contain playable canonical rules unless explicitly labelled otherwise.
+- `design/DECISIONS.md` contains authoritative design governance and records accepted project decisions.
+- `design/TERMINOLOGY.md` defines canonical vocabulary.
+- `design/ROADMAP.md` controls task scope and implementation status.
+- `design/UNRESOLVED_QUESTIONS.md` records open design questions and is not canonical rules text.
+- `design/DEVELOPER_NOTES.md` is a non-canonical workshop for balance concerns, alternatives, and experiments.
+- Files under `templates/` define reusable formats but contain no live campaign data.
+- Files under `agents/` guide AI contributors and are not game rules.
+
+Playable rules and design governance have different responsibilities. Files under `docs/` do not silently override `design/DECISIONS.md`, and `design/DECISIONS.md` does not silently rewrite playable rules. Any conflict between them must be identified and resolved in both places before the affected document or task can be considered internally consistent.
+
+When resolving a conflict, record any newly accepted governance outcome in `design/DECISIONS.md`, update the affected playable rules under `docs/`, and verify terminology and related links in the same focused change.
+
+## Document Structure
+
+System documents should normally include:
+
+1. Purpose
+2. Core rule
+3. Terms
+4. Procedure or lifecycle
+5. Interactions
+6. Limits and failure states
+7. Examples
+8. Related documents
+
+Open design questions belong in `design/UNRESOLVED_QUESTIONS.md` rather than being presented as playable rules.
+
+## Internal Links
+
+Use relative Markdown links. Do not duplicate another system's full rules merely to avoid linking.
+
+## Examples
+
+Examples illustrate rules but do not silently create new canonical exceptions.
+
+## Change Discipline
+
+When changing a foundational rule, inspect every document listed under its related documents and update the decisions log when the change is intentional and lasting.
+
+Before a document is considered complete, verify that it is reviewed, linked, consistent with authoritative decisions, and free of unresolved conflicts.
