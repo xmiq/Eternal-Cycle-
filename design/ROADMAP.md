@@ -33,7 +33,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 ## Phase 1 — Soul Engine
 
 - [x] Define soul fundamentals
-- [~] Define reincarnation
+- [x] Define reincarnation
 - [~] Define Soul Depth
 - [~] Define Soul Resonance
 - [~] Define Soul Echoes

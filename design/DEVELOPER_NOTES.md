@@ -4,6 +4,9 @@ This file is a non-canonical workshop. Record uncertainties, balance concerns, a
 
 ## Open Questions
 
+- Should repeated choices within one species family change future candidate weighting?
+- Should a self-sacrificial Final Death influence candidates differently from an accidental death without becoming a farming bonus?
+- Can advanced soul development deliberately shorten, extend, or navigate Interlife?
 - How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
 - What prevents a soul from collecting unlimited weak skills?
 - Which actions permanently damage Soul Resonance?

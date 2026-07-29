@@ -12,9 +12,25 @@ Independent growth in a particular domain. Development replaces a single univers
 
 A persistent psychic and spiritual remnant of a previous incarnation. Use **Soul Echo** on first reference.
 
+## Final Death
+
+The point at which an incarnation can no longer return through ordinary bodily recovery or any currently applicable established revival effect. Reincarnation begins only after Final Death.
+
+## Interlife
+
+The interval between Final Death and embodiment in the next incarnation.
+
 ## Reincarnation
 
 The transition of a persistent soul into a new life. Capitalize **Reincarnation** when referring to the named skill or system capability; use lowercase for the general phenomenon.
+
+## Life Reconciliation
+
+The transition process that determines what ends with an incarnation, what remains in the world, and what persists with the soul.
+
+## Reincarnation Mode
+
+The agreed method for determining the next valid incarnation: Emergent, Constrained Choice, or Directed.
 
 ## Incarnation
 

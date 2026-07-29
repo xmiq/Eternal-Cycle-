@@ -24,7 +24,7 @@ Humans and monsters normally possess separate progression trees. Reincarnation m
 
 ## D-006 — Persistent Soul Progression
 
-Bodies, ordinary statistics, equipment, wealth, social status, and reputation reset between lives. Skills, skill experience, Soul Weapons, Soul Echoes, Soul Resonance, Soul Depth, instincts, and retained Stat XP may persist according to their rules.
+Bodies, ordinary statistics, equipment, wealth, social status, and reputation reset between lives. Legitimately acquired skills, skill experience, and Stat XP persist as Soul Imprints even when inaccessible to the current body. Soul Weapons, Soul Echoes, Soul Resonance, Soul Depth, and instincts persist according to their rules.
 
 ## D-007 — Emergent Soul Weapons
 
@@ -61,3 +61,23 @@ Death, manufactured danger, killing, or consumption do not automatically create 
 ## D-015 — Soul Annihilation Is Exceptional
 
 Soul Strain, Soul Wounds, and extraordinary fragmentation may threaten persistent progression, but total soul annihilation is not a default consequence. Soul harm requires an established cause, fair warning appropriate to the threat, and an opportunity for resistance or response. A campaign must explicitly adopt any rule capable of ending soul continuity.
+
+## D-016 — Reincarnation Begins After Final Death
+
+Reincarnation begins only when currently applicable recovery and revival effects can no longer return the current incarnation. It cannot revive the former body, rewind events, or complete alongside a revival of that incarnation.
+
+## D-017 — Reincarnation Has Three Destinations
+
+Life Reconciliation classifies an incarnation's elements as ending with the body, remaining in the world, or persisting with the soul. Death does not transport ordinary assets or erase external consequences.
+
+## D-018 — Reincarnation Uses Valid Candidates
+
+Every new incarnation must have a plausible embodiment route, fit the current world state, satisfy soul compatibility, and meet any exceptional unlock conditions. Reincarnation Mode determines who chooses among valid candidates but cannot bypass those constraints.
+
+## D-019 — The World Continues During Interlife
+
+Interlife may last from moments to Ages. The World Engine continues throughout that interval, and World Resets or time skips preserve causal consequences rather than restoring a preferred past.
+
+## D-020 — Reincarnation Memory Is Layered
+
+Continuity, personal memory, practiced memory, body memory, and sealed memory may return differently. Total recall is not the default, but memory limits cannot arbitrarily erase protected progression.
