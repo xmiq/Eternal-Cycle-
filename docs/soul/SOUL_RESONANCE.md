@@ -105,7 +105,7 @@ A Link may form when a soul:
 - forms a relationship that changes one or more participants;
 - creates, protects, destroys, or transforms something with lasting personal meaning;
 - awakens or intertwines with a Weapon Soul;
-- participates directly in an event recorded by a Soul Echo or the Akashic Archive;
+- participates directly in an event remembered by a Soul Echo or recorded by the Akashic Archive;
 - accepts a Soul Title that genuinely describes its identity;
 - repeatedly responds to a place, oath, symbol, or purpose until it becomes integrated;
 - undergoes Reincarnation, a World Reset, or another explicit soul-level process.
@@ -280,7 +280,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **Soul Depth:** Depth determines how much active alignment the soul can safely integrate.
 - **Soul Integrity:** Integrity determines how coherently Resonance functions now.
 - **Reincarnation:** Resonance influences memory access, candidate compatibility, and advanced Interlife navigation.
-- **Soul Echoes:** Resonance governs when an Echo can be perceived, consulted, or expressed.
+- **[Soul Echoes](SOUL_ECHOES.md):** Resonance governs when an Echo can be perceived, consulted, or expressed.
 - **Soul Space:** Resonance reveals pathways, regions, symbols, visitors, and conflicts within the internal world.
 - **Soul Titles:** Resonance determines when identity-bearing recognition becomes active or relevant.
 - **Retained instincts:** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
@@ -340,6 +340,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Depth](SOUL_DEPTH.md)
+- [Soul Echoes](SOUL_ECHOES.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

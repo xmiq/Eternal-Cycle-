@@ -181,7 +181,7 @@ Choosing timing, destination, or incarnation direction still requires Reincarnat
 - **Soul Fundamentals:** Depth expands the complexity that can become integrated without replacing Soul Integrity.
 - **Reincarnation:** Depth persists and may support memory, stability, candidate compatibility, and Interlife awareness.
 - **Soul Resonance:** Resonance accesses and aligns potential that Depth can safely contain.
-- **Soul Echoes:** Depth supports clearer, more contradictory, and more cooperative Echo relationships.
+- **[Soul Echoes](SOUL_ECHOES.md):** Depth supports clearer, more contradictory, and more cooperative Echo relationships.
 - **Soul Space:** Depth supports greater stability and complexity within the internal metaphysical world.
 - **Soul Titles:** Depth may support titles carrying broader or conflicting identity without turning them into bonuses.
 - **Retained instincts:** Depth helps distinguish, reconcile, and adapt instincts from different bodies.
@@ -233,6 +233,7 @@ A dragon inherits extraordinary natural power and dominates its territory withou
 
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
+- [Soul Echoes](SOUL_ECHOES.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

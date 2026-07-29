@@ -8,9 +8,29 @@ A major historical era with its own civilizations, dominant powers, technologies
 
 Independent growth in a particular domain. Development replaces a single universal character level.
 
-## Echo
+## Soul Echo
 
-A persistent psychic and spiritual remnant of a previous incarnation. Use **Soul Echo** on first reference.
+The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.
+
+## Echo Core
+
+The historically rooted identity, memories, values, emotions, habits, and modes of thought preserved from a Soul Echo's source incarnation.
+
+## Echo Presence
+
+The current degree to which a Soul Echo can be perceived and participate: Dormant, Faint, Awakened, Advisor, Manifest, or Avatar.
+
+## Echo Chorus
+
+A coordinated presentation of several Soul Echoes that preserves their distinct identities and creates no additional soul.
+
+## Echo Overlay
+
+A cooperative state in which a Soul Echo lends perspective, memory context, or practiced timing while the current incarnation retains executive control.
+
+## Echo Delegation
+
+A bounded, mutually agreed transfer of executive control from the current incarnation to an Avatar Echo without making the Echo a separate soul or active incarnation.
 
 ## Final Death
 

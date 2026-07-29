@@ -10,7 +10,6 @@ This file is a non-canonical workshop. Record uncertainties, balance concerns, a
 - How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
 - What prevents a soul from collecting unlimited weak skills?
 - Can a Weapon Soul reject reincarnation with its wielder?
-- How much agency can a Manifest or Avatar Echo exercise?
 - What prevents hidden evolution requirements from feeling arbitrary?
 - How should the World Engine choose detail level when simulating centuries?
 

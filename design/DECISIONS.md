@@ -129,3 +129,35 @@ Incompatible or excessive alignment may cause Dissonance, fatigue, Soul Strain, 
 ## D-032 — Lasting Resonance Damage Requires a Named Cause
 
 Ordinary actions do not permanently damage Resonance. Any rule capable of lasting damage must identify the affected Link or part of the Profile, establish a soul-level cause, provide fair warning and meaningful resistance, and distinguish suppression, distortion, injury, and severance. Permanent severance is never a default consequence.
+
+## D-033 — Every Completed Incarnation Normally Forms One Echo
+
+Life Reconciliation forms one Soul Echo for each incarnation that reaches Final Death. Revival does not create an Echo, and multiple Echoes from one life require an explicit fragmentation rule. Brief or cognitively limited lives form correspondingly sparse Echoes rather than gaining invented knowledge or maturity.
+
+## D-034 — An Echo Preserves a Reconciled Perspective
+
+A Soul Echo is formed from the completed life as a whole rather than from a perfect scan of its final instant. It preserves a bounded first-person perspective and is neither an objective record, a separate soul, nor another active incarnation. The current incarnation retains primary agency.
+
+## D-035 — Echo Presence Is Conditional
+
+Dormant, Faint, Awakened, Advisor, Manifest, and Avatar describe an Echo's current Presence rather than a universal power rank. Presence describes participation and remains distinct from the Resonance State of the Echo's Link. It depends on Resonance, Triggers, Soul Depth, Integrity, compatibility, and access, and may recede without erasing the Echo.
+
+## D-036 — Echo Agency Is Bounded
+
+An Echo may remember, advise, disagree, initiate permitted internal contact, and refuse voluntary cooperation. It cannot independently act in the world, create extra turns, confiscate protected Soul Imprints, take the body without consent, reincarnate separately, or replace the current incarnation.
+
+## D-037 — Avatar Delegation Requires Mutual Consent
+
+Echo Delegation requires informed agreement from the current incarnation and Avatar Echo, a defined scope and ending condition, compatible embodiment, sufficient capacity, and a safe return of control. It grants no extra body, actions, anatomy, authority, or exemption from consequences. Forced takeover requires an explicit hostile rule with fair warning and meaningful resistance.
+
+## D-038 — Echo Knowledge Retains Provenance
+
+The Echo Core retains historical memory from the source life. An Echo may later learn shared current context and draw new inferences, but those sources remain distinct and cannot retroactively grant knowledge its incarnation never possessed.
+
+## D-039 — Many Echoes Do Not Create More Actions
+
+An Echo Chorus may coordinate several perspectives without merging them or deciding by majority vote. Multiple Echoes provide no parallel world actions, passive training, unlimited internal labor, or additional active incarnations.
+
+## D-040 — Integration Preserves History
+
+Reconciling an Echo may change its relationship with the current incarnation or allow it to become quiet, but does not require obedience, fusion, or deletion. Ordinary disagreement cannot erase an Echo; permanent erasure requires an explicit soul-harm rule proportionate to the loss of persistent progression.

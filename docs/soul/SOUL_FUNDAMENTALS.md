@@ -156,7 +156,7 @@ Those questions belong to later Soul Engine rules, Reincarnation rules, or setti
 - **Development** determines how practice and experience become retained potential.
 - **[Soul Depth](SOUL_DEPTH.md)** governs existential capacity and the integration of complexity.
 - **[Soul Resonance](SOUL_RESONANCE.md)** governs alignment and access among identity, history, and potential.
-- **Soul Echoes** preserve perspectives from completed incarnations without replacing current agency.
+- **[Soul Echoes](SOUL_ECHOES.md)** preserve perspectives from completed incarnations without replacing current agency.
 - **Soul Space** provides the internal metaphysical environment in which parts of the soul may be encountered.
 - **Soul Titles** preserve identity-bearing recognition rather than simple numerical bonuses.
 - **Soul Constellations** preserve relational patterns without compelling present relationships.
@@ -182,6 +182,7 @@ A hostile ritual tears at the bond between an incarnation and a deeply held Soul
 
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Reincarnation](REINCARNATION.md)
+- [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

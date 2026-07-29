@@ -41,5 +41,6 @@ Persistence must create continuity, not immunity from consequence. Every death s
 - [Reincarnation](REINCARNATION.md)
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
+- [Soul Echoes](SOUL_ECHOES.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

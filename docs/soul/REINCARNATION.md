@@ -64,9 +64,10 @@ Classify each relevant element of the completed life into one of three outcomes:
 2. **Remains in the world:** ordinary possessions, consequences, creations, descendants, debts, institutions, reputation attached to the former identity, and physical remains.
 3. **Persists with the soul:** established Soul Imprints, soul-level systems, and bonds whose detailed rules permit persistence.
 
-Life Reconciliation may also:
+During Life Reconciliation, resolve the following when applicable:
 
-- form or change a Soul Echo;
+- form the incarnation's new Soul Echo under the Soul Echo rules;
+- change the access, later context, relationship, or condition of an existing Echo when established events warrant it;
 - recognize new Soul Imprints;
 - preserve legitimately acquired skills, Skill XP, and all legitimately earned Stat XP as Soul Imprints;
 - alter Soul Titles or Soul Constellations;
@@ -262,6 +263,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
+- [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
