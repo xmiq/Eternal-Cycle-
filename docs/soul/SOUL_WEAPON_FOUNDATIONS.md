@@ -40,3 +40,9 @@ An executioner's history might instead produce:
 ## Legacy Weapons
 
 If intertwining is incomplete, the awakened weapon may remain in the world. Future wielders must earn trust rather than automatically gaining ownership.
+
+## Related Documents
+
+- [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
+- [Soul Resonance](SOUL_RESONANCE.md)
+- [Reincarnation](REINCARNATION.md)

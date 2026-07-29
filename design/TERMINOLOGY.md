@@ -66,7 +66,35 @@ The coherence that allows a soul to remain one continuing identity while holding
 
 ## Soul Resonance
 
-The degree to which a soul harmonizes with its history, relationships, identity, and supernatural potential.
+Target-specific alignment through which a soul's real connections to history, relationships, identity, and supernatural potential can affect the present.
+
+## Dissonance
+
+Instability produced when active Resonance Links, identities, participants, or forms of expression cannot align coherently.
+
+## Resonance Basis
+
+The genuine shared cause that justifies a Resonance Link, such as lived identity, direct participation, integrated mastery, meaningful relationship, transformative creation, or inheritance recognized by a rule.
+
+## Resonance Link
+
+A persistent potential connection between a soul and a valid Resonance Target, justified by a Resonance Basis.
+
+## Resonance Profile
+
+The complete pattern of a soul's developed Resonance Links and attunements.
+
+## Resonance State
+
+A qualitative description of one Link or event: Silent, Stirring, Attuned, Harmonic, Concordant, or World-Bearing.
+
+## Resonance Target
+
+The specific history, imprint, person, bond, place, object, or world structure with which alignment is occurring.
+
+## Resonance Trigger
+
+A present condition that activates or strengthens a Resonance Link.
 
 ## Soul Space
 

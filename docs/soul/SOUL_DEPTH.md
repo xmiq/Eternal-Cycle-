@@ -232,6 +232,7 @@ A dragon inherits extraordinary natural power and dominates its territory withou
 ## Related Documents
 
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
+- [Soul Resonance](SOUL_RESONANCE.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

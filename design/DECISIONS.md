@@ -101,3 +101,31 @@ Soul Depth normally persists through reincarnation and World Resets. It cannot b
 ## D-025 — Capacity Does Not Grant Access
 
 Soul Depth may make advanced memory, crossover, Interlife navigation, Echo relationships, or Archive contact survivable, but the relevant system must separately provide access, compatibility, and control.
+
+## D-026 — Soul Resonance Is Target-Specific
+
+Soul Resonance is a Profile of distinct Links rather than one global score or resource pool. Each Link can develop, activate, fall Silent, or suffer Dissonance independently.
+
+## D-027 — Resonance Requires a Basis and Trigger
+
+Every Resonance event requires a specific Target, a genuine Resonance Basis for connection, and a present Trigger. Similarity, possession, imitation, consumption, or desire cannot create an unearned Link.
+
+## D-028 — Resonance Reveals Existing Potential
+
+Resonance may reveal, align, translate, or activate existing history and Soul Imprints. It cannot invent facts, grant unrelated knowledge, replace system requirements, or create missing anatomy.
+
+## D-029 — Relational Resonance Preserves Agency
+
+One-sided Resonance reveals only the experiencing soul's side of a Link. Mutual communication, shared techniques, private memory access, or entry into another Soul Space require consent or an explicit contested rule with meaningful resistance.
+
+## D-030 — Resonance Perspective Is Not Objective Truth
+
+Memories and impressions reached through Resonance retain the perspective and limitations of their source. Distortion requires an established cause and discoverable signs.
+
+## D-031 — Dissonance Is Conflict, Not Fuel
+
+Incompatible or excessive alignment may cause Dissonance, fatigue, Soul Strain, unreliable expression, or a properly established Soul Wound. Resolution may create growth, but repeatedly provoking Dissonance grants no automatic benefit.
+
+## D-032 — Lasting Resonance Damage Requires a Named Cause
+
+Ordinary actions do not permanently damage Resonance. Any rule capable of lasting damage must identify the affected Link or part of the Profile, establish a soul-level cause, provide fair warning and meaningful resistance, and distinguish suppression, distortion, injury, and severance. Permanent severance is never a default consequence.

@@ -9,7 +9,6 @@ This file is a non-canonical workshop. Record uncertainties, balance concerns, a
 - Should Depth Horizons be directly visible to players, recognized only through in-world signs, or configurable by campaign tone?
 - How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
 - What prevents a soul from collecting unlimited weak skills?
-- Which actions permanently damage Soul Resonance?
 - Can a Weapon Soul reject reincarnation with its wielder?
 - How much agency can a Manifest or Avatar Echo exercise?
 - What prevents hidden evolution requirements from feeling arbitrary?
