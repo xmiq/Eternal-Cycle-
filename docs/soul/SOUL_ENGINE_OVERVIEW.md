@@ -2,6 +2,8 @@
 
 The Soul Engine governs identity and progression that can persist across death.
 
+Its governing rules are defined in [Soul Fundamentals](SOUL_FUNDAMENTALS.md). Persistence listed here means survival across lives, not guaranteed immediate access.
+
 ## Persistent Elements
 
 Subject to their detailed rules, the following may persist:
@@ -35,6 +37,7 @@ Persistence must create continuity, not immunity from consequence. Every death s
 
 ## Related Documents
 
+- [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
