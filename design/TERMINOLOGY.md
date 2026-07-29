@@ -174,7 +174,31 @@ Temporary instability caused when a soul channels more memory, power, conflict, 
 
 ## Soul Title
 
-A persistent identity-bearing designation that influences recognition and metaphysical reactions without functioning as a simple numerical bonus.
+A persistent, identity-bearing Soul Imprint formed when a coherent pattern of meaningful action and consequence becomes integrated into a soul. It creates contextual recognition rather than flat numerical bonuses.
+
+## Title Basis
+
+The integrated history of deeds, choices, relationships, sacrifices, intent, and consequences that justifies a Soul Title.
+
+## Title Expression
+
+The way a Soul Title becomes perceptible or relevant in the current incarnation through context, Soul Resonance, behavior, Soul Space, or valid recognition.
+
+## Title Recognition
+
+Accurate awareness that a Soul Title belongs to a soul. Recognition reveals only what the observer's valid method can perceive and creates no claim over the bearer.
+
+## Title Reach
+
+The qualitative breadth across which a Soul Title's Basis and consequences remain relevant. Legendary Reach may span civilizations, species orders, Ages, World Resets, or world-scale structures without functioning as a power rank.
+
+## Title Witness
+
+A person, community, spirit, monster, institution, or established metaphysical system that directly registers part of a title-forming deed or its consequences. Public witness is not required for title formation.
+
+## Symbolic Authority
+
+Contextual standing that may justify being heard, tested, admitted, challenged, or considered for a role without granting legal office, ownership, mind control, or guaranteed obedience.
 
 ## Soul Wound
 

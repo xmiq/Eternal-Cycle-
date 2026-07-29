@@ -4,9 +4,9 @@
 
 **Current phase: Phase 1 — Soul Engine**
 
-**Current task: Define Soul Titles**
+**Current task: Define Retained Instincts**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Retained Instincts, the Akashic Archive, or the final Soul Engine audit until Soul Titles is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the Akashic Archive or the final Soul Engine audit until Retained Instincts is complete unless the project owner explicitly changes the target.
 
 ## Status Legend
 
@@ -43,8 +43,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Echoes
 - [x] Define Soul Space
 - [x] Define Soul Constellations
-- [ ] Define Soul Titles
-- [ ] Define retained instincts
+- [x] Define Soul Titles
+- [ ] Define Retained Instincts
 - [ ] Define Akashic Archive
 - [ ] Document interactions among soul systems
 - [ ] Review exploit resistance and narrative consequences

@@ -13,7 +13,7 @@ Subject to their detailed rules, the following may persist:
 - Soul Resonance;
 - Soul Depth;
 - Soul Echoes;
-- Soul Titles;
+- [Soul Titles](SOUL_TITLES.md);
 - retained instincts;
 - [Soul Constellations](SOUL_CONSTELLATIONS.md);
 - Soul Weapons and Weapon Echoes;
@@ -37,6 +37,7 @@ Persistence must create continuity, not immunity from consequence. Every death s
 
 ## Related Documents
 
+- [Soul Rules Index](README.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Depth](SOUL_DEPTH.md)
@@ -44,5 +45,6 @@ Persistence must create continuity, not immunity from consequence. Every death s
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
+- [Soul Titles](SOUL_TITLES.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

@@ -266,6 +266,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
+- [Soul Titles](SOUL_TITLES.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

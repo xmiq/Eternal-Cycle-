@@ -233,3 +233,31 @@ Suicide, rapid reincarnation, stalking, confinement, repeated harm, reenactment,
 ## D-058 — Membership Requires a Distinct Persistent Soul
 
 Reincarnating souls, persistent spirits, immortals, and awakened Weapon Souls may participate when they satisfy the formation rules. Soul Echoes, descendants, successors, copied memories, possessed bodies, and imitations do not inherit membership automatically, and a Soul Weapon bond does not create a Constellation by itself.
+
+## D-059 — Soul Titles Express Integrated Identity
+
+A Soul Title is a persistent, identity-bearing Soul Imprint formed from a coherent pattern of meaningful action and consequence. It is not a reward label, achievement, social office, reputation, class, skill, blessing, or package of numerical bonuses.
+
+## D-060 — Title Formation Is Qualitative and May Be Private
+
+Formation requires genuine history, a coherent identity pattern, meaningful integration, and real consequence. Meaning, repetition, sacrifice, intent, witness, and historical impact provide qualitative evidence rather than points or thresholds. One extraordinary identity-defining event may suffice, while trivial repetition, fame, declaration, or manufactured conditions do not. Public knowledge and public witnesses are not required.
+
+## D-061 — Title Expression and Reach Are Separate
+
+Dormant, Emerging, Recognized, and Embodied describe a Soul Title's relationship to the current incarnation. Legendary Reach describes Age-spanning or world-scale relevance rather than a fifth power rank. A Legendary-Reach title may be Dormant, and expression may recede without erasing the Title Basis.
+
+## D-062 — Soul Titles Create Context Rather Than Control
+
+A Soul Title may influence reactions, opportunities, affinities, Symbolic Authority, and narrative pressure only where its Title Basis is relevant. It grants no universal modifier, legal claim, obedience, guaranteed success, or compulsion of the bearer or observer. Any skill, evolution, ritual, blessing, or other effect that references a title must define its own remaining requirements and limits.
+
+## D-063 — Conflicting Titles Can Coexist and Transform
+
+Several genuine Soul Titles may coexist, including contradictory ones. Context and Soul Resonance determine relevance without declaring one title the soul's true alignment. Titles may evolve, merge, fracture, become ironic, or fall Dormant only through meaningful identity change and consequence; these processes cannot duplicate or stack the same Title Basis.
+
+## D-064 — Rejection and Concealment Do Not Rewrite History
+
+The current incarnation may reject or conceal a Soul Title's expression and expectations without erasing its genuine Title Basis. Corruption and redemption require sustained, integrated change or an explicit soul-level cause; slander, renaming, coercion, or one convenient act is insufficient.
+
+## D-065 — Soul Titles Are Not Inherited by Default
+
+Descendants, successors, worshippers, copied bodies, possessed hosts, and distinct Weapon Souls may inherit stories, reputation, offices, duties, or consequences but not another soul's identity-bearing title. A distinct soul must form its own Title Basis unless an exceptional transfer rule explicitly preserves identity, agency, consent or resistance, and meaningful cost.

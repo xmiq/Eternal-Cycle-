@@ -309,7 +309,7 @@ If an incarnation reaches Final Death during Echo Delegation, Life Reconciliatio
 - **Soul Integrity:** Integrity governs whether communication, Overlay, and Delegation remain coherent now.
 - **[Soul Space](SOUL_SPACE.md):** Manifest Echoes require an accessible internal environment and remain subject to its rules.
 - **Retained instincts:** An Echo may explain or contextualize an instinct, but does not replace the instinct system.
-- **Soul Titles:** An Echo may remember the identity behind a title without restoring its former worldly authority.
+- **[Soul Titles](SOUL_TITLES.md):** An Echo may remember the identity behind a title without restoring its former worldly authority.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Echo memories may reveal recurring relationships but cannot prove ownership, establish the other soul's perspective, or compel recognition.
 - **Soul Weapons:** A Soul Echo belongs to the reincarnating soul; a Weapon Echo belongs to the distinct Weapon Soul. They are not interchangeable.
 - **Akashic Archive:** An Echo is personal testimony, not an Archive record or objective historical source.
@@ -374,6 +374,7 @@ An Awakened Echo recognizes the ruins of its capital and demands that surviving 
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
+- [Soul Titles](SOUL_TITLES.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

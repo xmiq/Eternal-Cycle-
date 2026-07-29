@@ -338,7 +338,7 @@ The GM should track only Regions and Constructs that matter to play. Soul Space 
 - **Soul Integrity:** Integrity determines how coherently the Space functions now.
 - **Soul Echoes:** Manifest Echoes may inhabit accessible Regions while retaining bounded agency and knowledge.
 - **Reincarnation:** Persistent structure survives transition while current-life presentation and embodiment-linked features may change.
-- **Soul Titles:** Titles may shape symbols and reactions without becoming simple bonuses or automatic inhabitants.
+- **[Soul Titles](SOUL_TITLES.md):** Titles may shape symbols and reactions without becoming simple bonuses or automatic inhabitants.
 - **Retained instincts:** Instincts may be perceived and reconciled without being mistaken for Echoes or independent souls.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Recurring relationships may support Gates or a consensual Constellation Commons but do not compel entry, disclosure, or intimacy.
 - **Soul Weapons:** An intertwined Weapon Soul may maintain a consensual Region while remaining a distinct person.
@@ -408,6 +408,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
+- [Soul Titles](SOUL_TITLES.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

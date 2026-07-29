@@ -351,7 +351,7 @@ The GM should track only the Threads and past intersections that matter to play.
 - **[Soul Resonance](SOUL_RESONANCE.md):** Resonance governs each member's awareness, activation, communication, and Dissonance through specific Relational Links.
 - **[Soul Echoes](SOUL_ECHOES.md):** Echoes preserve first-person evidence of former relationships without restoring authority or objective truth.
 - **[Soul Space](SOUL_SPACE.md):** Soul Gates can connect members, while a Constellation Commons provides a consensual shared structure without merging private Spaces.
-- **Soul Titles:** A Constellation may satisfy a relational requirement or shape recognition only when the Title rules say so.
+- **[Soul Titles](SOUL_TITLES.md):** A Constellation may satisfy a relational requirement or shape recognition only when the Title rules say so.
 - **Retained instincts:** Instinctive familiarity or caution may act as a Trigger but does not prove identity by itself.
 - **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** Weapon Souls may become members while remaining distinct persons; intertwining alone does not create a Constellation.
 - **Akashic Archive:** Archive records may corroborate former intersections when valid access exists, but the Constellation grants no automatic Archive access.
@@ -425,6 +425,7 @@ A reincarnator repeatedly hunts another recurring soul, believing that dramatic 
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Space](SOUL_SPACE.md)
+- [Soul Titles](SOUL_TITLES.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
