@@ -2,7 +2,7 @@
 
 ## Current Target
 
-**Phase 0 — Repository Foundation**
+**Phase 1 — Soul Engine**
 
 Agents must work on the current target unless the user explicitly selects another task.
 
@@ -24,7 +24,7 @@ Agents must work on the current target unless the user explicitly selects anothe
 - [x] Create developer notes
 - [x] Create decisions log
 - [x] Create specialist agent roles
-- [~] Validate all existing repository content contains no campaign data
+- [x] Validate all existing repository content contains no campaign data
 
 ### Exit Criteria
 
@@ -34,37 +34,37 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 - [~] Define soul fundamentals
 - [~] Define reincarnation
-- [ ] Define Soul Depth
-- [ ] Define Soul Resonance
-- [ ] Define Soul Echoes
-- [ ] Define Soul Space
-- [ ] Define Soul Constellations
-- [ ] Define Soul Titles
-- [ ] Define retained instincts
-- [ ] Define Akashic Archive
-- [ ] Document interactions among soul systems
-- [ ] Review exploit resistance and narrative consequences
+- [~] Define Soul Depth
+- [~] Define Soul Resonance
+- [~] Define Soul Echoes
+- [~] Define Soul Space
+- [~] Define Soul Constellations
+- [~] Define Soul Titles
+- [~] Define retained instincts
+- [~] Define Akashic Archive
+- [~] Document interactions among soul systems
+- [~] Review exploit resistance and narrative consequences
 
 ## Phase 2 — Development System
 
 - [~] Define development philosophy
-- [ ] Define physical development
-- [ ] Define skill development
+- [~] Define physical development
+- [~] Define skill development
 - [ ] Define profession development
 - [ ] Define magical development
-- [ ] Define social development
-- [ ] Define species development
+- [~] Define social development
+- [~] Define species development
 - [~] Define retained Stat XP
-- [ ] Define diminishing returns
+- [~] Define diminishing returns
 - [ ] Define mastery thresholds
-- [ ] Define training and experiential growth
-- [ ] Define assessment without universal power levels
+- [~] Define training and experiential growth
+- [~] Define assessment without universal power levels
 
 ## Phase 3 — Skill Engine
 
-- [ ] Define human skill trees
-- [ ] Define monster skill trees
-- [ ] Define crossover through Reincarnation
+- [~] Define human skill trees
+- [~] Define monster skill trees
+- [~] Define crossover through Reincarnation
 - [ ] Define adaptive skill creation
 - [ ] Define skill evolution
 - [ ] Define skill fusion
@@ -75,16 +75,16 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 ## Phase 4 — Monster Evolution
 
-- [ ] Define monster ecology
+- [~] Define monster ecology
 - [ ] Define species stages
-- [ ] Define branching evolution
-- [ ] Define hidden evolution conditions
+- [~] Define branching evolution
+- [~] Define hidden evolution conditions
 - [ ] Define mutations
 - [ ] Define hybrid evolutions
-- [ ] Define retained instincts
+- [~] Define retained instincts
 - [ ] Define apex monsters
 - [ ] Define monster civilizations
-- [ ] Create evolution-tree template
+- [x] Create evolution-tree template
 
 ## Phase 5 — Human Development
 
@@ -101,14 +101,14 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 - [~] Define dormant Weapon Souls
 - [~] Define awakening conditions
-- [ ] Define soul intertwining
-- [ ] Define weapon personalities
-- [ ] Define weapon evolution
-- [ ] Define Weapon Echoes
-- [ ] Define Legacy Weapons
+- [~] Define soul intertwining
+- [~] Define weapon personalities
+- [~] Define weapon evolution
+- [~] Define Weapon Echoes
+- [~] Define Legacy Weapons
 - [ ] Define compatibility
 - [ ] Define avatars
-- [ ] Define unconventional Soul Weapons
+- [~] Define unconventional Soul Weapons
 
 ## Phase 7 — Magic
 
@@ -125,28 +125,28 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 
 ## Phase 8 — World Engine
 
-- [~] Define Rule Zero
-- [ ] Define world-state variables as rules, not campaign data
+- [x] Define Rule Zero
+- [~] Define world-state variables as rules, not campaign data
 - [~] Define causal event chains
 - [ ] Define populations
 - [ ] Define resources and food
 - [ ] Define economies
-- [ ] Define ecology and migration
+- [~] Define ecology and migration
 - [ ] Define faction behaviour
-- [ ] Define war and unrest
+- [~] Define war and unrest
 - [ ] Define disease evolution
 - [ ] Define technology and magical advancement
 - [ ] Define dungeon activity
 - [ ] Define World Stability
-- [ ] Define Ages and resets
-- [ ] Define simulation abstraction levels
+- [~] Define Ages and resets
+- [~] Define simulation abstraction levels
 
 ## Phase 9 — GM Toolkit
 
 - [~] Define GM responsibilities
-- [ ] Define consequence resolution
-- [ ] Define uncertainty handling
-- [ ] Define reincarnation generation
+- [~] Define consequence resolution
+- [~] Define uncertainty handling
+- [~] Define reincarnation generation
 - [ ] Create encounter generator
 - [ ] Create monster generator
 - [ ] Create NPC generator
@@ -159,8 +159,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 ## Phase 10 — Templates and Validation
 
 - [ ] Character template
-- [ ] Species template
-- [ ] Evolution-tree template
+- [~] Species template
+- [x] Evolution-tree template
 - [ ] Skill template
 - [ ] Soul Weapon template
 - [ ] Faction template

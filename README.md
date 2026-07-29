@@ -36,4 +36,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository is in its **Foundation** stage. The documents included here establish the operating rules and initial canonical framework. Detailed subsystems should be expanded in roadmap order.
+The repository foundation is complete. The current roadmap target is the **Soul Engine**. Detailed subsystems should be expanded in roadmap order.
