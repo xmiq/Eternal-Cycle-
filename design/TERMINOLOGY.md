@@ -118,7 +118,31 @@ A present condition that activates or strengthens a Resonance Link.
 
 ## Soul Space
 
-The internal metaphysical world belonging to a soul.
+The persistent internal metaphysical environment through which one soul's structures, connections, and condition may be perceived or approached. It is not a physical pocket dimension.
+
+## Soul Anchor
+
+The central orientation through which the active self recognizes itself, maintains continuity, and returns safely to embodied awareness or Interlife consciousness.
+
+## Soul Region
+
+A differentiated part of Soul Space associated with a history, identity, Soul Imprint, Echo, bond, injury, system, or present concern.
+
+## Soul Construct
+
+A symbolic structure within Soul Space that has system-level function only when another rule or genuine soul structure supports that function.
+
+## Soul Threshold
+
+A boundary governing discovery, entry, communication, or influence between Soul Regions or between a Region and a visitor.
+
+## Soul Gate
+
+A scoped connection that permits another being, soul, or external system to contact or enter part of a Soul Space under explicit access rules.
+
+## Soul Intrusion
+
+A contested attempt to enter, observe, alter, or remain within another soul's Space without its current consent. Intrusion requires an explicit rule and meaningful resistance.
 
 ## Soul Strain
 

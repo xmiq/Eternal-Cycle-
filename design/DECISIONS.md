@@ -161,3 +161,39 @@ An Echo Chorus may coordinate several perspectives without merging them or decid
 ## D-040 — Integration Preserves History
 
 Reconciling an Echo may change its relationship with the current incarnation or allow it to become quiet, but does not require obedience, fusion, or deletion. Ordinary disagreement cannot erase an Echo; permanent erasure requires an explicit soul-harm rule proportionate to the loss of persistent progression.
+
+## D-041 — Every Soul Has a Latent Soul Space
+
+Every soul possesses a Soul Space, but conscious access requires an established route and compatible Soul Depth, Integrity, Resonance, and circumstances. First access creates awareness and opportunity rather than automatic power or Deepening.
+
+## D-042 — Soul Space Is an Interface, Not a Pocket Dimension
+
+Soul Space presents genuine soul structures through an adaptive metaphysical environment. By itself it cannot store ordinary physical assets, transport items through Reincarnation, stop external time, create extra actions, or alter the outside world. Any exception requires another explicit rule.
+
+## D-043 — Soul Space Architecture Is Personal and Non-Ranked
+
+Voids, campfires, dens, libraries, castles, forests, webs, forges, cities, and abstract patterns are equally valid forms. Appearance, scale, ornament, brightness, and room count do not measure power, Soul Depth, or stability.
+
+## D-044 — The Soul Anchor Preserves Current Agency
+
+Every consciously accessible Soul Space has a Soul Anchor connecting the active self to embodiment or Interlife continuity. The current incarnation has primary authority within its Space but is not omniscient or omnipotent and cannot bypass sealed memories, independent persons, or system rules.
+
+## D-045 — Functional Constructs Must Be Earned
+
+Cosmetic shaping changes presentation without mechanical effect. A Soul Construct becomes a functional interface only when supported by a genuine Soul Imprint, Link, bond, injury, system, or other established cause. Imagined architecture cannot manufacture progression, healing, evolution, or Archive access.
+
+## D-046 — Internal Activity Uses Real Attention and Time
+
+External time continues while an embodied soul enters Soul Space, the body remains vulnerable, and deep internal activity limits outside awareness unless a separate rule explicitly changes those conditions. Soul Space grants no unlimited training, passive labor, accelerated recovery, or parallel action economy.
+
+## D-047 — Soul Gates Are Scoped and Consensual
+
+A Soul Gate requires a specific connection, Resonance Basis, Trigger, valid method, compatible awareness, defined scope, sufficient capacity, and informed consent from affected participants. Entry to one Region grants no access to the entire soul, and power alone does not exempt gods, World Spirits, or other beings from these rules.
+
+## D-048 — Soul Intrusion Requires an Explicit Contested Rule
+
+Forced entry must name its target, route, purpose, scope, resistance, risks, and consequences. Breaching one Threshold does not reveal or control the entire Soul Space, and lasting theft, rewriting, imprisonment, or destruction requires a separate proportionate soul-harm rule.
+
+## D-049 — Soul Space Persists but Its Presentation Can Change
+
+Latent Soul Space and genuinely persistent Regions survive Reincarnation and World Resets. Embodiment-linked surfaces and symbols may dissolve or translate for a new incarnation. Damage and repair must follow actual soul-level causes; cosmetic destruction or restoration does not erase or heal the underlying structure.

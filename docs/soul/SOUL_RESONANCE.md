@@ -281,7 +281,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **Soul Integrity:** Integrity determines how coherently Resonance functions now.
 - **Reincarnation:** Resonance influences memory access, candidate compatibility, and advanced Interlife navigation.
 - **[Soul Echoes](SOUL_ECHOES.md):** Resonance governs when an Echo can be perceived, consulted, or expressed.
-- **Soul Space:** Resonance reveals pathways, regions, symbols, visitors, and conflicts within the internal world.
+- **[Soul Space](SOUL_SPACE.md):** Resonance reveals pathways, Regions, Constructs, visitors, and conflicts within the internal world.
 - **Soul Titles:** Resonance determines when identity-bearing recognition becomes active or relevant.
 - **Retained instincts:** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
 - **Soul Constellations:** Resonance permits recognition and voluntary interaction across recurring relationships.
@@ -341,6 +341,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Echoes](SOUL_ECHOES.md)
+- [Soul Space](SOUL_SPACE.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
