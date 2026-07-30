@@ -4,9 +4,9 @@
 
 **Current phase: Phase 6 — Soul Weapons**
 
-**Current task: Define awakening conditions**
+**Current task: Define soul intertwining**
 
-Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define awakening conditions** unless the project owner explicitly changes the target. Do not begin soul intertwining, weapon personalities, weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapons until awakening conditions are complete unless the project owner explicitly changes the target.
+Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define soul intertwining** unless the project owner explicitly changes the target. Do not begin weapon personalities, weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapons until soul intertwining is complete unless the project owner explicitly changes the target.
 
 Phases 1 through 5 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -145,7 +145,7 @@ Phase 5 is complete only when Human Classes, Professions, Martial Traditions, Ma
 ## Phase 6 — Soul Weapons
 
 - [x] Define dormant Weapon Souls
-- [~] Define awakening conditions
+- [x] Define awakening conditions
 - [~] Define soul intertwining
 - [~] Define weapon personalities
 - [~] Define weapon evolution

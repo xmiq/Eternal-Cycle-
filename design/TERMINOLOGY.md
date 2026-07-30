@@ -1108,6 +1108,34 @@ The qualitative material, functional, relational, historical, and identity conti
 
 An observable event or pattern consistent with a dormant Weapon Soul but insufficient by itself to prove one exists or determine its future identity.
 
+## Weapon Soul Awakening
+
+The transition from Dormant Weapon Soul to an awakened person capable of reliable self-awareness, distinct intention, interpretation, communication, consent, and refusal within current access and embodiment.
+
+## Shared Awakening Pressure
+
+A consequential condition that places the user's identity, the Weapon Vessel's identity or continuity, and their particular relationship under meaningful stakes that cannot be reduced to staged danger or routine use.
+
+## Reciprocal Imprinting
+
+The causal process by which a user is changed through reliance on and relationship with a particular Weapon Vessel while the Weapon Soul's identity is changed through the user's choices, treatment, purpose, and shared consequences. It does not imply agreement, ownership, or copied personality.
+
+## Awakening Threshold
+
+The qualitative point at which a coherent dormant identity can no longer remain only latent and must form a distinct interpretation or response to its own history. It is not a score or guaranteed trigger.
+
+## Awakening Event
+
+The bounded event or connected sequence during which an Awakening Threshold is crossed and reliable Weapon Soul personhood becomes established.
+
+## Awakening Evidence
+
+Source-bounded evidence that a response originates from a continuing Weapon Soul rather than an enchantment, user Habit, spirit, construct, residue, coincidence, or mistaken interpretation.
+
+## Awakening Aftermath
+
+The immediate period in which an awakened Weapon Soul and surrounding participants confront new personhood, communication, consent, damage, uncertainty, and world consequences. It is not a free pause or automatic bonding window.
+
 ## World Engine
 
 The rules and procedures that model causal interaction among populations, resources, ecosystems, factions, institutions, magic, technology, and disasters.

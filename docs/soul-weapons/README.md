@@ -7,8 +7,9 @@ Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before th
 ## Canonical Reading Order
 
 1. [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md) defines how a distinct Weapon Soul may coalesce within a meaningful weapon or tool, what dormancy means, how Vessel Continuity works, and why dormancy grants no active capability.
+2. [Awakening Conditions](AWAKENING_CONDITIONS.md) defines the transition into Weapon Soul personhood through genuine shared pressure, mutual Resonance, Reciprocal Imprinting, interpretive necessity, and lasting consequence.
 
-The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to awakening, intertwining, personality, evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
+The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to intertwining, personality, evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
 
 ## Core Ownership
 

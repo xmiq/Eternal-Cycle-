@@ -466,3 +466,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Peaceful and noncombat Vessel Histories need continued representation so violence does not become the de facto efficient route to Weapon Soul formation.
 - Later awakening rules must decide how rapidly formation and awakening can follow one another without turning a dramatic event into a universal instant-soul recipe.
 - Unconventional Soul Weapon rules must revisit composite, distributed, body-grown, living, and partly replaceable vessels without duplicating or weakening the one-soul and Vessel Continuity safeguards.
+
+## Phase 6 Awakening Watchlist
+
+- Formation and awakening in one connected event should be tested with both compelling and weak examples so the exception preserves emergent ordinary weapons without becoming an instant-awakening shortcut.
+- Shared Awakening Pressure should remain legible in noncombat stories; repeated playtests should confirm that healing, making, refusal, and protection can be as mechanically credible as near-death battle.
+- Prepared trials need close review around where prudent safety ends and disposable or resettable stakes begin; planning should not be punished, while staged farming should remain ineffective.
+- Awakening Evidence should allow uncertain or nonverbal Weapon Souls to be recognized without making useful performance a personhood test or allowing every anomalous effect to claim agency.
+- The first-consent rules need to remain practical during urgent scenes: emergency cooperation may be necessary, but later intertwining must not treat urgency, silence, or gratitude as permanent consent.
+- Later personality rules should preserve surprise and self-interpretation instead of reducing an awakened person to the moral average of its Vessel History.

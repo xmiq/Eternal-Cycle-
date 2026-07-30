@@ -19,6 +19,8 @@ A Weapon Soul may awaken when wielder and weapon endure an intense, identity-def
 
 Routine use, manufactured danger, or repetitive farming is insufficient.
 
+The complete transition, noncombat catalysts, formation-and-awakening boundary, evidence rules, first agency, and aftermath are defined in [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md).
+
 ## Intertwining
 
 When awakening and resonance coincide, the wielder's soul and Weapon Soul may intertwine. Neither identity is erased. The bond allows the weapon to accompany the soul through reincarnation.
@@ -62,6 +64,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 
 - [Soul Weapons Index](../soul-weapons/README.md)
 - [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md)
+- [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

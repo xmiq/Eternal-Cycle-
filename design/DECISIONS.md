@@ -1785,3 +1785,35 @@ Before intertwining, a dormant Weapon Soul remains anchored to its Weapon Vessel
 ## D-446 — Dormant Evidence Is Source-Bounded and Observer-Relative
 
 Dormant Indications support investigation but do not prove personhood by attachment, silence, fame, or one supernatural anomaly. World truth, observer evidence, doctrine, belief, and uncertainty remain separate, while credible evidence of a Weapon Soul creates proportionate duties of caution without retroactively criminalizing ordinary good-faith use.
+
+## D-447 — Awakening Is a Personhood Transition
+
+Weapon Soul Awakening establishes reliable self-awareness, distinct intention, interpretation, communication, consent, and refusal within present access and embodiment. It grants personhood rather than a Skill, statistic, combat benefit, magical effect, evolution, manifestation, or automatic Soul Weapon bond.
+
+## D-448 — Awakening Requires Shared Causality
+
+A valid Awakening Event requires identity provenance, Shared Awakening Pressure, a particular user-vessel relationship, mutual Resonance with a genuine Basis, Reciprocal Imprinting, interpretive necessity, viable continuity, and lasting consequence. No one contributor may silently replace the rest.
+
+## D-449 — Near Death Is a Catalyst, Not a Requirement or Meter
+
+Fight-to-the-death and near-death events can support awakening when the complete conditions hold. Protection, healing, creation, repair, refusal, sacrifice, and other identity-defining crises may do the same. Danger, damage, fear, kills, suffering, and death are not awakening currency.
+
+## D-450 — Formation and Awakening May Share One Connected Event
+
+An ordinary weapon or tool may form a coherent Weapon Soul and awaken during one sustained transformative event when identity provenance and Reciprocal Imprinting genuinely arise before the Awakening Threshold. The claims remain causally distinct, and brief proximity to danger cannot create an instant soul.
+
+## D-451 — Awakening Precedes Consent to Intertwining
+
+Awakening and intertwining are separate transitions. Once awakened, a Weapon Soul may align, refuse, oppose, misunderstand, delay, or renegotiate; ownership, making, inheritance, custody, emergency cooperation, and silence do not establish consent or loyalty.
+
+## D-452 — Awakening Memory Is Vessel-Bounded
+
+An awakened Weapon Soul may interpret Vessel History through its own embodied perspective but does not gain perfect chronological surveillance, copied user thoughts, Soul Echoes, or unrestricted factual knowledge. Weapon Echoes remain a later distinct system.
+
+## D-453 — Interrupted Awakening Grants No Partial Power
+
+An interrupted or failed attempt may deepen history, alter Resonance, damage participants, or change future conditions through actual consequences. It grants no fractional voice, ability, evolution credit, guaranteed future success, or improved odds merely for suffering or repetition.
+
+## D-454 — Prepared Trials Are Judged by What Remains Real
+
+Knowledge of awakening and deliberate preparation do not automatically invalidate an event. Safeguards may reduce preventable harm while genuine uncertainty, stakes, relationship, choice, Reciprocal Imprinting, and consequence remain. Scripted, disposable, resettable, or unchanged trials cannot command personhood.

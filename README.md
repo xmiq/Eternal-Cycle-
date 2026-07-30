@@ -52,4 +52,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, and Human Classes & Professions phases are complete. The current phase is **Phase 6 — Soul Weapons**, and the sole active task is **Define awakening conditions**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, and Human Classes & Professions phases are complete. The current phase is **Phase 6 — Soul Weapons**, and the sole active task is **Define soul intertwining**.
