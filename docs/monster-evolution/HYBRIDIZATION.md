@@ -191,7 +191,7 @@ Magical does not mean unrestricted, stable, or Soul-owned.
 
 ### Artificial Hybrid
 
-Craft, surgery, alchemy, construction, selective templates, engineered organisms, or another designed process creates the form.
+Craft, surgery, [Alchemy](../magic/ALCHEMY.md), construction, selective templates, engineered organisms, or another designed process creates the form.
 
 Define:
 

@@ -808,6 +808,82 @@ Persistent magical, material, informational, environmental, relational, or legal
 
 A qualitative external Campaign Record describing one Enchantment and its current relationship with its Host without treating it as a universal item stat block.
 
+## Alchemy
+
+The controlled magical transformation, separation, combination, stabilization, or application of matter and its source-bound properties through traceable inputs, conditions, outputs, byproducts, and consequences.
+
+## Alchemical Objective
+
+The bounded material or embodied change an Alchemical Process is intended to produce, including intended use, exclusions, quality criteria, and acceptable failure.
+
+## Alchemical Process
+
+The causal sequence or dependency structure through which Reagents, Mana, tools, environment, timing, and skilled actions produce an Alchemical Batch.
+
+## Alchemical Recipe
+
+A documented or remembered model for attempting an Alchemical Process, including Reagents, provenance assumptions, preparation, stages, Process Windows, tools, Mana Relations, controls, expected outputs, byproducts, tests, and safety.
+
+## Reagent
+
+A material, substance, organism-derived product, magical medium, environmental sample, or other bounded input whose current properties perform one identified function in an Alchemical Process.
+
+## Reagent Provenance
+
+The source, history, species, environment, collection method, age, storage, processing, custody, and uncertainty relevant to a Reagent's current properties.
+
+## Reagent Property
+
+One physical, chemical, biological, magical, relational, or source-bound characteristic of a Reagent that matters to a specified Alchemical Process.
+
+## Reaction Medium
+
+The material, magical, environmental, or mixed context in which Reagents interact and through which heat, Mana, pressure, information, or other process state is transferred.
+
+## Alchemical Catalyst
+
+A material, tool, organism, source, spell, Enchantment, or other contributor that changes a reaction route or Process Window without becoming generic free energy or necessarily remaining unchanged.
+
+## Process Stage
+
+One causally distinct preparation, transformation, separation, stabilization, testing, or finishing part of an Alchemical Process.
+
+## Process Window
+
+The bounded range of time, temperature, pressure, concentration, Mana State, sequence, biological state, celestial condition, or other circumstance in which one Process Stage can produce its intended relation.
+
+## Alchemical Batch
+
+One actual set of outputs and byproducts produced through a particular Alchemical Process, Reagent provenance, equipment state, environment, and operator history.
+
+## Alchemical Yield
+
+The usable output obtained for one stated objective relative to the actual inputs, losses, byproducts, time, and quality of a Batch. Yield is process-specific rather than a universal efficiency score.
+
+## Alchemical Byproduct
+
+Any material, magical, biological, environmental, informational, or relational output not included in the Batch's intended usable product.
+
+## Batch Stability
+
+The degree to which a Batch preserves its relevant properties under stated storage, handling, time, environment, and use conditions.
+
+## Alchemical Exposure
+
+Contact between an alchemical product or byproduct and a body, material, environment, source, or system through a defined route, amount, timing, and duration.
+
+## Effective Dose
+
+The amount and delivery pattern of an alchemical product that reaches the relevant receiving system strongly enough to produce one intended effect under current conditions.
+
+## Alchemical Toxicity
+
+The source-specific harmful effect an alchemical product, impurity, concentration, interaction, route, or byproduct can produce in a stated receiver and context.
+
+## Alchemical Profile
+
+A qualitative external Campaign Record describing one Alchemical Process, Recipe, Batch, or application without treating products as universal consumable statistics.
+
 ## Environmental Compatibility
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.

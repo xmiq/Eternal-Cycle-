@@ -628,3 +628,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - The boundary among ordinary repair, Pattern repair, re-enchanting, Source Integration, Species Evolution, and Weapon Evolution needs repeated mixed-source tests.
 - Self-regulating and ambient-supply Enchantments must retain renewal, competition, ecology, and failure rather than becoming infinite utilities.
 - Enchantment identification should distinguish fixed response, construct, spirit, Weapon Soul, user Habit, and residue without making every object investigation exhaustive.
+
+## Phase 7 Alchemy Watchlist
+
+- Alchemical Profiles must remain process and Batch records rather than potion stat blocks, ingredient rarity ladders, or universal effect catalogs.
+- Reagent provenance, substitution, scale, Stability, and receiver embodiment need playtests that matter without turning every application into laboratory bookkeeping.
+- Consumption and harvesting examples must repeatedly enforce no trait, Skill, affinity, Soul, Mutation, or Evolution copying.
+- Medical alchemy must preserve diagnosis, consent, dose, interactions, monitoring, and aftercare instead of making products self-adjudicating cures.
+- Industrial scale and Reagent demand should create ecology, labor, trade, waste, monopoly, and political consequences through the World Engine.
+- Soul Weapon vessel treatment needs mixed-source tests separating material repair, Alchemy, Enchanting, Vessel Continuity, and Weapon Evolution.

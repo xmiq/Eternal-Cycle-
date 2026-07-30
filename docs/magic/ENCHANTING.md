@@ -159,7 +159,7 @@ Host Compatibility is not one score. A glass plate may hold a precise light Patt
 
 ### Host Preparation
 
-Preparation may clean, shape, temper, inscribe, grow, tune, align, stabilize, protect, or expose a Host interface. It may require ordinary craft, magical Skills, ritual work, alchemy, medicine, negotiation, or several owners.
+Preparation may clean, shape, temper, inscribe, grow, tune, align, stabilize, protect, or expose a Host interface. It may require ordinary craft, magical Skills, ritual work, [Alchemy](ALCHEMY.md), medicine, negotiation, or several owners.
 
 Preparation does not make the Host universally enchantable. It may weaken other functions, create maintenance burdens, alter ownership, produce waste, or make future repair harder.
 

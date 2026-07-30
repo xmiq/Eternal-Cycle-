@@ -112,7 +112,7 @@ A host and another being may exchange material, regulation, organs, or lifecycle
 
 ### Artificial Intervention
 
-Surgery, alchemy, grafting, construction, selective renewal, magical engineering, and other techniques can create Mutations. The relevant Profession, Skills, materials, maintenance, consent, and failure behavior remain real.
+Surgery, [Alchemy](../magic/ALCHEMY.md), grafting, construction, selective renewal, magical engineering, and other techniques can create Mutations. The relevant Profession, Skills, materials, maintenance, consent, and failure behavior remain real.
 
 ### Transition Failure
 

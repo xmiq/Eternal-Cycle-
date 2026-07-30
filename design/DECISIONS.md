@@ -2509,3 +2509,79 @@ Enchantments remain with Hosts and sources according to world causality. Eligibl
 ## D-627 — Enchantment Profiles and Live Layers Are External
 
 Enchantment Profiles are qualitative external Campaign Records. Current inventory, active Hosts, hidden Layers, Supply, charges, custody, discovered Triggers, integrity, Drift, and maintenance state do not belong in the canonical repository.
+
+## D-628 — Alchemy Is Controlled Magical Material Transformation
+
+Alchemy transforms, separates, combines, stabilizes, or applies matter and source-bound properties through traceable inputs, conditions, outputs, byproducts, and consequences. It is neither a universal potion catalog nor a separate progression currency.
+
+## D-629 — Every Alchemical Process Requires a Bounded Objective
+
+An Alchemical Objective identifies the material or embodied change, intended receiver, application, exclusions, quality evidence, duration, acceptable byproducts, and failure. Broad labels such as healing potion or dragon essence are insufficient.
+
+## D-630 — Reagent Properties Require Provenance and Evidence
+
+A Reagent contributes only current properties supported by source, history, species, environment, collection, storage, processing, custody, and evidence. Common names, price, rarity, symbolism, and appearance do not establish equivalence.
+
+## D-631 — Alchemy Rejects Universal Essence
+
+Materials do not contain the complete identity or capability of their source. Elemental, divine, monster, life, death, blood, dragon, void, and similar labels grant no generic transferable package.
+
+## D-632 — Recipes Are Models Rather Than Capability
+
+An Alchemical Recipe records assumptions, Reagents, stages, Process Windows, controls, outputs, tests, application, and safety. Reading or following it cannot replace identification, current conditions, Skills, tools, judgment, or Practised Reliability.
+
+## D-633 — Substitution Replaces One Function at a Time
+
+A Reagent substitution must identify the function being replaced and compare properties, source, Process Windows, concentration, impurities, Byproducts, equipment, Yield, application, safety, and consequence. Shared labels or broad effects do not establish interchangeability.
+
+## D-634 — Catalysts Retain Source and Consequence
+
+An Alchemical Catalyst changes a process route or Window through its actual property and may be transformed, contaminated, degraded, or consumed. Spells, Enchantments, Rituals, organisms, spirits, and Soul Weapons remain owned participants or dependencies rather than ingredients by name.
+
+## D-635 — Every Batch Is Contextual
+
+An Alchemical Batch depends on actual Reagent provenance, scale, equipment, environment, Mana State, operator action, contamination, and storage. One success does not prove universal reproducibility or mastery.
+
+## D-636 — Yield and Quality Are Objective-Specific
+
+Alchemical Yield compares useful output with inputs, loss, Byproducts, time, and relevant quality for one purpose. Volume, purity, concentration, Stability, safety, and recoverability may trade off without forming one quality tier.
+
+## D-637 — Alchemical Scale Changes Process
+
+Batch size and geometry may alter transfer, mixing, reaction speed, pressure, Process Windows, biological viability, separation, source throughput, equipment load, labor, waste, and ecology. A small Recipe cannot be enlarged by quantity alone.
+
+## D-638 — Application Requires a Receiving Route and Dose
+
+Alchemical effects on bodies depend on receiver species, body, condition, exposure route, Effective Dose, absorption, transformation, elimination, interactions, and monitoring. One product or dose cannot be assumed universal.
+
+## D-639 — Alchemical Enhancement Does Not Grant Development
+
+Temporary performance, treatment, supplied material, suppression, or triggered change remains sourced to the product and body. Use does not grant lasting Development, Skill, resistance, Species Traits, or an Evolved Form without the owning system's real route.
+
+## D-640 — Alchemy Preserves Medical and Professional Ownership
+
+Magical product properties do not replace diagnosis, treatment planning, consent, application Skill, standards, accountability, aftercare, or affected-party responsibility. Makers, prescribers, users, and receivers retain distinct contributions.
+
+## D-641 — Reagent Supply Enters Ecology and Society
+
+Harvesting, cultivation, labor, trade, monopoly, smuggling, waste, disease, habitat, source depletion, personhood, and territorial claims remain causal. Rarity does not imply potency, and Byproducts do not disappear after a Batch.
+
+## D-642 — Consumption Copies No Progression
+
+Eating, drinking, injecting, absorbing, wearing, or processing a being or material does not copy Species Traits, Skills, affinity, Soul Imprints, Titles, memories, authority, Mutations, Evolution Routes, Weapon Souls, or persistent progression.
+
+## D-643 — Souls Are Not Alchemical Reagents by Default
+
+No Recipe may consume, distill, bottle, split, copy, transfer, merge, erase, or manufacture Souls or Soul structures by relabelling them as substances. Any exceptional interaction requires an explicit Soul-safe receiving rule, agency, resistance, provenance, and non-duplication.
+
+## D-644 — Alchemy Supports but Does Not Own Evolution
+
+Alchemy may supply material, treatment, stabilization, or environmental change to a valid Mutation, Hybridization, or Evolution Route. It cannot replace lineage, compatibility, body process, agency, transition, tradeoffs, and current-life integration.
+
+## D-645 — Reincarnation Carries No Alchemical Inventory
+
+Products, Reagents, physical Recipes, Batches, laboratories, tools, sources, licences, suppliers, patients, and active bodily effects remain world-bound. Eligible knowledge and bounded Skills may persist as Imprints but require current validation and practice.
+
+## D-646 — Alchemical Profiles and Batches Are External
+
+Alchemical Profiles are qualitative external Campaign Records. Current Recipes, Batches, ingredient inventories, suppliers, doses, laboratory state, discovered substitutions, patients, and application outcomes do not belong in the canonical repository.
