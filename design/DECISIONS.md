@@ -1881,3 +1881,47 @@ A Weapon Soul continues as itself while the Bonded Soul enters a new embodiment 
 ## D-470 — Weapon Souls Cannot Be Used as GM Control Devices
 
 A Weapon Soul may pursue goals and refuse its own cooperation through valid means, but it cannot supply impossible knowledge, dictate player thoughts, force quests through arbitrary bond loss, guarantee rescue, or present one perspective as canonical moral truth. Conflicts follow ordinary causality, capability, consent, and consequence.
+
+## D-471 — Soul Weapon Evolution Is Qualitative Reorganisation
+
+A Soul Weapon Evolution changes an established Soul Weapon's coherent soul-bound form or weapon-owned capability through a valid route. It is not repair, equipment improvement, enchantment, Skill Evolution, Monster Evolution, personality change, bond rank, manifestation, renaming, or temporary empowerment.
+
+## D-472 — Every Weapon Evolution Requires a Causal Route
+
+A valid route identifies the Prior Weapon Form, provenance, Weapon Evolution Pressure or purpose, Weapon Route Basis, participants, current support, consent, transition, resulting form, costs, access, failure, and world consequences. No counter, rarity, name, dramatic event, or persistent system can replace that structure.
+
+## D-473 — Weapon Evolution Preserves Bodily Autonomy
+
+Voluntary change to the Weapon Vessel requires the Weapon Soul's informed consent. The Bonded Soul also consents when its identity, persistent structures, bond, passage terms, obligations, or shared capabilities are altered, but has no general ownership veto over a self-directed change confined to the Weapon Soul's body and capabilities.
+
+## D-474 — Evolved Capability Retains One Owner
+
+Soul Weapon Evolution owns weapon form and weapon-owned Soul effects. Skills, Development, monster bodies, Classes, Professions, magic, materials, craft, institutions, and world consequences remain with their systems, and an Evolved Weapon Form transfers none of them to either partner automatically.
+
+## D-475 — Evolved Forms Reorganise Rather Than Stack
+
+An Evolved Weapon Form records explicit retained, changed, lost, conditional, and new features with real dependencies and costs. Prior forms do not become free loadouts, inaccessible features grant no passive benefit, and several configurations require a dedicated bounded route rather than unrestricted shapeshifting.
+
+## D-476 — Weapon Evolution Branches Are Contextual
+
+A Prior Weapon Form may support several causally distinct routes without creating a universal tree, tier, menu, morality track, or guaranteed sequence. Branch commitment may close alternatives, and reversal or simplification requires its own valid route when form changes materially.
+
+## D-477 — Evolution Persists While Access Resets Contextually
+
+A completed Evolved Weapon Form persists with the Weapon Soul and established bond across Reincarnation. Each new body separately determines manifestation, compatibility, Skill, resources, maintenance, cooperation, and reliable use; Reincarnation does not resize, translate, strengthen, or unlock the form automatically.
+
+## D-478 — Soul Weapon Evolution Has No Infinite Ladder
+
+There is no universal maximum form, but every later Evolution still needs new provenance, unresolved pressure or purpose, meaningful Development, a viable transition, coherent identity, and real tradeoffs. A stable form may have no current successor, and accumulated lives do not create automatic route credit.
+
+## D-479 — Source Integration Preserves Provenance
+
+Materials, repair, craft, enchantment, ritual, spirits, divine effects, environments, Titles, Resonance, and Archive evidence may support a compatible route only while retaining source, permission, dependency, maintenance, counter, and consequence. The Soul Weapon system cannot launder them into generic permanent power.
+
+## D-480 — Conceptual Weapon Effects Require Bounded Rules
+
+A conceptual name, metaphor, legend, Soul Title, or dramatic act does not establish a conceptual weapon effect. Every Concept-Bearing Reorganisation must define the exact relationship expressed, Target, source, access, limits, costs, counters, and unavailable claims through completed owning rules.
+
+## D-481 — Interrupted Evolution Grants No Partial Ability
+
+A failed or interrupted transition may preserve legitimate learning, evidence, damage, changed opportunity, and world consequences. It grants no fractional Evolved capability, guaranteed later success, consolation power, or improved odds merely because resources, suffering, or risk were spent.

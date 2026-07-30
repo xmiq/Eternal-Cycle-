@@ -1791,3 +1791,59 @@ How a Weapon Soul chooses or is currently able to present itself through voice, 
 ## Weapon Soul Personality Profile
 
 A concise campaign record of a Weapon Soul's current personality evidence, perspective, concerns, values, desires, boundaries, tensions, relationships, communication, uncertainties, and change pressures. It is descriptive rather than a statistic block or immutable script.
+
+## Soul Weapon Evolution
+
+A lasting qualitative reorganisation of an established Soul Weapon's coherent soul-bound form or weapon-owned capability through a valid Weapon Evolution Route.
+
+## Soul Weapon Form
+
+The coherent configuration of a Soul Weapon's vessel identity, structure, affordances, source-owned capabilities, dependencies, limitations, and relationship to physical expression. It is not itself a manifestation event or inventory item.
+
+## Prior Weapon Form
+
+The Soul Weapon Form from which a Soul Weapon Evolution begins. It is not automatically preserved as a selectable loadout after the transition.
+
+## Weapon Evolution Route
+
+A causally supported pathway from one Prior Weapon Form to a qualitatively distinct Soul Weapon Form under defined provenance, pressures, participation, transition, costs, tradeoffs, and consequences.
+
+## Weapon Evolution Pressure
+
+A sustained or meaningfully recurring problem, responsibility, opportunity, incompatibility, or identity tension that makes changing the Prior Weapon Form relevant without granting the change by itself.
+
+## Weapon Route Basis
+
+The actual history, capabilities, relationships, materials, soul structures, sources, choices, and consequences that explain why one Weapon Evolution Route is possible for a particular Soul Weapon.
+
+## Weapon Route Readiness
+
+A qualitative assessment that one specific Weapon Evolution Route has sufficient provenance, evidence, consent, current support, opportunity, and transition viability to begin. It is not a meter or guarantee.
+
+## Weapon Evolution Transition
+
+The bounded process that reorganises a Prior Weapon Form into the resulting Soul Weapon Form, with a defined onset, method, duration, requirements, vulnerability, interruption conditions, and outcome.
+
+## Evolved Weapon Form
+
+The coherent Soul Weapon Form after a completed Weapon Evolution Transition, with its own capabilities, dependencies, limitations, access conditions, costs, and later possibilities.
+
+## Weapon Evolution Cost
+
+A meaningful loss, demand, dependency, incompatibility, risk, maintenance burden, route closure, opportunity cost, or world consequence created by access to, transition through, or continued use of an Evolved Weapon Form.
+
+## Weapon Form Stability
+
+The current ability of an Evolved Weapon Form to remain coherent under its vessel condition, Soul Integrity, resources, access, maintenance, bond state, environment, and source dependencies.
+
+## Weapon Evolution Profile
+
+A scoped campaign record of one proposed or completed Soul Weapon Evolution, including prior form, route provenance, pressure, evidence, participants, consent, transition, result, tradeoffs, access, stability, world consequences, and uncertainty.
+
+## Stable Multiplicity
+
+A bounded set of explicitly defined configurations integrated within one Soul Weapon Form through a valid route, with stated transition, access, and maintenance limits. It is not unrestricted shapeshifting or free access to every Prior Weapon Form.
+
+## Concept-Bearing Reorganisation
+
+A rare Weapon Evolution pattern that organises a Soul Weapon Form around one bounded conceptual relationship supported by explicit sources, Targets, access, limits, costs, counters, and unavailable claims.

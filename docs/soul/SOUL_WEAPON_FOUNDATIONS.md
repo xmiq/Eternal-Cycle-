@@ -45,6 +45,8 @@ An executioner's history might instead produce:
 
 > Iron Sword → Executioner's Edge → Blood Fang → Tyrant's Judgment
 
+These chains are illustrative histories rather than universal stages, rarity tiers, morality tracks, guaranteed sequences, or automatic improvements. The complete rules for Prior Weapon Forms, route provenance, Weapon Evolution Pressure, consent, transition, branching, costs, access, and anti-stacking safeguards are defined in [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md).
+
 ## Legacy Weapons
 
 If intertwining is incomplete, the awakened weapon may remain in the world. Future wielders must earn trust rather than automatically gaining ownership.
@@ -71,6 +73,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md)
 - [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md)
 - [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md)
+- [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

@@ -10,8 +10,9 @@ Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before th
 2. [Awakening Conditions](AWAKENING_CONDITIONS.md) defines the transition into Weapon Soul personhood through genuine shared pressure, mutual Resonance, Reciprocal Imprinting, interpretive necessity, and lasting consequence.
 3. [Soul Intertwining](SOUL_INTERTWINING.md) defines the mutual Accord that creates a persistent Soul Weapon Bond, its consent and identity boundaries, standard dyadic structure, Reincarnation passage, Suspension, and Severance.
 4. [Weapon Personalities](WEAPON_PERSONALITIES.md) defines how Vessel History, Vessel Perspective, Awakening Interpretation, relationships, and autonomous choice shape an evolving person without predetermining morality, loyalty, or capability.
+5. [Weapon Evolution](WEAPON_EVOLUTION.md) defines qualitative form change through causal routes, pressure, consent, transition, tradeoffs, branching, persistence, and strict anti-stacking safeguards.
 
-The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
+The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
 
 ## Core Ownership
 

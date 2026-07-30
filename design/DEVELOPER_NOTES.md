@@ -498,3 +498,17 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Abuse and recovery require careful playtest framing so consequences remain serious without making trauma an optimization route or demanding return to a prior personality.
 - Later Weapon Echo rules must preserve provenance without turning old experiences into internal personalities or replacing the current Weapon Soul's own memory and judgment.
 - Later evolution rules may use personality as meaningful context but must not let desire, morality, mood, or a dramatic speech substitute for route, pressure, form, capability, and consequence.
+
+## Phase 6 Weapon-Evolution Watchlist
+
+- Weapon Evolution Profiles should remain route-specific causal records rather than upgrade sheets or hidden power scores.
+- The distinction among repair, reforging, enchantment, Skill Evolution, Monster Evolution, and Soul Weapon Evolution needs repeated mixed-source playtests.
+- Evolution Costs must matter where the Evolved Weapon Form matters; cosmetic disadvantages will not contain broad capabilities.
+- Branches should create meaningful alternatives, closure, and uncertainty without presenting every Soul Weapon with a visible game menu.
+- Stable Multiplicity needs close scrutiny so a small bounded configuration set does not expand into free access to every Prior Weapon Form.
+- Form Translation should support radically different reincarnated bodies while retaining time, craft, embodiment, Skill, consent, and loss.
+- Source Integration is the main risk for laundering rare materials, enchantments, Titles, or outside magic into generic permanent Soul power.
+- Concept-Bearing Reorganisation must remain narrow and explicit; evocative names are likely to invite unbounded metaphor claims.
+- Self-directed Weapon Soul change should preserve bodily autonomy while still producing honest bond, custody, logistical, and world consequences.
+- Later Manifestation rules must separate a persistent Soul Weapon Form from when and how that form can physically appear.
+- Later Legacy Weapon rules must decide whether and how an unbound awakened Weapon Soul can evolve without importing the standard bond route by assumption.
