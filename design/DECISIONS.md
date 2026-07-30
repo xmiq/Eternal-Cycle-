@@ -1161,3 +1161,35 @@ Evolution may reduce, suppress, or abandon costly structures and dependencies wh
 ## D-290 — Apex Is a Bounded Domain, Not a Universal Tier
 
 An Apex Monster or Apex Form is exceptional only within a named function, relationship, habitat, scale, and context. Every apex claim retains current Development, costs, dependencies, Counter-Ecology, and failure; it grants no universal superiority, finality, rarity rank, political authority, or immunity.
+
+## D-291 — Monster Society Is Not Biological Destiny
+
+Species Traits, embodiment, lifecycle, and ecology shape social possibilities and constraints but do not prescribe one culture, government, religion, Profession, moral character, or level of sophistication. Variation within a species remains expected.
+
+## D-292 — Intelligence and Civilisation Do Not Require Human Likeness
+
+Human speech, hands, facial expression, writing, metallurgy, cities, individual cognition, and permanent settlement are not universal tests of intelligence, personhood, technology, or civilisation. Nonhuman senses, bodies, timescales, media, and collective forms remain valid where personhood and action ownership are explicit.
+
+## D-293 — Collective Capability Belongs to the Actual Collective
+
+Institutions and coordinated groups may perform capabilities no member possesses alone. Their procedures, roles, infrastructure, resources, communication, and dependencies remain collective and are not copied as personal Skills, Species Traits, or leader abilities.
+
+## D-294 — Technology Has No Universal Civilisation Ladder
+
+Technology includes organised use of tools, materials, organisms, ecology, magic, processes, records, standards, and infrastructure. Sophistication is assessed by function, knowledge, maintenance, dependencies, and consequences rather than resemblance to one historical sequence.
+
+## D-295 — Society Can Shape Evolution Without Awarding It
+
+Institutions, culture, technology, care, law, education, and conflict may buffer or create Evolutionary Pressure, preserve route knowledge, support transitions, and sustain specialised forms. They cannot grant Evolution, replace compatibility, turn ritual repetition into currency, or make social classification biological truth.
+
+## D-296 — Monster Leadership Requires Social Foundations
+
+Size, natural weapons, magic, Species Stage, Apex Form, Soul Title, fear, and victory may affect reactions but do not automatically confer Formal Authority, Cultural Legitimacy, governance capability, consent, or permanent loyalty.
+
+## D-297 — Social Inheritance Remains World-Bound
+
+Culture, language, office, law, institutional knowledge, reputation, property, citizenship, and relationships persist through people and world structures rather than automatic Soul carryover. Reincarnated individuals must regain current access, legitimacy, and relationships.
+
+## D-298 — Mixed Societies Do Not Require Assimilation
+
+Different species and forms may share institutions while retaining distinct bodies, cultures, needs, progression trees, and identities. Accommodation creates practical and political obligations but neither guarantees harmony nor requires conversion into one social or biological norm.

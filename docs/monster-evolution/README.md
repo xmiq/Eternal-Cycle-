@@ -12,6 +12,7 @@ Monster Evolution describes how monster forms, populations, and societies respon
 - [Hidden Evolution Conditions](HIDDEN_EVOLUTION_CONDITIONS.md) - prior causal truth, fair clues, investigation, uncertainty, and protection from secret counters.
 - [Mutations](MUTATIONS.md) - source-owned structural variation, stability, inheritance, integration, and Evolution boundaries.
 - [Apex Monsters](APEX_MONSTERS.md) - exceptional forms and individuals bounded by domain, dependency, ecology, Development, and counterplay.
+- [Intelligent Monster Societies](MONSTER_SOCIETIES.md) - nonhuman culture, institutions, leadership, education, technology, magic, Professions, diplomacy, warfare, religion, and mixed societies.
 
 ## Required Foundations
 

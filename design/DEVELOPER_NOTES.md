@@ -304,3 +304,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Mutation adjudication should preserve causality and surprising outcomes without becoming either a random reward table or a catalog burden.
 - Apex claims are especially vulnerable to scope drift; every use should continue naming domain, dependency, counter-ecology, and current individual Development.
 - Evolutionary regression and generalisation need playtest attention so players recognise them as viable routes rather than disguised failure states.
+
+## Phase 4 Monster-Society Watchlist
+
+- Collective Capability must stay attached to roles, coordination, infrastructure, and resources rather than becoming a leader aura or member-wide Skill.
+- Stage-based labor and lifecycle roles need repeated agency checks so embodied access does not harden into unquestioned caste destiny.
+- Nonhuman technology should remain functionally legible in play without being translated into human tools merely for convenience.
+- Institutions that cultivate Evolution routes need safeguards against making coercive transition the obviously optimal social policy.
+- Mixed societies should produce concrete accommodation, conflict, and exchange without treating either harmony or species war as the default.

@@ -1303,3 +1303,43 @@ A resource, habitat, lifecycle, social, magical, symbiotic, or structural requir
 ## Counter-Ecology
 
 The predators, competitors, diseases, institutions, resource limits, environmental shifts, behaviors, or other causal responses that constrain an apex presence over time.
+
+## Monster Society
+
+A persistent social order created, maintained, contested, and changed by monsters capable of shared meaning, relationships, norms, and collective practice.
+
+## Culture
+
+A learned and historically changing pattern of meanings, values, practices, expectations, identities, arts, knowledge, and relationships shared unevenly among people.
+
+## Tradition
+
+A practice, narrative, office, standard, ritual, technique, or body of knowledge transmitted across members or generations and open to interpretation, loss, reform, and contest.
+
+## Institution
+
+A durable social arrangement that coordinates roles, authority, knowledge, resources, procedures, and expectations beyond one immediate relationship.
+
+## Monster Civilisation
+
+One or more monster societies sustaining complex, durable networks of culture, institutions, knowledge, infrastructure, exchange, and collective memory. The term is descriptive and does not imply moral or technological superiority.
+
+## Embodied Culture
+
+Culture whose practices and media are shaped by participants' senses, movement, lifecycle, scale, material, communication, instincts, and habitat without being determined by them.
+
+## Social Inheritance
+
+The transmission of language, practice, identity, knowledge, law, technique, office, and expectation through teaching, imitation, records, ritual, environment, or institutions rather than bodily or Soul inheritance.
+
+## Collective Capability
+
+A capability produced by coordinated people, roles, institutions, infrastructure, and resources. It is not a personal Skill or Species Trait possessed in full by each participant.
+
+## Mixed Society
+
+A society whose members include more than one species, form, origin, or progression tree under shared or overlapping institutions without requiring assimilation into one body type or culture.
+
+## Technology
+
+The organised application of knowledge, technique, materials, processes, tools, organisms, magic, and infrastructure to practical ends.

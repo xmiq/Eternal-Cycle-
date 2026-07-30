@@ -39,6 +39,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Hidden Evolution Conditions](monster-evolution/HIDDEN_EVOLUTION_CONDITIONS.md) - fair route discovery, causal requirements, clue structure, experimentation, and player agency.
 - [Mutations](monster-evolution/MUTATIONS.md) - mutation provenance, stability, expression, load, inheritance, integration, and Reincarnation limits.
 - [Apex Monsters](monster-evolution/APEX_MONSTERS.md) - bounded apex domains, dependencies, population limits, Counter-Ecology, and contextual assessment.
+- [Intelligent Monster Societies](monster-evolution/MONSTER_SOCIETIES.md) - cultures, traditions, institutions, leadership, education, technology, magic, Professions, diplomacy, warfare, religion, and mixed societies.
 
 ## World Engine
 
