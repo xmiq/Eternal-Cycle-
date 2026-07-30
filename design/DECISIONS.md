@@ -397,3 +397,39 @@ Final Death, Interlife, time skips, and World Resets transform conditions withou
 ## D-099 — Exploits Are Repaired at Their Owning System
 
 An effective combination that satisfies all valid requirements should remain effective. When a genuine loophole appears, the GM or designer identifies the Owning System and clarifies its formation, access, expression, cost, or consequence rules instead of imposing unrelated punishment, retroactively removing earned progression, or weakening an adjacent system.
+
+## D-100 — Development Is Domain-Specific and Non-Fungible
+
+Physical, skill, profession, magical, social, and species Development remain separate Tracks with their own evidence, limits, plateaus, and local measures. Tracks may support one another, but growth in one cannot be converted freely into another or into a universal Development pool.
+
+## D-101 — Capability Has Six Distinct Layers
+
+Persistent Potential, Current Access, Embodied Expression, Practised Reliability, Contextual Effectiveness, and World Recognition answer different capability questions. Success at one layer does not guarantee the next, and no layer serves as an authoritative total for the character.
+
+## D-102 — Current-Life Effort Converts Potential Into Reliability
+
+Retained Skill XP, Stat XP, Imprints, memories, and instincts may accelerate recognition, calibration, reconstruction, or translation. Present embodiment, practice, feedback, meaningful use, and stabilization remain necessary before a capability becomes reliable in the current life.
+
+## D-103 — Development Follows Adaptation Rather Than Exposure
+
+Training, experience, experimentation, instruction, hardship, reflection, and meaningful use create Development only when the relevant Track recognizes learning or adaptation. Time, suffering, repetition, killing, Final Death, and danger do not grant Development by themselves, and unchanged stimuli produce diminishing returns and Plateaus.
+
+## D-104 — Local Measures Remain Scoped
+
+Levels, ranks, grades, stages, titles, certifications, threat classes, and mastery labels may exist inside a defined domain or institution. Each must state what it measures and cannot be summed or converted into an authoritative universal character level or power score.
+
+## D-105 — Capability Assessment Is Contextual
+
+Characters are assessed through Capability Profiles tied to a stated objective, timeframe, relevant Tracks, current expression, reliability, compatibility, environment, preparation, tools, allies, condition, and evidence quality. Comparative conclusions remain scoped and uncertain rather than establishing permanent superiority.
+
+## D-106 — Reduced Expression Does Not Automatically Erase Development
+
+Rust, regression, injury, suppression, and inaccessible mastery affect different capability layers and require different responses. Ordinary disuse, defeat, aging, bodily injury, amnesia, or Reincarnation may reduce current expression without deleting legitimately protected Persistent Potential.
+
+## D-107 — Reincarnation Acceleration Cannot Compound Recursively
+
+Retained progression may make compatible redevelopment meaningfully faster, but it does not set starting statistics, reproduce every former result, or multiply its own total each life. Later numerical rules must use bounded, compatibility-sensitive acceleration while preserving current maturation, effort, recovery, and diminishing returns.
+
+## D-108 — Cross-Species Redevelopment Requires Translation
+
+Human and monster Development remain initially distinct. Bounded crossover requires genuine retained potential, current access, a functional correspondence, present-life experimentation and practice, compatibility with both progression trees, and an explicit rule defining the translated result, limits, and costs.

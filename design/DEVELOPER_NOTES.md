@@ -22,6 +22,14 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Numerical or ranked systems added later must not convert Soul Depth, Resonance, Titles, Echo count, or Avatar status into a hidden universal power level.
 - Soul Weapon rules remain foundational until Phase 6 defines trust, refusal, evolution, Legacy Weapons, Weapon Echoes, and Weapon Manifestations in full.
 
+## Phase 2 Implementation Watchlist
+
+- The exact pace and curve of retained Stat XP remain intentionally unresolved; later rules must fit the bounded, non-compounding acceleration model.
+- Each Development Track should define its own evidence, Plateaus, regression, and local measures without introducing a common exchange rate.
+- Capability Profiles should remain concise enough for play and expose only dimensions relevant to the current objective.
+- Later mastery labels and threat assessments must state their scope so they cannot become a universal level under another name.
+- Cross-species translation should produce body-appropriate expressions and real tradeoffs rather than standardized copies of human techniques.
+
 ## Queued Soul Avatar and World-Contact Gate Additions
 
 These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.

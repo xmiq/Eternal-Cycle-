@@ -6,7 +6,55 @@ A major historical era with its own civilizations, dominant powers, technologies
 
 ## Development
 
-Independent growth in a particular domain. Development replaces a single universal character level.
+Earned growth in a particular capability domain through meaningful training, experience, experimentation, instruction, adaptation, reflection, or use. Development replaces a single universal character level.
+
+## Development Track
+
+A bounded capability domain with its own evidence of growth, access conditions, expression limits, plateaus, regression, and local measures. Growth in one Track does not automatically convert into another.
+
+## Persistent Potential
+
+The legitimately retained part of prior development that remains with the soul and may support future relearning or translation without guaranteeing current access or use.
+
+## Current Access
+
+The degree to which the present incarnation can reach and usefully interpret relevant knowledge, Soul Imprints, methods, or developmental pathways now.
+
+## Embodied Expression
+
+What the current body, mind, species, tools, resources, and available systems can physically or metaphysically express from accessible capability.
+
+## Practised Reliability
+
+The consistency with which the present incarnation can perform a capability under relevant pressure, variation, fatigue, and consequence.
+
+## Contextual Effectiveness
+
+The usefulness of a capability for one objective against particular conditions, opposition, constraints, and support. It is relational rather than a permanent character rating.
+
+## World Recognition
+
+What observers, cultures, institutions, and systems believe, certify, fear, reward, permit, or misunderstand about a character's capabilities.
+
+## Capability Profile
+
+A contextual description of relevant Development Tracks, current expression, reliability, resources, advantages, limitations, and uncertainty. It is not a universal power score.
+
+## Plateau
+
+A condition in which the current method, challenge, body, understanding, or environment no longer produces meaningful growth in a particular Development Track.
+
+## Latent Capability
+
+A genuinely retained or developed capability that cannot presently be expressed reliably because access, embodiment, practice, resources, permission, or context is insufficient.
+
+## Development Breadth
+
+The range of distinct capabilities in which a being has meaningful potential or present competence. Breadth does not grant simultaneous throughput.
+
+## Mastery Depth
+
+The refinement, understanding, adaptability, and reliability developed within one bounded capability. Mastery Depth is distinct from Soul Depth.
 
 ## Soul Echo
 

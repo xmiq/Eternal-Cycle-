@@ -24,6 +24,12 @@ It does **not** contain campaign saves, active characters, live world state, inv
 5. **The world reacts.** Ecology, politics, economics, war, disease, magic, and technology form causal chains.
 6. **The story remains open-ended.** Civilizations and Ages may end, but the protagonist's soul continues.
 
+## Rules Map
+
+- [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
+- [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
+- [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
+
 ## Start Here
 
 Contributors and coding agents should read, in order:
@@ -38,4 +44,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Soul Engine are complete. The current phase is **Phase 2 — Development System**, and the sole active task is **Complete development philosophy**.
+The repository foundation and Soul Engine are complete. The current phase is **Phase 2 — Development System**, and the sole active task is **Define physical development**.

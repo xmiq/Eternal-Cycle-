@@ -4,9 +4,11 @@
 
 **Current phase: Phase 2 — Development System**
 
-**Current task: Complete development philosophy**
+**Current task: Define physical development**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin physical development, skill development, profession development, magical development, social development, species development, or another Phase 2 task until the development philosophy is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin or continue skill development, profession development, magical development, social development, species development, or another Phase 2 task until physical development is complete unless the project owner explicitly changes the target.
+
+Phase 1 is reviewed and approved. Do not reopen it unless Phase 2 reveals a genuine contradiction that cannot be resolved within the current Development rules.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -59,7 +61,7 @@ Phase 1 is complete only when every Soul Engine system is defined and linked, cr
 
 ## Phase 2 — Development System
 
-- [~] Complete development philosophy
+- [x] Complete development philosophy
 - [ ] Define physical development
 - [ ] Define skill development
 - [ ] Define profession development
