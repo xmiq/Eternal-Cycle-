@@ -8,6 +8,8 @@
 
 Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the Akashic Archive or the final Soul Engine audit until Retained Instincts is complete unless the project owner explicitly changes the target.
 
+Soul Avatar, world-contact Gate, and related template work requested by the project owner is queued in the appropriate later phases below. These queued entries do not change the current task or authorize implementation before the project owner selects them.
+
 ## Status Legend
 
 - `[ ]` — Not started
@@ -46,6 +48,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Titles
 - [ ] Define Retained Instincts
 - [ ] Define Akashic Archive
+- [ ] Resolve Soul Avatar terminology against Echo and Weapon avatars
+- [ ] Define Soul Avatar system
 - [ ] Document interactions among soul systems
 - [ ] Review exploit resistance and narrative consequences
 
@@ -143,6 +147,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [ ] Define dungeon activity
 - [ ] Define World Stability
 - [~] Define Ages and resets
+- [ ] Define Gates and world-contact events distinct from Soul Gates
+- [ ] Integrate world-contact Gates with Reincarnation and Soul Avatars
 - [~] Define simulation abstraction levels
 
 ## Phase 9 — GM Toolkit
@@ -170,6 +176,8 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [ ] Faction template
 - [ ] Settlement template
 - [ ] Dungeon template
+- [ ] Soul Avatar template
+- [ ] Gate-event template
 - [ ] Rule consistency audit
 - [ ] Terminology audit
 - [ ] Internal-link audit
