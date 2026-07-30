@@ -395,3 +395,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Matchup adjudication must stay readable at the table; context should explain outcomes without becoming an unbounded checklist or hidden power score.
 - Soul Weapons and Martial Traditions are both socially vivid and therefore prone to ownership collapse; training with a Weapon Soul must preserve its personhood and separate capabilities.
 - Cross-species curricula should require genuine translation and accommodation without treating human anatomy as the norm or social affiliation as tree access.
+
+## Phase 5 Magical-School Watchlist
+
+- Magical School Profiles must preserve the line between a society's model and the actual magic system, especially when doctrine is prestigious, revealed, or empirically useful but wrong.
+- Phase 7 should be able to define several incompatible magical systems without rewriting school governance, learning roles, verification, or recognition.
+- Noncasting roles need examples with real capability and responsibility so they are neither dismissed nor quietly given casting Access.
+- Magical Interoperability Claims should make cross-school cooperation possible without turning shared effect names into universal compatibility.
+- Safety and research rules must preserve genuine uncertainty and risky discovery without rewarding abuse, sacrifice, corruption, or environmental harm as efficient progression.
+- Schools working with gods, spirits, monsters, Soul Weapons, constructs, and other person-like sources need repeated consent and ownership audits.

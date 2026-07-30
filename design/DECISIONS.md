@@ -1525,3 +1525,47 @@ Formations and teams derive capability from members, shared doctrine, practised 
 ## D-381 — Martial Reincarnation Preserves History, Not Readiness
 
 Reincarnation may preserve relevant Skill history, Stat XP, judgment, Soul Imprints, and memories. The current incarnation must rebuild bodily capacity, calibration, tool handling, timing, reliability, present-world knowledge, relationships, affiliation, and authority.
+
+## D-382 — Magical Schools Are Social Frameworks, Not Magic Systems
+
+A Magical School is a Human Class framework that organizes models, curriculum, practice, verification, safety, interpretation, and recognition around bounded magical systems or questions. The actual sources, laws, costs, Access, and failure states remain owned by world and Magic rules.
+
+## D-383 — Magical Schools and Magical Academies Are Distinct
+
+A Magical School is a transmissible framework; a Magical Academy is an institution of people, resources, facilities, records, access, and governance. Either may exist without the other, and institutional control never makes doctrine true or grants capability.
+
+## D-384 — Magical School Validity Requires Declared Assumptions
+
+A proposed Magical School must establish a magical subject, world-law assumptions, Access assumptions, epistemology, transmission, meaningful practice and feedback, safety and responsibility, and social continuity. One spell, element, organ, bloodline, artifact, patron, academy, caster, title, or question is insufficient.
+
+## D-385 — School Affiliation Grants No Magical Route
+
+Admission, study, graduation, rank, lineage, credential, or reputation cannot grant Magical Access, Potential, affinity, authority, reserves, Channels, organs, contracts, spells, Skills, resistance, or output. Institutionally supplied sources and tools remain external dependencies.
+
+## D-386 — Magical Doctrine and World Truth Remain Separate
+
+A school's account may be accurate, useful but mistaken, local, obsolete, politically distorted, or internally disputed. Canon and adjudication must distinguish doctrine, observation, inference, revelation, evidence, uncertainty, misinformation, and hidden world fact.
+
+## D-387 — Magical Taxonomies Are Social Until the Magic System Establishes Otherwise
+
+Schools may organize practice by source, element, method, effect, Profession, region, species, ritual lineage, philosophy, tool, patron, founder, or research question. Such categories do not prove that magic itself has the same universal divisions.
+
+## D-388 — Magical Interoperability Is a Scoped Causal Claim
+
+Compatibility between schools, practices, roles, records, tools, or effects must be tested for one purpose across sources, laws, Access, authority, embodiment, models, resources, timing, tools, environment, Skills, safety, interference, and consent. Shared names do not establish compatibility.
+
+## D-389 — Magical Verification Scales With the Claim
+
+Schools may use repetition, comparison, instruments, witnesses, records, source testimony, prediction, replication, adversarial review, and historical inference according to a claim's nature and risk. Limited repeatability increases uncertainty rather than forcing acceptance or denial.
+
+## D-390 — Magical School Ranks Are Scoped Recognition
+
+Circles, degrees, robes, seals, names, ordeals, examinations, publications, licences, and teaching permissions must identify audience, evidence, role, rights, obligations, scope, and revocation. None is a universal caster level or spell tier.
+
+## D-391 — Magical Schools Support Noncasting Roles Without Hidden Casting
+
+A school may train observers, theorists, instrument operators, material preparers, maintainers, ritual participants, translators, safety monitors, recorders, researchers, and other roles. Their real capabilities and contributions remain valid without implying direct casting Access.
+
+## D-392 — Magical Reincarnation Preserves No School Standing or Current Access
+
+Reincarnation may preserve Magical Imprints, Skill history, conceptual familiarity, judgment, and memories. It does not restore Channels, organs, reserves, affinity, authority, contracts, tools, environment, school rank, membership, licence, source relationships, or current-law validity.

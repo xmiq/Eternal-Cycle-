@@ -453,7 +453,7 @@ Neither statement creates an overall magic rank.
 This document does not define:
 
 - one universal mana source, reserve, regeneration rate, capacity formula, or spell tier;
-- complete elements, affinities, schools, spell lists, rituals, enchantment, alchemy, divine magic, or forbidden magic;
+- complete elements, affinities, magic-system taxonomies, spell lists, rituals, enchantment, alchemy, divine magic, or forbidden magic; the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
 - exact costs, ranges, damage, casting times, status effects, or counterspell procedures;
 - which gods, spirits, worlds, species, organs, contracts, or tools exist;
 - universal spell circles, caster ranks, rarity labels, or magical threat scores;
@@ -478,7 +478,7 @@ When magical Development or capability matters:
 9. treat rituals, tools, patrons, and groups as explicit support with their own dependencies;
 10. communicate capability for the current objective rather than assigning a universal magic rank;
 11. record Development only for the contribution actually performed and integrated;
-12. defer spell catalogs, mana formulas, affinities, schools, and detailed magical laws to Phase 7.
+12. defer spell catalogs, mana formulas, affinities, and detailed magical laws to Phase 7 while using [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
 
 ## Worked Examples
 
@@ -551,3 +551,4 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
+- [Magical Schools](../human/MAGICAL_SCHOOLS.md)

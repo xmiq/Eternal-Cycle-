@@ -184,7 +184,7 @@ The social framework, doctrine, curricula, Pressure Practice, and recognition of
 
 A magical tradition may connect perception, control, notation, ritual procedure, recovery, safety, and source-specific techniques. Its tree must state the actual magical source, access, embodiment, tools, authority, and world laws it assumes.
 
-This document does not define mana, universal spell tiers, schools, affinities, or the full magic system. Use [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) for current boundaries.
+The social models, curricula, verification, safety, and recognition of these frameworks are defined in [Magical Schools](../human/MAGICAL_SCHOOLS.md). This document continues to own their learned capabilities. It does not define mana, universal spell tiers, affinities, or the full magic system; use [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) for current boundaries.
 
 ### Social and Leadership Skills
 

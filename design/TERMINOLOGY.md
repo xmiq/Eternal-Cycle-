@@ -1547,3 +1547,23 @@ A scoped tradition, professional, legal, sacred, or institutional standard for i
 ## Martial Tradition Profile
 
 A Class Profile extended with conflict domain, social purpose, Martial Doctrine, operational contexts, embodiment assumptions, arsenal, capability references, Training Ecology, Pressure Practice, Use-of-Force Standard, group model, recognition, failure review, counters, and current variants.
+
+## Magical School
+
+A socially sustained Human Class framework that organizes models, curriculum, practice, verification, safety, interpretation, and recognition around one or more bounded magical systems or questions without becoming the magic system itself.
+
+## Magical Epistemology
+
+A Magical School's method for distinguishing observation, practical result, theory, authority, tradition, revelation, source testimony, error, uncertainty, and revision when making claims about magic.
+
+## Magical School Profile
+
+A Class Profile extended with magical subject, provenance, Magical Epistemology, world-law model, Access and embodiment assumptions, curriculum, capability references, verification, safety, authority and source relations, ethics, infrastructure, recognition, interoperability, and current variants.
+
+## Magical Interoperability Claim
+
+A scoped claim that practices, roles, records, tools, sources, or effects from two magical frameworks can function together for one stated purpose under compatible laws, Access, authority, embodiment, resources, timing, safety, and consent.
+
+## Magical Learning Role
+
+A local contribution through which a learner participates in a Magical School, such as observation, theory, instrument use, preparation, maintenance, ritual participation, translation, direct casting, safety, research, or teaching. Roles do not form a universal ladder or grant one another's capabilities.

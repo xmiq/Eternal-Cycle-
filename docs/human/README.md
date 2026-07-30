@@ -8,6 +8,7 @@ This section defines how human societies organize, teach, preserve, apply, and r
 2. [Human Classes](CLASSES.md) - Class Profiles, curricula, affiliations, local ranks, variants, equivalence, access, and class-claim adjudication.
 3. [Professions](PROFESSIONS.md) - social fields of work, roles, service relationships, standards, jurisdiction, accountability, formation, and profession-claim adjudication.
 4. [Martial Traditions](MARTIAL_TRADITIONS.md) - doctrine, Training Ecology, Pressure Practice, use of force, equipment relationships, matchups, counterplay, and adjudication.
+5. [Magical Schools](MAGICAL_SCHOOLS.md) - social models of magic, epistemology, curricula, Access boundaries, verification, safety, interoperability, and adjudication.
 
 Later Phase 5 documents extend this foundation in roadmap order. A later document may add playable detail, but it may not turn a class label, profession, rank, credential, or institutional membership into automatic capability.
 
