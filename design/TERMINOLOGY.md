@@ -1623,3 +1623,39 @@ The world-bound continuity of information, interpretation, procedure, relationsh
 ## Institutional Capture
 
 A condition in which a person, Office, faction, patron, external power, or narrow interest controls enough decision routes, resources, records, or enforcement to redirect institutional action away from its stated or previously maintained purposes.
+
+## Class Evolution
+
+A sustained historical transformation in how a Human Class organizes, transmits, interprets, practises, or recognizes a path of expertise while retaining, contesting, dividing, combining, or relinquishing some social continuity with earlier forms. It is not Skill Evolution, bodily Evolution, or personal advancement.
+
+## Class Evolution Claim
+
+A scoped assertion that a Human Class underwent a sustained qualitative social-framework change supported by a prior form, current pressures, participants, process, changed dimensions, continuity, discontinuity, recognition, and consequences.
+
+## Class Evolution Pattern
+
+A descriptive mode of class-framework change, such as refinement, specialization, broadening, translation, synthesis, schism, convergence, standardization, diversification, institutionalization, reorientation, suppression, obsolescence, reconstruction, or succession. Patterns are not ranks or mandatory routes.
+
+## Class Change Profile
+
+A scoped record of a claimed class transformation naming the prior framework, pressures, participants, process, changed dimensions, continuities, losses, capability ownership, current form, audience contest, dependencies, and consequences.
+
+## Class Continuity Claim
+
+A purpose- and audience-specific claim that two historical or current frameworks should be treated as forms of the same Human Class based on provenance, domain, interpretation, transmission, people, records, recognition, obligations, and meaningful differences.
+
+## Class Synthesis
+
+A socially sustained integration of two or more class frameworks into a distinct Human Class with its own coherent domain, interpretation, transmission, practice, and recognition. It does not merge capabilities or perform Skill Fusion.
+
+## Class Schism
+
+A division of a previously connected Human Class into branches that sustain incompatible interpretations, curricula, obligations, authority claims, or social identities. The result may be Class Variants, separate Classes, competing successors, or a contested classification.
+
+## Class Succession
+
+A scoped continuity relationship in which a later Human Class inherits some domain, obligations, practitioners, records, institutions, or public role from an earlier framework without automatically inheriting every identity, capability, right, debt, or recognition.
+
+## Class Reconstruction
+
+Present-life work that uses surviving evidence, interpretation, compatibility testing, teaching, correction, and participant agency to establish a usable Human Class framework after transmission was lost or broken. It records historical gaps and may produce a successor rather than uninterrupted continuity.

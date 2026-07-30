@@ -4,9 +4,9 @@
 
 **Current phase: Phase 5 — Human Classes & Professions**
 
-**Current task: Define class evolution**
+**Current task: Define limits of human progression**
 
-Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define class evolution** unless the project owner explicitly changes the target. Complete the remaining Phase 5 tasks in roadmap order and do not begin Phase 6 until the Phase 5 audit and exit criteria are complete.
+Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define limits of human progression** unless the project owner explicitly changes the target. Complete the remaining Phase 5 tasks in roadmap order and do not begin Phase 6 until the Phase 5 audit and exit criteria are complete.
 
 Phases 1 through 4 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -134,7 +134,7 @@ Phase 4 is complete only when ecology causally drives possible evolution; specie
 - [x] Define magical schools
 - [x] Define social advancement
 - [x] Define institutions and academies
-- [ ] Define class evolution
+- [x] Define class evolution
 - [ ] Define limits of human progression
 
 ## Phase 6 — Soul Weapons

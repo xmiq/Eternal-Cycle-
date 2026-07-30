@@ -1665,3 +1665,63 @@ Institutions and Academies may use nonhuman bodies, senses, lifecycles, communic
 ## D-416 — Reincarnation Preserves No Institutional Standing
 
 Reincarnation does not preserve membership, Institutional Office, employment, vote, credential, licence, property, authority, access, debt, obligation, reputation, or legal identity. Retained capability and memory may support re-entry only through present embodiment, evidence, relationships, procedures, and institutional choice.
+
+## D-417 — Class Evolution Is Social-Framework Change
+
+Class Evolution is a sustained historical transformation in how a Human Class organizes, transmits, interprets, practises, or recognizes expertise. It is not personal advancement, Skill Evolution, Skill Fusion, bodily Evolution, Profession change, institutional reorganization, or an automatic capability award.
+
+## D-418 — Pressures Create Opportunities Rather Than Class Evolution
+
+Failures, discoveries, new tools, cultural contact, changed bodies, magic, institutions, persecution, World Resets, and other pressures can make class change relevant. Class Evolution occurs only through current people, teaching, practice, correction, transmission, recognition, and consequence.
+
+## D-419 — Class Evolution Evidence Is Qualitative and Scoped
+
+A Class Evolution Claim must identify the prior framework, pressure, participants, process, changed dimensions, continuities, discontinuities, current form, audiences, dependencies, and consequences. No universal duration, generation count, practitioner count, event count, or meter establishes the change.
+
+## D-420 — Class Change Uses the Smallest Truthful Representation
+
+Routine revision, Class Variant, Class Evolution, separate Class, emergence, synthesis, schism, succession, and reconstruction are chosen according to what best preserves meaningful differences in domain, interpretation, transmission, practice, purpose, recognition, and continuity. They are not progression stages.
+
+## D-421 — Class Continuity Is Purpose- and Audience-Specific
+
+Shared names, founders, records, institutions, doctrine, or practitioners provide evidence but do not decide identity alone. Several audiences may truthfully recognize, deny, or contest continuity for different purposes while canon preserves the actual provenance and frameworks.
+
+## D-422 — Class Evolution Patterns Are Not a Ladder
+
+Refinement, specialization, broadening, translation, synthesis, schism, convergence, standardization, diversification, institutionalization, reorientation, suppression, obsolescence, reconstruction, and succession describe change without creating tiers, rarity, superiority, or mandatory routes.
+
+## D-423 — Class Synthesis Does Not Merge Capability
+
+A Class Synthesis requires an integrated social framework with transmissible practice and continuity. It does not combine all member Skills, perform Skill Fusion, grant Species Traits, duplicate source capabilities, or force source communities to recognize the result.
+
+## D-424 — Class Schism Duplicates No Ownership
+
+A Class Schism may create Variants, separate Classes, or competing successors, but no branch automatically receives all prior capability, legitimacy, history, property, institutions, relationships, or authority. Each claim follows its actual owner and continuity.
+
+## D-425 — Institutional Power Cannot Create Class Evolution by Fiat
+
+Institutions may fund, suppress, standardize, credential, rename, merge, or divide teaching, and those acts can have real consequences. A decree, charter, monopoly, department, credential, uniform, or legal category establishes Class Evolution only where the social framework actually changes.
+
+## D-426 — Cross-Species Class Change Preserves Progression Ownership
+
+Translation or synthesis across bodies and species may change teaching, tools, media, roles, and recognition. It does not grant anatomy, Species Traits, Monster Skills, Human Skill Tree access, Evolution Routes, or Reincarnation crossover without their own present-life rules.
+
+## D-427 — Obsolescence, Decline, and Loss Are Valid Class Outcomes
+
+A Human Class may become unreliable for a purpose, lose transmission, fragment, retain only symbolic meaning, or end. Surviving names, records, Institutions, isolated Skills, and capable individuals do not automatically sustain the full social framework.
+
+## D-428 — Class Reconstruction Is Present-Life Work
+
+Reconstruction requires provenance review, current interpretation, compatibility testing, transmissible practice, correction, participant agency, and explicit uncertainty. Records, Soul memories, Archive evidence, relics, and surviving Skills cannot restore missing context, institutions, authority, relationships, or continuity automatically.
+
+## D-429 — Founders Do Not Own Every Successor Meaning
+
+Founders, reformers, patrons, rulers, institutions, and reincarnated predecessors may influence class change but cannot establish continuity, compel affiliation, or own later communities, identities, interpretations, names, and choices by intention alone.
+
+## D-430 — Reincarnation Preserves No Authority Over Class Evolution
+
+Retained Skill history, Development, memory, Echoes, and Soul evidence may support contribution or reconstruction. They do not restore Class Affiliation, rank, ownership, institutional standing, reputation, or the right to define a living framework.
+
+## D-431 — Class Evolution Cannot Be Farmed or Applied Retroactively
+
+Repetition, victories, crises, reforms, name changes, publications, student counts, institutions founded, branches declared, and Ages survived are evidence only through actual social change. A later Class cannot automatically affiliate every historical contributor, ancestor, Skill user, Profession, or source culture.

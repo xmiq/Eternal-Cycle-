@@ -218,7 +218,7 @@ Variation can arise through:
 
 Create a variant when the distinction has practical consequences but shared provenance, domain, interpretive continuity, or mutual recognition still makes one class record useful. Create a separate class only when the difference in social framework is meaningful enough that combining them would hide how people teach, interpret, or recognize the path.
 
-Detailed transformation, schism, synthesis, succession, and decline belong to the later Phase 5 Class Evolution task.
+Detailed transformation, schism, synthesis, succession, and decline are defined in [Class Evolution](CLASS_EVOLUTION.md).
 
 ## Class Equivalence Claims
 
@@ -414,7 +414,7 @@ This document does not fully define:
 - magical-school procedures;
 - social advancement;
 - institution and academy governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
-- class transformation, merger, fracture, and succession;
+- class transformation, merger, fracture, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
 - final limits on human progression.
 
 Those subjects belong to their dedicated Phase 5 owners or the remaining roadmap tasks. Class Profiles may reference them without deciding their rules.

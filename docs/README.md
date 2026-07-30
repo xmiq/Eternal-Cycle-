@@ -56,6 +56,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Magical Schools](human/MAGICAL_SCHOOLS.md) - social models of magic, epistemology, curricula, Access boundaries, verification, safety, interoperability, and adjudication.
 - [Social Advancement](human/SOCIAL_ADVANCEMENT.md) - multidimensional Social Position, Advancement Routes, opportunities, portability, gatekeeping, decline, agency, and adjudication.
 - [Institutions and Academies](human/INSTITUTIONS_AND_ACADEMIES.md) - durable organization, governance, offices, authority, collective capability, institutional memory, academies, continuity, and adjudication.
+- [Class Evolution](human/CLASS_EVOLUTION.md) - historical transformation, continuity, variants, synthesis, schism, obsolescence, reconstruction, succession, and adjudication of class frameworks.
 
 ## World Engine
 

@@ -422,7 +422,7 @@ An Institution may become:
 - **reconstructed** - later actors deliberately rebuild from surviving evidence and present resources;
 - **extinct** - no operating continuity or credible current institutional arrangement remains.
 
-These are contextual descriptions, not universal stages. Institutional change does not automatically evolve or erase associated Classes. Detailed transformation of Class frameworks belongs to the next Phase 5 Class Evolution task.
+These are contextual descriptions, not universal stages. Institutional change does not automatically transform or erase associated Classes. Detailed transformation of Class frameworks is defined in [Class Evolution](CLASS_EVOLUTION.md).
 
 ## Monster and Mixed-Species Institutions
 
@@ -585,7 +585,7 @@ Institution Profiles and Academy Profiles are interfaces for external campaign r
 
 This document does not fully define:
 
-- transformation of Human Classes, which belongs to the next Phase 5 task;
+- transformation of Human Classes defined in [Class Evolution](CLASS_EVOLUTION.md);
 - final limits of human progression;
 - universal legal, political, economic, property, taxation, wage, election, inheritance, or faction systems;
 - detailed magic sources, spell rules, or magical infrastructure;

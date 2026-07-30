@@ -589,6 +589,7 @@ This document does not define:
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
 - [Hidden Skills](../skills/HIDDEN_SKILLS.md)
 - [Conceptual Skills](../skills/CONCEPTUAL_SKILLS.md)
 - [Reincarnation](../soul/REINCARNATION.md)

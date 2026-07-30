@@ -294,7 +294,7 @@ This philosophy intentionally does not define:
 - martial traditions or magical schools;
 - social advancement procedures;
 - institution and academy rules defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
-- class change, synthesis, decline, or succession;
+- class change, synthesis, decline, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
 - the final limits of human progression.
 
 Those subjects belong to their linked Phase 5 owners or the remaining roadmap tasks. Every extending rule must preserve the distinctions and safeguards established here.

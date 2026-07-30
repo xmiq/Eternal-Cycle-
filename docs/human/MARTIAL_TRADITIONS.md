@@ -543,6 +543,7 @@ Those remain with their later roadmap tasks and owning systems.
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Active and Passive Skills](../skills/ACTIVE_AND_PASSIVE_SKILLS.md)
 - [Skill Evolution](../skills/SKILL_EVOLUTION.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
 - [Conceptual Skills](../skills/CONCEPTUAL_SKILLS.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Retained Instincts](../soul/RETAINED_INSTINCTS.md)

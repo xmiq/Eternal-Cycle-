@@ -547,7 +547,7 @@ This document does not fully define:
 - exact reputational spread procedures;
 - dialogue checks or mind control;
 - universal class or professional ranks;
-- class transformation;
+- class transformation defined in [Class Evolution](CLASS_EVOLUTION.md);
 - final limits of human progression.
 
 Those remain with [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), the remaining Phase 5 tasks, and World Engine tasks. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.

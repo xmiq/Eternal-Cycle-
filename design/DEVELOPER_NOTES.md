@@ -424,3 +424,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Capture, reform, and accountability should identify actual decision routes and dependencies without treating every member as equally culpable or every institution as one moral actor.
 - Monster and mixed Institutions need explicit action ownership and accommodation while avoiding human buildings, writing, money, hierarchy, and lifespan as defaults.
 - Reincarnated founders and famous Soul Title bearers can create powerful legitimacy conflicts without automatically regaining property, office, membership, or authority.
+
+## Phase 5 Class-Evolution Watchlist
+
+- The word evolution is especially collision-prone; rules and examples should use Class Evolution in full and preserve unqualified Evolution for bodily species transitions.
+- Class Change Profiles should explain consequential historical change without becoming exhaustive chronicles or requiring a separate Class for every curriculum revision.
+- Class Continuity Claims need to preserve audience disagreement without making social identity arbitrary or hiding factual provenance.
+- Synthesis and schism are high-risk routes for duplicated Skills, legitimacy, property, history, and institutional access; every adjacent effect needs one owner.
+- Institutional naming, standardization, monopoly, and credential power should remain causally potent without becoming authority to make doctrine true or manufacture Class Evolution.
+- Reconstruction should permit meaningful recovery while retaining historical gaps, current embodiment, present practice, participant agency, and the possibility that the result is a successor.
+- Cross-species translation needs useful accommodations and genuinely shared frameworks without turning class contact into progression-tree crossover.
+- Obsolescence and decline should create loss and adaptation pressure without implying that ancient, secret, synthesized, or reconstructed Classes are automatically superior.
