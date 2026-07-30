@@ -444,7 +444,7 @@ Institutions may still create rough combat ratings, threat classes, or planning 
 
 ## Contextual Capability Assessment
 
-Assessment begins with a question, not a total.
+Assessment begins with a question, not a total. [Capability Assessment](CAPABILITY_ASSESSMENT.md) owns the complete profile, evidence, uncertainty, observer-perspective, institutional-measure, and comparative-finding rules.
 
 The GM should establish:
 
@@ -462,7 +462,7 @@ The GM should establish:
 
 A Capability Profile should mention only the dimensions relevant to the question. It is not a complete ledger of every life or skill.
 
-Comparisons may be described as favored, contested, unfavorable, or indeterminate only within a stated context. A useful assessment explains why:
+Comparisons use the dedicated scoped findings Clearly Superior, Generally Advantaged, Situationally Advantaged, Uncertain, Mismatched, or Incomparable. A useful assessment explains why:
 
 > The ogre is favored in an open exchange because of reach and force. The hunter becomes favored at the prepared ravine because the route, traps, allies, and escape plan neutralize those advantages.
 
@@ -550,7 +550,7 @@ This document does not define:
 - species stages, mutations, evolution branches, or hidden evolution requirements;
 - exact crossover unlocks between human and monster progression trees;
 - combat, crafting, research, negotiation, or travel resolution procedures;
-- a fixed list of Plateaus, breakthroughs, or comparative labels.
+- a fixed list of Plateaus or breakthroughs.
 
 Those details belong to later roadmap tasks. Their rules may refine one Track but cannot create a universal total or bypass the six-layer capability model.
 
@@ -628,6 +628,7 @@ The wyvern is favored for aerial pursuit and storm rescue. The human is favored 
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
+- [Capability Assessment](CAPABILITY_ASSESSMENT.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

@@ -40,6 +40,34 @@ What observers, cultures, institutions, and systems believe, certify, fear, rewa
 
 A contextual description of relevant Development Tracks, current expression, reliability, resources, advantages, limitations, and uncertainty. It is not a universal power score.
 
+## Capability Assessment
+
+A scoped, evidence-based judgment about what a character or group can presently attempt, express, sustain, or accomplish under specified conditions.
+
+## Assessment Scope
+
+The objective, participants, place, time, constraints, preparation, information, and relevant consequences to which a Capability Assessment applies.
+
+## Evidence State
+
+A qualitative description of support for a capability claim: demonstrated, corroborated, inferred, claimed, outdated, disputed, or unknown.
+
+## Known Capability
+
+A capability for which a particular assessor has usable evidence within the present Assessment Scope. Knowledge may remain incomplete or mistaken about its limits and conditions.
+
+## Hidden Capability
+
+A real capability, dependency, weakness, resource, or condition unavailable to a particular observer. It remains part of the GM's Factual View without becoming player or character knowledge automatically.
+
+## Comparative Finding
+
+A scoped conclusion about the relationship between capabilities for a stated objective and conditions. Valid findings are Clearly Superior, Generally Advantaged, Situationally Advantaged, Uncertain, Mismatched, or Incomparable; none is a permanent rank or guarantee.
+
+## Institutional Measure
+
+A rank, certification, class, grade, stage, licence, threat category, or test result created for a defined institutional purpose. Its meaning remains bounded by its authority, jurisdiction, evidence, assumptions, and omissions.
+
 ## Plateau
 
 A condition in which the current method, challenge, body, understanding, or environment no longer produces meaningful growth in a particular Development Track.

@@ -556,6 +556,7 @@ The monster remains stronger. The humans become favored for the extraction objec
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
+- [Capability Assessment](CAPABILITY_ASSESSMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

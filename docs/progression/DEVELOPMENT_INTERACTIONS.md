@@ -388,6 +388,7 @@ Later rules may refine interactions inside their domains. They must preserve eff
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
+- [Capability Assessment](CAPABILITY_ASSESSMENT.md)
 - [Soul System Interactions](../soul/SOUL_SYSTEM_INTERACTIONS.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

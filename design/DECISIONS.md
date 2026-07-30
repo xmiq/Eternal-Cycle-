@@ -673,3 +673,35 @@ Enhancement, equipment, allies, institutions, infrastructure, contracts, and env
 ## D-168 — Development Credit Requires Distinct Integrated Change
 
 One event may develop several Tracks or participants only when each has evidence of a distinct integrated change. The same action, output, mastery, or adaptation cannot be counted repeatedly merely because several systems describe or support it.
+
+## D-169 — Capability Assessment Requires a Stated Scope
+
+Every assessment names its objective, participants, conditions, preparation, support, current state, success criteria, and relevant consequences. Changing that scope may change the finding without changing anyone's Development.
+
+## D-170 — Capability Profiles Are Selective Descriptions, Not Totals
+
+A Capability Profile includes only dimensions material to its Assessment Scope and keeps Potential, Access, Expression, Reliability, Effectiveness, and World Recognition distinct. Profile dimensions cannot be summed into an authoritative power score.
+
+## D-171 — Factual, Observer, and Player-Facing Views Remain Separate
+
+The GM may hold a Factual View that includes hidden capability, while in-world observers reason from their records, tests, biases, and incentives and players receive what their characters can reasonably know. Information does not cross these views automatically.
+
+## D-172 — Assessment Must State Evidence and Uncertainty
+
+Material claims are described as demonstrated, corroborated, inferred, claimed, outdated, disputed, or unknown as appropriate. Uncertainty must identify its cause and provide fair investigative or causal context rather than hiding assumptions behind false precision or arbitrary surprise.
+
+## D-173 — Comparative Findings Are Scoped and Qualitative
+
+Clearly Superior, Generally Advantaged, Situationally Advantaged, Uncertain, Mismatched, and Incomparable are conclusions for a stated objective and conditions. They are not probabilities, encounter levels, permanent ranks, or guaranteed outcomes.
+
+## D-174 — Outcomes Do Not Establish Universal Superiority
+
+Victory, defeat, survival, spectacle, title, reputation, or one successful test demonstrates only what its conditions and evidence support. A counter, preparation, objective, team, or environment may decide an outcome without erasing or proving every form of mastery.
+
+## D-175 — Institutional Measures Are Purpose-Bound
+
+Ranks, grades, stages, licences, certifications, and threat categories remain bounded by their issuer, jurisdiction, intended decision, tested evidence, assumptions, and omissions. They may be useful and socially consequential without becoming metaphysical truth or universal levels.
+
+## D-176 — Hidden Capability Must Preserve Fair Causality
+
+Hidden capability may create surprise, but later explanation must remain consistent with established rules and fair clues. The GM cannot use undisclosed exceptions to invalidate responsible assessment retroactively, and players do not gain hidden information merely because it appears in the Factual View.

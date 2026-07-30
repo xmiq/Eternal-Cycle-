@@ -526,6 +526,7 @@ Old knowledge may inspire better food storage and duty rotation only after the i
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
+- [Capability Assessment](CAPABILITY_ASSESSMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

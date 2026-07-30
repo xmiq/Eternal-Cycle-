@@ -61,6 +61,9 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Later action and encounter rules should expose decisive dependencies and support without requiring players to audit every possible interaction before acting.
 - Group procedures must keep individual agency and contribution visible; a convenient group rating may summarize a defined task but cannot become a transferable leader statistic.
 - Temporary enhancements and external support need source, duration, interruption, and maintenance fields wherever later content formalizes them.
+- Capability Profiles should stay short enough for actual play; surface only dimensions that can change the stated objective or a meaningful decision.
+- Institutional measures can use local numbers or ranks later, but every such measure needs an explicit purpose, tested evidence, assumptions, omissions, and known error modes.
+- Hidden capability should be foreshadowed through consistent evidence without requiring the GM to reveal the secret or guarantee that players interpret every clue correctly.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
