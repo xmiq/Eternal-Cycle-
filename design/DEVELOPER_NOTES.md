@@ -252,3 +252,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - A fused result should expose at least one practical dependency, bottleneck, or tradeoff so integration does not become a free multiplier.
 - Cross-life fusion is a likely snowballing pressure: retained Fusion Evidence must accelerate reintegration without making missing Component Skills fictional.
 - Group fusions need special attention to consent, membership changes, and ownership so leaders do not absorb collective capability.
+
+## Phase 3 Active-and-Passive Watchlist
+
+- Playtests should watch whether Background Load creates understandable tradeoffs without becoming hidden arithmetic or a universal passive-slot system.
+- Automatic defence and social presence are especially vulnerable to being narrated as perfect threat detection or mind control; their evidence and observer dependence must stay visible.
+- Conscious Override should create meaningful urgency when appropriate without punishing players for retaining control of deliberate action.
+- Internalisation should reduce bounded cognitive steps while preserving active judgment, correction, and unfamiliar-context failure.
+- Cross-life passives are a snowballing risk and should be audited again in the final Skill Engine safeguards.

@@ -579,6 +579,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
 - [Skill Evolution](../skills/SKILL_EVOLUTION.md)
 - [Skill Fusion](../skills/SKILL_FUSION.md)
+- [Active and Passive Skills](../skills/ACTIVE_AND_PASSIVE_SKILLS.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

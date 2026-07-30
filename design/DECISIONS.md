@@ -933,3 +933,35 @@ A completed fusion may form its own Skill Imprint with Component Skill provenanc
 ## D-233 — Collective Fusion Requires Explicit Ownership
 
 A group or distributed fusion belongs only to an identified stable group, role structure, institution, network, or other valid collective developed through shared practice. It preserves participant agency and does not grant the whole capability to a leader or every member.
+
+## D-234 — Active and Passive Are Expression Modes
+
+Active, passive, and mixed expression describe how a specific Skill function is initiated, directed, maintained, monitored, corrected, and interrupted. They are not separate power categories, rarity classes, or automatic measures of effectiveness.
+
+## D-235 — Passive Expression Retains Costs and Capacity
+
+Passive expression may reduce deliberate management while consuming Background Load, energy, bodily or magical capacity, resources, maintenance practice, and opportunity. Eternal Cycle has no universal passive-slot count; capacity is assessed from actual demands and conditions.
+
+## D-236 — Automatic Expression Is Bounded and Fallible
+
+Reflexes, filters, regulation, resistance, defence, analysis, presence, and coordination remain limited by cues, information, embodiment, practice, throughput, and context. Automaticity does not guarantee detection, interpretation, target choice, execution, or success.
+
+## D-237 — One Skill May Use Several Expression Modes
+
+Initiation, continuation, selection, monitoring, correction, and stopping may use different modes within one Skill. Internalisation may move bounded steps toward passive operation without duplicating the Skill or making every judgment automatic.
+
+## D-238 — Current-Incarnation Agency Governs Deliberate Action
+
+Passive Skills, Retained Instincts, Soul Echoes, past-life Habits, Soul Titles, and ordinary automatic responses may create cues, pressure, orientation, or brief learned movements but cannot silently choose the current incarnation's intentional speech, allegiance, targets, morality, relationships, or action.
+
+## D-239 — Conscious Override Preserves Agency With Causal Costs
+
+The current incarnation may pause, redirect, suppress, or replace an automatic response. Override may require attention, delay, effort, retraining, or accepted risk, but ordinary passive Skill rules cannot remove executive control.
+
+## D-240 — Expression Mode Does Not Capture External Effects
+
+A passive or active Skill owns only its learned operation. Anatomy, immunity, physical capacity, magic, equipment, allies, institutions, relationships, and Soul effects retain their own ownership, requirements, costs, and failure states.
+
+## D-241 — Reincarnation Does Not Stack Always-On Passives
+
+Persistent familiarity and related Soul records may accelerate relearning or supply bounded cues. Every present active or passive expression still requires Current Access, compatible embodiment, capacity, practice, and current reliability.

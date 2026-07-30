@@ -228,6 +228,30 @@ A specific execution pattern combining methods from multiple Skills. It may rema
 
 A result described as Skill Fusion even though temporary circumstances, simple sequencing, External Support, one dominant Skill, equipment, or an unintegrated combination better explains it.
 
+## Skill Expression Mode
+
+The way a specific function of a Skill is initiated, directed, maintained, monitored, corrected, or interrupted. Active, passive, and mixed expressions are modes rather than separate power categories.
+
+## Active Expression
+
+A Skill expression requiring deliberate invocation, direction, timing, selection, or maintained attention from its present owner.
+
+## Passive Expression
+
+A Skill expression operating through integrated Habit, perception, adaptation, conditioned response, automatic regulation, or continuously available competence without deliberate management of every step.
+
+## Internalisation
+
+Development through which parts of a previously deliberate process become stable perception, regulation, judgment, or response. It reduces some conscious load without erasing costs, limits, retraining, or override.
+
+## Background Load
+
+The attention, energy, sensory bandwidth, bodily capacity, magical throughput, memory, or opportunity consumed by a maintained or automatic expression even when it is not the focus of deliberate thought.
+
+## Conscious Override
+
+The current incarnation's deliberate attempt to pause, redirect, suppress, or replace an automatic response. Override may carry causal delay, effort, reduced performance, or risk while preserving executive agency.
+
 ## Foundational Skill
 
 A capability that supplies methods, perception, control, or judgment required by one or more later Skills.
