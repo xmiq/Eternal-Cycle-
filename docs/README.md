@@ -50,6 +50,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [Human Rules Index](human/README.md) - canonical reading order and ownership boundaries for Human Classes, Professions, traditions, schools, advancement, and institutions.
 - [Human Class Philosophy](human/HUMAN_CLASS_PHILOSOPHY.md) - classes as culturally situated frameworks for organizing and transmitting expertise without granting capability bundles.
+- [Human Classes](human/CLASSES.md) - Class Profiles, curricula, affiliations, local ranks, variants, equivalence, access, and adjudication.
 
 ## World Engine
 

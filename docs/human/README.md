@@ -5,6 +5,7 @@ This section defines how human societies organize, teach, preserve, apply, and r
 ## Canonical Reading Order
 
 1. [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md) - the shared meaning, ownership boundaries, and safeguards for all Phase 5 rules.
+2. [Human Classes](CLASSES.md) - Class Profiles, curricula, affiliations, local ranks, variants, equivalence, access, and class-claim adjudication.
 
 Later Phase 5 documents extend this foundation in roadmap order. A later document may add playable detail, but it may not turn a class label, profession, rank, credential, or institutional membership into automatic capability.
 

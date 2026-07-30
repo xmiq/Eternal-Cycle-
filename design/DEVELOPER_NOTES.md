@@ -373,3 +373,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Multiple Class Affiliations need practical limits from time, access, embodiment, obligations, and current-life practice rather than metaphysical class slots or arbitrary lockouts.
 - Reincarnated practitioners should benefit from retained history while still rebuilding present expression and negotiating changed institutions, bodies, and cultural meanings.
 - Mixed-society examples should respect monster-native traditions and avoid treating Human Classes as the universal or superior model of organized expertise.
+- Class Profiles should stay concise enough for play; optional fields that never affect access, learning, recognition, or consequence should be omitted.
+- Local relationship labels and ranks need repeated checks against accidental ladder language, especially when one culture treats teaching permission as seniority.
+- Class Equivalence Claims should expose both real safety gaps and political protectionism without assuming either explanation by default.
+- Emerging and reconstructed classes need enough social continuity to be more than personal Skill records, while informal oral traditions must not be excluded for lacking institutions.

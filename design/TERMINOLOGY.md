@@ -1483,3 +1483,19 @@ A person's scoped relationship to a Human Class, such as study, lineage, practic
 ## Class Recognition
 
 Acknowledgment by a named audience that a person has a particular relationship to a Human Class. It may affect access, expectations, opportunities, and obligations within that audience but is not universal proof of capability or authority.
+
+## Class Profile
+
+The smallest useful record of one Human Class, including its scope, domain, provenance, interpretive core, transmission, expected practice, capability references, embodiment assumptions, recognition, evidence, access, obligations, related structures, variants, and current condition.
+
+## Class Curriculum
+
+An organized teaching route used by one version of a Human Class. It creates access to structured learning through methods such as instruction, exercises, supervision, correction, practical trials, and reflection but does not guarantee capability or mastery.
+
+## Class Variant
+
+A recognizably related form of a Human Class whose curriculum, interpretation, practice, embodiment assumptions, or recognition differs while shared provenance, domain, continuity, or mutual recognition still makes one class record truthful.
+
+## Class Equivalence Claim
+
+A scoped claim that two Human Classes or Class Affiliations should be treated as comparable for one named purpose, such as advanced admission, credential review, legal reciprocity, professional eligibility, or access. It never establishes universal sameness.

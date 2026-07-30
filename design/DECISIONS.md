@@ -1421,3 +1421,31 @@ A person may participate in several class frameworks or in none. Affiliation mus
 ## D-355 — Reincarnation Preserves No Class Standing
 
 Reincarnation may preserve relevant Soul Imprints, retained Development, and Skill history, but former membership, rank, credentials, authority, reputation, access, and cultural meaning remain world-bound. A new incarnation must rebuild embodied capability and establish any current class relationship through present-life causality.
+
+## D-356 — Class Validity Requires Social Continuity
+
+A proposed Human Class must have a coherent domain, transmissible structure, shared interpretation, meaningful present practice, scoped recognition, and continuity beyond one accidental capability list. Formal institutions and universal names are not required.
+
+## D-357 — Class Profiles Reference Rather Than Grant Capability
+
+A Class Profile records domain, provenance, interpretation, transmission, practice, capability references, embodiment assumptions, recognition, access, obligations, variants, and current condition. References to Skills and Development describe learning routes and dependencies, never benefit packages.
+
+## D-358 — Class Relationships Are Fact-Specific
+
+Observer, candidate, student, practitioner, peer recognition, teaching, custodianship, reform, former affiliation, outsider classification, and self-identification are distinct possible relationships rather than a mandatory progression ladder. Every claim names its class version, audience, evidence, and actual consequence.
+
+## D-359 — Class Ranks Are Local Claims
+
+A rank, grade, circle, title, examination, or other class label must identify who recognizes it, what evidence it claims, what rights or responsibilities follow, its accepted scope, and how it may be challenged or lost. Such labels are not universally comparable power ranks.
+
+## D-360 — Class Equivalence Is Purpose-Bounded
+
+Two classes or affiliations may be treated as equivalent for one named purpose after comparing actual capability, curriculum, embodiment, standards, judgment, evidence, audience, and institutional interests. Scoped equivalence does not make their frameworks or practitioners identical.
+
+## D-361 — Class Access Is Causal, Not Metaphysically Locked
+
+Teachers, language, wealth, geography, secrecy, law, prejudice, tools, trust, embodiment, and institutional enforcement may restrict class access. These conditions can change through world causality and never become invisible class slots or universal prohibitions on learning.
+
+## D-362 — Emerging Classes Require Reproducible Social Practice
+
+A personal method becomes an emerging Human Class only when others can learn, interpret, practise, criticize, adapt, and recognize a coherent framework. Skill novelty or a dramatic name alone does not create a class or retroactively assign affiliation.
