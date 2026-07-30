@@ -330,7 +330,7 @@ A soul that once inhabited an extinct species may retain only records protected 
 
 An extinct form is not an ordinary Reincarnation candidate when no viable origin or embodiment route exists in the current world. A future valid reconstruction, Evolution, Hybrid Origin, divine process, or changed Age may create a new candidate route, but that route must define its body and consequences independently. Memory of a body is not a womb, egg, forge, habitat, or species.
 
-The detailed interaction of Soul systems with Evolution belongs to the next Phase 4 task. Until then, established Soul rules remain authoritative.
+The detailed interaction of Soul systems with Evolution belongs to [Soul Interaction with Evolution](SOUL_INTERACTIONS.md). Established Soul rules remain authoritative.
 
 ## Societies and Extinction
 

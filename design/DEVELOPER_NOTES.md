@@ -336,3 +336,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Reconstructed or convergent analogues need clear provenance so de-extinction stories do not silently restore lost bodies, cultures, or relationships.
 - Invasive-population adjudication should separate ecological effects from political rhetoric, personhood, and collective blame.
 - Long time skips will eventually need a World Engine resolution procedure that advances Extinction Debt and recovery without false precision.
+
+## Phase 4 Soul Interaction Watchlist
+
+- Soul-conditioned routes should remain rare because the route's form genuinely depends on Soul history, not because Soul systems serve as prestige locks.
+- Retained Instincts need visible current-life translation so they guide Response Evidence without quietly becoming inherited anatomy or free progression.
+- Soul Titles are especially prone to thematic route inflation; symbolic relevance must not become universal species access.
+- Soul Depth should remain capacity rather than a rarity ladder for ancient, hybrid, or apex forms.
+- Reincarnation candidate generation must not turn prior Evolved Forms into selectable loadouts.
+- Founding forms whose route used a personal Soul condition need explicit inheritance treatment before becoming stable lineages.

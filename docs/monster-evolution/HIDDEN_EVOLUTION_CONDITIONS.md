@@ -179,7 +179,7 @@ They cannot:
 - turn a title name into a complete requirement;
 - remove uncertainty that the Soul system itself preserves.
 
-Task 8 defines complete Soul interaction.
+[Soul Interaction with Evolution](SOUL_INTERACTIONS.md) defines complete Soul interaction.
 
 ## Preventing Requirement Farming
 

@@ -1443,3 +1443,11 @@ The restoration or reorganisation of viable ecological functions, relationships,
 ## Reintroduction
 
 The deliberate return of a still-viable lineage to a region from which it was locally extirpated.
+
+## Soul-Conditioned Evolution Route
+
+An otherwise valid Evolution Route that explicitly recognizes one or more established Soul-system facts as bounded pressure, evidence, condition, compatibility, transition support, or interpretation.
+
+## Evolution-Relevant Soul Evidence
+
+A source-bounded Soul fact whose owning rule permits it to inform one named Evolution claim. It is not currency, current Response Evidence by default, or proof that a route exists or must complete.

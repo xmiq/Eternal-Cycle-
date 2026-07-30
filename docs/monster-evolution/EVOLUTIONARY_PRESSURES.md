@@ -195,7 +195,7 @@ Magical pressure must specify source, access, exposure, maintenance, depletion, 
 
 Soul Resonance fields, Archive Traces, recurrent Soul relationships, divine soul-work, World Resets, or other established Soul phenomena may affect recognition, identity tension, memory access, or compatibility evidence.
 
-Soul phenomena do not rewrite a body's Species Potential by default. A prior dragon life, powerful Soul Title, awakened Echo, or deep Resonance may orient choices and make a specifically permitted route visible; none automatically grants dragon anatomy or forces Evolution. Task 8 defines these interactions fully.
+Soul phenomena do not rewrite a body's Species Potential by default. A prior dragon life, powerful Soul Title, awakened Echo, or deep Resonance may orient choices and make a specifically permitted route visible; none automatically grants dragon anatomy or forces Evolution. [Soul Interaction with Evolution](SOUL_INTERACTIONS.md) defines these interactions fully.
 
 ### Disease and Parasites
 

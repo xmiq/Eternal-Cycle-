@@ -119,7 +119,7 @@ Every Evolution Route needs an origin that explains why the transition is possib
 - integration of a compatible Mutation;
 - a bounded hybrid origin;
 - a social, ritual, or technical process that actually changes Species Potential;
-- a Soul interaction explicitly permitted by later rules.
+- a Soul interaction explicitly permitted by [Soul Interaction with Evolution](SOUL_INTERACTIONS.md).
 
 Provenance does not guarantee access. A species may possess a dormant route whose required habitat no longer exists. A ritual may be known but unavailable. A body may be too damaged, too immature, or incompatible. A route may close after another branch changes necessary structures.
 

@@ -1297,3 +1297,47 @@ Off-screen play, time skips, death, Reincarnation, and changing protagonists adv
 ## D-324 — Evolutionary Rescue Is Possible but Never Owed
 
 A valid Evolution Route may help viable descendants survive meaningful pressure when time, compatibility, transition conditions, resources, renewal, and post-transition ecology permit. Desperation, suffering, killing, repetition, or approaching extinction cannot create or guarantee such a route.
+
+## D-325 — Monster Evolution Owns Every Bodily Transition
+
+Soul systems may support pressure, discovery, conditions, compatibility, transition coherence, or interpretation according to their own rules. Monster Evolution alone owns route existence, bodily qualification, transition, and the Evolved Form.
+
+## D-326 — Soul-Conditioned Routes Require Independent Provenance
+
+A Soul-Conditioned Evolution Route must already be a valid route and must explicitly state which established Soul fact matters, in what bounded role, and why. Soul evidence cannot create the route or retroactively become a convenient requirement.
+
+## D-327 — Prior Lives Are Not Current Response Evidence
+
+Soul history may orient current attention and action, but current Response Evidence records what the present being encounters, attempts, pays, and integrates. A route may recognize trans-incarnational evidence only through an explicit narrow condition that preserves current embodiment and transition requirements.
+
+## D-328 — Resonance and Echoes Reveal Without Materializing
+
+Soul Resonance may reveal, align, or stabilize an already valid Evolution interaction, while Soul Echoes may supply bounded memory, perspective, and cooperation. Neither grants anatomy, objective route truth, extra actions, or a former Evolved Form.
+
+## D-329 — Soul Depth Supplies Capacity, Not Evolution
+
+Soul Depth may establish capacity to integrate a radical or complex valid transition. It cannot create a route, pay costs, replace current-life integration, guarantee survival, grant anatomy, or make completion a Deepening Event automatically.
+
+## D-330 — Reincarnation and Evolution Are Distinct Transitions
+
+Reincarnation places a soul into one causally valid current embodiment after Final Death; Evolution changes a living current monster form. Former Evolved Forms end with their bodies and cannot be selected as saved loadouts or restored without a valid current embodiment route.
+
+## D-331 — Retained Instincts Orient Evolution Without Unlocking It
+
+A Retained Instinct may reveal cues, inform current behavior, support one explicit route condition, or help calibrate a resulting form. It grants no former anatomy, Species Trait, current Response Evidence, Skill, progression-tree access, or automatic Evolution.
+
+## D-332 — Evolution Reassesses Instinct Access
+
+After an Evolution Transition, each relevant Retained Instinct is reassessed against new senses, Current Instincts, embodiment, Resonance, practice, and context. Better anatomical fit does not merge the Retained Instinct with a Species Trait or change its Origin.
+
+## D-333 — Titles and Avatars Create Context, Not Forms
+
+Soul Titles may provide relevant recognition, opportunity, affinity, or one explicit symbolic condition, and Soul Avatars may synthesize bounded perspectives. Neither grants a species form, universal branch, automatic authority, additional action, or control over the current incarnation's choice.
+
+## D-334 — Soul Interfaces Provide Information, Not Transition Ownership
+
+Soul Space, Soul Constellations, the Akashic Archive, and Soul Weapons may provide bounded interfaces, relationships, records, testimony, consent, or route-specific support. They do not create Evolution Routes, pool Species Potential, copy anatomy, or bypass their own access and personhood rules.
+
+## D-335 — Soul-Conditioned Forms Are Not Automatically Inherited
+
+An individual's Soul-conditioned Evolved Form does not copy the initiating Soul fact into descendants or redefine the whole species. Stable inheritance requires a repeatable bodily origin, renewal, ecology, variation, and explicit treatment of whether each successor needs its own Soul condition.
