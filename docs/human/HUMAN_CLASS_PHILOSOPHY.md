@@ -2,7 +2,7 @@
 
 ## Status
 
-This document is the authoritative Phase 5 foundation for Human Classes. It defines what a Human Class means, what it can establish, and which claims remain owned by other systems. Later Phase 5 documents add playable structures without changing these boundaries.
+This document is the authoritative Phase 5 foundation for Human Classes. It defines what a Human Class means, what it can establish, and which claims remain owned by other systems. The specialist Phase 5 rules linked below add playable structures without changing these boundaries.
 
 ## Purpose
 
@@ -22,9 +22,9 @@ A class claim often sits beside several related facts. Adjudication must keep th
 | --- | --- | --- |
 | Present capability | What can this person actually do now? | [Skills](../skills/README.md) and [Development](../progression/README.md) |
 | Learning framework | Through what organized language, method, and tradition is the expertise taught? | Human Class rules |
-| Professional responsibility | What work, duty, and standard is the person expected to perform? | [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) and later Phase 5 Profession rules |
+| Professional responsibility | What work, duty, and standard is the person expected to perform? | [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) and [Professions](PROFESSIONS.md) |
 | Institutional access | Which people, places, materials, offices, and permissions are available? | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) and current world causality |
-| World recognition | What does a particular society believe, acknowledge, or expect? | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and later Phase 5 recognition rules |
+| World recognition | What does a particular society believe, acknowledge, or expect? | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and [Social Advancement](SOCIAL_ADVANCEMENT.md) |
 | Personal identification | Which traditions, names, and communities does the person accept as part of the current self? | Character agency and campaign state |
 
 One fact may provide evidence for another, but it does not replace it. A recognized class member may be unskilled. A capable practitioner may be unrecognized. An institution may teach several classes. A profession may draw from several classes. One person may identify with a class without holding an office or practising its associated profession.
@@ -285,23 +285,32 @@ Prestige does not defeat a factual capability check. Stigma does not erase real 
 
 Do not recast monster traditions as incomplete Human Classes. Use each society's actual transmission structures and progression ownership.
 
-## Deferred Phase 5 Ownership
+## Specialist Rule Ownership
 
-This philosophy intentionally does not define:
+This philosophy establishes shared boundaries and delegates the following details to their specialist rules:
 
-- the internal anatomy and record format of particular classes;
-- the detailed relationship between class frameworks and Professions;
-- martial traditions or magical schools;
-- social advancement procedures;
+- class structure, profiles, and claim resolution in [Human Classes](CLASSES.md);
+- work structures and the relationship between class frameworks and Professions in [Professions](PROFESSIONS.md);
+- conflict-oriented learning frameworks in [Martial Traditions](MARTIAL_TRADITIONS.md);
+- socially organized models of magical practice in [Magical Schools](MAGICAL_SCHOOLS.md);
+- social position and mobility in [Social Advancement](SOCIAL_ADVANCEMENT.md);
 - institution and academy rules defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class change, synthesis, decline, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- the final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
+- scoped constraints and phase-wide limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-Those subjects belong to their linked Phase 5 owners or the remaining roadmap tasks. Every extending rule must preserve the distinctions and safeguards established here.
+Every specialist rule preserves the distinctions and safeguards established here. The [Human Rules Index](README.md) supplies the completed phase-wide reading order, ownership map, and adjudication sequence.
 
 ## Related Canon
 
 - [Human Classes and Professions Index](README.md)
+- [Human Classes](CLASSES.md)
+- [Professions](PROFESSIONS.md)
+- [Martial Traditions](MARTIAL_TRADITIONS.md)
+- [Magical Schools](MAGICAL_SCHOOLS.md)
+- [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)

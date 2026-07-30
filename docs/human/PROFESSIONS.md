@@ -477,24 +477,30 @@ Professional duty, oath, debt, expectation, or emergency can create pressure and
 
 ## Deferred Ownership
 
-This document does not fully define:
+This document delegates the following claims to their specialist rules:
 
-- martial traditions;
-- magical schools;
-- social advancement and status mobility;
+- conflict-oriented class frameworks in [Martial Traditions](MARTIAL_TRADITIONS.md);
+- socially organized models of magical practice in [Magical Schools](MAGICAL_SCHOOLS.md);
+- social position and mobility in [Social Advancement](SOCIAL_ADVANCEMENT.md);
 - institutions, guilds, academies, licensing bodies, and governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md);
+- scoped constraints and phase-wide limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md);
 - wages, prices, markets, taxation, or labor simulation;
 - technical procedures for particular crafts, medicine, law, magic, or other work.
 
-Those subjects remain with their linked owners, the remaining Phase 5 tasks, Phase 7, and World Engine tasks. Profession Profiles may reference them without inventing their rules.
+The linked Human rules, the later Magic phase, and the World Engine own those subjects. Profession Profiles may reference them without inventing their rules.
 
 ## Related Canon
 
 - [Human Classes and Professions Index](README.md)
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
+- [Martial Traditions](MARTIAL_TRADITIONS.md)
+- [Magical Schools](MAGICAL_SCHOOLS.md)
+- [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)

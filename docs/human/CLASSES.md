@@ -407,22 +407,29 @@ A class can impose expectations and causal consequences, but it cannot decide a 
 
 ## Deferred Ownership
 
-This document does not fully define:
+This document delegates the following claims to their specialist rules:
 
-- Profession structures and practice;
-- martial-tradition procedures;
-- magical-school procedures;
-- social advancement;
+- Profession structures and practice in [Professions](PROFESSIONS.md);
+- conflict-oriented class procedures in [Martial Traditions](MARTIAL_TRADITIONS.md);
+- magical-school procedures in [Magical Schools](MAGICAL_SCHOOLS.md);
+- current social position and mobility in [Social Advancement](SOCIAL_ADVANCEMENT.md);
 - institution and academy governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation, merger, fracture, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
+- scoped constraints and phase-wide limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-Those subjects belong to their dedicated Phase 5 owners or the remaining roadmap tasks. Class Profiles may reference them without deciding their rules.
+Class Profiles may reference those facts without deciding or duplicating their rules.
 
 ## Related Canon
 
 - [Human Classes and Professions Index](README.md)
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
+- [Professions](PROFESSIONS.md)
+- [Martial Traditions](MARTIAL_TRADITIONS.md)
+- [Magical Schools](MAGICAL_SCHOOLS.md)
+- [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)

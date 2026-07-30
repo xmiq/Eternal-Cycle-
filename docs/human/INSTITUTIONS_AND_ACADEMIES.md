@@ -604,6 +604,8 @@ Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for narrow missing
 - [Martial Traditions](MARTIAL_TRADITIONS.md)
 - [Magical Schools](MAGICAL_SCHOOLS.md)
 - [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)

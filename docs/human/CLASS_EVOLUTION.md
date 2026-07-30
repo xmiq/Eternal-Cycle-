@@ -513,6 +513,7 @@ Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for narrow missing
 - [Magical Schools](MAGICAL_SCHOOLS.md)
 - [Social Advancement](SOCIAL_ADVANCEMENT.md)
 - [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)

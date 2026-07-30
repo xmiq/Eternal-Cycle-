@@ -577,7 +577,7 @@ This document does not define:
 - academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-[Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), Phase 7, and the remaining Phase 5 tasks own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+[Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md), and the later Magic phase own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
 ## Related Canon
 
@@ -585,6 +585,8 @@ This document does not define:
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
 - [Professions](PROFESSIONS.md)
+- [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
 - [Magical Development](../progression/MAGICAL_DEVELOPMENT.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)

@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 5 — Human Classes & Professions**
+**Current phase: Phase 6 — Soul Weapons**
 
-**Current task: Audit and integrate Phase 5**
+**Current task: Define dormant Weapon Souls**
 
-Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and integrate Phase 5** unless the project owner explicitly changes the target. Do not begin Phase 6 until the Phase 5 audit and exit criteria are complete.
+Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define dormant Weapon Souls** unless the project owner explicitly changes the target. Do not begin awakening conditions, soul intertwining, weapon personalities, weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapons until dormant Weapon Souls are complete unless the project owner explicitly changes the target.
 
-Phases 1 through 4 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 5 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -136,7 +136,11 @@ Phase 4 is complete only when ecology causally drives possible evolution; specie
 - [x] Define institutions and academies
 - [x] Define class evolution
 - [x] Define limits of human progression
-- [ ] Audit and integrate Phase 5
+- [x] Audit and integrate Phase 5
+
+### Exit Criteria
+
+Phase 5 is complete only when Human Classes, Professions, Martial Traditions, Magical Schools, Social Advancement, Institutions and Academies, Class Evolution, and human progression limits are defined, linked, and internally consistent; the shared ownership map and claim-resolution sequence are usable; Skills, Development, recognition, authority, and social structures remain distinct; present embodiment and current-life effort remain necessary; human and monster progression remain separate without treating human structures as universal; no universal level, mandatory class route, automatic capability package, rigid class lock, or social-status substitution exists; Reincarnation restores no world-bound standing; no blocking questions remain; and all links validate.
 
 ## Phase 6 — Soul Weapons
 

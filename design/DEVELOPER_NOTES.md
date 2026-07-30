@@ -446,3 +446,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Retained progression should make old souls distinct and often efficient while one current body, present effort, diminishing returns, and compatibility prevent compressed omniscience.
 - Human-monster crossover remains the main pressure point for tree merger; every translated result needs one current Receiving Route and explicit transfer loss.
 - GM statements about impossibility need evidence and ownership, while unknown limits must not become promises of hidden upgrades.
+
+## Phase 5 Integration Audit
+
+- All nine substantive Human Classes and Professions documents are indexed in canonical reading order with a shared ownership map and claim-resolution sequence.
+- Skills own capabilities, Development owns capability change, Human Classes own socially transmitted learning frameworks, Professions own organized work and responsibility, and Institutions own durable coordination.
+- Martial Traditions and Magical Schools remain specialized social frameworks rather than combat packages, spell lists, or authority to define physical and magical truth.
+- Recognition, credentials, rank, office, authority, legitimacy, reputation, and demonstrated capability remain separate facts with purpose-bound evidence.
+- Human progression limits are scoped and causal; present embodiment, current-life practice, maintenance, access, tradeoffs, and uncertainty remain meaningful despite retained history.
+- Human and monster progression remain distinct, while mixed societies and bounded present-life receiving routes permit genuine exchange without tree merger.
+- Stale Phase 5 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
+- Phase 6 should preserve Weapon Souls as distinct persons and avoid turning weapon affiliation, possession, awakening, or persistence into a class, Skill package, authority claim, or bypass around embodied practice.

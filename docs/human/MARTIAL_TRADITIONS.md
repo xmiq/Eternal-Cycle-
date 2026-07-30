@@ -519,18 +519,18 @@ Training choices, doctrine, violence, injury, reputation, law, and relationships
 
 ## Deferred Ownership
 
-This document does not define:
+This document delegates or defers the following claims to their owning rules:
 
 - a universal combat engine;
 - complete weapon lists or damage values;
-- magical schools, spell tiers, mana, or affinities;
-- military organizations, academy governance, or legal systems;
+- Magical Schools defined in [Magical Schools](MAGICAL_SCHOOLS.md), and spell, mana, or affinity rules owned by the later Magic phase;
+- military organizations and Academy governance defined through [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), and legal systems owned by the World Engine;
 - universal tournament rules;
 - Soul Weapon awakening, evolution, compatibility, or manifestations;
-- Monster Evolution routes;
-- final limits of human progression.
+- Monster Evolution routes defined in the [Monster Evolution rules](../monster-evolution/README.md);
+- scoped constraints and phase-wide limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-Those remain with their later roadmap tasks and owning systems.
+Mentioning any unfinished later system here grants none of its capabilities by implication.
 
 ## Related Canon
 
@@ -538,6 +538,9 @@ Those remain with their later roadmap tasks and owning systems.
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
 - [Professions](PROFESSIONS.md)
+- [Magical Schools](MAGICAL_SCHOOLS.md)
+- [Social Advancement](SOCIAL_ADVANCEMENT.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
 - [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)

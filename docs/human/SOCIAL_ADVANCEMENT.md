@@ -550,7 +550,7 @@ This document does not fully define:
 - class transformation defined in [Class Evolution](CLASS_EVOLUTION.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-Those remain with [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), the remaining Phase 5 tasks, and World Engine tasks. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.
+The linked Human rules and the World Engine own those subjects. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.
 
 ## Related Canon
 
@@ -558,6 +558,11 @@ Those remain with [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), t
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
 - [Professions](PROFESSIONS.md)
+- [Martial Traditions](MARTIAL_TRADITIONS.md)
+- [Magical Schools](MAGICAL_SCHOOLS.md)
+- [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md)
+- [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)

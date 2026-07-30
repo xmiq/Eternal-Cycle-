@@ -51,4 +51,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, and Monster Evolution phase are complete. The current phase is **Phase 5 — Human Classes & Professions**, and the sole active task is **Audit and integrate Phase 5**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, and Human Classes & Professions phases are complete. The current phase is **Phase 6 — Soul Weapons**, and the sole active task is **Define dormant Weapon Souls**.
