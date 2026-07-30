@@ -457,3 +457,31 @@ Pain, injury, illness, overtraining, deprivation, and Final Death do not grant P
 ## D-114 — External Body Changes Retain Their Owning Systems
 
 Mutation, magical reinforcement, artificial augmentation, and temporary transformation may alter Body Potential, Current Condition, or available expression. They do not become trained bodily capacity automatically, and each source retains its own access, duration, maintenance, suppression, cost, persistence, and failure rules.
+
+## D-115 — Skill Labels Record Rather Than Create Capability
+
+A Skill is a bounded learned capability demonstrated through meaningful practice, feedback, adaptation, and use. Naming, observing, copying, possessing, or receiving a Skill label does not grant its execution, supporting statistics, prerequisites, tools, or progression-tree access.
+
+## D-116 — Skill XP Is Specific Persistent Familiarity
+
+Skill XP records legitimately earned developmental familiarity within a specific Skill and may persist as a Skill Imprint. It is not a spendable currency, universal experience pool, current proficiency score, or freely transferable payment for unrelated Skills.
+
+## D-117 — Skill Knowledge, Execution, and Reliability Remain Separate
+
+Knowing a method does not guarantee embodied execution, and executing a rehearsed pattern does not guarantee theory, adaptability, or reliability under pressure. Skill assessment must identify which dimensions have actually been demonstrated.
+
+## D-118 — Mastery Is Bounded and Evidence-Based
+
+Mastery is deep, adaptable, and reliable capability within a stated scope. No universal count of repetitions, years, victories, techniques, or students establishes it, and one success or failure does not by itself prove or erase it.
+
+## D-119 — Adaptive Skills Require Distinct Integrated Practice
+
+An Adaptive Skill may emerge only when repeated meaningful behavior develops a coherent function, integrated method, distinct value, receiving-tree compatibility, and demonstrated reliability. A desired name, trivial combination, or staged loop cannot create one.
+
+## D-120 — Human and Monster Skill Trees Retain Ownership
+
+Human and monster Skill trees begin separately and neither is the default form of the other. Cross-tree development requires retained provenance, present access, functional correspondence, current-life practice, receiving-tree permission, and a bounded translated result.
+
+## D-121 — Composite Use Does Not Imply Skill Fusion
+
+Several Skills may coordinate in a Composite Skill without merging. Any future fusion requires developed components, meaningful functional overlap, repeated integrated use, tree compatibility, real tradeoffs, and protection against duplicate XP, benefits, mastery, or actions.

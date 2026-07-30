@@ -96,9 +96,9 @@ Current Condition is not a moral judgment and should not be mistaken for permane
 
 ### Technique
 
-Technique is the learned organization of action. It belongs primarily to the later Skill Development rules. Physical Development may make a technique possible, cheaper, faster, or more stable, but it does not award the technique merely because the body is capable of it.
+Technique is the learned organization of action. It belongs primarily to [Skill Development](SKILL_DEVELOPMENT.md). Physical Development may make a technique possible, cheaper, faster, or more stable, but it does not award the technique merely because the body is capable of it.
 
-Until the dedicated Skill Development document exists, no example in this document creates a skill, rank, technique package, or progression-tree unlock.
+Examples in this document do not create a Skill, rank, technique package, or progression-tree unlock beyond the rules in Skill Development.
 
 ### Magical Reinforcement
 
@@ -463,7 +463,7 @@ No Physical Dimension is a universal victory statistic. Strong capability should
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant body histories without restoring former anatomy, statistics, or action economy.
 - **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may alter leverage, reach, load, or available movement while weapon mastery remains separate.
 - **Species Development:** owns maturation routes, species traits, and body-changing possibilities beyond ordinary conditioning.
-- **Skill Development:** owns techniques that organize physical capability toward repeatable actions.
+- **[Skill Development](SKILL_DEVELOPMENT.md):** owns techniques that organize physical capability toward repeatable actions.
 - **Magical Development:** owns control of magical reinforcement, channels, transformations, and metaphysical expression.
 - **Profession Development:** owns integrated judgment and tool practice that may demand specialized bodily capacity.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies food, climate, disease, labor, infrastructure, prejudice, medicine, conflict, and environmental pressure.
@@ -548,6 +548,7 @@ The monster remains stronger. The humans become favored for the extraction objec
 
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
+- [Skill Development](SKILL_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

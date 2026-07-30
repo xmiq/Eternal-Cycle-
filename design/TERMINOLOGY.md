@@ -84,6 +84,66 @@ The present-life process of aligning perception, timing, force, balance, and mov
 
 A stable method, tool, altered technique, or environmental arrangement that allows a body to act effectively with its actual capabilities without pretending absent anatomy has been restored.
 
+## Skill
+
+A bounded learned capability organized around a recognizable function, method, or family of related actions and developed through meaningful practice, feedback, adaptation, and use.
+
+## Technique
+
+A specific method or execution pattern used within a Skill.
+
+## Habit
+
+A repeated behavior or response that has become easy to initiate. A Habit is not necessarily a Skill or persistent Soul Imprint.
+
+## Discipline
+
+A sustained practice that organizes methods, standards, training, judgment, identity, and often a community or tradition around related capabilities.
+
+## Competency
+
+A practical capability demonstrated to a defined standard and context without implying universal Mastery.
+
+## Mastery
+
+Deep, adaptable, and reliable understanding within a bounded Skill or technique, demonstrated across meaningful variation. Mastery does not imply perfection or authority outside its scope.
+
+## Specialisation
+
+A deliberately narrowed area within a Skill or Discipline in which concentrated practice creates unusual refinement at the cost of narrower transfer.
+
+## Skill XP
+
+Persistent developmental familiarity earned within a specific Skill through legitimate adaptation and meaningful use. It is not a spendable currency, universal experience pool, or current proficiency score.
+
+## Skill Imprint
+
+The Soul Imprint that preserves a Skill's legitimately earned structure and Skill XP after Final Death while remaining subject to current access and embodiment.
+
+## Adaptive Skill
+
+A Skill that emerges when repeated meaningful behavior develops a stable, distinct capability not adequately represented by an existing Skill in the current progression tree.
+
+## Composite Skill
+
+A coordinated capability that depends on several developed Skills or Tracks while retaining a distinct purpose and practice. Its components remain separate capabilities.
+
+## Foundational Skill
+
+A capability that supplies methods, perception, control, or judgment required by one or more later Skills.
+
+## Dependent Skill
+
+A Skill whose reliable expression requires a named foundational capability, body structure, tool, resource, permission, or other established prerequisite.
+
+## Transferable Principle
+
+An abstract relationship or method that can support relearning in another body, toolset, culture, or progression tree when functional correspondence and present practice exist.
+
+## Body-Dependent Technique
+
+A technique whose expression relies on particular anatomy, senses, proportions, natural weapons, magical organs, or movement modes.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.

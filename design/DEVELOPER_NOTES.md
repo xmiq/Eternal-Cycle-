@@ -31,6 +31,9 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Cross-species translation should produce body-appropriate expressions and real tradeoffs rather than standardized copies of human techniques.
 - The Stat XP task must decide useful familiarity categories without turning Physical Dimensions into one mandatory attribute list.
 - Species, injury, disability, illness, magical enhancement, and artificial-body rules must later define their own particulars without treating an ordinary human body as the universal baseline.
+- Phase 3 must define tree schemas, adaptive-skill naming, evolution, and fusion without turning examples in the Development rules into automatic unlocks.
+- Numerical Skill XP and local proficiency ranks remain optional future tools; any implementation must preserve skill-specific evidence and avoid a shared exchange rate.
+- The eventual skill-proliferation safeguard should distinguish genuinely useful breadth from redundant labels, cosmetic variants, and components better represented as techniques.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

@@ -621,6 +621,7 @@ The wyvern is favored for aerial pursuit and storm rescue. The human is favored 
 
 - [Progression Rules Index](README.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
+- [Skill Development](SKILL_DEVELOPMENT.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)
