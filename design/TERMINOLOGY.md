@@ -18,7 +18,11 @@ The historically rooted identity, memories, values, emotions, habits, and modes 
 
 ## Echo Presence
 
-The current degree to which a Soul Echo can be perceived and participate: Dormant, Faint, Awakened, Advisor, Manifest, or Avatar.
+The current degree to which a Soul Echo can be perceived and participate: Dormant, Faint, Awakened, Advisor, Manifest, or Delegate.
+
+## Delegate Presence
+
+The highest defined Echo Presence, at which a Soul Echo may qualify for bounded, consent-based Echo Delegation. Delegate Presence does not make the Echo a Soul Avatar or active incarnation.
 
 ## Echo Chorus
 
@@ -30,7 +34,15 @@ A cooperative state in which a Soul Echo lends perspective, memory context, or p
 
 ## Echo Delegation
 
-A bounded, mutually agreed transfer of executive control from the current incarnation to an Avatar Echo without making the Echo a separate soul or active incarnation.
+A bounded, mutually agreed transfer of executive control from the current incarnation to an Echo at Delegate Presence without making the Echo a separate soul or active incarnation.
+
+## Soul Avatar
+
+The term reserved for an exceptional whole-soul synthesis state led by the current incarnation. It must not describe one Soul Echo, a Weapon Soul's manifestation, a generic projection, a title symbol, or a divine proxy.
+
+## Weapon Manifestation
+
+The term reserved for a future rule governing a Weapon Soul's independently perceivable or embodied expression. Awakening, intertwining, or internal appearance alone does not establish one.
 
 ## Final Death
 

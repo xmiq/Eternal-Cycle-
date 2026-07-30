@@ -140,15 +140,15 @@ A Soul Echo is formed from the completed life as a whole rather than from a perf
 
 ## D-035 — Echo Presence Is Conditional
 
-Dormant, Faint, Awakened, Advisor, Manifest, and Avatar describe an Echo's current Presence rather than a universal power rank. Presence describes participation and remains distinct from the Resonance State of the Echo's Link. It depends on Resonance, Triggers, Soul Depth, Integrity, compatibility, and access, and may recede without erasing the Echo.
+Dormant, Faint, Awakened, Advisor, Manifest, and Delegate describe an Echo's current Presence rather than a universal power rank. Presence describes participation and remains distinct from the Resonance State of the Echo's Link. It depends on Resonance, Triggers, Soul Depth, Integrity, compatibility, and access, and may recede without erasing the Echo.
 
 ## D-036 — Echo Agency Is Bounded
 
 An Echo may remember, advise, disagree, initiate permitted internal contact, and refuse voluntary cooperation. It cannot independently act in the world, create extra turns, confiscate protected Soul Imprints, take the body without consent, reincarnate separately, or replace the current incarnation.
 
-## D-037 — Avatar Delegation Requires Mutual Consent
+## D-037 — Echo Delegation Requires Mutual Consent
 
-Echo Delegation requires informed agreement from the current incarnation and Avatar Echo, a defined scope and ending condition, compatible embodiment, sufficient capacity, and a safe return of control. It grants no extra body, actions, anatomy, authority, or exemption from consequences. Forced takeover requires an explicit hostile rule with fair warning and meaningful resistance.
+Echo Delegation requires informed agreement from the current incarnation and an Echo at Delegate Presence, a defined scope and ending condition, compatible embodiment, sufficient capacity, and a safe return of control. It grants no extra body, actions, anatomy, authority, or exemption from consequences. Forced takeover requires an explicit hostile rule with fair warning and meaningful resistance.
 
 ## D-038 — Echo Knowledge Retains Provenance
 
@@ -309,3 +309,7 @@ Archive Attunements and legitimate Links may persist through Final Death, Reinca
 ## D-077 — Archive Interfaces and Custodians Are Bounded
 
 Every Archive Interface and Custodian has a defined scope, method, jurisdiction, limits, costs, and possible bias. No Interface or Custodian is automatically omniscient, neutral, morally correct, or empowered to waive privacy, resistance, soul-harm, and world-causality rules.
+
+## D-078 — Avatar Terminology Has Separate Owners
+
+**Soul Avatar** is reserved for the exceptional whole-soul synthesis system led by the current incarnation. **Delegate Presence** replaces Avatar as the highest Echo Presence, and **Weapon Manifestation** replaces weapon avatar as the reserved term for a future Weapon Soul expression. Unqualified **Avatar** is not a standalone canonical mechanic, and none of these terms grants the rules belonging to another.

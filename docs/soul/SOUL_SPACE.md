@@ -212,7 +212,7 @@ Soul Space can host manifestations of structures belonging to the soul without t
 - **Soul Echoes** may hold Manifest Presence in accessible Regions. Their agency and knowledge remain governed by the Soul Echo rules.
 - **Weapon Souls** remain distinct persons. An intertwined Weapon Soul may enter, appear, or maintain a shared Region according to its bond, consent, and Soul Weapon rules.
 - **Soul Imprints** may appear as books, tools, paths, instincts, teachers, monsters, or abstract patterns without becoming independent beings.
-- **Soul Titles** may shape symbols, clothing, architecture, weather, inhabitants, or reactions without automatically creating an avatar.
+- **Soul Titles** may shape symbols, clothing, architecture, weather, inhabitants, or reactions without automatically creating an independent manifestation or Soul Avatar.
 - **[Retained Instincts](RETAINED_INSTINCTS.md)** may appear as urges, creatures, senses, trails, or environmental forces without becoming Soul Echoes.
 - **Memories of other people** may appear as Constructs, but those representations are not the actual people or their souls.
 

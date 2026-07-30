@@ -22,7 +22,7 @@ The historically rooted identity, memories, values, emotions, habits, and modes 
 
 ### Echo Presence
 
-The current degree to which an Echo can be perceived and can participate: Dormant, Faint, Awakened, Advisor, Manifest, or Avatar.
+The current degree to which an Echo can be perceived and can participate: Dormant, Faint, Awakened, Advisor, Manifest, or Delegate.
 
 ### Echo Chorus
 
@@ -34,7 +34,7 @@ A cooperative state in which an Echo lends perspective, memory context, or pract
 
 ### Echo Delegation
 
-A bounded, mutually agreed transfer of executive control from the current incarnation to an Avatar Echo. Delegation is not possession and does not make the Echo the active incarnation.
+A bounded, mutually agreed transfer of executive control from the current incarnation to an Echo at Delegate Presence. Delegation is not possession and does not make the Echo the active incarnation.
 
 ## Formation During Life Reconciliation
 
@@ -117,9 +117,9 @@ Presence describes an Echo's current expression, not its combat power, truthfuln
 | **Awakened** | The current incarnation can recognize a specific former perspective and receive brief memories or responses. | Contact remains intermittent and may not reveal the Echo's full identity. |
 | **Advisor** | The Echo can sustain dialogue, offer bounded analysis, and deliberately approach accessible memories. | It has no direct authority over the body or world. |
 | **Manifest** | The Echo can hold a stable internal form within accessible Soul Space and interact with permitted internal structures or other Echoes. | Manifestation is internal and grants no body control or external projection. |
-| **Avatar** | The Echo can maintain advanced cooperation through an Overlay and may qualify for consent-based Delegation. | It remains constrained by the current body, soul systems, consent, and available development. |
+| **Delegate** | The Echo can maintain advanced cooperation through an Overlay and may qualify for consent-based Delegation. | It remains constrained by the current body, soul systems, consent, and available development. |
 
-Presence is conditional. A previously Manifest or Avatar Echo may become Dormant after Reincarnation, injury, a changed identity, or loss of a relevant Trigger without losing its history. A powerful event may also produce a brief higher Presence that cannot yet be sustained.
+Presence is conditional. A previously Manifest or Delegate Echo may become Dormant after Reincarnation, injury, a changed identity, or loss of a relevant Trigger without losing its history. A powerful event may also produce a brief higher Presence that cannot yet be sustained.
 
 Echo Presence and Resonance State answer different questions. Presence describes how directly the Echo can participate; Resonance State describes how coherently its Link aligns in the present. Clear communication does not guarantee agreement, and an Echo with highly developed potential may still be inaccessible when its Link is Silent or damaged.
 
@@ -201,9 +201,9 @@ An Overlay does not grant missing anatomy, bodily statistics, unavailable skills
 
 Overlay effort rises with cognitive distance, bodily incompatibility, emotional conflict, the complexity of the borrowed perspective, and the number of simultaneous Echoes. An unstable Overlay may cause distraction, memory bleed, Dissonance, or Soul Strain.
 
-## Avatar Presence and Echo Delegation
+## Delegate Presence and Echo Delegation
 
-Avatar Presence makes bounded Delegation possible; it does not make Delegation automatic.
+Delegate Presence makes bounded Delegation possible; it does not make Delegation automatic.
 
 Echo Delegation requires:
 
@@ -357,7 +357,7 @@ Two Advisor Echoes disagree over captured enemies. Their argument provides memor
 
 ### The Borrowed Sword Hand
 
-An Avatar Echo of a former sword master accepts Delegation during a duel. The current body remains slower and weaker than the old one, and only accessible techniques can be expressed. Afterward, the current incarnation gains no automatic mastery from having watched; learning requires practice and integration.
+A Delegate Echo of a former sword master accepts Delegation during a duel. The current body remains slower and weaker than the old one, and only accessible techniques can be expressed. Afterward, the current incarnation gains no automatic mastery from having watched; learning requires practice and integration.
 
 ### A Sparse Life
 

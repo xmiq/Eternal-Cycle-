@@ -41,7 +41,7 @@ Proposed constraints to evaluate when the task becomes active:
 - activation may be deliberate, involuntary, situational, or ritualized, but every route needs a Trigger, entry conditions, exit conditions, and recoverable agency;
 - likely costs include Soul Strain, fatigue, memory bleed, contradictory instincts, Dissonance, identity erosion risk, spiritual visibility, and social or political pressure;
 - damaged, corrupted, fragmented, hostile, or unwilling Echoes complicate synthesis and cannot be silently overwritten;
-- anti-possession rules must prevent an Echo Chorus, institution, god, ritual, or hostile soul from replacing the active self by calling the result an Avatar state;
+- anti-possession rules must prevent an Echo Chorus, institution, god, ritual, or hostile soul from replacing the active self by calling the result a Soul Avatar state;
 - anti-destiny rules must prevent prophecy, title, ancestry, or institutional recognition from assigning mandatory morality or a predetermined historical role;
 - anti-farming rules must reject rapid reincarnation, manufactured crises, staged sacrifice, shallow Echo accumulation, and repeated forced activation;
 - thematic associations such as nature, death, war, dragons, monsters, civilization, oceans, machines, or the void must emerge from accumulated lives and consequences rather than class selection;
@@ -57,12 +57,12 @@ Required future examples:
 - crisis activation weakened by identity fragmentation;
 - two rival Soul Avatars placed on opposing sides by their histories rather than destiny.
 
-### Soul Avatar Canon Conflicts to Resolve
+### Soul Avatar Dependencies and Resolved Terminology
 
-- **Avatar** already names the highest current Echo Presence in [Soul Echoes](../docs/soul/SOUL_ECHOES.md), while Phase 6 also contains a future Weapon-avatar task. The Soul Avatar task must establish unmistakable terminology before adding another canonical use.
+- **Soul Avatar** is reserved for the whole-soul synthesis system. The highest Echo Presence is now **Delegate**, and the future Weapon Soul expression is a **Weapon Manifestation**. Unqualified **Avatar** is not a standalone mechanic.
 - A [Soul Constellation](../docs/soul/SOUL_CONSTELLATIONS.md) is a relationship among distinct souls. Prior incarnations and their Echoes belong to one continuing soul, so a Soul Constellation cannot be an internal prerequisite stage. A likely precursor is a coherent Echo Chorus supported by Concordant Resonance and stable Soul Space, but this remains a proposal.
-- Retained Instincts must be defined before the system can separate bodily instinct, retained instinct, Echo context, and synthesized Avatar expression.
-- The Akashic Archive must be defined before Avatar access to Archive records, historical verification, or world-scale memory can become canonical.
+- Retained Instincts must be defined before the system can separate bodily instinct, retained instinct, Echo context, and synthesized Soul Avatar expression.
+- The Akashic Archive must be defined before Soul Avatar access to Archive Records, historical verification, or world-scale memory can become canonical.
 - Alternate or divergent histories do not automatically create Soul Echoes under current canon. Any Gate-related divergent Echo concept needs a separate rule that preserves one active incarnation and does not manufacture extra souls or memories.
 
 ### World-Contact Gate Design Brief
@@ -122,10 +122,10 @@ Future integration should allow, when justified:
 
 - a Gate crisis to trigger dormant Soul Echoes or Resonance Links;
 - a Soul Avatar to remember a relevant civilization from an actual prior life or Age;
-- an Avatar to act as an imperfect interpreter rather than an infallible diplomatic solution;
+- a Soul Avatar to act as an imperfect interpreter rather than an infallible diplomatic solution;
 - past-life assumptions to cause dangerous misunderstandings;
 - rival Soul Avatars to meet through valid Gate and world causality;
-- institutions to treat an Avatar as a diplomatic asset, weapon, religious figure, or security risk;
+- institutions to treat a Soul Avatar as a diplomatic asset, weapon, religious figure, or security risk;
 - a Soul Weapon to react to unfamiliar materials, souls, or metaphysical laws without gaining automatic mastery;
 - Archive records of Gate contact to remain bounded by the future Archive rules and source limitations;
 - Gate contact to create new relationships that may later qualify for Soul Constellations through recurrence and reciprocal transformation;
