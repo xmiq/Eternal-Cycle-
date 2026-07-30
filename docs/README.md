@@ -69,6 +69,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Weapon Evolution](soul-weapons/WEAPON_EVOLUTION.md) - qualitative Soul Weapon form change, route provenance, pressure, transition, branches, tradeoffs, persistence, and anti-stacking safeguards.
 - [Weapon Echoes](soul-weapons/WEAPON_ECHOES.md) - Weapon Chapters, first-person memory provenance, access, sharing, privacy, Recall Alignment, persistence, and anti-farming safeguards.
 - [Legacy Weapons](soul-weapons/LEGACY_WEAPONS.md) - world-bound historical continuity, bond-status separation, custody, stewardship, succession, scoped Accords, later relationships, and bounded Legacy Evolution.
+- [Soul Weapon Compatibility](soul-weapons/SOUL_WEAPON_COMPATIBILITY.md) - purpose-specific compatibility layers, qualitative findings, supports, drift, testing, cross-species interaction, and anti-matchmaking safeguards.
 
 ## World Engine
 

@@ -1907,3 +1907,31 @@ A person whom a Legacy Weapon currently permits to carry or use its Weapon Vesse
 ## Legacy Succession
 
 The social and relational process through which custody, responsibility, cooperation, or public role passes from an earlier person or institution to a later one without transferring personhood, capability, consent, or a Soul Weapon Bond.
+
+## Soul Weapon Compatibility
+
+A qualitative, purpose-specific assessment of whether named participants and sources can sustain one proposed interaction in the current body, form, relationship, environment, and circumstances. It is not a universal affinity score or capability source.
+
+## Soul Weapon Compatibility Claim
+
+The exact interaction being assessed, including participants, current body, Weapon Soul, Weapon Vessel or Soul Weapon Form, purpose, method, source, environment, duration, and intended effect.
+
+## Soul Weapon Compatibility Profile
+
+A qualitative campaign record of the compatibility layers, evidence, conditions, constraints, supports, unknowns, consent boundaries, and current findings for related Soul Weapon Compatibility Claims. It is not a percentage, destiny rating, or relationship meter.
+
+## Compatibility Layer
+
+One distinct kind of fit relevant to a Soul Weapon Compatibility Claim, such as soul interface, relationship, communication, embodiment, method, source, environment, or passage.
+
+## Compatibility Finding
+
+A qualitative conclusion for one Compatibility Layer of one claim under stated conditions: Unknown, Conflicted, Conditional, Workable, or Established. Findings are not ranks and do not aggregate.
+
+## Compatibility Support
+
+A specific adaptation, tool, technique, agreement, treatment, resource, environment, or other condition that addresses a named incompatibility while retaining its owner, cost, maintenance, limits, and failure modes.
+
+## Compatibility Drift
+
+A meaningful change in a Soul Weapon Compatibility Claim caused by a new body, injury, healing, Soul Weapon Evolution, practice, relationship change, source change, environmental change, World Reset, or other causal development.

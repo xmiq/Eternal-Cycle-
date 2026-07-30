@@ -536,3 +536,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Self-directed Legacy Evolution should remain viable for personhood and change while absent-partner assets, followers, fame, worship, and grief remain unusable as generic route fuel.
 - A former Bonded Soul's return after Severance needs consistent portrayal: history matters, but it creates no ownership or priority over a current bond.
 - Institutions should differ meaningfully in how they classify Legacy Weapons without any legal category silently establishing metaphysical truth.
+
+## Phase 6 Soul-Weapon-Compatibility Watchlist
+
+- Soul Weapon Compatibility Profiles should remain concise claim records rather than expanding into exhaustive matrices or covert character sheets.
+- Unknown, Conflicted, Conditional, Workable, and Established findings need playtest attention so they communicate evidence without reading as a power ladder.
+- Compatibility Layers are most at risk of collapsing around “bond compatibility”; bond formation, current cooperation, passage, physical use, and Skill must remain separate claims.
+- Accommodations should make unusual and disabled bodies genuinely playable while retaining their material support, maintenance, setup, and context.
+- Cross-species examples should continue beyond human weapon conventions without implying that every anatomy can express every weapon form.
+- Institutional compatibility tests need false positives, narrow truths, and political uses so they remain evidence rather than deterministic sorting devices.
+- Later Weapon Manifestation rules must require their own source and procedure; a favourable Compatibility Profile cannot become implicit summoning.
+- Later unconventional-form rules must reuse claim-specific layers while adapting embodiment and handling questions to distributed, living, composite, or body-grown vessels.

@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul develops and expresses an individual personality, how Vessel History influences without determining that person, how personality changes through lived experience, and how a GM portrays Weapon Souls without reducing them to equipment functions or plot devices.
 
-It does not define Soul Weapon evolution, Weapon Echoes, Legacy Weapons, detailed compatibility, Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define Soul Weapon evolution, Weapon Echoes, Legacy Weapons, detailed [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, or unconventional Soul Weapon categories.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), and [Soul Intertwining](SOUL_INTERTWINING.md) first.
 
@@ -574,6 +574,7 @@ This document defines Weapon Soul personality and portrayal. It does not determi
 - [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md)
 - [Awakening Conditions](AWAKENING_CONDITIONS.md)
 - [Soul Intertwining](SOUL_INTERTWINING.md)
+- [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

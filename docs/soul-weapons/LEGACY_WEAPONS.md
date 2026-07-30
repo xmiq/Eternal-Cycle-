@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul may remain in the world after a defining relationship, purpose, or Age has ended and how later people may relate to it without inheriting ownership of its personhood, memories, capabilities, or bonds.
 
-It extends the established rules for [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md). It does not define detailed compatibility, Weapon Manifestations, unconventional vessel structures, ordinary inheritance law, or a universal relic economy.
+It extends the established rules for [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md). It does not define the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, unconventional vessel structures, ordinary inheritance law, or a universal relic economy.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Personalities](WEAPON_PERSONALITIES.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md) first.
 
@@ -524,7 +524,7 @@ No battle, dynasty, or prophecy is required. Decades of rebuilding homes supply 
 - **No absent-partner laundering:** Legacy Evolution cannot use a former or distant partner's Soul Imprints, Depth, Titles, Skills, authority, or consent as weapon-owned resources.
 - **No follower-powered evolution:** worship, fame, bearers, heirs, battles, ceremonies, grief, and years do not accumulate into automatic route readiness.
 - **No infinite evolution:** every Legacy Evolution still requires fresh provenance, pressure, support, transition, costs, tradeoffs, and consequences.
-- **No compatibility assumption:** trust, affection, usefulness, Skill, lineage, and Resonance do not settle detailed compatibility before its dedicated rules.
+- **No compatibility assumption:** trust, affection, usefulness, Skill, lineage, and Resonance do not settle a claim under [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md).
 - **No manifestation assumption:** an awakened or evolved Legacy Weapon remains physically constrained unless the later Weapon Manifestation rules establish another expression.
 - **No repository-bound campaign state:** particular weapons, bonds, bearers, stewards, locations, Echoes, Accords, custody disputes, and histories remain external Campaign Records.
 
@@ -534,7 +534,7 @@ This document owns Legacy Status, Legacy Transitions, succession, scoped Legacy 
 
 It does not define:
 
-- detailed Soul Weapon compatibility;
+- Soul Weapon Compatibility Claims and Profiles;
 - Weapon Manifestations or summoning;
 - unconventional vessel structures;
 - ordinary property law for every culture;
@@ -551,6 +551,7 @@ It does not define:
 - [Weapon Personalities](WEAPON_PERSONALITIES.md)
 - [Weapon Evolution](WEAPON_EVOLUTION.md)
 - [Weapon Echoes](WEAPON_ECHOES.md)
+- [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
 - [Soul Echoes](../soul/SOUL_ECHOES.md)

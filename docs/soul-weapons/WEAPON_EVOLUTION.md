@@ -4,7 +4,7 @@
 
 This document defines how an established Soul Weapon may undergo a lasting qualitative change in its soul-bound form, vessel expression, owned capabilities, or cooperative relationship without becoming an equipment tier, Skill upgrade, Class feature, or monster Evolution.
 
-It does not define Weapon Echoes, Legacy Weapons, detailed compatibility, Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define Weapon Echoes, Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, or unconventional Soul Weapon categories.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Intertwining](SOUL_INTERTWINING.md), and [Weapon Personalities](WEAPON_PERSONALITIES.md) first.
 
@@ -716,7 +716,7 @@ Choosing to stop preserves personhood and meaningful learning. The bow gains no 
 
 ## Scope Boundaries
 
-This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory. Detailed compatibility, physical manifestation, and living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with later Phase 6 tasks.
+This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory, and [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) owns claim-specific compatibility. Physical manifestation and living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with later Phase 6 tasks.
 
 ## Related Canon
 
@@ -727,6 +727,7 @@ This document defines Soul Weapon Evolution for standard established Soul Weapon
 - [Weapon Personalities](WEAPON_PERSONALITIES.md)
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
+- [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

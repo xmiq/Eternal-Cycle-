@@ -2001,3 +2001,47 @@ A Legacy Weapon's acceptance, refusal, stewardship choice, or bearer choice expr
 ## D-500 — Legacy Personhood Does Not Grant Plot Armour
 
 A Legacy Weapon may be confined, stolen, suppressed, damaged, misused, or unable to communicate when ordinary causality and established capabilities allow. Physical custody is not consent, silence under incapacity is not agreement, and injustice must be resolved through actual agency, capability, relationships, and world consequences rather than automatic escape.
+
+## D-501 — Soul Weapon Compatibility Is Claim-Specific
+
+Compatibility assesses whether named participants and sources can sustain one proposed interaction in the current body, form, relationship, environment, and circumstances. No pair possesses one universal compatibility value across communication, handling, Skills, effects, bonds, passage, purposes, and Ages.
+
+## D-502 — Compatibility Layers Do Not Aggregate
+
+Soul interface, relationship, communication, embodiment, method, source, environment, and passage compatibility remain separate findings. Success in one layer cannot silently replace another, and no percentage, rank, affinity, destiny rating, or strongest-wielder score may combine them.
+
+## D-503 — Compatibility Is Not Consent or Relationship Merit
+
+Compatibility cannot establish consent, trust, affection, loyalty, morality, legitimacy, or obligation. Compatible participants may refuse, loving participants may be incompatible for a claim, and bounded cooperation between rivals does not prove a broader relationship.
+
+## D-504 — Compatibility Grants No Capability
+
+A favourable Compatibility Finding grants no Skill, Development, statistic, Class, Profession, species trait, source, anatomy, mastery, Soul Intertwining, Weapon Evolution, or Weapon Manifestation. Each effect remains with its owning system and current source.
+
+## D-505 — Bond Persistence Survives Compatibility Drift
+
+An established Soul Weapon Bond may persist while a new body, evolved form, injury, relationship change, source loss, environment, or World Reset alters current compatibility. Incompatibility does not suspend or sever a bond unless Soul Intertwining rules independently do so.
+
+## D-506 — Passage and Physical Handling Are Separate Claims
+
+Compatibility for Reincarnation passage does not prove that the next body can carry, wield, communicate with, or safely express the Soul Weapon Form. Post-Reincarnation compatibility must be reassessed without reopening the existence of an established bond.
+
+## D-507 — Compatibility Supports Retain Their Costs
+
+Accommodations, tools, Skills, agreements, treatments, resources, environments, and other supports may answer named incompatibilities only while retaining ownership, setup, maintenance, limits, dependencies, and failure. No support becomes a universal compatibility bridge.
+
+## D-508 — Compatibility Changes Through Causal Work
+
+Practice, communication, relationship repair, healing, vessel repair, accommodation, Adaptive Skills, and consensual Weapon Evolution may change relevant compatibility layers through their own rules. Repetition, gifts, suffering, failure, Dissonance, possession, and dramatic declarations grant no automatic progress.
+
+## D-509 — Compatibility Evidence Is Source-Bounded
+
+Tests, institutions, gods, Titles, rituals, records, and observers can assess only claims and layers their sources can perceive. No default match test reveals complete compatibility, destiny, consent, moral worth, or every future body and form.
+
+## D-510 — Cross-Species Compatibility Has No Categorical Answer
+
+No human, monster, species, anatomy, or weapon category is universally compatible or incompatible. Each claim follows actual bodies, cognition, senses, culture, Skill, supports, sources, relationships, and consent without merging human and monster progression trees.
+
+## D-511 — Incompatibility Has No Generic Rejection Effect
+
+Incompatibility may block, destabilize, raise costs, or cause ordinary and source-defined consequences. It does not create automatic magical backlash, soul injury, corruption, evolution, awakening, compatibility progress, or hidden power without an established cause.

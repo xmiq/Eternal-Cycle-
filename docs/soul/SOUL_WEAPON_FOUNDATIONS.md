@@ -59,6 +59,12 @@ An awakened Weapon Soul may remain in the world after a defining relationship, p
 
 Custody, stewardship, bearing, Legacy Accords, Soul Weapon Bonds, and legal ownership remain separate. A Suspended bond continues to exist, while a Severed or never-intertwined Legacy Weapon may consider a later bond only through a new, fully qualified Soul Intertwining. The complete rules for Legacy Basis, transition, succession, selective Echo sharing, later relationships, and bounded self-directed Legacy Evolution are defined in [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md).
 
+## Compatibility
+
+Compatibility is assessed for one proposed interaction across relevant soul-interface, relational, communication, embodiment, Skill, source, environmental, and passage layers. It is not a universal affinity score and cannot grant consent, trust, capability, Soul Intertwining, or manifestation.
+
+The complete claim-specific assessment model, qualitative findings, supports, drift, testing, cross-species application, and safeguards are defined in [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md).
+
 ## Foundational Safeguards and Consequences
 
 A Weapon Soul remains a distinct person before and after intertwining.
@@ -84,6 +90,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
 - [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md)
 - [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md)
+- [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)
