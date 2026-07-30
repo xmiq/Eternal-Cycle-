@@ -14,6 +14,7 @@ Monster Evolution describes how monster forms, populations, and societies respon
 - [Apex Monsters](APEX_MONSTERS.md) - exceptional forms and individuals bounded by domain, dependency, ecology, Development, and counterplay.
 - [Intelligent Monster Societies](MONSTER_SOCIETIES.md) - nonhuman culture, institutions, leadership, education, technology, magic, Professions, diplomacy, warfare, religion, and mixed societies.
 - [Monster Adaptation](MONSTER_ADAPTATION.md) - cross-system classification of bodily, learned, instinctive, social, ecological, structural, and evolutionary responses.
+- [Hybridization](HYBRIDIZATION.md) - layered compatibility, biological and nonbiological origins, whole-form integration, inheritance, Soul limits, stability, and progression ownership.
 
 ## Required Foundations
 

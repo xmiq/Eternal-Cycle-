@@ -1363,3 +1363,39 @@ The continuing use, exposure, recovery, resources, practice, relationships, infr
 ## Adaptation Lag
 
 The gap between a changed condition and the time required for a valid response to develop, spread, or become reliable.
+
+## Hybridization
+
+The creation or lasting integration of one current body's Species Potential from two or more distinct form lineages or structural sources through a valid origin or transition route.
+
+## Hybrid Form
+
+One coherent current embodiment produced through Hybridization, with its own Species Potential, lifecycle, traits, dependencies, and progression ownership.
+
+## Source Lineage
+
+A species, form family, inherited template, constructed design, magical pattern, symbiotic origin, or other established source contributing structure to a proposed Hybrid Form.
+
+## Hybrid Origin
+
+The biological, magical, artificial, symbiotic, evolutionary, divine, corruptive, or other valid process that creates a Hybrid Form.
+
+## Hybrid Compatibility Profile
+
+A qualitative assessment of how specific Source Lineages can or cannot integrate across origin, anatomy, material, regulation, lifecycle, magic, cognition, Soul inhabitation, and ecology for one proposed form.
+
+## Integration Bridge
+
+A structure, process, organ, regulatory system, magical law, symbiont, constructed interface, or transition mechanism that makes otherwise separate Source Lineages function together in one body.
+
+## Trait Conflict
+
+An incompatibility in which contributed structures, expressions, triggers, resources, regulation, or lifecycle demands interfere with one another.
+
+## Hybrid Stability
+
+The degree to which a Hybrid Form can maintain coherent structure, regulation, identity, lifecycle, and function under its stated resources, environment, and dependencies.
+
+## Hybrid Inheritance
+
+Transmission of a Hybrid Form or some of its integrated structures through the actual renewal process defined by its Hybrid Origin.

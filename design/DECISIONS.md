@@ -1221,3 +1221,39 @@ Adaptation Responses may depend on continuing exposure, practice, recovery, reso
 ## D-305 — Reincarnation Does Not Preserve an Adaptation Profile
 
 Final Death ends current conditioning, Trait Expression, Mutations, current instincts, form, and ecological position. Stat XP, Skill Imprints, Retained Instincts, knowledge, and other protected records may persist through their own rules but cannot reassemble the former Adaptation Profile as a package.
+
+## D-306 — Hybridization Creates One Coherent Current Body
+
+A Hybrid Form integrates two or more Source Lineages or structural sources through a valid origin or transition. It has one material and regulatory budget, lifecycle, action economy, progression ownership, and defined Soul arrangement rather than stacking complete source bodies.
+
+## D-307 — Hybrid Compatibility Is Layered and Claim-Specific
+
+Compatibility is assessed for one proposed form across origin, structure, regulation, lifecycle, magic, cognition, personhood, Soul inhabitation, and ecology. Compatibility in one layer or between adult bodies does not establish whole-form or inheritance compatibility.
+
+## D-308 — Hybrid Origins Determine Trait Expression and Inheritance
+
+The biological, magical, artificial, symbiotic, evolutionary, or other Hybrid Origin determines which source traits express, blend, conflict, remain dormant, become novel, or disappear and whether successor bodies can inherit them. No universal trait percentage or best-of-both rule applies.
+
+## D-309 — Magical and Artificial Hybrids Retain Their Sources
+
+Magical and artificial Hybrid Forms retain source authority, makers, materials, interfaces, maintenance, dependencies, dispelling or failure behavior, and agency consequences. Lasting creation does not make those conditions Soul-owned or automatically heritable.
+
+## D-310 — Hybrid Anatomy Grants No Skill or Dual-Tree Mastery
+
+A Hybrid Form names an explicit current receiving progression structure. Source anatomy may create access routes but does not grant source Skills, Professions, Development, complete human and monster trees, or reliable control without current practice.
+
+## D-311 — Hybridization Does Not Imply Multiple Souls
+
+A composite body normally follows one established Soul arrangement. Multiple, merged, shared, or possessing souls require explicit Soul rules defining personhood, consent, action ownership, Development access, separation, death, and Reincarnation.
+
+## D-312 — Reincarnation May Select but Does Not Assemble Hybrid Forms
+
+A valid Hybrid Form may be a Reincarnation candidate when its origin exists, causal placement is possible, access is earned, and Soul compatibility holds. Prior species lives cannot be combined as an anatomical trait library, and Final Death ends current hybrid anatomy.
+
+## D-313 — Stable Hybrid Lineages Require Repeatable Coherent Origin
+
+A Hybrid Form becomes a stable lineage or species only when its renewal process can reproduce a coherent form with defined variation, lifecycle, personhood, ecology, and Species Potential. No fixed generation count or social recognition alone establishes stability.
+
+## D-314 — Hybrid Origin Does Not Prescribe Identity
+
+Hybrid bodies do not inherently possess divided loyalty, inner conflict, moral ambiguity, cultural mixture, social inferiority, or biological instability. Identity and social treatment follow persons, cultures, histories, and actual form conditions.

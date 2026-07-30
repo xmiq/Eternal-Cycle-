@@ -4,9 +4,9 @@
 
 **Current phase: Phase 4 — Monster Evolution**
 
-**Current task: Define hybridization**
+**Current task: Define extinction and replacement**
 
-The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin extinction and replacement or another later task until hybridization is complete.
+The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin Soul interaction with evolution or another later task until extinction and replacement is complete.
 
 Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -113,7 +113,7 @@ Phase 3 is complete only when all ten Skill Engine rule documents are defined, l
 - [x] Define apex monsters within the monster evolution checkpoint
 - [x] Define intelligent monster societies
 - [x] Define monster adaptation
-- [ ] Define hybridization
+- [x] Define hybridization
 - [ ] Define extinction and replacement
 - [ ] Define Soul interaction with evolution
 - [ ] Integrate Retained Instincts with monster evolution within the Soul interaction checkpoint

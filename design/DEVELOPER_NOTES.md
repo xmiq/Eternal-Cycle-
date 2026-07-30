@@ -319,3 +319,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Adaptive Skills and Physical Development are the most likely duplicate records; examples should keep method and bodily capacity visibly separate.
 - Adaptation Maintenance needs enough consequence to prevent permanent stacking without creating repetitive upkeep bookkeeping.
 - Maladaptation and Adaptation Lag should create understandable choices and risks rather than functioning as arbitrary denial of progress.
+
+## Phase 4 Hybridization Watchlist
+
+- Hybrid Compatibility Profiles need enough detail to prevent trait shopping without turning every proposed form into an anatomy dissertation.
+- Integration Bridges should expose concrete limits and maintenance rather than becoming universal compatibility devices.
+- Human-monster hybrids are the highest-risk case for accidental dual-tree access and should always state the receiving progression structure.
+- Artificial and symbiotic origins need repeated personhood, consent, and ownership checks.
+- Stable hybrids should not receive instability as a genre tax, while genuinely conflicting bodies must retain meaningful consequences.

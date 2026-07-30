@@ -41,6 +41,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Apex Monsters](monster-evolution/APEX_MONSTERS.md) - bounded apex domains, dependencies, population limits, Counter-Ecology, and contextual assessment.
 - [Intelligent Monster Societies](monster-evolution/MONSTER_SOCIETIES.md) - cultures, traditions, institutions, leadership, education, technology, magic, Professions, diplomacy, warfare, religion, and mixed societies.
 - [Monster Adaptation](monster-evolution/MONSTER_ADAPTATION.md) - ownership and interaction of bodily adaptation, Adaptive Skills, Species Traits, instincts, Mutations, society, ecology, and Evolution.
+- [Hybridization](monster-evolution/HYBRIDIZATION.md) - compatible, magical, artificial, symbiotic, evolutionary, and inherited hybrid forms with bounded trait and Soul access.
 
 ## World Engine
 
