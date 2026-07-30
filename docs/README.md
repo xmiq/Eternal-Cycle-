@@ -14,6 +14,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [Progression Rules Index](progression/README.md) - multidimensional Development, embodiment, retained progression, contextual capability, and exploit safeguards.
 
+## Skill Engine
+
+- [Skill Engine Index](skills/README.md) - shared Skill model, canonical Skill structures, reading order, and ownership boundaries.
+- [Human Skill Trees](skills/HUMAN_SKILL_TREES.md) - plural human learning routes shaped by culture, practice, embodiment, tools, professions, and institutions.
+
 ## World Engine
 
 - [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.

@@ -83,6 +83,14 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Alpha procedures should remain lighter than the play they support; if status tracking dominates a session, narrow the test scope or reduce unfinished-system overlap.
 - Design Feedback should extract reusable observations without importing current characters, live world state, or session history into the repository.
 
+## Phase 3 Implementation Watchlist
+
+- Human Skill trees are contextual analytical maps, not one universal catalog; later content should state culture, tradition, Profession, institution, or individual provenance.
+- Tree diagrams and local ranks can aid play, but neither should become an overall Skill level or automatically visible metaphysical interface.
+- Foundations and broad Disciplines must not auto-grant branches, techniques, institutional permissions, or Profession packages.
+- The monster-tree task must build from monster embodiment and ecology rather than mirror human branches with renamed labels.
+- Later crossover rules must preserve the receiving tree, current embodiment, present practice, and individual Skill ownership rather than transferring a completed tree.
+
 ## Queued Soul Avatar and World-Contact Gate Additions
 
 These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.

@@ -757,3 +757,35 @@ When Canonical rules replace a Provisional mechanic, future resolution uses the 
 ## D-189 — Fictional Consequences Persist but Exploits Do Not
 
 Past fictional consequences should remain established where practical even when their Provisional resolution method is retired. Exploits, unsupported capabilities, invalid bypasses, and duplicate rewards are not protected merely because they occurred during alpha play, and substantial conversions require discussion with affected players.
+
+## D-190 — Human Skill Trees Are Analytical Structures
+
+A Human Skill Tree maps possible learning relationships within a stated culture, tradition, Profession, institution, or individual history. It is not a universal level ladder, mandatory curriculum, purchasable menu, or automatically visible in-world interface.
+
+## D-191 — Human Skill Trees Are Plural and Contextual
+
+Humans may organize comparable capabilities through different roots, foundations, branches, tools, cultures, institutions, and bodies. No one human tradition or catalog defines the default route for every person or Age.
+
+## D-192 — Foundational Skills Enable Rather Than Grant Branches
+
+A Foundational Skill may create access, reduce relearning, or support several branches, but every Dependent Skill still requires its own prerequisites, meaningful practice, integration, and evidence of current reliability.
+
+## D-193 — Skill Prerequisites Remain Current and Owned
+
+Bodily, sensory, material, informational, social, institutional, legal, and metaphysical prerequisites retain their Owning Systems. Possessing a tree label, prior-life history, Profession, rank, or tradition cannot waive them.
+
+## D-194 — Comparable Outcomes Need Not Share Skill Identity
+
+Different Skill branches may solve a similar immediate problem while retaining different methods, requirements, risks, wider uses, and failure states. Comparable results do not merge their Skills or transfer one route's capabilities to another.
+
+## D-195 — Human Skill Rank Is Scoped Recognition
+
+A grade, belt, circle, title, examination, military qualification, or guild stage records only the issuer's tested evidence, assumptions, jurisdiction, and permissions. It does not create mastery or establish a universal Skill tier.
+
+## D-196 — Human Skill Trees Do Not Persist as Bundles
+
+Reincarnation routes persistence through individual Skill Imprints, Skill XP, knowledge, Retained Instincts, and other proper owners. A former curriculum, institution, tradition, or completed tree does not reincarnate as one unlocked asset.
+
+## D-197 — Skill-Tree Granularity Follows Distinct Development
+
+A new root or branch requires a material difference in function, method, requirements, evidence, context, or tradeoffs. Cosmetic names, routine actions, and minor variations do not justify permanent new Skill structures.

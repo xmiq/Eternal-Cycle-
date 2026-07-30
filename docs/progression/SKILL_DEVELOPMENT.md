@@ -572,6 +572,8 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 
 ## Related Documents
 
+- [Skill Engine Index](../skills/README.md)
+- [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

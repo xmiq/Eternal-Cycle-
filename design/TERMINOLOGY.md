@@ -196,6 +196,38 @@ An abstract relationship or method that can support relearning in another body, 
 
 A technique whose expression relies on particular anatomy, senses, proportions, natural weapons, magical organs, or movement modes.
 
+## Human Skill Tree
+
+A contextual analytical structure connecting human learning routes, prerequisites, alternatives, techniques, and mastery paths. It records possible Development without acting as a universal level ladder, mandatory curriculum, or automatically visible interface.
+
+## Skill Root
+
+The bounded practical purpose, problem family, or sustained Discipline that gives a Skill tree its identity.
+
+## Skill Branch
+
+A coherent route of further Skill Development distinguished by function, method, requirements, context, or meaningful tradeoffs rather than naming alone.
+
+## Skill Prerequisite
+
+A current capability, body structure, sense, tool, material, knowledge base, language, authority, relationship, environment, or metaphysical condition necessary for a particular Skill route.
+
+## Alternative Branch
+
+One of several valid Skill routes toward a comparable purpose. Alternatives may coexist, compete for practice, encode conflicting habits, or become inaccessible under different conditions.
+
+## Lateral Technique
+
+A narrow method connected across Skill branches because it solves a genuinely shared problem. Learning it does not grant either branch as a whole.
+
+## Mastery Path
+
+A pattern of deeper evidence within a bounded Skill route, such as refinement, adaptability, diagnosis, efficiency, teaching, invention, or pressure-tested reliability. It is not a universal tier sequence.
+
+## Cultural Variant
+
+A form of a Skill shaped by a culture's tools, values, language, environment, institutions, bodies, and accumulated practice. Comparable purpose does not make variants identical or automatically transferable.
+
 ## Profession
 
 An organized or recognizable field of work and responsibility combining knowledge, Skills, judgment, standards, tools, relationships, and a social or economic function.
