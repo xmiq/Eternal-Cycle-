@@ -1343,3 +1343,23 @@ A society whose members include more than one species, form, origin, or progress
 ## Technology
 
 The organised application of knowledge, technique, materials, processes, tools, organisms, magic, and infrastructure to practical ends.
+
+## Monster Adaptation
+
+A functional adjustment by a current monster, group, or population in response to a condition, problem, opportunity, or changed relationship. It describes a result across existing owners rather than a separate progression system.
+
+## Adaptation Response
+
+A specific bodily, behavioral, learned, magical, social, ecological, structural, or evolutionary change made in relation to a defined condition.
+
+## Adaptation Profile
+
+A contextual map of Adaptation Responses currently supporting a being, group, or population, including their owners, dependencies, maintenance, limits, and failure behavior. It is not a score or transferable package.
+
+## Adaptation Maintenance
+
+The continuing use, exposure, recovery, resources, practice, relationships, infrastructure, or conditions required to preserve an Adaptation Response at its current reliability.
+
+## Adaptation Lag
+
+The gap between a changed condition and the time required for a valid response to develop, spread, or become reliable.

@@ -312,3 +312,10 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Nonhuman technology should remain functionally legible in play without being translated into human tools merely for convenience.
 - Institutions that cultivate Evolution routes need safeguards against making coercive transition the obviously optimal social policy.
 - Mixed societies should produce concrete accommodation, conflict, and exchange without treating either harmony or species war as the default.
+
+## Phase 4 Monster-Adaptation Watchlist
+
+- Adaptation Profiles should clarify ownership without becoming a mandatory inventory or concealed power score.
+- Adaptive Skills and Physical Development are the most likely duplicate records; examples should keep method and bodily capacity visibly separate.
+- Adaptation Maintenance needs enough consequence to prevent permanent stacking without creating repetitive upkeep bookkeeping.
+- Maladaptation and Adaptation Lag should create understandable choices and risks rather than functioning as arbitrary denial of progress.

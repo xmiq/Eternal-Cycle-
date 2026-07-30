@@ -1193,3 +1193,31 @@ Culture, language, office, law, institutional knowledge, reputation, property, c
 ## D-298 — Mixed Societies Do Not Require Assimilation
 
 Different species and forms may share institutions while retaining distinct bodies, cultures, needs, progression trees, and identities. Accommodation creates practical and political obligations but neither guarantees harmony nor requires conversion into one social or biological norm.
+
+## D-299 — Monster Adaptation Is a Cross-System Description
+
+Monster Adaptation describes functional adjustment to a condition but creates no new Development Track, score, XP pool, rank, or transferable package. Each Adaptation Response remains recorded under the system that actually changed.
+
+## D-300 — Adaptation Uses the Smallest Truthful Owner
+
+Bodily capacity, learned method, Species Trait expression, instinctive orientation, magical regulation, social practice, ecological change, Mutation, and Evolution retain separate owners. Coordinated responses may involve several owners, but evidence and progression are recorded once rather than duplicated.
+
+## D-301 — Adaptive Skills Own Learned Methods Only
+
+An Adaptive Skill may emerge from a recurring problem when a distinct learned method becomes integrated and no existing Skill represents it. It does not own anatomy, tissue adaptation, instinct, magic supplied by a source, tools, allies, institutions, Mutations, or Evolved Forms.
+
+## D-302 — Adaptation Remains Embodiment-Bound
+
+Current personal adaptation is limited by current anatomy, health, lifecycle, senses, materials, resources, action economy, and recovery. Former embodiment may support translation through legitimate persistent systems but cannot make missing structures current.
+
+## D-303 — Adaptation Does Not Accumulate Into Evolution
+
+Adaptation can provide Response Evidence and Route Readiness, but use, permanence, benefit, or repetition never converts it automatically into Evolution. A valid route, compatibility, transition, cost, and resulting form remain necessary.
+
+## D-304 — Adaptation Requires Maintenance and Can Lag
+
+Adaptation Responses may depend on continuing exposure, practice, recovery, resources, relationships, infrastructure, or conditions. They may rust, become latent, fail to keep pace with change, or become maladaptive; pressure does not guarantee a timely beneficial answer.
+
+## D-305 — Reincarnation Does Not Preserve an Adaptation Profile
+
+Final Death ends current conditioning, Trait Expression, Mutations, current instincts, form, and ecological position. Stat XP, Skill Imprints, Retained Instincts, knowledge, and other protected records may persist through their own rules but cannot reassemble the former Adaptation Profile as a package.
