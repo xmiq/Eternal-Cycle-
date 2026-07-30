@@ -17,8 +17,9 @@ The Soul Engine governs identity, memory, relationships, and progression that ca
 - [Akashic Archive](AKASHIC_ARCHIVE.md) - source-bound world records, targeted access, and historical interpretation.
 - [Soul Avatars](SOUL_AVATARS.md) - exceptional whole-soul synthesis led by the current incarnation.
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md) - ownership and resolution rules for combined soul effects.
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md) - shared exploit resistance, agency protection, soul-harm review, and consequence continuity.
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md) - awakening, intertwining, and persistence of Weapon Souls.
 
 ## Reading Order
 
-Begin with Soul Fundamentals and Reincarnation. Read Soul Depth and Soul Resonance before using the more specialized systems, because they establish the capacity and access rules those systems rely on. Read Soul Avatars after the specialized systems, then use Soul System Interactions whenever several rules contribute to one outcome.
+Begin with Soul Fundamentals and Reincarnation. Read Soul Depth and Soul Resonance before using the more specialized systems, because they establish the capacity and access rules those systems rely on. Read Soul Avatars after the specialized systems, use Soul System Interactions whenever several rules contribute to one outcome, and apply Soul Engine Safeguards as the final exploit and consequence check.

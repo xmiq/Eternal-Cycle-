@@ -414,6 +414,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

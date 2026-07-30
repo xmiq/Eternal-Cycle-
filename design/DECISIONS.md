@@ -373,3 +373,27 @@ When an Interaction Claim cannot fully resolve, the result should match the fail
 ## D-093 — Canonical Conflicts Must Be Resolved in Both Authorities
 
 When playable rules and authoritative design decisions conflict and interpretation cannot reconcile them, neither silently overrides the other. The affected task must be blocked, the question recorded, and both authorities corrected before the interaction can be considered internally consistent.
+
+## D-094 — Persistent Breadth Does Not Grant Unlimited Throughput
+
+Accumulated Soul Imprints, Echoes, Titles, Links, instincts, Records, Associations, and bonds expand potential and context rather than creating unlimited simultaneous expression. Present capability remains bounded by access, embodiment, Development, Soul Depth, Soul Integrity, consent, attention, time, resources, and the ordinary action economy.
+
+## D-095 — Costs and Adversity Are Not Progress Currencies
+
+Death, sacrifice, Soul Strain, Dissonance, Soul Wounds, overload, and loss do not award persistent growth merely because they occur. Meaningful response and integration may qualify under an Owning System, but manufactured or repeated adversity cannot repeatedly purchase transformation.
+
+## D-096 — Narrative Pressure Preserves Agency
+
+Soul systems may create urges, memories, expectations, opportunities, duties, hostile attention, and consequences without selecting the current incarnation's deliberate action or another soul's response. Any consensual transfer or hostile control requires an explicit Owning System with appropriate scope, warning, resistance, exit, and aftermath.
+
+## D-097 — Soul Harm Scales With Permanence
+
+Lasting soul harm must identify its source, route, target, warning, resistance, scope, aftermath, and persistence. The clearer and earlier the opportunity to understand and respond must be, the more permanent the threatened loss. Total soul annihilation remains available only through an explicitly adopted campaign premise.
+
+## D-098 — Transitions Preserve Consequence Continuity
+
+Final Death, Interlife, time skips, and World Resets transform conditions without restoring a preferred past or silently erasing relationships, institutions, ecology, damage, debts, Archive Traces, or other causal consequences. Compression may reduce detail but must preserve a discoverable causal bridge into the next life or Age.
+
+## D-099 — Exploits Are Repaired at Their Owning System
+
+An effective combination that satisfies all valid requirements should remain effective. When a genuine loophole appears, the GM or designer identifies the Owning System and clarifies its formation, access, expression, cost, or consequence rules instead of imposing unrelated punishment, retroactively removing earned progression, or weakening an adjacent system.

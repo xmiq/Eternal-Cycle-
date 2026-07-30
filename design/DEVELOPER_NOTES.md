@@ -14,6 +14,14 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Persistent progression must not remove the danger and grief of death.
 - World simulation must support play rather than becoming accounting work.
 
+## Post-Phase 1 Watchlist
+
+- Phase 2 must keep retained Stat XP from making new bodies and present training cosmetic.
+- Later skill and evolution rules must test combinations against the Soul Engine's one-owner and no-duplicate-benefit rules.
+- Very old souls may create option and bookkeeping overload even when active throughput is bounded; GM tools should surface only history relevant to the present claim.
+- Numerical or ranked systems added later must not convert Soul Depth, Resonance, Titles, Echo count, or Avatar status into a hidden universal power level.
+- Soul Weapon rules remain foundational until Phase 6 defines trust, refusal, evolution, Legacy Weapons, Weapon Echoes, and Weapon Manifestations in full.
+
 ## Queued Soul Avatar and World-Contact Gate Additions
 
 These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.

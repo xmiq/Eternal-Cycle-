@@ -2,11 +2,11 @@
 
 ## Current Target
 
-**Current phase: Phase 1 — Soul Engine**
+**Current phase: Phase 2 — Development System**
 
-**Current task: Review exploit resistance and narrative consequences**
+**Current task: Complete development philosophy**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Phase 2 until the Soul Engine exploit-resistance and narrative-consequence review is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin physical development, skill development, profession development, magical development, social development, species development, or another Phase 2 task until the development philosophy is complete unless the project owner explicitly changes the target.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -51,11 +51,15 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Resolve Soul Avatar terminology against Echo and Weapon avatars
 - [x] Define Soul Avatar system
 - [x] Document interactions among soul systems
-- [ ] Review exploit resistance and narrative consequences
+- [x] Review exploit resistance and narrative consequences
+
+### Exit Criteria
+
+Phase 1 is complete only when every Soul Engine system is defined and linked, cross-system effects have explicit ownership, exploit and agency safeguards are playable, soul harm and narrative consequences are reviewed, no blocking questions remain, and persistence rules remain consistent across Reincarnation and World Resets.
 
 ## Phase 2 — Development System
 
-- [~] Define development philosophy
+- [~] Complete development philosophy
 - [ ] Define physical development
 - [ ] Define skill development
 - [ ] Define profession development

@@ -272,6 +272,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

@@ -10,6 +10,8 @@ Every cross-system effect has one Owning System that defines whether the effect 
 
 When several rules apply, satisfy all relevant requirements. Use the narrowest explicit rule for its own domain, preserve current-incarnation agency and other souls' consent, respect present embodiment and world causality, and resolve uncertainty toward a bounded result rather than an invented exception.
 
+After resolving the claim, apply [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md) to test farming, duplicate throughput, agency, soul harm, and consequence continuity.
+
 ## Terms
 
 ### Interaction Claim
@@ -398,6 +400,7 @@ Track only interactions that matter to play. The purpose of this procedure is pr
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)

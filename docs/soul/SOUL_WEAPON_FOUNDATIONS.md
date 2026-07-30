@@ -41,6 +41,21 @@ An executioner's history might instead produce:
 
 If intertwining is incomplete, the awakened weapon may remain in the world. Future wielders must earn trust rather than automatically gaining ownership.
 
+## Foundational Safeguards and Consequences
+
+A Weapon Soul remains a distinct person before and after intertwining.
+
+- possession, legal ownership, creation, inheritance, or routine use does not guarantee awakening, trust, cooperation, or intertwining;
+- staged danger, repeated near-death experiences, and manufactured sacrifice do not substitute for genuine mutual transformation;
+- awakening does not grant the wielder automatic mastery, missing anatomy, extra actions, or every ability associated with the weapon's history;
+- intertwining does not permit either soul to erase, control, or speak for the other;
+- persistence through Reincarnation does not guarantee that every new body can summon, wield, understand, or safely express the weapon's current form;
+- a Soul Weapon does not make ordinary equipment meaningless, because tools, materials, range, concealment, law, damage, environment, and current-life access continue to matter;
+- lasting injury, forced alteration, severance, or destruction of either soul requires an explicit cause, fair warning, meaningful resistance, and consequences proportionate to the threatened loss;
+- awakening and intertwining enter the world through witnesses, damage, obligations, enemies, institutions, and the history shared by both souls rather than functioning as private reward screens.
+
+Detailed trust, refusal, evolution, Weapon Echo, Legacy Weapon, and Weapon Manifestation rules remain owned by the later Soul Weapons phase. These foundations grant none of those unfinished capabilities by implication.
+
 ## Related Documents
 
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
@@ -52,4 +67,5 @@ If intertwining is incomplete, the awakened weapon may remain in the world. Futu
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Reincarnation](REINCARNATION.md)

@@ -78,7 +78,7 @@ Experience becomes a Soul Imprint only when the relevant system recognizes lasti
 
 Routine repetition, manufactured danger, and death by themselves do not create Soul Imprints. An event may be intense without becoming permanent if it does not change the soul.
 
-Detailed systems decide what is imprinted and how. For example, the Development System governs retained Stat XP, while Soul Title rules will govern persistent identity-bearing titles.
+Detailed systems decide what is imprinted and how. For example, the Development System governs retained Stat XP, while [Soul Title](SOUL_TITLES.md) rules govern persistent identity-bearing titles.
 
 ## Persistence and Access
 
@@ -192,6 +192,7 @@ A hostile ritual tears at the bond between an incarnation and a deeply held Soul
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
+- [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
