@@ -956,6 +956,82 @@ A cost, obligation, exposure, dependency, conflict, responsibility, risk, or con
 
 A qualitative external Campaign Record describing one Divine Source relationship or claim without turning faith, favor, authority, or intervention into a universal score.
 
+## Forbidden Magic
+
+A contextual classification for a defined magical practice, method, source, target, effect, item, infrastructure, or body of knowledge subject to an explicit Magic Restriction within a stated scope and jurisdiction.
+
+## Magic Restriction
+
+A rule, boundary, prohibition, access condition, containment requirement, or dissemination limit applied to a defined magical claim by an identified authority, community, source, institution, relationship, or world law.
+
+## Restricting Authority
+
+The person, community, institution, Divine Source, spirit, territory, contract, law, world process, or other established actor or system that creates, recognizes, interprets, or enforces one Magic Restriction.
+
+## Restriction Basis
+
+The stated reason and supporting evidence for a Magic Restriction, such as direct harm, systemic risk, non-consent, ecological damage, source refusal, public safety, secrecy, monopoly, doctrine, prejudice, politics, or historical experience.
+
+## Restriction Scope
+
+The exact actions, knowledge, sources, methods, targets, effects, materials, tools, participants, circumstances, or forms of distribution to which a Magic Restriction applies.
+
+## Restriction Jurisdiction
+
+The people, identities, places, institutions, territories, relationships, sources, Ages, or conditions over which a Restricting Authority's rule can presently operate or be enforced.
+
+## Restriction Status
+
+The current legal, institutional, cultural, divine, contractual, ecological, or world-law condition of one Magic Restriction, including whether it is active, disputed, suspended, obsolete, unenforced, under review, or repealed.
+
+## Intrinsic Hazard
+
+A causal risk arising from a magical practice itself under stated conditions, independent of whether any authority recognizes or prohibits it.
+
+## Hazard Profile
+
+A qualitative account of one practice's failure modes, affected parties, exposure routes, severity, likelihood conditions, detectability, containment, recovery, uncertainty, and cascading consequences.
+
+## Protected Interest
+
+A person, agency right, Soul boundary, community, species, ecosystem, source, resource, place, infrastructure, body, relationship, public good, or other value a Magic Restriction is intended or claimed to protect.
+
+## Controlled Practice
+
+A restricted magical practice permitted only under defined competence, authority, consent, site, equipment, supervision, documentation, containment, purpose, or review conditions.
+
+## Prohibited Practice
+
+A defined magical practice that a Restricting Authority does not permit within its current scope and jurisdiction, subject to whatever exceptions, review, enforcement, and conflict rules actually exist.
+
+## Taboo Classification
+
+A cultural, sacred, relational, or identity-based restriction whose force arises primarily through shared meaning, community obligation, or spiritual relationship rather than ordinary state law.
+
+## Restricted Knowledge
+
+Information whose access, copying, teaching, publication, translation, possession, or use is limited under a defined Magic Restriction. Knowledge restriction neither erases existing understanding nor grants capability to readers.
+
+## Source Refusal
+
+An established decision or condition by which a person-like magical source denies, limits, withdraws, or contests participation in a magical route. It is distinct from law, taboo, technical failure, and inability.
+
+## Containment Duty
+
+A responsibility to prevent, limit, monitor, disclose, stabilize, recover from, or safely terminate a defined magical hazard under established capability, authority, and affected-party obligations.
+
+## Review Route
+
+An established process for challenging, testing, interpreting, narrowing, expanding, suspending, or repealing a Magic Restriction through evidence and accountable decision-making.
+
+## Enforcement Route
+
+The actual means by which a Magic Restriction is detected, communicated, prevented, interrupted, sanctioned, contained, or remedied, including its authority, limits, errors, costs, and accountability.
+
+## Forbidden Magic Profile
+
+A qualitative external Campaign Record describing one restricted magical claim without turning prohibition, hazard, secrecy, or enforcement into a universal score.
+
 ## Environmental Compatibility
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.

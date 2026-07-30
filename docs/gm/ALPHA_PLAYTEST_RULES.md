@@ -101,15 +101,16 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Enchanting](../magic/ENCHANTING.md) framework within its completed scope;
 - the canonical [Alchemy](../magic/ALCHEMY.md) framework within its completed scope;
 - the canonical [Divine Magic](../magic/DIVINE_MAGIC.md) framework within its completed scope;
+- the canonical [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) framework within its completed scope;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, Mana, Magical Affinities, Spell Formation, Rituals, Enchanting, Alchemy, and Divine Magic are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, Mana, Magical Affinities, Spell Formation, Rituals, Enchanting, Alchemy, Divine Magic, and Forbidden Magic are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- forbidden magic and other incomplete Magic procedures beyond the canonical Mana, affinity, spell, Ritual, Enchantment, Alchemy, and Divine Magic frameworks;
+- detailed Magic Development integration and World Engine effects beyond the completed specialist Magic frameworks;
 - detailed World Engine variables and procedures for populations, resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
@@ -204,13 +205,13 @@ A Provisional Rule must never:
 
 ## Adjudicating Unfinished Systems
 
-The completed [Soul Engine](../soul/README.md), [Development System](../progression/README.md), [Skill Engine](../skills/README.md), [Monster Evolution](../monster-evolution/README.md), [Human Classes and Professions](../human/README.md), [Soul Weapons](../soul-weapons/README.md), [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), and [Divine Magic](../magic/DIVINE_MAGIC.md) frameworks apply directly. A claim within their completed scope is not Provisional merely because it is unusual or combines several systems.
+The completed [Soul Engine](../soul/README.md), [Development System](../progression/README.md), [Skill Engine](../skills/README.md), [Monster Evolution](../monster-evolution/README.md), [Human Classes and Professions](../human/README.md), [Soul Weapons](../soul-weapons/README.md), [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), and [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) frameworks apply directly. A claim within their completed scope is not Provisional merely because it is unusual or combines several systems.
 
 When one claim also needs an effect owned by an unfinished system, apply every completed owner normally and make only the missing effect Provisional. Do not reopen a completed framework, duplicate its capability, or treat an adjacent gap as permission to ignore its safeguards.
 
 ### Magic
 
-Apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), and [Divine Magic](../magic/DIVINE_MAGIC.md) where relevant. Until the remaining Phase 7 tasks are complete, establish only a small Provisional model for the still-incomplete parts of local magic. State its:
+Apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), and [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) where relevant. Until the remaining Phase 7 tasks are complete, establish only a small Provisional model for the still-incomplete parts of local magic. State its:
 
 - source and metaphysical assumptions;
 - access requirements and receiving system;
@@ -219,7 +220,7 @@ Apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_
 - environmental dependencies;
 - visible effects and evidence.
 
-Keep Mana, affinity, Spell Procedures, Ritual Structures, Enchantment Layers, Alchemical Batches, Divine Relationships, casting and role Skills, magical knowledge, potential, Access, Capacity, Reserves, control, authority, and Embodied Expression distinct under [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md). Reincarnation does not grant unrestricted spell, ritual, enchanted-inventory, alchemical-inventory, or divine-authority inheritance, and one local Provisional model is not universal Magic canon.
+Keep Mana, affinity, Spell Procedures, Ritual Structures, Enchantment Layers, Alchemical Batches, Divine Relationships, Magic Restrictions, casting and role Skills, magical knowledge, potential, Access, Capacity, Reserves, control, authority, and Embodied Expression distinct under [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md), and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md). Reincarnation does not grant unrestricted spell, ritual, enchanted-inventory, alchemical-inventory, divine-authority, or legal-status inheritance, and one local Provisional model is not universal Magic canon.
 
 ### World Engine
 
@@ -366,6 +367,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Enchanting](../magic/ENCHANTING.md)
 - [Alchemy](../magic/ALCHEMY.md)
 - [Divine Magic](../magic/DIVINE_MAGIC.md)
+- [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)

@@ -751,7 +751,7 @@ It is a ritual in ordinary language but not a magical Ritual under this document
 
 A faction chains a river spirit into the Mana-supplier role and calls its resistance **ritual turbulence**. The Ritual may still produce magic through an explicit hostile binding, but it does not have consent.
 
-The binding, resistance, source damage, ecological collapse, moral responsibility, and future retaliation remain real. The GM does not reward coercion with superior efficiency merely because the procedure is forbidden or cruel.
+The binding, resistance, source damage, ecological collapse, moral responsibility, and future retaliation remain real. The GM does not reward coercion with superior efficiency merely because the procedure is [forbidden](FORBIDDEN_MAGIC.md) or cruel.
 
 ### Interrupted Gate-Sealing Ritual
 

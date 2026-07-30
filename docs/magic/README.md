@@ -13,8 +13,9 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 5. [Enchanting](ENCHANTING.md) defines persistent Host-anchored magical configurations, Functions, Patterns, Anchors, Interfaces, Supply, Layers, installation, maintenance, Drift, failure, and personhood boundaries.
 6. [Alchemy](ALCHEMY.md) defines controlled magical material processes, Reagent provenance and properties, Recipes, stages, Process Windows, Batches, Yield, application, toxicity, ecology, and failure.
 7. [Divine Magic](DIVINE_MAGIC.md) defines source-bound divine relationships, Domains, Jurisdictions, Access, Mandates, Covenants, petitions, responses, blessings, miracles, rites, agency, evidence, withdrawal, and failure.
+8. [Forbidden Magic](FORBIDDEN_MAGIC.md) defines scoped magical restrictions, underlying mechanics, hazard assessment, protected interests, authority, controlled practice, restricted knowledge, research, enforcement, review, persistence, and safeguards.
 
-Later Phase 7 documents will add forbidden magic, detailed Development integration, and World Engine effects in roadmap order. A mention of one of those subjects in current canon does not make its detailed rules complete.
+Later Phase 7 work will complete detailed Development integration and World Engine effects in roadmap order. A mention of one of those subjects in current canon does not make its detailed rules complete.
 
 ## Current Ownership Boundaries
 
@@ -27,6 +28,7 @@ Later Phase 7 documents will add forbidden magic, detailed Development integrati
 | Host-anchored magical configurations, Functions, Patterns, Anchors, Interfaces, Supply, Layers, maintenance, and Drift | [Enchanting](ENCHANTING.md) |
 | Magical material transformation, Reagents, provenance, Recipes, Batches, application, toxicity, and Byproducts | [Alchemy](ALCHEMY.md) |
 | Divine Sources, Domains, Jurisdictions, relationships, Access, Mandates, Covenants, petitions, blessings, miracles, withdrawal, and divine failure | [Divine Magic](DIVINE_MAGIC.md) |
+| Scoped magical restrictions, hazard evidence, protected interests, authority, jurisdiction, controlled practice, knowledge custody, enforcement, and review | [Forbidden Magic](FORBIDDEN_MAGIC.md) |
 | Change in magical perception, control, capacity, reliability, and judgment | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) |
 | Learned magical technique | [Skill Engine](../skills/README.md) |
 | Social interpretation, curriculum, verification, and recognition | [Magical Schools](../human/MAGICAL_SCHOOLS.md) |

@@ -2669,3 +2669,79 @@ Former office, Mandate, Covenant, blessing, service, miracle, reputation, and re
 ## D-667 — Divine Profiles and Pantheons Are External
 
 Divine Profiles are qualitative external Campaign Records. Current gods, doctrines, temples, relationships, mandates, covenants, blessings, signs, conflicts, interventions, and divine world state do not belong in the canonical repository.
+
+## D-668 — Forbidden Magic Is a Scoped Classification
+
+Forbidden describes a defined magical claim under an explicit restriction, authority, Basis, Scope, and Jurisdiction. It is not a universal source, element, school, tier, alignment, Skill Tree, or capability.
+
+## D-669 — Classification Preserves Underlying Ownership
+
+A restricted Spell, Ritual, Enchantment, Alchemical Process, Divine Relationship, Species effect, Soul interaction, or Soul Weapon Function retains its owning mechanics. Classification changes permissions and consequences rather than rewriting capability.
+
+## D-670 — Restriction Categories Remain Distinct
+
+Intrinsic hazard, law, institutional control, taboo, source refusal, contract, ecology, ethics, information custody, and world-law limits may overlap but cannot be inferred automatically from one another.
+
+## D-671 — Every Restriction Requires Authority, Basis, Scope, and Jurisdiction
+
+A Magic Restriction identifies who or what imposes it, stated reasons and evidence, protected interests, covered conduct or information, affected people and places, status, permissions, review, enforcement, and uncertainty.
+
+## D-672 — Hazard Exists Independently of Classification
+
+Intrinsic Hazards arise from actual source, method, conditions, targets, scale, failure, exposure, containment, and consequence. A ban cannot manufacture hazard, and permission cannot erase it.
+
+## D-673 — Protected Interests and Affected Parties Must Be Named
+
+Restrictions identify who or what they claim to protect, who defines that interest, who benefits, who bears costs, who can dissent, and who has access to review. Claimed protection does not silence affected people.
+
+## D-674 — Authority Is Not Moral or Factual Infallibility
+
+Legal, institutional, cultural, divine, contractual, ecological, and world-law authority remain distinct from legitimacy, competence, evidence, morality, reach, and enforcement power. Restrictions may be wise, mistaken, obsolete, captured, prejudiced, or abusive.
+
+## D-675 — Controlled Practice Uses Hazard-Specific Conditions
+
+Permission for restricted magic may require competence, consent, purpose, site, equipment, supervision, containment, scale limits, records, emergency routes, and review. Ceremonial authorization cannot replace a control required by the actual mechanism.
+
+## D-676 — Restricted Knowledge Does Not Grant Capability
+
+Accessing, reading, stealing, inheriting, remembering, redacting, or publishing restricted information does not create source Access, Mana, Skill, tools, authority, embodiment, or Practised Reliability.
+
+## D-677 — Restricted Research Preserves Subjects and Accountability
+
+Research must establish value, necessity, competence, scale, consent, safeguards, stopping conditions, containment, data custody, oversight, care, restitution, monitoring, and review. Captivity, monstrosity, hostility, death, or institutional approval does not erase personhood.
+
+## D-678 — Enforcement Is Bounded and Fallible
+
+Detection, inspection, suppression, confiscation, sanction, containment, testimony, records, institutions, and divine judgment retain authority limits, errors, incentives, costs, and accountability. Suspicion and conviction are not world truth.
+
+## D-679 — Forbidden Labels Cannot Validate Impossible Effects
+
+An effect absent or prohibited under completed Soul, agency, embodiment, Evolution, source, or Soul Weapon safeguards cannot be introduced by describing it as rare, ancient, cruel, corrupt, or forbidden.
+
+## D-680 — Prohibition Grants No Power or Corruption
+
+Illegality, taboo, secrecy, sacrifice, cruelty, pain, risk, accusation, appearance, and social fear do not make magic stronger or create Corruption. Each claimed effect requires an established source and process.
+
+## D-681 — Transgression and Harm Do Not Grant Development
+
+Breaking law, suffering punishment, killing, using a prohibited source, surviving exposure, secrecy, danger, and repeated failure do not automatically grant Skill, Development, resistance, affinity, Mutation, Title, or mastery.
+
+## D-682 — Restrictions Do Not Rewrite Species
+
+A society may prohibit conduct or criminalize embodiment, but classification does not change Species Traits, bodies, personhood, ownership, morality, or Evolution. Persecution creates consequences rather than species guilt or progression.
+
+## D-683 — Soul Safeguards Precede Classification
+
+No classification authorizes Soul theft, duplication, forced merging, Echo override, Avatar takeover, Reincarnation capture, or another Soul interaction lacking an explicit Soul-safe receiving rule, agency, resistance, and non-duplication.
+
+## D-684 — Enforcement Preserves Weapon Soul Personhood
+
+A Weapon Soul may be subject, witness, protected person, practitioner, or dissenter under a restriction. Classification and confiscation cannot turn it into property or waive consent, Vessel Continuity, bond, Echo, Evolution, Legacy, and Manifestation safeguards.
+
+## D-685 — Reincarnation Transfers No Legal Identity
+
+Laws, cases, victims, evidence, institutions, licences, sanctions, and reputations remain worldly. Soul continuity does not automatically transfer legal identity, guilt, immunity, warrant, office, or enforcement authority to a new incarnation.
+
+## D-686 — Forbidden Magic Profiles Are External
+
+Forbidden Magic Profiles are qualitative external Campaign Records. Current laws, taboos, restricted practices, practitioners, cases, texts, investigations, confiscated items, enforcement operations, and Restriction Status do not belong in the canonical repository.

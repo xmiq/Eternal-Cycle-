@@ -41,6 +41,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/magic/ENCHANTING.md`](docs/magic/ENCHANTING.md) - host-anchored magical configurations, functions, layers, maintenance, Drift, personhood, and Soul Weapon boundaries.
 - [`docs/magic/ALCHEMY.md`](docs/magic/ALCHEMY.md) - controlled magical material processes, Reagents, provenance, Batches, application, ecology, and anti-copying safeguards.
 - [`docs/magic/DIVINE_MAGIC.md`](docs/magic/DIVINE_MAGIC.md) - source-bound divine relationships, Domains, Jurisdictions, Mandates, petitions, blessings, miracles, agency, and safeguards.
+- [`docs/magic/FORBIDDEN_MAGIC.md`](docs/magic/FORBIDDEN_MAGIC.md) - scoped magical restrictions, hazards, authority, protected interests, controlled practice, knowledge, enforcement, review, and safeguards.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -60,4 +61,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana**, **Magical Affinities**, **Spell Formation**, **Rituals**, **Enchanting**, **Alchemy**, and **Divine Magic** are complete within **Phase 7 — Magic**, and the sole current task is **Define forbidden magic**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. The specialist Magic frameworks through **Forbidden Magic** are complete within **Phase 7 — Magic**, and the sole current task is **Define magical development**.

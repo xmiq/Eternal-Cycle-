@@ -646,3 +646,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Blessings and Miracles must remain useful while preserving Skills, embodiment, resistance, costs, withdrawal, and consequences.
 - Monster, collective, nonverbal, adversarial, and non-worshipful relationships need enough examples to prevent human temple assumptions from becoming universal.
 - Reincarnated divine practitioners need tests where recognition survives but office, Mandate, body, route, and trust do not automatically return.
+
+## Phase 7 Forbidden Magic Watchlist
+
+- Forbidden Magic Profiles must remain restriction records rather than dark-magic spell lists, morality meters, crime catalogs, or universal hazard ratings.
+- Playtests should separate intrinsic hazard, law, taboo, Source Refusal, secrecy, prejudice, and world-law impossibility without making adjudication bureaucratic.
+- Restricting Authorities need credible mixtures of good evidence, uncertainty, capture, incompetence, prejudice, and reform rather than default correctness or villainy.
+- Restricted Knowledge cases should preserve defensive access, privacy, source custody, Archive uncertainty, and no knowledge-to-Skill transfer.
+- Enforcement needs tests involving false positives, living Hosts, Weapon Souls, monster embodiment, coerced participants, and competing jurisdictions.
+- Reincarnation and World Reset examples must preserve history while preventing inherited guilt, legal identity, licence, immunity, or obsolete hazard assumptions.
