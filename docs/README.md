@@ -32,6 +32,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [Monster Evolution Rules Index](monster-evolution/README.md) - canonical reading order and boundaries for monster ecology and evolution.
 - [Monster Ecology](monster-evolution/MONSTER_ECOLOGY.md) - niches, resource webs, ecological relationships, carrying capacity, territory, migration, reproduction, competition, and extinction pressure.
+- [Evolutionary Pressures](monster-evolution/EVOLUTIONARY_PRESSURES.md) - climate, terrain, ecology, civilization, magic, Soul phenomena, disease, scarcity, abundance, and social pressure without deterministic progression.
 
 ## World Engine
 

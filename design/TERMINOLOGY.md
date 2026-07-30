@@ -1131,3 +1131,27 @@ A causal sequence in which change to one ecological relationship alters other po
 ## Extinction Pressure
 
 Conditions that reduce a population's ability to survive, replace losses, reproduce or renew, maintain necessary relationships, and occupy a viable habitat over time. Extinction Pressure is not a universal meter or guarantee of extinction.
+
+## Evolutionary Pressure
+
+A sustained or meaningfully recurring condition that produces unequal consequences among possible forms, traits, strategies, or ways of life without itself granting Evolution.
+
+## Pressure Source
+
+The climate, terrain, being, resource pattern, institution, magical law, Soul phenomenon, disease, or other established cause producing an Evolutionary Pressure.
+
+## Pressure Exposure
+
+The actual contact between a being or population and a Pressure Source, including its duration, frequency, reach, timing, and affected life stages.
+
+## Response Evidence
+
+The history showing how a being or population encountered an Evolutionary Pressure, attempted responses, paid consequences, and integrated a way of living. Response Evidence may support a compatible Evolution route but is neither currency nor proof of transition.
+
+## Evolutionary Buffer
+
+A behavior, Skill, tool, relationship, institution, habitat feature, magical effect, or other valid protection that reduces or redirects Pressure Exposure or consequence without necessarily changing species form.
+
+## Pressure Release
+
+The reduction, removal, or redirection of an Evolutionary Pressure. Pressure Release does not automatically reverse prior adaptation or Evolution.

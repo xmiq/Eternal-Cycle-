@@ -4,9 +4,9 @@
 
 **Current phase: Phase 4 — Monster Evolution**
 
-**Current task: Define evolutionary pressures**
+**Current task: Define monster evolution**
 
-The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin monster evolution or another later task until evolutionary pressures are complete.
+The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin intelligent monster societies or another later task until monster evolution is complete.
 
 Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -104,7 +104,7 @@ Phase 3 is complete only when all ten Skill Engine rule documents are defined, l
 ## Phase 4 — Monster Evolution
 
 - [x] Define monster ecology
-- [ ] Define evolutionary pressures
+- [x] Define evolutionary pressures
 - [ ] Define monster evolution
 - [ ] Define species stages within the monster evolution checkpoint
 - [ ] Define branching evolution within the monster evolution checkpoint

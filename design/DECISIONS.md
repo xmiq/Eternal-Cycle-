@@ -1097,3 +1097,23 @@ Ecological conditions create recurring problems, feedback, resources, constraint
 ## D-274 — Supernatural Ecology Retains System Ownership
 
 Magical resources, spiritual phenomena, Soul effects, Archive Traces, and extraordinary forms may participate in ecology only through established sources and laws. Feeding on bodies, magic, residue, memory, or remains does not copy traits, Skills, souls, or persistent progression without an explicit Owning System.
+
+## D-275 — Evolutionary Pressure Is a Causal Pattern, Not Currency
+
+Evolutionary Pressure requires an established source, actual exposure, meaningful stakes, unequal consequences, and sufficient recurrence or integration. Exposure, suffering, survival, kills, time, and consumption never accumulate as universal evolution points.
+
+## D-276 — Pressure Makes Routes Relevant Without Choosing an Answer
+
+Evolutionary Pressure may create Response Evidence for compatible routes, but it does not prescribe a form or guarantee transition. Behavioral, Skill, bodily, magical, social, technological, migratory, ecological, and failure responses remain possible according to their owners and circumstances.
+
+## D-277 — Buffers Are Genuine Evolutionary Responses
+
+Avoidance, tools, care, institutions, symbiosis, infrastructure, magic, and other valid Evolutionary Buffers may reduce or redirect pressure without changing species form. Effective buffering may delay, redirect, or remove route relevance rather than counting as failed Evolution.
+
+## D-278 — Temporary Adaptation and Evolution Remain Distinct
+
+Immediate reactions, behavior, Skills, Physical Development, social practice, and environmental buffering remain within their current owners. Evolution requires a lasting transition into a distinct form or Species Stage through a valid route and changes organized Species Potential, embodiment, needs, limits, and consequences.
+
+## D-279 — Soul Phenomena Cannot Manufacture Species Potential
+
+Soul history, Resonance, Echoes, Titles, Retained Instincts, Avatars, and related phenomena may orient choices or provide evidence only where an explicit receiving rule permits it. They do not create anatomy, Species Traits, Body Compatibility, or Evolution routes by implication.
