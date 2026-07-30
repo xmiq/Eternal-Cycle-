@@ -398,7 +398,7 @@ A crossover candidate requires:
 
 The result may be a close analogue, a hybrid Skill, an Adaptive Skill, a tool-mediated practice, or no available expression. Reincarnation does not convert the entire source tree or make every prior Skill universally purchasable.
 
-Detailed human trees, monster trees, crossover unlocks, and hidden Skill requirements belong to Phase 3.
+[Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md) owns the detailed assessment, outcome classes, failure cases, and anti-merger safeguards.
 
 ## Adaptive Skill Emergence
 
@@ -575,6 +575,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Skill Engine Index](../skills/README.md)
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md)
+- [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

@@ -817,3 +817,31 @@ For packs, swarms, colonies, distributed bodies, and institutions, the rules mus
 ## D-204 — Evolution Changes Access Without Granting Mastery
 
 Maturation, transformation, mutation, and biological Evolution may create or remove Skill prerequisites and expression routes. They do not automatically award learned control, Practised Reliability, or every Skill culturally associated with the resulting form.
+
+## D-205 — Skill Crossover Is Present-Life Development
+
+Reincarnation preserves legitimate Skill history but does not perform crossover. A usable cross-tree expression requires Current Access, a valid Receiving Route, compatible means, present experimentation, calibration, and evidence of Practised Reliability.
+
+## D-206 — Crossover Outcomes Are Claim-Specific
+
+Direct, principle, partial, translated, latent, inaccessible, distorted, harmful, and impossible outcomes apply to one retained source and one proposed present function under current conditions. They are not permanent compatibility scores between species or progression trees.
+
+## D-207 — The Receiving Route Owns New Expression
+
+A translated Skill belongs to the current tree and method that develop and express it while retaining source provenance. The source Skill remains historically distinct, and one adaptation cannot award duplicate Skills, Skill XP, actions, or benefits under both labels.
+
+## D-208 — Direct Transfer Still Requires Recalibration
+
+Direct Transfer preserves Skill Identity only where requirements and methods closely correspond. It may permit exceptional relearning speed but never waives current embodiment, tools, access, changed context, or pressure-tested practice.
+
+## D-209 — Retained Supports Do Not Merge During Crossover
+
+Skill Imprints, Skill XP, Retained Instincts, Soul Echoes, Soul Resonance, Soul Depth, and Archive Records contribute only their established functions. Combining their evidence does not create missing anatomy, compatibility, authority, or mastery.
+
+## D-210 — Harmful Carryover Is Causal and Recoverable
+
+Former habits, reflexes, assumptions, and sensory priorities may interfere with a current incarnation when their source no longer fits. Such effects require fair causal evidence, preserve deliberate agency, do not erase retained history, and may be addressed through accommodation, rehabilitation, override, or retraining.
+
+## D-211 — Changed Worlds Require Revalidation
+
+Retained professional, cultural, environmental, and magical Skill history supplies hypotheses and learning advantages rather than timeless procedures. Current laws, signals, materials, institutions, hazards, and metaphysical rules determine what remains valid.

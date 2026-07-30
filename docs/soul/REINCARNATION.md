@@ -192,6 +192,8 @@ Cross-tree access requires:
 
 When literal expression is impossible, experience may remain dormant or contribute to a new compatible technique. A spider does not gain human hands from sword mastery, and a human does not grow a venom gland merely by remembering a venomous life.
 
+[Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md) owns detailed Skill outcome classification, compatibility assessment, present-life translation, and crossover failure cases.
+
 ## Time Skips, Ages, and World Resets
 
 Reincarnation may bridge any amount of time needed for a valid new life and a healthy long-term story. A long Interlife is a consequence, not a deletion of history.

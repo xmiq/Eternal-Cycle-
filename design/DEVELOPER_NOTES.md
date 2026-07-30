@@ -222,3 +222,10 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Collective Skills need deliberate ownership in later monster-civilization rules; population coordination should not be copied onto every member.
 - Nonhuman cognition should affect learning routes, costs, communication, and failure without becoming either a disability stereotype or a source of unbounded parallel action.
 - Later crossover rules must preserve distinctions among former Skills, Retained Instincts, current species traits, and translated present-life Skills.
+
+## Phase 3 Crossover Watchlist
+
+- Later Adaptive Skill rules should classify a translated result as a new Skill only when current practice creates a stable capability that an existing Skill does not already represent.
+- Phase 4 evolution may open Receiving Routes but must not reinterpret prior Skill history as a free trait, stage, or biological branch.
+- Playtests should watch whether Direct Transfer is being narrated as instant mastery; even close embodiments need current calibration and reliability evidence.
+- Harmful Carryover should create understandable problems and recovery choices rather than routine loss of control.

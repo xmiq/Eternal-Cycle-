@@ -192,6 +192,18 @@ A Skill whose reliable expression requires a named foundational capability, body
 
 An abstract relationship or method that can support relearning in another body, toolset, culture, or progression tree when functional correspondence and present practice exist.
 
+## Skill Crossover
+
+The bounded use of legitimately retained Skill history to support recovery or new current-life Skill Development across a material change in embodiment, tree, culture, cognition, tools, environment, or metaphysical system.
+
+## Receiving Route
+
+The present Skill tree, body, toolset, magical structure, Profession, institution, or other valid pathway through which a crossover candidate may be learned and expressed.
+
+## Crossover Outcome
+
+The adjudicated relationship between one retained source and one proposed present expression. Outcomes may be direct, principle-based, partial, translated, latent, inaccessible, distorted, harmful, or impossible.
+
 ## Body-Dependent Technique
 
 A technique whose expression relies on particular anatomy, senses, proportions, natural weapons, magical organs, or movement modes.
