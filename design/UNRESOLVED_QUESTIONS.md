@@ -16,7 +16,6 @@ Questions that may remain open while current work continues.
 - Should a self-sacrificial Final Death influence candidates differently from an accidental death without becoming a farming bonus?
 - Should Depth Horizons be directly visible to players, recognized only through in-world signs, or configurable by campaign tone?
 - How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
-- What prevents a soul from collecting unlimited weak skills?
 - Can a Weapon Soul reject reincarnation with its wielder?
 - What prevents hidden evolution requirements from feeling arbitrary?
 - How should the World Engine choose detail level when simulating centuries?
@@ -25,4 +24,4 @@ Questions that may remain open while current work continues.
 
 Resolved questions should be moved here temporarily and their accepted outcomes recorded in `design/DECISIONS.md`.
 
-No resolved questions are currently awaiting archival.
+- Runaway weak-Skill collection is prevented by Capability Representation, the full-Skill qualification test, one-owner resolution, nonduplicating Reincarnation, and Representation Cleanup. Accepted outcomes are recorded in D-261 through D-269.

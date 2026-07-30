@@ -4,9 +4,9 @@
 
 **Current phase: Phase 3 — Skill Engine**
 
-**Current task: Prevent runaway skill proliferation**
+**Current task: Audit and complete Phase 3 Skill Engine**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the final Phase 3 integration audit or Phase 4 until Skill Engine safeguards are complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Phase 4 until the Phase 3 integration audit is complete unless the project owner explicitly changes the target.
 
 Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -94,7 +94,8 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 - [x] Define active and passive skills
 - [x] Define hidden skills
 - [x] Define conceptual skills
-- [ ] Prevent runaway skill proliferation
+- [x] Prevent runaway skill proliferation
+- [ ] Audit and complete Phase 3 Skill Engine
 
 ## Phase 4 — Monster Evolution
 

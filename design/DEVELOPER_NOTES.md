@@ -276,3 +276,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Conceptual Spellcasting must not become a shortcut around the later magic rules, especially for cost, authority, resistance, and source access.
 - Names, contracts, identity, memory, connection, and coordination need repeated agency audits because evocative language can conceal coercive effects.
 - Reincarnated conceptual masters should retain useful perspective while still discovering that changed Ages can invalidate former laws and institutions.
+
+## Phase 3 Skill-Safeguard Watchlist
+
+- The proposed-new-Skill checklist should prevent label inflation without making unusual narrow Skills impossible to earn.
+- Representation Cleanup needs playtest examples that preserve player trust when a familiar umbrella label is split or an external effect is reclassified.
+- Qualitative Skill XP allocation during cleanup must remain honest without turning into hidden arithmetic or copying one history into several records.
+- Group capability, equipment integration, monster traits, conceptual claims, and reincarnation crossover are the highest-risk ownership boundaries.
+- Future templates should make owner, dependencies, aliases, and representation type visible without becoming burdensome inventories of every Technique or Habit.

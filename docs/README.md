@@ -26,6 +26,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Active and Passive Skills](skills/ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes, their costs, disruption, and agency safeguards.
 - [Hidden Skills](skills/HIDDEN_SKILLS.md) - observer-relative concealment, fair discovery, factual provenance, and agency safeguards for unknown competencies.
 - [Conceptual Skills](skills/CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through principles, relationships, meanings, and metaphysical concepts.
+- [Skill Engine Safeguards](skills/SKILL_ENGINE_SAFEGUARDS.md) - unified capability classification, effect ownership, anti-proliferation rules, and representation cleanup.
 
 ## World Engine
 

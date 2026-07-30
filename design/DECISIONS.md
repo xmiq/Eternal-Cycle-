@@ -1041,3 +1041,39 @@ A Skill Imprint may preserve integrated conceptual understanding and Skill XP. E
 ## D-260 — Social Concepts Cannot Override Agency
 
 Conceptual Skills involving coordination, connection, names, contracts, identity, memory, boundaries, or concealment cannot create consent, trust, allegiance, obedience, identity ownership, or mind control without a separate explicit owning system and its resistance and agency safeguards.
+
+## D-261 — Capability Uses the Smallest Truthful Representation
+
+Every claimed effect is assigned to one Owning System and recorded through the smallest Capability Representation that preserves its actual function, evidence, requirements, dependencies, persistence, and failure states. An action, success, name, or source of support does not automatically create a Skill.
+
+## D-262 — Full Skills Require Independent Developmental Identity
+
+A full Skill requires a bounded recurring function, meaningful learning, adaptable use, its own correction process, requirements, failure states, and evidence of Practised Reliability when established. Later rust, suppression, or Reincarnation changes current reliability without erasing valid Skill identity. Its scope must not be represented adequately by an existing Skill, branch, Technique, Profession, trait, effect, relationship, item, or Soul rule.
+
+## D-263 — Capability Classifications Are Not Ranks
+
+Situational rulings, Tactics, Techniques, Habits, Specialisations, branches, Skills, composites, fusions, and evolved forms describe different structures rather than a universal ladder. The most truthful representation may be narrower, simpler, or externally owned without being inferior.
+
+## D-264 — External Sources Retain Their Effects
+
+Species traits, magic, Professions, relationships, equipment, institutions, groups, environments, and Soul systems retain ownership of the effects they supply. A Skill may own learned use, interpretation, control, or coordination but cannot absorb an external effect as unconditional personal capability.
+
+## D-265 — Reincarnation Does Not Multiply Skill Labels
+
+Reincarnation preserves qualifying Skill Imprints and Skill XP, not one new Skill for every remembered act, Technique, Habit, body, or translated use. Crossover records source provenance and a current Receiving Route without duplicating the source benefit or its Development.
+
+## D-266 — Transformation Labels Require Material Change
+
+Skill Fusion requires integrated new competency, and Skill Evolution requires stable qualitative transformation. Simultaneous use, Synergy, improvement, promotion, translation, renaming, active or passive expression, hiddenness, and cosmetic stages do not independently create fusions or evolved Skills.
+
+## D-267 — Special Skill Labels Retain Their Safeguards
+
+Passive expression retains load and disruption, hidden capability requires prior factual evidence, and Conceptual Skill requires a bounded claim and valid access. These labels cannot be used to accumulate free effects or evade ordinary Skill ownership and prerequisites.
+
+## D-268 — Representation Cleanup Preserves Earned Capability
+
+Merging, retiring, renaming, splitting, or reclassifying records corrects representation rather than erasing demonstrated knowledge, judgment, execution, reliability, or legitimate Skill history. External effects, duplicated rewards, unsupported scope, and waived requirements are not preserved as personal mastery.
+
+## D-269 — Cleanup Does Not Duplicate Development
+
+When an overbroad or overlapping record is corrected, shared foundations and source history are recorded once. Skill XP and evidence are allocated only to capabilities they actually support and are not copied in full into every new label.

@@ -32,8 +32,9 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 7. [Active and Passive Skills](ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes with capacity, disruption, and agency rules.
 8. [Hidden Skills](HIDDEN_SKILLS.md) - observer-relative hiddenness, fair evidence, discovery, misclassification, concealment, and agency rules.
 9. [Conceptual Skills](CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through deeply integrated principles, relationships, meanings, and metaphysical concepts.
+10. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) - unified capability classification, ownership tests, anti-proliferation rules, and representation cleanup.
 
-Later Phase 3 documents will be added only as their roadmap tasks become complete. The [Roadmap](../../design/ROADMAP.md) remains authoritative for implementation status.
+All ten Phase 3 rule documents are now present. The [Roadmap](../../design/ROADMAP.md) remains authoritative while their integration audit is completed.
 
 ## Foundations
 

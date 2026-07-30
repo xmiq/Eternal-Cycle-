@@ -136,6 +136,22 @@ The present-life process of aligning perception, timing, force, balance, and mov
 
 A stable method, tool, altered technique, or environmental arrangement that allows a body to act effectively with its actual capabilities without pretending absent anatomy has been restored.
 
+## Capability Representation
+
+The smallest canonical record that truthfully describes a capability or effect, its owner, evidence, requirements, dependencies, persistence, and failure states.
+
+## Ownership Test
+
+The procedure used to assign a claimed effect to its canonical Owning System and distinguish that owner from enabling, modifying, or supporting contributors.
+
+## Representation Cleanup
+
+The correction, merger, split, renaming, retirement, or reclassification of capability records so they match established evidence and ownership without duplicating or erasing legitimately earned Development.
+
+## Situational Ruling
+
+A resolution based on temporary circumstances and existing capabilities that records what happened without creating a persistent personal capability.
+
 ## Skill
 
 A bounded learned capability organized around a recognizable function, method, or family of related actions and developed through meaningful practice, feedback, adaptation, and use.
@@ -143,6 +159,10 @@ A bounded learned capability organized around a recognizable function, method, o
 ## Technique
 
 A specific method or execution pattern used within a Skill.
+
+## Tactic
+
+A deliberate plan for achieving a particular objective with available capabilities, information, allies, tools, and circumstances. A Tactic may be repeatable without becoming a separate Skill.
 
 ## Habit
 
@@ -371,6 +391,10 @@ A transmissible body of monster practice, standards, demonstrations, signals, to
 ## Profession
 
 An organized or recognizable field of work and responsibility combining knowledge, Skills, judgment, standards, tools, relationships, and a social or economic function.
+
+## Professional Knowledge
+
+Facts, theory, procedures, standards, risks, and contextual understanding relevant to a Profession. Possession of knowledge does not by itself establish Professional Competence, Professional Judgment, credentials, or authority.
 
 ## Professional Competence
 

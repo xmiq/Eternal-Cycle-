@@ -582,6 +582,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Active and Passive Skills](../skills/ACTIVE_AND_PASSIVE_SKILLS.md)
 - [Hidden Skills](../skills/HIDDEN_SKILLS.md)
 - [Conceptual Skills](../skills/CONCEPTUAL_SKILLS.md)
+- [Skill Engine Safeguards](../skills/SKILL_ENGINE_SAFEGUARDS.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

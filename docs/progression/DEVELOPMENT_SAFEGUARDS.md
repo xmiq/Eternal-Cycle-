@@ -365,6 +365,7 @@ Later systems may define narrow procedures inside these boundaries. They must pr
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
+- [Skill Engine Safeguards](../skills/SKILL_ENGINE_SAFEGUARDS.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
