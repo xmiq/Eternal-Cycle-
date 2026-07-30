@@ -1817,3 +1817,31 @@ An interrupted or failed attempt may deepen history, alter Resonance, damage par
 ## D-454 — Prepared Trials Are Judged by What Remains Real
 
 Knowledge of awakening and deliberate preparation do not automatically invalidate an event. Safeguards may reduce preventable harm while genuine uncertainty, stakes, relationship, choice, Reciprocal Imprinting, and consequence remain. Scripted, disposable, resettable, or unchanged trials cannot command personhood.
+
+## D-455 — Soul Intertwining Is a Voluntary Persistent Relationship
+
+An awakened Weapon Soul and one continuing soul may establish a Soul Weapon Bond only through distinct identity, genuine shared history, mutual Resonance, informed consent, reciprocal recognition, viable continuity, and accepted consequence. The bond is persistent without merging either person or becoming inescapable.
+
+## D-456 — Intertwining Grants Continuity Rather Than Capability
+
+Soul Intertwining establishes relationship, target-specific continuity, and a standing route for bounded cooperation and Reincarnation passage. It grants no Skill, statistic, Class, Profession, species trait, anatomy, resource, mastery, evolution, manifestation, perfect communication, obedience, or extra action.
+
+## D-457 — The Intertwining Accord Preserves Ongoing Agency
+
+Each participant must understand and freely accept the material scope, Bond Boundaries, uncertainty, and Passage Accord. Ownership, making, inheritance, rank, prophecy, law, crisis, gratitude, silence, incapacity, Echoes, institutions, gods, and coercion cannot consent for either soul, and initial agreement is not permanent blanket consent.
+
+## D-458 — Standard Intertwining Is Dyadic Without a Wielder Slot
+
+A standard Soul Weapon Bond joins one awakened Weapon Soul to one Bonded Soul. A Weapon Soul can sustain only one standard bond at a time, including while that bond is Suspended; only Severance permits a newly qualified standard intertwining. A Bonded Soul has no universal Soul Weapon slot and may sustain several separately qualified bonds only when current Integrity, relationship, access, embodiment, and complexity permit, without pooling identities or actions.
+
+## D-459 — Reincarnation Passage Follows a Standing Accord
+
+An established Soul Weapon Bond includes explicit standing passage terms. Either participant may reject future passage; valid refusal suspends or severs that route, and the Weapon Soul remains anchored to its vessel in the world unless another completed rule establishes otherwise. When sudden Final Death prevents discussion, the last valid Accord governs rather than treating silence as new consent or refusal.
+
+## D-460 — Bond Suspension and Severance Do Not Erase Persons
+
+Conflict may narrow or suspend communication, cooperation, expression, or passage without making the relationship false. Voluntary severance is a valid exercise of agency, while hostile severance requires an explicit source and soul-harm safeguards. Neither result erases shared history, identity, consequences, or independently owned Development.
+
+## D-461 — Intertwining Preserves Information Boundaries
+
+A Soul Weapon Bond does not grant unrestricted telepathy, emotion reading, truth detection, location, memory access, or disclosure. Each participant retains separately owned perspective and knowledge, while any Soul Space interface, communication channel, or shared impression remains source-bounded and consensual.

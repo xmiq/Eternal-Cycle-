@@ -475,3 +475,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Awakening Evidence should allow uncertain or nonverbal Weapon Souls to be recognized without making useful performance a personhood test or allowing every anomalous effect to claim agency.
 - The first-consent rules need to remain practical during urgent scenes: emergency cooperation may be necessary, but later intertwining must not treat urgency, silence, or gratitude as permanent consent.
 - Later personality rules should preserve surprise and self-interpretation instead of reducing an awakened person to the moral average of its Vessel History.
+
+## Phase 6 Soul-Intertwining Watchlist
+
+- Intertwining Accords should remain understandable in play without becoming legal contracts or letting vague emotional assent manufacture permanent consent.
+- Standing Passage Accords need playtest attention around sudden Final Death, magical suppression, disputed communication, withdrawal, and a Weapon Soul choosing to remain in the world.
+- Bond Suspension should support meaningful disagreement and distance without becoming either consequence-free stasis or an automatic punishment mechanic.
+- Multiple Soul Weapon Bonds must preserve separate relationships, finite attention, current embodiment, and action economy without drifting into a metaphysical inventory or an arbitrary slot system.
+- Newly awakened Weapon Souls need practical protection against gratitude, crisis dependence, ownership assumptions, and pressure to make an immediate permanent commitment.
+- Soul Space contact and target-specific Resonance should improve relationship play without producing unrestricted telepathy, memory access, truth detection, or loss of privacy.
+- Later Legacy Weapon rules must classify an awakened Weapon Soul left in the world after passage refusal without undoing its agency or retroactively transferring the former bond.
+- Later personality rules should distinguish personality from compliance, compatibility, moral alignment, vessel function, and the Bonded Soul's expectations.

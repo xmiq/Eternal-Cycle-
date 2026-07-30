@@ -25,6 +25,8 @@ The complete transition, noncombat catalysts, formation-and-awakening boundary, 
 
 When awakening and resonance coincide, the wielder's soul and Weapon Soul may intertwine. Neither identity is erased. The bond allows the weapon to accompany the soul through reincarnation.
 
+The complete mutual-consent requirements, Intertwining Accord, standard bond structure, Reincarnation passage, boundaries, Suspension, Severance, and safeguards are defined in [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md).
+
 ## Personality
 
 A Weapon Soul's personality grows from origin, use, treatment, defining battles, and relationships. A knightly blade may value honour; a survival dagger may become pragmatic or sardonic; a scholar's book may become curious.
@@ -65,6 +67,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Soul Weapons Index](../soul-weapons/README.md)
 - [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md)
 - [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md)
+- [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

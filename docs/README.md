@@ -64,6 +64,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Soul Weapons Index](soul-weapons/README.md) - Phase 6 reading order, ownership boundaries, guarantees, and repository scope.
 - [Dormant Weapon Souls](soul-weapons/DORMANT_WEAPON_SOULS.md) - formation, identity, Vessel History, Vessel Continuity, evidence, personhood, and dormant-state safeguards.
 - [Awakening Conditions](soul-weapons/AWAKENING_CONDITIONS.md) - shared pressure, mutual Resonance, Reciprocal Imprinting, personhood transition, evidence, consent, and aftermath.
+- [Soul Intertwining](soul-weapons/SOUL_INTERTWINING.md) - mutual Accord, persistent Soul Weapon Bond, identity and consent boundaries, Reincarnation passage, Suspension, and Severance.
 
 ## World Engine
 

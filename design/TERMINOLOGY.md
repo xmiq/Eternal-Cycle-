@@ -1727,3 +1727,35 @@ How a current incarnation distributes finite time, attention, effort, feedback, 
 ## Maintenance Burden
 
 The current practice, recovery, resources, relationships, calibration, support, and time required to preserve Current Access or Practised Reliability in a capability. Maintenance does not create endless new Development.
+
+## Soul Intertwining
+
+The voluntary transition by which an awakened Weapon Soul and one continuing soul establish a persistent Soul Weapon Bond while remaining distinct persons.
+
+## Bonded Soul
+
+The continuing soul partnered with a Weapon Soul through Soul Intertwining. The term grants no ownership, custody, social authority, current access, or ability to wield the Weapon Vessel.
+
+## Intertwining Accord
+
+The mutual, informed agreement that establishes a Soul Weapon Bond's intended scope, immediate boundaries, standing Reincarnation passage terms, and each participant's right to renegotiate, suspend, or end it.
+
+## Soul Weapon Bond
+
+The persistent relationship created by successful Soul Intertwining. It can support target-specific Resonance, continuity across incarnations, bounded communication, and later cooperative expression without merging identities or granting a capability package.
+
+## Passage Accord
+
+The part of an Intertwining Accord that states whether and under what standing conditions a Weapon Soul accompanies the Bonded Soul through Final Death, Life Reconciliation, Interlife, and Reincarnation. It does not itself decide the Weapon Vessel's physical manifestation.
+
+## Bond Boundary
+
+A mutually recognized limit on access, use, disclosure, communication, memory sharing, manifestation, custody, passage, or other cooperation within a Soul Weapon Bond.
+
+## Bond Suspension
+
+A state in which a Soul Weapon Bond persists while one or more forms of access, cooperation, expression, or Reincarnation passage are closed.
+
+## Bond Severance
+
+The exceptional ending of a Soul Weapon Bond by mutual decision, valid unilateral withdrawal, or an explicit hostile effect that satisfies soul-harm protections. It does not erase either person's identity, history, consequences, or independently owned Development.
