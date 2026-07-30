@@ -645,3 +645,31 @@ Injury, suppression, incompatible embodiment, changed world laws, obscured memor
 ## D-161 — Stat XP Rejects Harm, Death, and Weak-Body Farming
 
 Suicide training, torture optimization, repeated injury, rapid Reincarnation, passive aging, staged danger, trivial repetition, and deliberately weak bodies grant no automatic Stat XP or multiplier. Legitimate gains require a productive current route and integrated adaptation rather than suffering or disadvantage as such.
+
+## D-162 — Every Development Interaction Has One Effect Owner
+
+The narrowest canonical system that defines a claimed effect owns its existence, requirements, limits, persistence, and failure states. Other Tracks and systems may support access, expression, cost, reliability, timing, scale, or consequence only through their actual functions and cannot waive the owner's rules.
+
+## D-163 — Interaction Does Not Merge Development Tracks
+
+Physical, Skill, Profession, Magical, Social, Leadership, Species, and retained Development may enable or constrain one another while keeping separate evidence and persistence. A contributor does not become the capability it supports, and no interaction creates a universal Development pool or exchange rate.
+
+## D-164 — Synergy Must Follow Causality Rather Than Labels
+
+Synergy exists when compatible contributors demonstrably improve a particular result. Merely naming several Skills, traits, tools, titles, or systems does not create a multiplier, additional action, duplicate benefit, or automatic Development.
+
+## D-165 — Substitution and Compensation Preserve Dependencies
+
+A valid substitution changes the route by which a requirement is met, while compensation reduces the practical effect of a limitation. Neither grants Development in the replaced route or erases the substitute's source, costs, maintenance, permissions, failure states, and other dependencies.
+
+## D-166 — Bottlenecks and Cascades Are Claim-Specific
+
+A Bottleneck is whatever most constrains a stated objective under current conditions and may change with context. Cascading Failure must follow established dependencies and preserve plausible opportunities to interrupt, adapt to, or recover from the sequence rather than causing unrelated total collapse.
+
+## D-167 — Temporary and External Support Remain Attributable
+
+Enhancement, equipment, allies, institutions, infrastructure, contracts, and environmental advantages may be decisive while remaining conditional on their sources. Practising with support may create distinct Development, but borrowed output or access does not automatically become lasting personal capability.
+
+## D-168 — Development Credit Requires Distinct Integrated Change
+
+One event may develop several Tracks or participants only when each has evidence of a distinct integrated change. The same action, output, mastery, or adaptation cannot be counted repeatedly merely because several systems describe or support it.

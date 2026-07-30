@@ -44,4 +44,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Soul Engine are complete. The current phase is **Phase 2 — Development System**, and the sole active task is **Define development interactions**.
+The repository foundation and Soul Engine are complete. The current phase is **Phase 2 — Development System**, and the sole active task is **Define capability assessment**.

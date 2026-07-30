@@ -544,6 +544,50 @@ The canonical system that defines an Interaction Claim's existence, requirements
 
 A system that supplies relevant history, access, capacity, interpretation, compatibility, cooperation, or consequences without owning the resulting effect.
 
+## Development Interaction
+
+A causal relationship in which one Development Track, system, participant, tool, or condition changes how another owned effect can be accessed, expressed, sustained, or applied without taking ownership of that effect.
+
+## Synergy
+
+An interaction in which compatible contributors produce a useful result none could produce as effectively alone. Synergy follows actual causality and does not automatically multiply Development or output.
+
+## Dependency
+
+A body structure, capability, resource, tool, permission, participant, environment, or other requirement on which an effect relies.
+
+## Incompatibility
+
+A conflict among embodiments, methods, materials, timing, laws, permissions, cultures, or objectives that prevents, narrows, destabilizes, or raises the cost of an intended interaction.
+
+## Substitution
+
+A different valid route used to satisfy a requirement under the Owning System. A substitution carries its own dependencies, costs, and limits and does not grant Development in the route it replaces.
+
+## Compensation
+
+Support that reduces the practical effect of a limitation without erasing the underlying limitation or transferring ownership.
+
+## Bottleneck
+
+The contributor that most strongly limits a stated result under current conditions. A Bottleneck belongs to a specific claim and may change with the objective or context.
+
+## Cascading Failure
+
+A causal sequence in which failure of one Dependency disrupts one or more other contributors. Each consequence remains governed by its Owning System and does not justify unrelated collapse.
+
+## Temporary Enhancement
+
+A time-, source-, condition-, or cost-bound increase in access or expression. It remains owned by its source and does not automatically become lasting Development.
+
+## External Support
+
+Capability supplied by another person, tool, institution, environment, contract, infrastructure, or prepared condition. It remains attributable, conditional, and subject to the source's availability and agency.
+
+## Group Capability
+
+What a particular group can accomplish through member capabilities, coordination, roles, relationships, resources, and conditions. It is distributed rather than owned wholly by a leader or represented by a sum of personal levels.
+
 ## Soul Engine Resolution
 
 The ordered process that tests an Interaction Claim against agency, provenance, ownership, permission, access, capacity, embodiment, consent, cost, world consequence, and persistence.

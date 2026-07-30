@@ -58,6 +58,9 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Any future Stat XP curve should distinguish restoration of familiar foundations from genuinely new retained adaptation so rebuilding cannot recursively duplicate gains.
 - Descriptive familiarity families are optional organization aids, not a canonical mandatory attribute list; content should name the actual function and provenance when transfer matters.
 - Later character-record templates should display retained Stat XP separately from current statistics, current access, current expression, and reliability.
+- Later action and encounter rules should expose decisive dependencies and support without requiring players to audit every possible interaction before acting.
+- Group procedures must keep individual agency and contribution visible; a convenient group rating may summarize a defined task but cannot become a transferable leader statistic.
+- Temporary enhancements and external support need source, duration, interruption, and maintenance fields wherever later content formalizes them.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

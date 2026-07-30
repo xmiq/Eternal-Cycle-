@@ -394,6 +394,7 @@ Later mechanics may add local measurements only when they preserve domain specif
 - [Skill Development](SKILL_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
+- [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)
