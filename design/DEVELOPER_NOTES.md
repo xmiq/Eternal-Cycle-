@@ -34,6 +34,11 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Phase 3 must define tree schemas, adaptive-skill naming, evolution, and fusion without turning examples in the Development rules into automatic unlocks.
 - Numerical Skill XP and local proficiency ranks remain optional future tools; any implementation must preserve skill-specific evidence and avoid a shared exchange rate.
 - The eventual skill-proliferation safeguard should distinguish genuinely useful breadth from redundant labels, cosmetic variants, and components better represented as techniques.
+- Phase 5 owns detailed human profession lists, classes, schools, guild structures, and institutional advancement; the Phase 2 profession rules establish shared capability boundaries only.
+- Local credentials, licences, guild ranks, and Professional Stages must state their tested evidence, jurisdiction, access, and limits rather than becoming disguised universal levels.
+- Monster and informal Professions should be allowed to transmit practice through species-appropriate cultural methods without being forced into human institutional forms.
+- A universal Profession XP currency would erase the distinction among knowledge, Skill, judgment, responsibility, authority, and access and should not be introduced.
+- Technical procedures for individual crafts, medicine, law, administration, scholarship, ritual work, and other Professions remain deferred to their Owning Systems and content phases.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

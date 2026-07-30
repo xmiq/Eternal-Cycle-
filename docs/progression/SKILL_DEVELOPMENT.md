@@ -453,7 +453,7 @@ Until Phase 3 defines fusion, component Skills remain distinct and coordinated u
 
 - **[Development System](DEVELOPMENT_SYSTEM.md):** owns the six-layer model, non-fungible Tracks, current-life effort, contextual assessment, and general relearning sequence.
 - **[Physical Development](PHYSICAL_DEVELOPMENT.md):** supplies current bodily capacity and calibration without granting complete techniques.
-- **Profession Development:** will own integrated practice, standards, responsibility, and institutional context beyond individual Skills.
+- **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated practice, standards, responsibility, and institutional context beyond individual Skills.
 - **Magical Development:** will own magical access, control, capacity, and metaphysical requirements used by magical Skills.
 - **Social and Leadership Development:** will own relational judgment and group practice rather than a generic charisma Skill.
 - **Species Development:** will own body-bound traits, maturation, and species progression that make some Skills possible.
@@ -575,6 +575,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
+- [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

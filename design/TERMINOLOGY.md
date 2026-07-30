@@ -144,6 +144,54 @@ An abstract relationship or method that can support relearning in another body, 
 
 A technique whose expression relies on particular anatomy, senses, proportions, natural weapons, magical organs, or movement modes.
 
+## Profession
+
+An organized or recognizable field of work and responsibility combining knowledge, Skills, judgment, standards, tools, relationships, and a social or economic function.
+
+## Professional Competence
+
+The demonstrated ability to perform a defined professional responsibility to an appropriate standard under stated conditions.
+
+## Professional Judgment
+
+The ability to interpret incomplete situations, choose among valid methods, recognize limits, weigh consequences, and decide when to act, adapt, seek help, refuse, or escalate.
+
+## Professional Standard
+
+A stated expectation for process, evidence, safety, quality, responsibility, or outcome within a Profession. Standards may be cultural, institutional, legal, technical, spiritual, ecological, or self-imposed and remain fallible.
+
+## Credential
+
+Documented or socially recognized evidence that an authority believes a person met defined requirements. A Credential creates World Recognition and may support access without guaranteeing present competence.
+
+## Licence
+
+Permission from an authority to perform a defined professional activity within its jurisdiction. A Licence grants legal or institutional access rather than Professional Competence.
+
+## Apprenticeship
+
+A structured relationship in which a learner develops through instruction, observation, practice, correction, increasing responsibility, and participation in real work.
+
+## Professional Stage
+
+A local description of demonstrated responsibility or standing within one Profession. A Professional Stage is not a universal level.
+
+## Institutional Access
+
+Permission and practical ability to use an institution's tools, records, facilities, clients, networks, authority, or protected methods.
+
+## Informal Profession
+
+A coherent field of work and responsibility practised without formal recognition, standardized credentials, or a controlling institution.
+
+## Lost Profession
+
+A Profession whose practitioners, institutions, tools, knowledge network, materials, or social function no longer survive in usable continuity.
+
+## Novel Profession
+
+A newly integrated field created in response to new tools, species contact, magic, law, ecology, knowledge, or social need.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.

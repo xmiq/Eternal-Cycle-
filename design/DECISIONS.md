@@ -485,3 +485,31 @@ Human and monster Skill trees begin separately and neither is the default form o
 ## D-121 — Composite Use Does Not Imply Skill Fusion
 
 Several Skills may coordinate in a Composite Skill without merging. Any future fusion requires developed components, meaningful functional overlap, repeated integrated use, tree compatibility, real tradeoffs, and protection against duplicate XP, benefits, mastery, or actions.
+
+## D-122 — Profession Is Integrated Practice Rather Than a Job Label
+
+A Profession combines relevant knowledge, Skills, judgment, standards, tools, relationships, responsibilities, and a social or economic function. Employment, class labels, titles, guild membership, or one impressive technique do not create Professional Competence.
+
+## D-123 — Professional Capability Has Distinct Components
+
+Knowledge, technical Skill, Professional Judgment, experience, credentials, reputation, legal authority, Institutional Access, and responsibility answer different questions. They may support one another but cannot be inferred automatically from one another or collapsed into one profession score.
+
+## D-124 — Professional Judgment Requires Varied Responsibility
+
+Professional Judgment develops through varied cases, feedback, reflection, mentorship, consequence, and increasing responsibility. Theory, seniority, time served, or inherited memories may inform judgment but do not establish it without relevant integrated practice.
+
+## D-125 — Credentials and Licences Grant Scoped Recognition and Access
+
+A Credential records that an authority evaluated defined evidence, while a Licence grants permission within a jurisdiction. Neither guarantees current competence, survives Reincarnation as soul-owned authority, or applies automatically outside the issuing culture and institution.
+
+## D-126 — Professional Persistence Is Component-Specific
+
+Legitimately integrated knowledge, Skills, and judgment may persist as Soul Imprints. Jobs, offices, clients, reputation, credentials, legal authority, tools, property, and Institutional Access remain worldly conditions and do not follow the soul automatically.
+
+## D-127 — Retained Expertise Requires Present Revalidation
+
+Reincarnated professionals must test former knowledge against the current body, species, language, materials, tools, laws, institutions, magic, and professional standards. Retained expertise may accelerate retraining but cannot govern high-consequence work reliably until present evidence supports it.
+
+## D-128 — Professions Need No Universal Institution or XP Currency
+
+Monster, informal, lost, novel, and culturally distinct Professions may organize and transmit coherent practice without imitating human guilds or schools. Professional Development is recorded through changed integrated capability and evidence rather than a universal Profession XP pool.
