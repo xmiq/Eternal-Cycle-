@@ -1659,3 +1659,23 @@ A scoped continuity relationship in which a later Human Class inherits some doma
 ## Class Reconstruction
 
 Present-life work that uses surviving evidence, interpretation, compatibility testing, teaching, correction, and participant agency to establish a usable Human Class framework after transmission was lost or broken. It records historical gaps and may produce a successor rather than uninterrupted continuity.
+
+## Human Progression
+
+The family of capability and social-development routes commonly available through human embodiment, Human Skill Trees, Human Classes, Professions, Institutions, tools, relationships, and current-world opportunities. It is not one tree, one level, a closed catalog, or the standard for nonhuman progression.
+
+## Progression Constraint
+
+A current, causally established condition that limits a specified capability layer or route through embodiment, maturation, access, Development, resources, social structure, world law, compatibility, coordination, conflict, or uncertainty. It is not a universal character penalty.
+
+## Progression Constraint Profile
+
+A scoped record of one material Progression Constraint naming the objective and route, bound capability layer, owning source, evidence, current effect, possible change routes, costs, persistence, and unknowns.
+
+## Practice Allocation
+
+How a current incarnation distributes finite time, attention, effort, feedback, recovery, resources, and meaningful use among Development routes. It creates practical tradeoffs without imposing metaphysical class, Profession, or Skill slots.
+
+## Maintenance Burden
+
+The current practice, recovery, resources, relationships, calibration, support, and time required to preserve Current Access or Practised Reliability in a capability. Maintenance does not create endless new Development.

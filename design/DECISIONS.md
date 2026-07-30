@@ -1725,3 +1725,39 @@ Retained Skill history, Development, memory, Echoes, and Soul evidence may suppo
 ## D-431 — Class Evolution Cannot Be Farmed or Applied Retroactively
 
 Repetition, victories, crises, reforms, name changes, publications, student counts, institutions founded, branches declared, and Ages survived are evidence only through actual social change. A later Class cannot automatically affiliate every historical contributor, ancestor, Skill user, Profession, or source culture.
+
+## D-432 — Human Progression Has No Universal Cap or Baseline
+
+Human Progression is a plural family of embodied, learned, social, institutional, professional, and supported routes rather than one tree, level, power tier, maximum, or closed catalog. One body, culture, Institution, Age, test, or observed population cannot establish the universal human limit or the standard for nonhuman progression.
+
+## D-433 — Every Progression Constraint Is Scoped and Causal
+
+A material limit must identify the exact objective and route, bound capability layer, owning source, current condition, evidence, effect, possible change routes, costs, persistence, and unknowns. No vague low potential, human limit, or narrative ceiling is sufficient.
+
+## D-434 — Embodiment Binds While Accommodation Remains Valid
+
+The current body, lifecycle, health, disability, senses, cognition, and Species Potential constrain literal expression. Accommodation, tools, interfaces, role design, treatment, or translated methods may establish genuine alternative routes while retaining their dependencies and without pretending bodies are interchangeable.
+
+## D-435 — Finite Practice Allocation Replaces Progression Slots
+
+Characters may pursue several Skills, Classes, Professions, and affiliations without metaphysical slots. Finite time, attention, effort, feedback, recovery, resources, obligations, maintenance, interference, and opportunity costs determine what one current incarnation can deepen and sustain.
+
+## D-436 — Maintenance Burden Survives Breadth and Retention
+
+Capabilities differ in the practice, calibration, resources, relationships, and support needed to preserve access and reliability. Retained familiarity can reduce rediscovery but cannot make every former capability simultaneously current, maintained, or ready for use.
+
+## D-437 — Social Barriers Are Real Without Becoming Inherent Caps
+
+Law, prejudice, secrecy, monopoly, rank, reputation, credentials, Institutions, and cultural recognition may restrict access, resources, authority, work, and safety through current power. They do not define inherent capability or metaphysical learning limits, and bypassing them does not erase legitimate safety or accountability needs.
+
+## D-438 — Human Progression Assessment Is Contextual
+
+Assess humans through a stated objective, capability layers, present constraints, evidence, preparation, tools, support, opposition, costs, and uncertainty. Skills, ranks, Classes, Professions, magic, Soul history, equipment, and recognition cannot be summed into one human progression score.
+
+## D-439 — Limits Require Fair Evidence Rather Than GM Fiat
+
+Known requirements, demonstrated failure, credible risk, social barriers, inference, unknowns, and false beliefs must remain distinct. Lack of precedent or institutional rejection does not prove impossibility, while uncertainty does not promise hidden potential or an eventual unlock.
+
+## D-440 — Phase 5 Structures Change Routes Rather Than Personal Ceilings
+
+Human Classes, Professions, Social Advancement, Institutions, Academies, and Class Evolution may change learning routes, access, resources, obligations, recognition, coordination, and opportunity. They do not raise a universal cap, grant personal Development, or waive current embodiment and effort.

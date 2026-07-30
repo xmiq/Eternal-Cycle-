@@ -12,6 +12,7 @@ This section defines how human societies organize, teach, preserve, apply, and r
 6. [Social Advancement](SOCIAL_ADVANCEMENT.md) - multidimensional Social Position, Advancement Routes, opportunities, portability, gatekeeping, decline, agency, and adjudication.
 7. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) - durable organization, governance, offices, authority, collective capability, institutional memory, academies, continuity, and adjudication.
 8. [Class Evolution](CLASS_EVOLUTION.md) - historical transformation, continuity, variants, synthesis, schism, obsolescence, reconstruction, succession, and adjudication of class frameworks.
+9. [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md) - scoped constraints, embodiment, time, Practice Allocation, maintenance, access, tradeoffs, retained progression, crossover, assessment, and safeguards.
 
 Later Phase 5 documents extend this foundation in roadmap order. A later document may add playable detail, but it may not turn a class label, profession, rank, credential, or institutional membership into automatic capability.
 

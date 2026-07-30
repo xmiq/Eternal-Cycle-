@@ -494,7 +494,7 @@ Class Change Profiles are external campaign records. This repository stores no c
 
 This document does not fully define:
 
-- the final limits of human progression, which belong to the next Phase 5 task;
+- the final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md);
 - transformations of Professions, cultures, religions, governments, economies, or Institutions except where they affect a Class claim;
 - detailed magic, technology, legal, political, or World Engine procedures;
 - the creation of particular Skills, bodies, species routes, credentials, or offices;

@@ -57,6 +57,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Social Advancement](human/SOCIAL_ADVANCEMENT.md) - multidimensional Social Position, Advancement Routes, opportunities, portability, gatekeeping, decline, agency, and adjudication.
 - [Institutions and Academies](human/INSTITUTIONS_AND_ACADEMIES.md) - durable organization, governance, offices, authority, collective capability, institutional memory, academies, continuity, and adjudication.
 - [Class Evolution](human/CLASS_EVOLUTION.md) - historical transformation, continuity, variants, synthesis, schism, obsolescence, reconstruction, succession, and adjudication of class frameworks.
+- [Limits of Human Progression](human/LIMITS_OF_HUMAN_PROGRESSION.md) - scoped constraints, embodiment, time, Practice Allocation, maintenance, access, tradeoffs, retained progression, crossover, assessment, and safeguards.
 
 ## World Engine
 

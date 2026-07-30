@@ -435,3 +435,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Reconstruction should permit meaningful recovery while retaining historical gaps, current embodiment, present practice, participant agency, and the possibility that the result is a successor.
 - Cross-species translation needs useful accommodations and genuinely shared frameworks without turning class contact into progression-tree crossover.
 - Obsolescence and decline should create loss and adaptation pressure without implying that ancient, secret, synthesized, or reconstructed Classes are automatically superior.
+
+## Phase 5 Human-Progression-Limits Watchlist
+
+- Progression Constraint Profiles should identify a material route limit without turning every inconvenience, preference, or uncertain possibility into permanent character bookkeeping.
+- The no-universal-cap rule must preserve genuine anatomy, maturation, source, and world-law limits rather than implying every route is eventually possible.
+- Practice Allocation and Maintenance Burden need playtest attention so broad ancient souls face meaningful choices without arbitrary slots or punitive decay.
+- Accommodation should support real mastery and agency while retaining tools, access, fatigue, maintenance, and body-environment consequences.
+- Social barriers can dominate a life materially without being mistaken for objective incapacity; reform and bypass routes should remain causal rather than guaranteed.
+- Retained progression should make old souls distinct and often efficient while one current body, present effort, diminishing returns, and compatibility prevent compressed omniscience.
+- Human-monster crossover remains the main pressure point for tree merger; every translated result needs one current Receiving Route and explicit transfer loss.
+- GM statements about impossibility need evidence and ownership, while unknown limits must not become promises of hidden upgrades.

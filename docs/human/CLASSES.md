@@ -415,7 +415,7 @@ This document does not fully define:
 - social advancement;
 - institution and academy governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation, merger, fracture, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- final limits on human progression.
+- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
 Those subjects belong to their dedicated Phase 5 owners or the remaining roadmap tasks. Class Profiles may reference them without deciding their rules.
 

@@ -484,7 +484,7 @@ This document does not fully define:
 - social advancement and status mobility;
 - institutions, guilds, academies, licensing bodies, and governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- final limits of human progression;
+- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md);
 - wages, prices, markets, taxation, or labor simulation;
 - technical procedures for particular crafts, medicine, law, magic, or other work.
 

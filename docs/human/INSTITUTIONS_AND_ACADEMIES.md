@@ -586,7 +586,7 @@ Institution Profiles and Academy Profiles are interfaces for external campaign r
 This document does not fully define:
 
 - transformation of Human Classes defined in [Class Evolution](CLASS_EVOLUTION.md);
-- final limits of human progression;
+- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md);
 - universal legal, political, economic, property, taxation, wage, election, inheritance, or faction systems;
 - detailed magic sources, spell rules, or magical infrastructure;
 - world-state simulation, institutional demographics, or long-term event procedures;

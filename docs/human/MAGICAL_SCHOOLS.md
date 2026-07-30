@@ -575,7 +575,7 @@ This document does not define:
 - divine or forbidden magic;
 - exact magical costs, ranges, durations, damage, or counters;
 - academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
-- final limits of human progression.
+- final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
 [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), Phase 7, and the remaining Phase 5 tasks own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
@@ -590,6 +590,7 @@ This document does not define:
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
 - [Class Evolution](CLASS_EVOLUTION.md)
+- [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md)
 - [Hidden Skills](../skills/HIDDEN_SKILLS.md)
 - [Conceptual Skills](../skills/CONCEPTUAL_SKILLS.md)
 - [Reincarnation](../soul/REINCARNATION.md)

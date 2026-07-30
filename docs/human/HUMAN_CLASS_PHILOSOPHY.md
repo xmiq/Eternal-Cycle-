@@ -295,7 +295,7 @@ This philosophy intentionally does not define:
 - social advancement procedures;
 - institution and academy rules defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class change, synthesis, decline, and succession defined in [Class Evolution](CLASS_EVOLUTION.md);
-- the final limits of human progression.
+- the final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
 Those subjects belong to their linked Phase 5 owners or the remaining roadmap tasks. Every extending rule must preserve the distinctions and safeguards established here.
 
