@@ -435,7 +435,7 @@ Neither statement creates an overall magic rank.
 - **[Physical Development](PHYSICAL_DEVELOPMENT.md):** owns bodily condition, ordinary adaptation, and the physical aspects of Channels and Magical Organs.
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns learned magical techniques and their present practice.
 - **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated magical work, standards, judgment, responsibility, credentials, and institutions.
-- **Species Development:** will own inherited traits, lifecycle, species structures, and body-changing routes that enable species-specific magic.
+- **[Species Development](SPECIES_DEVELOPMENT.md):** owns inherited traits, lifecycle, species structures, and body-changing routes that enable species-specific magic.
 - **[Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md):** owns negotiation, Trust, coordination, command, and legitimacy around magical groups and sources.
 - **[Reincarnation](../soul/REINCARNATION.md):** preserves legitimate Magical Imprints while current embodiment, world law, and worldly access are reconciled.
 - **[Soul Depth](../soul/SOUL_DEPTH.md):** supports integration without granting magical capability.
@@ -532,6 +532,7 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 - [Skill Development](SKILL_DEVELOPMENT.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
+- [Species Development](SPECIES_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

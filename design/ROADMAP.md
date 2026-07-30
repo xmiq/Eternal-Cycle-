@@ -4,9 +4,9 @@
 
 **Current phase: Phase 2 — Development System**
 
-**Current task: Define species development**
+**Current task: Define Stat XP and retained development**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin or continue Stat XP and retained development or another later Phase 2 task until species development is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin or continue development interactions or another later Phase 2 task until Stat XP and retained development is complete unless the project owner explicitly changes the target.
 
 Phase 1 is reviewed and approved. Do not reopen it unless Phase 2 reveals a genuine contradiction that cannot be resolved within the current Development rules.
 
@@ -67,7 +67,7 @@ Phase 1 is complete only when every Soul Engine system is defined and linked, cr
 - [x] Define profession development
 - [x] Define magical development
 - [x] Define social and leadership development
-- [ ] Define species development
+- [x] Define species development
 - [~] Define Stat XP and retained development
 - [ ] Define development interactions
 - [~] Define capability assessment without universal power levels

@@ -577,3 +577,39 @@ Formal Authority, Cultural Legitimacy, Magical Authority, and Symbolic Authority
 ## D-144 — Compliance Is Not Trust or Loyalty
 
 Fear, coercion, payment, hierarchy, persuasion, agreement, Trust, and Loyalty may each influence behavior through different causes and consequences. Immediate compliance cannot be recorded automatically as consent, durable relationship, legitimacy, or leadership mastery.
+
+## D-145 — Species Development Belongs to the Current Form
+
+Species Development owns maturation, Trait Expression, lifecycle, and valid body-changing routes of the current incarnation. Final Death ends the former species, form, stage, anatomy, senses, organs, and body-bound traits rather than preserving them as portable soul assets.
+
+## D-146 — Traits Supply Routes Rather Than Complete Capability
+
+A Species Trait may provide anatomy, sensing, production, access, or other potential. Physical conditioning, learned control, technique, profession, magic, and social use remain owned by their Development Tracks and require present calibration where applicable.
+
+## D-147 — Body-Changing Routes Remain Distinct
+
+Maturation, Metamorphosis, Transformation, Mutation, Evolution, Artificial Modification, Divine Alteration, Corruption, and Purification are not interchangeable labels. Each effect retains its source, requirements, agency conditions, duration, maintenance, reversibility, costs, and failure states.
+
+## D-148 — Human and Monster Progression Trees Begin Separately
+
+Human and monster trees organize different bodies, instincts, ecologies, cultures, institutions, Skills, and transformative possibilities. Neither is the default form of the other, and social sophistication, intelligence, morality, or profession does not erase species or tree identity.
+
+## D-149 — Prior Species History Persists Through Its Owning Systems
+
+Prior species lives may leave Retained Instincts, Stat XP, Skill Imprints, memories, knowledge, and other protected history. They do not preserve former Species Traits, stages, organs, senses, mutations, forms, or evolution branches, and the same development cannot be duplicated across owners.
+
+## D-150 — Species Crossover Requires Body Compatibility and Receiving Permission
+
+Cross-species expression requires genuine provenance, current access, functional correspondence or an explicit transformative route, present experimentation and calibration, Body Compatibility, receiving-tree permission, and a bounded result with costs and constraints.
+
+## D-151 — Transformations and Modifications Do Not Stack Freely
+
+Temporary forms, borrowed bodies, mutations, artificial components, divine alterations, and corruptive changes retain their dependencies and incompatibilities. Repetition or Reincarnation does not make them inherited, soul-owned, permanent, or cumulatively stackable without an explicit rule.
+
+## D-152 — Species and Evolution Progress Resist Farming
+
+Age, time, kills, consumption, pain, repeated deaths, rapid reincarnation, shallow species collection, routine molts, and deliberately weak bodies do not create automatic evolution progress. Later branches must require meaningful compatible development and preserve gains, losses, ecology, and consequence.
+
+## D-153 — Species Does Not Prescribe Personhood or Culture
+
+A species or monster label may establish real anatomy, lifecycle, instincts, cognition, and constraints without assigning one personality, morality, intelligence, culture, allegiance, social hierarchy, class, or destiny to every member.

@@ -340,6 +340,70 @@ Understanding of how a particular institution actually processes information, al
 
 A cooperative arrangement among distinct parties pursuing overlapping objectives while retaining separate identities, interests, authority, and exit conditions.
 
+## Species Development
+
+Growth or change belonging to a current species or form through maturation, Trait Expression, body-specific adaptation, lifecycle, environment, and valid transformative pathways.
+
+## Species Potential
+
+The range of maturation, Trait Expression, adaptation, transformation, and evolution routes presently available to a body under its species, form, lifecycle, condition, environment, and established alterations.
+
+## Species Trait
+
+An anatomical, physiological, sensory, cognitive, magical, spiritual, material, reproductive, or lifecycle characteristic belonging to a current species or form.
+
+## Inherited Trait
+
+A Species Trait supplied through the current body's valid origin, lineage, construction, spawning process, or other established inheritance route.
+
+## Trait Expression
+
+The present degree and manner in which an existing Species Trait manifests under maturation, health, environment, regulation, and current form.
+
+## Maturation
+
+Expected growth and change within a current form's lifecycle without necessarily becoming a distinct evolved form.
+
+## Metamorphosis
+
+A structured lifecycle transition that substantially reorganizes the current body or form according to an established species route.
+
+## Transformation
+
+An established temporary or lasting change in form, structure, material, function, or metaphysical state. Its source owns its duration, access, costs, maintenance, and reversibility.
+
+## Mutation
+
+A change in a body's inherited or current structure outside ordinary maturation, caused through an established biological, environmental, magical, corruptive, artificial, divine, or other route.
+
+## Evolution
+
+A lasting transition into a distinct species form or stage through a valid evolution system. Phase 4 owns branches, requirements, rarity, and resulting forms.
+
+## Body Compatibility
+
+The degree to which a current body and form possess the structures, regulation, scale, senses, materials, cognition, magic, and lifecycle needed to support a proposed capability or change.
+
+## Ecological Role
+
+The current relationships through which a species or population affects and depends on habitats, resources, prey, predators, competitors, symbionts, disease, decomposition, and environmental change.
+
+## Artificial Modification
+
+A body or form change produced and maintained through constructed components, procedures, programming, tools, or designed systems rather than ordinary species inheritance.
+
+## Divine Alteration
+
+A body or form change produced through a deity or divine system under its own authority, purpose, costs, limits, and persistence.
+
+## Corruption
+
+A transformative process that imposes, spreads, or develops changes through an established harmful, alienating, coercive, unstable, or value-laden source. The source must define what makes it corruptive rather than relying on appearance alone.
+
+## Purification
+
+A process that removes, transforms, stabilizes, or reclassifies a defined corruptive influence. Purification does not automatically restore an earlier body or erase consequences.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.

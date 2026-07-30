@@ -462,7 +462,7 @@ No Physical Dimension is a universal victory statistic. Strong capability should
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may change recognition or opportunity but grant no flat physical bonus.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant body histories without restoring former anatomy, statistics, or action economy.
 - **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may alter leverage, reach, load, or available movement while weapon mastery remains separate.
-- **Species Development:** owns maturation routes, species traits, and body-changing possibilities beyond ordinary conditioning.
+- **[Species Development](SPECIES_DEVELOPMENT.md):** owns maturation routes, Species Traits, and body-changing possibilities beyond ordinary conditioning.
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns techniques that organize physical capability toward repeatable actions.
 - **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns control of magical reinforcement, Channels, transformations, and metaphysical expression.
 - **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated judgment and tool practice that may demand specialized bodily capacity.
@@ -553,6 +553,7 @@ The monster remains stronger. The humans become favored for the extraction objec
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
+- [Species Development](SPECIES_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

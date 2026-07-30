@@ -49,6 +49,11 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Group-effect rules should expose the leader's actual contribution and the members' independent capabilities so leadership does not become a personal multiplier detached from people.
 - Monster social systems should use species-appropriate communication and institutions without assuming either universal dominance hierarchies or human norms.
 - Contested magical control, propaganda systems, law, government, faction simulation, and institutional enforcement remain with their later Owning Systems.
+- Phase 4 owns complete monster evolution branches, hidden requirements, rare and hybrid forms, mutations, apex forms, and civilization-specific evolution content.
+- Evolution branches should specify gains, losses, new needs, Body Compatibility, maintenance, ecological effects, and receiving-tree ownership rather than only stronger outputs.
+- The existing evolution-tree template should be checked during the Phase 2 audit and later Phase 4 work against the new Species Development boundaries without treating template fields as automatic mechanics.
+- Artificial, divine, corruptive, and purifying routes need explicit source and agency rules before content can use them as shortcuts around current embodiment.
+- Species catalogs must leave room for individual, cultural, and population variation while still giving forms meaningful shared traits and constraints.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

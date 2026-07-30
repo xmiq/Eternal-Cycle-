@@ -456,7 +456,7 @@ Until Phase 3 defines fusion, component Skills remain distinct and coordinated u
 - **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated practice, standards, responsibility, and institutional context beyond individual Skills.
 - **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns magical access, control, capacity, and metaphysical requirements used by magical Skills.
 - **[Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md):** owns relational judgment and group practice rather than a generic charisma Skill.
-- **Species Development:** will own body-bound traits, maturation, and species progression that make some Skills possible.
+- **[Species Development](SPECIES_DEVELOPMENT.md):** owns body-bound traits, maturation, and species progression that make some Skills possible.
 - **[Reincarnation](../soul/REINCARNATION.md):** preserves legitimate Skill XP and Skill Imprints while current expression resets with embodiment and access.
 - **[Soul Resonance](../soul/SOUL_RESONANCE.md):** may reveal or align a retained Skill without creating mastery or tree permission.
 - **[Soul Echoes](../soul/SOUL_ECHOES.md):** may supply source-bounded guidance, context, Overlay, or Delegation without practising for the current incarnation.
@@ -578,6 +578,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
+- [Species Development](SPECIES_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

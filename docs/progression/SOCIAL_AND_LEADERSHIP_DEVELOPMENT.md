@@ -398,7 +398,7 @@ Neither has a higher universal social score.
 - **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated administration, diplomacy, law, teaching, military service, governance work, and institutional responsibility.
 - **[Physical Development](PHYSICAL_DEVELOPMENT.md):** owns bodily voice, endurance, sensory processing, and current condition supporting social expression.
 - **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns magical communication, compulsion if later explicitly defined, divine or spirit Access, and magical authority.
-- **Species Development:** will own species signals, lifecycle, cognition, instincts, and social structures rooted in embodiment.
+- **[Species Development](SPECIES_DEVELOPMENT.md):** owns species signals, lifecycle, cognition, instincts, and social structures rooted in embodiment.
 - **[Reincarnation](../soul/REINCARNATION.md):** preserves legitimate Social Imprints while worldly relationships, identity, reputation, and office remain behind.
 - **[Soul Resonance](../soul/SOUL_RESONANCE.md):** may create familiarity or reopen social history without proving trust or mutual recognition.
 - **[Soul Echoes](../soul/SOUL_ECHOES.md):** may provide source-bounded social memory and advice without speaking for current people.
@@ -488,6 +488,7 @@ The sign may establish Magical or Symbolic Authority at the spring. Wider govern
 - [Skill Development](SKILL_DEVELOPMENT.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
+- [Species Development](SPECIES_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
