@@ -620,6 +620,62 @@ A rule-bound relationship through which parties exchange permission, obligation,
 
 The learned work of designing, adapting, or assembling a repeatable magical expression within one system's laws and constraints.
 
+## Spell
+
+A bounded, repeatable magical procedure that organizes a valid source and route toward a specified effect under explicit formation, targeting, cost, control, termination, and failure conditions.
+
+## Spell Pattern
+
+The organized magical relationships that make one spell procedure capable of producing its intended effect. A Pattern may be embodied, symbolic, spatial, verbal, conceptual, material, relational, environmental, or distributed.
+
+## Formation Grammar
+
+A local system of meaningful relationships and constraints through which Spell Patterns can be expressed, combined, interpreted, and rejected. A Formation Grammar is not necessarily a spoken or written language.
+
+## Formation Component
+
+One functionally relevant part of a Spell Pattern, such as a breath cycle, gesture, symbol, material, spatial relation, rhythm, concept, bodily configuration, source response, or tool state.
+
+## Effect Specification
+
+The bounded description of what a spell is intended to change, preserve, reveal, move, create, transform, constrain, or prevent, including exclusions and limits.
+
+## Targeting Relation
+
+The valid causal relationship by which a Spell Pattern identifies what its effect may act upon.
+
+## Spell Boundary
+
+The spatial, temporal, material, conceptual, relational, or jurisdictional limit that constrains where and upon what a spell may act.
+
+## Casting Trigger
+
+The event or satisfied condition that causes a formed spell to begin, release, change state, or attempt its effect.
+
+## Sustainment
+
+The ongoing relationships, attention, source flow, authority, structure, environment, or maintenance required to keep a spell active after its Trigger.
+
+## Termination Condition
+
+The event, limit, command, failure, withdrawal, or completed purpose that ends a spell's active process.
+
+## Abort Route
+
+A prepared means of stopping or diverting formation before uncontrolled release, with its own requirements, limits, and consequences.
+
+## Spell Instance
+
+One actual formation and expression of a spell in a particular body, source, environment, target, and moment.
+
+## Spell Procedure
+
+The documented or remembered structure needed to attempt a Spell Pattern, including assumptions, components, sequence or dependency, conditions, costs, limits, failure signs, and validation.
+
+## Spell Profile
+
+A qualitative external Campaign Record describing one spell procedure or relevant Spell Instance without treating it as a universal stat block.
+
 ## Ritual Knowledge
 
 Understanding of a ritual's symbols, roles, materials, timing, conditions, risks, provenance, and intended function. Ritual Knowledge does not by itself establish reliable performance.

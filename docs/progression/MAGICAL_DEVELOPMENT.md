@@ -246,7 +246,7 @@ Ritual scale does not make every participant equally developed. A participant ma
 
 Spell Construction develops through understanding a system's building blocks, constraints, feedback, failure modes, and validation methods. Adapting a known effect is usually easier than inventing a reliable new one, but neither occurs merely by naming it.
 
-The complete grammar of spells, schools, elements, and formulas belongs to Phase 7. This phase establishes that construction requires evidence, testing, safety, and current-law compatibility.
+[Spell Formation](../magic/SPELL_FORMATION.md) owns the complete shared framework for local grammars, Spell Patterns, effect specification, targeting, lifecycle, cost, failure, and counterplay. This document owns how the learned construction capability changes through evidence, testing, safety, and current-law-compatible practice.
 
 ## Embodiment and Species
 
@@ -453,7 +453,7 @@ Neither statement creates an overall magic rank.
 This document does not define:
 
 - one universal Mana source, Reserve, regeneration rate, Capacity formula, or spell tier; [Mana](../magic/MANA.md) instead defines a qualitative local framework that expressly rejects such universality;
-- complete elements, magic-system taxonomies, spell lists, rituals, enchantment, alchemy, divine magic, or forbidden magic; [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns affinity rules, while the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
+- complete elements, magic-system taxonomies, spell catalogs, rituals, enchantment, alchemy, divine magic, or forbidden magic; [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns affinity rules, [Spell Formation](../magic/SPELL_FORMATION.md) owns spell procedures and effects, while the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
 - exact costs, ranges, damage, casting times, status effects, or counterspell procedures;
 - which gods, spirits, worlds, species, organs, contracts, or tools exist;
 - universal spell circles, caster ranks, rarity labels, or magical threat scores;
@@ -478,7 +478,7 @@ When magical Development or capability matters:
 9. treat rituals, tools, patrons, and groups as explicit support with their own dependencies;
 10. communicate capability for the current objective rather than assigning a universal magic rank;
 11. record Development only for the contribution actually performed and integrated;
-12. apply canonical [Mana](../magic/MANA.md) and [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), defer later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
+12. apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), and [Spell Formation](../magic/SPELL_FORMATION.md), defer later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
 
 ## Worked Examples
 
@@ -530,6 +530,7 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 - [Magic Rules Index](../magic/README.md)
 - [Mana](../magic/MANA.md)
 - [Magical Affinities](../magic/MAGICAL_AFFINITIES.md)
+- [Spell Formation](../magic/SPELL_FORMATION.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)

@@ -601,3 +601,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Several-affinity characters need meaningful conflicts and synergies without slot limits, automatic cancellation, omnivalent fusion, or a reward for collecting labels.
 - Soul-conditioned affinities must remain latent across incompatible bodies and Ages until a present receiving rule supports them.
 - Weapon Soul, vessel, wielder, source, and enchantment affinities need repeated ownership checks in later spell and enchanting examples.
+
+## Phase 7 Spell-Formation Watchlist
+
+- Local Formation Grammars must remain genuinely local; later content should not drift into one hidden universal syntax, element chart, tier ladder, or spell-slot economy.
+- Spell Profiles need playtests where Pattern formation, Targeting Relation, target resistance, Sustainment, and Termination fail independently and remain understandable at the table.
+- Prepared and improvised casting should both have useful niches without making preparation free power or improvisation an unrestricted creativity bypass.
+- Species-native and Soul Weapon casting examples must preserve their bodies, interfaces, personhood, and Skills rather than translating everything into human incantations.
+- Reincarnated casters need substantial reconstruction examples across different bodies and Ages so retained procedure knowledge never implies present reliability.
+- Counterplay should attack causal dependencies and aftermath as often as direct magical cancellation so nonmagical preparation remains meaningful.

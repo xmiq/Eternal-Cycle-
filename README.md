@@ -36,6 +36,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/magic/README.md`](docs/magic/README.md) - Magic rules, current reading order, ownership boundaries, and implementation status.
 - [`docs/magic/MANA.md`](docs/magic/MANA.md) - Mana as the local, causal, world-side foundation of magical change.
 - [`docs/magic/MAGICAL_AFFINITIES.md`](docs/magic/MAGICAL_AFFINITIES.md) - target-specific magical compatibility, formation, expression, conflict, and persistence.
+- [`docs/magic/SPELL_FORMATION.md`](docs/magic/SPELL_FORMATION.md) - bounded spell procedures, local grammars, formation lifecycle, costs, failure, counterplay, and persistence.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -55,4 +56,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana** and **Magical Affinities** are complete within **Phase 7 — Magic**, and the sole current task is **Define spell formation**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana**, **Magical Affinities**, and **Spell Formation** are complete within **Phase 7 — Magic**, and the sole current task is **Define rituals**.

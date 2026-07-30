@@ -205,7 +205,7 @@ Opposition can exploit a Skill's assumptions. Noise defeats a pattern reader; ro
 
 ### Magic and Conceptual Spellcasting
 
-Conceptual understanding can shape spell formation, targeting, efficiency, diagnosis, adaptation, or control. Magical Development owns Access, source, affinity, Channels, reserves, regulation, authority, and current capacity. The future magic system owns exact spell effects and resistance.
+Conceptual understanding can shape spell formation, targeting, efficiency, diagnosis, adaptation, or control. Magical Development owns change in capability, while [Spell Formation](../magic/SPELL_FORMATION.md) and the other applicable Magic rules own source, Access, affinity, Channels, reserves, authority, exact effects, resistance, cost, and failure.
 
 A nonmagical Conceptual Skill does not become magical through its name. Conceptual Spellcasting requires both the Skill and a valid magical route; losing either can leave knowledge without effect or magic without refined conceptual control.
 

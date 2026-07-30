@@ -2281,3 +2281,79 @@ Time, repetition, consumption, killing, harm, worship, sacrifice, school attenda
 ## D-570 — Affinity Profiles Are External and Preserve Agency
 
 Affinity Profiles are qualitative external Campaign Records. Affinity may create opportunities, risks, and reactions but cannot determine personality, ethics, loyalty, vocation, identity, or deliberate action, and live character or population affinity state does not belong in this repository.
+
+## D-571 — Spells Are Bounded Repeatable Procedures
+
+A Spell organizes a valid source and route toward a specified effect under explicit formation, targeting, cost, control, termination, and failure conditions. Repeatability permits another attempt but does not guarantee identical results, universal compatibility, or reliable execution.
+
+## D-572 — Not Every Magical Expression Is a Spell
+
+Natural Mana events, Species Traits, divine or spirit authority, Soul Weapon Forms, rituals, enchantments, alchemical processes, and other magical expressions retain their owning systems. A social spell label does not convert them into Spell Formation.
+
+## D-573 — Formation Grammars Are Local
+
+Spell Patterns may be embodied, symbolic, spatial, verbal, conceptual, material, relational, environmental, constructed, or distributed. Shared notation does not prove shared grammar, and no universal syntax, element chart, or procedure applies to every world and Age.
+
+## D-574 — Patterns Are Causal Structures Rather Than Appearances
+
+A Spell Pattern consists of the functionally relevant relationships that produce an effect. Words, gestures, diagrams, materials, and other visible components matter only through the functions current world law gives them.
+
+## D-575 — Every Spell Requires a Bounded Effect Specification
+
+A Spell Claim must identify the property or relationship affected, direction of change, valid targets, scale, precision, duration or completion, exclusions, dependencies, evidence, and consequences. Broad intention does not supply missing magical meaning.
+
+## D-576 — Targeting Requires a Valid Causal Relation
+
+Names, blood, images, possession, proximity, resemblance, coordinates, sympathy, consent, and authority connect a spell to a target only where a current receiving rule recognizes the relationship. Targeting and successful formation are separate claims.
+
+## D-577 — Persistent Spells Require Sustainment and Termination
+
+Every noninstantaneous Spell Pattern states its ongoing dependencies, interruption behavior, Termination Conditions, collapse behavior, and any Abort Route. Initial release does not make continued operation free or permanent.
+
+## D-578 — Spell Procedures and Casting Capability Are Distinct
+
+A procedure, Pattern, formula, name, or observed Instance does not grant the Skills, Development, Access, embodiment, authority, or reliability required to construct or cast it. Learned formation and construction remain Skill-owned.
+
+## D-579 — Prepared and Improvised Formation Exchange Dependencies
+
+Preparation moves work into components, calibration, permission, positioning, stored state, and prior validation, while improvisation increases live modelling, control, uncertainty, and risk. Neither mode creates free power, spell slots, or exemption from current conditions.
+
+## D-580 — Spell Costs Remain Causal and Non-Fungible
+
+Mana, bodily strain, attention, materials, tool wear, time, obligations, ecological effects, and social consequences retain their owners and are accounted once. Pain, sacrifice, spectacle, and complexity are not universal fuel.
+
+## D-581 — Formation Success Does Not Guarantee Effect Success
+
+Pattern coherence, route, targeting, reach, target response, resistance, ordinary causality, and outcome are resolved separately. A spell may form correctly yet be evaded, resisted, redirected, transformed, or rendered irrelevant.
+
+## D-582 — Spell Counterplay Can Attack Any Dependency
+
+Countering may deny sources, revoke authority, alter environment, interrupt components, break interfaces, exploit boundaries, oppose effects, or target recovery and consequences. A universal counterspell action or output contest does not exist.
+
+## D-583 — Spell Failure Names Its Layer
+
+Formation, route, targeting, boundary, capacity, control, Sustainment, termination, and model failures have distinct causes and remedies. Failure may consume resources and cause harm without granting Development, affinity, resistance, or stronger magic.
+
+## D-584 — Conceptual Spellcasting Remains Fully Constrained
+
+Conceptual Skills may organize one locally valid Pattern but cannot expand effects through metaphor or bypass source, Mana Relation, Access, authority, embodiment, target interaction, resistance, cost, agency, termination, and world law.
+
+## D-585 — Species and Soul Weapons Use Their Actual Interfaces
+
+Nonhuman bodies, distributed beings, and Weapon Souls may form spells through valid species structures, tools, forms, and deliberate action. They are not translated into human casting assumptions, and neither Evolution nor Awakening installs automatic spell knowledge.
+
+## D-586 — Soul Systems Supply No Automatic Spell
+
+Soul Resonance, Echoes, Retained Instincts, Titles, Depth, Avatars, and Archive Records may support only their established alignment, memory, orientation, identity, integration, or information. A current receiving rule and complete spell route remain necessary.
+
+## D-587 — Reincarnation Preserves Reconstruction Inputs Rather Than Spells in Use
+
+Eligible Magical and Skill Imprints may preserve understanding and bounded learned capability, while active Instances, prepared bodily states, Reserves, Channels, authority, tools, sites, and reliability do not transfer. Every old procedure must be revalidated under the new body, source, grammar, and Age.
+
+## D-588 — Spell Labels and Ranks Are Local Recognition
+
+Circles, grades, colours, danger classes, licences, catalogs, and spell names serve stated local purposes. They do not create a universal spell list, caster level, power tier, or cross-system equivalence.
+
+## D-589 — Spell Profiles and Instances Remain External
+
+Spell Profiles are qualitative external Campaign Records. Known spell lists, prepared procedures, active Instances, current sources, discovered counters, local secrets, and changing magical state do not belong in the canonical repository.
