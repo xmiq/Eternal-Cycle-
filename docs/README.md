@@ -77,6 +77,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [Magic Rules Index](magic/README.md) - current reading order, ownership boundaries, authority, and Phase 7 implementation status.
 - [Mana](magic/MANA.md) - the local, causal, world-side capacity and medium of magical change, including sources, state, flow, storage, conversion, embodiment, ecology, persistence, and safeguards.
+- [Magical Affinities](magic/MAGICAL_AFFINITIES.md) - target-specific compatibility and responsiveness, including formation, expression, evidence, conflict, change, Reincarnation, and safeguards.
 
 ## World Engine
 

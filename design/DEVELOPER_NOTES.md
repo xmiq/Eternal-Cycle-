@@ -592,3 +592,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Later spell, ritual, enchanting, alchemy, divine, and forbidden rules must preserve the Mana Relation and causal accounting rather than inventing separate resource shortcuts.
 - Non-solid and source-dependent Soul Weapon vessels need Phase 7 examples where Mana supports expression without replacing Vessel Continuity or Weapon Soul consent.
 - Magic and nonmagical paths need matchup playtests so dependence, preparation, traceability, and counterplay remain real rather than cosmetic.
+
+## Phase 7 Magical-Affinity Watchlist
+
+- Affinity Profiles must stay claim-specific and should never collapse into elemental percentages, rarity tiers, talent scores, or a character's total magical aptitude.
+- Tests should distinguish affinity from Skill, Access, authority, body structures, source favor, equipment, and school doctrine without making every diagnosis a long investigation.
+- Adverse Affinities need playtests where vulnerability remains consequential without becoming either compulsory tragedy or a hidden compensating power package.
+- Several-affinity characters need meaningful conflicts and synergies without slot limits, automatic cancellation, omnivalent fusion, or a reward for collecting labels.
+- Soul-conditioned affinities must remain latent across incompatible bodies and Ages until a present receiving rule supports them.
+- Weapon Soul, vessel, wielder, source, and enchantment affinities need repeated ownership checks in later spell and enchanting examples.

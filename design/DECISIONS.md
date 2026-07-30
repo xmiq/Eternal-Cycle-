@@ -2217,3 +2217,67 @@ Magic remains one family of paths among many. Access, preparation, dependence, s
 ## D-554 — Live Mana Profiles Remain Campaign Data
 
 Mana Context Profiles are qualitative external Campaign Records. Named current Fields, active Reservoirs, depletion, traces, source relationships, character Reserves, and changing Mana ecology do not belong in the canonical rules repository.
+
+## D-555 — Magical Affinity Is Target-Specific Compatibility
+
+A Magical Affinity is a compatibility or responsiveness relationship with one bounded source, element, material, concept, method, environment, law, pattern, or other magical subject. It is not an element owned by a character, universal talent score, moral alignment, destiny, or flat modifier.
+
+## D-556 — Every Affinity Requires Basis, Scope, and Expression
+
+An Affinity Claim must identify its Target, current causal Basis, owning system, Scope, exact Expressions, conditions, conflicts, evidence, and consequences. A broad label such as strong fire affinity has no canonical effect without those facts.
+
+## D-557 — Affinity Does Not Grant Other Magical Layers
+
+Affinity remains distinct from Magical Potential, Access, Mana, Reserve, Capacity, Control, Resistance, Authority, Skill, spell knowledge, source consent, and World Recognition. Compatibility may support one layer only through an explicit receiving rule.
+
+## D-558 — Affinity Taxonomies Are Local
+
+Source, elemental, material, conceptual, method, environmental, and law affinities are useful descriptions rather than one universal chart. Shared names do not prove equivalent Targets, and no elemental wheel, opposition table, rarity list, slot count, or best affinity applies across every world.
+
+## D-559 — Affinity Formation Requires Causal Compatibility Change
+
+Affinity forms only when a valid embodied, environmental, relational, transformative, method-based, Soul-conditioned, constructed, or other established route changes compatibility itself. Practice that changes only Skill, recovery that changes only Capacity, and relationship change that remains nonmagical do not create affinity.
+
+## D-560 — Affinity Owns Only Its Exact Expression
+
+Affinity owns the compatibility relationship and named Expression. Skills own learned use, Development owns capability change, bodies and Evolution own anatomy, Mana owns supply and state, sources and contracts own permission, Soul systems own persistent identity, and social systems own recognition.
+
+## D-561 — Multiple Affinities Do Not Aggregate
+
+Several affinities retain separate Targets, Bases, Scopes, Expressions, conditions, and costs. They may support, conflict, compete, or remain irrelevant for a particular claim, but they do not stack into total power, automatically cancel as opposites, or fuse through shared labels.
+
+## D-562 — Affinity May Be Adverse
+
+Target-specific responsiveness may increase attraction, susceptibility, instability, interference, unwanted perception, burden, or risk. Adverse Affinity is not moral corruption, punishment, a guaranteed compensating benefit, or a route improved through repeated harm.
+
+## D-563 — Affinity Discovery Uses Scoped Evidence
+
+No universal affinity test exists. Detection and diagnosis must state the proposed Target and Expression, present conditions, evidence, alternative explanations, safety, observer limits, and uncertainty; discovery changes knowledge rather than creating affinity.
+
+## D-564 — Affinity Can Drift, Be Suppressed, or End
+
+An affinity may change when its Basis, embodiment, relationship, environment, source, tool, transformation, or world law changes. Suppression may block one Expression without erasing the relationship, while actual loss requires a causal end to the relevant Basis.
+
+## D-565 — Affinity Persistence Follows Its Basis
+
+Body-, environment-, tool-, site-, relationship-, Soul-, and Skill-supported affinity claims have different Reincarnation outcomes. No affinity transfers as a generic Soul possession; Soul-conditioned history remains latent until a current receiving rule, source, embodiment, and conditions support Expression.
+
+## D-566 — Soul Systems Do Not Become Affinities
+
+Soul Resonance, Echoes, Retained Instincts, Titles, Depth, Avatars, and Archive Records may provide only their bounded alignment, memory, orientation, identity, integration, or evidence. A magical receiving rule must establish any Affinity Basis or Expression without relabelling the Soul effect.
+
+## D-567 — Soul Weapon Affinities Remain Separate
+
+A Weapon Soul, Weapon Vessel, Soul Weapon Form, magical source, bonded soul, and wielder may have distinct affinities. Awakening, Soul Intertwining, possession, wielding, compatibility, and Reincarnation do not pool or transfer them.
+
+## D-568 — Species and Evolution Retain Affinity Anatomy
+
+Species Traits, Magical Organs, Mutations, Hybrid Forms, and Evolved Forms may create or remove body-bound affinity through their owning rules. Mana exposure and ecological pressure can make a route relevant but do not grant affinity, Skills, or Evolution automatically.
+
+## D-569 — Affinity Is Optional and Non-Farmable
+
+Time, repetition, consumption, killing, harm, worship, sacrifice, school attendance, artifact ownership, source proximity, danger, labels, and repeated Reincarnation do not create affinity without a valid Formation Route. Magical and nonmagical paths remain viable without personal affinity.
+
+## D-570 — Affinity Profiles Are External and Preserve Agency
+
+Affinity Profiles are qualitative external Campaign Records. Affinity may create opportunities, risks, and reactions but cannot determine personality, ethics, loyalty, vocation, identity, or deliberate action, and live character or population affinity state does not belong in this repository.

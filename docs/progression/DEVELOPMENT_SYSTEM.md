@@ -159,7 +159,7 @@ Growth in an integrated practice that combines knowledge, judgment, standards, t
 
 ### Magical Development
 
-Growth in the perception, control, formation, application, and judgment required by a magical system. Magical Development does not own Mana, affinities, spells, or metaphysical laws; [Mana](../magic/MANA.md) and the relevant specialist Magic rules own those facts.
+Growth in the perception, control, formation, application, and judgment required by a magical system. Magical Development does not own Mana, affinities, spells, or metaphysical laws; [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), and the relevant specialist Magic rules own those facts.
 
 ### Social Development
 
@@ -547,7 +547,7 @@ This document does not define:
 - physical attributes, Stat XP formulas, or bodily growth curves;
 - skill taxonomies, Skill XP formulas, mastery thresholds, or skill fusion;
 - profession structures, certifications, or advancement requirements;
-- [Mana](../magic/MANA.md), affinities, spells, rituals, or magical output;
+- [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), spells, rituals, or magical output;
 - social actions, relationship mechanics, institutional ranks, or reputation formulas;
 - species stages, mutations, evolution branches, or hidden evolution requirements;
 - exact crossover unlocks between human and monster progression trees;

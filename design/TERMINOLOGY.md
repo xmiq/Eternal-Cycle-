@@ -560,6 +560,42 @@ The ability to reduce, redirect, endure, detect, recover from, or remain functio
 
 A specific compatibility or responsiveness between a being and a magical source, element, concept, method, environment, or law. Affinity changes learning and expression routes but is not a flat bonus or ownership claim.
 
+## Affinity Target
+
+The exact source, element, material, concept, method, environment, law, pattern, or other bounded magical subject with which compatibility or responsiveness is claimed.
+
+## Affinity Basis
+
+The current causal reason a Magical Affinity exists, such as embodiment, species structure, source relationship, environment, magical transformation, Soul-conditioned receiving rule, or another established process.
+
+## Affinity Scope
+
+The precise magical questions for which an affinity matters, including the routes, actions, effects, conditions, and exclusions it can influence.
+
+## Affinity Expression
+
+The observable way an affinity affects one defined magical process, such as perception, source response, stability, efficiency, conversion, tolerance, attraction, vulnerability, or learning conditions.
+
+## Affinity Condition
+
+A current circumstance required for an Affinity Expression, such as embodiment, health, environment, source presence, relationship, tool, lifecycle stage, consent, or world law.
+
+## Affinity Conflict
+
+A causal interference among two or more affinities, or between an affinity and the present body, source, method, environment, or law. Conflict is claim-specific rather than a universal opposition.
+
+## Affinity Drift
+
+A meaningful change in an affinity's Target, Basis, Scope, Expression, conditions, or conflicts caused by current-life development, embodiment, relationship, environment, transformation, injury, World Reset, or another established process.
+
+## Adverse Affinity
+
+A genuine target-specific responsiveness whose current Expression primarily increases attraction, susceptibility, instability, burden, interference, or risk rather than ease or benefit.
+
+## Affinity Profile
+
+A qualitative external Campaign Record for one Magical Affinity, including Target, Basis, Scope, Expressions, conditions, conflicts, evidence, uncertainty, change, persistence, and consequences.
+
 ## Magical Channel
 
 A biological, spiritual, material, contractual, environmental, or constructed route through which a magical process can pass or be regulated.

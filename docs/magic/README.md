@@ -7,14 +7,16 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 ## Canonical Reading Order
 
 1. [Mana](MANA.md) defines the world-side capacity and medium of magical change, local Mana systems, Mana Relations, qualitative state, sources, movement, conversion, embodiment, ecology, persistence, and safeguards.
+2. [Magical Affinities](MAGICAL_AFFINITIES.md) defines target-specific compatibility and responsiveness, including basis, scope, expressions, formation, conflicts, evidence, change, Reincarnation, and safeguards.
 
-Later Phase 7 documents will add magical affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, detailed Development integration, and World Engine effects in roadmap order. A mention of one of those subjects in current canon does not make its detailed rules complete.
+Later Phase 7 documents will add spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, detailed Development integration, and World Engine effects in roadmap order. A mention of one of those subjects in current canon does not make its detailed rules complete.
 
 ## Current Ownership Boundaries
 
 | Claim | Primary owner |
 | --- | --- |
 | World-side magical medium, state, source, movement, storage, conversion, and depletion | [Mana](MANA.md) |
+| Target-specific magical compatibility and responsiveness | [Magical Affinities](MAGICAL_AFFINITIES.md) |
 | Change in magical perception, control, capacity, reliability, and judgment | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) |
 | Learned magical technique | [Skill Engine](../skills/README.md) |
 | Social interpretation, curriculum, verification, and recognition | [Magical Schools](../human/MAGICAL_SCHOOLS.md) |
