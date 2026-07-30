@@ -65,6 +65,12 @@ Compatibility is assessed for one proposed interaction across relevant soul-inte
 
 The complete claim-specific assessment model, qualitative findings, supports, drift, testing, cross-species application, and safeguards are defined in [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md).
 
+## Manifestation
+
+An awakened Weapon Soul may become externally perceivable or embodied only through a bounded Manifestation Route with an explicit source, Anchor, mode, consent, compatibility, action limits, costs, interruption, termination, and consequences.
+
+Perceptual, Vessel, and Embodied Manifestations are non-ranked modes. Ordinary vessel presence, communication, Soul Space appearance, Weapon Echo recall, Soul Avatar Expression, Weapon Evolution, and Reincarnation passage are not manifestations by implication. The complete external-expression, vessel-continuity, one-center, failure, and recovery rules are defined in [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md).
+
 ## Foundational Safeguards and Consequences
 
 A Weapon Soul remains a distinct person before and after intertwining.
@@ -78,7 +84,7 @@ A Weapon Soul remains a distinct person before and after intertwining.
 - lasting injury, forced alteration, severance, or destruction of either soul requires an explicit cause, fair warning, meaningful resistance, and consequences proportionate to the threatened loss;
 - awakening and intertwining enter the world through witnesses, damage, obligations, enemies, institutions, and the history shared by both souls rather than functioning as private reward screens.
 
-Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy Weapon, compatibility, unconventional-form, and Weapon Manifestation rules remain owned by their dedicated Soul Weapons documents and roadmap tasks. These foundations grant none of those capabilities by implication.
+Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy Weapon, compatibility, manifestation, and unconventional-form rules remain owned by their dedicated Soul Weapons documents and roadmap tasks. These foundations grant none of those capabilities by implication.
 
 ## Related Documents
 
@@ -91,6 +97,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md)
 - [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md)
+- [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

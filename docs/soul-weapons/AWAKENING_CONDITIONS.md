@@ -470,12 +470,13 @@ Preparation does not invalidate the event. It also does not guarantee awakening.
 
 ## Scope Boundaries
 
-This document establishes the transition into Weapon Soul personhood. It does not decide whether an awakened Weapon Soul and another soul may intertwine, what long-term personality develops, how trust or compatibility changes, which Soul Weapon forms or abilities emerge, how evolution occurs, or how a Weapon Soul manifests independently. Those claims belong to later Phase 6 rules.
+This document establishes the transition into Weapon Soul personhood. It does not decide whether an awakened Weapon Soul and another soul may intertwine, what long-term personality develops, how trust or compatibility changes, which Soul Weapon forms or abilities emerge, how evolution occurs, or how a Weapon Soul manifests independently. Those claims belong to their dedicated Phase 6 rules, including [Weapon Manifestations](WEAPON_MANIFESTATIONS.md).
 
 ## Related Canon
 
 - [Soul Weapons Index](README.md)
 - [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md)
+- [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

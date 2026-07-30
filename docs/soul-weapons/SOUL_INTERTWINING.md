@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul and another continuing soul may form, maintain, suspend, and end the persistent relationship that makes the partnership a Soul Weapon.
 
-It does not define long-term Weapon Soul personality, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, detailed [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define long-term Weapon Soul personality, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, detailed [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the external-expression procedure owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or unconventional Soul Weapon categories.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Resonance](../soul/SOUL_RESONANCE.md), and [Reincarnation](../soul/REINCARNATION.md) first.
 
@@ -334,7 +334,7 @@ An established Soul Weapon Bond includes an explicit Passage Accord. At Final De
 5. preserve world consequences and any physical-manifestation limits;
 6. establish access in the next incarnation separately.
 
-If both participants have maintained standing consent, the established bond and Weapon Soul accompany the reincarnating soul as stated in [Reincarnation](../soul/REINCARNATION.md). The weapon is not inventory, and its physical manifestation follows later dedicated rules.
+If both participants have maintained standing consent, the established bond and Weapon Soul accompany the reincarnating soul as stated in [Reincarnation](../soul/REINCARNATION.md). The weapon is not inventory, and its physical expression follows [Weapon Manifestations](WEAPON_MANIFESTATIONS.md).
 
 ### Refusing Passage
 
@@ -571,7 +571,7 @@ They intertwine through a deliberate Accord at the completion of a generational 
 
 ## Scope Boundaries
 
-This document establishes the persistent relationship that makes an awakened Weapon Soul and its Bonded Soul a Soul Weapon partnership. It does not define what personality the Weapon Soul develops, which forms or capabilities a Soul Weapon may acquire, how evolution occurs, whether old vessel experiences become Weapon Echoes, how an unaccompanied awakened weapon gains Legacy Status under [Legacy Weapons](LEGACY_WEAPONS.md), the detailed Profiles defined by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), independent Weapon Manifestation, or unconventional bond structures.
+This document establishes the persistent relationship that makes an awakened Weapon Soul and its Bonded Soul a Soul Weapon partnership. It does not define what personality the Weapon Soul develops, which forms or capabilities a Soul Weapon may acquire, how evolution occurs, whether old vessel experiences become Weapon Echoes, how an unaccompanied awakened weapon gains Legacy Status under [Legacy Weapons](LEGACY_WEAPONS.md), the detailed Profiles defined by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the routes defined by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or unconventional bond structures.
 
 ## Related Canon
 
@@ -580,6 +580,7 @@ This document establishes the persistent relationship that makes an awakened Wea
 - [Awakening Conditions](AWAKENING_CONDITIONS.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
+- [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

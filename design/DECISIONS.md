@@ -2045,3 +2045,47 @@ No human, monster, species, anatomy, or weapon category is universally compatibl
 ## D-511 — Incompatibility Has No Generic Rejection Effect
 
 Incompatibility may block, destabilize, raise costs, or cause ordinary and source-defined consequences. It does not create automatic magical backlash, soul injury, corruption, evolution, awakening, compatibility progress, or hidden power without an established cause.
+
+## D-512 — Weapon Manifestation Is Routed External Expression
+
+A Weapon Manifestation is a bounded external expression produced by one awakened Weapon Soul through a valid Manifestation Route and Manifestation Anchor. Ordinary vessel presence, communication, Soul Space appearance, Weapon Echo recall, Soul Avatar Expression, Weapon Evolution, and Reincarnation passage remain separate claims.
+
+## D-513 — Manifestation Modes Are Non-Ranked
+
+Perceptual, Vessel, and Embodied Manifestations describe different functions rather than power ranks, maturity stages, or a mandatory progression sequence. Access to one mode does not imply another, and a Weapon Soul remains complete without any mode.
+
+## D-514 — Every Manifestation Requires Its Own Source and Boundaries
+
+A valid route must identify its Manifestation Source, Anchor, form, consent, relevant compatibility, capabilities, unavailable claims, onset, maintenance, range, duration, costs, vulnerabilities, termination, recovery, and consequences. Awakening, bond status, Resonance, Titles, history, crisis, or favourable compatibility cannot supply missing elements.
+
+## D-515 — Manifestation Appearance Grants No Implied Capability
+
+A Manifestation Form grants only what its source and route explicitly establish. Humanoid, monstrous, weapon-like, elemental, symbolic, or conceptual appearance does not provide anatomy, species membership, statistics, Skills, Class, Profession, authority, movement, interaction, or every affordance suggested by the image.
+
+## D-516 — One Weapon Soul Retains One Center of Physical Agency
+
+Standard manifestation cannot duplicate a Weapon Soul, its consciousness, its vessel, its capability history, or its weapon-owned physical actions. One physical manifestation may act only through established capacity, while a separate wielder remains responsible for actions performed through that wielder's own body and Skill.
+
+## D-517 — Passage Does Not Become Summoning or Duplication
+
+Reincarnation passage can preserve a Weapon Soul and effective bond without carrying ordinary matter or placing a vessel in the new body's possession. A Vessel Manifestation must state whether it translates, reconstitutes, temporarily expresses, or newly anchors a vessel, and it may never leave two complete originals carrying one Weapon Soul.
+
+## D-518 — Manifestation Consent Remains Active
+
+The Weapon Soul must consent to voluntary manifestation, and affected persons must consent to use of their body, Soul Space, bond, private senses, or property as an Anchor. Standing terms remain scoped and revocable; involuntary or hostile manifestation requires an explicit source, fair evidence, meaningful resistance, bounded effect, and proportionate protection against soul harm.
+
+## D-519 — Manifestation Access Is Reassessed Across Lives
+
+Persistence of the Weapon Soul, bond, and Soul Weapon Form does not preserve active expression. Each incarnation must reassess source access, Anchor, embodiment, environment, compatibility, consent, and learned coordination without treating the Soul Weapon as inventory.
+
+## D-520 — Manifestation Damage Claims Remain Separate
+
+Damage to a Manifestation Form, Weapon Vessel, Manifestation Source or Anchor, and Weapon Soul are separate claims. Dispersal or termination does not become vessel destruction, Bond Severance, Soul Wound, or Final Death without an explicit proportionate causal link.
+
+## D-521 — Manifestation Is Optional and Non-Farmable
+
+No viable Soul Weapon or character path requires manifestation. Repeated onset, public performance, danger, injury, dispersal, forced expression, worship, witnesses, or Reincarnations do not automatically grant, improve, broaden, or evolve a route.
+
+## D-522 — Manifestations Enter World Causality
+
+Manifestations can be witnessed, misunderstood, regulated, counterfeited, studied, interrupted, or used as evidence according to their actual sources and observers. Those reactions create ordinary world consequences without making the Weapon Soul an oracle, moral authority, plot solution, or immune companion.

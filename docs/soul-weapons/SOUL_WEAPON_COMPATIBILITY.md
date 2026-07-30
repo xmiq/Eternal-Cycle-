@@ -445,7 +445,7 @@ Weapon Evolution may change form-owned compatibility and create Compatibility Dr
 
 ### Weapon Manifestations
 
-Compatibility may later constrain whether and how a Weapon Manifestation can occur. A favourable Compatibility Profile does not itself summon, embody, move, or project the Weapon Soul.
+Every [Weapon Manifestation](WEAPON_MANIFESTATIONS.md) is a purpose-specific Compatibility Claim. A favourable Compatibility Profile may support a route under current conditions but does not itself summon, embody, move, or project the Weapon Soul.
 
 ### World Engine
 
@@ -561,7 +561,7 @@ It does not define:
 - Skill acquisition or Development;
 - Soul Intertwining procedure;
 - Soul Weapon Evolution routes;
-- Weapon Manifestation;
+- the source, route, and procedure for [Weapon Manifestations](WEAPON_MANIFESTATIONS.md);
 - unconventional vessel structures;
 - live compatibility records for a campaign.
 
@@ -573,6 +573,7 @@ It does not define:
 - [Weapon Evolution](WEAPON_EVOLUTION.md)
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
+- [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

@@ -136,7 +136,7 @@ Examples required and included in the canonical document:
 
 ### Soul Avatar Dependencies and Resolved Terminology
 
-- **Soul Avatar** is reserved for the whole-soul synthesis system. The highest Echo Presence is now **Delegate**, and the future Weapon Soul expression is a **Weapon Manifestation**. Unqualified **Avatar** is not a standalone mechanic.
+- **Soul Avatar** is reserved for the whole-soul synthesis system. The highest Echo Presence is **Delegate**, and an independently perceivable or embodied Weapon Soul expression is a **Weapon Manifestation**. Unqualified **Avatar** is not a standalone mechanic.
 - A [Soul Constellation](../docs/soul/SOUL_CONSTELLATIONS.md) is a relationship among distinct souls and is not an internal prerequisite. Canonical Soul Avatar emergence instead uses relevant historical synthesis and Continuity Concordance while keeping Echoes within one continuing soul.
 - [Retained Instincts](../docs/soul/RETAINED_INSTINCTS.md) now separates bodily instinct, retained instinct, Echo context, and synthesized Soul Avatar expression.
 - The [Akashic Archive](../docs/soul/AKASHIC_ARCHIVE.md) now bounds Soul Avatar access to Archive Records, historical verification, and world-scale memory.
@@ -510,7 +510,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Source Integration is the main risk for laundering rare materials, enchantments, Titles, or outside magic into generic permanent Soul power.
 - Concept-Bearing Reorganisation must remain narrow and explicit; evocative names are likely to invite unbounded metaphor claims.
 - Self-directed Weapon Soul change should preserve bodily autonomy while still producing honest bond, custody, logistical, and world consequences.
-- Later Manifestation rules must separate a persistent Soul Weapon Form from when and how that form can physically appear.
+- Weapon Manifestation rules must continue to separate a persistent Soul Weapon Form from when and how that form can physically appear.
 - Later Legacy Weapon rules must decide whether and how an unbound awakened Weapon Soul can evolve without importing the standard bond route by assumption.
 
 ## Phase 6 Weapon-Echo Watchlist
@@ -545,5 +545,17 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Accommodations should make unusual and disabled bodies genuinely playable while retaining their material support, maintenance, setup, and context.
 - Cross-species examples should continue beyond human weapon conventions without implying that every anatomy can express every weapon form.
 - Institutional compatibility tests need false positives, narrow truths, and political uses so they remain evidence rather than deterministic sorting devices.
-- Later Weapon Manifestation rules must require their own source and procedure; a favourable Compatibility Profile cannot become implicit summoning.
+- Weapon Manifestation routes must continue to require their own source and procedure; a favourable Compatibility Profile cannot become implicit summoning.
 - Later unconventional-form rules must reuse claim-specific layers while adapting embodiment and handling questions to distributed, living, composite, or body-grown vessels.
+
+## Phase 6 Weapon-Manifestation Watchlist
+
+- Manifestation Profiles should remain compact route records rather than universal character sheets, power lists, or inventory entries.
+- Perceptual, Vessel, and Embodied modes need playtest examples that keep function distinct without implying a stronger-mode ladder.
+- Vessel Manifestation needs close continuity auditing at Final Death and Reincarnation so translated, reconstituted, temporary, and world-bound vessels never produce duplicate originals.
+- Embodied Manifestation should make Weapon Soul personhood playable without becoming a free combat unit, compulsory companion, or second body for the Bonded Soul.
+- The one-center rule needs mixed-action playtests where another person wields the vessel while the Weapon Soul communicates or manifests.
+- Standing manifestation consent should support useful emergency signals and ordinary companionship without becoming permanent authorization for exposure, intrusion, or bodily anchoring.
+- Anchor vulnerabilities should be discoverable and consequential without making every route trivial to suppress or every disruption a threat of soul death.
+- Future Magic rules must preserve Manifestation Source ownership instead of laundering broad summoning, projection, or construct effects into the Soul Weapon system.
+- Unconventional Soul Weapon rules must explicitly decide when distributed or composite structures alter the standard one-center rule rather than treating multiplicity as free actions.

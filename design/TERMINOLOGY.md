@@ -706,7 +706,7 @@ A present crisis, responsibility, place, relationship, ritual, choice, or system
 
 ## Weapon Manifestation
 
-The term reserved for a future rule governing a Weapon Soul's independently perceivable or embodied expression. Awakening, intertwining, or internal appearance alone does not establish one.
+A bounded external expression through which one awakened Weapon Soul becomes independently perceivable, physically present, or temporarily embodied through a valid Manifestation Route and Manifestation Anchor. Awakening, intertwining, internal appearance, ordinary vessel presence, communication, Evolution, and Reincarnation passage alone do not establish one.
 
 ## Final Death
 
@@ -1935,3 +1935,39 @@ A specific adaptation, tool, technique, agreement, treatment, resource, environm
 ## Compatibility Drift
 
 A meaningful change in a Soul Weapon Compatibility Claim caused by a new body, injury, healing, Soul Weapon Evolution, practice, relationship change, source change, environmental change, World Reset, or other causal development.
+
+## Manifestation Mode
+
+The kind of external expression supported by a Manifestation Route: Perceptual, Vessel, or Embodied. Modes describe function rather than rank, power, maturity, or a mandatory sequence.
+
+## Perceptual Manifestation
+
+A Weapon Manifestation that creates an externally located presence perceptible to defined observers without granting mass, reach, manipulation, or physical action by default.
+
+## Vessel Manifestation
+
+A Weapon Manifestation that produces an externally physical expression of a Weapon Soul's current Soul Weapon Form through explicitly defined continuity, source, and anti-duplication rules.
+
+## Embodied Manifestation
+
+A Weapon Manifestation that creates a temporary external body or interactive presence through which a Weapon Soul may perceive, communicate, move, or manipulate only as its route explicitly allows.
+
+## Manifestation Route
+
+The causally supported method by which a particular Weapon Soul can produce one defined Manifestation Mode under stated sources, Anchors, access, consent, limits, costs, vulnerabilities, and termination conditions.
+
+## Manifestation Source
+
+The actual capability that produces and sustains a Manifestation Route. It remains owned by the Weapon Soul, Soul Weapon Form, bond structure, external effect, or other system that establishes it.
+
+## Manifestation Anchor
+
+The present person, Weapon Vessel, Soul Weapon Bond, object, place, structure, or source-defined focus that locates and stabilizes a Weapon Manifestation without establishing ownership or consent.
+
+## Manifestation Form
+
+The temporary sensory, physical, or embodied configuration produced by a Manifestation Route. It is distinct from the persistent Soul Weapon Form even when it resembles or expresses that form.
+
+## Manifestation Profile
+
+A qualitative campaign record of one established Manifestation Route and its current expression, including mode, source, Anchor, form, consent, capabilities, unavailable claims, compatibility, onset, range, duration, costs, vulnerabilities, termination, recovery, and consequences.

@@ -4,7 +4,7 @@
 
 This document defines how an established Soul Weapon may undergo a lasting qualitative change in its soul-bound form, vessel expression, owned capabilities, or cooperative relationship without becoming an equipment tier, Skill upgrade, Class feature, or monster Evolution.
 
-It does not define Weapon Echoes, Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define Weapon Echoes, Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the external-expression procedure owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or unconventional Soul Weapon categories.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Intertwining](SOUL_INTERTWINING.md), and [Weapon Personalities](WEAPON_PERSONALITIES.md) first.
 
@@ -108,7 +108,7 @@ One transition may involve several owners. Record each effect once. A ritual may
 | **Monster Evolution** | Reorganises a monster's species form and Species Potential, not the Soul Weapon. |
 | **Personality change** | Changes how the Weapon Soul interprets and chooses. Personality may matter to a route without itself changing form or capability. |
 | **Bond change** | Alters trust, boundaries, passage, or cooperation under Soul Intertwining. It is not an evolution rank. |
-| **Weapon Manifestation** | Later rules govern whether and how a Soul Weapon appears or acts independently. Evolution does not automatically grant manifestation. |
+| **Weapon Manifestation** | [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) governs whether and how a Soul Weapon appears or acts independently. Evolution does not automatically grant manifestation. |
 | **Renaming** | Changes a label, legend, translation, or self-description without a qualitative form change. |
 | **Temporary empowerment** | Provides a bounded effect through a spell, environment, title interaction, Avatar Expression, borrowed source, or crisis. It remains temporary unless a valid route integrates a stable result. |
 
@@ -502,7 +502,7 @@ A completed Soul Weapon Evolution persists with the Weapon Soul and established 
 Each new incarnation separately determines:
 
 - recognition and memory access;
-- whether the Soul Weapon can currently appear under later Manifestation rules;
+- whether the Soul Weapon can currently appear under [Weapon Manifestations](WEAPON_MANIFESTATIONS.md);
 - physical, sensory, magical, cultural, and legal compatibility;
 - usable Skills and Practised Reliability;
 - resources, maintenance, and source availability;
@@ -716,7 +716,7 @@ Choosing to stop preserves personhood and meaningful learning. The bow gains no 
 
 ## Scope Boundaries
 
-This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory, and [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) owns claim-specific compatibility. Physical manifestation and living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with later Phase 6 tasks.
+This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory, [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) owns claim-specific compatibility, and [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) owns temporary external expression. Living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with the final Phase 6 task.
 
 ## Related Canon
 
@@ -728,6 +728,7 @@ This document defines Soul Weapon Evolution for standard established Soul Weapon
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
+- [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

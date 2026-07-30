@@ -14,8 +14,9 @@ Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before th
 6. [Weapon Echoes](WEAPON_ECHOES.md) defines bounded first-person memory structures formed from reconciled Weapon Chapters, their access and sharing, and why they are neither past personalities nor stored capabilities.
 7. [Legacy Weapons](LEGACY_WEAPONS.md) defines world-bound historical continuity, bond-status separation, custody, stewardship, succession, scoped Legacy Accords, later relationships, and bounded self-directed Legacy Evolution.
 8. [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) defines claim-specific compatibility layers, qualitative findings, supports, drift, testing, cross-species interaction, and strict separation from consent, Skill, Resonance, and bond status.
+9. [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) defines Perceptual, Vessel, and Embodied expression through explicit sources and Anchors, including consent, action limits, Reincarnation access, failure, recovery, and anti-duplication safeguards.
 
-The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to Weapon Manifestations or unconventional forms does not grant those unfinished rules by implication.
+The remaining Phase 6 subject is implemented only when the [Roadmap](../../design/ROADMAP.md) marks its dedicated task complete. A reference to unconventional forms does not grant those unfinished rules by implication.
 
 ## Core Ownership
 
