@@ -1485,3 +1485,43 @@ Wages, fees, patronage, exchange, household obligation, communal service, temple
 ## D-371 — Profession Formation Requires Reproducible Work and Accountability
 
 A novel field becomes a Profession when recurring need produces integrated work, differentiated judgment, standards, responsibility, transmission, material support, and social continuity. One invention, crisis, title, or combined job name does not establish a new Profession.
+
+## D-372 — Martial Traditions Are Class Frameworks, Not Combat Packages
+
+A Martial Tradition socially organizes doctrine, curriculum, practice, interpretation, and recognition around conflict, protection, force, or resistance. It references bodily, Skill, equipment, magical, social, species, and Soul facts without granting their effects.
+
+## D-373 — Martial Tradition Validity Requires Conflict-Specific Social Practice
+
+A proposed Martial Tradition must establish a conflict domain, doctrine, transmission, Training Ecology, embodiment assumptions, meaningful opposition, ethics or authority context, and social continuity. One Technique, weapon preference, fighter, unit, battle record, title, or spell is insufficient.
+
+## D-374 — Training Ecology Owns the Conditions of Martial Learning
+
+Martial learning depends on a causal network of teachers, partners, spaces, tools, exercises, resistance, feedback, safety, recovery, and culture. Forms, sparring, scenarios, and field practice each teach bounded things and cannot individually prove complete combat reliability.
+
+## D-375 — Pressure Is a Learning Condition, Not Development Currency
+
+Pressure Practice may introduce proportionate resistance, uncertainty, consequence, or stress for a defined learning purpose. Terror, humiliation, forced killing, preventable trauma, injury, battle count, and survival do not create superior learning or automatic Development through intensity alone.
+
+## D-376 — Martial Doctrine Guides Without Controlling Agency
+
+Doctrine and Use-of-Force Standards provide shared models, expectations, and review structures. They do not determine loyalty, courage, ethics, obedience, fear, willingness to kill, or current choices without independently valid causal effects.
+
+## D-377 — Martial Rank Is Scoped Recognition
+
+Tradition grades, tournament records, military ranks, titles, teaching permissions, and service histories must state what audience and evidence they represent. None establishes a universal combat tier, office, authority, or mastery.
+
+## D-378 — Martial Effectiveness Is Matchup-Based
+
+Combat and protective effectiveness are assessed for a stated objective across information, preparation, initiative, environment, embodiment, condition, equipment, Skills, allies, opposition, dependencies, and consequences. No tradition, weapon, build, or rank is universally optimal.
+
+## D-379 — Martial Translation Requires Current Embodiment
+
+Moving a Martial Tradition across bodies or species may require different geometry, tools, senses, conditioning, safety, team roles, Techniques, and curricula. Affiliation and prior-life history cannot grant anatomy, Species Traits, calibration, or the other progression tree.
+
+## D-380 — Group Martial Capability Belongs to Actual Coordination
+
+Formations and teams derive capability from members, shared doctrine, practised roles, communication, trust, leadership, equipment, logistics, information, condition, terrain, and objectives. A leader, uniform, formation name, or tradition label supplies no member-wide aura or automatic bonus.
+
+## D-381 — Martial Reincarnation Preserves History, Not Readiness
+
+Reincarnation may preserve relevant Skill history, Stat XP, judgment, Soul Imprints, and memories. The current incarnation must rebuild bodily capacity, calibration, tool handling, timing, reliability, present-world knowledge, relationships, affiliation, and authority.

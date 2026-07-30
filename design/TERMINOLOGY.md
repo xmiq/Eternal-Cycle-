@@ -1523,3 +1523,27 @@ The social, legal, sacred, institutional, contractual, or territorial scope with
 ## Professional Accountability
 
 The duty to answer for professional decisions, process, disclosure, foreseeable risk, records, and consequences under a stated responsibility and review structure.
+
+## Martial Tradition
+
+A socially sustained Human Class framework that organizes doctrine, training, interpretation, practice, and recognition around conflict, protection, force, or resistance under particular embodied and world conditions.
+
+## Martial Doctrine
+
+A Martial Tradition's shared model for interpreting conflict and choosing among perception, initiative, positioning, action, restraint, coordination, withdrawal, and consequence. It guides practice without becoming objective truth or mind control.
+
+## Training Ecology
+
+The network of people, places, tools, constraints, exercises, opposition, feedback, safety, recovery, and culture that makes a body of learning possible. In a Martial Tradition it includes the conditions needed to develop and test conflict-related capability.
+
+## Pressure Practice
+
+Controlled or supervised practice that introduces meaningful resistance, uncertainty, consequence, or physiological and social stress for a defined learning purpose while preserving proportionate safety, feedback, recovery, and agency.
+
+## Use-of-Force Standard
+
+A scoped tradition, professional, legal, sacred, or institutional standard for interpreting escalation, restraint, protection, surrender, and accountability in a defined context. It is fallible and does not compel action or excuse conduct automatically.
+
+## Martial Tradition Profile
+
+A Class Profile extended with conflict domain, social purpose, Martial Doctrine, operational contexts, embodiment assumptions, arsenal, capability references, Training Ecology, Pressure Practice, Use-of-Force Standard, group model, recognition, failure review, counters, and current variants.

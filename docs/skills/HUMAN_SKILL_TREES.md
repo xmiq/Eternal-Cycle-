@@ -178,7 +178,7 @@ A licensed physician may lack one specialist surgical Skill. An unlicensed field
 
 Martial traditions may connect weapon handling, movement, perception, tactics, maintenance, group coordination, and ethical or social practices. Membership does not grant every technique, and one tradition does not own all uses of a weapon.
 
-Detailed martial schools, curricula, and social advancement remain Phase 5 content.
+The social framework, doctrine, curricula, Pressure Practice, and recognition of those traditions are defined in [Martial Traditions](../human/MARTIAL_TRADITIONS.md). This document continues to own the learned capabilities they reference.
 
 ### Magical Traditions
 

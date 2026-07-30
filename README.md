@@ -51,4 +51,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, and Monster Evolution phase are complete. The current phase is **Phase 5 — Human Classes & Professions**, and the sole active task is **Define martial traditions**.
+The repository foundation, Soul Engine, Development System, Skill Engine, and Monster Evolution phase are complete. The current phase is **Phase 5 — Human Classes & Professions**, and the sole active task is **Define magical schools**.

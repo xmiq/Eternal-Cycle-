@@ -52,6 +52,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Human Class Philosophy](human/HUMAN_CLASS_PHILOSOPHY.md) - classes as culturally situated frameworks for organizing and transmitting expertise without granting capability bundles.
 - [Human Classes](human/CLASSES.md) - Class Profiles, curricula, affiliations, local ranks, variants, equivalence, access, and adjudication.
 - [Professions](human/PROFESSIONS.md) - social fields of work, roles, standards, service relationships, jurisdiction, accountability, formation, and adjudication.
+- [Martial Traditions](human/MARTIAL_TRADITIONS.md) - doctrine, Training Ecology, Pressure Practice, use of force, equipment relationships, matchups, counterplay, and adjudication.
 
 ## World Engine
 

@@ -386,3 +386,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Accountability should preserve uncertainty and divided responsibility while still allowing negligence, corruption, concealment, and institutional failure to have consequences.
 - Specializations and hybrid Professions need the Profession Validity Test so every task combination does not inflate into a new field.
 - Coercive work structures should remain causally real and contestable without being normalized as capability, legitimacy, or character identity.
+
+## Phase 5 Martial-Tradition Watchlist
+
+- Martial Tradition Profiles must remain doctrine and learning records rather than move lists, combat classes, equipment catalogs, or disguised character builds.
+- Pressure Practice needs playtest attention so meaningful resistance and uncertainty remain available without making abuse, trauma, or injury the efficient path.
+- Use-of-Force Standards should produce real ethical and institutional consequences while preserving disagreement and player agency.
+- Matchup adjudication must stay readable at the table; context should explain outcomes without becoming an unbounded checklist or hidden power score.
+- Soul Weapons and Martial Traditions are both socially vivid and therefore prone to ownership collapse; training with a Weapon Soul must preserve its personhood and separate capabilities.
+- Cross-species curricula should require genuine translation and accommodation without treating human anatomy as the norm or social affiliation as tree access.
