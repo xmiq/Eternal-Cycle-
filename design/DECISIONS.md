@@ -901,3 +901,35 @@ A completed Skill Evolution may contribute to a Skill Imprint and future relearn
 ## D-225 — Skill Evolution Cannot Disguise Another System
 
 Evolution owns only the qualitative transformation of one established learned capability. Claims that depend on independently developed Skills, changed anatomy, biological Evolution, magic, tools, institutions, relationships, Soul effects, or other systems retain those owners and prerequisites.
+
+## D-226 — Skill Fusion Requires a Distinct Integrated Competency
+
+Possessing or simultaneously using several Skills does not create a fusion. Skill Fusion requires established components, meaningful overlap or complement, repeated integrated use, conceptual synthesis, practical coherence, compatible embodiment, stable ownership, distinct utility, variation, Practised Reliability, and explicit dependencies.
+
+## D-227 — The Smallest Truthful Integrated Form Governs
+
+Coordination, combination, Synergy, Composite Skill, Hybrid Technique, Fusion Candidate, and completed Skill Fusion remain distinct representations. A claim uses the smallest form that truthfully records its developed capability and does not gain permanence from an impressive name.
+
+## D-228 — Component Skills Retain Identity and Requirements
+
+A fusion owns only its new integrated competency. Component Skills retain their histories, requirements, independent uses, Development, and failure states, while their current relationship to the fusion is recorded explicitly.
+
+## D-229 — Fusion Does Not Duplicate Causal Benefits
+
+One contribution is credited once to its Owning System. A fusion and its components cannot each claim the same output as separate benefits, and tools, allies, magic, institutions, species traits, and Soul effects remain dependencies rather than absorbed personal effects.
+
+## D-230 — Failed Fusion Grants No Consolation Skill
+
+Incompatible timing, contradictory principles, cognitive load, unsuitable anatomy, unstable magic, missing tools or partners, and insufficient integration may leave a useful combination, Hybrid Technique, Composite Skill, or lesson. They do not automatically produce a permanent substitute Skill.
+
+## D-231 — Fusion Has No Combinatorial Entitlement
+
+No being is entitled to a fusion for every pair or set of Skills. Fusion cannot bypass specialisation costs, component prerequisites, practice allocation, embodiment, or ordinary limits by recording all possible combinations.
+
+## D-232 — Fusion Persistence Does Not Merge Imprints
+
+A completed fusion may form its own Skill Imprint with Component Skill provenance. Reincarnation preserves developmental history without merging component Imprints, restoring missing components, or waiving current reintegration and reliability.
+
+## D-233 — Collective Fusion Requires Explicit Ownership
+
+A group or distributed fusion belongs only to an identified stable group, role structure, institution, network, or other valid collective developed through shared practice. It preserves participant agency and does not grant the whole capability to a leader or every member.

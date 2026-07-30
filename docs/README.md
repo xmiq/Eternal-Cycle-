@@ -22,6 +22,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Reincarnation Skill Crossover](skills/REINCARNATION_SKILL_CROSSOVER.md) - bounded recovery and translation of retained Skill history through valid present-life receiving routes.
 - [Adaptive Skills](skills/ADAPTIVE_SKILLS.md) - emergence of stable novel capabilities through recurring need, variation, feedback, adjustment, and integration.
 - [Skill Evolution](skills/SKILL_EVOLUTION.md) - qualitative transformation of established Skills through integrated change, bounded patterns, and explicit tradeoffs.
+- [Skill Fusion](skills/SKILL_FUSION.md) - formation of a distinct competency through sustained integration of established Component Skills.
 
 ## World Engine
 

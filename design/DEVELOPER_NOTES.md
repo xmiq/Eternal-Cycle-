@@ -244,3 +244,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Evolution tradeoffs should produce real choices; an allegedly narrow form that is superior in every context is misdescribed or under-costed.
 - Conceptual elevation remains a route marker until Conceptual Skills are defined, and internalisation remains bounded until active and passive modes are defined.
 - Phase 4 must keep Skill Evolution distinct from species Evolution even when each changes the other's available expression routes.
+
+## Phase 3 Skill-Fusion Watchlist
+
+- Playtests should record how often a proposed fusion is better represented as a combination, Hybrid Technique, or Composite Skill; frequent borderline cases may need sharper examples.
+- Component maps must remain useful without turning recordkeeping into an inventory of every motion shared between Skills.
+- A fused result should expose at least one practical dependency, bottleneck, or tradeoff so integration does not become a free multiplier.
+- Cross-life fusion is a likely snowballing pressure: retained Fusion Evidence must accelerate reintegration without making missing Component Skills fictional.
+- Group fusions need special attention to consent, membership changes, and ownership so leaders do not absorb collective capability.

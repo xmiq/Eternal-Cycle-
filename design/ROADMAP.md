@@ -4,9 +4,9 @@
 
 **Current phase: Phase 3 — Skill Engine**
 
-**Current task: Define skill fusion**
+**Current task: Define active and passive skills**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin active and passive skills or another later Phase 3 task until skill fusion is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin hidden skills or another later Phase 3 task until active and passive skills are complete unless the project owner explicitly changes the target.
 
 Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -90,7 +90,7 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 - [x] Define crossover through Reincarnation
 - [x] Define adaptive skill creation
 - [x] Define skill evolution
-- [ ] Define skill fusion
+- [x] Define skill fusion
 - [ ] Define active and passive skills
 - [ ] Define hidden skills
 - [ ] Define conceptual skills

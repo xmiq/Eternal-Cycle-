@@ -578,6 +578,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
 - [Skill Evolution](../skills/SKILL_EVOLUTION.md)
+- [Skill Fusion](../skills/SKILL_FUSION.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

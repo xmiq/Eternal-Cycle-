@@ -204,6 +204,30 @@ Observable support that a qualitative Skill change has become integrated capabil
 
 A coordinated capability that depends on several developed Skills or Tracks while retaining a distinct purpose and practice. Its components remain separate capabilities.
 
+## Skill Fusion
+
+A bounded learned competency formed from two or more genuinely integrated Component Skills. It has a distinct purpose, method, evidence, requirements, and failure behavior beyond merely using the components together.
+
+## Component Skill
+
+An established Skill whose developed capability materially contributes to a proposed or completed Skill Fusion while retaining its own identity, history, requirements, and Development.
+
+## Fusion Candidate
+
+A recurring integrated method that may become a Skill Fusion but has not yet demonstrated enough conceptual synthesis, practical coherence, distinct utility, stable ownership, or Practised Reliability.
+
+## Fusion Evidence
+
+Observable support that component coordination has become one coherent capability, including integrated problem recognition, shared timing, conceptual synthesis, correction across component boundaries, distinct utility, and response to meaningful variation.
+
+## Hybrid Technique
+
+A specific execution pattern combining methods from multiple Skills. It may remain one method, support a Composite Skill, or provide Fusion Evidence without becoming a Skill Fusion.
+
+## False Fusion
+
+A result described as Skill Fusion even though temporary circumstances, simple sequencing, External Support, one dominant Skill, equipment, or an unintegrated combination better explains it.
+
 ## Foundational Skill
 
 A capability that supplies methods, perception, control, or judgment required by one or more later Skills.
