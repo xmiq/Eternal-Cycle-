@@ -1471,3 +1471,15 @@ The merger or reclassification of duplicate or needlessly separate Evolution Rou
 ## Evolution Safeguard Audit
 
 The ordered review used to test an Evolution Claim for ownership, provenance, current embodiment, meaningful evidence, transition integrity, distinct result, consequence, agency, duplication, and repeatability abuse.
+
+## Human Class
+
+A culturally situated framework through which a society organizes, teaches, interprets, and recognizes a path of expertise. It is not a Skill, capability bundle, Profession, institution, office, universal level, or Soul identity.
+
+## Class Affiliation
+
+A person's scoped relationship to a Human Class, such as study, lineage, practice, recognition, teaching, outsider classification, or self-identification. Affiliation does not by itself establish capability, membership rights, authority, or exclusive identity.
+
+## Class Recognition
+
+Acknowledgment by a named audience that a person has a particular relationship to a Human Class. It may affect access, expectations, opportunities, and obligations within that audience but is not universal proof of capability or authority.

@@ -4,9 +4,9 @@
 
 **Current phase: Phase 5 — Human Classes & Professions**
 
-**Current task: Define human class philosophy**
+**Current task: Define classes**
 
-Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define human class philosophy** unless the project owner explicitly changes the target.
+Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define classes** unless the project owner explicitly changes the target. Complete the remaining Phase 5 tasks in roadmap order and do not begin Phase 6 until the Phase 5 audit and exit criteria are complete.
 
 Phases 1 through 4 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -127,7 +127,7 @@ Phase 4 is complete only when ecology causally drives possible evolution; specie
 
 ## Phase 5 — Human Classes & Professions
 
-- [ ] Define human class philosophy
+- [x] Define human class philosophy
 - [ ] Define classes
 - [ ] Define professions
 - [ ] Define martial traditions

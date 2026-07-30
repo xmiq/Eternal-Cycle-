@@ -364,3 +364,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - The phase-wide safeguard audit rejects grinding, duplicate forms, mandatory chains, embodiment bypass, Soul bypass, and false population success while preserving earned synergy.
 - Stale task-number references were replaced with canonical links. No blocking question or repository-boundary violation remains.
 - Phase 5 should preserve the distinction between bodily Evolution and human Classes or Professions, especially where institutions recognize capabilities that embodiment does not grant.
+
+## Phase 5 Human-Class Watchlist
+
+- Human Classes must remain socially situated learning frameworks rather than capability bundles, universal archetypes, or concealed character levels.
+- Class, Profession, institution, credential, office, reputation, personal identity, and Skill ownership are adjacent but distinct facts; examples should keep their causal links visible without merging them.
+- Cultural variation should produce meaningful teaching, interpretation, and recognition differences without duplicating the same underlying capability under several labels.
+- Multiple Class Affiliations need practical limits from time, access, embodiment, obligations, and current-life practice rather than metaphysical class slots or arbitrary lockouts.
+- Reincarnated practitioners should benefit from retained history while still rebuilding present expression and negotiating changed institutions, bodies, and cultural meanings.
+- Mixed-society examples should respect monster-native traditions and avoid treating Human Classes as the universal or superior model of organized expertise.

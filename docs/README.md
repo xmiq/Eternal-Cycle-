@@ -46,6 +46,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Soul Interaction with Evolution](monster-evolution/SOUL_INTERACTIONS.md) - how established Soul systems support Evolution without granting bodies, routes, Skills, or Development.
 - [Monster Evolution Safeguards](monster-evolution/EVOLUTION_SAFEGUARDS.md) - consolidated exploit resistance, form distinction, route cleanup, and phase-wide Evolution claim audit.
 
+## Human Classes and Professions
+
+- [Human Rules Index](human/README.md) - canonical reading order and ownership boundaries for Human Classes, Professions, traditions, schools, advancement, and institutions.
+- [Human Class Philosophy](human/HUMAN_CLASS_PHILOSOPHY.md) - classes as culturally situated frameworks for organizing and transmitting expertise without granting capability bundles.
+
 ## World Engine
 
 - [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.

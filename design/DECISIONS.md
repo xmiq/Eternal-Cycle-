@@ -1401,3 +1401,23 @@ One successful transition does not automatically become heritable, redefine a sp
 ## D-350 — Safeguards Reject Unearned Scope, Not Earned Synergy
 
 An unusual or highly effective Evolution remains valid when ownership, provenance, embodiment, transition, distinct result, costs, ecology, agency, and consequences all hold. Safeguards must not add unrelated punishment merely because creative play exceeded expectation.
+
+## D-351 — Human Classes Are Social Frameworks, Not Capability Packages
+
+A Human Class is a culturally situated framework through which a society organizes, teaches, interprets, and recognizes a path of expertise. It never grants Skills, Development, mastery, authority, or a universal power rank merely through admission, naming, promotion, or affiliation.
+
+## D-352 — Class, Profession, Institution, and Capability Remain Distinct
+
+Skills own capability, Development owns capability change and reliability, Human Classes own socially organized learning frameworks, Professions own integrated work and responsibility, and institutions own organized people, resources, procedures, and access. Interaction among these facts does not transfer ownership.
+
+## D-353 — Class Recognition Is Scoped Evidence
+
+Recognition by a class, peer group, culture, or institution may create access, expectations, opportunities, or obligations within its actual audience. It is not universal proof of capability, identity, office, legitimacy, or authority.
+
+## D-354 — Class Affiliation Is Contextual and Nonexclusive
+
+A person may participate in several class frameworks or in none. Affiliation must identify the relevant relationship, such as study, lineage, practice, recognition, teaching, or self-identification, and overlapping affiliations never duplicate underlying capability.
+
+## D-355 — Reincarnation Preserves No Class Standing
+
+Reincarnation may preserve relevant Soul Imprints, retained Development, and Skill history, but former membership, rank, credentials, authority, reputation, access, and cultural meaning remain world-bound. A new incarnation must rebuild embodied capability and establish any current class relationship through present-life causality.

@@ -31,6 +31,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
 - [`docs/monster-evolution/README.md`](docs/monster-evolution/README.md) - Monster Evolution reading order, adjudication sequence, ownership map, and safeguards.
+- [`docs/human/README.md`](docs/human/README.md) - Human Class and Profession philosophy, rules, reading order, and ownership boundaries.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -50,4 +51,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, and Monster Evolution phase are complete. The current phase is **Phase 5 — Human Classes & Professions**, and the sole active task is **Define human class philosophy**.
+The repository foundation, Soul Engine, Development System, Skill Engine, and Monster Evolution phase are complete. The current phase is **Phase 5 — Human Classes & Professions**, and the sole active task is **Define classes**.
