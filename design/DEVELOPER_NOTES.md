@@ -354,3 +354,13 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Representation Cleanup must preserve decisions made under prior classifications rather than rewriting history for tidiness.
 - The audit should remain usable at the table; future playtests should flag steps that create bookkeeping without changing rulings.
 - Strong earned combinations should survive the audit without receiving unrelated penalties merely for being effective.
+
+## Phase 4 Integration Audit
+
+- All fourteen Monster Evolution rule documents are indexed in canonical reading order with an Evolution Claim resolution sequence and explicit ownership map.
+- Ecology establishes causal conditions; pressure establishes relevance and Response Evidence; Monster Evolution alone owns whole-form transition and resulting embodiment.
+- Skills, Development, Soul systems, Mutation, Hybridization, society, and world ecology retain their own effects without duplicating Evolution.
+- Stages, branches, hidden conditions, apex outcomes, extinction, and recovery remain contextual and causally linked rather than universal ladders or rewards.
+- The phase-wide safeguard audit rejects grinding, duplicate forms, mandatory chains, embodiment bypass, Soul bypass, and false population success while preserving earned synergy.
+- Stale task-number references were replaced with canonical links. No blocking question or repository-boundary violation remains.
+- Phase 5 should preserve the distinction between bodily Evolution and human Classes or Professions, especially where institutions recognize capabilities that embodiment does not grant.

@@ -336,7 +336,7 @@ Distinguish local disappearance from global extinction. Absence from one place d
 
 Extinction is not caused solely by losing battles. A personally formidable species may collapse through low reproduction, narrow habitat, disease, loss of mutualists, or inability to migrate. A physically weak species may persist through dispersal, care, infrastructure, or broad tolerance.
 
-Task 7 defines extinction, replacement, collapse, invasive species, and recovery in full. This section establishes only the ecological pressure leading toward those outcomes.
+[Extinction and Replacement](EXTINCTION_AND_REPLACEMENT.md) defines extinction, replacement, collapse, invasive populations, and recovery in full. This section establishes only the ecological pressure leading toward those outcomes.
 
 ## How Ecology Drives Future Evolution
 
@@ -432,7 +432,7 @@ This document does not define:
 - extinction, replacement, invasive-species, or recovery procedures;
 - any campaign's current ecology.
 
-Later Phase 4 documents may use these ecological foundations without treating a reference as completed implementation.
+The other Monster Evolution rules may use these ecological foundations without treating a reference as completed implementation.
 
 ## Related Documents
 

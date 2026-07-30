@@ -132,7 +132,7 @@ Pressure supports route relevance only when:
 - gains, losses, dependencies, and consequences are specified;
 - non-evolutionary answers remain visible where they are viable.
 
-Route relevance is not route completion. Later rules own transition and outcome.
+Route relevance is not route completion. [Monster Evolution](MONSTER_EVOLUTION.md) owns transition and outcome.
 
 ## Describing Pressure
 
@@ -257,7 +257,7 @@ Use the smallest system that explains the change.
 
 A response is not Evolution merely because it is useful, dramatic, permanent, inherited, magical, or visible. Genuine Evolution changes the current form's organized Species Potential through a defined transition and creates new embodiment, needs, limits, and consequences.
 
-Temporary or current-form adaptation remains meaningful. It can save lives, reshape ecology, create Response Evidence, delay Evolution, or make a later branch unnecessary. Task 5 defines Monster Adaptation in full.
+Temporary or current-form adaptation remains meaningful. It can save lives, reshape ecology, create Response Evidence, delay Evolution, or make a later branch unnecessary. [Monster Adaptation](MONSTER_ADAPTATION.md) defines these responses in full.
 
 ## Pressure Does Not Prescribe Evolution
 
@@ -272,7 +272,7 @@ The same pressure can produce:
 - **an evolutionary trap:** an earlier useful response becomes harmful after conditions change;
 - **decline or extinction:** no available response succeeds in time.
 
-Task 3 defines these outcomes. At the pressure stage, preserve uncertainty and multiple plausible answers.
+[Monster Evolution](MONSTER_EVOLUTION.md), [Branching Evolution](BRANCHING_EVOLUTION.md), and [Extinction and Replacement](EXTINCTION_AND_REPLACEMENT.md) define these outcomes. At the pressure stage, preserve uncertainty and multiple plausible answers.
 
 ## Choice, Agency, and Meaningful Pressure
 
@@ -364,7 +364,7 @@ This document does not define:
 - live exposure histories, populations, disasters, or world state;
 - Soul permissions beyond the boundaries already established by the Soul Engine.
 
-Later Phase 4 documents use pressure as causal context. They must not treat a reference to pressure as proof that Evolution occurred.
+The other Monster Evolution rules use pressure as causal context. They must not treat a reference to pressure as proof that Evolution occurred.
 
 ## Related Documents
 

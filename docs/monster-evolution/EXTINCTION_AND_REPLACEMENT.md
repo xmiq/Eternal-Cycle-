@@ -359,7 +359,7 @@ Extinction and replacement can alter:
 - which bodies can be born, built, sustained, or offered through Reincarnation;
 - later replacement, invasion, collapse, and recovery trajectories.
 
-Time skips preserve these consequences and advance their causal chains at appropriate resolution. A World Reset may transform laws, geography, or available origins according to its own future rules; it does not silently reverse extinction. If a later Age contains a similar species, establish whether it is a surviving lineage, recreated form, convergent analogue, new origin, or genuinely restored lineage.
+Time skips preserve these consequences and advance their causal chains at appropriate resolution. A World Reset may transform laws, geography, or available origins under the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md); it does not silently reverse extinction. If a later Age contains a similar species, establish whether it is a surviving lineage, recreated form, convergent analogue, new origin, or genuinely restored lineage.
 
 ## GM Procedure
 

@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 4 — Monster Evolution**
+**Current phase: Phase 5 — Human Classes & Professions**
 
-**Current task: Audit and complete Phase 4 Monster Evolution**
+**Current task: Define human class philosophy**
 
-The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin Phase 5 until the final Phase 4 integration audit is complete.
+Phase 4 is complete and reviewed. Codex must not reopen it unless Phase 5 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define human class philosophy** unless the project owner explicitly changes the target.
 
-Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 4 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -119,14 +119,15 @@ Phase 3 is complete only when all ten Skill Engine rule documents are defined, l
 - [x] Integrate Retained Instincts with monster evolution within the Soul interaction checkpoint
 - [x] Define monster evolution safeguards
 - [x] Create evolution-tree template
-- [ ] Audit and complete Phase 4 Monster Evolution
+- [x] Audit and complete Phase 4 Monster Evolution
 
 ### Exit Criteria
 
 Phase 4 is complete only when ecology causally drives possible evolution; species stages, branches, hidden conditions, mutations, apex outcomes, adaptation, hybridization, extinction, Soul interactions, and intelligent societies are playable and linked; Skill and Soul ownership remain intact; embodiment and current-life consequence matter; no universal level, kill count, rarity ladder, mandatory tree, or universally optimal species exists; no blocking questions remain; and all links validate.
 
-## Phase 5 — Human Development
+## Phase 5 — Human Classes & Professions
 
+- [ ] Define human class philosophy
 - [ ] Define classes
 - [ ] Define professions
 - [ ] Define martial traditions
