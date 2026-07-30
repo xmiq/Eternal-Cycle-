@@ -44,6 +44,11 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Local caster ranks, spell circles, reserve measures, and threat labels must state what they measure and cannot become an overall character or magic level.
 - Cross-Age magical relearning should reward retained understanding while allowing changed laws to invalidate old formulas, tools, permissions, and environmental assumptions.
 - External Empowerment must remain visibly dependent on its source so artifacts, patrons, contracts, prepared sites, and groups do not become silent permanent statistics.
+- Phase 5 owns detailed social advancement, human institutions, classes, schools, and authority structures; Phase 2 defines the shared capability and agency boundaries only.
+- Later relationship or reputation procedures must preserve audience, identity, history, uncertainty, and consent rather than turning interaction into one meter.
+- Group-effect rules should expose the leader's actual contribution and the members' independent capabilities so leadership does not become a personal multiplier detached from people.
+- Monster social systems should use species-appropriate communication and institutions without assuming either universal dominance hierarchies or human norms.
+- Contested magical control, propaganda systems, law, government, faction simulation, and institutional enforcement remain with their later Owning Systems.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

@@ -288,6 +288,58 @@ Understanding of a ritual's symbols, roles, materials, timing, conditions, risks
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.
 
+## Social Development
+
+Earned growth in communication, interpretation, cultural navigation, relationship practice, and social judgment through meaningful interaction, feedback, reflection, and consequence.
+
+## Leadership Development
+
+Earned growth in coordinating people, information, resources, decisions, responsibility, and adaptation toward a shared or imposed objective under stated conditions.
+
+## Social Imprint
+
+A Soul Imprint preserving legitimately earned social or leadership familiarity, principles, and judgment without preserving current relationships, reputation, office, legitimacy, language access, or consent.
+
+## Relationship Strength
+
+The current resilience, significance, and practical influence of a specific relationship as built through its participants' history, choices, expectations, trust, conflict, repair, and present circumstances.
+
+## Public Reputation
+
+The distributed beliefs, stories, expectations, and judgments attached to a known identity, group, role, or deed within a particular audience.
+
+## Formal Authority
+
+Permission assigned by a current law, institution, office, contract, hierarchy, or recognized procedure to make defined decisions or issue defined commands.
+
+## Cultural Legitimacy
+
+The degree to which a particular community regards a person, role, process, or decision as properly entitled to be heard, followed, represented, or obeyed under its values and customs.
+
+## Trust
+
+A person's or group's present willingness to accept vulnerability or rely on another within a stated domain and expectation.
+
+## Loyalty
+
+A continuing commitment to support a person, group, principle, place, or institution despite some cost. Loyalty remains chosen, contextual, and capable of conflict or withdrawal.
+
+## Fear
+
+An expectation of danger, loss, punishment, or overwhelming consequence. Fear may alter behavior without creating trust, legitimacy, agreement, or durable cooperation.
+
+## Coercion
+
+Pressure that narrows another person's meaningful options through threatened harm, deprivation, punishment, or comparable force. Coercion may secure compliance without consent or loyalty.
+
+## Institutional Knowledge
+
+Understanding of how a particular institution actually processes information, allocates authority, uses procedure, preserves memory, rewards behavior, and fails in practice.
+
+## Coalition
+
+A cooperative arrangement among distinct parties pursuing overlapping objectives while retaining separate identities, interests, authority, and exit conditions.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.

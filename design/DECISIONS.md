@@ -545,3 +545,35 @@ Overload, corruption, suppression, Channel damage, hostile magic, and resource e
 ## D-136 — Magic Does Not Subsume Other Development Tracks
 
 Magical effects may support, alter, or compensate for physical, skill, profession, social, or species capability while retaining magical costs and dependencies. They do not convert Magical Development into those Tracks or replace their current-life requirements.
+
+## D-137 — Social Capability Does Not Collapse Into Charisma
+
+Personal Skill, Relationship Strength, Public Reputation, Formal Authority, Cultural Legitimacy, Symbolic Authority, Trust, Loyalty, fear, and coercion are distinct. No one quality can be inferred from another or combined into a universal social score.
+
+## D-138 — Social Influence Preserves Agency
+
+Communication, empathy, deception, negotiation, persuasion, intimidation, leadership, reputation, and symbolic pressure may alter information, incentives, expectations, emotions, and choices through ordinary causality. They do not select another person's deliberate action or become mind control without a separate explicit contested system.
+
+## D-139 — Leadership Is Contextual and Relational
+
+Leadership Development is demonstrated in coordinating particular people, information, resources, decisions, and adaptation toward stated objectives. Rank, charisma, personal power, follower count, fear, divine claim, or one successful crisis does not establish universal leadership competence.
+
+## D-140 — Group Capability Remains Distributed
+
+A group's effectiveness may exceed any member's personal capability through specialization, coordination, resources, and shared action. A leader does not absorb followers' Skills, actions, authority, or Development, and each participant receives credit only for its own integrated contribution.
+
+## D-141 — Social Persistence Preserves Learning, Not Claims
+
+Social Imprints may preserve communication, cultural-learning, negotiation, teaching, governance, and leadership familiarity. Reincarnation does not restore current relationships, Trust, Loyalty, consent, Public Reputation, Formal Authority, Cultural Legitimacy, subjects, followers, office, institutions, or networks.
+
+## D-142 — Cross-Cultural Capability Requires Current Calibration
+
+Retained social expertise supplies hypotheses and learning advantages rather than universal knowledge of minds or cultures. Differences in species, senses, language, custom, institutions, history, power, and moral assumptions require present inquiry, feedback, and adaptation.
+
+## D-143 — Authority and Legitimacy Remain Scoped
+
+Formal Authority, Cultural Legitimacy, Magical Authority, and Symbolic Authority arise through different systems and audiences. None automatically grants the others, moral correctness, universal jurisdiction, competence, consent, or guaranteed obedience.
+
+## D-144 — Compliance Is Not Trust or Loyalty
+
+Fear, coercion, payment, hierarchy, persuasion, agreement, Trust, and Loyalty may each influence behavior through different causes and consequences. Immediate compliance cannot be recorded automatically as consent, durable relationship, legitimacy, or leadership mastery.

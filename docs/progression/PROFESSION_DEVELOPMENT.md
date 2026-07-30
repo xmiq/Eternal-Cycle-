@@ -429,7 +429,7 @@ Professional Development may follow honest review and changed practice. Repeatin
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns the individual learned capabilities used within professional practice.
 - **[Physical Development](PHYSICAL_DEVELOPMENT.md):** owns bodily capacity, condition, calibration, and accommodations required by work.
 - **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns magical sensitivity, control, reserves, affinity, and metaphysical access used by magical professions.
-- **Social and Leadership Development:** will own communication, coordination, trust, command, governance, and other relational capabilities used in institutions.
+- **[Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md):** owns communication, coordination, Trust, command, governance, and other relational capabilities used in institutions.
 - **Species Development:** will own body-bound traits and maturation that shape species-specific professions.
 - **[Reincarnation](../soul/REINCARNATION.md):** preserves legitimate Soul Imprints while former office, property, authority, and reputation remain in the world.
 - **[Soul Echoes](../soul/SOUL_ECHOES.md):** may provide source-bounded case context and old judgment without making it current or objective.
@@ -523,6 +523,7 @@ Old knowledge may inspire better food storage and duty rotation only after the i
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
+- [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
