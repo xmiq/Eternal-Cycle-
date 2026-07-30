@@ -824,6 +824,42 @@ How effectively valid current effort, feedback, resources, and recovery become u
 
 The present limit on a developmental route under the current body's anatomy, lifecycle, health, species, materials, environment, magical laws, and established modifications. Retained progression may help approach a ceiling but does not automatically remove or raise it.
 
+## Progression Claim
+
+A claim that an event, activity, resource, label, or retained history creates, increases, restores, combines, or transfers Development.
+
+## Legitimate Progression
+
+Development supported by a valid route and evidence of relevant engagement, feedback, adaptation, integration, and any recovery or application required by the Owning System.
+
+## Grinding
+
+Repeating low-variation or already-solved activity primarily to accumulate progression without materially extending capability, reliability, understanding, or context.
+
+## Farming
+
+Manufacturing, resetting, duplicating, or exploiting a condition primarily to claim rewards whose actual developmental requirements have not been met.
+
+## Maladaptation
+
+A real adaptation that is harmful, brittle, misleading, or poorly suited to its intended context.
+
+## False Confidence
+
+An inaccurate belief in capability produced by narrow success, protected practice, poor feedback, reputation, rank, External Support, or misunderstood evidence.
+
+## Fragmented Access
+
+Inconsistent or partial access to genuine retained or learned capability, potentially producing effective flashes without stable recall, control, or Practised Reliability.
+
+## Burnout
+
+Reduced engagement, recovery, judgment, reliability, or willingness caused by sustained overload without adequate variation, support, rest, meaning, or control.
+
+## Over-Specialization
+
+Deep capability within a narrow range accompanied by limited transfer, weak supporting foundations, or major vulnerability when conditions change. It is a tradeoff rather than evidence that specialization was inherently mistaken.
+
 ## Weapon Echo
 
 A Weapon Soul's retained memory or manifestation associated with a past form, wielder, or defining event.

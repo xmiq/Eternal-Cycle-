@@ -705,3 +705,31 @@ Ranks, grades, stages, licences, certifications, and threat categories remain bo
 ## D-176 — Hidden Capability Must Preserve Fair Causality
 
 Hidden capability may create surprise, but later explanation must remain consistent with established rules and fair clues. The GM cannot use undisclosed exceptions to invalidate responsible assessment retroactively, and players do not gain hidden information merely because it appears in the Factual View.
+
+## D-177 — Progression Claims Require Owned Integrated Change
+
+An activity or event creates Development only where the Owning System recognizes a valid route and evidence of relevant engagement, feedback, adaptation, integration, and any recovery or application it requires. No universal checklist, repetition count, cost, or outcome grants growth by itself.
+
+## D-178 — Safeguards Reject Unsupported Rewards Without Erasing Real Learning
+
+When a grind, farm, manufactured exercise, failed attempt, or unusual combination contains genuine Development, award only the distinct change supported by evidence and reject the unearned conversion or duplication. Exploit resistance is not authority to declare that nothing meaningful occurred.
+
+## D-179 — Failure States Must Be Causal and Proportional
+
+Wasted training, Maladaptation, injury, False Confidence, obsolete expertise, incompatible habits, Fragmented Access, Over-Specialization, Burnout, and social backlash arise from relevant methods and conditions. They cannot be imposed retroactively or without evidence merely because an experiment was effective or inconvenient.
+
+## D-180 — Development Safeguards Protect Experimentation and Agency
+
+Creative substitutions, accessibility tools, cooperation, safer methods, and unusual cross-Track interactions should work when their causal requirements are met. Severe risks need proportionate signals and meaningful choices, and Development cannot dictate deliberate identity, morality, loyalty, intimacy, speech, or action without an explicit contested rule.
+
+## D-181 — Inaccessibility Is Not Permission to Confiscate Progression
+
+Rust, injury, suppression, incompatibility, obsolete methods, and fragmented access may narrow current expression while legitimate underlying history remains protected. Balance concerns must be resolved through established access, embodiment, cost, scope, consequence, or narrow harm rules rather than retroactive erasure.
+
+## D-182 — Challenge and Suffering Are Not Equivalent
+
+Pain, danger, deprivation, coercion, trauma, loss, killing, and death do not measure Development. The system must not make avoidable abuse the uniquely optimal progression route; demanding but safer practice, care, cooperation, rehabilitation, and reflective application can produce legitimate growth.
+
+## D-183 — Time, Memory, Labels, and Borrowed Output Are Evidence Sources, Not Growth
+
+Elapsed time, factual recall, Skill names, titles, ranks, credentials, reputation, external power, tools, and institutional access may alter opportunity, information, expression, or recognition. None creates mastery or lasting personal Development without the relevant owner's evidence of current integrated change.

@@ -447,6 +447,7 @@ The result preserves consequences and current identity. Further recovery, adapta
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Capability Assessment](CAPABILITY_ASSESSMENT.md)
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

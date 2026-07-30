@@ -582,6 +582,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Capability Assessment](CAPABILITY_ASSESSMENT.md)
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

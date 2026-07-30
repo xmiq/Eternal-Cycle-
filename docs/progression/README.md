@@ -14,7 +14,8 @@ This section contains the canonical rules for multidimensional character develop
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md) - domain-specific soul-carried familiarity, compatibility, transfer loss, bounded relearning acceleration, and anti-farming rules.
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md) - effect ownership, synergy, dependencies, incompatibility, substitution, compensation, bottlenecks, external support, and group capability.
 - [Capability Assessment](CAPABILITY_ASSESSMENT.md) - scoped profiles, evidence states, uncertainty, observer perspectives, comparative findings, and purpose-bound institutional measures.
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md) - anti-exploit rules, legitimate progression tests, failure states, proportional consequences, and experimentation and agency protections.
 
 ## Current Scope
 
-The Development System defines the philosophy shared by all Development Tracks. Physical, Skill, Profession, Magical, Social, Leadership, Species, retained Development, their interactions, and capability assessment are canonical; consolidated safeguards remain a separate roadmap task.
+The Development System defines the philosophy shared by all Development Tracks. Physical, Skill, Profession, Magical, Social, Leadership, Species, retained Development, interactions, assessment, and safeguards are canonical; the final Phase 2 audit remains incomplete.

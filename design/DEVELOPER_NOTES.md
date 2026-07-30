@@ -64,6 +64,9 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Capability Profiles should stay short enough for actual play; surface only dimensions that can change the stated objective or a meaningful decision.
 - Institutional measures can use local numbers or ranks later, but every such measure needs an explicit purpose, tested evidence, assumptions, omissions, and known error modes.
 - Hidden capability should be foreshadowed through consistent evidence without requiring the GM to reveal the secret or guarantee that players interpret every clue correctly.
+- Later numerical advancement tests should be audited against every anti-exploit family in Development Safeguards before adoption, especially recursive retained gains and duplicate Skill labels.
+- Safeguard procedures should remain lighter than the behavior they regulate; routine valid training needs no formal exploit audit unless a claim strains an ownership or persistence boundary.
+- Future trauma, injury, burnout, and rehabilitation mechanics must not turn harm into the most efficient source of advancement or remove player agency through diagnosis alone.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

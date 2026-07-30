@@ -491,6 +491,7 @@ The sign may establish Magical or Symbolic Authority at the spring. Wider govern
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Capability Assessment](CAPABILITY_ASSESSMENT.md)
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

@@ -488,6 +488,8 @@ These advantages must be established through play and causality. Declaring that 
 
 ## Anti-Grinding and Anti-Farming Rules
 
+[Development Safeguards](DEVELOPMENT_SAFEGUARDS.md) owns the consolidated anti-exploit, failure-state, proportional-consequence, and experimentation-agency rules. The summary below establishes the overview boundary.
+
 - Repeating a safe, solved action eventually provides maintenance or negligible new Development rather than endless growth.
 - Killing or defeating opponents does not award universal experience. Only relevant adaptation recognized by an Owning Track develops.
 - Manufactured danger, arranged hardship, repeated injury, and disposable lives do not increase growth by intensity alone.
@@ -629,6 +631,7 @@ The wyvern is favored for aerial pursuit and storm rescue. The human is favored 
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Capability Assessment](CAPABILITY_ASSESSMENT.md)
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

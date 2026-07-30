@@ -405,5 +405,6 @@ Later systems may introduce local measures for narrow purposes. Every measure mu
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
+- [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md)
 - [Soul System Interactions](../soul/SOUL_SYSTEM_INTERACTIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
