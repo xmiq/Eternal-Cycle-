@@ -15,7 +15,7 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 7. [Divine Magic](DIVINE_MAGIC.md) defines source-bound divine relationships, Domains, Jurisdictions, Access, Mandates, Covenants, petitions, responses, blessings, miracles, rites, agency, evidence, withdrawal, and failure.
 8. [Forbidden Magic](FORBIDDEN_MAGIC.md) defines scoped magical restrictions, underlying mechanics, hazard assessment, protected interests, authority, controlled practice, restricted knowledge, research, enforcement, review, persistence, and safeguards.
 
-Later Phase 7 work will complete detailed Development integration and World Engine effects in roadmap order. A mention of one of those subjects in current canon does not make its detailed rules complete.
+[Magical Development](../progression/MAGICAL_DEVELOPMENT.md) now completes the Development integration for these specialist systems. The remaining Phase 7 task defines their bounded effects on the World Engine without implementing Phase 8's detailed simulation domains.
 
 ## Current Ownership Boundaries
 
@@ -29,7 +29,7 @@ Later Phase 7 work will complete detailed Development integration and World Engi
 | Magical material transformation, Reagents, provenance, Recipes, Batches, application, toxicity, and Byproducts | [Alchemy](ALCHEMY.md) |
 | Divine Sources, Domains, Jurisdictions, relationships, Access, Mandates, Covenants, petitions, blessings, miracles, withdrawal, and divine failure | [Divine Magic](DIVINE_MAGIC.md) |
 | Scoped magical restrictions, hazard evidence, protected interests, authority, jurisdiction, controlled practice, knowledge custody, enforcement, and review | [Forbidden Magic](FORBIDDEN_MAGIC.md) |
-| Change in magical perception, control, capacity, reliability, and judgment | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) |
+| Capability-specific magical practice, evidence, transfer, perception, control, capacity, reliability, and judgment | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) |
 | Learned magical technique | [Skill Engine](../skills/README.md) |
 | Social interpretation, curriculum, verification, and recognition | [Magical Schools](../human/MAGICAL_SCHOOLS.md) |
 | Magical anatomy, Species Traits, Mutations, and whole-form change | [Species Development](../progression/SPECIES_DEVELOPMENT.md) and [Monster Evolution](../monster-evolution/README.md) |

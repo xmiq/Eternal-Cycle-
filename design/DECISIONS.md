@@ -2745,3 +2745,27 @@ Laws, cases, victims, evidence, institutions, licences, sanctions, and reputatio
 ## D-686 — Forbidden Magic Profiles Are External
 
 Forbidden Magic Profiles are qualitative external Campaign Records. Current laws, taboos, restricted practices, practitioners, cases, texts, investigations, confiscated items, enforcement operations, and Restriction Status do not belong in the canonical repository.
+
+## D-687 — Specialist Magic and Magical Development Preserve Separate Ownership
+
+Mana, Affinities, Spell Formation, Rituals, Enchanting, Alchemy, Divine Magic, and Forbidden Magic own their phenomena, procedures, relationships, and restrictions. Magical Development records only a named person's bounded change in perception, regulation, performance, recovery, judgment, or reliability, while Skills, Professions, bodies, sources, and Soul Weapons retain their own contributions.
+
+## D-688 — Magical Development Follows a Practice Cycle
+
+Magical Development requires a valid present route, baseline evidence, meaningful work, usable feedback, integration, recovery, variation appropriate to the claim, and later evidence of changed capability. Repetition without integration eventually maintains rather than develops capability, and unrecovered harm is not stored progress.
+
+## D-689 — Magical Development Evidence Is Claim- and Contributor-Specific
+
+Evidence must identify the exact capability that changed and the actor who performed and integrated the relevant work. Output, success, access, source willingness, favorable environment, possession, observation, authorization, financing, survival, or benefit alone does not establish personal Development.
+
+## D-690 — Magical Transfer Is Capability-Specific
+
+Transfer between magical systems, bodies, species, sources, and Ages is evaluated for one bounded capability as direct continuation, adapted correspondence, analogy only, or currently inaccessible. Shared names, effects, elements, symbolism, or memories do not prove functional correspondence.
+
+## D-691 — Teaching, Observation, Automation, and Collaboration Preserve Contribution Ownership
+
+Teaching, observation, instruments, automated devices, groups, institutions, patrons, and other participants may improve access, feedback, safety, or understanding. They support Development only for the work a person actually performs and integrates; they do not transfer the capability performed by another actor or system.
+
+## D-692 — Soul Weapon Co-Practice Preserves Separate Development
+
+A Weapon Soul, Bonded Soul, vessel, source, Enchantment, and outside participant may each change through shared magical practice, but each retains separate evidence, capability, agency, and ownership. Cooperation does not copy one participant's Development into another or turn relationship quality into generic magic mastery.

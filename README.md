@@ -61,4 +61,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. The specialist Magic frameworks through **Forbidden Magic** are complete within **Phase 7 — Magic**, and the sole current task is **Define magical development**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. The specialist Magic frameworks and Magical Development integration are complete within **Phase 7 — Magic**, and the sole current task is **Define magic's effects on the World Engine**.

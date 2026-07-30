@@ -102,15 +102,16 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Alchemy](../magic/ALCHEMY.md) framework within its completed scope;
 - the canonical [Divine Magic](../magic/DIVINE_MAGIC.md) framework within its completed scope;
 - the canonical [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) framework within its completed scope;
+- the completed specialist integration in [Magical Development](../progression/MAGICAL_DEVELOPMENT.md);
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, Mana, Magical Affinities, Spell Formation, Rituals, Enchanting, Alchemy, Divine Magic, and Forbidden Magic are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, Mana, Magical Affinities, Spell Formation, Rituals, Enchanting, Alchemy, Divine Magic, Forbidden Magic, and their Magical Development integration are canonical within their stated scopes. Magic's World Engine effects, the detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- detailed Magic Development integration and World Engine effects beyond the completed specialist Magic frameworks;
+- Magic's bounded effects on the World Engine beyond the completed specialist Magic and Magical Development frameworks;
 - detailed World Engine variables and procedures for populations, resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
@@ -211,7 +212,7 @@ When one claim also needs an effect owned by an unfinished system, apply every c
 
 ### Magic
 
-Apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), and [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) where relevant. Until the remaining Phase 7 tasks are complete, establish only a small Provisional model for the still-incomplete parts of local magic. State its:
+Apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md), and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) where relevant. Until Magic's World Engine interaction rules are complete, establish only the smallest Provisional model needed for a magical effect's world consequence. State its:
 
 - source and metaphysical assumptions;
 - access requirements and receiving system;

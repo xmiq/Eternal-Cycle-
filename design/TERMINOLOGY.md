@@ -500,6 +500,14 @@ A qualitative external Campaign Record for one bounded Mana context, including l
 
 Earned growth in a bounded magical capability through meaningful perception, practice, control, experimentation, feedback, recovery, application, and judgment under valid current laws.
 
+## Magical Practice Cycle
+
+A qualitative capability-specific loop of defining a claim, confirming a valid route, establishing present evidence, performing meaningful work, receiving feedback, integrating the result, recovering, varying conditions, demonstrating changed capability, and maintaining or extending it.
+
+## Magical Development Evidence
+
+Evidence that a named contributor's bounded magical capability changed under stated conditions. It distinguishes personal capability from source behavior, tools, collaborators, favorable environments, luck, output alone, and social recognition.
+
 ## Magical Imprint
 
 A Soul Imprint preserving legitimately earned magical developmental familiarity, knowledge, or structure without preserving current reserves, access, authority, embodiment, or reliability.

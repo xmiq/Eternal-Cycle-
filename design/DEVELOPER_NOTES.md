@@ -655,3 +655,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Restricted Knowledge cases should preserve defensive access, privacy, source custody, Archive uncertainty, and no knowledge-to-Skill transfer.
 - Enforcement needs tests involving false positives, living Hosts, Weapon Souls, monster embodiment, coerced participants, and competing jurisdictions.
 - Reincarnation and World Reset examples must preserve history while preventing inherited guilt, legal identity, licence, immunity, or obsolete hazard assumptions.
+
+## Phase 7 Magical-Development Watchlist
+
+- Capability profiles must remain multidimensional and claim-specific rather than collapsing into mage levels, casting scores, or universal ranks.
+- The Magical Practice Cycle should stay usable at the table; the evidence burden scales with consequence without requiring equal bookkeeping for every exercise.
+- Specialist phenomena and procedures must retain their owners, and one meaningful contribution must not be double-counted across Magic, Skill, Profession, body, Soul Weapon, or group records.
+- Transfer findings need playtests across bodies, species, sources, worlds, and Ages so direct continuation, adaptation, analogy, and inaccessibility remain meaningfully distinct.
+- Tools, institutions, favorable Mana, Divine Sources, collaborators, and automation should remain visible dependencies rather than becoming hidden personal Development.
+- Soul Weapon co-practice must preserve separate personhood, action, source, Skill, and Development evidence for every participant.

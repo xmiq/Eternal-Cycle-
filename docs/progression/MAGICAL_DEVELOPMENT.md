@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines how capability with magic develops across bodies, species, traditions, Ages, and Reincarnation. It establishes shared Development rules for magical perception, control, application, recovery, and judgment. The [Mana](../magic/MANA.md) rules own the natural world-side medium and causal state through which magical change occurs; later Phase 7 documents own the remaining specialist Magic procedures.
+This document defines how capability with magic develops across bodies, species, traditions, Ages, and Reincarnation. It establishes shared Development rules for magical perception, control, application, recovery, judgment, evidence, transfer, and retained progression. The completed [Magic rules](../magic/README.md) own each natural phenomenon and specialist procedure; this document owns how a person's bounded magical capabilities change while those owners remain intact.
 
 ## Core Rule
 
@@ -122,6 +122,29 @@ The degree to which a magical route can function under the present world's laws,
 | **World Recognition** | What do schools, temples, species, spirits, gods, institutions, and observers believe, permit, rank, fear, or misunderstand? |
 
 A reincarnated ritualist may have high Persistent Potential and no suitable materials. A magically gifted child may have broad potential but dangerous control. A temple novice may possess recognized authority for one rite while an unrecognized hedge practitioner has greater practical precision elsewhere.
+
+## Ownership and Attribution
+
+Magical Development never absorbs the effect being developed.
+
+| Subject | Owning rules | What Magical Development may record |
+| --- | --- | --- |
+| Mana source, state, flow, storage, conversion, depletion, and ecology | [Mana](../magic/MANA.md) | Improved perception, regulation, safe throughput, source handling, recovery judgment, and contextual reliability. |
+| Target-specific compatibility and responsiveness | [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) | Developed use and understanding of an established affinity; formation or change still requires an Affinity Formation Route. |
+| Spell Pattern, Formation Grammar, targeting, lifecycle, cost, and failure | [Spell Formation](../magic/SPELL_FORMATION.md) | Improved construction, formation, control, targeting, sustainment, termination, diagnosis, and adaptation of bounded Spell Procedures. |
+| Ritual Structure, roles, sites, Sequence, Transfers, integrity, and aftermath | [Rituals](../magic/RITUALS.md) | Improved performance of named roles, coordination, state reading, intervention, safe interruption, and design judgment. |
+| Host, Function, Pattern, Anchor, Interface, Supply, Layer, Drift, and removal | [Enchanting](../magic/ENCHANTING.md) | Improved Host assessment, design, installation, validation, use, diagnosis, maintenance, repair, and removal capability. |
+| Reagents, Recipes, Process Stages, Batches, Yield, application, and toxicity | [Alchemy](../magic/ALCHEMY.md) | Improved identification, process control, substitution, scale judgment, testing, application, safety, and investigation. |
+| Divine Source, Domain, Jurisdiction, relationship, Mandate, response, and withdrawal | [Divine Magic](../magic/DIVINE_MAGIC.md) | Improved Petition, rite, source-specific control, interpretation, mediation, ethical judgment, and relationship practice without owning the source. |
+| Magic Restrictions, hazards, authority, knowledge custody, enforcement, and review | [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) | Improved diagnosis, containment, defensive use, research, advocacy, enforcement, remediation, and compliance judgment without a transgression bonus. |
+| Learned magical action | [Skill Engine](../skills/README.md) | Magical conditions supporting the Skill; Skill XP and the bounded learned capability remain Skill-owned. |
+| Integrated magical work and responsibility | [Profession Development](PROFESSION_DEVELOPMENT.md) | Magical contribution to professional judgment; standards, clients, accountability, and whole-practice competence remain Profession-owned. |
+| Body, Magical Organs, Channels, Species Traits, Mutation, and Evolution | [Physical Development](PHYSICAL_DEVELOPMENT.md), [Species Development](SPECIES_DEVELOPMENT.md), and [Monster Evolution](../monster-evolution/README.md) | Regulation and use of present structures; anatomical change remains with its body owner. |
+| Weapon Soul identity, bond, form, Evolution, Echoes, and Manifestation | [Soul Weapons](../soul-weapons/README.md) | The current person's magical contribution; the Weapon Soul's own learning and source-owned change remain separate. |
+
+One event can provide evidence for several owners when several capabilities genuinely changed. Record each changed capability once and preserve its source. A ritual healer may improve a targeting Skill, magical perception, medical judgment, and team coordination through one difficult case; it does not receive four copies of one generic experience award.
+
+Possessing, surviving, witnessing, authorizing, financing, or benefiting from an effect is not evidence that the observer performed its magical contribution.
 
 ## Distinct Parts of Magical Capability
 
@@ -296,6 +319,300 @@ Magical Development may arise through:
 
 Danger, output, spectacle, and resource consumption are not Development by themselves. Growth requires a changed magical capability recognized by its Owning Track.
 
+## The Magical Practice Cycle
+
+Magical practice becomes Development through a causal cycle rather than an action count.
+
+### 1. Define the Capability Claim
+
+Name the exact capability being developed, the intended context, and the owning system. **Better at magic** is not a valid claim. **More reliable termination of this wind-binding Spell Procedure in crosswinds** is.
+
+### 2. Establish a Valid Present Route
+
+Confirm source, Access, body, Channels, authority, tools, environment, target relation, safety, and any specialist requirements. Retained understanding may guide this check but cannot create what is absent.
+
+### 3. Establish Present Evidence
+
+Observe what the practitioner can currently perceive, attempt, control, explain, recover from, and reproduce. Separate personal capability from tools, collaborators, source behavior, favorable environment, and luck.
+
+### 4. Attempt Meaningful Work
+
+The practitioner performs a task that exercises the named capability. The challenge may involve precision, variation, diagnosis, responsibility, coordination, unfamiliar conditions, scale, recovery, or consequence rather than greater danger.
+
+### 5. Receive Usable Feedback
+
+Feedback may come from magical perception, instruments, target response, teacher observation, source communication, Batch tests, Pattern inspection, Ritual State, Enchantment Drift, failure signs, or aftermath. Feedback must be interpretable enough to change action.
+
+### 6. Integrate the Result
+
+The practitioner revises perception, model, timing, control, procedure, judgment, or response. Repetition without integration eventually becomes maintenance.
+
+### 7. Recover and Repair
+
+The body, Channels, tools, sources, relationships, sites, materials, and affected parties receive whatever recovery or remedy the practice requires. Unrecovered harm is not stored progress.
+
+### 8. Vary and Revalidate
+
+Test the capability under a meaningful but bounded change: another target, environment, source state, Batch, team, body condition, interruption, or failure. This distinguishes a narrow success from transferable reliability.
+
+### 9. Demonstrate Changed Capability
+
+Record Development only when evidence shows a changed capability under a stated context. One success may reveal potential; reliable change requires enough evidence for the claim's consequence and risk.
+
+### 10. Maintain or Extend
+
+Continued identical practice maintains the capability. Further Development requires deeper understanding, broader conditions, finer performance, new responsibilities, or another genuine adaptation.
+
+The cycle is qualitative. Low-consequence practice may validate quickly; healing, mass ritual, living-host enchantment, source negotiation, or hazardous research may require prolonged evidence and independent review.
+
+## Magical Development Evidence
+
+Useful evidence may show improvement in:
+
+- distinguishing relevant magical signals;
+- identifying source, Pattern, Reagent, target, failure, or interference correctly;
+- controlling onset, rate, direction, boundary, form, or termination;
+- reducing waste or strain for the same bounded objective;
+- sustaining function through expected variation;
+- recovering safely and recognizing when not to continue;
+- adapting a procedure while preserving its causal requirements;
+- coordinating a named role with other participants;
+- diagnosing and repairing a known failure;
+- transferring an established principle into a genuinely corresponding system;
+- protecting affected parties and managing consequence;
+- explaining limits, uncertainty, and counterevidence accurately;
+- refusing or aborting when the route is unsafe or unauthorized.
+
+Evidence is source- and claim-specific. Greater output may demonstrate one Capacity while revealing worse precision. Faster casting may hide dependence on a favorable Field. A successful blessing may reveal source willingness rather than the petitioner's control. A clean Alchemical Batch may reflect unusually pure Reagents rather than improved process Skill.
+
+For high-consequence claims, seek independent evidence where possible. Instruments, witnesses, repeated Batches, another operator, controlled variation, authenticated source response, and aftermath can separate capability from favorable coincidence.
+
+Failure can provide information without providing Development. Growth occurs only if the practitioner can perceive or reconstruct relevant causes, integrate them, recover, and later demonstrate changed capability.
+
+## Specialist Development Interfaces
+
+### Mana Practice
+
+[Mana](../magic/MANA.md) remains a world-side state and medium rather than experience.
+
+Mana-related Development may improve:
+
+- detecting one Source, Field, Current, Reservoir, Channel, Trace, or Distortion;
+- distinguishing quantity from rate, pressure, compatibility, accessibility, and stability;
+- opening, regulating, converting, storing, directing, releasing, or terminating a valid route;
+- working within safe Capacity;
+- recognizing depletion, competition, contamination, leakage, and recovery;
+- selecting sources and methods appropriate to the objective and environment;
+- reducing waste while preserving effect and consequence.
+
+Drawing more Mana does not itself increase capacity. A body or structure changes only through its Physical, Species, construction, Enchantment, relationship, or other owning route. Ambient abundance, repeated depletion, and exposure are practice conditions rather than XP deposits.
+
+### Affinity Practice
+
+An established [Magical Affinity](../magic/MAGICAL_AFFINITIES.md) can shape learning conditions, perception, source response, stability, vulnerability, and method. Practitioners may develop better use and understanding of its exact Expressions.
+
+Magical Development does not create or strengthen affinity by repetition alone. Affinity formation, broadening, narrowing, conflict, suppression, and Drift require a valid Affinity Formation Route and evidence under the affinity rules.
+
+Keep distinct:
+
+- developing capability that an affinity supports;
+- learning to manage an affinity's burden or conflict;
+- discovering an affinity that already existed;
+- changing the affinity itself.
+
+A naturally compatible novice may learn quickly while remaining unreliable. A master without that affinity may outperform the novice through method, preparation, tools, and experience.
+
+### Spell Practice
+
+[Spell Formation](../magic/SPELL_FORMATION.md) divides spell capability into bounded contributions such as:
+
+- understanding a local Formation Grammar;
+- forming or repairing one Spell Pattern;
+- specifying a valid effect;
+- establishing Targeting Relation;
+- opening, controlling, and terminating a Spell Instance;
+- managing cost, Sustainment, interference, and aftermath;
+- diagnosing Formation Failure;
+- preparing, improvising, adapting, and validating procedures;
+- countering one spell through actual dependencies.
+
+Reliability with one procedure does not grant every spell sharing an element, name, school, or visual form. Transfer requires actual Pattern and grammar correspondence.
+
+Prepared casting, improvisation, construction, targeting, sustainment, and termination may develop at different rates. A practitioner can be an excellent designer and poor combat caster, or a reliable operator unable to invent procedures.
+
+### Ritual Practice
+
+[Ritual](../magic/RITUALS.md) Development is role- and structure-specific.
+
+Possible capabilities include:
+
+- Objective and Structure analysis;
+- component preparation;
+- site assessment;
+- Anchor maintenance;
+- timing and Sequence;
+- Transfer regulation;
+- Load management;
+- communication and coordination;
+- integrity diagnosis;
+- substitution analysis;
+- safe pause, reduction, interruption, and aftermath care;
+- design, validation, and reconstruction from evidence.
+
+Each participant develops through its actual contribution. Attendance, contribution of raw Mana, sponsorship, sacrifice, leadership title, or survival does not award the complete Ritual's Development.
+
+Collective Capability can improve as procedures, communication, trust, records, infrastructure, and role coordination improve. It remains distributed rather than copied into one leader or every member.
+
+### Enchanting Practice
+
+[Enchanting](../magic/ENCHANTING.md) separates:
+
+- Function specification;
+- Host assessment and preparation;
+- Pattern and Anchor design;
+- Interface and Trigger design;
+- Supply analysis;
+- installation and Layer integration;
+- validation and settlement;
+- user operation;
+- diagnosis, maintenance, repair, removal, and Drift management.
+
+Using an enchanted object may develop Interface use without teaching installation. Repeated activation does not reveal a hidden Pattern automatically. Owning, purchasing, inheriting, or being targeted by an Enchantment grants no enchanting Development.
+
+Automated tools and templates can improve consistency while concealing assumptions. A practitioner develops only the capabilities it actually performs, understands, and can validate under changed conditions.
+
+### Alchemical Practice
+
+[Alchemy](../magic/ALCHEMY.md) separates:
+
+- Reagent identification and provenance;
+- preparation and measurement;
+- Process Stage and Process Window control;
+- source and Catalyst handling;
+- feedback and intervention;
+- separation, stabilization, testing, and storage;
+- substitution and scale analysis;
+- Effective Dose, toxicity, application, and aftercare;
+- Yield, Byproduct, ecology, and disposal judgment;
+- Recipe design, validation, and revision.
+
+Following a Recipe can develop bounded procedure familiarity when the operator perceives and controls the process. It does not automatically develop substitution, diagnosis, scale-up, toxicology, medicine, or Recipe design.
+
+Consuming a product, collecting rare Reagents, or producing one lucky Batch grants no alchemical Development. Batch variation and real testing provide the feedback needed to distinguish understanding from favorable inputs.
+
+### Divine Practice
+
+[Divine Magic](../magic/DIVINE_MAGIC.md) keeps Divine Relationship, Access, Mandate, source response, and personal capability separate.
+
+A practitioner may develop:
+
+- source and doctrine knowledge;
+- Petition composition;
+- Divine Rite roles;
+- source-specific perception and control;
+- Sign authentication and interpretation;
+- mediation, Covenant analysis, and negotiation;
+- ethical judgment and affected-party care;
+- response to silence, refusal, withdrawal, and conflicting authority.
+
+The Divine Source may also change its trust, willingness, policy, capacity, or relationship. That is source or relational change, not automatically the practitioner's Magical Development.
+
+Worship, service, sacrifice, suffering, favor, blessing, and Miracle do not grant Skill by themselves. Revoked Access can make developed capabilities inaccessible without erasing them, while restored Access does not restore rusted reliability.
+
+### Restricted and Hazardous Practice
+
+[Forbidden Magic](../magic/FORBIDDEN_MAGIC.md) is a classification framework rather than a progression route.
+
+Legitimate Development may occur through:
+
+- hazard diagnosis;
+- defensive detection;
+- containment and safe termination;
+- treatment and remediation;
+- controlled research;
+- evidence review;
+- responsible operation under valid permission;
+- advocacy, enforcement, or reform through the appropriate Tracks.
+
+Illegality, taboo, cruelty, secrecy, corruption, punishment, danger, and transgression provide no premium. An unjust ban may obstruct practice; a sound restriction may prevent irresponsible practice; neither changes the causal requirements for Development.
+
+Knowing how to violate a restriction is not the same capability as understanding the underlying magic, assessing its hazard, evading enforcement, or judging its ethics. Record each contribution under its actual owner.
+
+### Soul Weapon Collaboration
+
+[Soul Weapons](../soul-weapons/README.md) contain at least two possible developing persons: the current wielder and the Weapon Soul.
+
+Shared practice may develop:
+
+- communication;
+- coordinated timing;
+- mutual source regulation;
+- form-specific handling;
+- Interface use;
+- consent and boundary negotiation;
+- joint tactics;
+- recovery and failure response.
+
+Record each participant's contribution separately. The wielder does not inherit the Weapon Soul's perception or Functions, and the Weapon Soul does not inherit the wielder's casting Skills. Relationship growth can improve coordination without becoming one merged magic statistic.
+
+External Enchantments, Divine Blessings, materials, Rituals, or other sources retain their owners even when repeatedly used together.
+
+## Teaching, Observation, and Automation
+
+Teaching can improve attention, models, sequencing, feedback interpretation, safety, and practice selection. It cannot transfer the teacher's Access, body, affinity, source consent, reserves, Practised Reliability, or Development.
+
+Observation can reveal evidence only through the observer's senses, concepts, instruments, and access. Watching a spell does not provide its Formation Grammar. Watching a Divine Response does not reveal the source's complete motive. Seeing a successful Batch does not establish ingredient provenance.
+
+Simulation, visualization, inert rehearsal, and classroom work can develop planning, recall, communication, and error recognition. They cannot validate live source handling, target resistance, bodily strain, Process Windows, Ritual Transfers, or emergency response that the exercise does not reproduce.
+
+Automation may execute stable parts of a procedure, improve safety, or expand access. Operators can develop tool use and oversight while remaining unable to perform the automated contribution. Designers, maintainers, operators, and beneficiaries do not receive interchangeable Development.
+
+## Transfer Across Magical Systems
+
+Transfer begins with a bounded capability, not the belief that **all magic is one**.
+
+For each proposed transfer, compare:
+
+- source and Mana Relation;
+- world laws and environmental assumptions;
+- body, Channels, senses, and interfaces;
+- symbols, Pattern, grammar, materials, and timing;
+- target and receiving relation;
+- authority, consent, and source agency;
+- feedback and failure signs;
+- costs, termination, recovery, and aftermath;
+- exact capability being transferred.
+
+The result may be:
+
+- **direct continuation**, where the relevant route and capability remain functionally the same;
+- **adapted transfer**, where a Transferable Principle corresponds but needs new embodiment, method, practice, and validation;
+- **analogy only**, where old understanding helps ask questions but cannot perform the new effect;
+- **currently inaccessible**, where no valid correspondence or route exists.
+
+These are findings for one claim, not global ratings. A caster may directly transfer error-checking, adapt boundary control, use old elemental theory only as analogy, and find former divine authority inaccessible in the same incarnation.
+
+Successful transfer creates present capability only through current practice. It does not prove every former spell, affinity, source, or system translates.
+
+## Risk, Ethics, and Responsibility
+
+Safe practice is not lesser Development. Recognizing limits, refusing an invalid attempt, protecting a subject, opening an Abort Route, reporting an adverse outcome, or choosing a nonmagical solution can demonstrate advanced judgment.
+
+Meaningful risk can create novel conditions and feedback, but risk is neither necessary nor sufficient. Increase complexity through controlled variation before increasing irreversible harm.
+
+Where practice affects people, Souls, Weapon Souls, species, communities, sources, or ecosystems, include:
+
+- informed agency and consent;
+- competence and role;
+- expected benefit and alternatives;
+- exposure and failure;
+- monitoring and termination;
+- care, repair, and restitution;
+- information custody;
+- accountability and review.
+
+No teacher, institution, god, law, Class, Profession, or urgent objective can convert coerced subjects into practice resources or make their harm an experience award.
+
 ## Plateaus, Maintenance, Rust, and Regression
 
 ### Plateaus
@@ -448,6 +765,14 @@ Neither statement creates an overall magic rank.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant magical histories without unlocking every spell, source, or Channel.
 - **[Soul Weapons](../soul-weapons/README.md):** may collaborate, focus, resist, or supply their own magic while remaining distinct persons.
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** may preserve source-bounded magical evidence without granting Development or authority.
+- **[Mana](../magic/MANA.md):** owns the world-side medium, sources, state, movement, conversion, depletion, ecology, and persistence through which magical practice occurs.
+- **[Magical Affinities](../magic/MAGICAL_AFFINITIES.md):** owns target-specific compatibility, Formation Routes, Expressions, conflict, Drift, and persistence.
+- **[Spell Formation](../magic/SPELL_FORMATION.md):** owns bounded spell procedures, local grammars, Patterns, targeting, lifecycle, failure, counterplay, and persistence.
+- **[Rituals](../magic/RITUALS.md):** owns prepared magical Structures, differentiated roles, components, sites, Sequence, Transfers, integrity, interruption, and aftermath.
+- **[Enchanting](../magic/ENCHANTING.md):** owns Host-anchored configurations, Functions, Patterns, Anchors, Interfaces, Supply, Layers, Drift, and removal.
+- **[Alchemy](../magic/ALCHEMY.md):** owns magical material processes, Reagents, provenance, Recipes, Batches, Yield, application, toxicity, storage, and waste.
+- **[Divine Magic](../magic/DIVINE_MAGIC.md):** owns Divine Sources, Domains, Jurisdictions, relationships, Mandates, petitions, responses, blessings, withdrawal, and evidence.
+- **[Forbidden Magic](../magic/FORBIDDEN_MAGIC.md):** owns restriction classification, hazard assessment, protected interests, authority, knowledge custody, enforcement, and review.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies magical environments, institutions, resources, ecological effects, law, conflict, and changes between Ages.
 
 ## Scope Boundaries
@@ -463,24 +788,28 @@ This document does not define:
 - the detailed magical changes caused by World Resets;
 - a method for converting magical Development into another Track.
 
-Phase 7 may define local magical systems inside these boundaries. Each must follow the [Mana Relation](../magic/MANA.md#the-mana-relation) and state its source, Access, costs, embodiment, authority, recovery, environmental assumptions, failure states, and persistence without creating an overall character level.
+The completed specialist Magic systems operate inside these boundaries. Every campaign-specific magical claim must follow the [Mana Relation](../magic/MANA.md#the-mana-relation) and state its source, Access, costs, embodiment, authority, recovery, environmental assumptions, failure states, and persistence without creating an overall character level.
 
 ## GM Procedure
 
 When magical Development or capability matters:
 
-1. name the magical system, source, objective, and Owning effect;
-2. separate Magical Potential, Access, reserves, capacity, technique, affinity, authority, and External Empowerment;
-3. identify current Channels, organs, body condition, environment, tools, contracts, collaborators, and permissions;
-4. identify the practice, perception, feedback, experimentation, recovery, or meaningful use that changed capability;
-5. assess control, precision, efficiency, stability, endurance, recovery, resistance, understanding, and reliability only where relevant;
-6. distinguish current-law evidence from retained assumptions about another body or Age;
-7. apply Plateaus, rust, damage, suppression, conflict, and environmental incompatibility to the correct layer;
-8. preserve legitimate Magical Imprints without restoring former reserves, authority, tools, or anatomy;
-9. treat rituals, tools, patrons, and groups as explicit support with their own dependencies;
-10. communicate capability for the current objective rather than assigning a universal magic rank;
-11. record Development only for the contribution actually performed and integrated;
-12. apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), and [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md), defer later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
+1. name the magical system, source, objective, exact capability claim, and owning effect;
+2. separate Persistent Potential, Current Access, Embodied Expression, Practised Reliability, Contextual Effectiveness, and World Recognition;
+3. separate Magical Potential, Access, reserves, Capacity, technique, affinity, authority, External Empowerment, and source behavior;
+4. identify current Channels, organs, body condition, environment, tools, contracts, collaborators, permissions, targets, and affected parties;
+5. establish present evidence and identify which contributor actually performs each part;
+6. identify meaningful practice, feedback, integration, recovery, variation, and later demonstration;
+7. assess control, precision, efficiency, stability, endurance, recovery, resistance, understanding, and reliability only where relevant;
+8. apply the exact specialist owner for Mana, affinity, Spell, Ritual, Enchantment, Alchemy, Divine, and Forbidden claims;
+9. distinguish current-law evidence from retained assumptions about another body, source, system, or Age;
+10. evaluate proposed transfer as direct continuation, adapted correspondence, analogy only, or currently inaccessible for the named capability;
+11. apply Plateaus, rust, damage, suppression, conflict, and environmental incompatibility to the correct layer;
+12. preserve legitimate Magical and Skill Imprints without restoring former reserves, authority, tools, anatomy, inventory, or relationships;
+13. treat Rituals, tools, patrons, institutions, Weapon Souls, and groups as explicit support or participants with their own dependencies and contributions;
+14. communicate capability for the current objective rather than assigning a universal magic rank;
+15. record Development only for the capability meaningfully performed, understood, integrated, and evidenced;
+16. record the current Capability Profile and specialist campaign state outside canon.
 
 ## Worked Examples
 
@@ -525,6 +854,48 @@ Installing a stronger core expands supported expression but does not automatical
 A caster with small personal reserves prepares a flood-diversion ritual using surveyed channels, stored materials, a licensed river compact, six trained participants, and two days of setup.
 
 The resulting effect exceeds anything the caster can improvise alone. Its scale belongs to the whole arrangement. The caster's Development appears in design, coordination, control, and recovery planning rather than a hidden increase to personal reserves.
+
+### Affinity Without Reliability
+
+A child has a strong Affinity Expression for one volcanic Current and can sense its pressure instinctively. It opens a Channel too far whenever frightened and cannot terminate the flow cleanly.
+
+The affinity creates favorable learning conditions and danger. Training develops source reading, bounded opening, termination, and recovery. The child does not gain a universal fire rank, and repeated burns do not strengthen the affinity.
+
+### Reliable Spell Operator, Novice Constructor
+
+A courier can form one short-range message Spell Procedure under severe distraction because it has practised the same Pattern for years. It cannot explain the local Formation Grammar well enough to design a variant for underwater use.
+
+The courier has deep procedural reliability and narrow construction knowledge. A scholar may design the new Pattern while remaining less reliable in motion. Neither is universally the better mage.
+
+### Ritual Role Development
+
+During flood-control Rites, one participant learns to read Transfer imbalance and call safe pauses. Another supplies most of the Mana but receives no feedback beyond holding a stable posture.
+
+The first develops Ritual State perception and intervention Skill. The second may develop endurance in its exact contribution, but neither receives the complete Ritual's Development.
+
+### Enchantment Operator and Designer
+
+A guard uses a ward gate daily and becomes excellent at recognizing valid Interface responses, jams, and suspicious Triggers. The gate's enchanter can redesign its Anchor but rarely operates it under crowd pressure.
+
+The guard has developed operation and practical diagnosis; the enchanter has design and installation capability. Device use does not transfer Pattern construction, and design credentials do not prove operational reliability.
+
+### Alchemist Crossing Ages
+
+A reincarnated alchemist remembers how to control a crystallization Window, but the new Age's solvent carries Mana differently. Former timing is useful only as analogy.
+
+The alchemist identifies a corresponding feedback signal, runs controlled Batches, revises the Recipe, and validates storage. Retained expertise accelerates the cycle without making the first Batch safe or restoring former ingredients and tools.
+
+### Forbidden-Magic Containment Specialist
+
+An investigator never performs a prohibited memory-alteration Spell but learns to detect its Residue, protect records, interrupt its Targeting Relation, and support affected people.
+
+Those are real diagnostic, defensive, and professional capabilities. The investigator does not gain the casting procedure, and exposure to victims does not award resistance or hidden dark power.
+
+### Soul Weapon Co-Practice
+
+A Weapon Soul regulates a cold-associated source while its Bonded Wielder forms a defensive Pattern through the vessel. Practice improves the Weapon Soul's source timing, the wielder's targeting, and their shared communication.
+
+The source, Weapon Function, casting Skill, and relationship remain separate. Neither participant receives the other's capability, and an external Enchantment on the vessel remains an external Layer.
 
 ## Related Documents
 
