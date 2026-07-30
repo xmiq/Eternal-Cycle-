@@ -94,15 +94,16 @@ The following material is ready to constrain alpha play within its stated scope:
 - the complete [Human Classes and Professions](../human/README.md) framework, including Classes, Professions, Martial Traditions, Magical Schools, Social Advancement, Institutions, Class Evolution, and human progression limits;
 - the canonical [Game Master Framework](GAME_MASTER_FRAMEWORK.md) and [GM Principles](GM_PRINCIPLES.md);
 - the complete [Soul Weapons](../soul-weapons/README.md) framework;
+- the canonical [Mana](../magic/MANA.md) framework within its completed scope;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, and the complete Soul Weapon framework are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, and Mana are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- mana, affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, and other complete magic procedures;
+- affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, and other incomplete Magic procedures beyond the canonical Mana framework;
 - detailed World Engine variables and procedures for populations, resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
@@ -197,13 +198,13 @@ A Provisional Rule must never:
 
 ## Adjudicating Unfinished Systems
 
-The completed [Soul Engine](../soul/README.md), [Development System](../progression/README.md), [Skill Engine](../skills/README.md), [Monster Evolution](../monster-evolution/README.md), [Human Classes and Professions](../human/README.md), and [Soul Weapons](../soul-weapons/README.md) frameworks apply directly. A claim within their completed scope is not Provisional merely because it is unusual or combines several systems.
+The completed [Soul Engine](../soul/README.md), [Development System](../progression/README.md), [Skill Engine](../skills/README.md), [Monster Evolution](../monster-evolution/README.md), [Human Classes and Professions](../human/README.md), [Soul Weapons](../soul-weapons/README.md), and [Mana](../magic/MANA.md) frameworks apply directly. A claim within their completed scope is not Provisional merely because it is unusual or combines several systems.
 
 When one claim also needs an effect owned by an unfinished system, apply every completed owner normally and make only the missing effect Provisional. Do not reopen a completed framework, duplicate its capability, or treat an adjacent gap as permission to ignore its safeguards.
 
 ### Magic
 
-Until Phase 7 is complete, establish only a small local magical model. State its:
+Apply the canonical [Mana](../magic/MANA.md) rules to every magical effect. Until the remaining Phase 7 tasks are complete, establish only a small Provisional model for the still-incomplete parts of local magic. State its:
 
 - source and metaphysical assumptions;
 - access requirements and receiving system;
@@ -212,7 +213,7 @@ Until Phase 7 is complete, establish only a small local magical model. State its
 - environmental dependencies;
 - visible effects and evidence.
 
-Keep magical knowledge, potential, access, capacity, reserves, control, authority, and Embodied Expression distinct under [Magical Development](../progression/MAGICAL_DEVELOPMENT.md). Reincarnation does not grant unrestricted spell inheritance, and one local Provisional model is not universal magic canon.
+Keep Mana, magical knowledge, potential, Access, Capacity, Reserves, control, authority, and Embodied Expression distinct under [Mana](../magic/MANA.md) and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md). Reincarnation does not grant unrestricted spell inheritance, and one local Provisional model is not universal Magic canon.
 
 ### World Engine
 
@@ -351,6 +352,8 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)
 - [Progression Rules Index](../progression/README.md)
+- [Magic Rules Index](../magic/README.md)
+- [Mana](../magic/MANA.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)

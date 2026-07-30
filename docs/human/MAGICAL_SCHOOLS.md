@@ -4,7 +4,7 @@
 
 This document defines the canonical social structure and adjudication of Magical Schools for Phase 5. Read [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md), [Human Classes](CLASSES.md), and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) first.
 
-This document does not define the complete magic systems of Eternal Cycle. Phase 7 owns mana, affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, and detailed magical laws. This document defines how societies organize, teach, test, preserve, dispute, and recognize magical practice within whatever local magical systems actually exist.
+This document does not define the complete magic systems of Eternal Cycle. [Mana](../magic/MANA.md) now owns the shared natural foundation and causal state of magical change. Later Phase 7 tasks own affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, and remaining detailed magical laws. This document defines how societies organize, teach, test, preserve, dispute, and recognize magical practice within whatever local magical systems actually exist.
 
 ## Core Rule
 
@@ -22,7 +22,7 @@ These terms must remain distinct.
 
 | Fact | Meaning | Owner |
 | --- | --- | --- |
-| **Magic system** | The actual sources, laws, access routes, costs, limits, interactions, and failure states through which magic functions. | Phase 7 and established world canon |
+| **Magic system** | The actual sources, laws, Mana Relations, access routes, costs, limits, interactions, and failure states through which magic functions. | [Magic rules](../magic/README.md) and established world canon |
 | **Magical School** | A class framework through which a society models, teaches, tests, interprets, and recognizes some magical practice. | This document |
 | **Magical Academy** | An institution that organizes people, facilities, records, resources, admission, and governance around learning. | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) |
 | **Magical Skill** | A learned capability used to perceive, control, construct, perform, or respond to magic. | [Skill Engine](../skills/README.md) |
@@ -567,7 +567,6 @@ Hidden magical truth must leave source-appropriate evidence and remain causally 
 
 This document does not define:
 
-- universal or local mana mechanics;
 - complete affinities or elements;
 - spell formation and grammar;
 - ritual mechanics;
@@ -577,11 +576,13 @@ This document does not define:
 - academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-[Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md), and the later Magic phase own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+[Mana](../magic/MANA.md) owns the canonical Mana framework. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md), and later Magic tasks own the remaining subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
 ## Related Canon
 
 - [Human Classes and Professions Index](README.md)
+- [Magic Rules Index](../magic/README.md)
+- [Mana](../magic/MANA.md)
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
 - [Professions](PROFESSIONS.md)

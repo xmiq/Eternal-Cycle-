@@ -73,6 +73,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Weapon Manifestations](soul-weapons/WEAPON_MANIFESTATIONS.md) - source-bound Perceptual, Vessel, and Embodied expressions with Anchors, consent, action limits, Reincarnation access, termination, and anti-duplication safeguards.
 - [Unconventional Soul Weapons](soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md) - topology, personhood, continuity, and agency rules for composite, paired, distributed, modular, biotic, body-linked, record-bearing, mutable, and site-bound vessels.
 
+## Magic
+
+- [Magic Rules Index](magic/README.md) - current reading order, ownership boundaries, authority, and Phase 7 implementation status.
+- [Mana](magic/MANA.md) - the local, causal, world-side capacity and medium of magical change, including sources, state, flow, storage, conversion, embodiment, ecology, persistence, and safeguards.
+
 ## World Engine
 
 - [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.

@@ -582,3 +582,13 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Reincarnation can preserve an eligible Weapon Soul, bond, and form under a valid Passage Accord without carrying worldly mass, Components, mastery, access, or a compatible body as inventory.
 - Stale Phase 6 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
 - Phase 7 must preserve source ownership when mana, affinity, spell, ritual, enchantment, divine, or forbidden effects interact with a Weapon Soul or vessel.
+
+## Phase 7 Mana Watchlist
+
+- Mana Context Profiles must remain selective qualitative records rather than becoming disguised MP bars or universal environment ratings.
+- Cross-system storage and Mana Conversion need repeated tests against universal-resource assumptions, source laundering, lossless loops, and duplicated supply.
+- Person-like Mana Sources require practical consent and refusal procedures without making every use scene conversational overhead.
+- Mana ecology should create meaningful scarcity, abundance, recovery, and conflict without making magical extraction automatically evil or every source globally decisive.
+- Later spell, ritual, enchanting, alchemy, divine, and forbidden rules must preserve the Mana Relation and causal accounting rather than inventing separate resource shortcuts.
+- Non-solid and source-dependent Soul Weapon vessels need Phase 7 examples where Mana supports expression without replacing Vessel Continuity or Weapon Soul consent.
+- Magic and nonmagical paths need matchup playtests so dependence, preparation, traceability, and counterplay remain real rather than cosmetic.

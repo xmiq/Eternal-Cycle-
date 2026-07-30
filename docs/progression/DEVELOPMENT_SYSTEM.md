@@ -159,7 +159,7 @@ Growth in an integrated practice that combines knowledge, judgment, standards, t
 
 ### Magical Development
 
-Growth in the perception, control, formation, application, and judgment required by a magical system. Magical Development cannot define mana, affinities, spells, or metaphysical laws before their own rules exist.
+Growth in the perception, control, formation, application, and judgment required by a magical system. Magical Development does not own Mana, affinities, spells, or metaphysical laws; [Mana](../magic/MANA.md) and the relevant specialist Magic rules own those facts.
 
 ### Social Development
 
@@ -547,14 +547,14 @@ This document does not define:
 - physical attributes, Stat XP formulas, or bodily growth curves;
 - skill taxonomies, Skill XP formulas, mastery thresholds, or skill fusion;
 - profession structures, certifications, or advancement requirements;
-- mana, affinities, spells, rituals, or magical output;
+- [Mana](../magic/MANA.md), affinities, spells, rituals, or magical output;
 - social actions, relationship mechanics, institutional ranks, or reputation formulas;
 - species stages, mutations, evolution branches, or hidden evolution requirements;
 - exact crossover unlocks between human and monster progression trees;
 - combat, crafting, research, negotiation, or travel resolution procedures;
 - a fixed list of Plateaus or breakthroughs.
 
-Those details belong to later roadmap tasks. Their rules may refine one Track but cannot create a universal total or bypass the six-layer capability model.
+Those details belong to their completed or later specialist roadmap tasks. Their rules may refine one Track but cannot create a universal total or bypass the six-layer capability model.
 
 ## GM Procedure
 

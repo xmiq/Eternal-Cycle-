@@ -440,6 +440,62 @@ A Profession whose practitioners, institutions, tools, knowledge network, materi
 
 A newly integrated field created in response to new tools, species contact, magic, law, ecology, knowledge, or social need.
 
+## Mana
+
+The world-side capacity and medium through which magical change can occur under local world laws. Mana is a shared canonical category, not one universal substance, unit, reserve, or conversion system.
+
+## Mana Relation
+
+The specific way a magical effect encounters Mana, including source, present state, route, transformation, burden, resulting state, and relevant consequences.
+
+## Mana State
+
+A qualitative description of Mana in a bounded context, using only relevant dimensions such as availability, distribution, flow, pattern, stability, provenance, compatibility, renewal, load, and evidence.
+
+## Mana Source
+
+A being, process, place, body, object, relationship, or world condition that supplies, replenishes, concentrates, transforms, or makes a defined form of Mana available under stated rules.
+
+## Mana Field
+
+The local distribution and behavior of Mana across a bounded place, body, object, or other established domain.
+
+## Mana Current
+
+A sustained directional movement of Mana through a Field, Channel, environment, network, or other valid route.
+
+## Mana Reservoir
+
+A bounded being, organ, object, place, structure, contract, or arrangement that can retain a defined form of Mana under local storage, Capacity, leakage, Access, and release rules.
+
+## Mana Sink
+
+A being, process, place, object, or condition that draws in, transforms, binds, disperses, or otherwise removes Mana from a defined local state.
+
+## Mana Trace
+
+Source-bounded evidence left by a magical process in Mana, matter, a body, a place, or another valid medium. A trace does not reveal complete identity, intent, method, or truth by default.
+
+## Mana Conversion
+
+The transformation of Mana from one established state, source relationship, or usable form into another through a valid route while retaining provenance, requirements, loss, byproducts, limits, and incompatibilities.
+
+## Mana Depletion
+
+A meaningful reduction in accessible Mana, supply rate, renewal, or usable distribution within a bounded context.
+
+## Mana Saturation
+
+A condition in which a body, place, object, Channel, or environment approaches or exceeds its safe ability to receive, retain, process, or disperse the Mana currently present.
+
+## Mana Distortion
+
+A source-caused change in Mana behavior, pattern, compatibility, flow, or interaction. Distortion is not automatically corruption, evil, improvement, or permanent damage.
+
+## Mana Context Profile
+
+A qualitative external Campaign Record for one bounded Mana context, including laws, source, state, routes, compatibility, renewal, burdens, evidence, uncertainty, and consequences.
+
 ## Magical Development
 
 Earned growth in a bounded magical capability through meaningful perception, practice, control, experimentation, feedback, recovery, application, and judgment under valid current laws.

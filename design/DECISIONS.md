@@ -2153,3 +2153,67 @@ Skills own learned use and coordination; Development owns current access and rel
 ## D-538 — Unconventional Soul Weapons Are Optional and Non-Farmable
 
 No character, species, Skill, Class, Profession, or viable progression route requires an unconventional or any Soul Weapon. Component counts, copying, regrowth, deliberate breakage, repeated assembly, distributed attacks, danger, ownership, spectacle, and rapid Reincarnation do not automatically produce formation, Awakening, Echoes, Resonance, Depth, Evolution, or capability.
+
+## D-539 — Mana Is a World-Side Magical Phenomenon
+
+Mana is the shared canonical category for the world-side capacity and medium through which magical change occurs under local laws. It is not Soul substance, Development, Skill XP, health, willpower, one universal fluid, or one universal numerical resource.
+
+## D-540 — Every Magical Effect Requires a Mana Relation
+
+Every effect classified as magical must state how it encounters Mana through drawing, generating, redirecting, patterning, storing, converting, releasing, dissipating, or indirectly invoking a source that performs the work. A practitioner need not spend a personal Reserve, but an effect without a valid Mana Relation is either nonmagical or an incomplete magical claim.
+
+## D-541 — Mana States Are Local, Qualitative, and Non-Fungible
+
+Mana is described within a bounded world, Age, source, environment, and system through relevant dimensions such as availability, distribution, flow, pattern, stability, provenance, compatibility, renewal, load, and evidence. Local names and measures do not create universal units or interchangeability.
+
+## D-542 — Mana, Access, Reserve, Capacity, Control, and Authority Are Distinct
+
+Ambient or stored Mana does not prove that a being can reach, hold, regulate, survive, shape, or lawfully invoke it. Every claim must preserve the distinctions among Mana, Magical Access, Magical Reserve, Magical Capacity, Magical Control, and Magical Authority.
+
+## D-543 — Magic Uses Causal Accounting Rather Than One Conservation Formula
+
+Eternal Cycle imposes no universal numerical conservation equation across every Age, but every magical change requires a valid source, route, burden, and resulting state. Uncertain measurement or no personal Reserve cost cannot create unlimited supply, duplicate stored Mana, or erase ecological and source consequences.
+
+## D-544 — Mana Sources Retain Provenance and Agency
+
+A Mana Source supplies only what its established process and domain permit. Gods, spirits, Weapon Souls, collectives, and other person-like sources retain consent, interests, refusal, and ownership rather than becoming deposits of fuel.
+
+## D-545 — Mana Transfer and Conversion Preserve Constraints
+
+Transfer, storage, and conversion require explicit origin, destination, compatibility, route, Capacity, rate, loss, byproducts, authority, and consequence. Similar names or effects do not create universal conversion, and transformation does not make an external source permanently internal.
+
+## D-546 — Mana Perception Produces Scoped Evidence
+
+Detection, discrimination, interpretation, attribution, and prediction are separate capabilities. Mana perception and Mana Traces do not automatically reveal Souls, identity, intent, morality, truth, complete method, exact capability, or future action.
+
+## D-547 — Depletion, Saturation, and Distortion Are States Rather Than Rewards
+
+Mana Depletion, Mana Saturation, and Mana Distortion must retain a bounded source, affected layer, consequences, and recovery route. Exposure, overload, injury, ecological damage, or survival does not automatically grant Development, affinity, resistance, Skills, Evolution, or Soul growth.
+
+## D-548 — Embodiment Mediates Mana Expression
+
+Current organs, Channels, species structures, health, maturation, condition, environment, tools, and calibration determine how Mana can be sensed, stored, transformed, or expressed. Magical history cannot substitute for absent anatomy or present Capacity.
+
+## D-549 — Souls Are Not Mana Reservoirs
+
+Soul Resonance, Soul Echoes, Retained Instincts, Soul Titles, Soul Depth, Soul Weapons, and other Soul structures may interact with Mana only through their bounded receiving rules. They do not supply generic fuel, conversion value, affinity, or Magical Access.
+
+## D-550 — Reincarnation Carries No Mana State
+
+Reincarnation may preserve eligible Magical and Skill Imprints, memory, and bounded relationships, but it does not carry Reserves, Fields, Currents, charges, prepared effects, former Channels, sites, environmental supply, recovery state, or automatic compatibility into a new body or Age.
+
+## D-551 — Soul Weapons Cannot Launder Mana Ownership
+
+A Soul Weapon may conduct, store, sense, resist, or use Mana only through an established form, source, Access route, Skill, and consent. Awakening, Soul Intertwining, possession, symbolism, or persistence does not make it a generic battery or transfer its source's capability to a wielder.
+
+## D-552 — Mana Enters Ecology and World Causality
+
+Mana sources, Fields, Currents, Reservoirs, Sinks, depletion, saturation, and distortion may affect organisms, habitats, materials, settlements, institutions, and conflicts. Their consequences persist according to world causality rather than resetting after a scene.
+
+## D-553 — Mana Does Not Establish Universal Magical Superiority
+
+Magic remains one family of paths among many. Access, preparation, dependence, source limits, traces, counters, environment, tactics, tools, alliances, and ordinary nonmagical capability can all matter, and no viable character or progression route requires direct Mana use.
+
+## D-554 — Live Mana Profiles Remain Campaign Data
+
+Mana Context Profiles are qualitative external Campaign Records. Named current Fields, active Reservoirs, depletion, traces, source relationships, character Reserves, and changing Mana ecology do not belong in the canonical rules repository.

@@ -33,6 +33,8 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/monster-evolution/README.md`](docs/monster-evolution/README.md) - Monster Evolution reading order, adjudication sequence, ownership map, and safeguards.
 - [`docs/human/README.md`](docs/human/README.md) - Human Class and Profession philosophy, rules, reading order, and ownership boundaries.
 - [`docs/soul-weapons/README.md`](docs/soul-weapons/README.md) - complete Soul Weapon state model, reading order, claim resolution, system interfaces, and safeguards.
+- [`docs/magic/README.md`](docs/magic/README.md) - Magic rules, current reading order, ownership boundaries, and implementation status.
+- [`docs/magic/MANA.md`](docs/magic/MANA.md) - Mana as the local, causal, world-side foundation of magical change.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -52,4 +54,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. The current phase is **Phase 7 — Magic**, and the sole current task is **Define mana**. Phase 7 implementation has not started.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana** is complete within **Phase 7 — Magic**, and the sole current task is **Define magical affinities**.

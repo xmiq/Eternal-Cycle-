@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines how capability with magic develops across bodies, species, traditions, Ages, and Reincarnation. It establishes shared Development rules for magical perception, control, application, recovery, and judgment without defining the complete magic system reserved for Phase 7.
+This document defines how capability with magic develops across bodies, species, traditions, Ages, and Reincarnation. It establishes shared Development rules for magical perception, control, application, recovery, and judgment. The [Mana](../magic/MANA.md) rules own the natural world-side medium and causal state through which magical change occurs; later Phase 7 documents own the remaining specialist Magic procedures.
 
 ## Core Rule
 
@@ -452,7 +452,7 @@ Neither statement creates an overall magic rank.
 
 This document does not define:
 
-- one universal mana source, reserve, regeneration rate, capacity formula, or spell tier;
+- one universal Mana source, Reserve, regeneration rate, Capacity formula, or spell tier; [Mana](../magic/MANA.md) instead defines a qualitative local framework that expressly rejects such universality;
 - complete elements, affinities, magic-system taxonomies, spell lists, rituals, enchantment, alchemy, divine magic, or forbidden magic; the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
 - exact costs, ranges, damage, casting times, status effects, or counterspell procedures;
 - which gods, spirits, worlds, species, organs, contracts, or tools exist;
@@ -461,7 +461,7 @@ This document does not define:
 - the detailed magical changes caused by World Resets;
 - a method for converting magical Development into another Track.
 
-Phase 7 may define local magical systems inside these boundaries. Each must state its source, Access, costs, embodiment, authority, recovery, environmental assumptions, failure states, and persistence without creating an overall character level.
+Phase 7 may define local magical systems inside these boundaries. Each must follow the [Mana Relation](../magic/MANA.md#the-mana-relation) and state its source, Access, costs, embodiment, authority, recovery, environmental assumptions, failure states, and persistence without creating an overall character level.
 
 ## GM Procedure
 
@@ -478,7 +478,7 @@ When magical Development or capability matters:
 9. treat rituals, tools, patrons, and groups as explicit support with their own dependencies;
 10. communicate capability for the current objective rather than assigning a universal magic rank;
 11. record Development only for the contribution actually performed and integrated;
-12. defer spell catalogs, mana formulas, affinities, and detailed magical laws to Phase 7 while using [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
+12. apply the canonical [Mana](../magic/MANA.md) framework, defer affinities and later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
 
 ## Worked Examples
 
@@ -527,6 +527,8 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 ## Related Documents
 
 - [Progression Rules Index](README.md)
+- [Magic Rules Index](../magic/README.md)
+- [Mana](../magic/MANA.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
