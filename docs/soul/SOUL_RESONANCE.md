@@ -22,7 +22,7 @@ The genuine shared cause that justifies a Link, such as lived identity, direct p
 
 ### Resonance Target
 
-The specific history, Soul Imprint, Soul Echo, Weapon Soul, soul, relationship, place, object, species pattern, Soul Title, Archive record, or world structure with which alignment is occurring.
+The specific history, Soul Imprint, Soul Echo, Weapon Soul, soul, relationship, place, object, species pattern, Soul Title, Archive Record, or world structure with which alignment is occurring.
 
 ### Resonance Trigger
 
@@ -52,7 +52,7 @@ Alignment with a place, object, ruin, species territory, work of creation, or ot
 
 ### Systemic Resonance
 
-Alignment with Reincarnation, the Akashic Archive, an Age, a World Reset, a world law, or another structure larger than an individual life.
+Alignment with Reincarnation, the [Akashic Archive](AKASHIC_ARCHIVE.md), an Age, a World Reset, a world law, or another structure larger than an individual life.
 
 These forms may overlap. A Soul Weapon awakening may combine reflexive, relational, and environmental Resonance in one event.
 
@@ -95,7 +95,7 @@ Several Links or willing participants align toward one purpose while preserving 
 
 ### World-Bearing
 
-The soul sustains alignment with an Archive record, Age, World Spirit, world law, or comparable structure. This state requires sufficient Depth and explicit access; it never follows from ordinary Resonance development alone.
+The soul sustains alignment with an Archive Record, Age, World Spirit, world law, or comparable structure. This state requires sufficient Depth and explicit access; it never follows from ordinary Resonance development alone.
 
 ## Establishing a Link
 
@@ -105,7 +105,7 @@ A Link may form when a soul:
 - forms a relationship that changes one or more participants;
 - creates, protects, destroys, or transforms something with lasting personal meaning;
 - awakens or intertwines with a Weapon Soul;
-- participates directly in an event remembered by a Soul Echo or recorded by the Akashic Archive;
+- participates directly in an event remembered by a Soul Echo or recorded by the Archive;
 - accepts a Soul Title that genuinely describes its identity;
 - repeatedly responds to a place, oath, symbol, or purpose until it becomes integrated;
 - undergoes Reincarnation, a World Reset, or another explicit soul-level process.
@@ -155,7 +155,7 @@ Common triggers include:
 - entering danger resembling a defining past event;
 - touching a Soul Weapon or relic carrying a valid shared history;
 - undergoing Final Death, Life Reconciliation, Reincarnation, or Interlife;
-- witnessing a pattern associated with an Archive record or World Reset.
+- witnessing a pattern associated with an Archive Record or World Reset.
 
 The strongest events usually combine several triggers with current emotional or practical importance. A trigger should matter to the present incarnation, not merely resemble a detail from the past.
 
@@ -172,7 +172,7 @@ When requirements are satisfied, Resonance may:
 - reveal clues toward a hidden evolution, Soul Title, or Reincarnation candidate;
 - identify a meaningful connection to a place, object, event, or soul;
 - open an accessible region of Soul Space;
-- permit limited contact with a valid Akashic Archive record;
+- permit limited contact with a valid Archive Record;
 - support deliberate movement or awareness during Interlife when Reincarnation rules allow it.
 
 An outcome should follow from the Target and Basis. Resonance with a former smithing life may support craft memory; it does not reveal an unrelated assassination merely because that knowledge would be useful.
@@ -270,7 +270,7 @@ Characters may infer it through:
 - changes within Soul Space;
 - reactions from Soul Echoes, Weapon Souls, Soul Titles, or bonded souls;
 - repeated success or Dissonance under known triggers;
-- specialized magic, artifacts, gods, World Spirits, or Archive interfaces.
+- specialized magic, artifacts, gods, World Spirits, or Archive Interfaces.
 
 Assessments may identify a Target, State, Trigger, or obstruction, but should not expose every hidden requirement automatically. Powerful evaluators can still be mistaken, limited, or biased unless another rule makes them authoritative.
 
@@ -286,7 +286,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Resonance permits recognition and voluntary interaction across recurring relationships without determining present roles.
 - **Soul Weapons:** Mutual Resonance supports awakening, intertwining, communication, and coordinated expression.
-- **Akashic Archive:** Resonance supplies a valid connection to a record while Depth limits safe integration.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** Resonance supplies target-specific alignment while an Archive Basis, Interface, permission, and Depth still govern reading.
 - **Skills and evolution:** Resonance may reveal or support dormant, crossover, hybrid, or hidden possibilities but never replaces their other requirements.
 
 ## Exploit Limits
@@ -345,6 +345,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

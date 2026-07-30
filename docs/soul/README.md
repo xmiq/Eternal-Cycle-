@@ -14,6 +14,7 @@ The Soul Engine governs identity, memory, relationships, and progression that ca
 - [Soul Constellations](SOUL_CONSTELLATIONS.md) - recurring relational patterns among distinct souls.
 - [Soul Titles](SOUL_TITLES.md) - persistent expressions of identity and contextual recognition.
 - [Retained Instincts](RETAINED_INSTINCTS.md) - body-shaped patterns of attention and response carried between lives.
+- [Akashic Archive](AKASHIC_ARCHIVE.md) - source-bound world records, targeted access, and historical interpretation.
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md) - awakening, intertwining, and persistence of Weapon Souls.
 
 ## Reading Order

@@ -38,4 +38,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation is complete. The current phase is **Phase 1 — Soul Engine**, and the sole active task is **Define Akashic Archive**.
+The repository foundation is complete. The current phase is **Phase 1 — Soul Engine**, and the sole active task is **Resolve Soul Avatar terminology against Echo and Weapon avatars**.

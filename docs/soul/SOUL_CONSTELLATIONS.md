@@ -162,7 +162,7 @@ Possible signs include:
 - a Constellation Thread appearing within Soul Space;
 - a Weapon Soul remembering a former incarnation;
 - repeated Resonance under circumstances tied to shared history;
-- a valid Archive, divine, magical, or spiritual assessment.
+- a valid [Archive](AKASHIC_ARCHIVE.md), divine, magical, or spiritual assessment.
 
 Recognition by one member does not make the other remember, agree, reciprocate, or reveal private information. It proves no ownership and creates no obligation to resume contact.
 
@@ -194,7 +194,7 @@ Valid routes include:
 - ordinary travel, migration, family, ecology, politics, trade, war, or chance within established circumstances;
 - a valid Reincarnation candidate influenced by a rule that explicitly considers Soul Constellations;
 - deliberate searching based on information a participant can actually possess;
-- action by a god, World Spirit, Archive interface, ritual, or institution with an established method for detecting the Pattern;
+- action by a god, World Spirit, Archive Interface, ritual, or institution with an established method for detecting the Pattern;
 - consequences left by former incarnations that draw current lives toward the same place or conflict.
 
 When a Constellation is allowed to influence Reincarnation, it may only weight candidates that already satisfy embodiment, world-state, compatibility, earned-access, and causal-placement requirements. It cannot create an impossible birth, revive an extinct species without a route, bypass the active Reincarnation Mode, or place a soul beside another merely because a reunion would be dramatic.
@@ -354,7 +354,7 @@ The GM should track only the Threads and past intersections that matter to play.
 - **[Soul Titles](SOUL_TITLES.md):** A Constellation may satisfy a relational requirement or shape recognition only when the Title rules say so.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Instinctive familiarity or caution may act as a Trigger but does not prove identity by itself.
 - **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** Weapon Souls may become members while remaining distinct persons; intertwining alone does not create a Constellation.
-- **Akashic Archive:** Archive records may corroborate former intersections when valid access exists, but the Constellation grants no automatic Archive access.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** Archive Records may corroborate former intersections when valid access exists, but the Constellation grants no automatic Archive access.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** Convergence, separation, myths, institutions, and conflict must enter the world through causal events rather than authorial convenience.
 
 ## Exploit Limits
@@ -427,6 +427,7 @@ A reincarnator repeatedly hunts another recurring soul, believing that dramatic 
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

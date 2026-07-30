@@ -148,7 +148,7 @@ Following an instinct can be wise, mistaken, or disastrous. It reflects adaptati
 
 A Retained Instinct carries orientation rather than a narrated recollection. It may signal that a surface is unsafe without recalling the cave where that lesson formed, or create comfort in a formation without identifying the former pack.
 
-Specific memories, explanations, and historical facts require Soul Echo, memory, Resonance, or Archive access. An Echo may identify an instinct's Origin and explain how it once functioned, but the instinct can remain accessible while that Echo is Dormant. Likewise, a clear Echo does not make every bodily response of its source life a Retained Instinct.
+Specific memories, explanations, and historical facts require Soul Echo, memory, Resonance, or [Archive](AKASHIC_ARCHIVE.md) access. An Echo may identify an instinct's Origin and explain how it once functioned, but the instinct can remain accessible while that Echo is Dormant. Likewise, a clear Echo does not make every bodily response of its source life a Retained Instinct.
 
 Later translation does not erase provenance. A flight instinct adapted into ship handling still originates in an aerial life. Recording Origin helps the GM distinguish useful analogy from invented knowledge and reveals why similar instincts may disagree.
 
@@ -196,7 +196,7 @@ An instinct may change through later integration. Its expression can broaden, na
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Familiarity or caution may act as a Trigger, but instinct alone cannot identify another soul or create a recurring relationship.
 - **[Soul Titles](SOUL_TITLES.md):** Instinct may influence present Title Expression, while behavior without integrated identity and consequence cannot create a title by itself.
 - **Soul Weapons:** A Weapon Soul may learn an incarnation's cues and cooperate with a compatible response, but remains a distinct person and does not inherit the instinct automatically.
-- **Akashic Archive:** A future Archive rule may verify or contextualize an Origin; an instinct does not provide general access or objective history.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** A valid Archive reading may verify or contextualize an Origin; an instinct does not provide general access or objective history.
 - **Development and skills:** Present-life practice turns useful orientation into reliable capability. Retained Instincts do not replace Skill Imprints, training, or bodily development.
 - **Monster evolution:** An instinct may become evidence for compatibility or a hidden direction only when the evolution system recognizes it; it is never an automatic unlock.
 
@@ -260,6 +260,7 @@ A goblin retains an aerial life's instinct for reading rising air. It feels a Cu
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

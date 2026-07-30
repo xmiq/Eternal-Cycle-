@@ -30,7 +30,7 @@ Soul Depth contributes to a soul's ability to:
 - endure radical changes of body, species, culture, and Age;
 - approach demanding soul systems without immediate overload;
 - remain aware through difficult Reincarnation transitions;
-- survive contact with deep Soul Space or the Akashic Archive;
+- survive contact with deep Soul Space or the [Akashic Archive](AKASHIC_ARCHIVE.md);
 - qualify for rare evolutions, hybrid expressions, or world-scale interactions when their other requirements are met.
 
 Depth provides capacity. It never supplies the missing knowledge, anatomy, skill, compatibility, permission, or Soul Resonance required to use that capacity.
@@ -132,11 +132,11 @@ The soul can coherently support extensive history, several complex bonds, demand
 
 ### Mythic
 
-The soul can preserve identity through radical transformations, long Ages, and World Resets. It can survive limited contact with world-scale beings, laws, or Archive records that would overwhelm ordinary souls.
+The soul can preserve identity through radical transformations, long Ages, and World Resets. It can survive limited contact with world-scale beings, laws, or Archive Records that would overwhelm ordinary souls.
 
 ### World-Deep
 
-The soul has capacity to survive direct engagement with structures that shape reincarnation, the Akashic Archive, or the laws of an Age when another system provides access. World-Deep capacity does not grant omniscience, invulnerability, ownership of the world, or freedom from consequence.
+The soul has capacity to survive direct engagement with structures that shape reincarnation, the [Akashic Archive](AKASHIC_ARCHIVE.md), or the laws of an Age when another system provides access. World-Deep capacity does not grant omniscience, invulnerability, ownership of the world, or freedom from consequence.
 
 ## Crossing a Horizon
 
@@ -187,7 +187,7 @@ Choosing timing, destination, or incarnation direction still requires Reincarnat
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Depth helps distinguish, reconcile, and adapt instincts from different bodies.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Depth supports the complexity of relationships that change form across many lives without creating recognition, reunion, or consent.
 - **Soul Weapons:** Depth can sustain more complex intertwining while never replacing mutual trust or compatibility.
-- **Akashic Archive:** Depth limits how much world-deep truth can be integrated without severe harm.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** Depth limits how much world-deep truth can be integrated without severe harm.
 - **Development and skills:** Depth may qualify a soul for advanced combinations, but practice and system-specific requirements remain necessary.
 
 ## Exploit Limits
@@ -238,6 +238,7 @@ A dragon inherits extraordinary natural power and dominates its territory withou
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

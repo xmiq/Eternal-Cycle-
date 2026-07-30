@@ -112,7 +112,7 @@ Common Regions may be associated with:
 - an intertwined Weapon Soul and shared bond;
 - a Soul Title, [Retained Instinct](RETAINED_INSTINCTS.md), or recurring relationship;
 - a Soul Wound, sealed memory, or damaged Resonance Link;
-- a Gate to an external system such as the Akashic Archive;
+- a Gate to an external system such as the [Akashic Archive](AKASHIC_ARCHIVE.md);
 - a place for reflection, rehearsal, communication, or reconciliation.
 
 Regions are optional organizational structures, not mandatory containers. One Soul Space may use distinct rooms, while another presents every connection through changes in one landscape or melody.
@@ -152,7 +152,7 @@ Examples:
 - A council chamber can help Echoes communicate but cannot grant extra actions or force agreement.
 - A sealed vault can represent inaccessible Soul Imprints but cannot make their access conditions disappear.
 - An evolution altar may display valid choices only when the evolution system has already made those choices available.
-- An Archive gate may present an established connection but cannot invent permission to read the Akashic Archive.
+- An Archive Interface represented by a gate may present an established connection but cannot invent permission to read the Akashic Archive.
 
 Persistent structural change normally follows meaningful integration, repaired harm, a changed bond, a Deepening Event, developed Resonance, or another explicit system event. Repetitive construction, elaborate visualization, or decorative effort does not manufacture permanent soul growth.
 
@@ -181,7 +181,7 @@ Soul Space does not by default:
 - provide a second body, turn, workforce, or stream of unrestricted thought;
 - create knowledge, memories, skills, Soul Imprints, Soul Titles, or Resonance Links from imagination;
 - replace physical training, bodily recovery, sleep, nutrition, crafting, or social action;
-- unlock an evolution, spell, class, candidate, or Archive record without its own requirements;
+- unlock an evolution, spell, class, candidate, or Archive Record without its own requirements;
 - copy, summon, imprison, or reconstruct another soul merely by representing it;
 - heal a Soul Wound by hiding or repainting its symbolic appearance;
 - alter the outside world unless another established ability creates that effect.
@@ -342,7 +342,7 @@ The GM should track only Regions and Constructs that matter to play. Soul Space 
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Instincts may be perceived and reconciled without being mistaken for Echoes or independent souls.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Recurring relationships may support Gates or a consensual Constellation Commons but do not compel entry, disclosure, or intimacy.
 - **Soul Weapons:** An intertwined Weapon Soul may maintain a consensual Region while remaining a distinct person.
-- **Akashic Archive:** Soul Space may host an established Archive interface, but it cannot create access or objective truth.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** Soul Space may host an established Archive Interface, but it cannot create access, provenance, or objective truth.
 - **Development and evolution:** Internal practice and interfaces remain subject to present-life effort, embodiment, and system-specific requirements.
 
 ## Exploit Limits
@@ -410,6 +410,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

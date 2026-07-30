@@ -281,3 +281,31 @@ A Retained Instinct may shift attention, posture, emotion, preparation, or urgen
 ## D-070 — Retained Instincts Preserve Provenance and Resist Collection
 
 Every Retained Instinct retains a specific Origin and may conflict with current or retained responses without making one life authoritative. Repetition, manufactured danger, rapid reincarnation, consumption, observation, or accumulation of shallow lives cannot create, transfer, or indefinitely strengthen instincts by themselves.
+
+## D-071 — The Archive Preserves Source-Bound Traces
+
+The Akashic Archive is a world-deep record structure containing Traces left by participants, consequences, witnesses, creations, relationships, systems, and world laws. Traces retain provenance, perspective, and limited resolution rather than composing one automatically complete account.
+
+## D-072 — Archive Access Is Targeted and Conditional
+
+Every Archive reading requires a specific Target, genuine Archive Basis, valid Interface, bounded scope, applicable Soul Resonance, sufficient Soul Depth and Integrity, permission or an explicit contested rule, and acceptance of the method's consequences. Curiosity, resemblance, possession, or a broad request for useful secrets is insufficient.
+
+## D-073 — Archive Records Are Evidence Rather Than Objective Truth
+
+An Archive Record assembles one or more Traces and may remain incomplete, contradictory, mistranslated, damaged, biased, or surrounded by false Annotations. Provenance and discoverable signs govern reliability; vividness, age, divine presentation, or institutional certification does not guarantee truth.
+
+## D-074 — Archive Reading Does Not Copy Souls or Grant Development
+
+Archive access cannot by default enter private Soul Space, copy a soul or Echo, expose a complete soul history, compel testimony, restore relational claims, or grant Skill XP, Stat XP, anatomy, mastery, evolution, Soul Depth, titles, authority, resurrection, or extra actions. Information must still be embodied, practiced, interpreted, and causally used.
+
+## D-075 — Archive Annotation Cannot Rewrite Reality
+
+An Archive Annotation retains its author and method and may add testimony, interpretation, classification, or links. It cannot overwrite an event, erase an underlying Trace by contradiction, make a false claim true, alter protected soul structures, edit world law, or change the past.
+
+## D-076 — Archive Attunement Persists Without Guaranteeing Access
+
+Archive Attunements and legitimate Links may persist through Final Death, Reincarnation, Interlife, and World Resets. Embodiment, Interface survival, world law, permission, translation, and current capacity still determine expression, and old Archive strata do not become automatically readable after a Reset.
+
+## D-077 — Archive Interfaces and Custodians Are Bounded
+
+Every Archive Interface and Custodian has a defined scope, method, jurisdiction, limits, costs, and possible bias. No Interface or Custodian is automatically omniscient, neutral, morally correct, or empowered to waive privacy, resistance, soul-harm, and world-causality rules.

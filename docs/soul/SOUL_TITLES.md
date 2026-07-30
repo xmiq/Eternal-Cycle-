@@ -117,7 +117,7 @@ Historical impact can broaden a title's Reach and preserve routes for later reco
 
 Public knowledge is not required.
 
-A title may form when no sapient observer sees the defining act if the Title Basis remains genuine, integrated, and consequential. The soul's own lived transformation and the real effects left behind are sufficient evidence for formation. An affected spirit, place, Soul Weapon, or later Archive record may provide a route to recognition only when its own rules establish that connection; none is required merely to certify the title.
+A title may form when no sapient observer sees the defining act if the Title Basis remains genuine, integrated, and consequential. The soul's own lived transformation and the real effects left behind are sufficient evidence for formation. An affected spirit, place, Soul Weapon, or later Archive Record may provide a route to recognition only when its own rules establish that connection; none is required merely to certify the title.
 
 Secrecy changes how a title is discovered and expressed. It does not make self-awarded names true. A character cannot hide in a room, repeat a slogan, and create a title without a meaningful Title Basis.
 
@@ -184,7 +184,7 @@ An observer may recognize a title before the bearer does when that observer has 
 
 ## Perception and Interpretation
 
-There is no universal visible title list. Perception requires a relevant connection and a valid method, such as Soul Resonance, a species sense, a ritual, an artifact, a divine or spiritual office, an institutional test, Soul Space access, or an explicit Archive interface.
+There is no universal visible title list. Perception requires a relevant connection and a valid method, such as Soul Resonance, a species sense, a ritual, an artifact, a divine or spiritual office, an institutional test, Soul Space access, or an explicit Archive Interface.
 
 Different observers may perceive and interpret the same title differently:
 
@@ -356,7 +356,7 @@ Ordinary humiliation, loss of reputation, legal revocation, defeat, disagreement
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** A recurring relationship may contribute to a Title Basis when the title's own formation rules are satisfied. A Constellation does not automatically grant, share, or inherit a title.
 - **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** A Weapon Soul may witness, recognize, challenge, or help interpret a title through shared history. Wielder and weapon remain distinct and do not exchange titles automatically.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** An instinct may act as a Trigger or influence how a title is expressed in a body. Instinctive behavior alone does not establish identity integration or title formation.
-- **Akashic Archive:** A valid Archive record may corroborate a Title Basis, preserve an older name, or reveal historical consequences under its own rules. Recording does not create the title, and the title grants no automatic Archive access or objective self-knowledge.
+- **[Akashic Archive](AKASHIC_ARCHIVE.md):** A valid Archive Record may corroborate a Title Basis, preserve an older name, or reveal historical consequences under its own rules. Recording does not create the title, and the title grants no automatic Archive access or objective self-knowledge.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** Reputation, institutions, myths, fear, opportunity, and historical pressure enter the world through causal actors and consequences rather than automatic plot events.
 - **[Development System](../progression/DEVELOPMENT_SYSTEM.md):** Titles may become requirements or context for separate progression opportunities, but they never replace practice, mastery, anatomy, resources, or system-specific conditions.
 
@@ -424,7 +424,7 @@ After a World Reset, a dominant religion teaches that the "last hearth" is the f
 
 Deep beneath an abandoned city, one explorer chooses to remain behind and hold a failing seal while every companion escapes. No one sees the final vigil, and the survivors believe the seal stabilized by chance. The explorer's sustained choice prevents a buried calamity, transforms their understanding of duty, and remains integrated through Final Death. Life Reconciliation recognizes **The One Who Stayed**.
 
-The title formed without public knowledge. In a later life, the sealed spirit may recognize it if that spirit actually perceived the vigil, or an Archive record may corroborate it if Archive rules allow access. Neither route was required for formation. The title grants no universal defensive bonus; it may instead open a conversation with abandoned guardians or create pressure when others are again asked to remain.
+The title formed without public knowledge. In a later life, the sealed spirit may recognize it if that spirit actually perceived the vigil, or an Archive Record may corroborate it if Archive rules allow access. Neither route was required for formation. The title grants no universal defensive bonus; it may instead open a conversation with abandoned guardians or create pressure when others are again asked to remain.
 
 ### Two Conflicting Titles in One Soul
 
@@ -444,6 +444,7 @@ In a royal sanctuary, the first title makes wardens wary while the second makes 
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

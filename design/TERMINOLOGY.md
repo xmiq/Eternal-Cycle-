@@ -120,6 +120,46 @@ A present sensation, circumstance, emotion, bodily state, or pattern that makes 
 
 The current qualitative relationship between an incarnation and one Retained Instinct: Quiescent, Cued, Available, or Naturalized.
 
+## Akashic Archive
+
+The world-deep metaphysical record structure containing source-bound Archive Traces. It preserves evidence rather than one automatically complete or objective history.
+
+## Archive Trace
+
+A persistent, source-bound imprint left by an event, participant, consequence, creation, relationship, place, system, or world law.
+
+## Archive Record
+
+A coherent reading assembled from one or more related Archive Traces through a valid Archive Interface.
+
+## Archive Target
+
+The specific event, person, soul history, object, place, relationship, technique, Age, world law, or pattern approached by an Archive reading.
+
+## Archive Basis
+
+The genuine connection that justifies approaching an Archive Target, such as direct participation, a Resonance Link, a traced object or place, an authorized role, or an established research path.
+
+## Archive Interface
+
+A place, artifact, ritual, being, institution, Soul Construct, or other explicit method capable of locating and translating some Archive Traces.
+
+## Archive Attunement
+
+A persistent relationship with a specific Archive Interface, Record family, or access method. Persistence does not guarantee current permission or access.
+
+## Archive Annotation
+
+Source-identified testimony, interpretation, classification, or cross-reference attached to an Archive Trace or Record without overwriting its underlying history.
+
+## Archive Custodian
+
+A being, intelligence, institution, or system with bounded responsibility for maintaining, interpreting, protecting, or granting access to part of the Akashic Archive.
+
+## Archive Reading Mode
+
+The qualitative scope of one Archive contact: Trace Contact, Fragment Reading, Record Reading, Comparative Reading, or World-Bearing Reading. Modes are not permanent ranks.
+
 ## Soul Integrity
 
 The coherence that allows a soul to remain one continuing identity while holding many lives, imprints, and bonds.

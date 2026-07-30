@@ -162,7 +162,7 @@ Those questions belong to later Soul Engine rules, Reincarnation rules, or setti
 - **[Soul Titles](SOUL_TITLES.md)** preserve identity-bearing recognition rather than simple numerical bonuses.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md)** preserve recurring relational patterns without compelling present relationships or replacing world causality.
 - **Soul Weapons** persist through a bond between distinct souls.
-- **The Akashic Archive** may preserve or reveal records beyond one soul's personal history.
+- **[The Akashic Archive](AKASHIC_ARCHIVE.md)** may preserve or reveal source-bound Records beyond one soul's personal history.
 - **The World Engine** receives the external consequences of each life even when the soul continues.
 
 ## Examples
@@ -188,6 +188,7 @@ A hostile ritual tears at the bond between an incarnation and a deeply held Soul
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
