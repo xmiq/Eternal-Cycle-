@@ -513,3 +513,35 @@ Reincarnated professionals must test former knowledge against the current body, 
 ## D-128 — Professions Need No Universal Institution or XP Currency
 
 Monster, informal, lost, novel, and culturally distinct Professions may organize and transmit coherent practice without imitating human guilds or schools. Professional Development is recorded through changed integrated capability and evidence rather than a universal Profession XP pool.
+
+## D-129 — Magical Capability Has Separate Sources and Layers
+
+Magical Potential, Access, reserves, capacity, learned technique, affinity, authority, External Empowerment, and current reliability answer different questions. None can be inferred automatically from another or collapsed into one universal magic statistic.
+
+## D-130 — Magical Development Requires a Valid Present Route
+
+Magical Development occurs through a particular source, system, embodiment, and set of current world laws. Knowledge or retained history cannot create missing Channels, organs, permissions, resources, contracts, environmental conditions, or receiving-system compatibility.
+
+## D-131 — Retained Magic Accelerates Reconstruction Rather Than Casting
+
+Magical Imprints may preserve conceptual familiarity, error recognition, control principles, and Ritual Knowledge, while Skill Imprints own Skill XP for bounded magical Skills. Reincarnation does not preserve former reserves, active spells, mature Channels, authority, tools, prepared sites, or Practised Reliability.
+
+## D-132 — Affinity Is Scoped Compatibility
+
+Magical Affinity is a relationship with a named source, element, concept, method, environment, or law. Multiple affinities retain their own conflicts, costs, Channels, conditions, and limits and do not stack as unrestricted bonuses.
+
+## D-133 — Magical Authority and External Power Retain Their Owners
+
+Authority, contracts, divine access, artifacts, patrons, sites, and collective sources provide only the permission or capability their rules establish. A user may develop real Skill in working with them without absorbing their power, consent, office, or persistence.
+
+## D-134 — Rituals, Tools, and Groups Change Dependencies
+
+Ritual substitution, external tools, and collaborative casting may exchange personal output for preparation, materials, infrastructure, authority, specialized roles, and coordination. They do not waive every requirement or award every participant the complete effect's Development.
+
+## D-135 — Magical Harm Is Not Magical Development
+
+Overload, corruption, suppression, Channel damage, hostile magic, and resource exhaustion do not grant Development or resistance merely because they occur. Legitimate adaptation requires a valid route, feedback, recovery, integration, and changed capability.
+
+## D-136 — Magic Does Not Subsume Other Development Tracks
+
+Magical effects may support, alter, or compensate for physical, skill, profession, social, or species capability while retaining magical costs and dependencies. They do not convert Magical Development into those Tracks or replace their current-life requirements.

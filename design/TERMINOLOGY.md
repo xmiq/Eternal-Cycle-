@@ -192,6 +192,102 @@ A Profession whose practitioners, institutions, tools, knowledge network, materi
 
 A newly integrated field created in response to new tools, species contact, magic, law, ecology, knowledge, or social need.
 
+## Magical Development
+
+Earned growth in a bounded magical capability through meaningful perception, practice, control, experimentation, feedback, recovery, application, and judgment under valid current laws.
+
+## Magical Imprint
+
+A Soul Imprint preserving legitimately earned magical developmental familiarity, knowledge, or structure without preserving current reserves, access, authority, embodiment, or reliability.
+
+## Magical Potential
+
+The range and direction of magical development presently possible through a body's structures, species, soul compatibility, inherited traits, environment, sources, contracts, and world laws.
+
+## Magical Access
+
+A currently valid route to perceive, draw upon, invoke, negotiate with, or otherwise participate in a particular magical system or source.
+
+## Magical Reserve
+
+Magical energy or equivalent resource currently available to a being, tool, place, contract, or group under one established magic system. Reserves are not universal or automatically interchangeable.
+
+## Magical Capacity
+
+The bounded amount, rate, complexity, or pressure of magic a present route can safely receive, hold, process, or express. A local system must state which meaning applies.
+
+## Magical Sensitivity
+
+The ability to register that relevant magical activity, structure, or change is present.
+
+## Magical Perception
+
+The developed ability to distinguish, locate, interpret, and track magically relevant information rather than merely noticing its presence.
+
+## Magical Control
+
+The ability to regulate a magical process toward an intended state while responding to feedback and disturbance.
+
+## Magical Precision
+
+The ability to constrain a magical process accurately in target, timing, amount, boundary, form, or another system-relevant dimension.
+
+## Magical Stability
+
+The ability to maintain an intended magical process through time, variation, interference, and recoverable disturbance.
+
+## Magical Efficiency
+
+The scoped relationship between a magical result and the resources, waste, strain, setup, time, or risk required to produce it.
+
+## Magical Recovery
+
+The restoration or stabilization of magical readiness after use, disruption, strain, or damage through the mechanisms recognized by the local system.
+
+## Magical Endurance
+
+Reliable continued magical work over a stated duration, task, environment, and source condition.
+
+## Magical Resistance
+
+The ability to reduce, redirect, endure, detect, recover from, or remain functional under a defined magical influence.
+
+## Magical Affinity
+
+A specific compatibility or responsiveness between a being and a magical source, element, concept, method, environment, or law. Affinity changes learning and expression routes but is not a flat bonus or ownership claim.
+
+## Magical Channel
+
+A biological, spiritual, material, contractual, environmental, or constructed route through which a magical process can pass or be regulated.
+
+## Magical Organ
+
+A body structure that senses, produces, stores, filters, transforms, or directs magic under the rules of its species and world.
+
+## Magical Authority
+
+Permission recognized by a magical source, law, deity, spirit, institution, territory, or contract to invoke a defined effect. Authority is distinct from knowledge and capability.
+
+## External Empowerment
+
+Magical access, capacity, reserve, protection, or expression supplied by an outside being, object, place, institution, collective, or environment under its own conditions.
+
+## Magical Contract
+
+A rule-bound relationship through which parties exchange permission, obligation, service, access, protection, knowledge, or power. A Magical Contract creates only the rights and routes it states.
+
+## Spell Construction
+
+The learned work of designing, adapting, or assembling a repeatable magical expression within one system's laws and constraints.
+
+## Ritual Knowledge
+
+Understanding of a ritual's symbols, roles, materials, timing, conditions, risks, provenance, and intended function. Ritual Knowledge does not by itself establish reliable performance.
+
+## Environmental Compatibility
+
+The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.

@@ -428,7 +428,7 @@ Professional Development may follow honest review and changed practice. Repeatin
 - **[Development System](DEVELOPMENT_SYSTEM.md):** supplies non-fungible Tracks, current-life effort, contextual assessment, and the six-layer model.
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns the individual learned capabilities used within professional practice.
 - **[Physical Development](PHYSICAL_DEVELOPMENT.md):** owns bodily capacity, condition, calibration, and accommodations required by work.
-- **Magical Development:** will own magical sensitivity, control, reserves, affinity, and metaphysical access used by magical professions.
+- **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns magical sensitivity, control, reserves, affinity, and metaphysical access used by magical professions.
 - **Social and Leadership Development:** will own communication, coordination, trust, command, governance, and other relational capabilities used in institutions.
 - **Species Development:** will own body-bound traits and maturation that shape species-specific professions.
 - **[Reincarnation](../soul/REINCARNATION.md):** preserves legitimate Soul Imprints while former office, property, authority, and reputation remain in the world.
@@ -522,6 +522,7 @@ Old knowledge may inspire better food storage and duty rotation only after the i
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
+- [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

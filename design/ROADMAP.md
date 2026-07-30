@@ -4,9 +4,9 @@
 
 **Current phase: Phase 2 — Development System**
 
-**Current task: Define magical development**
+**Current task: Define social and leadership development**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin or continue social and leadership development, species development, or another later Phase 2 task until magical development is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin or continue species development or another later Phase 2 task until social and leadership development is complete unless the project owner explicitly changes the target.
 
 Phase 1 is reviewed and approved. Do not reopen it unless Phase 2 reveals a genuine contradiction that cannot be resolved within the current Development rules.
 
@@ -65,7 +65,7 @@ Phase 1 is complete only when every Soul Engine system is defined and linked, cr
 - [x] Define physical development
 - [x] Define skill development
 - [x] Define profession development
-- [ ] Define magical development
+- [x] Define magical development
 - [ ] Define social and leadership development
 - [ ] Define species development
 - [~] Define Stat XP and retained development

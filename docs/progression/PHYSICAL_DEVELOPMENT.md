@@ -464,7 +464,7 @@ No Physical Dimension is a universal victory statistic. Strong capability should
 - **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may alter leverage, reach, load, or available movement while weapon mastery remains separate.
 - **Species Development:** owns maturation routes, species traits, and body-changing possibilities beyond ordinary conditioning.
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns techniques that organize physical capability toward repeatable actions.
-- **Magical Development:** owns control of magical reinforcement, channels, transformations, and metaphysical expression.
+- **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns control of magical reinforcement, Channels, transformations, and metaphysical expression.
 - **[Profession Development](PROFESSION_DEVELOPMENT.md):** owns integrated judgment and tool practice that may demand specialized bodily capacity.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies food, climate, disease, labor, infrastructure, prejudice, medicine, conflict, and environmental pressure.
 
@@ -550,6 +550,7 @@ The monster remains stronger. The humans become favored for the extraction objec
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
+- [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

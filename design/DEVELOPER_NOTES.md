@@ -39,6 +39,11 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Monster and informal Professions should be allowed to transmit practice through species-appropriate cultural methods without being forced into human institutional forms.
 - A universal Profession XP currency would erase the distinction among knowledge, Skill, judgment, responsibility, authority, and access and should not be introduced.
 - Technical procedures for individual crafts, medicine, law, administration, scholarship, ritual work, and other Professions remain deferred to their Owning Systems and content phases.
+- Phase 7 owns concrete mana models, sources, spell grammars, schools, affinities, rituals, enchanting, alchemy, divine magic, and forbidden magic; Phase 2 defines only their shared Development boundaries.
+- Every later magical system must identify its Access route, resource or equivalent cost, embodiment, authority, recovery, environment, failure states, and persistence rather than assuming one universal mana model.
+- Local caster ranks, spell circles, reserve measures, and threat labels must state what they measure and cannot become an overall character or magic level.
+- Cross-Age magical relearning should reward retained understanding while allowing changed laws to invalidate old formulas, tools, permissions, and environmental assumptions.
+- External Empowerment must remain visibly dependent on its source so artifacts, patrons, contracts, prepared sites, and groups do not become silent permanent statistics.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
