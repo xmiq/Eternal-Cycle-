@@ -47,12 +47,11 @@ The foundation itself is Canonical. Missing procedures, content, formulas, branc
 
 Current examples include:
 
-- [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md);
 - the [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md);
 - [GM Principles](GM_PRINCIPLES.md);
 - the candidate constraints and GM preparation in [Reincarnation](../soul/REINCARNATION.md), while later generation tooling remains incomplete.
 
-A Canonical Foundation constrains improvisation. A provisional Soul Weapon ability, for example, must preserve the Weapon Soul as a distinct person and cannot ignore awakening, mutual transformation, persistence, or ownership merely because Phase 6 is incomplete.
+A Canonical Foundation constrains improvisation. A provisional World Engine event, for example, must preserve causal consequence, world autonomy, uncertainty, and player agency even while detailed simulation procedures remain incomplete.
 
 ### Provisional
 
@@ -94,10 +93,10 @@ The following material is ready to constrain alpha play within its stated scope:
 - the complete [Monster Evolution](../monster-evolution/README.md) framework, including ecology, pressure, routes, stages, branches, hidden conditions, Mutations, apex forms, societies, adaptation, Hybridization, extinction, Soul interaction, and safeguards;
 - the complete [Human Classes and Professions](../human/README.md) framework, including Classes, Professions, Martial Traditions, Magical Schools, Social Advancement, Institutions, Class Evolution, and human progression limits;
 - the canonical [Game Master Framework](GAME_MASTER_FRAMEWORK.md) and [GM Principles](GM_PRINCIPLES.md);
-- [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md), [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md), [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md), [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md), [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md), [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md), [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md), [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md), [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md), [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md), and [Unconventional Soul Weapons](../soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md);
+- the complete [Soul Weapons](../soul-weapons/README.md) framework;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, and completed Soul Weapon rules are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, and the complete Soul Weapon framework are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
@@ -198,42 +197,9 @@ A Provisional Rule must never:
 
 ## Adjudicating Unfinished Systems
 
-The completed [Skill Engine](../skills/README.md) applies directly. A Skill claim is not Provisional merely because it concerns a human tree, monster tree, crossover, adaptation, evolution, fusion, expression mode, hidden capability, or conceptual capability. Any remaining gap receives its status claim by claim under the complete Skill rules and the still-incomplete system that actually owns the missing effect.
+The completed [Soul Engine](../soul/README.md), [Development System](../progression/README.md), [Skill Engine](../skills/README.md), [Monster Evolution](../monster-evolution/README.md), [Human Classes and Professions](../human/README.md), and [Soul Weapons](../soul-weapons/README.md) frameworks apply directly. A claim within their completed scope is not Provisional merely because it is unusual or combines several systems.
 
-### Monsters and Evolution
-
-Until Phase 4 is complete:
-
-- use biologically, ecologically, and metaphysically coherent traits;
-- distinguish current Species Traits from learned Skills and retained soul history;
-- do not grant evolution solely because XP, kills, consumption, age, or repetition reached an arbitrary total;
-- require meaningful conditions, adaptation, current compatibility, gains, losses, needs, and consequences;
-- treat proposed branches and requirements as Provisional;
-- do not turn one campaign ruling into a universal evolution tree.
-
-### Human Classes and Professions
-
-Until Phase 5 is complete:
-
-- treat classes as descriptive traditions, roles, curricula, or institutional packages rather than universal level ladders;
-- use [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) and [Skill Development](../progression/SKILL_DEVELOPMENT.md) for present capability;
-- keep formal rank, Credential, Licence, reputation, access, and actual competence distinct;
-- mark class packages, advancement paths, and undeveloped institutions as Provisional.
-
-### Soul Weapons
-
-Until Phase 6 is complete:
-
-- use the [Soul Weapons Index](../soul-weapons/README.md), [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md), and every dedicated Phase 6 rule marked complete on the Roadmap as binding authority;
-- resolve dormant Weapon Soul existence, awakening, and intertwining through their completed dedicated rules rather than a Provisional Rule;
-- preserve the Weapon Soul as a distinct person with agency, perspective, and its own capability;
-- resolve Soul Weapon Evolution through its completed route, transition, consent, tradeoff, and anti-stacking rules;
-- portray Weapon Soul personalities through their completed dedicated rules rather than weapon stereotypes, alignment labels, or obedient-item assumptions;
-- resolve Weapon Echo memory, access, and sharing through their completed dedicated rules without treating Echoes as extra persons or stored abilities;
-- resolve Legacy Status, custody, succession, later relationships, and self-directed Legacy Evolution through the completed Legacy Weapon rules;
-- assess Soul Weapon compatibility by claim and layer without turning it into consent, Skill, destiny, or one total score;
-- resolve Weapon Manifestations through explicit modes, sources, Anchors, consent, compatibility, action limits, termination, and Reincarnation access;
-- resolve unconventional Soul Weapon claims through a Vessel Topology audit that preserves personhood, continuity, soul count, component roles, Agency Routing, source ownership, and Reincarnation limits.
+When one claim also needs an effect owned by an unfinished system, apply every completed owner normally and make only the missing effect Provisional. Do not reopen a completed framework, duplicate its capability, or treat an adjacent gap as permission to ignore its safeguards.
 
 ### Magic
 

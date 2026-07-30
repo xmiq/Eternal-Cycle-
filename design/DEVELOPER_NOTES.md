@@ -20,7 +20,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Later skill and evolution rules must test combinations against the Soul Engine's one-owner and no-duplicate-benefit rules.
 - Very old souls may create option and bookkeeping overload even when active throughput is bounded; GM tools should surface only history relevant to the present claim.
 - Numerical or ranked systems added later must not convert Soul Depth, Resonance, Titles, Echo count, or Avatar status into a hidden universal power level.
-- Soul Weapon rules remain foundational until Phase 6 defines trust, refusal, evolution, Legacy Weapons, Weapon Echoes, and Weapon Manifestations in full.
+- The completed Soul Weapon framework should be pressure-tested against attempts to turn partnership, persistence, topology, or manifestation into compulsory progression or equipment statistics.
 
 ## Post-Phase 2 Watchlist
 
@@ -571,3 +571,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Site-Bound Vessels should feel like bounded persons within structures, not omniscient buildings, instant institutions, or portable fortresses.
 - Record-bearing and copied vessels need consistent evidence so information continuity contributes meaning without becoming soul duplication.
 - Future Magic rules must define non-solid and source-dependent vessel coherence without making magical persistence a universal substitute for Vessel Continuity.
+
+## Phase 6 Integration Audit
+
+- All ten dedicated Soul Weapon documents are indexed in canonical reading order and resolve through one phase-wide claim sequence.
+- Weapon Soul state, bond state, personality, form, Echoes, Legacy Status, compatibility, Manifestation access, and Vessel Topology remain separate facts rather than one progression ladder.
+- Every claim assigns personhood, capability, action, embodiment, source, and world consequence to one owner before resolving interaction.
+- Soul systems may support identity and relationship without manufacturing a Weapon Soul, bond, capability, or obedience.
+- Skills and Development remain necessary for current use; Human structures govern teaching and recognition; Monster Evolution governs anatomy; Magic and external sources retain their own effects and costs.
+- Reincarnation can preserve an eligible Weapon Soul, bond, and form under a valid Passage Accord without carrying worldly mass, Components, mastery, access, or a compatible body as inventory.
+- Stale Phase 6 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
+- Phase 7 must preserve source ownership when mana, affinity, spell, ritual, enchantment, divine, or forbidden effects interact with a Weapon Soul or vessel.

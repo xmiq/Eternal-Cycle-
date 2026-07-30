@@ -461,7 +461,7 @@ No Physical Dimension is a universal victory statistic. Strong capability should
 - **[Retained Instincts](../soul/RETAINED_INSTINCTS.md):** may orient attention or response while Physical and Skill Development own reliable present expression.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may change recognition or opportunity but grant no flat physical bonus.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant body histories without restoring former anatomy, statistics, or action economy.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may alter leverage, reach, load, or available movement while weapon mastery remains separate.
+- **[Soul Weapons](../soul-weapons/README.md):** may alter leverage, reach, load, or available movement while weapon mastery remains separate.
 - **[Species Development](SPECIES_DEVELOPMENT.md):** owns maturation routes, Species Traits, and body-changing possibilities beyond ordinary conditioning.
 - **[Skill Development](SKILL_DEVELOPMENT.md):** owns techniques that organize physical capability toward repeatable actions.
 - **[Magical Development](MAGICAL_DEVELOPMENT.md):** owns control of magical reinforcement, Channels, transformations, and metaphysical expression.

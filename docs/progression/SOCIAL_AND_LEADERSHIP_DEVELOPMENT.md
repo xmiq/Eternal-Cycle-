@@ -407,7 +407,7 @@ Neither has a higher universal social score.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** own title-based Symbolic Authority and narrative pressure without granting leadership capability.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize historical perspectives without creating universal authority or infallible policy.
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** may preserve social evidence while remaining incomplete, interpreted, and unable to compel belief.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** are distinct persons whose trust, cooperation, and refusal remain their own.
+- **[Soul Weapons](../soul-weapons/README.md):** are distinct persons whose trust, cooperation, and refusal remain their own.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** owns populations, institutions, factions, resources, law, public reaction, conflict, and causal group consequences.
 
 ## Scope Boundaries

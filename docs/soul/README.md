@@ -19,7 +19,7 @@ The Soul Engine governs identity, memory, relationships, and progression that ca
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md) - ownership and resolution rules for combined soul effects.
 - [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md) - shared exploit resistance, agency protection, soul-harm review, and consequence continuity.
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md) - Soul Engine constraints for Weapon Soul emergence, personhood, intertwining, and persistence.
-- [Soul Weapons Index](../soul-weapons/README.md) - detailed Phase 6 rules beginning with dormant Weapon Soul formation, evidence, and Vessel Continuity.
+- [Soul Weapons Index](../soul-weapons/README.md) - complete detailed rules for Weapon Soul formation, Awakening, partnership, identity, change, memory, legacy, compatibility, manifestation, and unconventional vessels.
 
 ## Reading Order
 

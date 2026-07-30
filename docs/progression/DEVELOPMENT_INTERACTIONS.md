@@ -277,7 +277,7 @@ Soul systems affect Development primarily through persistence, access, interpret
 - [Retained Instincts](../soul/RETAINED_INSTINCTS.md) can orient attention, not supply anatomy or complete Skills.
 - [Soul Titles](../soul/SOUL_TITLES.md) can alter recognition and opportunity, not grant flat bonuses.
 - [Soul Avatars](../soul/SOUL_AVATARS.md) can synthesize bounded history, not bypass current embodiment or add actions.
-- [Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md) can cooperate, resist, teach, and provide a changing tool while remaining distinct persons.
+- [Soul Weapons](../soul-weapons/README.md) can cooperate, resist, teach, and provide a changing tool while remaining distinct persons.
 
 The [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) owns external conditions and consequences: teachers, institutions, materials, ecology, logistics, law, war, weather, technology, public response, and adaptation to visible methods. Development does not force the world to supply a missing opportunity, and the World Engine does not grant mastery merely because events occur.
 

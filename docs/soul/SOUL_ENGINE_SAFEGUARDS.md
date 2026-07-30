@@ -267,7 +267,7 @@ A new genre, magic law, technology, species order, or geography should transform
 | **[Retained Instincts](RETAINED_INSTINCTS.md)** | species collection, anatomy bypass, perfect danger sense, and disguised compulsion | old adaptations may help, misfire, conflict, or require present translation |
 | **[Akashic Archive](AKASHIC_ARCHIVE.md)** | omniscience, objective-history claims, skill copying, and reality editing | evidence remains bounded by provenance, interpretation, access politics, and exposure |
 | **[Soul Avatars](SOUL_AVATARS.md)** | prestige qualification, super-mode stacking, past-life voting, and destined centrality | synthesis creates fatigue, identity pressure, visibility, duty, and contested interpretation |
-| **[Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)** | staged awakening, ownership-as-consent, automatic mastery, and replacing all equipment | the Weapon Soul remains a relationship with its own trust, damage, needs, and worldly history |
+| **[Soul Weapons](../soul-weapons/README.md)** | staged Awakening, ownership-as-consent, automatic mastery, compulsory progression, unrestricted Manifestation, and replacing all equipment | the Weapon Soul remains a distinct partner with its own personhood, consent, capability, damage, needs, and worldly history |
 | **[Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)** | circular qualification, duplicate rewards, and silent rule overrides | one owner resolves each claim and failed layers produce bounded partial outcomes |
 
 ## Stress Tests and Rulings

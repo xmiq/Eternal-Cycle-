@@ -84,14 +84,14 @@ Likewise, a socially charming voice is not proof of a Weapon Soul. Source eviden
 | **Function** | What the Weapon Vessel materially or magically does through its established sources. |
 | **Capability** | What the Weapon Soul or another actor can reliably accomplish under current access and embodiment. |
 | **Skill** | A learned capability governed by the [Skill Engine](../skills/README.md). |
-| **Compatibility** | Whether a particular relationship, body, purpose, form, and situation can cooperate effectively; later dedicated rules own the full model. |
+| **Compatibility** | Whether a particular relationship, body, purpose, form, and situation can cooperate effectively under [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md). |
 | **Consent** | A current or standing answer to a scoped request, not a personality trait. |
 | **Loyalty** | A changing relationship judgment, not an inherent weapon property. |
 | **Morality** | Contested values and choices, not a universal alignment assigned by vessel type. |
 | **Soul Title** | Persistent identity-bearing recognition formed under [Soul Title](../soul/SOUL_TITLES.md) rules, not a personality label. |
 | **Human Class or Profession** | A social learning framework or organized work identity, not the Weapon Soul's temperament. |
 | **Monster Evolution** | Bodily species transition, not personality growth. |
-| **Soul Weapon Evolution** | A later rule for qualitative change in Soul Weapon form or capability, not ordinary character development. |
+| **Soul Weapon Evolution** | Qualitative change in Soul Weapon form or capability under [Weapon Evolution](WEAPON_EVOLUTION.md), not ordinary character development. |
 
 A bold Weapon Soul does not grant courage. A cautious one does not impose a penalty. A sword that values mercy is not automatically unable to cut, and an executioner's blade is not automatically cruel.
 

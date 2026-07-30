@@ -464,7 +464,7 @@ A future fusion candidate must at minimum have:
 - **[Soul Depth](../soul/SOUL_DEPTH.md):** may support integration of breadth and contradiction but grants no Skill or proficiency.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may create opportunity or recognition without granting a Skill rank.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant Skill history without unlocking every Skill or bypassing the current tree.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may cooperate in weapon Skills while remaining distinct persons and supplying no automatic mastery.
+- **[Soul Weapons](../soul-weapons/README.md):** may cooperate in weapon Skills while remaining distinct persons and supplying no automatic mastery.
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** may provide source-bounded instruction or demonstrations without awarding Skill XP.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies teachers, cultures, tools, institutions, opponents, material conditions, and consequences that shape Skill access and value.
 

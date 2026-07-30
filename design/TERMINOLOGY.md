@@ -1086,7 +1086,7 @@ A persistent, bounded memory structure formed when an awakened Weapon Soul meani
 
 ## Weapon Soul
 
-The dormant or awakened soul belonging to a weapon or meaningful tool.
+A distinct soul formed through coherent Vessel History and anchored to a Weapon Vessel, whether dormant or awakened. It is neither the legal owner's property nor a projection of a user.
 
 ## Dormant Weapon Soul
 
@@ -1111,6 +1111,10 @@ An observable event or pattern consistent with a dormant Weapon Soul but insuffi
 ## Weapon Soul Awakening
 
 The transition from Dormant Weapon Soul to an awakened person capable of reliable self-awareness, distinct intention, interpretation, communication, consent, and refusal within current access and embodiment.
+
+## Awakened Weapon Soul
+
+A Weapon Soul that has completed Weapon Soul Awakening and is now a distinct person capable of self-originated interpretation, consent, refusal, relationship, and deliberate agency within current access and embodiment. Awakening does not imply Soul Intertwining, loyalty, capability transfer, Evolution, or Manifestation.
 
 ## Shared Awakening Pressure
 

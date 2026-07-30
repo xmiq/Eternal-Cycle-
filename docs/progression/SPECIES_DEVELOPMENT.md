@@ -362,7 +362,7 @@ Useful comparisons remain contextual:
 - **[Soul Depth](../soul/SOUL_DEPTH.md):** may support integration of radically different lives without granting traits or final evolution.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may affect recognition or qualify as evidence only where a later receiving rule permits it.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize species perspectives while preserving present anatomy and action limits.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may adapt cooperation or form under their own rules without becoming Species Traits.
+- **[Soul Weapons](../soul-weapons/README.md):** may adapt cooperation or form under their own rules without becoming Species Traits.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** owns ecological consequences, populations, resources, habitats, disease, migration, and social response.
 
 ## Scope Boundaries

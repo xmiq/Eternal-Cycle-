@@ -96,7 +96,7 @@ Intertwining does not install:
 - passive statistics, durability, damage, luck, or immunity;
 - automatic evolution, form change, summoning, or manifestation.
 
-The [Skill Engine](../skills/README.md), [Development System](../progression/README.md), current embodiment, and later Soul Weapon rules own those claims.
+The [Skill Engine](../skills/README.md), [Development System](../progression/README.md), current embodiment, and the relevant dedicated Soul Weapon rules own those claims.
 
 ### Not Permanent Consent to Everything
 
@@ -152,7 +152,7 @@ Both participants must understand the material commitments currently knowable, i
 - whether a standing Passage Accord is being established;
 - known risks from Soul Strain, Dissonance, vessel damage, hostile attention, or incompatible embodiment;
 - how either participant may pause, renegotiate, or end cooperation;
-- which facts remain uncertain because later Soul Weapon rules or world conditions are unknown.
+- which facts remain uncertain because a dedicated Soul Weapon rule, source rule, or world condition is presently unknown.
 
 No participant must possess perfect cosmological knowledge. Informed consent requires honest disclosure of material known facts and uncertainty, not omniscience.
 
@@ -304,7 +304,7 @@ A continuing soul is not assigned a universal Soul Weapon slot. It may form more
 - make Depth a collection capacity score;
 - permit one Weapon Soul to consent for another.
 
-Configurations outside this standard structure remain unsupported until an explicit later rule defines them.
+[Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md) may coordinate several separate bonds or Weapon Souls through bounded vessel and assembly rules, but it does not create group intertwining, pooled consent, or a shared passage route. Any configuration outside these established structures remains unsupported.
 
 ## Persistence and Reincarnation
 

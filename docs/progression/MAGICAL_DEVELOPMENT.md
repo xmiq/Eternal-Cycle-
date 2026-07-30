@@ -444,7 +444,7 @@ Neither statement creates an overall magic rank.
 - **[Retained Instincts](../soul/RETAINED_INSTINCTS.md):** may cue former magical attention or response while current control requires Development.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may influence symbolic access, reactions, or affinities only where a receiving rule defines the result.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant magical histories without unlocking every spell, source, or Channel.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may collaborate, focus, resist, or supply their own magic while remaining distinct persons.
+- **[Soul Weapons](../soul-weapons/README.md):** may collaborate, focus, resist, or supply their own magic while remaining distinct persons.
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** may preserve source-bounded magical evidence without granting Development or authority.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies magical environments, institutions, resources, ecological effects, law, conflict, and changes between Ages.
 

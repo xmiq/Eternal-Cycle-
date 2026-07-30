@@ -444,7 +444,7 @@ Class contact, cultural adoption, memory, Soul Resonance, a hybrid identity, a c
 
 ### Soul Weapons
 
-[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md) may provide a powerful external relationship, capability, tool, feedback source, and training partner. The Weapon Soul retains personhood, abilities, consent, form, maintenance, and limits. Its power does not become the wielder's human Development.
+[Soul Weapons](../soul-weapons/README.md) may provide a powerful external relationship, capability, tool, feedback source, and training partner. The Weapon Soul retains personhood, abilities, consent, form, maintenance, and limits. Its power does not become the wielder's human Development.
 
 ### Akashic Archive
 

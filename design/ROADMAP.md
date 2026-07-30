@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 6 — Soul Weapons**
+**Current phase: Phase 7 — Magic**
 
-**Current task: Audit and integrate Phase 6**
+**Current task: Define mana**
 
-Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and integrate Phase 6** unless the project owner explicitly changes the target. Do not begin Phase 7 until the Phase 6 audit and every exit criterion are complete unless the project owner explicitly changes the target.
+Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define mana** unless the project owner explicitly changes the target. Do not begin magical affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, detailed magical development, or Magic's World Engine effects until mana is complete unless the project owner explicitly changes the target.
 
-Phases 1 through 5 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 6 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -154,7 +154,7 @@ Phase 5 is complete only when Human Classes, Professions, Martial Traditions, Ma
 - [x] Define compatibility
 - [x] Define Weapon Manifestations
 - [x] Define unconventional Soul Weapons
-- [~] Audit and integrate Phase 6
+- [x] Audit and integrate Phase 6
 
 ### Exit Criteria
 

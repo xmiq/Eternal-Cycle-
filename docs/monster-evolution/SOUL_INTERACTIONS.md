@@ -313,7 +313,7 @@ The [Akashic Archive](../soul/AKASHIC_ARCHIVE.md) may preserve route history, fa
 
 ### Soul Weapons
 
-A Weapon Soul remains a distinct person. It may provide testimony, consent, Resonance, protection, or a route-specific relationship when a valid transition recognizes the bond. A Soul Weapon does not fuse with the body, donate weapon evolution, or become a monster organ unless a later explicit rule defines that exceptional interaction.
+A Weapon Soul remains a distinct person. It may provide testimony, consent, Resonance, protection, or a route-specific relationship when a valid transition recognizes the bond. [Soul Weapons](../soul-weapons/README.md) do not fuse with a body or donate Weapon Evolution. [Unconventional Soul Weapons](../soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md) requires a distinct Vessel Boundary for any Body-Linked Vessel, while natural organs and weapons remain with Monster Evolution.
 
 ## Individual and Population Evolution
 

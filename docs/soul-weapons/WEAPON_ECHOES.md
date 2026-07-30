@@ -479,7 +479,7 @@ A Weapon Soul may tell a new incarnation, "Last time we fought a dragon, you sto
 
 If the Weapon Soul stays in the world, its Chapters continue through actual experience. It does not freeze while the Bonded Soul reincarnates elsewhere.
 
-## Evolution, Legacy, and Later Soul Weapon Rules
+## Evolution, Legacy, and Related Soul Weapon Rules
 
 ### Soul Weapon Evolution
 

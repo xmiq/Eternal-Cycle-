@@ -353,7 +353,7 @@ The GM should track only the Threads and past intersections that matter to play.
 - **[Soul Space](SOUL_SPACE.md):** Soul Gates can connect members, while a Constellation Commons provides a consensual shared structure without merging private Spaces.
 - **[Soul Titles](SOUL_TITLES.md):** A Constellation may satisfy a relational requirement or shape recognition only when the Title rules say so.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Instinctive familiarity or caution may act as a Trigger but does not prove identity by itself.
-- **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** Weapon Souls may become members while remaining distinct persons; intertwining alone does not create a Constellation.
+- **[Soul Weapons](../soul-weapons/README.md):** Weapon Souls may become members while remaining distinct persons; intertwining alone does not create a Constellation.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** Archive Records may corroborate former intersections when valid access exists, but the Constellation grants no automatic Archive access.
 - **[Soul Avatars](SOUL_AVATARS.md):** A Constellation may provide transformative relationships and Triggers but is never the internal structure of a Soul Avatar and cannot share or appoint that status.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** Convergence, separation, myths, institutions, and conflict must enter the world through causal events rather than authorial convenience.

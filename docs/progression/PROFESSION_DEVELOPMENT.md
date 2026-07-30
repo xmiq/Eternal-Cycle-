@@ -437,7 +437,7 @@ Professional Development may follow honest review and changed practice. Repeatin
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** may preserve procedures, failures, and evidence without awarding competence or authority.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** may create symbolic opportunity or expectation without granting a profession, Credential, or Licence.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** may synthesize relevant professional perspectives without replacing current validation and practice.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** may act as collaborators, witnesses, tools, or clients while remaining distinct persons.
+- **[Soul Weapons](../soul-weapons/README.md):** may act as collaborators, witnesses, tools, or clients while remaining distinct persons.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies labor, markets, law, institutions, resources, disease, conflict, demand, technology, and cultural recognition.
 
 ## Scope Boundaries

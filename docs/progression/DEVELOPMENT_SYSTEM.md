@@ -531,7 +531,7 @@ Later numerical rules must produce bounded, compatibility-sensitive acceleration
 - **[Retained Instincts](../soul/RETAINED_INSTINCTS.md):** Instincts may orient attention or suggest a body-shaped response. Present practice develops any reliable current-life capability built from them.
 - **[Soul Titles](../soul/SOUL_TITLES.md):** Titles may affect World Recognition and access to opportunities. They provide no flat Development bonus or mastery.
 - **[Soul Avatars](../soul/SOUL_AVATARS.md):** Avatar Expression may synthesize relevant histories without granting every former capability, missing anatomy, additional actions, or automatic current mastery.
-- **[Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md):** A Weapon Soul is a distinct participant. Its cooperation, form, and history may support development, but ownership and intertwining do not grant weapon mastery.
+- **[Soul Weapons](../soul-weapons/README.md):** A Weapon Soul is a distinct participant. Its cooperation, form, and history may support development, but ownership and intertwining do not grant weapon mastery.
 - **[Soul Space](../soul/SOUL_SPACE.md):** Soul Space may support reflection, rehearsal, and access while external time, current attention, and Development requirements remain in force.
 - **[Akashic Archive](../soul/AKASHIC_ARCHIVE.md):** Archive Records may provide information and instruction. Information must still be interpreted, embodied, practised, and used.
 - **[Soul Constellations](../soul/SOUL_CONSTELLATIONS.md):** Recurring relationships may create instruction, cooperation, or social context without pooling Development or consent.

@@ -41,7 +41,7 @@ It does not own the effects of the things it organizes.
 | Rank, office, command authority, loyalty, morale, and reputation | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and current institutions |
 | Natural weapons, anatomy, senses, and Species Traits | [Species Development](../progression/SPECIES_DEVELOPMENT.md) and current form |
 | Spells, mana, magical reinforcement, and source-specific supernatural effects | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and later Magic rules |
-| Soul Weapon personhood, form, awakening, and capabilities | [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) and later Soul Weapon rules |
+| Soul Weapon personhood, form, awakening, and capabilities | [Soul Weapons](../soul-weapons/README.md) |
 | Symbolic identity carried across lives | [Soul Titles](../soul/SOUL_TITLES.md) |
 
 ## What a Martial Tradition Is Not

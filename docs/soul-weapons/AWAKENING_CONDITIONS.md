@@ -239,7 +239,7 @@ The user may risk the vessel, the self, or another valued possibility in a choic
 
 Conflicting makers, users, purposes, cultures, enchantments, or historical meanings may become impossible to hold as one latent pattern. Awakening can occur when the Weapon Soul becomes the person who must interpret that conflict.
 
-Conflict does not guarantee a fractured or hostile personality. Later personality rules own the ongoing result.
+Conflict does not guarantee a fractured or hostile personality. [Weapon Personalities](WEAPON_PERSONALITIES.md) owns the ongoing result.
 
 ## Prepared Trials and Manufactured Danger
 
@@ -281,7 +281,7 @@ Its first accessible memory can be:
 - uncertain about events the vessel could not perceive or interpret;
 - newly reinterpreted as self-awareness develops.
 
-Weapon Echoes are a later distinct system. Ordinary awakened memory is not automatically a Weapon Echo, and awakening does not copy a user's private thoughts or Soul Echoes.
+[Weapon Echoes](WEAPON_ECHOES.md) are a distinct system. Ordinary awakened memory is not automatically a Weapon Echo, and awakening does not copy a user's private thoughts or Soul Echoes.
 
 ## Consent and the First Choice
 
