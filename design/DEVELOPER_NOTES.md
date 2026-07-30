@@ -525,3 +525,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Repeated Chapter Reconciliation must not become a Soul Depth, personality, evolution, or memory-clarity farming loop.
 - Later Legacy Weapon rules should use selective Echo sharing as testimony and relationship material without treating inheritance as access or mastery.
 - Later unconventional-vessel rules must revisit how distributed or composite Vessel Perspectives define one coherent Chapter without duplicating Echoes.
+
+## Phase 6 Legacy-Weapon Watchlist
+
+- Legacy Status and bond status should remain visibly separate in campaign records, especially when a Suspended bond leaves the weapon in the world for centuries.
+- Legacy Accords need playtest attention so useful standing cooperation remains practical without quietly becoming lesser Soul Intertwining.
+- Custody and personhood conflicts should preserve both ethical weight and physical causality; a trapped Weapon Soul should not gain automatic escape, while suppression must not be mistaken for consent.
+- Later compatibility rules must not treat successor resemblance, bloodline, Skill, trust, affection, shared goals, or predecessor approval as a universal compatibility score.
+- Selective Weapon Echo sharing should support testimony and instruction without turning long-lived Legacy Weapons into open archives or mastery dispensers.
+- Self-directed Legacy Evolution should remain viable for personhood and change while absent-partner assets, followers, fame, worship, and grief remain unusable as generic route fuel.
+- A former Bonded Soul's return after Severance needs consistent portrayal: history matters, but it creates no ownership or priority over a current bond.
+- Institutions should differ meaningfully in how they classify Legacy Weapons without any legal category silently establishing metaphysical truth.

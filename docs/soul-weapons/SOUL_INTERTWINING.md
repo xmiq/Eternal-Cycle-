@@ -344,7 +344,7 @@ A valid refusal before Life Reconciliation places the passage route into Bond Su
 
 When sudden Final Death prevents a new discussion, the last valid Passage Accord governs. Silence at death does not create new consent or cancel prior informed standing consent. Evidence of magical suppression, possession, falsified communication, or coercion must be resolved before treating an apparent refusal or agreement as valid.
 
-The detailed future status of an awakened Weapon Soul left in the world belongs to the later Legacy Weapon rules.
+The future status of an awakened Weapon Soul left in the world follows [Legacy Weapons](LEGACY_WEAPONS.md). Legacy Status does not undo the bond state or transfer it to a later bearer.
 
 ### A New Body Does Not Renew Ownership
 
@@ -524,7 +524,7 @@ The spear closes its cooperative combat channel and invokes a boundary against t
 
 Before a dangerous final campaign, a Weapon Soul states that it will not leave the civilization it helped build. The Bonded Soul accepts the choice, and they suspend standing passage while preserving communication and affection.
 
-When the Bonded Soul later reaches Final Death, the Weapon Soul remains with its vessel in the world. Reincarnation does not treat it as abandoned inventory or force it to follow. Their shared history remains real, and later Legacy Weapon rules determine any additional status.
+When the Bonded Soul later reaches Final Death, the Weapon Soul remains with its vessel in the world. Reincarnation does not treat it as abandoned inventory or force it to follow. Their shared history remains real, and [Legacy Weapons](LEGACY_WEAPONS.md) determines any additional Legacy Status without erasing the existing bond state.
 
 ### The Unsuitable New Body
 
@@ -571,13 +571,14 @@ They intertwine through a deliberate Accord at the completion of a generational 
 
 ## Scope Boundaries
 
-This document establishes the persistent relationship that makes an awakened Weapon Soul and its Bonded Soul a Soul Weapon partnership. It does not define what personality the Weapon Soul develops, which forms or capabilities a Soul Weapon may acquire, how evolution occurs, whether old vessel experiences become Weapon Echoes, how an unaccompanied awakened weapon becomes a Legacy Weapon, detailed compatibility profiles, independent Weapon Manifestation, or unconventional bond structures.
+This document establishes the persistent relationship that makes an awakened Weapon Soul and its Bonded Soul a Soul Weapon partnership. It does not define what personality the Weapon Soul develops, which forms or capabilities a Soul Weapon may acquire, how evolution occurs, whether old vessel experiences become Weapon Echoes, how an unaccompanied awakened weapon gains Legacy Status under [Legacy Weapons](LEGACY_WEAPONS.md), detailed compatibility profiles, independent Weapon Manifestation, or unconventional bond structures.
 
 ## Related Canon
 
 - [Soul Weapons Index](README.md)
 - [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md)
 - [Awakening Conditions](AWAKENING_CONDITIONS.md)
+- [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

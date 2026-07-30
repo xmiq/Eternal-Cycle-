@@ -494,7 +494,7 @@ It cannot restore the form, satisfy a future Weapon Evolution Route, provide a S
 
 ### Legacy Weapons
 
-A future Legacy Weapon may share selected Weapon Echoes with later users under its own agency and access. No user inherits mastery, ownership, bond status, or every prior relationship through disclosure. The dedicated Legacy Weapon rules own succession.
+A [Legacy Weapon](LEGACY_WEAPONS.md) may share selected Weapon Echoes with later users under its own agency and access. No user inherits mastery, ownership, bond status, or every prior relationship through disclosure. Legacy Weapon rules own succession and later relationships.
 
 ### Compatibility
 
@@ -647,7 +647,7 @@ Repeated recall does not fix the damage by effort alone or create new fragments 
 
 ## Scope Boundaries
 
-This document defines Weapon Echo formation, memory, access, sharing, privacy, alignment, persistence, and safeguards. It does not determine how a Legacy Weapon selects or bonds with later users, how compatibility is assessed, how a Weapon Soul manifests independently, or how unconventional vessel structures preserve Chapters.
+This document defines Weapon Echo formation, memory, access, sharing, privacy, alignment, persistence, and safeguards. [Legacy Weapons](LEGACY_WEAPONS.md) determines succession and later relationships. This document does not determine detailed compatibility, independent Weapon Manifestation, or how unconventional vessel structures preserve Chapters.
 
 ## Related Canon
 
@@ -657,6 +657,7 @@ This document defines Weapon Echo formation, memory, access, sharing, privacy, a
 - [Soul Intertwining](SOUL_INTERTWINING.md)
 - [Weapon Personalities](WEAPON_PERSONALITIES.md)
 - [Weapon Evolution](WEAPON_EVOLUTION.md)
+- [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

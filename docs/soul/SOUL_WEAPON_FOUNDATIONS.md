@@ -55,7 +55,9 @@ The complete rules for Weapon Chapters, Chapter Reconciliation, Weapon Echo Core
 
 ## Legacy Weapons
 
-If intertwining is incomplete, the awakened weapon may remain in the world. Future wielders must earn trust rather than automatically gaining ownership.
+An awakened Weapon Soul may remain in the world after a defining relationship, purpose, or Age has ended. Its earlier history may create Legacy Status without making the Weapon Soul property, opening a vacant bond, or transferring the predecessor's trust and mastery to an heir.
+
+Custody, stewardship, bearing, Legacy Accords, Soul Weapon Bonds, and legal ownership remain separate. A Suspended bond continues to exist, while a Severed or never-intertwined Legacy Weapon may consider a later bond only through a new, fully qualified Soul Intertwining. The complete rules for Legacy Basis, transition, succession, selective Echo sharing, later relationships, and bounded self-directed Legacy Evolution are defined in [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md).
 
 ## Foundational Safeguards and Consequences
 
@@ -70,7 +72,7 @@ A Weapon Soul remains a distinct person before and after intertwining.
 - lasting injury, forced alteration, severance, or destruction of either soul requires an explicit cause, fair warning, meaningful resistance, and consequences proportionate to the threatened loss;
 - awakening and intertwining enter the world through witnesses, damage, obligations, enemies, institutions, and the history shared by both souls rather than functioning as private reward screens.
 
-Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy Weapon, compatibility, unconventional-form, and Weapon Manifestation rules remain owned by their dedicated Soul Weapons tasks. These foundations grant none of those unfinished capabilities by implication.
+Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy Weapon, compatibility, unconventional-form, and Weapon Manifestation rules remain owned by their dedicated Soul Weapons documents and roadmap tasks. These foundations grant none of those capabilities by implication.
 
 ## Related Documents
 
@@ -81,6 +83,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md)
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
 - [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md)
+- [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

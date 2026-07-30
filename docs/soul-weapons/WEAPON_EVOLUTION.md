@@ -716,7 +716,7 @@ Choosing to stop preserves personhood and meaningful learning. The bow gains no 
 
 ## Scope Boundaries
 
-This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. It does not define whether an unbound awakened or Legacy Weapon evolves, how Weapon Echoes record prior experience, how compatibility is profiled, how an evolved form physically manifests, or how living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels alter the standard model. Those claims remain with later Phase 6 tasks.
+This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory. Detailed compatibility, physical manifestation, and living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with later Phase 6 tasks.
 
 ## Related Canon
 
@@ -725,6 +725,8 @@ This document defines Soul Weapon Evolution for standard established Soul Weapon
 - [Awakening Conditions](AWAKENING_CONDITIONS.md)
 - [Soul Intertwining](SOUL_INTERTWINING.md)
 - [Weapon Personalities](WEAPON_PERSONALITIES.md)
+- [Weapon Echoes](WEAPON_ECHOES.md)
+- [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

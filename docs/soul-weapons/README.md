@@ -12,8 +12,9 @@ Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before th
 4. [Weapon Personalities](WEAPON_PERSONALITIES.md) defines how Vessel History, Vessel Perspective, Awakening Interpretation, relationships, and autonomous choice shape an evolving person without predetermining morality, loyalty, or capability.
 5. [Weapon Evolution](WEAPON_EVOLUTION.md) defines qualitative form change through causal routes, pressure, consent, transition, tradeoffs, branching, persistence, and strict anti-stacking safeguards.
 6. [Weapon Echoes](WEAPON_ECHOES.md) defines bounded first-person memory structures formed from reconciled Weapon Chapters, their access and sharing, and why they are neither past personalities nor stored capabilities.
+7. [Legacy Weapons](LEGACY_WEAPONS.md) defines world-bound historical continuity, bond-status separation, custody, stewardship, succession, scoped Legacy Accords, later relationships, and bounded self-directed Legacy Evolution.
 
-The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to Legacy Weapons, compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
+The remaining Phase 6 subjects are implemented only when the [Roadmap](../../design/ROADMAP.md) marks their dedicated tasks complete. A reference to compatibility, Weapon Manifestations, or unconventional forms does not grant those unfinished rules by implication.
 
 ## Core Ownership
 

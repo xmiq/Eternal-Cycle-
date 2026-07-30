@@ -354,7 +354,7 @@ The soul is not copied. The GM examines the actual repair intent, use, relations
 
 ## Scope Boundaries
 
-This document does not decide when awakening occurs, whether a newly awakened Weapon Soul consents to any bond, how intertwining works, which personality emerges, how Soul Weapons evolve, how Weapon Echoes form, how Legacy Weapons choose successors, how compatibility is assessed, how Weapon Manifestations operate, or which unconventional vessels qualify. Those claims belong to later Phase 6 tasks.
+This document does not decide when awakening occurs, whether a newly awakened Weapon Soul consents to any bond, how intertwining works, which personality emerges, how Soul Weapons evolve, how Weapon Echoes form, how [Legacy Weapons](LEGACY_WEAPONS.md) establish later relationships, how compatibility is assessed, how Weapon Manifestations operate, or which unconventional vessels qualify. Those claims belong to their dedicated Soul Weapon rules and roadmap tasks.
 
 ## Related Canon
 

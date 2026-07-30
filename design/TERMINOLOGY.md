@@ -1875,3 +1875,35 @@ A consensual, source-bounded disclosure through which a Weapon Soul communicates
 ## Weapon Recall Alignment
 
 A cooperative state in which a Weapon Soul uses an accessible Weapon Echo to inform its own current attention, feedback, timing, or judgment while another actor performs through present embodiment and capability. It is not Soul Echo Overlay, Delegation, or Skill transfer.
+
+## Legacy Weapon
+
+An awakened Weapon Soul whose defining earlier relationship, purpose, or historical context has ended or materially changed while the Weapon Soul remains anchored in the world and carries that history into later relationships. Legacy is a historical and relational condition rather than a rarity tier, ownership claim, bond, or capability package.
+
+## Legacy Basis
+
+The actual relationship, purpose, event, responsibility, place, institution, or historical consequence that makes an awakened Weapon Soul's earlier life materially relevant to later relationships.
+
+## Legacy Transition
+
+The causal change through which an awakened Weapon Soul remains world-bound after a defining relationship, purpose, custody, or era closes or becomes inaccessible. It does not grant power, erase a bond, or appoint a successor.
+
+## Legacy Status
+
+The current relationship among a Legacy Weapon, any Soul Weapon Bond, physical custody, communication, and surrounding people or institutions. It is descriptive rather than a rank.
+
+## Legacy Accord
+
+A scoped, revocable agreement concerning custody, care, travel, use, disclosure, repair, representation, or protection between a Legacy Weapon and another person or group. It is not an Intertwining Accord and creates no Soul Weapon Bond or Reincarnation passage.
+
+## Legacy Steward
+
+A person or group whom a Legacy Weapon currently accepts in a caretaking, protective, representative, or custodial role within the scope of a Legacy Accord.
+
+## Legacy Bearer
+
+A person whom a Legacy Weapon currently permits to carry or use its Weapon Vessel within defined circumstances. The role does not establish compatibility, mastery, moral approval, or eligibility for Soul Intertwining.
+
+## Legacy Succession
+
+The social and relational process through which custody, responsibility, cooperation, or public role passes from an earlier person or institution to a later one without transferring personhood, capability, consent, or a Soul Weapon Bond.

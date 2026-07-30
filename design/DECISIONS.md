@@ -1965,3 +1965,39 @@ Weapon Echoes normally persist through Evolution, Reincarnation passage, bond ch
 ## D-491 — Weapon Echo Formation and Access Cannot Be Farmed
 
 Repeated use, danger, deaths, users, separations, repairs, form toggles, recalls, conversations, and dramatic labels do not create or advance Echoes by count. One history cannot be split into several structures for power, and interrupted recall grants no additional memory or capability.
+
+## D-492 — Legacy Is Historical Continuity Rather Than Ownership
+
+A Legacy Weapon is an awakened Weapon Soul whose defining earlier context has ended or materially changed while it remains world-bound. Legacy Status is not a rarity tier, moral designation, legal ownership right, Soul Weapon Bond, or capability package, and not every old, famous, inherited, lost, or unbound weapon qualifies.
+
+## D-493 — Legacy Status and Bond Status Remain Separate
+
+Legacy Status does not create, transfer, suspend, sever, or replace a Soul Weapon Bond. A Suspended bond continues to occupy the Weapon Soul's one standard bond relationship until valid Severance, while a Severed or never-intertwined Legacy Weapon may form a later bond only through a new fully qualified Soul Intertwining.
+
+## D-494 — Legacy Accords Grant Only Scoped Cooperation
+
+A Legacy Accord may govern custody, care, travel, use, disclosure, repair, representation, or protection. It creates no Soul Weapon Bond, Reincarnation passage, permanent permission, compatibility, mastery, or right to speak for the Weapon Soul.
+
+## D-495 — Inheritance Cannot Transfer Soul Relationships
+
+Lineage, office, law, purchase, conquest, ritual, prophecy, possession, and a predecessor's request may affect custody and world response but cannot transfer personhood, trust, consent, memory access, capability, Skill, mastery, Intertwining Accord, or Soul Weapon Bond.
+
+## D-496 — Legacy Succession Starts From Present Relationship
+
+A later steward, bearer, or potential Bonded Soul must develop trust, cooperation, Skill, and shared history through present conduct. Earlier history may shape context and personality but cannot count as the successor's consent, compatibility, mastery, or bond qualification.
+
+## D-497 — Legacy Weapons Control Their Own Testimony
+
+A Legacy Weapon may share accessible Weapon Echoes within current consent, channel, capacity, privacy, and provenance. An heir, institution, bearer, owner, god, or Archive interface has no automatic right to disclosure, and shared memory grants no inherited mastery.
+
+## D-498 — Legacy Evolution Is Bounded and Self-Directed
+
+An unbound or Suspended Legacy Weapon may follow a self-directed Weapon Evolution Route only when normal provenance, pressure, consent, support, transition, tradeoff, source, and anti-stacking rules remain satisfied. The route cannot borrow an absent or former partner's Soul Imprints, Depth, Titles, Skills, authority, consent, or Reincarnation route, and a Suspended bond cannot be materially rewritten without both bonded participants' consent.
+
+## D-499 — Weapon Choice Is Not Moral Certification
+
+A Legacy Weapon's acceptance, refusal, stewardship choice, or bearer choice expresses its own bounded perspective. It does not prove objective goodness, legitimacy, destiny, innocence, or truth, and the Weapon Soul may be mistaken, biased, conflicted, or change its judgment.
+
+## D-500 — Legacy Personhood Does Not Grant Plot Armour
+
+A Legacy Weapon may be confined, stolen, suppressed, damaged, misused, or unable to communicate when ordinary causality and established capabilities allow. Physical custody is not consent, silence under incapacity is not agreement, and injustice must be resolved through actual agency, capability, relationships, and world consequences rather than automatic escape.

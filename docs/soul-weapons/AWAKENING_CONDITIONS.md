@@ -199,7 +199,7 @@ Consequences may include:
 - obligations to repair, protect, release, testify, or answer for prior treatment;
 - enemies, witnesses, spirits, gods, or communities reacting;
 - loss of simple equipment access while personhood and consent are resolved;
-- future opportunities for trust, separation, intertwining, or Legacy status under later rules.
+- future opportunities for trust, separation, intertwining, or Legacy Status under [Legacy Weapons](LEGACY_WEAPONS.md).
 
 An Awakening Event is not complete merely because a notification or new ability appears. The new person's existence must be carried forward.
 
@@ -365,7 +365,7 @@ The [Akashic Archive](../soul/AKASHIC_ARCHIVE.md) may preserve Awakening Evidenc
 
 Awakening alone does not make the weapon persist with a user's soul. Until intertwining, the awakened Weapon Soul remains with its Weapon Vessel in the world through Final Death and Reincarnation.
 
-If a user reaches Final Death during the Awakening Event, the Weapon Soul may still awaken where the complete conditions and continuity support it. The death does not guarantee awakening, intertwining, or transport. The awakened weapon's later status belongs to Legacy Weapon and intertwining rules.
+If a user reaches Final Death during the Awakening Event, the Weapon Soul may still awaken where the complete conditions and continuity support it. The death does not guarantee awakening, intertwining, or transport. The awakened weapon's later status follows [Legacy Weapons](LEGACY_WEAPONS.md) and [Soul Intertwining](SOUL_INTERTWINING.md).
 
 ### Skills and Development
 
