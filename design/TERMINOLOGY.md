@@ -1567,3 +1567,27 @@ A scoped claim that practices, roles, records, tools, sources, or effects from t
 ## Magical Learning Role
 
 A local contribution through which a learner participates in a Magical School, such as observation, theory, instrument use, preparation, maintenance, ritual participation, translation, direct casting, safety, research, or teaching. Roles do not form a universal ladder or grant one another's capabilities.
+
+## Social Advancement
+
+An audience- and structure-specific change in a person's recognized role, access, responsibility, authority, legitimacy, reputation, network position, rights, obligations, or material support through current world causality. It is not Social Development or a universal status level.
+
+## Social Position
+
+A person's current placement within a named audience, relationship network, institution, Profession, class framework, jurisdiction, or cultural structure, including the rights, access, duties, dependencies, evidence, and contest attached to that placement.
+
+## Social Position Profile
+
+A scoped record of one Social Position naming the current identity, audience or structure, role, source, evidence, rights, access, duties, Formal Authority, Cultural Legitimacy, Public Reputation, relationships, material support, dependencies, challenges, alternatives, and portability.
+
+## Advancement Route
+
+A causally available current process through which one or more Social Position facts may change, such as examination, recognition, service, election, appointment, sponsorship, inheritance, contract, ritual, reputation, reform, resistance, conquest, or succession.
+
+## Advancement Opportunity
+
+A current chance to pursue, accept, negotiate, refuse, or reshape a Social Position change, with a named conferring source, eligibility, evidence, cost, risk, rights, duties, dependencies, opposition, and uncertain consequences.
+
+## Status Portability Claim
+
+A scoped claim that one audience should recognize some part of a Social Position established elsewhere for one stated purpose. It does not establish universal status equivalence.

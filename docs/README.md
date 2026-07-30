@@ -54,6 +54,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Professions](human/PROFESSIONS.md) - social fields of work, roles, standards, service relationships, jurisdiction, accountability, formation, and adjudication.
 - [Martial Traditions](human/MARTIAL_TRADITIONS.md) - doctrine, Training Ecology, Pressure Practice, use of force, equipment relationships, matchups, counterplay, and adjudication.
 - [Magical Schools](human/MAGICAL_SCHOOLS.md) - social models of magic, epistemology, curricula, Access boundaries, verification, safety, interoperability, and adjudication.
+- [Social Advancement](human/SOCIAL_ADVANCEMENT.md) - multidimensional Social Position, Advancement Routes, opportunities, portability, gatekeeping, decline, agency, and adjudication.
 
 ## World Engine
 

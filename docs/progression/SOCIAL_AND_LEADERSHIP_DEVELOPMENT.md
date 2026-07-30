@@ -420,7 +420,7 @@ This document does not define:
 - fixed monster hierarchies or universal assumptions about social species;
 - exact election, succession, command, discipline, crime, propaganda, or diplomatic rules;
 - automatic authority from ancestry, divinity, Soul Titles, reincarnated identity, or power;
-- social advancement tracks, classes, or institutions reserved for later phases;
+- movement through role, access, responsibility, authority, legitimacy, reputation, rights, obligations, and support defined in [Social Advancement](../human/SOCIAL_ADVANCEMENT.md);
 - campaign-specific relationships, factions, offices, reputations, or political state.
 
 Later systems may define local measures and procedures. They must preserve agency, consent, audience and cultural scope, current relationships, present legitimacy, and the distinction between influence and control.
@@ -440,7 +440,7 @@ When social or leadership capability matters:
 9. treat retained social learning as hypotheses requiring current cultural calibration;
 10. credit group members and leaders only for their own integrated contributions;
 11. communicate uncertainty and audience variation rather than assigning a universal social rank;
-12. defer detailed institutions, cultures, social advancement, and contested control to their later systems.
+12. use [Social Advancement](../human/SOCIAL_ADVANCEMENT.md) for position changes while deferring detailed institutions, cultures, and contested control to their owning systems.
 
 ## Worked Examples
 
@@ -505,3 +505,4 @@ The sign may establish Magical or Symbolic Authority at the spring. Wider govern
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
+- [Social Advancement](../human/SOCIAL_ADVANCEMENT.md)

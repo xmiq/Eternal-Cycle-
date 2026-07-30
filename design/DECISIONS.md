@@ -1569,3 +1569,47 @@ A school may train observers, theorists, instrument operators, material preparer
 ## D-392 — Magical Reincarnation Preserves No School Standing or Current Access
 
 Reincarnation may preserve Magical Imprints, Skill history, conceptual familiarity, judgment, and memories. It does not restore Channels, organs, reserves, affinity, authority, contracts, tools, environment, school rank, membership, licence, source relationships, or current-law validity.
+
+## D-393 — Social Advancement Is Multidimensional and Scoped
+
+Social Advancement is an audience- and structure-specific change in recognized role, access, responsibility, authority, legitimacy, reputation, network position, rights, obligations, or material support. It is not a social level, moral reward, or capability increase.
+
+## D-394 — Social Position Records Rights, Duties, and Dependencies
+
+A Social Position names its current identity, audience or structure, role, source, evidence, rights, access, duties, authority, legitimacy, reputation, relationships, support, dependencies, challenges, and portability. Vague high status has no canonical effect.
+
+## D-395 — Advancement Routes Establish Only Their Actual Result
+
+Examinations, elections, appointments, sponsorship, inheritance, purchase, ritual, service, reputation, conquest, reform, and other routes can establish only the scoped position facts their current sources can confer and enforce. No route automatically creates competence, trust, legitimacy, or moral right.
+
+## D-396 — Advancement Opportunities Preserve Choice
+
+An Advancement Opportunity states the offered change, conferring source, current cause, eligibility, evidence, cost, risk, competition, rights, duties, dependencies, opposition, and consequences. A character may accept, negotiate, refuse, withdraw, or pursue another route where causally possible.
+
+## D-397 — Social Selection Does Not Prove Merit
+
+Structures may select through capability, service, reputation, seniority, wealth, kinship, politics, ritual, prejudice, coercion, availability, or corruption. Selection can make a position real without making the process fair or the selected person competent.
+
+## D-398 — Status Portability Is Purpose-Bounded
+
+Recognition of class rank, credentials, licences, offices, legal status, ritual standing, reputation, or access across audiences requires one named purpose, original evidence, receiving standards, current context, and limits. Portability for one purpose never creates universal equivalence.
+
+## D-399 — Gatekeeping Reflects Power and Purpose, Not Capability Truth
+
+A gate may protect safety, scarcity, accountability, culture, consent, monopoly, prejudice, exploitation, secrecy, or political control. Its existence, outcome, and enforcement do not by themselves prove capability, incapacity, legitimacy, or justice.
+
+## D-400 — Social Decline Names the Lost Layer
+
+Resignation, removal, revocation, lost trust, reputation change, defeat, collapse, reform, relocation, succession, death, and audience change affect only the rights, access, authority, legitimacy, reputation, relationships, support, or obligations causally tied to them. Loss is not generic de-leveling.
+
+## D-401 — Social Networks Are Relationships, Not Currency
+
+Introductions, favors, obligations, trust, sponsorship, and information remain attached to current people, resources, history, expectations, and limits. They cannot be accumulated or spent as a universal influence resource.
+
+## D-402 — Social Position Cannot Override Agency
+
+Promotion, title, office, inheritance, patronage, expectation, oath, debt, or reputation may create pressure and consequence but cannot force personal identity, loyalty, belief, employment, marriage, political alignment, or deliberate acceptance without an explicit owning control rule.
+
+## D-403 — Reincarnation Preserves No Social Position
+
+Former roles, memberships, offices, licences, property, citizenship, reputation, audiences, followers, patrons, clients, rights, obligations, legitimacy, and authority remain world-bound. Soul continuity may provide learning, evidence, or symbolic pressure but no automatic restoration.

@@ -404,3 +404,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Magical Interoperability Claims should make cross-school cooperation possible without turning shared effect names into universal compatibility.
 - Safety and research rules must preserve genuine uncertainty and risky discovery without rewarding abuse, sacrifice, corruption, or environmental harm as efficient progression.
 - Schools working with gods, spirits, monsters, Soul Weapons, constructs, and other person-like sources need repeated consent and ownership audits.
+
+## Phase 5 Social-Advancement Watchlist
+
+- Social Position Profiles must stay scoped enough to explain play consequences without becoming exhaustive relationship databases or universal status sheets.
+- Promotions that improve one dimension while harming another should remain visible so advancement does not quietly become a one-directional reward ladder.
+- Gatekeeping examples need to distinguish valid embodiment or safety requirements from prejudice, monopoly, corruption, and institutional self-protection.
+- Status Portability Claims should support migration and cross-cultural play without making titles, licences, and offices universally interchangeable.
+- Refusal, resignation, and lateral movement need genuine consequences without being framed as failed progression or punished with unrelated harm.
+- Soul Titles, Archive evidence, and reincarnated identities can create powerful opportunities and crises but must not restore office, relationships, property, or consent automatically.
