@@ -158,6 +158,7 @@ Those questions belong to later Soul Engine rules, Reincarnation rules, or setti
 - **[Soul Resonance](SOUL_RESONANCE.md)** governs alignment and access among identity, history, and potential.
 - **[Soul Echoes](SOUL_ECHOES.md)** preserve perspectives from completed incarnations without replacing current agency.
 - **[Soul Space](SOUL_SPACE.md)** provides the internal metaphysical environment in which parts of the soul may be encountered.
+- **[Retained Instincts](RETAINED_INSTINCTS.md)** preserve integrated, body-shaped responses without carrying former anatomy or replacing current agency.
 - **[Soul Titles](SOUL_TITLES.md)** preserve identity-bearing recognition rather than simple numerical bonuses.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md)** preserve recurring relational patterns without compelling present relationships or replacing world causality.
 - **Soul Weapons** persist through a bond between distinct souls.
@@ -186,6 +187,7 @@ A hostile ritual tears at the bond between an incarnation and a deeply held Soul
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

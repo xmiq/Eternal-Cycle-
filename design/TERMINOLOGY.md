@@ -104,6 +104,22 @@ A broad qualitative description of the complexity a soul can coherently integrat
 
 A durable change engraved into a soul by meaningful development or transformation. An imprint may persist without being consciously or immediately accessible.
 
+## Retained Instinct
+
+A persistent Soul Imprint carrying an integrated, body-shaped pattern of attention, urgency, valuation, or response from prior embodiment or meaningful adaptation. It preserves no missing anatomy, complete skill, or compulsory action.
+
+## Instinct Origin
+
+The incarnation, body, environment, relationship, or sustained adaptation that formed a Retained Instinct.
+
+## Instinct Cue
+
+A present sensation, circumstance, emotion, bodily state, or pattern that makes a Retained Instinct relevant. It may also function as a Resonance Trigger when a genuine Link is involved.
+
+## Instinct Access
+
+The current qualitative relationship between an incarnation and one Retained Instinct: Quiescent, Cued, Available, or Naturalized.
+
 ## Soul Integrity
 
 The coherence that allows a soul to remain one continuing identity while holding many lives, imprints, and bonds.

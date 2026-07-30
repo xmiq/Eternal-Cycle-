@@ -95,7 +95,7 @@ A valid candidate must satisfy all applicable constraints:
 - **Causal placement:** The incarnation belongs to the world rather than appearing without history or consequence.
 - **Variety and focus:** Candidate generation supports monster reincarnation as a major form of play and avoids making one familiar choice universally optimal.
 
-Soul history may influence valid candidates through Soul Resonance, Soul Titles, retained instincts, prior species mastery, Soul Constellations, World Reset effects, or other explicit rules.
+Soul history may influence valid candidates through Soul Resonance, Soul Titles, [Retained Instincts](RETAINED_INSTINCTS.md), prior species mastery, Soul Constellations, World Reset effects, or other explicit rules.
 
 ### 6. Apply the Reincarnation Mode
 
@@ -136,7 +136,7 @@ Memory is divided by function:
 - **Body memory:** Biological reflexes and species instincts come from the new body unless retained-instinct rules provide an additional influence.
 - **Sealed memory:** Soul Strain, Soul Wounds, insufficient access, or an explicit effect may temporarily block recall.
 
-Total recall is not the default. The exact starting access is governed by Soul Resonance, Soul Depth, Soul Echoes, retained instincts, and the condition of the new incarnation. Memory limits must create discovery and identity development rather than erase earned progression arbitrarily.
+Total recall is not the default. The exact starting access is governed by Soul Resonance, Soul Depth, Soul Echoes, [Retained Instincts](RETAINED_INSTINCTS.md), and the condition of the new incarnation. Memory limits must create discovery and identity development rather than erase earned progression arbitrarily.
 
 ## Reset and Persistence Rules
 
@@ -168,7 +168,7 @@ Subject to each system's access rules:
 - legitimately acquired skills and Skill XP, stored as Soul Imprints even when current expression is unavailable;
 - all legitimately earned Stat XP;
 - Soul Depth and Soul Resonance;
-- Soul Echoes and retained instincts;
+- Soul Echoes and [Retained Instincts](RETAINED_INSTINCTS.md);
 - Soul Titles and Soul Constellations;
 - Soul Weapons and Weapon Echoes;
 - Soul Wounds, soul-level curses, and other explicitly persistent conditions;
@@ -267,6 +267,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

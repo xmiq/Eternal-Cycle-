@@ -14,7 +14,7 @@ Subject to their detailed rules, the following may persist:
 - Soul Depth;
 - Soul Echoes;
 - [Soul Titles](SOUL_TITLES.md);
-- retained instincts;
+- [Retained Instincts](RETAINED_INSTINCTS.md);
 - [Soul Constellations](SOUL_CONSTELLATIONS.md);
 - Soul Weapons and Weapon Echoes;
 - access to the Akashic Archive.
@@ -46,5 +46,6 @@ Persistence must create continuity, not immunity from consequence. Every death s
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

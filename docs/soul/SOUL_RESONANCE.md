@@ -40,7 +40,7 @@ Instability produced when active Links, identities, participants, or forms of ex
 
 ### Reflexive Resonance
 
-Alignment with something already within the soul, such as a Soul Imprint, retained instinct, Soul Echo, Soul Title, or memory.
+Alignment with something already within the soul, such as a Soul Imprint, [Retained Instinct](RETAINED_INSTINCTS.md), Soul Echo, Soul Title, or memory.
 
 ### Relational Resonance
 
@@ -283,7 +283,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **[Soul Echoes](SOUL_ECHOES.md):** Resonance governs when an Echo can be perceived, consulted, or expressed.
 - **[Soul Space](SOUL_SPACE.md):** Resonance reveals pathways, Regions, Constructs, visitors, and conflicts within the internal world.
 - **[Soul Titles](SOUL_TITLES.md):** Resonance determines when identity-bearing recognition becomes active or relevant.
-- **Retained instincts:** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
+- **[Retained Instincts](RETAINED_INSTINCTS.md):** Resonance can awaken, distinguish, or adapt instincts from prior bodies.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Resonance permits recognition and voluntary interaction across recurring relationships without determining present roles.
 - **Soul Weapons:** Mutual Resonance supports awakening, intertwining, communication, and coordinated expression.
 - **Akashic Archive:** Resonance supplies a valid connection to a record while Depth limits safe integration.
@@ -344,6 +344,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 - [Soul Space](SOUL_SPACE.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

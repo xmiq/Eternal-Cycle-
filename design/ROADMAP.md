@@ -4,9 +4,9 @@
 
 **Current phase: Phase 1 — Soul Engine**
 
-**Current task: Define Retained Instincts**
+**Current task: Define Akashic Archive**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the Akashic Archive or the final Soul Engine audit until Retained Instincts is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Soul Avatar terminology, the Soul Avatar system, or the final Soul Engine audit until the Akashic Archive is complete unless the project owner explicitly changes the target.
 
 Soul Avatar, world-contact Gate, and related template work requested by the project owner is queued in the appropriate later phases below. These queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -46,7 +46,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Space
 - [x] Define Soul Constellations
 - [x] Define Soul Titles
-- [ ] Define Retained Instincts
+- [x] Define Retained Instincts
 - [ ] Define Akashic Archive
 - [ ] Resolve Soul Avatar terminology against Echo and Weapon avatars
 - [ ] Define Soul Avatar system
@@ -89,7 +89,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [ ] Define hidden evolution conditions
 - [ ] Define mutations
 - [ ] Define hybrid evolutions
-- [ ] Define retained instincts
+- [ ] Integrate Retained Instincts with monster evolution
 - [ ] Define apex monsters
 - [ ] Define monster civilizations
 - [x] Create evolution-tree template

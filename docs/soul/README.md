@@ -13,6 +13,7 @@ The Soul Engine governs identity, memory, relationships, and progression that ca
 - [Soul Space](SOUL_SPACE.md) - the internal metaphysical interface to soul structures.
 - [Soul Constellations](SOUL_CONSTELLATIONS.md) - recurring relational patterns among distinct souls.
 - [Soul Titles](SOUL_TITLES.md) - persistent expressions of identity and contextual recognition.
+- [Retained Instincts](RETAINED_INSTINCTS.md) - body-shaped patterns of attention and response carried between lives.
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md) - awakening, intertwining, and persistence of Weapon Souls.
 
 ## Reading Order

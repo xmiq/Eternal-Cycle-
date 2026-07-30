@@ -24,7 +24,7 @@ Humans and monsters normally possess separate progression trees. Reincarnation m
 
 ## D-006 — Persistent Soul Progression
 
-Bodies, ordinary statistics, equipment, wealth, social status, and reputation reset between lives. Legitimately acquired skills, skill experience, and Stat XP persist as Soul Imprints even when inaccessible to the current body. Soul Weapons, Soul Echoes, Soul Resonance, Soul Depth, and instincts persist according to their rules.
+Bodies, ordinary statistics, equipment, wealth, social status, and reputation reset between lives. Legitimately acquired skills, skill experience, and Stat XP persist as Soul Imprints even when inaccessible to the current body. Soul Weapons, Soul Echoes, Soul Resonance, Soul Depth, and Retained Instincts persist according to their rules.
 
 ## D-007 — Emergent Soul Weapons
 
@@ -261,3 +261,23 @@ The current incarnation may reject or conceal a Soul Title's expression and expe
 ## D-065 — Soul Titles Are Not Inherited by Default
 
 Descendants, successors, worshippers, copied bodies, possessed hosts, and distinct Weapon Souls may inherit stories, reputation, offices, duties, or consequences but not another soul's identity-bearing title. A distinct soul must form its own Title Basis unless an exceptional transfer rule explicitly preserves identity, agency, consent or resistance, and meaningful cost.
+
+## D-066 — Retained Instincts Preserve Integrated Responses
+
+A Retained Instinct is a Soul Imprint carrying a body-shaped pattern of attention, urgency, valuation, or response that became meaningfully integrated through lived embodiment or adaptation. It preserves orientation rather than former anatomy, bodily statistics, a complete skill, or objective knowledge.
+
+## D-067 — Current Embodiment Governs Instinct Expression
+
+The current body supplies its own real instincts, senses, and constraints. A Retained Instinct may express directly, translate analogically through present capabilities and development, or remain inaccessible; it cannot create missing anatomy or bypass distinct human and monster progression trees.
+
+## D-068 — Instinct Access Is Conditional and Qualitative
+
+Quiescent, Cued, Available, and Naturalized describe one Retained Instinct's current Access rather than permanent power ranks. Access depends on a relevant Instinct Cue, compatible embodiment, Soul Resonance, Soul Depth, Soul Integrity, and present-life practice where applicable, and may recede without erasing the imprint.
+
+## D-069 — Instinct Influence Does Not Replace Agency
+
+A Retained Instinct may shift attention, posture, emotion, preparation, or urgency but cannot choose the incarnation's deliberate action, take executive control, or function as an independent personality. Stronger compulsions require their own explicit cause, resistance, and consequence rules.
+
+## D-070 — Retained Instincts Preserve Provenance and Resist Collection
+
+Every Retained Instinct retains a specific Origin and may conflict with current or retained responses without making one life authoritative. Repetition, manufactured danger, rapid reincarnation, consumption, observation, or accumulation of shallow lives cannot create, transfer, or indefinitely strengthen instincts by themselves.

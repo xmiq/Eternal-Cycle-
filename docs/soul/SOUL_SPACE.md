@@ -110,7 +110,7 @@ Common Regions may be associated with:
 - one Soul Echo or an Echo Chorus;
 - a group of compatible Soul Imprints;
 - an intertwined Weapon Soul and shared bond;
-- a Soul Title, retained instinct, or recurring relationship;
+- a Soul Title, [Retained Instinct](RETAINED_INSTINCTS.md), or recurring relationship;
 - a Soul Wound, sealed memory, or damaged Resonance Link;
 - a Gate to an external system such as the Akashic Archive;
 - a place for reflection, rehearsal, communication, or reconciliation.
@@ -213,7 +213,7 @@ Soul Space can host manifestations of structures belonging to the soul without t
 - **Weapon Souls** remain distinct persons. An intertwined Weapon Soul may enter, appear, or maintain a shared Region according to its bond, consent, and Soul Weapon rules.
 - **Soul Imprints** may appear as books, tools, paths, instincts, teachers, monsters, or abstract patterns without becoming independent beings.
 - **Soul Titles** may shape symbols, clothing, architecture, weather, inhabitants, or reactions without automatically creating an avatar.
-- **Retained instincts** may appear as urges, creatures, senses, trails, or environmental forces without becoming Soul Echoes.
+- **[Retained Instincts](RETAINED_INSTINCTS.md)** may appear as urges, creatures, senses, trails, or environmental forces without becoming Soul Echoes.
 - **Memories of other people** may appear as Constructs, but those representations are not the actual people or their souls.
 
 The current incarnation cannot treat a manifestation of someone it remembers as a substitute for that person's consent, current identity, or continued existence.
@@ -339,7 +339,7 @@ The GM should track only Regions and Constructs that matter to play. Soul Space 
 - **Soul Echoes:** Manifest Echoes may inhabit accessible Regions while retaining bounded agency and knowledge.
 - **Reincarnation:** Persistent structure survives transition while current-life presentation and embodiment-linked features may change.
 - **[Soul Titles](SOUL_TITLES.md):** Titles may shape symbols and reactions without becoming simple bonuses or automatic inhabitants.
-- **Retained instincts:** Instincts may be perceived and reconciled without being mistaken for Echoes or independent souls.
+- **[Retained Instincts](RETAINED_INSTINCTS.md):** Instincts may be perceived and reconciled without being mistaken for Echoes or independent souls.
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Recurring relationships may support Gates or a consensual Constellation Commons but do not compel entry, disclosure, or intimacy.
 - **Soul Weapons:** An intertwined Weapon Soul may maintain a consensual Region while remaining a distinct person.
 - **Akashic Archive:** Soul Space may host an established Archive interface, but it cannot create access or objective truth.
@@ -409,6 +409,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Soul Echoes](SOUL_ECHOES.md)
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
+- [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
