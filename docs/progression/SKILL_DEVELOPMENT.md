@@ -577,6 +577,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md)
 - [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
+- [Skill Evolution](../skills/SKILL_EVOLUTION.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

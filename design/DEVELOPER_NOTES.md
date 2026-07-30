@@ -236,3 +236,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Trauma responses and harmful compensations need especially careful handling so the game never makes injury or abuse the optimal Adaptive Skill route.
 - Later evolution and fusion rules should consume Adaptive Skill evidence without automatically upgrading every novel capability.
 - Recognition may be delayed, but hidden emergence still needs traceable prior evidence; it cannot become a retroactive answer to an unrelated obstacle.
+
+## Phase 3 Skill-Evolution Watchlist
+
+- Playtests should verify that qualitative change is clear enough to justify evolution instead of ordinary improvement, mastery, or renaming.
+- Prior Forms need practical recordkeeping that preserves meaningful alternatives without turning every technique into a separate permanent asset.
+- Evolution tradeoffs should produce real choices; an allegedly narrow form that is superior in every context is misdescribed or under-costed.
+- Conceptual elevation remains a route marker until Conceptual Skills are defined, and internalisation remains bounded until active and passive modes are defined.
+- Phase 4 must keep Skill Evolution distinct from species Evolution even when each changes the other's available expression routes.

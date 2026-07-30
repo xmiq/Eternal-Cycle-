@@ -184,6 +184,22 @@ A recurring developing method that may become an Adaptive Skill but has not yet 
 
 Observable change showing that an Adaptive Skill Candidate has become a stable learned capability, including problem recognition, integrated method, correction from feedback, useful response to relevant variation, and bounded failure behavior.
 
+## Skill Evolution
+
+A stable qualitative transformation in an established Skill produced through legitimate Development and integration. It changes the capability's organisation, method, scope, requirements, or characteristic tradeoffs and is distinct from biological Evolution.
+
+## Evolution Pattern
+
+The principal way a Skill has qualitatively transformed, such as refinement, specialisation, broadening, compression, efficiency, reliability, contextual adaptation, conceptual elevation, embodiment translation, tool integration, group integration, ritualisation, or internalisation. Patterns may overlap and are not universal stages.
+
+## Prior Form
+
+The Skill expression from which a Skill Evolution developed. Its techniques may remain available, branch, become conditional, be reorganised, lose reliability, or become latent; evolution does not automatically preserve or delete them.
+
+## Evolution Evidence
+
+Observable support that a qualitative Skill change has become integrated capability, including changed problem solving, reliable expression, meaningful variation, corrected failure, understood requirements, and stable tradeoffs.
+
 ## Composite Skill
 
 A coordinated capability that depends on several developed Skills or Tracks while retaining a distinct purpose and practice. Its components remain separate capabilities.

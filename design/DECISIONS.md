@@ -873,3 +873,31 @@ An Adaptive Skill may integrate body, magic, tools, allies, environment, or Soul
 ## D-218 — Maladaptation Is Development With Consequences, Not a Reward Route
 
 A brittle, harmful, or overfit adaptation may be real and require retraining or rehabilitation. Harm does not make the adaptation more valuable, automatically persistent, uniquely profitable, or exempt from agency and recovery safeguards.
+
+## D-219 — Skill Evolution Is Qualitative Transformation
+
+Skill Evolution requires a stable change in an established Skill's identity, method, scope, requirements, relationships, or characteristic tradeoffs. Improvement, mastery, renaming, institutional promotion, and biological Evolution remain distinct changes.
+
+## D-220 — Evolution Requires Integrated Present-Life Evidence
+
+An established foundation, meaningful purpose, active engagement, variation, feedback, qualitative distinction, integration, current means, Practised Reliability, and accounted tradeoffs support a completed Skill Evolution. Time, repetition, suffering, killing, or one breakthrough cannot substitute for that evidence.
+
+## D-221 — Skill Evolution Has No Universal Ladder
+
+Evolution Patterns describe route-specific transformations rather than mandatory stages, rarity tiers, or power ranks. Different Skills and practitioners may transform through different patterns, and a later form is not universally superior.
+
+## D-222 — Prior Forms Require Explicit Treatment
+
+Each material use of a Prior Form must be recorded as layered, branched, conditional, reorganised, narrowed, superseded, or latent. An evolved form does not automatically preserve, improve, replace, or delete every earlier use.
+
+## D-223 — Evolution Must Record Costs and Tradeoffs
+
+Greater capability in one scope may require more resources, precision, attention, preparation, cooperation, or upkeep; lose breadth; introduce risk; conflict with earlier habits; or depend on narrower conditions. These consequences are part of the evolution rather than optional balance adjustments.
+
+## D-224 — Reincarnation Preserves Evolution History, Not Automatic Expression
+
+A completed Skill Evolution may contribute to a Skill Imprint and future relearning. Each incarnation must still establish Current Access, compatible Embodied Expression, and Practised Reliability, and different Prior Forms may have different compatibility.
+
+## D-225 — Skill Evolution Cannot Disguise Another System
+
+Evolution owns only the qualitative transformation of one established learned capability. Claims that depend on independently developed Skills, changed anatomy, biological Evolution, magic, tools, institutions, relationships, Soul effects, or other systems retain those owners and prerequisites.
