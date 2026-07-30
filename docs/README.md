@@ -44,6 +44,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Hybridization](monster-evolution/HYBRIDIZATION.md) - compatible, magical, artificial, symbiotic, evolutionary, and inherited hybrid forms with bounded trait and Soul access.
 - [Extinction and Replacement](monster-evolution/EXTINCTION_AND_REPLACEMENT.md) - scoped extinction, delayed loss, ecological collapse, causal replacement, invasive populations, catastrophe, and recovery.
 - [Soul Interaction with Evolution](monster-evolution/SOUL_INTERACTIONS.md) - how established Soul systems support Evolution without granting bodies, routes, Skills, or Development.
+- [Monster Evolution Safeguards](monster-evolution/EVOLUTION_SAFEGUARDS.md) - consolidated exploit resistance, form distinction, route cleanup, and phase-wide Evolution claim audit.
 
 ## World Engine
 

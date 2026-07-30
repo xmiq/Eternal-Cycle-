@@ -17,6 +17,7 @@ Monster Evolution describes how monster forms, populations, and societies respon
 - [Hybridization](HYBRIDIZATION.md) - layered compatibility, biological and nonbiological origins, whole-form integration, inheritance, Soul limits, stability, and progression ownership.
 - [Extinction and Replacement](EXTINCTION_AND_REPLACEMENT.md) - local, functional, and global loss; ecological collapse; replacement; invasion; magical catastrophe; and recovery.
 - [Soul Interaction with Evolution](SOUL_INTERACTIONS.md) - bounded pressure, discovery, condition, compatibility, transition support, and interpretation from established Soul systems.
+- [Monster Evolution Safeguards](EVOLUTION_SAFEGUARDS.md) - phase-wide claim audit, anti-grinding rules, form distinction, route consolidation, ownership, agency, and cleanup.
 
 ## Required Foundations
 

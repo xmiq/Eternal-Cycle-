@@ -1,6 +1,6 @@
 # Species Evolution Tree: Species Name
 
-Use this template to record branches after their evolution rules exist. Completing fields does not itself create a valid route, waive an Owning System's requirements, or authorize a character to evolve.
+Use this template to record branches after their evolution rules exist. Completing fields does not itself create a valid route, waive an Owning System's requirements, or authorize a character to evolve. Apply the [Monster Evolution Safeguards](../docs/monster-evolution/EVOLUTION_SAFEGUARDS.md) before treating any entry as complete.
 
 ## Tree Identity
 
@@ -67,6 +67,8 @@ Use this template to record branches after their evolution rules exist. Completi
 - [ ] Prior species traits are not treated as portable Skills or automatically restored through Reincarnation.
 - [ ] Requirements use fair clues and established causality rather than arbitrary surprise.
 - [ ] Time, kills, consumption, pain, death, repetition, or a universal level are not automatic evolution currency.
+- [ ] The Form Distinction Test confirms this branch needs a distinct form rather than a variant, adaptation, Skill, Mutation, Hybrid Form, title, or cosmetic name.
+- [ ] The route is not a duplicate, mandatory rank ladder, universal apex step, or unsupported combination of existing branches.
 - [ ] Retained Development accelerates only valid redevelopment and is not duplicated across systems.
 - [ ] Physical, Skill, Magical, Profession, Social, Soul, and Species effects keep their proper owners.
 - [ ] Temporary, artificial, divine, corruptive, and borrowed changes retain their sources and dependencies.

@@ -1451,3 +1451,23 @@ An otherwise valid Evolution Route that explicitly recognizes one or more establ
 ## Evolution-Relevant Soul Evidence
 
 A source-bounded Soul fact whose owning rule permits it to inform one named Evolution claim. It is not currency, current Response Evidence by default, or proof that a route exists or must complete.
+
+## Evolution Claim
+
+A claim that a condition, action, history, resource, route, transition, or relationship creates, reveals, grants access to, completes, alters, preserves, or transmits Monster Evolution.
+
+## Evolution Representation
+
+The smallest truthful record that distinguishes a current form, variation, stage, branch, lineage, or route while preserving its provenance, Species Potential, lifecycle, requirements, tradeoffs, ecology, and consequences.
+
+## Form Distinction Test
+
+The qualitative test used to decide whether a proposed result requires a distinct Evolved Form or species record rather than an existing form, variation, Mutation, Hybrid Form, Trait Expression, adaptation, Skill, title, social category, or cosmetic name.
+
+## Route Consolidation
+
+The merger or reclassification of duplicate or needlessly separate Evolution Routes into one truthful route with explicit conditions, variants, or outcomes, without erasing established history or valid differences.
+
+## Evolution Safeguard Audit
+
+The ordered review used to test an Evolution Claim for ownership, provenance, current embodiment, meaningful evidence, transition integrity, distinct result, consequence, agency, duplication, and repeatability abuse.

@@ -4,9 +4,9 @@
 
 **Current phase: Phase 4 — Monster Evolution**
 
-**Current task: Define monster evolution safeguards**
+**Current task: Audit and complete Phase 4 Monster Evolution**
 
-The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin the final Phase 4 integration or Phase 5 until monster evolution safeguards are complete.
+The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin Phase 5 until the final Phase 4 integration audit is complete.
 
 Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -117,8 +117,9 @@ Phase 3 is complete only when all ten Skill Engine rule documents are defined, l
 - [x] Define extinction and replacement
 - [x] Define Soul interaction with evolution
 - [x] Integrate Retained Instincts with monster evolution within the Soul interaction checkpoint
-- [ ] Define monster evolution safeguards
+- [x] Define monster evolution safeguards
 - [x] Create evolution-tree template
+- [ ] Audit and complete Phase 4 Monster Evolution
 
 ### Exit Criteria
 

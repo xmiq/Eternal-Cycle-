@@ -439,6 +439,7 @@ This document does not define:
 - [Hidden Evolution Conditions](HIDDEN_EVOLUTION_CONDITIONS.md)
 - [Mutations](MUTATIONS.md)
 - [Apex Monsters](APEX_MONSTERS.md)
+- [Monster Evolution Safeguards](EVOLUTION_SAFEGUARDS.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md)

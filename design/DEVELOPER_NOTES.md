@@ -345,3 +345,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Soul Depth should remain capacity rather than a rarity ladder for ancient, hybrid, or apex forms.
 - Reincarnation candidate generation must not turn prior Evolved Forms into selectable loadouts.
 - Founding forms whose route used a personal Soul condition need explicit inheritance treatment before becoming stable lineages.
+
+## Phase 4 Evolution Safeguard Watchlist
+
+- The Form Distinction Test must consolidate cosmetic branches without collapsing genuinely different convergent lineages.
+- Anti-grinding rulings should preserve real ecological, social, bodily, and developmental consequences even when no Evolution results.
+- Mandatory lifecycle change needs clear separation from rank-based mandatory progression chains.
+- Representation Cleanup must preserve decisions made under prior classifications rather than rewriting history for tidiness.
+- The audit should remain usable at the table; future playtests should flag steps that create bookkeeping without changing rulings.
+- Strong earned combinations should survive the audit without receiving unrelated penalties merely for being effective.

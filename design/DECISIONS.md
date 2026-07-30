@@ -1341,3 +1341,63 @@ Soul Space, Soul Constellations, the Akashic Archive, and Soul Weapons may provi
 ## D-335 — Soul-Conditioned Forms Are Not Automatically Inherited
 
 An individual's Soul-conditioned Evolved Form does not copy the initiating Soul fact into descendants or redefine the whole species. Stable inheritance requires a repeatable bodily origin, renewal, ecology, variation, and explicit treatment of whether each successor needs its own Soul condition.
+
+## D-336 — Every Evolution Claim Receives a Phase-Wide Audit
+
+Any claim that creates, reveals, accesses, completes, alters, preserves, or transmits Monster Evolution must pass ownership, provenance, current-form, current-causality, transition, result, consequence, agency, repeatability, and representation checks.
+
+## D-337 — Repetition and Manufactured Conditions Are Not Evolution Currency
+
+Kills, consumption, exposure, survival, time, age, pain, injury, death, births, retries, and staged conditions matter only through actual causal effects. They cannot become counters, selectable rolls, or automatic Evolution without an independently valid route and meaningful change.
+
+## D-338 — Evolution Uses the Smallest Truthful Representation
+
+A current form, variation, Stage, branch, lineage, or route receives a separate Evolution Representation only when that record preserves a meaningful bodily, causal, lifecycle, ecological, or route distinction not already represented by another owner or form.
+
+## D-339 — Duplicate Routes Are Consolidated Without Erasing Provenance
+
+Routes that share the same meaningful source, conditions, transition, and bodily result should be consolidated into one route with explicit variants or aliases. Convergent lineages remain distinct where origin, organization, lifecycle, ecology, or future routes make the distinction consequential.
+
+## D-340 — Adaptation Does Not Accumulate Into Evolution
+
+Usefulness, permanence, reliability, inheritance, visible change, and thematic similarity do not convert an Adaptation Response into Evolution. A valid transition must reorganise current Species Potential into a distinct Evolved Form.
+
+## D-341 — Distinct Forms Must Pass the Form Distinction Test
+
+Separate forms are justified through coherent differences in provenance, organization, Species Potential, lifecycle, ecology, tradeoffs, route structure, inheritance, or variation. Cosmetic names, Skills, offices, temporary effects, isolated Mutations, and ordinary Trait Expression do not create forms by themselves.
+
+## D-342 — Apex Status Never Creates a Universal or Final Tier
+
+Every apex claim remains bounded by an Apex Domain, context, scale, dependencies, and Counter-Ecology. Loss of apex status does not force escalation into a higher tier, and rarity, power, leadership, immunity, and finality do not follow automatically.
+
+## D-343 — Evolution Routes Are Descriptive, Not Mandatory Chains
+
+Route Maps show supported possibilities while stasis, adaptation, learning, assistance, migration, failure, and extinction remain valid outcomes. A mandatory lifecycle transition requires specific biological or metaphysical causality and does not establish a universal power ladder.
+
+## D-344 — Evolved Anatomy Does Not Duplicate Skill or Development
+
+An Evolved Form grants current body-owned potential and access routes. Learned control, tactics, interpretation, reliable use, and retained redevelopment remain with Skills and Development and are never awarded twice under Species labels.
+
+## D-345 — Current Embodiment and Transition Costs Cannot Be Bypassed
+
+Every route uses the current body as its substrate and preserves anatomy, lifecycle, health, resources, time, vulnerability, dependencies, one action economy, losses, calibration, and recovery. Memory, equipment, magic, status, or narrative importance can substitute only through a valid sourced mechanism with its own limits.
+
+## D-346 — Soul Support Has One Explicit Evolution Role
+
+A Soul fact must be assigned pressure, discovery, condition, compatibility, transition support, or interpretation for one Evolution Claim. It cannot silently supply route provenance, anatomy, current evidence, materials, Skills, inheritance, or every Soul role at once.
+
+## D-347 — Evolution Failure Is Not a Reward Table
+
+Failure follows the actual route source and may preserve preparation, cause loss, injury, instability, route change, a source-consistent partial outcome, or Final Death. It does not automatically grant Evolution progress, a stronger form, a useful Mutation, Soul growth, or immunity.
+
+## D-348 — Representation Cleanup Preserves Earned Truth
+
+Duplicate or misowned Evolution records may be merged, split, renamed, reclassified, retired, or clarified. Cleanup preserves actual world history, legitimate Development and Soul progression, meaningful bodily differences, agency, and consequences rather than retroactively changing bodies or confiscating capability.
+
+## D-349 — Individual Evolution Does Not Establish Population Success
+
+One successful transition does not automatically become heritable, redefine a species, create a stable lineage, fill a niche, avoid Counter-Ecology, rescue a population, or remain viable after environmental change.
+
+## D-350 — Safeguards Reject Unearned Scope, Not Earned Synergy
+
+An unusual or highly effective Evolution remains valid when ownership, provenance, embodiment, transition, distinct result, costs, ecology, agency, and consequences all hold. Safeguards must not add unrelated punishment merely because creative play exceeded expectation.
