@@ -4,9 +4,9 @@
 
 **Current phase: Phase 3 — Skill Engine**
 
-**Current task: Define adaptive skill creation**
+**Current task: Define skill evolution**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin skill evolution or another later Phase 3 task until adaptive skill creation is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin skill fusion or another later Phase 3 task until skill evolution is complete unless the project owner explicitly changes the target.
 
 Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -88,7 +88,7 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 - [x] Define human skill trees
 - [x] Define monster skill trees
 - [x] Define crossover through Reincarnation
-- [ ] Define adaptive skill creation
+- [x] Define adaptive skill creation
 - [ ] Define skill evolution
 - [ ] Define skill fusion
 - [ ] Define active and passive skills

@@ -26,6 +26,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 1. [Human Skill Trees](HUMAN_SKILL_TREES.md) - plural human learning structures shaped by culture, practice, embodiment, tools, professions, and institutions.
 2. [Monster Skill Trees](MONSTER_SKILL_TREES.md) - monster-native learning structures shaped by species embodiment, ecology, cognition, social transmission, and individual experience.
 3. [Reincarnation Skill Crossover](REINCARNATION_SKILL_CROSSOVER.md) - bounded recovery and translation of retained Skill history through valid present-life receiving routes.
+4. [Adaptive Skills](ADAPTIVE_SKILLS.md) - emergence of stable novel capabilities through recurring need, variation, feedback, adjustment, and integration.
 
 Later Phase 3 documents will be added only as their roadmap tasks become complete. The [Roadmap](../../design/ROADMAP.md) remains authoritative for implementation status.
 

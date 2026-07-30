@@ -229,3 +229,10 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Phase 4 evolution may open Receiving Routes but must not reinterpret prior Skill history as a free trait, stage, or biological branch.
 - Playtests should watch whether Direct Transfer is being narrated as instant mastery; even close embodiments need current calibration and reliability evidence.
 - Harmful Carryover should create understandable problems and recovery choices rather than routine loss of control.
+
+## Phase 3 Adaptive-Skill Watchlist
+
+- Playtests should track whether the representation test produces useful Skills without recording every trick as permanent progression.
+- Trauma responses and harmful compensations need especially careful handling so the game never makes injury or abuse the optimal Adaptive Skill route.
+- Later evolution and fusion rules should consume Adaptive Skill evidence without automatically upgrading every novel capability.
+- Recognition may be delayed, but hidden emergence still needs traceable prior evidence; it cannot become a retroactive answer to an unrelated obstacle.

@@ -845,3 +845,31 @@ Former habits, reflexes, assumptions, and sensory priorities may interfere with 
 ## D-211 — Changed Worlds Require Revalidation
 
 Retained professional, cultural, environmental, and magical Skill history supplies hypotheses and learning advantages rather than timeless procedures. Current laws, signals, materials, institutions, hazards, and metaphysical rules determine what remains valid.
+
+## D-212 — Adaptive Capability Uses the Smallest Truthful Representation
+
+An observed adaptation is recorded as an ad hoc tactic, Habit, technique, branch, Adaptive Skill, body adaptation, or later Evolution matter according to its actual function, ownership, independence, and evidence. Novelty or an appealing name does not justify the largest category.
+
+## D-213 — Adaptive Skill Recognition May Follow Emergence
+
+A stable capability may develop before the practitioner, culture, GM-facing system, or observer names or understands it. Recognition requires traceable Emergence Evidence and cannot retroactively invent prior adaptation for convenience.
+
+## D-214 — Constraints Do Not Persist as Skill Effects
+
+When an Adaptive Skill forms, the learned method may persist through ordinary Skill rules. The body, injury, environment, scarcity, tool, ally, transformation, or external effect that prompted it remains owned by its own system and does not become part of the Skill's permanent output.
+
+## D-215 — Safe Adaptation Can Be Meaningful
+
+Meaningful consequence does not require pain, crisis, killing, or deprivation. Instruction, rehabilitation, controlled experiments, responsibility, resource stewardship, and cooperative practice may create legitimate Adaptive Skills when they produce distinct integrated capability.
+
+## D-216 — Failed Emergence Creates No Consolation Skill
+
+An Adaptive Skill Candidate may remain a tactic, Habit, partial technique, or useful lesson when coherence, distinction, requirements, or reliability never develop. Failure to emerge neither grants a substitute Skill nor erases genuine learning supported by another owner.
+
+## D-217 — Cross-System Adaptive Skills Own Coordination Only
+
+An Adaptive Skill may integrate body, magic, tools, allies, environment, or Soul history, but it owns only the learned coordination or problem-solving method. Supporting effects retain their requirements, costs, permissions, maintenance, and failure states.
+
+## D-218 — Maladaptation Is Development With Consequences, Not a Reward Route
+
+A brittle, harmful, or overfit adaptation may be real and require retraining or rehabilitation. Harm does not make the adaptation more valuable, automatically persistent, uniquely profitable, or exempt from agency and recovery safeguards.

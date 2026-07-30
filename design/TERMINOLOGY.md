@@ -176,6 +176,14 @@ The Soul Imprint that preserves a Skill's legitimately earned structure and Skil
 
 A Skill that emerges when repeated meaningful behavior develops a stable, distinct capability not adequately represented by an existing Skill in the current progression tree.
 
+## Adaptive Skill Candidate
+
+A recurring developing method that may become an Adaptive Skill but has not yet shown enough coherence, distinction, integration, or reliability to be represented as one.
+
+## Emergence Evidence
+
+Observable change showing that an Adaptive Skill Candidate has become a stable learned capability, including problem recognition, integrated method, correction from feedback, useful response to relevant variation, and bounded failure behavior.
+
 ## Composite Skill
 
 A coordinated capability that depends on several developed Skills or Tracks while retaining a distinct purpose and practice. Its components remain separate capabilities.

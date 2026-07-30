@@ -415,7 +415,7 @@ Emergence requires:
 
 Example: repeatedly throwing knives while shaping wind does not guarantee **Windknife**. If the practitioner develops a stable method for reading airflow, coupling release timing to magic, controlling spin, correcting drift, and using it under varied conditions, the current magical or Skill tree may later recognize an Adaptive Skill.
 
-Adaptive emergence does not create an ability on demand from a desired name. Exact naming, interface behavior, rarity, evolution, and tree placement belong to Phase 3.
+Adaptive emergence does not create an ability on demand from a desired name. [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md) owns detailed emergence routes, representation tests, failure states, worked examples, and anti-spam safeguards.
 
 ## Composite Development and Future Skill Fusion
 
@@ -576,6 +576,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Human Skill Trees](../skills/HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md)
 - [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
+- [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)

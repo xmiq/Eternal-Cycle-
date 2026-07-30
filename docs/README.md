@@ -20,6 +20,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Human Skill Trees](skills/HUMAN_SKILL_TREES.md) - plural human learning routes shaped by culture, practice, embodiment, tools, professions, and institutions.
 - [Monster Skill Trees](skills/MONSTER_SKILL_TREES.md) - monster-native learning routes shaped by species embodiment, ecology, cognition, social transmission, and individual experience.
 - [Reincarnation Skill Crossover](skills/REINCARNATION_SKILL_CROSSOVER.md) - bounded recovery and translation of retained Skill history through valid present-life receiving routes.
+- [Adaptive Skills](skills/ADAPTIVE_SKILLS.md) - emergence of stable novel capabilities through recurring need, variation, feedback, adjustment, and integration.
 
 ## World Engine
 
