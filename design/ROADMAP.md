@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 2 — Development System**
+**Current phase: Phase 3 — Skill Engine**
 
-**Current task: Audit and complete Phase 2**
+**Current task: Define human skill trees**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Phase 3 or another later phase until the Phase 2 audit is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin monster skill trees, crossover implementation, or another later Phase 3 task until human skill trees are complete unless the project owner explicitly changes the target.
 
-Phase 1 is reviewed and approved. Do not reopen it unless Phase 2 reveals a genuine contradiction that cannot be resolved within the current Development rules.
+Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -72,10 +72,14 @@ Phase 1 is complete only when every Soul Engine system is defined and linked, cr
 - [x] Define development interactions
 - [x] Define capability assessment without universal power levels
 - [x] Define development safeguards
-- [~] Define diminishing returns
-- [~] Define mastery thresholds
-- [~] Define training and experiential growth
-- [ ] Audit and complete Phase 2
+- [x] Define diminishing returns
+- [x] Define mastery thresholds
+- [x] Define training and experiential growth
+- [x] Audit and complete Phase 2
+
+### Exit Criteria
+
+Phase 2 is complete only when every Development Track and shared rule is defined and linked; the six capability layers remain distinct; current embodiment and current-life effort remain necessary; retained progression is bounded and non-compounding; diminishing returns, mastery, training, assessment, interactions, and safeguards are playable; human and monster progression remain distinct; no universal level, power score, or progression currency exists; no blocking questions remain; and Phase 3 can define Skill trees without inventing foundational Development rules.
 
 ## Phase 3 — Skill Engine
 

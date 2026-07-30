@@ -372,7 +372,7 @@ This document does not define:
 - individual spells, Skills, traits, professions, tools, or species;
 - exact group, morale, reputation, logistics, or institutional procedures;
 - detailed temporary-enhancement durations or costs;
-- the qualitative comparison framework owned by the later Capability Assessment task;
+- the qualitative comparison framework, which is defined by [Capability Assessment](CAPABILITY_ASSESSMENT.md);
 - numerical Development awards or conversion rates.
 
 Later rules may refine interactions inside their domains. They must preserve effect ownership, independent contributors, visible dependencies, current embodiment, present effort, and no duplicate benefit.

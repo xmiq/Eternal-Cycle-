@@ -22,14 +22,14 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Numerical or ranked systems added later must not convert Soul Depth, Resonance, Titles, Echo count, or Avatar status into a hidden universal power level.
 - Soul Weapon rules remain foundational until Phase 6 defines trust, refusal, evolution, Legacy Weapons, Weapon Echoes, and Weapon Manifestations in full.
 
-## Phase 2 Implementation Watchlist
+## Post-Phase 2 Watchlist
 
 - The exact pace and curve of retained Stat XP remain intentionally unresolved; later rules must fit the bounded, non-compounding acceleration model.
 - Each Development Track should define its own evidence, Plateaus, regression, and local measures without introducing a common exchange rate.
 - Capability Profiles should remain concise enough for play and expose only dimensions relevant to the current objective.
 - Later mastery labels and threat assessments must state their scope so they cannot become a universal level under another name.
 - Cross-species translation should produce body-appropriate expressions and real tradeoffs rather than standardized copies of human techniques.
-- The Stat XP task must decide useful familiarity categories without turning Physical Dimensions into one mandatory attribute list.
+- Stat XP familiarity categories must remain descriptive aids rather than turning Physical Dimensions into one mandatory attribute list.
 - Species, injury, disability, illness, magical enhancement, and artificial-body rules must later define their own particulars without treating an ordinary human body as the universal baseline.
 - Phase 3 must define tree schemas, adaptive-skill naming, evolution, and fusion without turning examples in the Development rules into automatic unlocks.
 - Numerical Skill XP and local proficiency ranks remain optional future tools; any implementation must preserve skill-specific evidence and avoid a shared exchange rate.
@@ -51,7 +51,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Contested magical control, propaganda systems, law, government, faction simulation, and institutional enforcement remain with their later Owning Systems.
 - Phase 4 owns complete monster evolution branches, hidden requirements, rare and hybrid forms, mutations, apex forms, and civilization-specific evolution content.
 - Evolution branches should specify gains, losses, new needs, Body Compatibility, maintenance, ecological effects, and receiving-tree ownership rather than only stronger outputs.
-- The existing evolution-tree template should be checked during the Phase 2 audit and later Phase 4 work against the new Species Development boundaries without treating template fields as automatic mechanics.
+- The evolution-tree template was aligned with Species Development during the Phase 2 audit and must be checked again during Phase 4 without treating template fields as automatic mechanics.
 - Artificial, divine, corruptive, and purifying routes need explicit source and agency rules before content can use them as shortcuts around current embodiment.
 - Species catalogs must leave room for individual, cultural, and population variation while still giving forms meaningful shared traits and constraints.
 - Stat XP now uses bounded domains and qualitative Compatibility Profiles; future numerical experiments must not introduce a shared exchange rate or a permanent species-to-species transfer percentage.
@@ -67,6 +67,14 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Later numerical advancement tests should be audited against every anti-exploit family in Development Safeguards before adoption, especially recursive retained gains and duplicate Skill labels.
 - Safeguard procedures should remain lighter than the behavior they regulate; routine valid training needs no formal exploit audit unless a claim strains an ownership or persistence boundary.
 - Future trauma, injury, burnout, and rehabilitation mechanics must not turn harm into the most efficient source of advancement or remove player agency through diagnosis alone.
+
+## Phase 2 Audit Record
+
+- Every Phase 2 document uses the six-layer capability model and preserves separate effect ownership.
+- Diminishing returns, mastery thresholds, and training and experiential growth are substantially defined across the Development overview, track documents, retained-development rules, and shared safeguards; they require no separate foundational documents.
+- No universal character level, combat rating, power score, progression currency, or fixed cross-body transfer rate was adopted.
+- Numerical curves remain optional later implementations and must preserve qualitative evidence, current embodiment, current-life effort, non-compounding retention, and track-specific ownership.
+- Phase 3 can define tree schemas and Skill content without adding new foundational Development layers.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

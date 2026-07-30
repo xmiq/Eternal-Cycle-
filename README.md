@@ -26,6 +26,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Rules Map
 
+- [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
@@ -44,4 +45,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Soul Engine are complete. The current phase is **Phase 2 — Development System**, and the sole active task is **Audit and complete Phase 2**.
+The repository foundation, Soul Engine, and Development System are complete. The current phase is **Phase 3 — Skill Engine**, and the sole active task is **Define human skill trees**.
