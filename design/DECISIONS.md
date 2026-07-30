@@ -1077,3 +1077,23 @@ Merging, retiring, renaming, splitting, or reclassifying records corrects repres
 ## D-269 — Cleanup Does Not Duplicate Development
 
 When an overbroad or overlapping record is corrected, shared foundations and source history are recorded once. Skill XP and evidence are allocated only to capabilities they actually support and are not copied in full into every new label.
+
+## D-270 — Monster Ecology Is Relational and Causal
+
+Monster Ecology describes changing relationships among habitats, resources, beings, reproduction, magic, disturbance, and consequence. A monster does not exist as an isolated combat role, and ecological change follows causal routes rather than player-centered scripting.
+
+## D-271 — Ecological Roles Are Contextual
+
+Predator, prey, scavenger, parasite, symbiont, decomposer, ecosystem engineer, and apex are relationship-specific descriptions rather than universal power ranks, moral categories, personalities, or progression paths.
+
+## D-272 — Carrying Capacity Is Dynamic and Population-Specific
+
+Carrying Capacity depends on a particular population, habitat, period, resources, dependencies, waste, disease, competition, predation, reproduction, migration, magic, and infrastructure. It is not one permanent number or a universal World Engine formula.
+
+## D-273 — Ecology Creates Evolution Routes Rather Than Rewards
+
+Ecological conditions create recurring problems, feedback, resources, constraints, and possible route evidence. Survival, killing, feeding, migration, reproduction, niche occupancy, and ecological importance do not automatically grant Skills, Species Development, mutation, Evolution, or Soul progression.
+
+## D-274 — Supernatural Ecology Retains System Ownership
+
+Magical resources, spiritual phenomena, Soul effects, Archive Traces, and extraordinary forms may participate in ecology only through established sources and laws. Feeding on bodies, magic, residue, memory, or remains does not copy traits, Skills, souls, or persistent progression without an explicit Owning System.

@@ -28,6 +28,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Conceptual Skills](skills/CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through principles, relationships, meanings, and metaphysical concepts.
 - [Skill Engine Safeguards](skills/SKILL_ENGINE_SAFEGUARDS.md) - unified capability classification, effect ownership, anti-proliferation rules, and representation cleanup.
 
+## Monster Evolution
+
+- [Monster Evolution Rules Index](monster-evolution/README.md) - canonical reading order and boundaries for monster ecology and evolution.
+- [Monster Ecology](monster-evolution/MONSTER_ECOLOGY.md) - niches, resource webs, ecological relationships, carrying capacity, territory, migration, reproduction, competition, and extinction pressure.
+
 ## World Engine
 
 - [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.

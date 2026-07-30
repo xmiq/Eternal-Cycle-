@@ -1091,3 +1091,43 @@ The dormant or awakened soul belonging to a weapon or meaningful tool.
 ## World Engine
 
 The rules and procedures that model causal interaction among populations, resources, ecosystems, factions, institutions, magic, technology, and disasters.
+
+## Monster Ecology
+
+The causal network connecting monsters with habitats, resources, other beings, magic, Soul phenomena, reproduction, disease, waste, disturbance, and environmental change.
+
+## Habitat
+
+The physical, magical, spiritual, constructed, social, or mixed conditions in which a being or population presently lives and can access necessary resources.
+
+## Ecological Niche
+
+The bounded pattern of conditions, resources, activities, tolerances, relationships, and consequences through which a being or population persists. A niche is not a class, personality, combat role, or mandatory evolution path.
+
+## Food Web
+
+The network through which matter, energy, magic, or another established consumable resource moves among sources, consumers, scavengers, parasites, decomposers, and the environment.
+
+## Carrying Capacity
+
+The changing ability of a habitat to sustain a particular population under current resources, waste, disease, predation, competition, reproduction, migration, magic, infrastructure, and disturbance.
+
+## Symbiosis
+
+A sustained close relationship between unlike beings or populations. Its effects may be mutually beneficial, one-sided, harmful, conditional, or differently understood by the participants.
+
+## Territory
+
+A bounded area or resource network that a being or group occupies, uses, patrols, marks, negotiates over, or defends. Territory creates practical and social claims through causality rather than universal ownership.
+
+## Migration
+
+Repeated, directional, or large-scale movement in response to lifecycle, resources, climate, magic, danger, reproduction, social organization, or disturbance.
+
+## Ecological Cascade
+
+A causal sequence in which change to one ecological relationship alters other populations, resources, habitats, or pressures. Counterforces may redirect or interrupt it.
+
+## Extinction Pressure
+
+Conditions that reduce a population's ability to survive, replace losses, reproduce or renew, maintain necessary relationships, and occupy a viable habitat over time. Extinction Pressure is not a universal meter or guarantee of extinction.

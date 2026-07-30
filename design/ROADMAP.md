@@ -4,9 +4,9 @@
 
 **Current phase: Phase 4 — Monster Evolution**
 
-**Current task: Define monster ecology**
+**Current task: Define evolutionary pressures**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin species stages, branching evolution, or another later Phase 4 task until monster ecology is complete unless the project owner explicitly changes the target.
+The project owner has authorized completion of Phase 4 through the ordered checkpoints below. Codex must complete, validate, and commit the exact current task before beginning the next checkpoint. It must not begin monster evolution or another later task until evolutionary pressures are complete.
 
 Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -103,16 +103,26 @@ Phase 3 is complete only when all ten Skill Engine rule documents are defined, l
 
 ## Phase 4 — Monster Evolution
 
-- [ ] Define monster ecology
-- [ ] Define species stages
-- [ ] Define branching evolution
-- [ ] Define hidden evolution conditions
-- [ ] Define mutations
-- [ ] Define hybrid evolutions
-- [ ] Integrate Retained Instincts with monster evolution
-- [ ] Define apex monsters
-- [ ] Define monster civilizations
+- [x] Define monster ecology
+- [ ] Define evolutionary pressures
+- [ ] Define monster evolution
+- [ ] Define species stages within the monster evolution checkpoint
+- [ ] Define branching evolution within the monster evolution checkpoint
+- [ ] Define hidden evolution conditions within the monster evolution checkpoint
+- [ ] Define mutations within the monster evolution checkpoint
+- [ ] Define apex monsters within the monster evolution checkpoint
+- [ ] Define intelligent monster societies
+- [ ] Define monster adaptation
+- [ ] Define hybridization
+- [ ] Define extinction and replacement
+- [ ] Define Soul interaction with evolution
+- [ ] Integrate Retained Instincts with monster evolution within the Soul interaction checkpoint
+- [ ] Define monster evolution safeguards
 - [x] Create evolution-tree template
+
+### Exit Criteria
+
+Phase 4 is complete only when ecology causally drives possible evolution; species stages, branches, hidden conditions, mutations, apex outcomes, adaptation, hybridization, extinction, Soul interactions, and intelligent societies are playable and linked; Skill and Soul ownership remain intact; embodiment and current-life consequence matter; no universal level, kill count, rarity ladder, mandatory tree, or universally optimal species exists; no blocking questions remain; and all links validate.
 
 ## Phase 5 — Human Development
 
