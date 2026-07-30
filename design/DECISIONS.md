@@ -1001,3 +1001,43 @@ A False Diagnosis should explain some available evidence, omit or conflict with 
 ## D-250 — Prior-Life Fragments Do Not Prove Current Skill Ownership
 
 Dreams, reflexes, Echo testimony, Retained Instincts, and partial expressions may provide Discovery Evidence for a prior Skill Imprint. They do not establish a complete current Skill without a valid receiving route, compatible embodiment, present access, practice, and reliability.
+
+## D-251 — Conceptual Skills Are Bounded Learned Competencies
+
+A Conceptual Skill applies extensive foundational mastery and lived understanding to a specific Conceptual Domain through a coherent interpretation and valid present route. It is not unrestricted reality control, ownership of a concept, or a universal power category.
+
+## D-252 — Understanding, Access, Authority, and Effect Remain Separate
+
+Understanding a concept does not create a route to act through it; access does not grant permission over a target; authority does not provide Skill mastery; and none guarantees a successful effect.
+
+## D-253 — Conceptual Skills Require Deep Present Foundations
+
+Extensive foundational mastery, lived experience, coherent understanding, suitable access, relevant embodiment or tools, meaningful limitation, contextual interpretation, and Practised Reliability are required. Intelligence, time, Soul Depth, titles, revelations, or themed spells cannot substitute for them.
+
+## D-254 — Every Conceptual Use Requires a Specific Claim
+
+A Conceptual Claim must identify its target, relationship, method, scope, interpretation, cost, precision, opposition, context, contradiction, embodiment, authority, and consequence. Vague language grants no undefined effects.
+
+## D-255 — Conceptual Domains Have No Universal Interpretation
+
+Different practitioners, species, cultures, professions, Ages, and magical systems may develop coherent but conflicting Conceptual Interpretations. Their exact claims and causal routes are compared without assigning a universal conceptual tier.
+
+## D-256 — Conceptual Skill Does Not Replace Ordinary Training
+
+Conceptual understanding depends on and remains limited by concrete Skills, knowledge, perception, embodiment, tools, resources, practice, current evidence, and reliability. It cannot solve unrelated domains through metaphor.
+
+## D-257 — Conceptual Spellcasting Remains Magic-Owned
+
+A Conceptual Skill may organise magical formation or control, but Magical Development and the applicable magic system own source, access, affinity, Channels, reserves, authority, effect, resistance, cost, and failure.
+
+## D-258 — Supporting Systems Do Not Grant Conceptual Mastery
+
+Soul Depth, Soul Resonance, Soul Titles, Soul Echoes, Soul Avatars, species traits, divine authority, professions, institutions, and Archive Records may support only their established functions. None automatically creates a Conceptual Skill or universal authority.
+
+## D-259 — Conceptual Skill Persistence Is Not Timeless Correctness
+
+A Skill Imprint may preserve integrated conceptual understanding and Skill XP. Each incarnation and Age must re-establish Current Access, embodiment, metaphysical compatibility, authority, current evidence, and Practised Reliability under present world laws.
+
+## D-260 — Social Concepts Cannot Override Agency
+
+Conceptual Skills involving coordination, connection, names, contracts, identity, memory, boundaries, or concealment cannot create consent, trust, allegiance, obedience, identity ownership, or mind control without a separate explicit owning system and its resistance and agency safeguards.

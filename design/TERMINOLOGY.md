@@ -272,6 +272,30 @@ An evidence-based but incorrect conclusion about a Skill's identity, owner, sour
 
 An established condition that prevents, distorts, fragments, masks, or misindexes otherwise relevant Archive Traces or Records for a particular Archive Basis and Interface. It limits that reading and is not universal proof of nonexistence.
 
+## Conceptual Skill
+
+An advanced bounded Skill applying deeply integrated understanding of a principle, relationship, abstraction, meaning, or metaphysical concept through a valid present expression route.
+
+## Conceptual Domain
+
+The specific concept or relationship around which a Conceptual Skill is organised. A domain is a field of interpretation rather than property owned by the practitioner.
+
+## Conceptual Claim
+
+The exact result attempted through a Conceptual Skill in a stated context, including target, relationship, method, scope, access, cost, limits, opposition, and intended consequence.
+
+## Conceptual Access
+
+A valid present route through which conceptual understanding can inform or produce an effect. Access may be perceptual, embodied, technical, social, professional, ritual, magical, divine, relational, territorial, tool-mediated, or otherwise established.
+
+## Conceptual Interpretation
+
+A coherent but bounded model of what a concept means and how it behaves within the practitioner's experience, culture, world laws, and expression route.
+
+## Conceptual Spellcasting
+
+A magical expression in which spell formation or control is organised through a Conceptual Skill. The Skill supplies learned interpretation and technique while magic retains ownership of source, access, authority, energy, effect, resistance, and failure.
+
 ## Foundational Skill
 
 A capability that supplies methods, perception, control, or judgment required by one or more later Skills.

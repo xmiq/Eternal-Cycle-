@@ -268,3 +268,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - False Diagnoses need evidence and revision paths; repeated arbitrary reversals would make investigation meaningless.
 - Prior-life dreams and reflexes are especially likely to be mistaken for current mastery and should preserve the distinction among Skill Imprints, Retained Instincts, Echoes, and current Skills.
 - Akashic Obscuration should create source-specific research problems rather than a universal excuse for withholding evidence.
+
+## Phase 3 Conceptual-Skill Watchlist
+
+- Conceptual Claims should stay specific enough to adjudicate without reducing imaginative uses to a closed spell list.
+- Playtests should challenge each domain with contradictory interpretations and contexts; a concept that always wins is too broad or has captured another system.
+- Conceptual Spellcasting must not become a shortcut around the later magic rules, especially for cost, authority, resistance, and source access.
+- Names, contracts, identity, memory, connection, and coordination need repeated agency audits because evocative language can conceal coercive effects.
+- Reincarnated conceptual masters should retain useful perspective while still discovering that changed Ages can invalidate former laws and institutions.

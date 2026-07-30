@@ -530,6 +530,7 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
+- [Conceptual Skills](../skills/CONCEPTUAL_SKILLS.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
