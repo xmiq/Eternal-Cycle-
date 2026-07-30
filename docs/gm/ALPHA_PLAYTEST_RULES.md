@@ -94,7 +94,7 @@ The following material is ready to constrain alpha play within its stated scope:
 - the complete [Monster Evolution](../monster-evolution/README.md) framework, including ecology, pressure, routes, stages, branches, hidden conditions, Mutations, apex forms, societies, adaptation, Hybridization, extinction, Soul interaction, and safeguards;
 - the complete [Human Classes and Professions](../human/README.md) framework, including Classes, Professions, Martial Traditions, Magical Schools, Social Advancement, Institutions, Class Evolution, and human progression limits;
 - the canonical [Game Master Framework](GAME_MASTER_FRAMEWORK.md) and [GM Principles](GM_PRINCIPLES.md);
-- [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md), [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md), [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md), [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md), [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md), and [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md);
+- [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md), [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md), [Awakening Conditions](../soul-weapons/AWAKENING_CONDITIONS.md), [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md), [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md), [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md), and [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md);
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
 Soul, Development, Skill, Monster Evolution, Human Classes and Professions, and completed Soul Weapon rules are canonical within their stated scopes. Later Magic, World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
@@ -103,7 +103,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, and 
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- detailed Weapon Echoes, Legacy Weapons, Soul Weapon compatibility, Weapon Manifestations, and unconventional forms;
+- detailed Legacy Weapons, Soul Weapon compatibility, Weapon Manifestations, and unconventional forms;
 - mana, affinities, spell formation, rituals, enchanting, alchemy, divine magic, forbidden magic, and other complete magic procedures;
 - detailed World Engine variables and procedures for populations, resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
@@ -230,7 +230,8 @@ Until Phase 6 is complete:
 - preserve the Weapon Soul as a distinct person with agency, perspective, and its own capability;
 - resolve Soul Weapon Evolution through its completed route, transition, consent, tradeoff, and anti-stacking rules;
 - portray Weapon Soul personalities through their completed dedicated rules rather than weapon stereotypes, alignment labels, or obedient-item assumptions;
-- treat unfinished Weapon Echo, Legacy Weapon, compatibility, manifestation, and unconventional-form claims as Provisional unless an existing rule already owns the exact effect.
+- resolve Weapon Echo memory, access, and sharing through their completed dedicated rules without treating Echoes as extra persons or stored abilities;
+- treat unfinished Legacy Weapon, compatibility, manifestation, and unconventional-form claims as Provisional unless an existing rule already owns the exact effect.
 
 ### Magic
 

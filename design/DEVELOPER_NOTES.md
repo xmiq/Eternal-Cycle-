@@ -512,3 +512,16 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Self-directed Weapon Soul change should preserve bodily autonomy while still producing honest bond, custody, logistical, and world consequences.
 - Later Manifestation rules must separate a persistent Soul Weapon Form from when and how that form can physically appear.
 - Later Legacy Weapon rules must decide whether and how an unbound awakened Weapon Soul can evolve without importing the standard bond route by assumption.
+
+## Phase 6 Weapon-Echo Watchlist
+
+- Weapon Chapters should remain meaningful memory boundaries rather than one record per battle, user, incarnation, form, or Age.
+- The difference between a non-agent Weapon Echo and an agentive Soul Echo needs especially clear portrayal whenever both remember the same event.
+- Weapon Echo Access should make memory fallible and playable without turning every long-lived weapon into either an encyclopedia or an arbitrary amnesiac.
+- Vessel Perspective needs consistent limits around touch, inscription, nearby speech, Soul Resonance, and what the Weapon Soul could not directly perceive.
+- Weapon Echo Sharing should preserve the Weapon Soul's privacy and living persons' interests without making testimony unusable for accountability or investigation.
+- Weapon Recall Alignment is the main route by which memory could accidentally become extra reactions, perfect warnings, or inherited mastery and needs close action-economy testing.
+- Echoes tied to Prior Weapon Forms must preserve context without restoring retired configurations or becoming free evolution evidence.
+- Repeated Chapter Reconciliation must not become a Soul Depth, personality, evolution, or memory-clarity farming loop.
+- Later Legacy Weapon rules should use selective Echo sharing as testimony and relationship material without treating inheritance as access or mastery.
+- Later unconventional-vessel rules must revisit how distributed or composite Vessel Perspectives define one coherent Chapter without duplicating Echoes.

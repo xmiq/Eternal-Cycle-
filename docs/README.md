@@ -67,6 +67,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Soul Intertwining](soul-weapons/SOUL_INTERTWINING.md) - mutual Accord, persistent Soul Weapon Bond, identity and consent boundaries, Reincarnation passage, Suspension, and Severance.
 - [Weapon Personalities](soul-weapons/WEAPON_PERSONALITIES.md) - Vessel Perspective, Awakening Interpretation, values, boundaries, tensions, relationships, change, portrayal, and agency safeguards.
 - [Weapon Evolution](soul-weapons/WEAPON_EVOLUTION.md) - qualitative Soul Weapon form change, route provenance, pressure, transition, branches, tradeoffs, persistence, and anti-stacking safeguards.
+- [Weapon Echoes](soul-weapons/WEAPON_ECHOES.md) - Weapon Chapters, first-person memory provenance, access, sharing, privacy, Recall Alignment, persistence, and anti-farming safeguards.
 
 ## World Engine
 

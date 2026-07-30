@@ -1925,3 +1925,43 @@ A conceptual name, metaphor, legend, Soul Title, or dramatic act does not establ
 ## D-481 — Interrupted Evolution Grants No Partial Ability
 
 A failed or interrupted transition may preserve legitimate learning, evidence, damage, changed opportunity, and world consequences. It grants no fractional Evolved capability, guaranteed later success, consolation power, or improved odds merely because resources, suffering, or risk were spent.
+
+## D-482 — Weapon Echoes Are Memory Structures, Not Persons
+
+A Weapon Echo is a bounded first-person memory structure belonging to the continuing awakened Weapon Soul. It is not a separate soul, former incarnation, autonomous personality, advisor, copy of a user, objective record, or independent actor.
+
+## D-483 — Weapon Chapters Form Qualitatively
+
+A Weapon Chapter is organised around a meaningfully distinct form, relationship, purpose, context, or transition and closes through real change or completion. No battle, kill, user, owner, year, Final Death, Reincarnation, Evolution, or World Reset automatically forms a Weapon Echo.
+
+## D-484 — Chapter Reconciliation Preserves Without Duplicating
+
+The awakened Weapon Soul may reconcile a completed Chapter into one Weapon Echo Core only from its actual Vessel Perspective, choices, communication, and knowledge. Formation creates no second soul, copied user, Skill, Soul Imprint, Title, Soul Weapon Form, capability, or objective information.
+
+## D-485 — Weapon Echo Access Is Conditional
+
+Latent, Stirring, Accessible, Articulate, and Integrated states describe current recall and coherence rather than power, truth, value, or independent Presence. Resonance, Integrity, Personality, bond state, vessel condition, damage, and Triggers may change access without erasing the Echo.
+
+## D-486 — Weapon Echo Sharing Requires Consent and Provenance
+
+The Weapon Soul owns ordinary recall and disclosure of its Weapon Echoes. Sharing requires an accessible Echo, valid channel, consent, defined scope, current capacity, privacy boundaries, and clear provenance; bond, ownership, inheritance, rank, divine status, and Archive access grant no unrestricted right to memory.
+
+## D-487 — Weapon Recall Alignment Grants No Actor or Mastery
+
+Weapon Recall Alignment may inform the current Weapon Soul's attention, feedback, timing, or judgment through accessible history. It cannot add actions, restore a Prior Weapon Form, transfer a Skill, replace embodiment, guarantee similarity, control the user, or make the Echo act.
+
+## D-488 — Soul Echoes and Weapon Echoes Preserve Separate Accounts
+
+A Soul Echo and Weapon Echo may record one shared event from their respective sources. Each retains first-person limits, mistakes, privacy, and ownership; neither copies, merges with, verifies, controls, or consents for the other.
+
+## D-489 — Current Interpretation Does Not Rewrite the Echo Core
+
+The continuing Weapon Soul may reconsider, reject, or integrate its earlier judgment. That present interpretation can change personality while the Weapon Echo Core continues to preserve what the Chapter-self experienced and believed at reconciliation.
+
+## D-490 — Weapon Echoes Persist Without Restoring Past Forms
+
+Weapon Echoes normally persist through Evolution, Reincarnation passage, bond change, vessel-preserving repair, Ages, and World Resets. Persistence does not grant access, a selectable Prior Weapon Form, retired capability, passive benefit, or immunity to explicitly governed soul harm.
+
+## D-491 — Weapon Echo Formation and Access Cannot Be Farmed
+
+Repeated use, danger, deaths, users, separations, repairs, form toggles, recalls, conversations, and dramatic labels do not create or advance Echoes by count. One history cannot be split into several structures for power, and interrupted recall grants no additional memory or capability.

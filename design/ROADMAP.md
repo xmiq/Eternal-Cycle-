@@ -4,9 +4,9 @@
 
 **Current phase: Phase 6 — Soul Weapons**
 
-**Current task: Define Weapon Echoes**
+**Current task: Define Legacy Weapons**
 
-Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define Weapon Echoes** unless the project owner explicitly changes the target. Do not begin Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapons until Weapon Echoes are complete unless the project owner explicitly changes the target.
+Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define Legacy Weapons** unless the project owner explicitly changes the target. Do not begin compatibility, Weapon Manifestations, or unconventional Soul Weapons until Legacy Weapons are complete unless the project owner explicitly changes the target.
 
 Phases 1 through 5 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -149,7 +149,7 @@ Phase 5 is complete only when Human Classes, Professions, Martial Traditions, Ma
 - [x] Define soul intertwining
 - [x] Define weapon personalities
 - [x] Define weapon evolution
-- [ ] Define Weapon Echoes
+- [x] Define Weapon Echoes
 - [~] Define Legacy Weapons
 - [ ] Define compatibility
 - [ ] Define Weapon Manifestations

@@ -1082,7 +1082,7 @@ Deep capability within a narrow range accompanied by limited transfer, weak supp
 
 ## Weapon Echo
 
-A Weapon Soul's retained memory or manifestation associated with a past form, wielder, or defining event.
+A persistent, bounded memory structure formed when an awakened Weapon Soul meaningfully reconciles a completed Weapon Chapter. It remains part of the current Weapon Soul rather than a separate person, former incarnation, objective history, stored capability, or manifestation.
 
 ## Weapon Soul
 
@@ -1847,3 +1847,31 @@ A bounded set of explicitly defined configurations integrated within one Soul We
 ## Concept-Bearing Reorganisation
 
 A rare Weapon Evolution pattern that organises a Soul Weapon Form around one bounded conceptual relationship supported by explicit sources, Targets, access, limits, costs, counters, and unavailable claims.
+
+## Weapon Chapter
+
+A bounded span of a Weapon Soul's lived history organised around one meaningful form, relationship, purpose, place, conflict, Age, responsibility, or transition. It is not a universal calendar unit.
+
+## Chapter Reconciliation
+
+The qualitative process through which an awakened Weapon Soul recognizes that a meaningful Weapon Chapter has closed, distinguishes actual first-person experience from later interpretation, and integrates a bounded Weapon Echo without duplicating identity or capability.
+
+## Weapon Echo Core
+
+The source-rooted Vessel Perspective, memories, interpretations, relationships, emotions, choices, capability context, and unresolved meaning preserved from one reconciled Weapon Chapter.
+
+## Weapon Echo Trigger
+
+A current person, place, body, form, material, technique, sensation, symbol, threat, relationship, or consequence that creates valid Resonance with a particular Weapon Echo.
+
+## Weapon Echo Access
+
+The current degree to which a Weapon Soul can approach and interpret one Weapon Echo: Latent, Stirring, Accessible, Articulate, or Integrated. It describes recall and coherence rather than power or independent Presence.
+
+## Weapon Echo Sharing
+
+A consensual, source-bounded disclosure through which a Weapon Soul communicates part of a Weapon Echo to another person by an established channel.
+
+## Weapon Recall Alignment
+
+A cooperative state in which a Weapon Soul uses an accessible Weapon Echo to inform its own current attention, feedback, timing, or judgment while another actor performs through present embodiment and capability. It is not Soul Echo Overlay, Delegation, or Skill transfer.

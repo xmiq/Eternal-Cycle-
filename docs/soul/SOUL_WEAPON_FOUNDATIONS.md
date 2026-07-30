@@ -47,6 +47,12 @@ An executioner's history might instead produce:
 
 These chains are illustrative histories rather than universal stages, rarity tiers, morality tracks, guaranteed sequences, or automatic improvements. The complete rules for Prior Weapon Forms, route provenance, Weapon Evolution Pressure, consent, transition, branching, costs, access, and anti-stacking safeguards are defined in [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md).
 
+## Weapon Echoes
+
+An awakened Weapon Soul may preserve a bounded first-person memory structure when it meaningfully reconciles a completed chapter of its own history. A Weapon Echo belongs to the current Weapon Soul; it is not a former incarnation, separate personality, objective record, stored ability, or extra actor.
+
+The complete rules for Weapon Chapters, Chapter Reconciliation, Weapon Echo Cores, access, sharing, privacy, Weapon Recall Alignment, persistence, and anti-farming safeguards are defined in [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md).
+
 ## Legacy Weapons
 
 If intertwining is incomplete, the awakened weapon may remain in the world. Future wielders must earn trust rather than automatically gaining ownership.
@@ -74,6 +80,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Soul Intertwining](../soul-weapons/SOUL_INTERTWINING.md)
 - [Weapon Personalities](../soul-weapons/WEAPON_PERSONALITIES.md)
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
+- [Weapon Echoes](../soul-weapons/WEAPON_ECHOES.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)
