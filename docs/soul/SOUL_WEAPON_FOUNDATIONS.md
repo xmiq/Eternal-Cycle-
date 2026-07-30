@@ -51,4 +51,5 @@ If intertwining is incomplete, the awakened weapon may remain in the world. Futu
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
+- [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
 - [Reincarnation](REINCARNATION.md)

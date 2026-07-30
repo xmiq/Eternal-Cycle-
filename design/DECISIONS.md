@@ -349,3 +349,27 @@ Soul Avatar status does not raise Echo Presence, repair damage, make testimony o
 ## D-087 — Soul Avatar Recognition Creates World Consequences, Not Destiny
 
 Cultures, institutions, gods, spirits, monsters, Weapon Souls, and rival soul entities may recognize, fear, worship, exploit, hunt, regulate, bargain with, or misidentify Soul Avatars through valid methods and ordinary causality. Recognition grants no automatic legal office, obedience, moral authority, centrality to every crisis, or predetermined historical role.
+
+## D-088 — Every Cross-System Effect Has an Owning System
+
+Each Interaction Claim has one Owning System that defines whether the effect exists and what it can do. Supporting Systems may supply history, access, capacity, interpretation, compatibility, cooperation, or consequences but cannot create an effect or waive a requirement the owner does not permit.
+
+## D-089 — Soul Engine Resolution Separates Distinct Layers
+
+Persistence, access, interpretation, expression, and consequence are separate questions. Resolution proceeds through current agency, genuine provenance, ownership, permission, access, capacity, embodiment, consent, time and cost, world effect, and persistence; success at one layer does not guarantee later layers.
+
+## D-090 — Cross-System Rules Cannot Qualify or Multiply Themselves
+
+An effect cannot create its own prerequisite, and several systems describing one history cannot duplicate the same development, authority, action, or reward. Similar names, symbols, examples, or mutually supporting claims cannot bootstrap a Link, Title, Constellation, Archive access, Avatar Association, Reincarnation candidate, or other protected result without independent valid history.
+
+## D-091 — Narrow Rules Own Their Domains Without Silent Overrides
+
+The narrowest explicit rule controls its named effect while remaining subject to foundational identity, agency, embodiment, consent, soul-harm, and world-causality rules. A permissive result in one system does not export permission to another, and examples do not create exceptions.
+
+## D-092 — Failed Interaction Layers Produce Matching Partial Outcomes
+
+When an Interaction Claim cannot fully resolve, the result should match the failed layer: absent provenance denies the claimed source, absent access leaves persistence intact but unavailable, weak interpretation produces uncertainty, insufficient capacity narrows scope or causes established strain, incompatible embodiment requires translation or dormancy, and absent consent prevents cooperation. Failure at one layer does not erase legitimate success at another.
+
+## D-093 — Canonical Conflicts Must Be Resolved in Both Authorities
+
+When playable rules and authoritative design decisions conflict and interpretation cannot reconcile them, neither silently overrides the other. The affected task must be blocked, the question recorded, and both authorities corrected before the interaction can be considered internally consistent.

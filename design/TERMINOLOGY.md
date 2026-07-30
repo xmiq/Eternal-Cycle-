@@ -136,6 +136,22 @@ A broad qualitative description of the complexity a soul can coherently integrat
 
 A durable change engraved into a soul by meaningful development or transformation. An imprint may persist without being consciously or immediately accessible.
 
+## Interaction Claim
+
+The exact outcome a character, being, rule, or GM attempts to produce by combining two or more systems.
+
+## Owning System
+
+The canonical system that defines an Interaction Claim's existence, requirements, scope, limits, persistence, and failure states.
+
+## Supporting System
+
+A system that supplies relevant history, access, capacity, interpretation, compatibility, cooperation, or consequences without owning the resulting effect.
+
+## Soul Engine Resolution
+
+The ordered process that tests an Interaction Claim against agency, provenance, ownership, permission, access, capacity, embodiment, consent, cost, world consequence, and persistence.
+
 ## Retained Instinct
 
 A persistent Soul Imprint carrying an integrated, body-shaped pattern of attention, urgency, valuation, or response from prior embodiment or meaningful adaptation. It preserves no missing anatomy, complete skill, or compulsory action.

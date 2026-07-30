@@ -36,6 +36,10 @@ A normal death ends or removes:
 
 Persistence must create continuity, not immunity from consequence. Every death should close possibilities while opening others.
 
+## Interaction Rule
+
+When several soul systems contribute to one outcome, use [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md) to identify the Owning System and resolve agency, provenance, permission, access, capacity, embodiment, consent, cost, and world consequence without duplicate benefits or silent overrides.
+
 ## Related Documents
 
 - [Soul Rules Index](README.md)
@@ -50,5 +54,6 @@ Persistence must create continuity, not immunity from consequence. Every death s
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
+- [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
