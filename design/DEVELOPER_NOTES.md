@@ -327,3 +327,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Human-monster hybrids are the highest-risk case for accidental dual-tree access and should always state the receiving progression structure.
 - Artificial and symbiotic origins need repeated personhood, consent, and ownership checks.
 - Stable hybrids should not receive instability as a genre tax, while genuinely conflicting bodies must retain meaningful consequences.
+
+## Phase 4 Extinction and Replacement Watchlist
+
+- Global Extinction should remain consequential without requiring impossible omniscient surveys; evidence standards need to scale with established world scope.
+- Refugia must be established through prior causality so uncertainty cannot become a routine consequence-reversal device.
+- Functional Replacement should preserve missing functions and new dependencies instead of resetting an ecology to its previous shape.
+- Reconstructed or convergent analogues need clear provenance so de-extinction stories do not silently restore lost bodies, cultures, or relationships.
+- Invasive-population adjudication should separate ecological effects from political rhetoric, personhood, and collective blame.
+- Long time skips will eventually need a World Engine resolution procedure that advances Extinction Debt and recovery without false precision.

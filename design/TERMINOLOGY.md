@@ -1399,3 +1399,47 @@ The degree to which a Hybrid Form can maintain coherent structure, regulation, i
 ## Hybrid Inheritance
 
 Transmission of a Hybrid Form or some of its integrated structures through the actual renewal process defined by its Hybrid Origin.
+
+## Local Extirpation
+
+The loss of a population from a defined habitat or region while viable members or renewal sources remain elsewhere.
+
+## Global Extinction
+
+The end of all viable members and ordinary renewal routes of a defined lineage across the world's current reachable scope.
+
+## Functional Extinction
+
+A condition in which a population still exists but can no longer perform a formerly consequential ecological, reproductive, magical, social, or institutional function at a meaningful scale.
+
+## Extinction Debt
+
+Future loss made likely by damage already sustained, such as insufficient renewal, fragmented habitat, missing partners, narrowed variation, or the delayed failure of a vulnerable lifecycle stage.
+
+## Ecological Collapse
+
+A sustained breakdown of several connected ecological functions and relationships such that the prior ecology cannot maintain itself without major reorganisation or intervention.
+
+## Replacement Species
+
+A species or stable lineage that expands, arrives, emerges, or is introduced into conditions changed by another population's decline and assumes some of its former ecological relationships.
+
+## Functional Replacement
+
+The restoration or substitution of a lost ecological function by one or more species, societies, institutions, magical processes, or environmental changes without recreating the former lineage.
+
+## Invasive Population
+
+A population whose arrival or expansion beyond its prior range causes sustained disruptive pressure because local relationships and counterforces do not presently contain its effects.
+
+## Refugium
+
+A causally established place, host, dormant stage, constructed reserve, or protected condition in which a threatened population can remain viable while disappearing elsewhere.
+
+## Ecological Recovery
+
+The restoration or reorganisation of viable ecological functions, relationships, renewal, and resilience after decline, disturbance, extirpation, or collapse.
+
+## Reintroduction
+
+The deliberate return of a still-viable lineage to a region from which it was locally extirpated.

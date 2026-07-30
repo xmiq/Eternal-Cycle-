@@ -1257,3 +1257,43 @@ A Hybrid Form becomes a stable lineage or species only when its renewal process 
 ## D-314 — Hybrid Origin Does Not Prescribe Identity
 
 Hybrid bodies do not inherently possess divided loyalty, inner conflict, moral ambiguity, cultural mixture, social inferiority, or biological instability. Identity and social treatment follow persons, cultures, histories, and actual form conditions.
+
+## D-315 — Extinction Status Is Scoped
+
+Population decline, Local Extirpation, Functional Extinction, and Global Extinction are distinct claims. Each must identify the lineage, function, geographic or world scope, lifecycle, timescale, renewal routes, evidence, and uncertainty involved.
+
+## D-316 — Global Extinction Requires Causal Evidence
+
+Global Extinction ends all viable members and ordinary renewal routes in the current reachable world scope. Established dormant stages and Refugia count when genuinely viable; rumors, remains, memories, souls, inert templates, and retroactively invented survivors do not reverse the status.
+
+## D-317 — Extinction Debt and Collapse Preserve Delayed Causality
+
+Damage to renewal, habitat, variation, dependencies, or institutions may create future loss before visible population failure. Ecological Collapse requires connected functional breakdown at a stated scope rather than one extinction, a universal meter, or a scripted apocalypse.
+
+## D-318 — Replacement Does Not Recreate the Lost Lineage
+
+A Replacement Species or Functional Replacement may assume some former relationships through causal access and persistence. Similar function, convergence, social naming, or niche occupancy does not copy the predecessor's identity, anatomy, Souls, Skills, culture, progression, or complete ecological effects.
+
+## D-319 — Invasiveness Is Contextual
+
+An Invasive Population is defined by sustained disruptive effects in a receiving ecology where current relationships fail to contain it. Invasiveness is not a species essence, moral category, justification for collective guilt, or synonym for all migration and range expansion.
+
+## D-320 — Magical Catastrophes Retain Provenance
+
+A magical catastrophe must have an established source or law, footprint, duration, selectivity, observable consequences, counterforces, and aftermath. Magical causation does not grant arbitrary extinction, Mutation, Evolution, Skill, Soul growth, or useful adaptation.
+
+## D-321 — Recovery Requires Viable Sources and Repaired Causes
+
+Recolonisation, Reintroduction, habitat repair, relationship repair, assisted transition, and Functional Replacement require causal sources, suitable conditions, time, capability, and consequences. Recovery may establish a new equilibrium and does not promise exact restoration.
+
+## D-322 — Soul Persistence Does Not Preserve a Species
+
+Surviving souls and their protected records do not preserve extinct anatomy, populations, renewal processes, ecosystems, or progression trees. An extinct form is unavailable as an ordinary Reincarnation candidate until a valid current embodiment route exists.
+
+## D-323 — Extinction Consequences Survive Narrative Transitions
+
+Off-screen play, time skips, death, Reincarnation, and changing protagonists advance rather than erase extinction consequences. A World Reset does not silently restore a lineage; any later similar form requires explicit surviving, reconstructed, convergent, hybrid, or new-origin provenance.
+
+## D-324 — Evolutionary Rescue Is Possible but Never Owed
+
+A valid Evolution Route may help viable descendants survive meaningful pressure when time, compatibility, transition conditions, resources, renewal, and post-transition ecology permit. Desperation, suffering, killing, repetition, or approaching extinction cannot create or guarantee such a route.
