@@ -188,6 +188,7 @@ Choosing timing, destination, or incarnation direction still requires Reincarnat
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Depth supports the complexity of relationships that change form across many lives without creating recognition, reunion, or consent.
 - **Soul Weapons:** Depth can sustain more complex intertwining while never replacing mutual trust or compatibility.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** Depth limits how much world-deep truth can be integrated without severe harm.
+- **[Soul Avatars](SOUL_AVATARS.md):** Depth supports Continuity Concordance but cannot create emergence, relevant history, agency, or access by itself.
 - **Development and skills:** Depth may qualify a soul for advanced combinations, but practice and system-specific requirements remain necessary.
 
 ## Exploit Limits
@@ -239,6 +240,7 @@ A dragon inherits extraordinary natural power and dominates its territory withou
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

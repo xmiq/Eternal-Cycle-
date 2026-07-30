@@ -16,7 +16,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
-These are non-canonical implementation notes for owner-requested future systems. They do not change the current roadmap target, grant new abilities, or count as substantial implementation. Canonical work must wait until the project owner selects the relevant roadmap task.
+These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.
 
 ### Inspiration References
 
@@ -25,11 +25,11 @@ These are non-canonical implementation notes for owner-requested future systems.
 
 Future rules must not copy protected names, characters, nations, exact powers, scenes, plot structures, or setting-specific institutions from either work.
 
-### Soul Avatar Design Brief
+### Implemented Soul Avatar Design Brief
 
-The requested Soul Avatar is an exceptional, emergent state in which the current incarnation can synthesize relevant experience from a long and consequential soul history. It is not a universally predestined chosen one, moral alignment, elemental class, flat combat transformation, guaranteed feature of every Age, or required endpoint of ordinary soul progression.
+The canonical [Soul Avatar](../docs/soul/SOUL_AVATARS.md) is an exceptional, emergent phenomenon in which the current incarnation synthesizes relevant experience from a long and consequential soul history. The notes below preserve the design brief and are not a second rules source.
 
-Proposed constraints to evaluate when the task becomes active:
+The canonical implementation was evaluated against these constraints:
 
 - current-incarnation agency remains primary at all times;
 - several Soul Avatars may exist simultaneously and may cooperate, compete, or oppose one another;
@@ -49,7 +49,7 @@ Proposed constraints to evaluate when the task becomes active:
 - institutions, gods, cultures, monsters, and rival soul entities may fear, worship, exploit, hunt, regulate, or bargain with a Soul Avatar through ordinary causal means;
 - the GM should use Soul Avatars sparingly and should never make one automatically central to every world crisis.
 
-Required future examples:
+Examples required and included in the canonical document:
 
 - a dragon-associated Soul Avatar informed by dragon, hunter, scholar, and dragon-priest incarnations;
 - a monster Soul Avatar formed across many unrelated monster species;
@@ -60,9 +60,9 @@ Required future examples:
 ### Soul Avatar Dependencies and Resolved Terminology
 
 - **Soul Avatar** is reserved for the whole-soul synthesis system. The highest Echo Presence is now **Delegate**, and the future Weapon Soul expression is a **Weapon Manifestation**. Unqualified **Avatar** is not a standalone mechanic.
-- A [Soul Constellation](../docs/soul/SOUL_CONSTELLATIONS.md) is a relationship among distinct souls. Prior incarnations and their Echoes belong to one continuing soul, so a Soul Constellation cannot be an internal prerequisite stage. A likely precursor is a coherent Echo Chorus supported by Concordant Resonance and stable Soul Space, but this remains a proposal.
-- Retained Instincts must be defined before the system can separate bodily instinct, retained instinct, Echo context, and synthesized Soul Avatar expression.
-- The Akashic Archive must be defined before Soul Avatar access to Archive Records, historical verification, or world-scale memory can become canonical.
+- A [Soul Constellation](../docs/soul/SOUL_CONSTELLATIONS.md) is a relationship among distinct souls and is not an internal prerequisite. Canonical Soul Avatar emergence instead uses relevant historical synthesis and Continuity Concordance while keeping Echoes within one continuing soul.
+- [Retained Instincts](../docs/soul/RETAINED_INSTINCTS.md) now separates bodily instinct, retained instinct, Echo context, and synthesized Soul Avatar expression.
+- The [Akashic Archive](../docs/soul/AKASHIC_ARCHIVE.md) now bounds Soul Avatar access to Archive Records, historical verification, and world-scale memory.
 - Alternate or divergent histories do not automatically create Soul Echoes under current canon. Any Gate-related divergent Echo concept needs a separate rule that preserves one active incarnation and does not manufacture extra souls or memories.
 
 ### World-Contact Gate Design Brief
@@ -127,7 +127,7 @@ Future integration should allow, when justified:
 - rival Soul Avatars to meet through valid Gate and world causality;
 - institutions to treat a Soul Avatar as a diplomatic asset, weapon, religious figure, or security risk;
 - a Soul Weapon to react to unfamiliar materials, souls, or metaphysical laws without gaining automatic mastery;
-- Archive records of Gate contact to remain bounded by the future Archive rules and source limitations;
+- Archive Records of Gate contact to remain bounded by current Archive rules and source limitations;
 - Gate contact to create new relationships that may later qualify for Soul Constellations through recurrence and reciprocal transformation;
 - Reincarnation to cross a World Gate only when embodiment, world state, compatibility, access, and causal-placement rules permit it.
 

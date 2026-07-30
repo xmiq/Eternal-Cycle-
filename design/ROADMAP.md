@@ -4,11 +4,11 @@
 
 **Current phase: Phase 1 — Soul Engine**
 
-**Current task: Define Soul Avatar system**
+**Current task: Document interactions among soul systems**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the soul-system interaction document or final Soul Engine audit until the Soul Avatar system is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin the final Soul Engine audit until the soul-system interaction document is complete unless the project owner explicitly changes the target.
 
-Soul Avatar, world-contact Gate, and related template work requested by the project owner is queued in the appropriate later phases below. These queued entries do not change the current task or authorize implementation before the project owner selects them.
+World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
 ## Status Legend
 
@@ -49,7 +49,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Retained Instincts
 - [x] Define Akashic Archive
 - [x] Resolve Soul Avatar terminology against Echo and Weapon avatars
-- [ ] Define Soul Avatar system
+- [x] Define Soul Avatar system
 - [ ] Document interactions among soul systems
 - [ ] Review exploit resistance and narrative consequences
 

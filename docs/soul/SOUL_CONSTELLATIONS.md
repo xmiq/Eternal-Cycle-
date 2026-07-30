@@ -355,6 +355,7 @@ The GM should track only the Threads and past intersections that matter to play.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Instinctive familiarity or caution may act as a Trigger but does not prove identity by itself.
 - **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** Weapon Souls may become members while remaining distinct persons; intertwining alone does not create a Constellation.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** Archive Records may corroborate former intersections when valid access exists, but the Constellation grants no automatic Archive access.
+- **[Soul Avatars](SOUL_AVATARS.md):** A Constellation may provide transformative relationships and Triggers but is never the internal structure of a Soul Avatar and cannot share or appoint that status.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** Convergence, separation, myths, institutions, and conflict must enter the world through causal events rather than authorial convenience.
 
 ## Exploit Limits
@@ -428,6 +429,7 @@ A reincarnator repeatedly hunts another recurring soul, believing that dramatic 
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

@@ -17,7 +17,8 @@ Subject to their detailed rules, the following may persist:
 - [Retained Instincts](RETAINED_INSTINCTS.md);
 - [Soul Constellations](SOUL_CONSTELLATIONS.md);
 - Soul Weapons and Weapon Echoes;
-- [Akashic Archive](AKASHIC_ARCHIVE.md) Attunements and established access.
+- [Akashic Archive](AKASHIC_ARCHIVE.md) Attunements and established access;
+- genuine [Soul Avatar](SOUL_AVATARS.md) emergence and the conditional capacity for Avatar Expression.
 
 ## Temporary Elements
 
@@ -48,5 +49,6 @@ Persistence must create continuity, not immunity from consequence. Every death s
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

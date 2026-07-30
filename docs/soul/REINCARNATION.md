@@ -172,7 +172,8 @@ Subject to each system's access rules:
 - Soul Titles and Soul Constellations;
 - Soul Weapons and Weapon Echoes;
 - Soul Wounds, soul-level curses, and other explicitly persistent conditions;
-- established [Archive Attunements](AKASHIC_ARCHIVE.md#archive-attunement) and access relationships.
+- established [Archive Attunements](AKASHIC_ARCHIVE.md#archive-attunement) and access relationships;
+- genuine [Soul Avatar](SOUL_AVATARS.md) emergence and the conditional capacity for Continuity Concordance.
 
 When classification is uncertain, ask whether the element is embodied, worldly, identity-bound, or explicitly engraved into the soul. Nothing persists merely because it would be convenient.
 
@@ -269,6 +270,7 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

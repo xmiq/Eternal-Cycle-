@@ -313,3 +313,39 @@ Every Archive Interface and Custodian has a defined scope, method, jurisdiction,
 ## D-078 — Avatar Terminology Has Separate Owners
 
 **Soul Avatar** is reserved for the exceptional whole-soul synthesis system led by the current incarnation. **Delegate Presence** replaces Avatar as the highest Echo Presence, and **Weapon Manifestation** replaces weapon avatar as the reserved term for a future Weapon Soul expression. Unqualified **Avatar** is not a standalone canonical mechanic, and none of these terms grants the rules belonging to another.
+
+## D-079 — Soul Avatars Are Emergent and Optional
+
+A Soul Avatar emerges from meaningful continuity, integration, Soul Depth, Soul Resonance, Soul Integrity, historical consequence, and present responsibility rather than universal predestination. Status is not morally aligned, guaranteed in an Age, or required for ordinary soul progression, Reincarnation, or final evolution.
+
+## D-080 — The Current Incarnation Leads Avatar Expression
+
+The Avatar Lead remains the executive center of Avatar Expression and chooses present action. An Echo Chorus cannot decide by vote, and an Echo, ritual, god, institution, Weapon Soul, Archive Custodian, title, or prophecy cannot replace the Lead by calling the result a Soul Avatar state.
+
+## D-081 — Avatar Expression Is Bounded Synthesis
+
+Avatar Expression aligns only relevant and accessible histories, Echoes, Imprints, instincts, Titles, bonds, and Records. It grants no complete soul recall, every former skill, missing anatomy, extra actions, objective history, universal authority, or exemption from other systems' requirements.
+
+## D-082 — Longevity and Sacrifice Do Not Qualify a Soul by Themselves
+
+Many lives and long existence supply opportunities rather than thresholds. Emergence requires demonstrated integration and consequence; staged sacrifice, manufactured crises, shallow species collection, rapid reincarnation, public fame, and accumulated power cannot substitute.
+
+## D-083 — Multiple Soul Avatars and Associations May Coexist
+
+Several Soul Avatars may exist simultaneously and may cooperate, oppose one another, or refuse a conflict. Avatar Associations emerge from recurring lives and consequences rather than class selection and create context, recognition, duties, and pressure rather than command over an associated force.
+
+## D-084 — Avatar Expression Is Conditional and Costly
+
+Expression requires a Trigger, relevant Links, sufficient Depth and Integrity, compatible embodiment, a stable Soul Anchor, defined scope, and an exit route. It may be deliberate, situational, involuntary in onset, or ritualized, and may cause fatigue, Dissonance, memory bleed, identity pressure, Soul Strain, spiritual visibility, and social consequences without functioning as a flat combat transformation.
+
+## D-085 — Prior Lives Retain Species and Knowledge Limits
+
+Human, monster, divine, spiritual, artificial, and other valid incarnations contribute through the cognition, senses, culture, and embodiment they actually possessed. Avatar Expression preserves provenance and translation loss and cannot humanize every perspective, create anatomy, or bypass progression-tree, evolution, magic, tool, resource, and practice requirements.
+
+## D-086 — Echo Participation Remains Bounded and Voluntary
+
+Soul Avatar status does not raise Echo Presence, repair damage, make testimony objective, or force an active Echo to advise, Overlay, or disclose contextual memory. Fragmented, corrupted, hostile, or unwilling Echoes may narrow or destabilize Expression, while full Echo Delegation suspends or ends whole-soul Expression because the current incarnation is no longer leading it.
+
+## D-087 — Soul Avatar Recognition Creates World Consequences, Not Destiny
+
+Cultures, institutions, gods, spirits, monsters, Weapon Souls, and rival soul entities may recognize, fear, worship, exploit, hunt, regulate, bargain with, or misidentify Soul Avatars through valid methods and ordinary causality. Recognition grants no automatic legal office, obedience, moral authority, centrality to every crisis, or predetermined historical role.

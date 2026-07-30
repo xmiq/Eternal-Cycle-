@@ -197,6 +197,7 @@ An instinct may change through later integration. Its expression can broaden, na
 - **[Soul Titles](SOUL_TITLES.md):** Instinct may influence present Title Expression, while behavior without integrated identity and consequence cannot create a title by itself.
 - **Soul Weapons:** A Weapon Soul may learn an incarnation's cues and cooperate with a compatible response, but remains a distinct person and does not inherit the instinct automatically.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** A valid Archive reading may verify or contextualize an Origin; an instinct does not provide general access or objective history.
+- **[Soul Avatars](SOUL_AVATARS.md):** Relevant instincts may contribute body-shaped attention during Avatar Expression but remain constrained by present anatomy, provenance, and current agency.
 - **Development and skills:** Present-life practice turns useful orientation into reliable capability. Retained Instincts do not replace Skill Imprints, training, or bodily development.
 - **Monster evolution:** An instinct may become evidence for compatibility or a hidden direction only when the evolution system recognizes it; it is never an automatic unlock.
 
@@ -261,6 +262,7 @@ A goblin retains an aerial life's instinct for reading rising air. It feels a Cu
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)

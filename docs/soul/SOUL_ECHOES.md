@@ -313,6 +313,7 @@ If an incarnation reaches Final Death during Echo Delegation, Life Reconciliatio
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Echo memories may reveal recurring relationships but cannot prove ownership, establish the other soul's perspective, or compel recognition.
 - **Soul Weapons:** A Soul Echo belongs to the reincarnating soul; a Weapon Echo belongs to the distinct Weapon Soul. They are not interchangeable.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** An Echo is personal testimony, not an Archive Record or objective historical source.
+- **[Soul Avatars](SOUL_AVATARS.md):** Echoes may contribute according to Presence, consent, and access, but Soul Avatar status cannot promote them or make a Chorus the controlling self.
 - **Development and skills:** Echoes can supply context and cooperation but cannot replace present practice, access requirements, or compatible embodiment.
 
 ## Exploit Limits
@@ -377,6 +378,7 @@ An Awakened Echo recognizes the ruins of its capital and demands that surviving 
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

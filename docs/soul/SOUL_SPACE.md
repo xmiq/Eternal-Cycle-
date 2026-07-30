@@ -343,6 +343,7 @@ The GM should track only Regions and Constructs that matter to play. Soul Space 
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Recurring relationships may support Gates or a consensual Constellation Commons but do not compel entry, disclosure, or intimacy.
 - **Soul Weapons:** An intertwined Weapon Soul may maintain a consensual Region while remaining a distinct person.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** Soul Space may host an established Archive Interface, but it cannot create access, provenance, or objective truth.
+- **[Soul Avatars](SOUL_AVATARS.md):** Soul Space can host relevant Echoes and symbols during Continuity Concordance, while the Soul Anchor protects the Avatar Lead and external time continues.
 - **Development and evolution:** Internal practice and interfaces remain subject to present-life effort, embodiment, and system-specific requirements.
 
 ## Exploit Limits
@@ -411,6 +412,7 @@ A monster sees three forms reflected in an internal pool. The Soul Space is disp
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

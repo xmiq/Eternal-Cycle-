@@ -269,6 +269,7 @@ High Soul Depth increases capacity but does not make a reading harmless or corre
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Records may corroborate recurring intersections but cannot create a Constellation, force recognition, or expose another member's private soul.
 - **[Soul Titles](SOUL_TITLES.md):** Records may corroborate a Title Basis or preserve prior names; recording, fame, or Archive recognition does not form or grant a title.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** Records may contextualize an Instinct Origin, while instinct alone cannot retrieve objective history.
+- **[Soul Avatars](SOUL_AVATARS.md):** Avatar Expression may compare relevant Records with lived testimony, but still needs a Target, Basis, Interface, scope, permission, and sufficient Integrity.
 - **Soul Weapons:** A Weapon Soul may contribute its own testimony, serve as a limited Interface, or share an Attunement according to its bond; it remains a distinct person rather than an Archive device by default.
 - **Development and skills:** Archive information can guide real development but cannot award retained experience, mastery, or progression access.
 - **World Engine:** Records arise from causal events and consequences. Archive knowledge enters politics, religion, war, ecology, and institutions through actors rather than automatically changing the world.
@@ -342,6 +343,7 @@ A World Spirit offers Record Reading of a poisoned river's origin in exchange fo
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

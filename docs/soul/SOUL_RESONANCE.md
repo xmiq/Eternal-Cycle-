@@ -287,6 +287,7 @@ Assessments may identify a Target, State, Trigger, or obstruction, but should no
 - **[Soul Constellations](SOUL_CONSTELLATIONS.md):** Resonance permits recognition and voluntary interaction across recurring relationships without determining present roles.
 - **Soul Weapons:** Mutual Resonance supports awakening, intertwining, communication, and coordinated expression.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** Resonance supplies target-specific alignment while an Archive Basis, Interface, permission, and Depth still govern reading.
+- **[Soul Avatars](SOUL_AVATARS.md):** Relevant Links and an Avatar Trigger support Continuity Concordance without granting every history or skill access.
 - **Skills and evolution:** Resonance may reveal or support dormant, crossover, hybrid, or hidden possibilities but never replaces their other requirements.
 
 ## Exploit Limits
@@ -346,6 +347,7 @@ During a defining battle, wielder and awakening Weapon Soul willingly align arou
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Reincarnation](REINCARNATION.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

@@ -38,7 +38,27 @@ A bounded, mutually agreed transfer of executive control from the current incarn
 
 ## Soul Avatar
 
-The term reserved for an exceptional whole-soul synthesis state led by the current incarnation. It must not describe one Soul Echo, a Weapon Soul's manifestation, a generic projection, a title symbol, or a divine proxy.
+An exceptional whole-soul phenomenon formed when a continuing soul can sustain Continuity Concordance under present responsibility. Soul Avatar status is emergent, not universally predestined or required for normal progression.
+
+## Avatar Lead
+
+The current incarnation acting as the executive center of Avatar Expression. The Lead interprets contributions, chooses present action, and bears worldly consequences.
+
+## Continuity Concordance
+
+A coherent alignment among the Avatar Lead, relevant soul history, willing active contributors, and a present purpose. It can contain disagreement without allowing one prior identity to replace the current self.
+
+## Avatar Expression
+
+The active, conditional state through which a Soul Avatar performs bounded whole-soul synthesis under defined entry, scope, cost, and exit conditions.
+
+## Avatar Association
+
+A recurring theme of identity and consequence that became relevant across several lives. An Association creates context and recognition rather than a package of powers.
+
+## Avatar Trigger
+
+A present crisis, responsibility, place, relationship, ritual, choice, or systemic event that makes a Soul Avatar's integrated continuity immediately relevant.
 
 ## Weapon Manifestation
 

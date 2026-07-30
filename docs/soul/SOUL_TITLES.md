@@ -357,6 +357,7 @@ Ordinary humiliation, loss of reputation, legal revocation, defeat, disagreement
 - **[Soul Weapons](SOUL_WEAPON_FOUNDATIONS.md):** A Weapon Soul may witness, recognize, challenge, or help interpret a title through shared history. Wielder and weapon remain distinct and do not exchange titles automatically.
 - **[Retained Instincts](RETAINED_INSTINCTS.md):** An instinct may act as a Trigger or influence how a title is expressed in a body. Instinctive behavior alone does not establish identity integration or title formation.
 - **[Akashic Archive](AKASHIC_ARCHIVE.md):** A valid Archive Record may corroborate a Title Basis, preserve an older name, or reveal historical consequences under its own rules. Recording does not create the title, and the title grants no automatic Archive access or objective self-knowledge.
+- **[Soul Avatars](SOUL_AVATARS.md):** Titles may contribute identity context or recognition, but neither a title nor its Legendary Reach appoints a Soul Avatar or dictates an Association.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** Reputation, institutions, myths, fear, opportunity, and historical pressure enter the world through causal actors and consequences rather than automatic plot events.
 - **[Development System](../progression/DEVELOPMENT_SYSTEM.md):** Titles may become requirements or context for separate progression opportunities, but they never replace practice, mastery, anatomy, resources, or system-specific conditions.
 
@@ -445,6 +446,7 @@ In a royal sanctuary, the first title makes wardens wary while the second makes 
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
+- [Soul Avatars](SOUL_AVATARS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
