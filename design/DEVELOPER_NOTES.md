@@ -260,3 +260,11 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Conscious Override should create meaningful urgency when appropriate without punishing players for retaining control of deliberate action.
 - Internalisation should reduce bounded cognitive steps while preserving active judgment, correction, and unfamiliar-context failure.
 - Cross-life passives are a snowballing risk and should be audited again in the final Skill Engine safeguards.
+
+## Phase 3 Hidden-Skill Watchlist
+
+- Hidden-from-user mysteries should be playtested for trust: consequential reveals must feel discoverable in hindsight without becoming obvious in advance.
+- The Required Factual Record should remain concise enough to use while still preventing retroactive convenience powers.
+- False Diagnoses need evidence and revision paths; repeated arbitrary reversals would make investigation meaningless.
+- Prior-life dreams and reflexes are especially likely to be mistaken for current mastery and should preserve the distinction among Skill Imprints, Retained Instincts, Echoes, and current Skills.
+- Akashic Obscuration should create source-specific research problems rather than a universal excuse for withholding evidence.

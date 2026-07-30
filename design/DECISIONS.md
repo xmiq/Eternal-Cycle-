@@ -965,3 +965,39 @@ A passive or active Skill owns only its learned operation. Anatomy, immunity, ph
 ## D-241 — Reincarnation Does Not Stack Always-On Passives
 
 Persistent familiarity and related Soul records may accelerate relearning or supply bounded cues. Every present active or passive expression still requires Current Access, compatible embodiment, capacity, practice, and current reliability.
+
+## D-242 — Hidden Skills Are Real and Observer-Relative
+
+A Hidden Skill must be a genuine bounded learned competency with established ownership and provenance. Hiddenness applies to specific claims and observers; it changes knowledge and interpretation rather than creating capability.
+
+## D-243 — Consequential Hidden Skills Require Prior Factual Records
+
+Before a concealed capability materially affects choice or outcome, the GM's Factual View must establish its identity, owner, provenance, requirements, expression, reliability, costs, Visibility Profile, Discovery Evidence, and plausible reveal routes. Later clarification cannot add an unrelated convenience power.
+
+## D-244 — User and Character Knowledge Remain Distinct
+
+A Skill may be hidden from the current incarnation while known to the user, or hidden from both. Mystery must preserve meaningful choice; information needed to understand basic stakes requires fair clues, visible uncertainty, or an opportunity to investigate.
+
+## D-245 — Discovery Changes Knowledge, Not Development
+
+Discovery and naming may enable instruction, testing, deliberate practice, and new choices. They do not create the Skill, waive prerequisites, restore Current Access, award Skill XP, or establish Practised Reliability.
+
+## D-246 — Crisis Reveals Evidence Rather Than Granting Mastery
+
+A crisis may expose a cue, break suppression, prompt Fragmented Access, or force an owner to reveal a Skill. It cannot fabricate provenance, embodiment, resources, compatibility, or present reliability.
+
+## D-247 — Hiddenness Does Not Alter Ownership or Agency
+
+Misclassification, concealment, dormancy, suppression, partial expression, and Akashic Obscuration cannot transfer a Skill or external effect to another owner. Hidden Skills cannot impose possession, deliberate action, allegiance, morality, or consent.
+
+## D-248 — Akashic Obscuration Is Scoped
+
+An Archive Basis and Interface may fail to locate or resolve relevant Skill history because Traces are absent from that source, fragmented, damaged, masked, mistranslated, misindexed, protected, or inaccessible. Failure of one reading is not universal proof that the Skill never existed.
+
+## D-249 — False Diagnoses Must Remain Revisable
+
+A False Diagnosis should explain some available evidence, omit or conflict with other discoverable evidence, and support meaningful revision. The GM cannot change the hidden explanation solely to defeat a successful inference.
+
+## D-250 — Prior-Life Fragments Do Not Prove Current Skill Ownership
+
+Dreams, reflexes, Echo testimony, Retained Instincts, and partial expressions may provide Discovery Evidence for a prior Skill Imprint. They do not establish a complete current Skill without a valid receiving route, compatible embodiment, present access, practice, and reliability.

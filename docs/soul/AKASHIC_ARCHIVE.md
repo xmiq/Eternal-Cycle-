@@ -348,5 +348,6 @@ A World Spirit offers Record Reading of a poisoned river's origin in exchange fo
 - [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
+- [Hidden Skills](../skills/HIDDEN_SKILLS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

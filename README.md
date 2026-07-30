@@ -47,4 +47,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, and Development System are complete. The current phase is **Phase 3 — Skill Engine**, and the sole active task is **Define hidden skills**.
+The repository foundation, Soul Engine, and Development System are complete. The current phase is **Phase 3 — Skill Engine**, and the sole active task is **Define conceptual skills**.

@@ -24,6 +24,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Skill Evolution](skills/SKILL_EVOLUTION.md) - qualitative transformation of established Skills through integrated change, bounded patterns, and explicit tradeoffs.
 - [Skill Fusion](skills/SKILL_FUSION.md) - formation of a distinct competency through sustained integration of established Component Skills.
 - [Active and Passive Skills](skills/ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes, their costs, disruption, and agency safeguards.
+- [Hidden Skills](skills/HIDDEN_SKILLS.md) - observer-relative concealment, fair discovery, factual provenance, and agency safeguards for unknown competencies.
 
 ## World Engine
 

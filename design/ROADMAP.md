@@ -4,9 +4,9 @@
 
 **Current phase: Phase 3 — Skill Engine**
 
-**Current task: Define hidden skills**
+**Current task: Define conceptual skills**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin conceptual skills or another later Phase 3 task until hidden skills are complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Skill Engine safeguards or another later Phase 3 task until conceptual skills are complete unless the project owner explicitly changes the target.
 
 Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -92,7 +92,7 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 - [x] Define skill evolution
 - [x] Define skill fusion
 - [x] Define active and passive skills
-- [ ] Define hidden skills
+- [x] Define hidden skills
 - [ ] Define conceptual skills
 - [ ] Prevent runaway skill proliferation
 

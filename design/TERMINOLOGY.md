@@ -252,6 +252,26 @@ The attention, energy, sensory bandwidth, bodily capacity, magical throughput, m
 
 The current incarnation's deliberate attempt to pause, redirect, suppress, or replace an automatic response. Override may carry causal delay, effort, reduced performance, or risk while preserving executive agency.
 
+## Hidden Skill
+
+A real Skill whose existence, ownership, requirements, effects, or full nature is not presently understood by one or more specified observers. Hiddenness changes information rather than capability.
+
+## Skill Visibility Profile
+
+A qualitative record of what relevant observers know, suspect, misclassify, conceal, or cannot access about one Skill.
+
+## Discovery Evidence
+
+Causal signs supporting discovery of a Hidden Skill or part of its nature, including recurring effects, patterns, consequences, clues, failed expectations, expert interpretation, Soul Echo recognition, Archive Records, and training breakthroughs.
+
+## False Diagnosis
+
+An evidence-based but incorrect conclusion about a Skill's identity, owner, source, requirements, effects, or limits. It remains revisable and does not rewrite the underlying capability.
+
+## Akashic Obscuration
+
+An established condition that prevents, distorts, fragments, masks, or misindexes otherwise relevant Archive Traces or Records for a particular Archive Basis and Interface. It limits that reading and is not universal proof of nonexistence.
+
 ## Foundational Skill
 
 A capability that supplies methods, perception, control, or judgment required by one or more later Skills.

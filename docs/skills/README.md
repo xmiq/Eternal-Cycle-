@@ -30,6 +30,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 5. [Skill Evolution](SKILL_EVOLUTION.md) - qualitative transformation of established capabilities through route-specific patterns, evidence, and tradeoffs.
 6. [Skill Fusion](SKILL_FUSION.md) - formation of a distinct bounded competency through sustained integration of established Component Skills.
 7. [Active and Passive Skills](ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes with capacity, disruption, and agency rules.
+8. [Hidden Skills](HIDDEN_SKILLS.md) - observer-relative hiddenness, fair evidence, discovery, misclassification, concealment, and agency rules.
 
 Later Phase 3 documents will be added only as their roadmap tasks become complete. The [Roadmap](../../design/ROADMAP.md) remains authoritative for implementation status.
 

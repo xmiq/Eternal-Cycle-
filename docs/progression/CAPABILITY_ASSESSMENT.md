@@ -400,6 +400,7 @@ Later systems may introduce local measures for narrow purposes. Every measure mu
 - [Development Interactions](DEVELOPMENT_INTERACTIONS.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)
+- [Hidden Skills](../skills/HIDDEN_SKILLS.md)
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
