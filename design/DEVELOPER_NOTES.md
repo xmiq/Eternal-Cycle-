@@ -377,3 +377,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Local relationship labels and ranks need repeated checks against accidental ladder language, especially when one culture treats teaching permission as seniority.
 - Class Equivalence Claims should expose both real safety gaps and political protectionism without assuming either explanation by default.
 - Emerging and reconstructed classes need enough social continuity to be more than personal Skill records, while informal oral traditions must not be excluded for lacking institutions.
+
+## Phase 5 Profession Watchlist
+
+- Profession Profiles must remain social-work records rather than duplicate Professional Development sheets or exhaustive economy data.
+- Professional Status Facts are likely to collapse in ordinary language; examples and templates should keep licence, capability, office, employment, reputation, and responsibility visibly separate.
+- Professional Scope of Practice needs contextual detail without becoming a universal tier or a bureaucratic barrier that the rules mistake for objective incapacity.
+- Accountability should preserve uncertainty and divided responsibility while still allowing negligence, corruption, concealment, and institutional failure to have consequences.
+- Specializations and hybrid Professions need the Profession Validity Test so every task combination does not inflate into a new field.
+- Coercive work structures should remain causally real and contestable without being normalized as capability, legitimacy, or character identity.

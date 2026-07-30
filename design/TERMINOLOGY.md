@@ -1499,3 +1499,27 @@ A recognizably related form of a Human Class whose curriculum, interpretation, p
 ## Class Equivalence Claim
 
 A scoped claim that two Human Classes or Class Affiliations should be treated as comparable for one named purpose, such as advanced admission, credential review, legal reciprocity, professional eligibility, or access. It never establishes universal sameness.
+
+## Profession Profile
+
+The smallest useful record of one socially recognizable field of work, including its scope, function, roles, affected parties, work, standards, capability dependencies, training routes, judgment boundaries, infrastructure, recognition, jurisdiction, accountability, work arrangements, embodiment, and current condition.
+
+## Professional Role
+
+A bounded set of responsibilities within a Profession. Assignment to a Professional Role may create duty, access, or authority through a valid source but does not create the competence needed to perform it.
+
+## Professional Service Relationship
+
+The current relationship among practitioners, affected parties, employers, patrons, institutions, or communities that establishes requested work, expectations, disclosure, consent, resources, decision rights, shared responsibility, and possible review.
+
+## Professional Scope of Practice
+
+The responsibilities a named practitioner or recognized category is considered prepared, permitted, and supported to undertake in a stated context. It is local, evidence-based, and may vary by capability, tools, team, body, jurisdiction, case complexity, and uncertainty.
+
+## Professional Jurisdiction
+
+The social, legal, sacred, institutional, contractual, or territorial scope within which an authority recognizes, restricts, assigns, or reviews professional activity.
+
+## Professional Accountability
+
+The duty to answer for professional decisions, process, disclosure, foreseeable risk, records, and consequences under a stated responsibility and review structure.

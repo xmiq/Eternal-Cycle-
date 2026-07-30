@@ -449,7 +449,7 @@ This document does not define:
 - complete human, monster, magical, divine, military, legal, medical, or craft institutions;
 - technical rules for smithing, medicine, scholarship, ritual, administration, exploration, or other work;
 - automatic persistence of jobs, offices, credentials, reputation, clients, tools, or legal authority;
-- the human classes and professions reserved for Phase 5;
+- the social structure, roles, service relationships, jurisdiction, and accountability of Professions defined in [Professions](../human/PROFESSIONS.md);
 - the complete magic, social, species, economy, technology, or World Engine systems;
 - a universal ethical code imposed on every culture or profession.
 
@@ -538,3 +538,4 @@ Old knowledge may inspire better food storage and duty rotation only after the i
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
+- [Professions](../human/PROFESSIONS.md)

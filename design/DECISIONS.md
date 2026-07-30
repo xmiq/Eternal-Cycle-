@@ -1449,3 +1449,39 @@ Teachers, language, wealth, geography, secrecy, law, prejudice, tools, trust, em
 ## D-362 — Emerging Classes Require Reproducible Social Practice
 
 A personal method becomes an emerging Human Class only when others can learn, interpret, practise, criticize, adapt, and recognize a coherent framework. Skill novelty or a dramatic name alone does not create a class or retroactively assign affiliation.
+
+## D-363 — Profession Development and Profession Structure Have Separate Ownership
+
+Profession Development owns how knowledge, Skills, judgment, reliability, and mastery change. Phase 5 Profession rules own how a society defines, organizes, recognizes, assigns, regulates, and reviews a field of work and responsibility.
+
+## D-364 — A Profession Requires Integrated Social Responsibility
+
+A Profession must address a recurring function through integrated practice, affected parties or consequences, standards, judgment, responsibility, social continuity, and material context. Payment, one task, one Skill, one office, or one successful practitioner is insufficient.
+
+## D-365 — Profession Profiles Reference Adjacent Facts Without Granting Them
+
+A Profession Profile records social function, roles, affected parties, work, standards, capability dependencies, training routes, judgment boundaries, infrastructure, recognition, jurisdiction, accountability, work arrangements, embodiment, and current condition. It does not grant capability, office, licence, reputation, or institutional access.
+
+## D-366 — Professional Status Facts Remain Separate
+
+Training, capability, practice, employment, commission, credentials, licence, recognition, office, reputation, mastery, and current responsibility are distinct facts. No one status automatically proves or awards the others.
+
+## D-367 — Classes and Professions Have Many-to-Many Relationships
+
+A Human Class may support several Professions, and one Profession may receive practitioners through several Human Classes, informal routes, monster traditions, or mixed training. Their relationship must state relevant preparation, omissions, practical requirements, and scoped recognition rather than collapsing either category.
+
+## D-368 — Professional Jurisdiction Changes Permission, Not Capability
+
+Law, contract, rite, office, institution, and territory may authorize or restrict professional activity within a stated scope. A jurisdictional boundary can change rights, liability, and enforcement without creating or erasing factual competence.
+
+## D-369 — Professional Accountability Follows Duties and Evidence
+
+Accountability reviews decisions, process, disclosure, foreseeable risk, records, alternatives, scope, support, coercion, and consequences under a stated responsibility. It is neither automatic punishment for a bad outcome nor immunity for following a local standard.
+
+## D-370 — Compensation Does Not Define a Profession
+
+Wages, fees, patronage, exchange, household obligation, communal service, temple support, state service, subsistence, and other arrangements may sustain professional work. Payment affects incentives and access but neither creates Professional Competence nor determines whether a coherent Profession exists.
+
+## D-371 — Profession Formation Requires Reproducible Work and Accountability
+
+A novel field becomes a Profession when recurring need produces integrated work, differentiated judgment, standards, responsibility, transmission, material support, and social continuity. One invention, crisis, title, or combined job name does not establish a new Profession.
