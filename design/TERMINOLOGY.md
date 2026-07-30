@@ -228,6 +228,18 @@ A pattern of deeper evidence within a bounded Skill route, such as refinement, a
 
 A form of a Skill shaped by a culture's tools, values, language, environment, institutions, bodies, and accumulated practice. Comparable purpose does not make variants identical or automatically transferable.
 
+## Monster Skill Tree
+
+A contextual analytical structure connecting monster-native learning routes, foundations, branches, requirements, techniques, traditions, and mastery paths through a stated embodiment, ecology, cognition, society, or individual history.
+
+## Ecological Skill Route
+
+A learning route shaped by recurring interaction with a habitat, resource, prey, predator, competitor, symbiont, or environmental hazard. Ecology supplies problems and feedback but does not grant the resulting Skill automatically.
+
+## Monster Tradition
+
+A transmissible body of monster practice, standards, demonstrations, signals, tools, tests, roles, and judgment expressed through forms compatible with its practitioners rather than presumed human institutions.
+
 ## Profession
 
 An organized or recognizable field of work and responsibility combining knowledge, Skills, judgment, standards, tools, relationships, and a social or economic function.

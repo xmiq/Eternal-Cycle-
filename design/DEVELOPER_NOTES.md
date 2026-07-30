@@ -215,3 +215,10 @@ Gate events must continue through World Engine consequences without player invol
 The future Gate-event template should cover Gate identity, origin, destination, cause, type, stability, lifecycle stage, discoverers, access controllers, factions, communication, technology and magic comparison, biological hazards, ecological exchange, trade, military pressure, religious interpretation, public knowledge, misinformation, immediate and second-order consequences, long-term transformation, closure conditions, and unresolved questions.
 
 The future Soul Avatar template should cover soul identity, current incarnation, relevant prior incarnations, coherent and conflicting Echoes, internal continuity structure, thematic association, emergence, activation Triggers, accessible and inaccessible experience, costs, risks, external perceptions, political and religious pressure, Soul Weapon interaction, World Gate interaction, failure states, growth possibilities, and unresolved questions.
+
+## Phase 3 Monster Skill-Tree Watchlist
+
+- Phase 4 should use monster Skills as evidence and prerequisites where appropriate without turning Skill mastery into automatic biological evolution.
+- Collective Skills need deliberate ownership in later monster-civilization rules; population coordination should not be copied onto every member.
+- Nonhuman cognition should affect learning routes, costs, communication, and failure without becoming either a disability stereotype or a source of unbounded parallel action.
+- Later crossover rules must preserve distinctions among former Skills, Retained Instincts, current species traits, and translated present-life Skills.

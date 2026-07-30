@@ -18,6 +18,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [Skill Engine Index](skills/README.md) - shared Skill model, canonical Skill structures, reading order, and ownership boundaries.
 - [Human Skill Trees](skills/HUMAN_SKILL_TREES.md) - plural human learning routes shaped by culture, practice, embodiment, tools, professions, and institutions.
+- [Monster Skill Trees](skills/MONSTER_SKILL_TREES.md) - monster-native learning routes shaped by species embodiment, ecology, cognition, social transmission, and individual experience.
 
 ## World Engine
 

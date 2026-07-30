@@ -24,6 +24,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 ## Canonical Documents
 
 1. [Human Skill Trees](HUMAN_SKILL_TREES.md) - plural human learning structures shaped by culture, practice, embodiment, tools, professions, and institutions.
+2. [Monster Skill Trees](MONSTER_SKILL_TREES.md) - monster-native learning structures shaped by species embodiment, ecology, cognition, social transmission, and individual experience.
 
 Later Phase 3 documents will be added only as their roadmap tasks become complete. The [Roadmap](../../design/ROADMAP.md) remains authoritative for implementation status.
 

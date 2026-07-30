@@ -789,3 +789,31 @@ Reincarnation routes persistence through individual Skill Imprints, Skill XP, kn
 ## D-197 — Skill-Tree Granularity Follows Distinct Development
 
 A new root or branch requires a material difference in function, method, requirements, evidence, context, or tradeoffs. Cosmetic names, routine actions, and minor variations do not justify permanent new Skill structures.
+
+## D-198 — Monster Skill Trees Are Native Learning Structures
+
+A Monster Skill Tree arises through an individual's actual embodiment, ecology, cognition, communication, social learning, magic, and experience. It is not a universal monster catalog, a renamed Human Skill Tree, an in-world menu, or a biological evolution ladder.
+
+## D-199 — Natural Capacity and Learned Control Remain Separate
+
+Species traits, natural weapons, magical organs, and Current Instincts may create access or useful orientation, but adaptable control and Practised Reliability require their own meaningful learning. Neither species membership nor possession of anatomy grants identical Skill mastery.
+
+## D-200 — Monster Cognition Does Not Determine Personhood by Human Similarity
+
+Language, introspection, memory, planning, and learning may use nonhuman structures. Agency is adjudicated through the being's real capacity to perceive alternatives, respond to consequences, form or revise preferences within its nature, and alter behavior, not through resemblance to human thought.
+
+## D-201 — Ecological Pressure Creates Routes Rather Than Rewards
+
+Habitats and ecological relationships create recurring problems, feedback, and possible Ecological Skill Routes. Occupying a niche, enduring scarcity, killing, feeding, or surviving does not grant a Skill without relevant adaptation and integration.
+
+## D-202 — Monster Traditions May Be Fully Nonhuman
+
+Monsters may transmit sophisticated Skills through bodily, sensory, magical, architectural, distributed, artificial, or institutional forms suited to them. Such traditions remain distinct from species traits and do not become human progression merely because they support scholarship, craft, or civilization.
+
+## D-203 — Collective Outcomes Require Explicit Skill Ownership
+
+For packs, swarms, colonies, distributed bodies, and institutions, the rules must identify whether learning belongs to an individual, role, stable collective, coordinating network, or institution. Emergent coordination does not automatically give every participant the whole capability.
+
+## D-204 — Evolution Changes Access Without Granting Mastery
+
+Maturation, transformation, mutation, and biological Evolution may create or remove Skill prerequisites and expression routes. They do not automatically award learned control, Practised Reliability, or every Skill culturally associated with the resulting form.
