@@ -1845,3 +1845,39 @@ Conflict may narrow or suspend communication, cooperation, expression, or passag
 ## D-461 — Intertwining Preserves Information Boundaries
 
 A Soul Weapon Bond does not grant unrestricted telepathy, emotion reading, truth detection, location, memory access, or disclosure. Each participant retains separately owned perspective and knowledge, while any Soul Space interface, communication channel, or shared impression remains source-bounded and consensual.
+
+## D-462 — Vessel History Influences Personality Without Determining It
+
+Making, function, material limits, use, care, damage, relationships, consequences, maker intent, and reputation provide personality provenance and pressure. They do not calculate a mandatory temperament, morality, loyalty, voice, alignment, or future for the awakened Weapon Soul.
+
+## D-463 — Awakening Establishes Interpretation Rather Than a Finished Character
+
+Weapon Soul Awakening produces a self-originated perspective capable of intention, consent, and refusal. The Awakening Interpretation may begin with uncertainty, contradiction, nonverbal expression, or one clear boundary and need not provide a complete mature personality.
+
+## D-464 — Weapon Soul Personality Is Not Capability
+
+Values, desires, fears, temperament, communication, loyalty, and other personality facts grant no statistics, Skills, Classes, species traits, compatibility, evolution, manifestation, enforcement power, or automatic cooperation. Every capability remains with its owning system and current source.
+
+## D-465 — Vessel Perspective Is Source-Bounded and Nonhuman by Default
+
+A Weapon Soul perceives through established vessel senses, Resonance, communication, and world contact rather than universal human senses or omniscience. Familiar speech, emotion, gender, biological need, cultural fluency, and human morality are possible through real history but are not requirements for personhood.
+
+## D-466 — Trust and Loyalty Are Contextual Relationships
+
+Relational Posture varies by person, purpose, disclosure, vulnerability, repair, and evidence. Trust, affection, loyalty, compatibility, and consent remain separate facts and cannot be collapsed into one affinity meter or farmed through gifts, praise, dialogue, ownership, or use counts.
+
+## D-467 — Weapon Soul Personalities Change Through Causal Living
+
+Meaningful choices, reflection, relationships, discoveries, consequences, new Ages, and changing embodiment can alter personality without requiring Soul Weapon Evolution. Time, killing, suffering, praise, possession, and repetition alone do not force change, and surprising choices still require causal continuity.
+
+## D-468 — Harm Cannot Efficiently Engineer Personality
+
+Abuse, confinement, forced use, damage, and soul manipulation may cause real injury, fear, mistrust, or altered access but do not reliably create obedience, cruelty, loyalty, power, or a desired temperament. Dissent is not corruption, and recovery need not restore an earlier personality.
+
+## D-469 — Reincarnation Does Not Reset Either Partner's Personhood
+
+A Weapon Soul continues as itself while the Bonded Soul enters a new embodiment and context. Memory asymmetry and former promises grant neither person authority to reconstruct the other, demand an earlier role, or bypass present agency; the relationship must address the current incarnation.
+
+## D-470 — Weapon Souls Cannot Be Used as GM Control Devices
+
+A Weapon Soul may pursue goals and refuse its own cooperation through valid means, but it cannot supply impossible knowledge, dictate player thoughts, force quests through arbitrary bond loss, guarantee rescue, or present one perspective as canonical moral truth. Conflicts follow ordinary causality, capability, consent, and consequence.

@@ -1759,3 +1759,35 @@ A state in which a Soul Weapon Bond persists while one or more forms of access, 
 ## Bond Severance
 
 The exceptional ending of a Soul Weapon Bond by mutual decision, valid unilateral withdrawal, or an explicit hostile effect that satisfies soul-harm protections. It does not erase either person's identity, history, consequences, or independently owned Development.
+
+## Weapon Soul Personality
+
+The evolving pattern of interpretation, values, desires, boundaries, emotional tendencies, attention, relationships, self-presentation, and choices expressed by an awakened Weapon Soul.
+
+## Awakening Interpretation
+
+The Weapon Soul's first self-originated interpretation of its Vessel History and Awakening Event. It establishes a point of view without fixing a complete or permanent personality.
+
+## Vessel Perspective
+
+The source-bounded way a Weapon Soul experiences the world through its Weapon Vessel, available senses, Resonance, communication channels, physical treatment, use, damage, and environment.
+
+## Core Concern
+
+A recurring matter a Weapon Soul treats as important to identity or choice. It is not a command, alignment, bonus, or mandatory purpose.
+
+## Personality Tension
+
+A meaningful unresolved relationship between values, memories, desires, fears, roles, or interpretations within one Weapon Soul Personality. It is not automatically Dissonance, corruption, fracture, or illness.
+
+## Relational Posture
+
+A Weapon Soul's current, person-specific way of approaching trust, disclosure, cooperation, conflict, intimacy, authority, dependence, and distance. It is contextual rather than a universal loyalty score.
+
+## Self-Presentation
+
+How a Weapon Soul chooses or is currently able to present itself through voice, imagery, sensation, movement, silence, naming, Soul Space, or another valid channel.
+
+## Weapon Soul Personality Profile
+
+A concise campaign record of a Weapon Soul's current personality evidence, perspective, concerns, values, desires, boundaries, tensions, relationships, communication, uncertainties, and change pressures. It is descriptive rather than a statistic block or immutable script.

@@ -486,3 +486,15 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Soul Space contact and target-specific Resonance should improve relationship play without producing unrestricted telepathy, memory access, truth detection, or loss of privacy.
 - Later Legacy Weapon rules must classify an awakened Weapon Soul left in the world after passage refusal without undoing its agency or retroactively transferring the former bond.
 - Later personality rules should distinguish personality from compliance, compatibility, moral alignment, vessel function, and the Bonded Soul's expectations.
+
+## Phase 6 Weapon-Personality Watchlist
+
+- Personality Profiles should remain compact causal aids rather than mandatory trait inventories, dialogue scripts, or hidden alignment statistics.
+- Vessel Perspective needs varied examples so nonhuman perception feels consequential without making every Weapon Soul cryptic or granting convenient omniscience.
+- Awakening Interpretation should give a newly awakened person enough coherence to act while leaving room for uncertainty, discovery, and later self-definition.
+- Core Concerns and Personality Tensions should generate understandable choices without becoming compulsions or undeclared evolution requirements.
+- Trust, affection, loyalty, compatibility, and consent are especially easy to collapse into one relationship meter and should remain separately evidenced.
+- Long-lived Weapon Souls need recognizable continuity alongside real change across Ages, cultures, users, repairs, and the Bonded Soul's new incarnations.
+- Abuse and recovery require careful playtest framing so consequences remain serious without making trauma an optimization route or demanding return to a prior personality.
+- Later Weapon Echo rules must preserve provenance without turning old experiences into internal personalities or replacing the current Weapon Soul's own memory and judgment.
+- Later evolution rules may use personality as meaningful context but must not let desire, morality, mood, or a dramatic speech substitute for route, pressure, form, capability, and consequence.
