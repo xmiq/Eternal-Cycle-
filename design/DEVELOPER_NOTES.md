@@ -76,6 +76,13 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Numerical curves remain optional later implementations and must preserve qualitative evidence, current embodiment, current-life effort, non-compounding retention, and track-specific ownership.
 - Phase 3 can define tree schemas and Skill content without adding new foundational Development layers.
 
+## Alpha Playtest Watchlist
+
+- Repeated reliance on one Provisional Rule is evidence that a roadmap system may need prioritization, not evidence that the ruling is already Canonical.
+- Conversion after new canon should preserve earned progress and established fiction while closing invalid bypasses, duplicate benefits, and unsupported capability.
+- Alpha procedures should remain lighter than the play they support; if status tracking dominates a session, narrow the test scope or reduce unfinished-system overlap.
+- Design Feedback should extract reusable observations without importing current characters, live world state, or session history into the repository.
+
 ## Queued Soul Avatar and World-Contact Gate Additions
 
 These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.

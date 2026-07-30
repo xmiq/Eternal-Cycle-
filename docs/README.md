@@ -21,6 +21,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 ## GM Framework
 
 - [GM Principles](gm/GM_PRINCIPLES.md) - system-first adjudication, fair uncertainty, meaningful death, and contextual capability judgments.
+- [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope
 

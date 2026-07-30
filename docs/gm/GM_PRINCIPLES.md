@@ -26,3 +26,7 @@ Do not trivialize a death because reincarnation exists. Resolve unfinished relat
 ## Power
 
 Judge capability by relevant development, circumstances, preparation, compatibility, and cost—not by a single global level.
+
+## Alpha Playtesting
+
+When play begins before every roadmap system is complete, use [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) to distinguish Canonical rules, Canonical Foundations, campaign-local Provisional Rules, and Unsupported areas. Provisional adjudication must remain narrow, external to the canonical repository, and subordinate to existing rules and safeguards.

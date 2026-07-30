@@ -12,6 +12,8 @@ Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless late
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
+The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
+
 ## Status Legend
 
 - `[ ]` — Not started
@@ -166,6 +168,7 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 
 ## Phase 9 — GM Toolkit
 
+- [x] Define alpha playtest framework
 - [~] Define GM responsibilities
 - [~] Define consequence resolution
 - [~] Define uncertainty handling

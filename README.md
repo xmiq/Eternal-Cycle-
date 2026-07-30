@@ -29,6 +29,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
+- [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 
 ## Start Here

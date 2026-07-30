@@ -4,6 +4,30 @@
 
 A major historical era with its own civilizations, dominant powers, technologies, magical assumptions, and ecological order.
 
+## Canonical
+
+A rule or accepted governance outcome that is complete and authoritative within its stated scope. It applies normally, cannot be silently overridden by playtest adjudication, and changes only through the repository's design process.
+
+## Canonical Foundation
+
+An authoritative set of principles and boundaries for a system whose detailed implementation belongs to a later roadmap task. The foundation constrains Provisional Rules without implying that the missing procedures, content, formulas, or generators are complete.
+
+## Provisional Rule
+
+A temporary, campaign-local ruling used to resolve a narrow gap in incomplete canon. It remains outside the canonical repository, respects Canonical rules and Foundations, states its scope and review condition, and does not become Canonical through use alone.
+
+## Unsupported
+
+A rule area that lacks enough Canonical rules or Foundations for reliable adjudication without inventing a major system. Ordinary alpha play should avoid centering on it unless the project owner explicitly authorizes a clearly labelled external experiment.
+
+## Campaign Record
+
+The external, play-specific record of characters, bodies, Soul state, inventory, relationships, world state, quests, timelines, sessions, Provisional Rules, and feedback. It may govern established campaign fiction but is not authoritative design canon and does not belong in this repository.
+
+## Design Feedback
+
+A neutral observation extracted from play for possible repository review. Feedback may motivate a developer note, unresolved question, proposed decision, or no change, but does not become Canonical automatically.
+
 ## Development
 
 Earned growth in a particular capability domain through meaningful training, experience, experimentation, instruction, adaptation, reflection, or use. Development replaces a single universal character level.

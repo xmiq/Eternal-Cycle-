@@ -733,3 +733,27 @@ Pain, danger, deprivation, coercion, trauma, loss, killing, and death do not mea
 ## D-183 — Time, Memory, Labels, and Borrowed Output Are Evidence Sources, Not Growth
 
 Elapsed time, factual recall, Skill names, titles, ranks, credentials, reputation, external power, tools, and institutional access may alter opportunity, information, expression, or recognition. None creates mastery or lasting personal Development without the relevant owner's evidence of current integrated change.
+
+## D-184 — Alpha Play May Begin Before Roadmap Completion
+
+An Eternal Cycle campaign may begin while later roadmap systems remain incomplete when the GM identifies each relevant rule claim as Canonical, a Canonical Foundation, Provisional, or Unsupported and keeps the test within available boundaries.
+
+## D-185 — Provisional Rules Are Campaign-Local
+
+A Provisional Rule applies only within its recorded playtest scope, remains outside the canonical repository, may be revised or retired, and does not become Canonical through repetition, duration, preference, or successful use.
+
+## D-186 — Canonical Foundations Constrain Provisional Adjudication
+
+Incomplete implementation does not suspend established ownership, embodiment, persistence, agency, cost, compatibility, safeguard, or consequence rules. A Provisional Rule may fill only the narrow remaining gap and cannot silently replace its Canonical Foundation.
+
+## D-187 — Campaign State Remains Outside the Rules Repository
+
+Current characters, bodies, Soul state, inventories, relationships, settlements, factions, quests, timelines, live world state, sessions, Provisional Rule logs, and completed playtest feedback belong in an external Campaign Record rather than the canonical rules repository.
+
+## D-188 — New Canon Replaces Provisional Mechanics Prospectively
+
+When Canonical rules replace a Provisional mechanic, future resolution uses the new canon and legitimately earned progress is translated conservatively without assuming invalid access, embodiment, ownership, or duplicate benefits.
+
+## D-189 — Fictional Consequences Persist but Exploits Do Not
+
+Past fictional consequences should remain established where practical even when their Provisional resolution method is retired. Exploits, unsupported capabilities, invalid bypasses, and duplicate rewards are not protected merely because they occurred during alpha play, and substantial conversions require discussion with affected players.
