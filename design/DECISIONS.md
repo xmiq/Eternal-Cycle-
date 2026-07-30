@@ -433,3 +433,27 @@ Retained progression may make compatible redevelopment meaningfully faster, but 
 ## D-108 — Cross-Species Redevelopment Requires Translation
 
 Human and monster Development remain initially distinct. Bounded crossover requires genuine retained potential, current access, a functional correspondence, present-life experimentation and practice, compatibility with both progression trees, and an explicit rule defining the translated result, limits, and costs.
+
+## D-109 — Physical Development Belongs to the Current Body
+
+Physical Development is earned adaptation in the present body's structures and functions. Final Death ends its Trained Capacity and Current Condition; soul persistence may preserve developmental familiarity but never converts the former body into a permanent soul-level physical score.
+
+## D-110 — Body Potential, Trained Capacity, and Current Condition Are Distinct
+
+Body Potential describes available developmental routes, Trained Capacity describes adaptation actually built, and Current Condition describes immediate readiness or impairment. None can be inferred reliably from either of the others, and temporary output does not automatically become lasting Physical Development.
+
+## D-111 — Retained Stat XP Cannot Supply a Finished Body
+
+Retained Stat XP may improve recognition, calibration, training efficiency, and compatible redevelopment. It does not assign starting statistics, compress maturation, create tissue or organs, preserve adult size or health, bypass recovery, or recursively multiply when the same capability is rebuilt.
+
+## D-112 — Physical Transfer Requires Functional Correspondence and Calibration
+
+Prior physical familiarity transfers only through a valid present route. Different limbs, proportions, centres of gravity, senses, nervous systems, movement modes, natural weapons, materials, and magical organs require current-life calibration; when no functional correspondence exists, the potential remains latent.
+
+## D-113 — Bodily Harm Is Not Physical Progress Currency
+
+Pain, injury, illness, overtraining, deprivation, and Final Death do not grant Physical Development or Stat XP merely because they occur. Rehabilitation or adaptation may produce legitimate growth only through changed capability, recovery, integration, and meaningful present use.
+
+## D-114 — External Body Changes Retain Their Owning Systems
+
+Mutation, magical reinforcement, artificial augmentation, and temporary transformation may alter Body Potential, Current Condition, or available expression. They do not become trained bodily capacity automatically, and each source retains its own access, duration, maintenance, suppression, cost, persistence, and failure rules.

@@ -29,6 +29,8 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Capability Profiles should remain concise enough for play and expose only dimensions relevant to the current objective.
 - Later mastery labels and threat assessments must state their scope so they cannot become a universal level under another name.
 - Cross-species translation should produce body-appropriate expressions and real tradeoffs rather than standardized copies of human techniques.
+- The Stat XP task must decide useful familiarity categories without turning Physical Dimensions into one mandatory attribute list.
+- Species, injury, disability, illness, magical enhancement, and artificial-body rules must later define their own particulars without treating an ordinary human body as the universal baseline.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

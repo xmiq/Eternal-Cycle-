@@ -56,6 +56,34 @@ The range of distinct capabilities in which a being has meaningful potential or 
 
 The refinement, understanding, adaptability, and reliability developed within one bounded capability. Mastery Depth is distinct from Soul Depth.
 
+## Physical Development
+
+Earned adaptation in a current body's structure, function, regulation, perception, and movement through meaningful use, training, recovery, and environmental engagement. It is embodied growth rather than a permanent soul-level body score.
+
+## Physical Dimension
+
+A bounded aspect of bodily capability, such as force production, endurance, balance, sensory processing, or recovery. Physical Dimensions interact but do not share a universal exchange rate.
+
+## Body Potential
+
+The range and directions of physical adaptation presently possible for a body under its anatomy, species, lifecycle, health, nourishment, environment, and established modifications.
+
+## Trained Capacity
+
+The physical capability a body has actually developed and retained through adaptation in the current life.
+
+## Current Condition
+
+The body's immediate readiness and impairment, including fatigue, injury, illness, pain, hydration, nutrition, sleep, stress, temperature, suppression, and temporary enhancement.
+
+## Physical Calibration
+
+The present-life process of aligning perception, timing, force, balance, and movement with the body's actual proportions, senses, response delays, and available structures.
+
+## Accommodation
+
+A stable method, tool, altered technique, or environmental arrangement that allows a body to act effectively with its actual capabilities without pretending absent anatomy has been restored.
+
 ## Soul Echo
 
 The persistent, bounded first-person perspective left by one completed incarnation during Life Reconciliation. It is part of the continuing soul but is not a separate soul or active incarnation. Use **Soul Echo** on first reference and **Echo** thereafter.
