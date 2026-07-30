@@ -71,6 +71,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Legacy Weapons](soul-weapons/LEGACY_WEAPONS.md) - world-bound historical continuity, bond-status separation, custody, stewardship, succession, scoped Accords, later relationships, and bounded Legacy Evolution.
 - [Soul Weapon Compatibility](soul-weapons/SOUL_WEAPON_COMPATIBILITY.md) - purpose-specific compatibility layers, qualitative findings, supports, drift, testing, cross-species interaction, and anti-matchmaking safeguards.
 - [Weapon Manifestations](soul-weapons/WEAPON_MANIFESTATIONS.md) - source-bound Perceptual, Vessel, and Embodied expressions with Anchors, consent, action limits, Reincarnation access, termination, and anti-duplication safeguards.
+- [Unconventional Soul Weapons](soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md) - topology, personhood, continuity, and agency rules for composite, paired, distributed, modular, biotic, body-linked, record-bearing, mutable, and site-bound vessels.
 
 ## World Engine
 

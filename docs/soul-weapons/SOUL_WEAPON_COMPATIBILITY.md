@@ -562,7 +562,7 @@ It does not define:
 - Soul Intertwining procedure;
 - Soul Weapon Evolution routes;
 - the source, route, and procedure for [Weapon Manifestations](WEAPON_MANIFESTATIONS.md);
-- unconventional vessel structures;
+- the Vessel Topology and component procedures owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md);
 - live compatibility records for a campaign.
 
 ## Related Canon
@@ -574,6 +574,7 @@ It does not define:
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

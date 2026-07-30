@@ -15,8 +15,9 @@ Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before th
 7. [Legacy Weapons](LEGACY_WEAPONS.md) defines world-bound historical continuity, bond-status separation, custody, stewardship, succession, scoped Legacy Accords, later relationships, and bounded self-directed Legacy Evolution.
 8. [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) defines claim-specific compatibility layers, qualitative findings, supports, drift, testing, cross-species interaction, and strict separation from consent, Skill, Resonance, and bond status.
 9. [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) defines Perceptual, Vessel, and Embodied expression through explicit sources and Anchors, including consent, action limits, Reincarnation access, failure, recovery, and anti-duplication safeguards.
+10. [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md) defines Vessel Topology, personhood, continuity, Agency Routing, and source ownership for composite, paired, distributed, modular, biotic, body-linked, record-bearing, mutable, and site-bound vessels.
 
-The remaining Phase 6 subject is implemented only when the [Roadmap](../../design/ROADMAP.md) marks its dedicated task complete. A reference to unconventional forms does not grant those unfinished rules by implication.
+All dedicated Phase 6 rule subjects are implemented. The [Roadmap](../../design/ROADMAP.md) remains authoritative for the phase-wide integration audit and completion status.
 
 ## Core Ownership
 

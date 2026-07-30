@@ -4,9 +4,9 @@
 
 **Current phase: Phase 6 — Soul Weapons**
 
-**Current task: Define unconventional Soul Weapons**
+**Current task: Audit and integrate Phase 6**
 
-Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define unconventional Soul Weapons** unless the project owner explicitly changes the target. Do not begin Phase 7 or the final Phase 6 integration audit until unconventional Soul Weapons are complete unless the project owner explicitly changes the target.
+Phase 5 is complete and reviewed. Codex must not reopen it unless Phase 6 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and integrate Phase 6** unless the project owner explicitly changes the target. Do not begin Phase 7 until the Phase 6 audit and every exit criterion are complete unless the project owner explicitly changes the target.
 
 Phases 1 through 5 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -153,7 +153,12 @@ Phase 5 is complete only when Human Classes, Professions, Martial Traditions, Ma
 - [x] Define Legacy Weapons
 - [x] Define compatibility
 - [x] Define Weapon Manifestations
-- [~] Define unconventional Soul Weapons
+- [x] Define unconventional Soul Weapons
+- [~] Audit and integrate Phase 6
+
+### Exit Criteria
+
+Phase 6 is complete only when dormant Weapon Souls, Awakening, Soul Intertwining, Weapon Personalities, Weapon Evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, and unconventional Soul Weapons are defined, linked, and internally consistent; Weapon Souls remain distinct partners rather than equipment statistics or compulsory progression; vessel personhood, topology, continuity, consent, compatibility, action ownership, physical expression, Reincarnation access, and world consequence are independently adjudicable; Skills, Development, Human structures, Monster Evolution, Magic, and external sources retain their ownership; current embodiment and current-life effort remain necessary; no automatic Awakening, inherited mastery, unrestricted Manifestation, infinite Evolution, component duplication, universal compatibility, mandatory Soul Weapon, or campaign data exists; no blocking questions remain; and all links and navigation validate.
 
 ## Phase 7 — Magic
 

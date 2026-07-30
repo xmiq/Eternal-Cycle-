@@ -71,6 +71,12 @@ An awakened Weapon Soul may become externally perceivable or embodied only throu
 
 Perceptual, Vessel, and Embodied Manifestations are non-ranked modes. Ordinary vessel presence, communication, Soul Space appearance, Weapon Echo recall, Soul Avatar Expression, Weapon Evolution, and Reincarnation passage are not manifestations by implication. The complete external-expression, vessel-continuity, one-center, failure, and recovery rules are defined in [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md).
 
+## Unconventional Vessels
+
+A vessel may be composite, paired, distributed, modular, biotic, body-linked, wearable, record-bearing, mutable, vehicle-scale, or site-bound without becoming a superior Soul Weapon category. Every unusual claim must establish one coherent instrument, a Vessel Boundary, existing personhood, soul count, Identity-Bearing Structures, continuity, perspective, Agency Routing, compatibility, maintenance, failure, and Reincarnation implications.
+
+Existing persons cannot be relabelled as equipment, Components cannot duplicate souls or actions, natural anatomy remains with Species Development, and pure concepts cannot replace a coherent vessel. The complete topology audit, single- and multiple-soul arrangements, living-vessel protections, component rules, and anti-exploitation safeguards are defined in [Unconventional Soul Weapons](../soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md).
+
 ## Foundational Safeguards and Consequences
 
 A Weapon Soul remains a distinct person before and after intertwining.
@@ -98,6 +104,7 @@ Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy
 - [Legacy Weapons](../soul-weapons/LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md)
 - [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](../soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

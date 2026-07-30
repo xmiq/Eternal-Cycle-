@@ -2089,3 +2089,67 @@ No viable Soul Weapon or character path requires manifestation. Repeated onset, 
 ## D-522 — Manifestations Enter World Causality
 
 Manifestations can be witnessed, misunderstood, regulated, counterfeited, studied, interrupted, or used as evidence according to their actual sources and observers. Those reactions create ordinary world consequences without making the Weapon Soul an oracle, moral authority, plot solution, or immune companion.
+
+## D-523 — Unconventional Describes Topology Rather Than Rank
+
+Unconventional Soul Weapon is a rules-facing description for vessel claims needing explicit treatment beyond a singular physical instrument. It is not an objective cultural category, soul species, rarity, power tier, Evolution stage, or endgame designation.
+
+## D-524 — Soul Weapons Require Coherent Instruments, Not Combat
+
+A weapon, meaningful tool, vehicle, structure, record-bearing object, defensive device, or other coherent instrument may support Weapon Soul formation through its actual Vessel History. Combat is unnecessary, while an abstract Skill, Class, office, institution, oath, reputation, story, or concept is not a Weapon Vessel by itself.
+
+## D-525 — Unconventional Claims Require a Vessel Topology Audit
+
+Every unconventional claim must establish the Vessel Boundary, Components, existing persons, soul arrangement, Identity-Bearing Structures, continuity, Vessel Perspective, Agency Routing, interfaces, maintenance, failure, and Reincarnation implications before later Soul Weapon procedures are applied.
+
+## D-526 — Component Count Does Not Determine Soul Count
+
+Several Components may support one coherent Weapon Soul, while visually paired or assembled objects may contain several distinct souls or none. Division, copies, matching design, storage, common ownership, distributed placement, and recombination cannot duplicate personhood.
+
+## D-527 — Existing Souls Remain Distinct in Assemblies
+
+Combining already ensouled vessels cannot merge, absorb, erase, or place a new overarching Weapon Soul above them. A Concordant Assembly preserves each Weapon Soul's consent, bond, capability, memory, Evolution, Manifestation, agency, and Reincarnation route without creating a group bond or pooled assets.
+
+## D-528 — Existing Living Persons Cannot Be Relabelled as Vessels
+
+A living, constructed, spiritual, symbiotic, or other existing person does not become a Weapon Vessel because others use, breed, command, ride, wear, own, or describe that person as a weapon. A Biotic Vessel can form a Weapon Soul only after its prior personhood and soul arrangement are resolved without duplication.
+
+## D-529 — Natural Anatomy and Body-Linked Vessels Remain Separate
+
+Natural weapons, organs, Species Traits, Mutations, and body structures belong to current embodiment. A distinct prosthesis, implant, grown instrument, symbiotic tool, or detached structure may qualify only through an actual Vessel Boundary and separate history; declaration and bodily utility cannot manufacture a second soul.
+
+## D-530 — Distributed Vessels Retain One Agency Center
+
+One Weapon Soul may route bounded perception and coordinated physical patterns through several Components only through explicit sources, range, attention, reliability, interference, and counterplay. Component count grants neither omniscience nor one independent action per part, while separate users remain responsible for their own actions and Skills.
+
+## D-531 — Variable Vessels Require a Bounded Envelope
+
+Composite, Modular, Paired, and other variable vessels must distinguish Identity-Bearing Structures, replaceable modules, consumables, interfaces, outputs, ordinary configurations, and qualitative form change. A Vessel Envelope clarifies continuity without becoming unlimited replacement, attachment stacking, or free access to every form.
+
+## D-532 — Outputs and Copies Do Not Carry Personhood by Default
+
+Consumables, projectiles, offspring, cuttings, clones, shed parts, generated matter, copied records, blueprints, modules, and products do not copy a Weapon Soul. Any later separate Weapon Soul requires its own coherent Vessel History, formation, Awakening, and personhood.
+
+## D-533 — Pure Concepts Cannot Be Weapon Vessels
+
+A Skill, spell, title, oath, law, office, Class, Profession, institution, story, language, recipe, relationship, or abstract concept cannot be a disembodied Weapon Vessel. Such meanings may shape a coherent vessel or a bounded Concept-Bearing Reorganisation without replacing embodiment and continuity.
+
+## D-534 — Scale Grants Neither Control Nor Portability
+
+A Site-Bound Vessel or vehicle remains bounded to its actual structure, senses, mechanisms, users, inhabitants, sources, and environment. Size does not grant control over a place or community, and Soul Intertwining cannot carry the site's worldly mass through Reincarnation.
+
+## D-535 — Reincarnation Carries No Component Inventory
+
+Valid passage may preserve one Weapon Soul, one bond, and its Soul Weapon Form. It does not automatically carry Components, host tissue, sites, vehicles, inhabitants, crews, supplies, outputs, external persons, other Weapon Souls, or the new body's ability to rebuild and use the topology.
+
+## D-536 — Lasting Topology Change Retains Evolution Ownership
+
+Routine use, folding, loading, growth, healing, maintenance, and reconfiguration within an established Vessel Envelope are not Evolution. A lasting qualitative change to Vessel Boundary, Identity-Bearing Components, Agency Routing, ordinary configurations, continuity, or soul-bound capability requires a valid Weapon Evolution Route.
+
+## D-537 — Unconventional Form Does Not Transfer Capability Ownership
+
+Skills own learned use and coordination; Development owns current access and reliability; Human structures own instruction and recognition; Monster Evolution owns anatomy and Species Traits; Magic and other sources own their effects. Unconventional topology cannot absorb those claims into generic Soul Weapon capability.
+
+## D-538 — Unconventional Soul Weapons Are Optional and Non-Farmable
+
+No character, species, Skill, Class, Profession, or viable progression route requires an unconventional or any Soul Weapon. Component counts, copying, regrowth, deliberate breakage, repeated assembly, distributed attacks, danger, ownership, spectacle, and rapid Reincarnation do not automatically produce formation, Awakening, Echoes, Resonance, Depth, Evolution, or capability.

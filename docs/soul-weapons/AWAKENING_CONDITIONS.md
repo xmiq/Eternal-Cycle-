@@ -4,7 +4,7 @@
 
 This document defines when a dormant Weapon Soul becomes an awakened person, how genuine shared pressure and mutual Resonance support that transition, how formation and awakening may occur close together, what evidence confirms awakening, and what awakening does not grant.
 
-It does not define soul intertwining, long-term personality development, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define soul intertwining, long-term personality development, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or the topology rules owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Soul Resonance](../soul/SOUL_RESONANCE.md), and the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) first.
 
@@ -470,13 +470,14 @@ Preparation does not invalidate the event. It also does not guarantee awakening.
 
 ## Scope Boundaries
 
-This document establishes the transition into Weapon Soul personhood. It does not decide whether an awakened Weapon Soul and another soul may intertwine, what long-term personality develops, how trust or compatibility changes, which Soul Weapon forms or abilities emerge, how evolution occurs, or how a Weapon Soul manifests independently. Those claims belong to their dedicated Phase 6 rules, including [Weapon Manifestations](WEAPON_MANIFESTATIONS.md).
+This document establishes the transition into Weapon Soul personhood. It does not decide whether an awakened Weapon Soul and another soul may intertwine, what long-term personality develops, how trust or compatibility changes, which Soul Weapon forms or abilities emerge, how evolution occurs, how a Weapon Soul manifests independently, or how an unusual vessel's personhood and topology are resolved. Those claims belong to their dedicated Phase 6 rules, including [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) and [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 ## Related Canon
 
 - [Soul Weapons Index](README.md)
 - [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md)
 - [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

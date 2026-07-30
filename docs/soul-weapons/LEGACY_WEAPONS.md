@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul may remain in the world after a defining relationship, purpose, or Age has ended and how later people may relate to it without inheriting ownership of its personhood, memories, capabilities, or bonds.
 
-It extends the established rules for [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md). It does not define the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the routes owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), unconventional vessel structures, ordinary inheritance law, or a universal relic economy.
+It extends the established rules for [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md). It does not define the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the routes owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), the topology owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md), ordinary inheritance law, or a universal relic economy.
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Personalities](WEAPON_PERSONALITIES.md), [Weapon Evolution](WEAPON_EVOLUTION.md), and [Weapon Echoes](WEAPON_ECHOES.md) first.
 
@@ -536,7 +536,7 @@ It does not define:
 
 - Soul Weapon Compatibility Claims and Profiles;
 - Weapon Manifestation routes or summoning;
-- unconventional vessel structures;
+- unconventional Vessel Topologies;
 - ordinary property law for every culture;
 - a universal heir-selection procedure;
 - equipment statistics or treasure generation;
@@ -553,6 +553,7 @@ It does not define:
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
 - [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
 - [Soul Echoes](../soul/SOUL_ECHOES.md)

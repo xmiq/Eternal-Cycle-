@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul may become externally perceivable or embodied through a bounded, temporary expression.
 
-It does not define Weapon Soul formation, awakening, Soul Intertwining, personality, Soul Weapon Evolution, Weapon Echoes, Legacy status, compatibility, ordinary physical custody, Soul Space appearance, Soul Avatar Expression, magical summoning, or unconventional Soul Weapon structures.
+It does not define Weapon Soul formation, awakening, Soul Intertwining, personality, Soul Weapon Evolution, Weapon Echoes, Legacy status, compatibility, ordinary physical custody, Soul Space appearance, Soul Avatar Expression, magical summoning, or the vessel topology owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 Read [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), [Soul Intertwining](SOUL_INTERTWINING.md), [Weapon Evolution](WEAPON_EVOLUTION.md), [Soul Space](../soul/SOUL_SPACE.md), and [Soul Avatars](../soul/SOUL_AVATARS.md) first.
 
@@ -310,7 +310,7 @@ Under the standard rule:
 - a separate wielder remains free to act through that wielder's body and Skill, but does not receive the Weapon Soul's action as a bonus;
 - if an Embodied Manifestation acts physically, the Weapon Soul cannot also make a separate self-directed physical action through its vessel during the same opportunity;
 - sustaining several sensory images for several observers does not create several actors;
-- divided, distributed, swarm, composite, or multi-vessel agency is not granted by this document and belongs to the dedicated unconventional Soul Weapon rules.
+- divided, distributed, swarm, composite, or multi-vessel agency is not granted by this document and follows [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 The GM should evaluate actual time, attention, distance, communication, and coordination rather than treating the relationship as one initiative slot or granting a universal action formula.
 
@@ -578,6 +578,7 @@ Each Weapon Soul remains one person with its own consent, source, Anchor, and li
 - [Weapon Echoes](WEAPON_ECHOES.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
 - [Soul Space](../soul/SOUL_SPACE.md)
 - [Soul Avatars](../soul/SOUL_AVATARS.md)

@@ -4,7 +4,7 @@
 
 This document defines how an established Soul Weapon may undergo a lasting qualitative change in its soul-bound form, vessel expression, owned capabilities, or cooperative relationship without becoming an equipment tier, Skill upgrade, Class feature, or monster Evolution.
 
-It does not define Weapon Echoes, Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the external-expression procedure owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or unconventional Soul Weapon categories.
+It does not define Weapon Echoes, Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), the external-expression procedure owned by [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or the vessel-topology rules owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 Read [Dormant Weapon Souls](DORMANT_WEAPON_SOULS.md), [Awakening Conditions](AWAKENING_CONDITIONS.md), [Soul Intertwining](SOUL_INTERTWINING.md), and [Weapon Personalities](WEAPON_PERSONALITIES.md) first.
 
@@ -716,7 +716,7 @@ Choosing to stop preserves personhood and meaningful learning. The bow gains no 
 
 ## Scope Boundaries
 
-This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory, [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) owns claim-specific compatibility, and [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) owns temporary external expression. Living, distributed, composite, body-grown, conceptual-only, and other unconventional vessels remain with the final Phase 6 task.
+This document defines Soul Weapon Evolution for standard established Soul Weapon Bonds. [Legacy Weapons](LEGACY_WEAPONS.md) defines the bounded self-directed exception for an unbound or Suspended Legacy Weapon without changing this standard procedure. [Weapon Echoes](WEAPON_ECHOES.md) defines prior-experience memory, [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) owns claim-specific compatibility, [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) owns temporary external expression, and [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md) owns living, distributed, composite, body-grown, and other unusual Vessel Topologies.
 
 ## Related Canon
 
@@ -729,6 +729,7 @@ This document defines Soul Weapon Evolution for standard established Soul Weapon
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
 - [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)

@@ -998,7 +998,7 @@ A lasting injury to a soul's identity, access, memory, or spiritual bonds.
 
 ## Soul Weapon
 
-A weapon or meaningful tool whose Weapon Soul has intertwined with a wielder's soul and now persists through reincarnation.
+A weapon, meaningful tool, or coherent instrument whose awakened Weapon Soul has formed a persistent Soul Weapon Bond with a continuing soul through Soul Intertwining. The term names the partnership rather than ownership, a combat requirement, or guaranteed physical access in every incarnation.
 
 ## Stat XP
 
@@ -1971,3 +1971,67 @@ The temporary sensory, physical, or embodied configuration produced by a Manifes
 ## Manifestation Profile
 
 A qualitative campaign record of one established Manifestation Route and its current expression, including mode, source, Anchor, form, consent, capabilities, unavailable claims, compatibility, onset, range, duration, costs, vulnerabilities, termination, recovery, and consequences.
+
+## Unconventional Soul Weapon
+
+A rules-facing description for a Soul Weapon whose vessel function, scale, material, topology, embodiment, or use requires explicit treatment beyond a singular physical instrument. It is not a rank or separate soul species.
+
+## Vessel Topology
+
+The actual arrangement by which one or more Components, structures, spaces, interfaces, and relationships form a proposed Weapon Vessel.
+
+## Vessel Boundary
+
+The qualitative distinction between what belongs to a Weapon Vessel and what merely uses, carries, supplies, inhabits, repairs, surrounds, or interacts with it.
+
+## Identity-Bearing Structure
+
+A material, functional, relational, historical, or source-supported part of a vessel whose continuity materially contributes to the Weapon Soul remaining the same person without acting as a universal soul container.
+
+## Vessel Component
+
+A bounded part of a composite, paired, distributed, modular, body-linked, or site-bound vessel whose role in identity, function, access, and continuity must be established rather than assumed. Within Soul Weapon rules, **Component** is shorthand for Vessel Component.
+
+## Composite Vessel
+
+A Weapon Vessel made of several integrated Components that function and accumulate history as one coherent instrument.
+
+## Paired Vessel
+
+A Weapon Vessel whose established identity and ordinary function require two or another small bounded set of coordinated counterparts.
+
+## Distributed Vessel
+
+A Weapon Vessel whose identity-bearing or functional Components can occupy distinct locations while remaining connected through an established topology and one coherent continuity.
+
+## Modular Vessel
+
+A Weapon Vessel with a bounded set of replaceable, exchangeable, attachable, or reconfigurable Components under an established Vessel Envelope.
+
+## Vessel Envelope
+
+The documented range of Components, replacements, configurations, interfaces, and operating conditions that count as ordinary continuity for one variable Vessel rather than a new Soul Weapon Form.
+
+## Biotic Vessel
+
+A grown, living, regenerative, metabolic, or organically maintained instrument whose personhood, species, host, and soul arrangement have been resolved before Weapon Soul formation is considered.
+
+## Body-Linked Vessel
+
+A distinct tool, prosthesis, implant, grown instrument, or external organ-like structure physically integrated with a person's current body without becoming that person's anatomy or soul by implication.
+
+## Site-Bound Vessel
+
+A coherent structure, installation, or bounded place-function that serves as a weapon or meaningful tool while remaining physically anchored to a particular site. Vehicles use the same topology audit without becoming site-bound solely through scale.
+
+## Agency Routing
+
+The established way one Weapon Soul directs attention, perception, communication, and weapon-owned physical agency through the Components of its Vessel Topology without becoming several actors.
+
+## Concordant Assembly
+
+A cooperative configuration containing two or more already distinct Weapon Souls that retain separate personhood, vessels, consent, bonds, memory, and agency. It is not one merged Soul Weapon.
+
+## Vessel Topology Profile
+
+A qualitative campaign record of a vessel's boundary, Components, soul arrangement, Identity-Bearing Structures, interfaces, topology, continuity, perspective, Agency Routing, compatibility, maintenance, failure, and Reincarnation implications.

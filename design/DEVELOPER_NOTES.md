@@ -465,7 +465,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Ethical caution should increase with credible evidence while avoiding a setting in which every ordinary tool interaction is treated as unknowable personhood harm.
 - Peaceful and noncombat Vessel Histories need continued representation so violence does not become the de facto efficient route to Weapon Soul formation.
 - Later awakening rules must decide how rapidly formation and awakening can follow one another without turning a dramatic event into a universal instant-soul recipe.
-- Unconventional Soul Weapon rules must revisit composite, distributed, body-grown, living, and partly replaceable vessels without duplicating or weakening the one-soul and Vessel Continuity safeguards.
+- Unconventional Soul Weapon rules must continue to preserve the one-soul and Vessel Continuity safeguards across composite, distributed, body-grown, living, and partly replaceable vessels.
 
 ## Phase 6 Awakening Watchlist
 
@@ -524,7 +524,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Echoes tied to Prior Weapon Forms must preserve context without restoring retired configurations or becoming free evolution evidence.
 - Repeated Chapter Reconciliation must not become a Soul Depth, personality, evolution, or memory-clarity farming loop.
 - Later Legacy Weapon rules should use selective Echo sharing as testimony and relationship material without treating inheritance as access or mastery.
-- Later unconventional-vessel rules must revisit how distributed or composite Vessel Perspectives define one coherent Chapter without duplicating Echoes.
+- Unconventional-vessel portrayals must keep distributed or composite Vessel Perspectives within one coherent Chapter without duplicating Echoes.
 
 ## Phase 6 Legacy-Weapon Watchlist
 
@@ -546,7 +546,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Cross-species examples should continue beyond human weapon conventions without implying that every anatomy can express every weapon form.
 - Institutional compatibility tests need false positives, narrow truths, and political uses so they remain evidence rather than deterministic sorting devices.
 - Weapon Manifestation routes must continue to require their own source and procedure; a favourable Compatibility Profile cannot become implicit summoning.
-- Later unconventional-form rules must reuse claim-specific layers while adapting embodiment and handling questions to distributed, living, composite, or body-grown vessels.
+- Unconventional-form adjudication must reuse claim-specific layers while adapting embodiment and handling questions to distributed, living, composite, or body-grown vessels.
 
 ## Phase 6 Weapon-Manifestation Watchlist
 
@@ -558,4 +558,16 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Standing manifestation consent should support useful emergency signals and ordinary companionship without becoming permanent authorization for exposure, intrusion, or bodily anchoring.
 - Anchor vulnerabilities should be discoverable and consequential without making every route trivial to suppress or every disruption a threat of soul death.
 - Future Magic rules must preserve Manifestation Source ownership instead of laundering broad summoning, projection, or construct effects into the Soul Weapon system.
-- Unconventional Soul Weapon rules must explicitly decide when distributed or composite structures alter the standard one-center rule rather than treating multiplicity as free actions.
+- Distributed and composite structures must preserve the standard one-center rule while defining bounded Agency Routing instead of treating multiplicity as free actions.
+
+## Phase 6 Unconventional-Soul-Weapon Watchlist
+
+- Vessel Topology Profiles should remain concise causal maps rather than exhaustive component inventories or equipment statistics.
+- One-soul Paired and Distributed Vessels need playtest examples where separation is serious without copying the soul or making one designated core universally decisive.
+- Concordant Assemblies need clear table procedures for consent and disagreement without turning every action into negotiation overhead or using majority rule to erase a Weapon Soul.
+- Biotic and Body-Linked Vessels require careful portrayals of personhood, medical dependence, host consent, injury, growth, and repair without treating living tools as property or every organism as a Weapon Soul candidate.
+- Distributed Agency Routing should allow distinctive coordinated patterns while keeping range, attention, precision, interference, Practised Reliability, and action ownership legible.
+- Modular Vessel Envelopes need pressure tests against attachment stacking, module laundering, disposable upgrades, and accidental Stable Multiplicity.
+- Site-Bound Vessels should feel like bounded persons within structures, not omniscient buildings, instant institutions, or portable fortresses.
+- Record-bearing and copied vessels need consistent evidence so information continuity contributes meaning without becoming soul duplication.
+- Future Magic rules must define non-solid and source-dependent vessel coherence without making magical persistence a universal substitute for Vessel Continuity.

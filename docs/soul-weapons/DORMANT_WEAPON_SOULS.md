@@ -2,7 +2,7 @@
 
 ## Status
 
-This document defines the canonical existence, formation, continuity, evidence, and limits of dormant Weapon Souls. It does not define awakening, intertwining, Weapon Soul personality after awakening, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or unconventional Soul Weapon categories.
+This document defines the canonical existence, formation, continuity, evidence, and limits of dormant Weapon Souls. It does not define awakening, intertwining, Weapon Soul personality after awakening, Soul Weapon evolution, Weapon Echoes, Legacy Weapons, compatibility, Weapon Manifestations, or the topology rules owned by [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md), [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md), and [Soul System Interactions](../soul/SOUL_SYSTEM_INTERACTIONS.md) first.
 
@@ -157,7 +157,7 @@ Physical division does not duplicate a soul. Exact copies, molds, blueprints, me
 
 If one vessel is divided, the GM establishes where continuity remains, whether the anchor is damaged or inaccessible, and what evidence supports that outcome. A dormant Weapon Soul cannot be multiplied into a collection by cutting the vessel into pieces.
 
-Combining several objects does not automatically merge their souls or histories. Multiple-soul, composite, paired, distributed, and unconventional vessels belong to later dedicated rules and require explicit personhood and continuity treatment.
+Combining several objects does not automatically merge their souls or histories. Multiple-soul, composite, paired, distributed, and other unusual vessels follow [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md) and require explicit personhood and continuity treatment.
 
 ### Destruction and Loss
 
@@ -275,7 +275,7 @@ No school, guild, temple, army, Academy, maker, owner, licence, office, or rank 
 
 ### Monster Evolution and Species
 
-Monster anatomy, Species Traits, current instincts, Hybrid Forms, Mutations, and Evolution Routes remain owned by [Monster Evolution](../monster-evolution/README.md). A body-grown tool, natural weapon, shed structure, symbiont, or living instrument may raise an unconventional vessel question, but dormancy cannot grant anatomy or merge a Weapon Soul into a monster body by implication.
+Monster anatomy, Species Traits, current instincts, Hybrid Forms, Mutations, and Evolution Routes remain owned by [Monster Evolution](../monster-evolution/README.md). A body-grown tool, natural weapon, shed structure, symbiont, or living instrument may raise a claim under [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md), but dormancy cannot grant anatomy or merge a Weapon Soul into a monster body by implication.
 
 ## GM Procedure
 
@@ -354,12 +354,13 @@ The soul is not copied. The GM examines the actual repair intent, use, relations
 
 ## Scope Boundaries
 
-This document does not decide when awakening occurs, whether a newly awakened Weapon Soul consents to any bond, how intertwining works, which personality emerges, how Soul Weapons evolve, how Weapon Echoes form, how [Legacy Weapons](LEGACY_WEAPONS.md) establish later relationships, how compatibility is assessed, how Weapon Manifestations operate, or which unconventional vessels qualify. Those claims belong to their dedicated Soul Weapon rules and roadmap tasks.
+This document does not decide when awakening occurs, whether a newly awakened Weapon Soul consents to any bond, how intertwining works, which personality emerges, how Soul Weapons evolve, how Weapon Echoes form, how [Legacy Weapons](LEGACY_WEAPONS.md) establish later relationships, how compatibility is assessed, how Weapon Manifestations operate, or which [unconventional vessels](UNCONVENTIONAL_SOUL_WEAPONS.md) qualify. Those claims belong to their dedicated Soul Weapon rules.
 
 ## Related Canon
 
 - [Soul Weapons Index](README.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
 - [Soul Space](../soul/SOUL_SPACE.md)

@@ -4,7 +4,7 @@
 
 This document defines how an awakened Weapon Soul may preserve a bounded first-person structure from a meaningfully completed chapter of its own history, how that structure differs from a Soul Echo, how it can be recalled or shared, and why it grants neither extra agency nor inherited capability.
 
-It does not define Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), Weapon Manifestations, or unconventional Soul Weapon categories.
+It does not define Legacy Weapons, the detailed Profiles owned by [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md), [Weapon Manifestations](WEAPON_MANIFESTATIONS.md), or topology under [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md).
 
 Read [Soul Echoes](../soul/SOUL_ECHOES.md), [Weapon Personalities](WEAPON_PERSONALITIES.md), and [Weapon Evolution](WEAPON_EVOLUTION.md) first.
 
@@ -647,7 +647,7 @@ Repeated recall does not fix the damage by effort alone or create new fragments 
 
 ## Scope Boundaries
 
-This document defines Weapon Echo formation, memory, access, sharing, privacy, alignment, persistence, and safeguards. [Legacy Weapons](LEGACY_WEAPONS.md) determines succession and later relationships, while [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) assesses present compatibility claims. This document does not determine independent Weapon Manifestation or how unconventional vessel structures preserve Chapters.
+This document defines Weapon Echo formation, memory, access, sharing, privacy, alignment, persistence, and safeguards. [Legacy Weapons](LEGACY_WEAPONS.md) determines succession and later relationships, while [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md) assesses present compatibility claims. [Weapon Manifestations](WEAPON_MANIFESTATIONS.md) owns independent external expression, and [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md) owns how unusual Vessel Perspectives preserve one coherent Chapter.
 
 ## Related Canon
 
@@ -659,6 +659,8 @@ This document defines Weapon Echo formation, memory, access, sharing, privacy, a
 - [Weapon Evolution](WEAPON_EVOLUTION.md)
 - [Legacy Weapons](LEGACY_WEAPONS.md)
 - [Soul Weapon Compatibility](SOUL_WEAPON_COMPATIBILITY.md)
+- [Weapon Manifestations](WEAPON_MANIFESTATIONS.md)
+- [Unconventional Soul Weapons](UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](../soul/SOUL_RESONANCE.md)
