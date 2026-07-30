@@ -1155,3 +1155,151 @@ A behavior, Skill, tool, relationship, institution, habitat feature, magical eff
 ## Pressure Release
 
 The reduction, removal, or redirection of an Evolutionary Pressure. Pressure Release does not automatically reverse prior adaptation or Evolution.
+
+## Evolution Route
+
+A causally supported pathway by which a current monster form may undergo a lasting transition into a distinct form or Species Stage under defined sources, conditions, tradeoffs, and consequences.
+
+## Evolution Transition
+
+The bounded process that reorganises a current form into an Evolved Form, with an established source, onset, duration, resource demand, vulnerability, possible interruption, and outcome.
+
+## Evolved Form
+
+The current species form after a completed Evolution Transition. It has its own Species Potential and replaces rather than stacks onto prior embodiment.
+
+## Route Readiness
+
+A qualitative assessment that a current form, evidence, conditions, resources, and transition opportunity are sufficiently aligned for one specific Evolution Route to be attempted or occur. It is not a meter.
+
+## Form Stability
+
+The degree to which an Evolved Form can maintain its organised Species Potential under current health, resources, environment, regulation, and dependencies.
+
+## Evolution Cost
+
+A meaningful loss, demand, dependency, risk, incompatibility, opportunity cost, or consequence created by access to, transition through, or life within an Evolved Form.
+
+## Convergent Evolution
+
+Independent Evolution through which different origins develop similar functions in response to overlapping problems while retaining distinct anatomy, provenance, tradeoffs, and progression ownership.
+
+## Divergent Evolution
+
+Evolution through which related origins develop meaningfully different forms because their pressures, resources, behavior, relationships, values, or route histories differ.
+
+## Evolutionary Regression
+
+A valid Evolution that reduces, simplifies, suppresses, or abandons costly structures or functions as part of a sustainable new form. It is not automatically failure or loss of Soul progression.
+
+## Evolutionary Trap
+
+A form, dependency, or route that was advantageous under earlier conditions but becomes harmful when its environment or relationships change faster than the form can respond.
+
+## Species Stage
+
+A distinct, relatively stable form within a particular species' lifecycle or Evolution structure, defined by its own embodiment, Species Potential, needs, and transition relationships.
+
+## Stage Transition
+
+A bounded change from one Species Stage to another. Its route determines whether it is maturation, metamorphosis, Evolution, Mutation, or another source-owned process.
+
+## Transition Window
+
+A period or condition during which a particular Stage Transition can begin, according to route-specific lifecycle, health, environment, resources, relationships, or source requirements.
+
+## Terminal Stage
+
+A Species Stage with no currently supported further Stage Transition in a defined Route Family. Terminal does not mean metaphysically final or universally apex.
+
+## Evolution Branch
+
+A causally distinct Evolution Route from a current form toward a particular Evolved Form under its own conditions, tradeoffs, and consequences.
+
+## Route Map
+
+A representation of known Evolution Routes and relationships among forms. It records knowledge and canon but does not cause Evolution.
+
+## Branch Point
+
+A form or transition context from which more than one Evolution Branch is genuinely supportable.
+
+## Route Family
+
+A set of related forms and routes sharing meaningful origin, transition structures, or inheritance without implying a universal hierarchy.
+
+## Branch Commitment
+
+The point at which entering or completing one Evolution Route changes the body or conditions enough to close, alter, or make other routes materially harder.
+
+## Route Convergence
+
+The relationship in which different Evolution Routes lead to forms with substantially similar function or, where provenance supports it, the same recognised form.
+
+## Route Divergence
+
+The relationship in which related origins develop distinct forms through different pressures, resources, behavior, values, or transition histories.
+
+## Hidden Evolution Condition
+
+A real condition of a specific Evolution Route whose existence, relevance, or exact function is not yet reliably known to a relevant observer.
+
+## Route Clue
+
+Discoverable evidence that indicates an Evolution Route, condition, transition risk, or resulting tradeoff without necessarily revealing the complete answer.
+
+## Condition Provenance
+
+The causal origin explaining why a Hidden Evolution Condition belongs to its route and how it affects transition.
+
+## False Theory
+
+An in-world interpretation of route evidence that is incomplete or mistaken. It is an observer's belief, not permission to change world truth retroactively.
+
+## Route Discovery
+
+The process by which observation, records, experiment, instruction, Soul access, or lived experience turns unknown route facts into justified knowledge.
+
+## Mutagenic Source
+
+The established cause and mechanism producing a Mutation.
+
+## Stable Mutation
+
+A Mutation the current body can maintain without continuing uncontrolled change under its stated resources and conditions.
+
+## Unstable Mutation
+
+A Mutation whose structure, regulation, expression, or spread remains unreliable, progressive, contradictory, or dependent on unresolved conditions.
+
+## Heritable Mutation
+
+A Mutation that a valid origin or renewal process can transmit to later bodies according to the species' actual inheritance rules.
+
+## Integrated Mutation
+
+A Mutation incorporated coherently into current Species Potential or a later Evolved Form, with defined regulation, costs, and interactions, without erasing provenance.
+
+## Mutation Load
+
+The combined regulatory, material, energetic, developmental, magical, and structural burden created by Mutations in one current form. It is qualitative rather than a slot total.
+
+## Apex Monster
+
+A monster whose current form and developed capability produce exceptional influence or effectiveness within a stated domain and context without implying universal superiority.
+
+## Apex Form
+
+An Evolved Form organised around exceptional performance, integration, or ecological influence within a bounded domain, with explicit dependencies, costs, and counters.
+
+## Apex Domain
+
+The specific function, relationship, habitat, scale, or problem in which an Apex Monster or Apex Form is exceptional.
+
+## Apex Dependency
+
+A resource, habitat, lifecycle, social, magical, symbiotic, or structural requirement whose loss materially reduces an Apex Form's stability or effectiveness.
+
+## Counter-Ecology
+
+The predators, competitors, diseases, institutions, resource limits, environmental shifts, behaviors, or other causal responses that constrain an apex presence over time.

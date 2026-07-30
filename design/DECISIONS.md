@@ -1117,3 +1117,47 @@ Immediate reactions, behavior, Skills, Physical Development, social practice, an
 ## D-279 — Soul Phenomena Cannot Manufacture Species Potential
 
 Soul history, Resonance, Echoes, Titles, Retained Instincts, Avatars, and related phenomena may orient choices or provide evidence only where an explicit receiving rule permits it. They do not create anatomy, Species Traits, Body Compatibility, or Evolution routes by implication.
+
+## D-280 — Monster Evolution Reorganises Current Species Potential
+
+Monster Evolution is a lasting transition into a distinct form or Species Stage through a valid route. The Evolved Form replaces current embodiment and reorganises anatomy, traits, lifecycle, needs, dependencies, vulnerabilities, and later routes rather than stacking rewards onto every prior form.
+
+## D-281 — Every Evolution Requires Provenance, Transition, and Consequence
+
+A valid Evolution Route identifies its current origin, causal provenance, compatibility, evidence, transition opportunity and process, resources, agency, failure states, resulting form, tradeoffs, and ecological and social consequences. Universal levels, kills, consumption, suffering, age, Soul rank, and elapsed time cannot substitute for those elements.
+
+## D-282 — Evolution Creates Access Rather Than Mastery
+
+An Evolved Form may create new structures and capability routes but does not grant Physical Development, Skills, magical control, knowledge, or reliable use. Post-transition calibration and meaningful current-life practice remain necessary.
+
+## D-283 — Species Stages Are Local Forms, Not Universal Ranks
+
+A Species Stage is a distinct stable form within one species' lifecycle or Evolution structure. Stage number, sequence, age, visual complexity, and distance from a base form do not establish universal power, rarity, or superiority, and later Stages must state their own gains, losses, needs, and transition relationships.
+
+## D-284 — Evolution Trees Are Descriptive Route Maps
+
+An Evolution tree or Route Map records supported and known possibilities; it does not cause Evolution, compel a branch, prove availability, rank outcomes, or exhaust future routes. New routes require prior causal support and fair evidence.
+
+## D-285 — Convergence Preserves Provenance and Divergence Preserves Variation
+
+Convergent Evolution may produce similar functions through distinct structures and owners; shared appearance or function does not merge species or progression. Divergent Evolution may produce separate species, forms, castes, or branches and does not imply total separation without an explicit origin rule.
+
+## D-286 — Hidden Evolution Conditions Require Prior Truth and Fair Clues
+
+A Hidden Evolution Condition must exist before adjudication, have Condition Provenance, relate meaningfully to its resulting form, and leave proportionate discoverable Route Clues. Hidden conditions cannot be retroactive surprises, secret counters, single-solution puzzles, or excuses to deny established character expertise and agency.
+
+## D-287 — Mutations Retain Source and Do Not Equal Evolution
+
+A Mutation is source-owned structural variation outside ordinary maturation. It may affect compatibility or become integrated by a later route, but it does not automatically grant Skills, complete Evolution, become beneficial, stabilise, or redefine a species.
+
+## D-288 — Mutation Inheritance Requires an Explicit Origin Process
+
+A Mutation becomes heritable only when a species' biological, magical, constructed, symbiotic, collective, or other valid renewal process can transmit it with defined expression and failure. One mutated body and one Reincarnation do not establish inheritance.
+
+## D-289 — Regression and Simplification Are Valid Evolutionary Outcomes
+
+Evolution may reduce, suppress, or abandon costly structures and dependencies where a valid route produces a more sustainable form. Lost anatomy makes body-dependent capability latent or inaccessible, and former possession does not make restoration free.
+
+## D-290 — Apex Is a Bounded Domain, Not a Universal Tier
+
+An Apex Monster or Apex Form is exceptional only within a named function, relationship, habitat, scale, and context. Every apex claim retains current Development, costs, dependencies, Counter-Ecology, and failure; it grants no universal superiority, finality, rarity rank, political authority, or immunity.

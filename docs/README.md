@@ -33,6 +33,12 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Monster Evolution Rules Index](monster-evolution/README.md) - canonical reading order and boundaries for monster ecology and evolution.
 - [Monster Ecology](monster-evolution/MONSTER_ECOLOGY.md) - niches, resource webs, ecological relationships, carrying capacity, territory, migration, reproduction, competition, and extinction pressure.
 - [Evolutionary Pressures](monster-evolution/EVOLUTIONARY_PRESSURES.md) - climate, terrain, ecology, civilization, magic, Soul phenomena, disease, scarcity, abundance, and social pressure without deterministic progression.
+- [Monster Evolution](monster-evolution/MONSTER_EVOLUTION.md) - routes, transitions, resulting forms, gradual evolution, convergence, divergence, regression, and evolutionary traps.
+- [Species Stages](monster-evolution/SPECIES_STAGES.md) - local stage structures, transition windows, gains, losses, and lifecycle ownership.
+- [Branching Evolution](monster-evolution/BRANCHING_EVOLUTION.md) - descriptive route maps, branch availability, commitment, convergence, divergence, specialisation, and generalisation.
+- [Hidden Evolution Conditions](monster-evolution/HIDDEN_EVOLUTION_CONDITIONS.md) - fair route discovery, causal requirements, clue structure, experimentation, and player agency.
+- [Mutations](monster-evolution/MUTATIONS.md) - mutation provenance, stability, expression, load, inheritance, integration, and Reincarnation limits.
+- [Apex Monsters](monster-evolution/APEX_MONSTERS.md) - bounded apex domains, dependencies, population limits, Counter-Ecology, and contextual assessment.
 
 ## World Engine
 

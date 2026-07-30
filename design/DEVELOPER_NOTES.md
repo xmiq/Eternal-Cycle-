@@ -294,3 +294,13 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Capability Representation and the Ownership Test resolve overlaps without duplicating Development or erasing legitimately earned capability.
 - Stale Phase 3 handoffs were replaced with links to the completed owning rules. No blocking question or repository-boundary violation remains.
 - Phase 4 should preserve the distinction between biological Evolution and learned Skill Evolution, especially when a new body makes a Skill possible without granting mastery.
+
+## Phase 4 Monster-Evolution Watchlist
+
+- Playtests should check whether route readiness can be communicated qualitatively without becoming a concealed progress bar.
+- Transition costs should create real form commitments without making every route punitive or requiring equal point-balanced drawbacks.
+- Hidden conditions need enough clue redundancy to feel discoverable in hindsight while preserving genuine uncertainty.
+- Stage and branch maps should remain useful reference tools without teaching players that later, rarer, or more distant forms are universally stronger.
+- Mutation adjudication should preserve causality and surprising outcomes without becoming either a random reward table or a catalog burden.
+- Apex claims are especially vulnerable to scope drift; every use should continue naming domain, dependency, counter-ecology, and current individual Development.
+- Evolutionary regression and generalisation need playtest attention so players recognise them as viable routes rather than disguised failure states.
