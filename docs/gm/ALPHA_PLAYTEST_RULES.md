@@ -90,17 +90,16 @@ The following material is ready to constrain alpha play within its stated scope:
 - Soul-system ownership and protection through [Soul System Interactions](../soul/SOUL_SYSTEM_INTERACTIONS.md) and [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md);
 - the complete [Development System](../progression/README.md), including [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md), [Skill Development principles](../progression/SKILL_DEVELOPMENT.md), [Profession Development principles](../progression/PROFESSION_DEVELOPMENT.md), [Magical Development principles](../progression/MAGICAL_DEVELOPMENT.md), [Social and Leadership Development principles](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md), and [Species Development principles](../progression/SPECIES_DEVELOPMENT.md);
 - [Stat XP and Retained Development](../progression/STAT_XP_AND_RETAINED_DEVELOPMENT.md), [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md), [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md), and [Development Safeguards](../progression/DEVELOPMENT_SAFEGUARDS.md);
-- Canonical Foundations for [Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md), the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md), and [GM adjudication](GM_PRINCIPLES.md).
+- the complete [Skill Engine](../skills/README.md), including human and monster Skill Trees, Reincarnation crossover, Adaptive Skills, Skill Evolution, Skill Fusion, active and passive expression, Hidden Skills, Conceptual Skills, and anti-proliferation safeguards;
+- the canonical [Game Master Framework](GAME_MASTER_FRAMEWORK.md) and [GM Principles](GM_PRINCIPLES.md);
+- Canonical Foundations for [Soul Weapons](../soul/SOUL_WEAPON_FOUNDATIONS.md) and the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Development principles for Skills, professions, magic, social capability, and species are complete. Their later trees, content, formulas, institutions, and detailed procedures are not complete merely because their Development boundaries are canonical.
+Development and Skill Engine rules are complete within their stated scopes. Later class, magic, species-evolution, institutional, content, formula, and generator tasks are not complete merely because their Development or Skill boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- human and monster Skill trees;
-- implemented crossover through Reincarnation;
-- adaptive Skill creation, Skill evolution, Skill fusion, active and passive Skills, hidden Skills, and conceptual Skills;
 - monster ecology, species stages, branching evolution, hidden conditions, mutations, hybrid forms, apex monsters, and monster civilizations;
 - human classes, traditions, schools, institutions, advancement, and class evolution;
 - detailed Soul Weapon awakening, growth, abilities, Weapon Echoes, compatibility, and Weapon Manifestations;
@@ -199,16 +198,7 @@ A Provisional Rule must never:
 
 ## Adjudicating Unfinished Systems
 
-### Skills
-
-Until detailed trees exist:
-
-- use narrow, descriptive competencies rather than large umbrella Skills;
-- identify whether a capability is human, monster, shared, body-dependent, profession-dependent, magical, social, or species-specific;
-- judge Persistent Potential, Current Access, Embodied Expression, Practised Reliability, and Contextual Effectiveness separately;
-- require meaningful acquisition and integrated present use under [Skill Development](../progression/SKILL_DEVELOPMENT.md);
-- avoid permanent crossover merely because a prior incarnation possessed an analogous capability;
-- mark any tree placement, unlock route, or undeveloped Skill behavior as Provisional.
+The completed [Skill Engine](../skills/README.md) applies directly. A Skill claim is not Provisional merely because it concerns a human tree, monster tree, crossover, adaptation, evolution, fusion, expression mode, hidden capability, or conceptual capability. Any remaining gap receives its status claim by claim under the complete Skill rules and the still-incomplete system that actually owns the missing effect.
 
 ### Monsters and Evolution
 
@@ -384,6 +374,8 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 ## Related Documents
 
 - [Canonical Rules Map](../README.md)
+- [GM Rules Index](README.md)
+- [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
 - [GM Principles](GM_PRINCIPLES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

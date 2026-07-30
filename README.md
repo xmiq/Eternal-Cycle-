@@ -30,6 +30,8 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
+- [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
+- [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 
