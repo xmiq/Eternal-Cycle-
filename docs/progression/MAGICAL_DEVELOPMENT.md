@@ -773,6 +773,7 @@ Neither statement creates an overall magic rank.
 - **[Alchemy](../magic/ALCHEMY.md):** owns magical material processes, Reagents, provenance, Recipes, Batches, Yield, application, toxicity, storage, and waste.
 - **[Divine Magic](../magic/DIVINE_MAGIC.md):** owns Divine Sources, Domains, Jurisdictions, relationships, Mandates, petitions, responses, blessings, withdrawal, and evidence.
 - **[Forbidden Magic](../magic/FORBIDDEN_MAGIC.md):** owns restriction classification, hazard assessment, protected interests, authority, knowledge custody, enforcement, and review.
+- **[Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md):** owns the causal handoff from magical claims to environmental, ecological, institutional, historical, and off-screen consequences.
 - **[World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md):** supplies magical environments, institutions, resources, ecological effects, law, conflict, and changes between Ages.
 
 ## Scope Boundaries
@@ -909,6 +910,7 @@ The source, Weapon Function, casting Skill, and relationship remain separate. Ne
 - [Alchemy](../magic/ALCHEMY.md)
 - [Divine Magic](../magic/DIVINE_MAGIC.md)
 - [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md)
+- [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)

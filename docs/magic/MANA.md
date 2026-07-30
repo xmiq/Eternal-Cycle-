@@ -588,6 +588,7 @@ The hunter wins through knowledge, preparation, tools, and matchup. The result d
 - [Soul System Interactions](../soul/SOUL_SYSTEM_INTERACTIONS.md)
 - [Soul Weapons](../soul-weapons/README.md)
 - [Weapon Manifestations](../soul-weapons/WEAPON_MANIFESTATIONS.md)
+- [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)

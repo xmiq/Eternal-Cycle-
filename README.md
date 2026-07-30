@@ -33,7 +33,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/monster-evolution/README.md`](docs/monster-evolution/README.md) - Monster Evolution reading order, adjudication sequence, ownership map, and safeguards.
 - [`docs/human/README.md`](docs/human/README.md) - Human Class and Profession philosophy, rules, reading order, and ownership boundaries.
 - [`docs/soul-weapons/README.md`](docs/soul-weapons/README.md) - complete Soul Weapon state model, reading order, claim resolution, system interfaces, and safeguards.
-- [`docs/magic/README.md`](docs/magic/README.md) - Magic rules, current reading order, ownership boundaries, and implementation status.
+- [`docs/magic/README.md`](docs/magic/README.md) - complete Magic reading order, claim resolution, ownership boundaries, guarantees, and campaign-record boundary.
 - [`docs/magic/MANA.md`](docs/magic/MANA.md) - Mana as the local, causal, world-side foundation of magical change.
 - [`docs/magic/MAGICAL_AFFINITIES.md`](docs/magic/MAGICAL_AFFINITIES.md) - target-specific magical compatibility, formation, expression, conflict, and persistence.
 - [`docs/magic/SPELL_FORMATION.md`](docs/magic/SPELL_FORMATION.md) - bounded spell procedures, local grammars, formation lifecycle, costs, failure, counterplay, and persistence.
@@ -42,6 +42,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/magic/ALCHEMY.md`](docs/magic/ALCHEMY.md) - controlled magical material processes, Reagents, provenance, Batches, application, ecology, and anti-copying safeguards.
 - [`docs/magic/DIVINE_MAGIC.md`](docs/magic/DIVINE_MAGIC.md) - source-bound divine relationships, Domains, Jurisdictions, Mandates, petitions, blessings, miracles, agency, and safeguards.
 - [`docs/magic/FORBIDDEN_MAGIC.md`](docs/magic/FORBIDDEN_MAGIC.md) - scoped magical restrictions, hazards, authority, protected interests, controlled practice, knowledge, enforcement, review, and safeguards.
+- [`docs/magic/WORLD_ENGINE_INTERACTIONS.md`](docs/magic/WORLD_ENGINE_INTERACTIONS.md) - causal handoff from established magical changes to bounded, persistent world consequences.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -61,4 +62,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. All substantive **Phase 7 — Magic** frameworks, including Magical Development and Magic's World Engine interactions, are complete; the sole current task is **Audit and integrate Phase 7**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define world-state variables as rules, not campaign data**.

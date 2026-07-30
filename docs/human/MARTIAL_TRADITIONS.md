@@ -40,7 +40,7 @@ It does not own the effects of the things it organizes.
 | Military, guard, instructor, hunting, or protection work | [Professions](PROFESSIONS.md) and [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) |
 | Rank, office, command authority, loyalty, morale, and reputation | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and current institutions |
 | Natural weapons, anatomy, senses, and Species Traits | [Species Development](../progression/SPECIES_DEVELOPMENT.md) and current form |
-| Spells, mana, magical reinforcement, and source-specific supernatural effects | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and later Magic rules |
+| Spells, Mana, magical reinforcement, and source-specific supernatural effects | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Soul Weapon personhood, form, awakening, and capabilities | [Soul Weapons](../soul-weapons/README.md) |
 | Symbolic identity carried across lives | [Soul Titles](../soul/SOUL_TITLES.md) |
 
@@ -523,7 +523,7 @@ This document delegates or defers the following claims to their owning rules:
 
 - a universal combat engine;
 - complete weapon lists or damage values;
-- Magical Schools defined in [Magical Schools](MAGICAL_SCHOOLS.md), and spell, mana, or affinity rules owned by the later Magic phase;
+- Magical Schools defined in [Magical Schools](MAGICAL_SCHOOLS.md), and spell, Mana, or affinity rules owned by the [Magic framework](../magic/README.md);
 - military organizations and Academy governance defined through [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), and legal systems owned by the World Engine;
 - universal tournament rules;
 - Soul Weapon awakening, evolution, compatibility, or manifestations;

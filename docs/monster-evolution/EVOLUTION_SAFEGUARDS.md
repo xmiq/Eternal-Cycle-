@@ -64,7 +64,7 @@ Classify the requested effect before deciding whether it is desirable.
 | Anatomy, lifecycle, integrated Species Traits, and Evolved Form | Monster Evolution and Species Development |
 | Bodily conditioning, recovery, tolerance, and current regulation | Physical Development |
 | Learned detection, control, timing, tactics, and techniques | Skill Engine |
-| Magical source, affinity, Channel, spell, ritual, or effect | Magical Development and later Magic rules |
+| Magical source, affinity, Channel, Spell, Ritual, or effect | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Culture, office, law, coordination, and institutional support | Social, Profession, and society rules |
 | Mutation caused outside ordinary form organization | Mutations |
 | Multi-source whole-body integration | Hybridization |

@@ -783,5 +783,6 @@ The termination lead can preserve a temporary containment state while negotiatio
 - [Akashic Archive](../soul/AKASHIC_ARCHIVE.md)
 - [Soul Weapons](../soul-weapons/README.md)
 - [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md)
+- [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)

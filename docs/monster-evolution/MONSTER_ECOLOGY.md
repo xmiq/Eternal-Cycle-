@@ -75,7 +75,7 @@ It does not absorb adjacent systems:
 | A current body's anatomy, lifecycle, Species Traits, maturation, or valid body-changing route | [Species Development](../progression/SPECIES_DEVELOPMENT.md) |
 | Learned hunting, migration, nesting, cooperation, sensing, craft, or resource-management methods | [Skill Engine](../skills/README.md) and relevant Development Tracks |
 | Current bodily acclimation, conditioning, recovery, and regulation | [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md) |
-| Magical sources, Channels, reserves, effects, and magical environmental laws | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the later Magic phase |
+| Magical sources, Channels, Reserves, effects, and magical environmental laws | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Soul identity, persistence, Resonance, Echoes, Titles, instincts, and Avatar Expression | [Soul Engine](../soul/README.md) |
 | Current populations, quantities, resource stocks, wars, economies, disasters, and live world change | [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) and the external Campaign Record |
 | Lasting transition into a distinct monster form or stage | Later Monster Evolution rules |

@@ -629,6 +629,7 @@ Mining redirects a Current and fragments breeding habitat. Individual adults can
 - [Soul Weapons](../soul-weapons/README.md)
 - [Soul Weapon Compatibility](../soul-weapons/SOUL_WEAPON_COMPATIBILITY.md)
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
+- [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)

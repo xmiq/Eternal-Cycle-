@@ -39,8 +39,8 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - Monster and informal Professions should be allowed to transmit practice through species-appropriate cultural methods without being forced into human institutional forms.
 - A universal Profession XP currency would erase the distinction among knowledge, Skill, judgment, responsibility, authority, and access and should not be introduced.
 - Technical procedures for individual crafts, medicine, law, administration, scholarship, ritual work, and other Professions remain deferred to their Owning Systems and content phases.
-- Phase 7 owns concrete mana models, sources, spell grammars, schools, affinities, rituals, enchanting, alchemy, divine magic, and forbidden magic; Phase 2 defines only their shared Development boundaries.
-- Every later magical system must identify its Access route, resource or equivalent cost, embodiment, authority, recovery, environment, failure states, and persistence rather than assuming one universal mana model.
+- The completed Phase 7 framework owns Mana, sources, spell grammars, affinities, Rituals, Enchanting, Alchemy, Divine Magic, Forbidden Magic, and their world interface; Phase 2 owns their shared Development boundaries, while Magical Schools remain Human social frameworks.
+- Every canonical magical system identifies its Access route, resource or equivalent cost, embodiment, authority, recovery, environment, failure states, and persistence rather than assuming one universal Mana model.
 - Local caster ranks, spell circles, reserve measures, and threat labels must state what they measure and cannot become an overall character or magic level.
 - Cross-Age magical relearning should reward retained understanding while allowing changed laws to invalidate old formulas, tools, permissions, and environmental assumptions.
 - External Empowerment must remain visibly dependent on its source so artifacts, patrons, contracts, prepared sites, and groups do not become silent permanent statistics.
@@ -273,7 +273,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 
 - Conceptual Claims should stay specific enough to adjudicate without reducing imaginative uses to a closed spell list.
 - Playtests should challenge each domain with contradictory interpretations and contexts; a concept that always wins is too broad or has captured another system.
-- Conceptual Spellcasting must not become a shortcut around the later magic rules, especially for cost, authority, resistance, and source access.
+- Conceptual Spellcasting must not become a shortcut around the completed Magic rules, especially for cost, authority, resistance, and source Access.
 - Names, contracts, identity, memory, connection, and coordination need repeated agency audits because evocative language can conceal coercive effects.
 - Reincarnated conceptual masters should retain useful perspective while still discovering that changed Ages can invalidate former laws and institutions.
 
@@ -399,7 +399,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 ## Phase 5 Magical-School Watchlist
 
 - Magical School Profiles must preserve the line between a society's model and the actual magic system, especially when doctrine is prestigious, revealed, or empirically useful but wrong.
-- Phase 7 should be able to define several incompatible magical systems without rewriting school governance, learning roles, verification, or recognition.
+- Phase 7 supports several incompatible magical systems without rewriting school governance, learning roles, verification, or recognition.
 - Noncasting roles need examples with real capability and responsibility so they are neither dismissed nor quietly given casting Access.
 - Magical Interoperability Claims should make cross-school cooperation possible without turning shared effect names into universal compatibility.
 - Safety and research rules must preserve genuine uncertainty and risky discovery without rewarding abuse, sacrifice, corruption, or environmental harm as efficient progression.
@@ -557,7 +557,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - The one-center rule needs mixed-action playtests where another person wields the vessel while the Weapon Soul communicates or manifests.
 - Standing manifestation consent should support useful emergency signals and ordinary companionship without becoming permanent authorization for exposure, intrusion, or bodily anchoring.
 - Anchor vulnerabilities should be discoverable and consequential without making every route trivial to suppress or every disruption a threat of soul death.
-- Future Magic rules must preserve Manifestation Source ownership instead of laundering broad summoning, projection, or construct effects into the Soul Weapon system.
+- Completed Magic rules preserve Manifestation Source ownership instead of laundering broad summoning, projection, or construct effects into the Soul Weapon system.
 - Distributed and composite structures must preserve the standard one-center rule while defining bounded Agency Routing instead of treating multiplicity as free actions.
 
 ## Phase 6 Unconventional-Soul-Weapon Watchlist
@@ -570,7 +570,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Modular Vessel Envelopes need pressure tests against attachment stacking, module laundering, disposable upgrades, and accidental Stable Multiplicity.
 - Site-Bound Vessels should feel like bounded persons within structures, not omniscient buildings, instant institutions, or portable fortresses.
 - Record-bearing and copied vessels need consistent evidence so information continuity contributes meaning without becoming soul duplication.
-- Future Magic rules must define non-solid and source-dependent vessel coherence without making magical persistence a universal substitute for Vessel Continuity.
+- Completed Magic rules route non-solid and source-dependent vessel expression through actual sources without making magical persistence a universal substitute for Vessel Continuity.
 
 ## Phase 6 Integration Audit
 
@@ -581,7 +581,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Skills and Development remain necessary for current use; Human structures govern teaching and recognition; Monster Evolution governs anatomy; Magic and external sources retain their own effects and costs.
 - Reincarnation can preserve an eligible Weapon Soul, bond, and form under a valid Passage Accord without carrying worldly mass, Components, mastery, access, or a compatible body as inventory.
 - Stale Phase 6 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
-- Phase 7 must preserve source ownership when mana, affinity, spell, ritual, enchantment, divine, or forbidden effects interact with a Weapon Soul or vessel.
+- Phase 7 preserves source ownership when Mana, affinity, Spell, Ritual, Enchantment, Divine, or Forbidden effects interact with a Weapon Soul or vessel.
 
 ## Phase 7 Mana Watchlist
 
@@ -674,3 +674,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Regional and Epochal aggregation must preserve unequal distribution, bottlenecks, rare failures, source refusal, and affected minorities that averages would hide.
 - World Reset tests should produce failure, Drift, survival, and novel compatibility according to each owner rather than applying one global magic switch.
 - Phase 8 must accept Magic-World Claims as inputs without duplicating specialist Magic rules or converting Mana into a universal world-state currency.
+
+## Phase 7 Integration Audit
+
+- All eight specialist Magic documents, Magical Development, and Magic's World Engine interface are complete and indexed in canonical reading order.
+- A phase-wide claim sequence now resolves effect, Mana Relation, specialist owner, source, agency, embodiment, capability, cost, failure, persistence, information, and world consequence without creating a universal spell system.
+- Mana, affinity, Spell procedure, Ritual Structure, Enchantment Layer, Alchemical Process, divine relationship, restriction, Skill, Development, authority, recognition, and world response remain separate facts with explicit owners.
+- Soul systems and Soul Weapons can participate without becoming Mana supplies, automatic spell access, inherited mastery, compulsory equipment, or substitutes for current embodiment and effort.
+- Human Classes, Professions, and Magical Schools organize access and practice; Monster Evolution and Species Development retain anatomy and whole-form ownership.
+- Completed Magic documents now link directly to the causal World Engine interface, and stale future-Magic handoffs in earlier phases now point to their completed owners.
+- Actual Mana state, active effects, Profiles, Batches, relationships, restrictions, infrastructure, and world consequences remain external Campaign Records.
+- Full semantic and link validation found no blocking question, universal-level language, campaign data, duplicate decision identifier, or navigation conflict. Phase 8 may now define world-state variables from bounded Magic-World Claims without reopening Phase 7.

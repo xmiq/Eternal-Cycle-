@@ -106,7 +106,7 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) causal interface;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md).
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, the complete Soul Weapon framework, and every substantive Phase 7 Magic framework are canonical within their stated scopes. The Phase 7 integration audit, detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, and the complete Phase 7 Magic framework are canonical within their stated scopes. Detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 

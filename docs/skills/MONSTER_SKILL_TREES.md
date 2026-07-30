@@ -162,7 +162,7 @@ Aquatic hunting may combine pressure, current, salinity, sound, light, buoyancy,
 
 A magical sense supplies access to an established signal. Learned discrimination separates background from anomaly, tracks change over time, identifies uncertainty, and avoids overload or false interpretation.
 
-The Skill cannot perceive information the sense does not carry. Full magical rules remain owned by the later Magic phase.
+The Skill cannot perceive information the sense does not carry. Full magical rules remain owned by the completed [Magic framework](../magic/README.md).
 
 ## Tools, Craft, and Knowledge
 

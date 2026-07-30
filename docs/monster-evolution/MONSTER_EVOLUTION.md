@@ -75,7 +75,7 @@ Monster Evolution owns routes, transitions, resulting monster forms, and the cha
 | Why a recurring problem or opportunity makes a route relevant | [Evolutionary Pressures](EVOLUTIONARY_PRESSURES.md) |
 | Learned methods before or after transition | [Skill Engine](../skills/README.md) |
 | Conditioning, calibration, recovery, and bodily reliability | [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md) |
-| Magical Access, Channels, affinity, control, and learned use | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and later Magic rules |
+| Magical Access, Channels, affinity, control, and learned use | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Culture, institutions, professions, leadership, education, and collective practice | Relevant Development Tracks and later Monster Societies rules |
 | Soul persistence, access, memory, identity, and reincarnation | [Soul Engine](../soul/README.md) |
 | Current populations, ecology, resources, and world consequences | [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) and the external Campaign Record |

@@ -16,9 +16,28 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 8. [Forbidden Magic](FORBIDDEN_MAGIC.md) defines scoped magical restrictions, underlying mechanics, hazard assessment, protected interests, authority, controlled practice, restricted knowledge, research, enforcement, review, persistence, and safeguards.
 9. [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md) defines how established magical causes create bounded, distributed, delayed, and persistent world consequences without implementing Phase 8's detailed simulation domains.
 
-[Magical Development](../progression/MAGICAL_DEVELOPMENT.md) owns capability change across these specialist systems. Every substantive Phase 7 framework is complete; only the phase-wide integration audit remains.
+[Magical Development](../progression/MAGICAL_DEVELOPMENT.md) owns capability change across these specialist systems. Together, these documents form the complete Phase 7 Magic framework.
 
-## Current Ownership Boundaries
+## Claim Resolution Sequence
+
+When a magical claim matters:
+
+1. state the intended change, target, scope, duration, and evidence;
+2. determine whether the claim is magical and establish its [Mana Relation](MANA.md#the-mana-relation);
+3. apply the exact specialist owner for affinity, Spell, Ritual, Enchantment, Alchemy, Divine, or restriction claims;
+4. identify sources, participants, agency, consent, Access, authority, Jurisdiction, and present world laws;
+5. identify current embodiment, Channels, organs, Hosts, Reagents, sites, tools, and environmental compatibility;
+6. separate learned Skills, Magical Development, Professions, institutions, and external support;
+7. resolve cost, Supply, Capacity, lifecycle, maintenance, failure, termination, recovery, traces, and counterplay;
+8. preserve Soul-system, Monster Evolution, Human-framework, and Soul Weapon ownership without duplication;
+9. identify affected parties, information limits, alternatives, and meaningful agency;
+10. propagate world consequences through [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md);
+11. communicate what is known, inferred, disputed, hidden, or genuinely uncertain;
+12. keep every current Profile, Instance, Batch, relationship, restriction, and world condition in external Campaign Records.
+
+A missing required owner makes only that claim incomplete. It does not authorize a universal fallback spell system or suspension of completed safeguards.
+
+## Ownership Boundaries
 
 | Claim | Primary owner |
 | --- | --- |
@@ -41,8 +60,33 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 
 One event may involve several owners. Record each effect once, preserve every dependency, and do not let a Magic description absorb Skills, Development, Soul effects, social standing, Monster Evolution, or Soul Weapon personhood.
 
+## Phase Guarantees
+
+- Magic is a natural family of world phenomena, not a separate progression currency or universal capability ladder.
+- Every magical effect has a valid Mana Relation, even when no personal Reserve is spent.
+- Mana, Access, Reserve, Capacity, control, affinity, authority, source response, Skill, Development, and recognition remain distinct.
+- Affinities are target-specific relationships rather than elemental scores, slots, or flat bonuses.
+- Spells, Rituals, Enchantments, Alchemical Processes, Divine Magic, and restrictions retain separate structures and ownership.
+- Present embodiment, current Access, current-law compatibility, practice, and recovery remain necessary for reliable expression.
+- Reincarnation preserves eligible history and Imprints without carrying Mana state, inventory, infrastructure, office, legal identity, or automatic authority.
+- Human Classes, Professions, and Magical Schools organize social practice without granting Magic.
+- Monster Evolution and Species Development own anatomy, Species Traits, Mutations, and whole-form change.
+- Soul systems support identity and bounded relationships without becoming Mana, spell access, affinity, or universal authority.
+- Weapon Souls remain persons and partners rather than batteries, equipment statistics, transferable technology, or compulsory progression.
+- Person-like sources retain agency and refusal; consent, resistance, vulnerability, and consequences for affected persons follow their owning rules rather than being erased by magical authority.
+- Magic remains optional; preparation, tools, alliances, institutions, ecology, and nonmagical methods remain viable.
+- Costs, traces, failure, externalities, maintenance, and world consequences cannot be erased after a scene for convenience.
+- World Resets require claim-specific revalidation rather than applying one global magic switch.
+- No universal MP, spell slots, spell tiers, affinity rarity ladder, caster level, magic score, or strongest magical path exists.
+
+## External Record Boundary
+
+Canonical Profiles in this phase define qualitative formats and questions. Actual Mana Context Profiles, Affinity Profiles, Spell Profiles and Instances, Ritual Profiles and States, Enchantment Profiles and Layers, Alchemical Profiles and Batches, Divine Profiles and relationships, Forbidden Magic Profiles and cases, Capability Profiles, and Magic-World Profiles are external Campaign Records.
+
+The repository stores no named current source, character Reserve, active spell, live Ritual, enchanted inventory, current Batch, campaign pantheon, active restriction, settlement infrastructure, or changing world state.
+
 ## Authority and Boundary
 
 These files contain playable canonical rules. Accepted governance remains in [Design Decisions](../../design/DECISIONS.md), and canonical vocabulary remains in [Terminology](../../design/TERMINOLOGY.md). Resolve any conflict across both authorities before treating a rule as complete.
 
-This section contains no spell catalog, named current source, live Mana Field, character reserve, active ritual, enchanted inventory, campaign deity relationship, discovered formula, or changing world state.
+Use the [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) for campaign operation and the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) only when a genuinely unfinished later owner is required. A provisional ruling cannot overwrite this completed phase.

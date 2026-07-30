@@ -60,7 +60,7 @@ Monster Societies owns reusable rules for collective organisation, cultural vari
 | Individual craft, medicine, law, scholarship, administration, and other vocational practice | [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) |
 | Learned methods and coordinated techniques | [Skill Engine](../skills/README.md) |
 | Anatomy, senses, lifecycle, Species Traits, and body-changing routes | [Species Development](../progression/SPECIES_DEVELOPMENT.md) and Monster Evolution |
-| Magical Access and developed control | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and later Magic rules |
+| Magical Access and developed control | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Current population, resources, settlements, factions, war, trade, and institutional state | [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) and the external Campaign Record |
 | Persistent Soul identity and protected Imprints | [Soul Engine](../soul/README.md) |
 
@@ -210,7 +210,7 @@ Institutional magic can:
 - reshape ecology and Evolutionary Pressure;
 - preserve procedures beyond individual lives.
 
-Institutions do not create unlimited mana or copy Magical Development to members. The later Magic phase owns spell and source rules. Monster society rules own organisation and consequence.
+Institutions do not create unlimited Mana or copy Magical Development to members. The [Magic framework](../magic/README.md) owns Spell and source rules. Monster society rules own organisation, while [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) owns the magical causal handoff to wider consequences.
 
 ## Professions and Work
 

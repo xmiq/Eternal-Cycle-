@@ -49,7 +49,7 @@ It does not own every response:
 | Current anatomy, Species Traits, lifecycle, maturation, and Species Potential | [Species Development](../progression/SPECIES_DEVELOPMENT.md) |
 | Conditioning, acclimation, recovery, and current bodily regulation | [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md) |
 | Learned, refined, or deliberately repeatable methods | [Skill Engine](../skills/README.md) |
-| Magical Access, Channels, control, affinity, and learned use | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the later Magic phase |
+| Magical Access, Channels, control, affinity, and learned use | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) and the [Magic rules](../magic/README.md) |
 | Culture, institutions, coordination, leadership, and collective learning | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and later monster-society rules |
 | Soul identity, persistence, Resonance, Echoes, Titles, instincts, and Avatars | [Soul Engine](../soul/README.md) |
 | Current population totals, resources, disasters, institutions, and live world consequences | [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) and the external Campaign Record |

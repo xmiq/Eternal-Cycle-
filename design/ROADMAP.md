@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 7 — Magic**
+**Current phase: Phase 8 — World Engine**
 
-**Current task: Audit and integrate Phase 7**
+**Current task: Define world-state variables as rules, not campaign data**
 
-Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. Every substantive Phase 7 Magic framework, including Magical Development and Magic's World Engine interactions, is complete. Work only on **Audit and integrate Phase 7** unless the project owner explicitly changes the target. Do not begin Phase 8 implementation until this audit is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define world-state variables as rules, not campaign data** unless the project owner explicitly changes the target. Do not begin populations, resources and food, economies, ecology and migration, faction behaviour, war and unrest, disease evolution, advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
 
-Phases 1 through 6 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -172,7 +172,11 @@ Phase 6 is complete only when dormant Weapon Souls, Awakening, Soul Intertwining
 - [x] Define forbidden magic
 - [x] Define magical development
 - [x] Define magic's effects on the World Engine
-- [ ] Audit and integrate Phase 7
+- [x] Audit and integrate Phase 7
+
+### Exit Criteria
+
+Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals, Enchanting, Alchemy, Divine Magic, Forbidden Magic, Magical Development, and Magic's World Engine interactions are defined, linked, and internally consistent; every magical effect has an explicit Mana Relation and specialist owner; Mana, Access, Reserve, Capacity, control, affinity, authority, source response, Skill, Development, and recognition remain distinct; present embodiment, current-life effort, source agency, costs, failure, recovery, and counterplay remain consequential; Soul, Soul Weapon, Human, Monster, Skill, Development, and World Engine ownership remain intact; no universal MP, spell slots, spell tiers, caster level, affinity ladder, mandatory magical route, unlimited supply, or universally superior magical path exists; external Profiles and live magical state remain outside the repository; no blocking questions remain; all links and navigation validate; and Phase 8 can accept bounded magical causes without inventing or duplicating Magic rules.
 
 ## Phase 8 — World Engine
 

@@ -192,7 +192,7 @@ They need not imitate human guilds or written schools. A profession may be trans
 
 Magical professions use magic within a sustained practice of judgment, tools, standards, and responsibility. Examples include enchanter, ritual engineer, ward inspector, alchemist, spirit negotiator, magical physician, or mana-infrastructure maintainer.
 
-Magical power does not replace professional practice. The later magic system will define mana, spells, rituals, and affinities; this document governs their use as work.
+Magical power does not replace professional practice. The completed [Magic framework](../magic/README.md) defines Mana, Spells, Rituals, affinities, and other magical mechanisms; this document governs their use as work.
 
 ### Hybrid Professions
 

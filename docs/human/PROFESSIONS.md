@@ -488,7 +488,7 @@ This document delegates the following claims to their specialist rules:
 - wages, prices, markets, taxation, or labor simulation;
 - technical procedures for particular crafts, medicine, law, magic, or other work.
 
-The linked Human rules, the later Magic phase, and the World Engine own those subjects. Profession Profiles may reference them without inventing their rules.
+The linked Human rules, the [Magic framework](../magic/README.md), and the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) own those subjects. Profession Profiles may reference them without inventing their rules.
 
 ## Related Canon
 
