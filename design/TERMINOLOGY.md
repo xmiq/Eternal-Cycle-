@@ -744,6 +744,70 @@ The persistent material, magical, relational, environmental, legal, informationa
 
 A qualitative external Campaign Record describing one Ritual Structure or live Ritual State without converting it into a universal stat block.
 
+## Enchantment
+
+A bounded magical configuration anchored to a Host so that a defined Function can persist, recur, or become available beyond the moment of installation.
+
+## Enchantment Host
+
+The object, structure, site, territory, body, tissue, living system, network, or other substrate to which an Enchantment is causally anchored.
+
+## Enchantment Function
+
+The exact magical operation an Enchantment can perform, support, regulate, sense, prevent, transform, store, communicate, or make available under stated conditions.
+
+## Enchantment Pattern
+
+The organized magical relationships encoded into or around a Host that constrain an Enchantment's Function, source, Interfaces, activation, persistence, and failure.
+
+## Enchantment Anchor
+
+The material, spatial, relational, symbolic, biological, legal, source-bound, or other valid relationship that keeps an Enchantment Pattern attached to its Host.
+
+## Enchantment Interface
+
+A defined route through which a Host, user, source, environment, tool, target, or maintainer can sense, activate, supply, direct, constrain, inspect, repair, or terminate an Enchantment.
+
+## Enchantment Supply
+
+The source and replenishment route that provide the Mana or equivalent magical support required for an Enchantment's current operation.
+
+## Host Compatibility
+
+The purpose-specific ability of a Host to receive, anchor, survive, and express one proposed Enchantment under current material, bodily, magical, environmental, and legal conditions.
+
+## Enchantment Load
+
+The current demand one or more Enchantments place upon a Host, source, Anchor, Interface, environment, user, or maintenance system.
+
+## Enchantment Integrity
+
+The degree to which an Enchantment still preserves the relationships required for its defined Function under wear, change, interference, and repair.
+
+## Enchantment Layer
+
+One independently sourced and adjudicable Enchantment configuration sharing a Host with other material, magical, spiritual, constructed, Soul, or living systems.
+
+## Enchantment Trigger
+
+The event or satisfied condition that causes an Enchantment Function to activate, change state, release a stored process, or permit use.
+
+## Enchantment Maintenance
+
+The work required to preserve or restore an Enchantment's source, Pattern, Anchor, Interfaces, Host condition, calibration, safety, and intended Function.
+
+## Enchantment Drift
+
+A causal change in an Enchantment's Function, Pattern, source relation, Trigger, Interfaces, Integrity, Host relationship, or failure behavior over time.
+
+## Enchantment Residue
+
+Persistent magical, material, informational, environmental, relational, or legal aftermath left when an Enchantment operates, degrades, is altered, or ends.
+
+## Enchantment Profile
+
+A qualitative external Campaign Record describing one Enchantment and its current relationship with its Host without treating it as a universal item stat block.
+
 ## Environmental Compatibility
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.

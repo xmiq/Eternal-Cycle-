@@ -50,7 +50,7 @@ These facts do not form a compulsory ladder. A dormant soul may never awaken. An
 | Whether a current body can hold, move, perceive, or safely use a form | Current embodiment and [Species Development](../progression/SPECIES_DEVELOPMENT.md) |
 | Whether an institution recognizes, teaches, controls access to, or claims ownership over a weapon | [Human Classes and Professions](../human/README.md), society, and world causality |
 | Whether a monster form changes | [Monster Evolution](../monster-evolution/README.md) |
-| Whether a magical effect, enchantment, spirit, or construct exists | Its magical or other source, including the later Magic rules |
+| Whether a magical effect, Enchantment, spirit, or construct exists | Its magical or other source, including [Enchanting](../magic/ENCHANTING.md) |
 | Current custody, location, damage, reputation, relationships, and world consequences | External Campaign Record and the World Engine |
 
 One event may affect several owners. Record each effect once. A Weapon Soul can support a wielder without its capability becoming the wielder's personal Development, and a wielder can develop excellent Skill without changing the Weapon Soul.

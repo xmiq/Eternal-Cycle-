@@ -232,7 +232,7 @@ For each tool, distinguish:
 - cultural recognition;
 - magical or Soul-owned properties.
 
-Weapon quality matters through actual reach, mass, balance, material, durability, edge, ammunition, enchantment, concealment, and maintenance. There is no universal weapon rarity or superiority ladder.
+Weapon quality matters through actual reach, mass, balance, material, durability, edge, ammunition, [Enchantment](../magic/ENCHANTING.md), concealment, and maintenance. There is no universal weapon rarity or superiority ladder.
 
 ### Soul Weapons
 

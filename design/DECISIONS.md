@@ -2433,3 +2433,79 @@ Purpose, preparation, role, coordination, Anchor, Transfer, Load, integrity, Win
 ## D-608 — Ritual Profiles and Residue Remain Causal
 
 Ritual Profiles are qualitative external Campaign Records. Ritual Residue persists through material, magical, ecological, relational, legal, informational, or spiritual causality rather than becoming a universal corruption currency.
+
+## D-609 — Enchantments Are Host-Anchored Configurations
+
+An Enchantment is a bounded magical configuration anchored to a specific Host so one defined Function can persist, recur, or become available beyond installation. Persistence requires an actual Anchor, source, Host continuity, and current law.
+
+## D-610 — Enchantments Are Not Item Statistics
+
+Enchantment Functions retain targets, sources, Interfaces, Supply, Load, maintenance, failure, counterplay, and context. They do not become generic attack, defense, rarity, quality, slot, or power bonuses.
+
+## D-611 — Every Enchantment Requires Purpose-Specific Host Compatibility
+
+Compatibility depends on one proposed Function and the Host's material, bodily, magical, environmental, legal, lifecycle, and personhood conditions. Value, age, fame, sentiment, maker, and exposure do not create universal enchantability.
+
+## D-612 — Enchantment Patterns Are Distinct from Visible Markings
+
+An Enchantment Pattern is the causal magical organization encoded into or around a Host. Runes, materials, gestures, and decoration matter only through their actual Pattern functions, and an impossible effect cannot be made valid by anchoring it.
+
+## D-613 — Anchors Define Enchantment Continuity
+
+Every Enchantment Anchor states what happens under damage, repair, division, movement, transformation, copying, renaming, sale, inheritance, and destruction. Physical continuity and magical continuity may diverge without duplicating the configuration.
+
+## D-614 — Interfaces Grant Bounded Interaction Rather Than Ownership
+
+An Enchantment Interface states who or what can sense, activate, supply, direct, inspect, repair, or terminate one Function under current permissions and failure. Interface access does not transfer ownership of Host, source, or capability.
+
+## D-615 — Enchantment Supply Retains Provenance
+
+Stored, ambient, linked, maintained, living, and self-regulating support retain source rate, renewal, consent, competition, conversion, loss, and consequence. Self-regulation and the word permanent do not establish infinite operation.
+
+## D-616 — Installation Is a Staged Causal Process
+
+Enchanting requires Function definition, Host assessment, source and Supply, Pattern and Interface design, Host preparation, bounded installation, validation, settlement, and maintenance appropriate to the claim. Installation may involve craft, spells, Rituals, or relationships without absorbing their ownership.
+
+## D-617 — Enchantment Layers Remain Separate
+
+Several Layers on one Host retain distinct Functions, Patterns, Anchors, sources, Interfaces, Load, maintenance, and failure. They may coordinate or interfere but do not stack into a total score or fuse through matching labels.
+
+## D-618 — Enchantments Degrade and Drift Causally
+
+Wear, repair, activation, source change, interference, biological growth, environment, and changed law may alter Pattern, Function, Trigger, Interface, integrity, or failure. Drift is not automatic improvement or emerging personhood.
+
+## D-619 — Enchantment Removal Is Not a Universal Dispel
+
+Suppression, Supply disconnection, Interface disabling, Pattern alteration, Anchor removal, physical separation, controlled depletion, and source termination affect different Layers and may leave Host damage, obligations, unstable state, or Residue.
+
+## D-620 — Enchanting Capability Remains Learned and Professional
+
+Design, Host preparation, installation, use, diagnosis, Layer integration, maintenance, repair, validation, and removal are distinct Skills or professional contributions. Enchantment output and item possession do not install those capabilities in users.
+
+## D-621 — Living Hosts Preserve Personhood and Consent
+
+Enchanting a living or person-like Host requires current agency, informed consent, bounded control, maintenance and removal access, health and lifecycle review, and resistance. Ownership, office, care, crisis, law, or prior consent does not create blanket permission.
+
+## D-622 — Enchantments Do Not Become Species or Evolution Automatically
+
+A body-bound or inherited-looking Layer remains an external magical configuration unless an explicit Species, Monster, or Weapon Evolution route performs a separately safeguarded integration. Usefulness, age, dependency, breeding, and repeated operation are insufficient.
+
+## D-623 — Soul Systems Do Not Install Enchantments
+
+Soul Resonance, Echoes, Retained Instincts, Titles, Depth, Avatars, Archive Records, and Reincarnation may support only their established functions. They do not supply Hosts, Patterns, Supply, Layers, tools, source permission, or maintenance.
+
+## D-624 — Enchantments and Weapon Souls Remain Separate Sources
+
+An Enchantment on a Weapon Vessel does not prove, create, speak as, bind, evolve, manifest, command, or transfer a Weapon Soul. After Awakening, material changes affecting the vessel preserve Weapon Soul consent and personhood.
+
+## D-625 — Enchanting Cannot Launder Soul Weapon Source Integration
+
+An external Layer can support a Weapon Evolution Route only while preserving its source, permission, maintenance, counters, and consequences under Source Integration. Repeated use and Soul Intertwining do not make it soul-bound.
+
+## D-626 — Reincarnation Carries No Enchanted Inventory
+
+Enchantments remain with Hosts and sources according to world causality. Eligible knowledge and bounded Skills may persist as Imprints, but equipment, bodily Layers, active Interfaces, Supply, charges, workshops, authority, and Practised Reliability do not follow the soul.
+
+## D-627 — Enchantment Profiles and Live Layers Are External
+
+Enchantment Profiles are qualitative external Campaign Records. Current inventory, active Hosts, hidden Layers, Supply, charges, custody, discovered Triggers, integrity, Drift, and maintenance state do not belong in the canonical repository.

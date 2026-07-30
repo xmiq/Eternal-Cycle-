@@ -619,3 +619,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Solitary, monster, distributed, civic, and nonmagical ceremonies should prevent Ritual canon from becoming synonymous with human religious circles.
 - Collective Capability and institutional continuity must remain external dependencies rather than powers copied into leaders or reincarnated members.
 - Ritual Residue should create useful investigation and world consequences without becoming a universal corruption meter.
+
+## Phase 7 Enchanting Watchlist
+
+- Enchantment Profiles must remain causal records rather than disguised equipment statistics, rarity ladders, or collectible upgrade slots.
+- Layer interaction needs playtests where shared Host structures, Supply, Triggers, maintenance, and Drift create understandable tradeoffs without excessive bookkeeping.
+- Living Hosts and Weapon Souls require strong consent cases covering installation, tracking, alteration, removal, hostile effects, and changing capacity.
+- The boundary among ordinary repair, Pattern repair, re-enchanting, Source Integration, Species Evolution, and Weapon Evolution needs repeated mixed-source tests.
+- Self-regulating and ambient-supply Enchantments must retain renewal, competition, ecology, and failure rather than becoming infinite utilities.
+- Enchantment identification should distinguish fixed response, construct, spirit, Weapon Soul, user Habit, and residue without making every object investigation exhaustive.

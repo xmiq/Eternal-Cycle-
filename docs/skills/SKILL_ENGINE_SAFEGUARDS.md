@@ -134,7 +134,7 @@ Use a relationship record when trust, loyalty, fear, obligation, familiarity, sh
 
 ### Equipment Benefit
 
-Use an equipment record when an item supplies material properties, reach, protection, storage, computation, a prepared interface, or another item-owned function. An enchantment remains magic-owned unless its rules assign a particular property to the item; a Weapon Soul or Soul Weapon effect remains Soul-owned. Skill owns learned use and adaptation. Removing the item removes its contribution unless another valid source replaces it.
+Use an equipment record when an item supplies material properties, reach, protection, storage, computation, a prepared interface, or another item-owned function. An [Enchantment](../magic/ENCHANTING.md) remains Magic-owned through its Host, Function, source, Layers, maintenance, and failure; a Weapon Soul or Soul Weapon effect remains Soul-owned. Skill owns learned use and adaptation. Removing the item removes its contribution unless another valid source replaces it.
 
 ### Soul-System Effect
 

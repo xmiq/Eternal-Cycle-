@@ -455,7 +455,7 @@ Neither statement creates an overall magic rank.
 This document does not define:
 
 - one universal Mana source, Reserve, regeneration rate, Capacity formula, or spell tier; [Mana](../magic/MANA.md) instead defines a qualitative local framework that expressly rejects such universality;
-- complete elements, magic-system taxonomies, spell catalogs, campaign Rituals, enchantment, alchemy, divine magic, or forbidden magic; [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns affinity rules, [Spell Formation](../magic/SPELL_FORMATION.md) owns spell procedures and effects, [Rituals](../magic/RITUALS.md) owns ritual structures, while the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
+- complete elements, magic-system taxonomies, spell catalogs, campaign Rituals, current Enchantments, alchemy, divine magic, or forbidden magic; [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns affinity rules, [Spell Formation](../magic/SPELL_FORMATION.md) owns spell procedures and effects, [Rituals](../magic/RITUALS.md) owns ritual structures, [Enchanting](../magic/ENCHANTING.md) owns Host-anchored magical configurations, while the social teaching frameworks called [Magical Schools](../human/MAGICAL_SCHOOLS.md) remain distinct;
 - exact costs, ranges, damage, casting times, status effects, or counterspell procedures;
 - which gods, spirits, worlds, species, organs, contracts, or tools exist;
 - universal spell circles, caster ranks, rarity labels, or magical threat scores;
@@ -480,7 +480,7 @@ When magical Development or capability matters:
 9. treat rituals, tools, patrons, and groups as explicit support with their own dependencies;
 10. communicate capability for the current objective rather than assigning a universal magic rank;
 11. record Development only for the contribution actually performed and integrated;
-12. apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), and [Rituals](../magic/RITUALS.md), defer later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
+12. apply canonical [Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), and [Enchanting](../magic/ENCHANTING.md), defer later specialist procedures until their roadmap tasks are complete, and use [Magical Schools](../human/MAGICAL_SCHOOLS.md) for social teaching frameworks.
 
 ## Worked Examples
 
@@ -534,6 +534,7 @@ The resulting effect exceeds anything the caster can improvise alone. Its scale 
 - [Magical Affinities](../magic/MAGICAL_AFFINITIES.md)
 - [Spell Formation](../magic/SPELL_FORMATION.md)
 - [Rituals](../magic/RITUALS.md)
+- [Enchanting](../magic/ENCHANTING.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Physical Development](PHYSICAL_DEVELOPMENT.md)
 - [Skill Development](SKILL_DEVELOPMENT.md)

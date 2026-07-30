@@ -38,6 +38,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/magic/MAGICAL_AFFINITIES.md`](docs/magic/MAGICAL_AFFINITIES.md) - target-specific magical compatibility, formation, expression, conflict, and persistence.
 - [`docs/magic/SPELL_FORMATION.md`](docs/magic/SPELL_FORMATION.md) - bounded spell procedures, local grammars, formation lifecycle, costs, failure, counterplay, and persistence.
 - [`docs/magic/RITUALS.md`](docs/magic/RITUALS.md) - prepared magical structures, differentiated roles, substitution, integrity, interruption, and aftermath.
+- [`docs/magic/ENCHANTING.md`](docs/magic/ENCHANTING.md) - host-anchored magical configurations, functions, layers, maintenance, Drift, personhood, and Soul Weapon boundaries.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
@@ -57,4 +58,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana**, **Magical Affinities**, **Spell Formation**, and **Rituals** are complete within **Phase 7 — Magic**, and the sole current task is **Define enchanting**.
+The repository foundation, Soul Engine, Development System, Skill Engine, Monster Evolution, Human Classes & Professions, and Soul Weapons phases are complete. **Mana**, **Magical Affinities**, **Spell Formation**, **Rituals**, and **Enchanting** are complete within **Phase 7 — Magic**, and the sole current task is **Define alchemy**.

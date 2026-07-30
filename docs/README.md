@@ -80,6 +80,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Magical Affinities](magic/MAGICAL_AFFINITIES.md) - target-specific compatibility and responsiveness, including formation, expression, evidence, conflict, change, Reincarnation, and safeguards.
 - [Spell Formation](magic/SPELL_FORMATION.md) - bounded repeatable magical procedures, local grammars, Patterns, targeting, costs, lifecycle, failure, counterplay, and Reincarnation.
 - [Rituals](magic/RITUALS.md) - prepared magical structures, differentiated roles and contributions, sites, sequence, substitution, integrity, interruption, failure, and aftermath.
+- [Enchanting](magic/ENCHANTING.md) - Host-anchored magical configurations, Functions, Patterns, Layers, Supply, maintenance, Drift, failure, personhood, and Soul Weapon boundaries.
 
 ## World Engine
 
