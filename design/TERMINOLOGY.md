@@ -680,6 +680,70 @@ A qualitative external Campaign Record describing one spell procedure or relevan
 
 Understanding of a ritual's symbols, roles, materials, timing, conditions, risks, provenance, and intended function. Ritual Knowledge does not by itself establish reliable performance.
 
+## Ritual
+
+A bounded, prepared procedure that coordinates differentiated dependencies and contributions across a Ritual Structure toward one magical purpose.
+
+## Ritual Purpose
+
+The exact magical objective, affected subjects, exclusions, success conditions, limits, and consequences toward which a Ritual Structure is organized.
+
+## Ritual Structure
+
+The complete causal arrangement of roles, sources, components, site, sequence, timing, authority, transfers, safeguards, and completion conditions that makes a Ritual attempt possible.
+
+## Ritual Role
+
+A bounded contribution, responsibility, authority, or monitoring function assigned to one participant, office, source, tool, collective, or other actor in a Ritual Structure.
+
+## Ritual Contribution
+
+The actual action, resource, authority, information, Skill, embodiment, consent, or support supplied through one Ritual Role.
+
+## Ritual Anchor
+
+A being, object, relationship, location, pattern, office, or other stable reference that keeps one part of a Ritual Structure connected, oriented, or continuous.
+
+## Ritual Site
+
+The physical, magical, relational, jurisdictional, or environmental context prepared or selected for a Ritual.
+
+## Ritual Component
+
+A material, symbol, instrument, pattern, record, substance, body state, offering, or other prepared element with one identified function in the Ritual Structure.
+
+## Ritual Sequence
+
+The required order, dependency graph, synchronization, or state transition through which Ritual Contributions become valid.
+
+## Ritual Window
+
+The bounded time, condition, alignment, lifecycle state, relationship state, source state, or opportunity during which a Ritual or one of its transitions can function.
+
+## Ritual Load
+
+The current demand placed upon participants, sources, Anchors, Channels, components, site, coordination, and safeguards by a Ritual Structure.
+
+## Ritual Integrity
+
+The degree to which the current Ritual Structure still preserves the relationships required for its purpose under change, error, interference, and loss.
+
+## Ritual Transfer
+
+A defined movement of Mana, authority, information, obligation, state, material, attention, or another owned contribution between parts of a Ritual Structure.
+
+## Ritual State
+
+The current phase and condition of a live Ritual attempt, including completed dependencies, active roles, accumulated Load, integrity, interruptions, and unresolved consequences.
+
+## Ritual Residue
+
+The persistent material, magical, relational, environmental, legal, informational, or spiritual aftermath left by a Ritual attempt.
+
+## Ritual Profile
+
+A qualitative external Campaign Record describing one Ritual Structure or live Ritual State without converting it into a universal stat block.
+
 ## Environmental Compatibility
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.

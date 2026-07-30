@@ -610,3 +610,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Species-native and Soul Weapon casting examples must preserve their bodies, interfaces, personhood, and Skills rather than translating everything into human incantations.
 - Reincarnated casters need substantial reconstruction examples across different bodies and Ages so retained procedure knowledge never implies present reliability.
 - Counterplay should attack causal dependencies and aftermath as often as direct magical cancellation so nonmagical preparation remains meaningful.
+
+## Phase 7 Ritual Watchlist
+
+- Ritual adjudication needs to remain usable without tracking every component; profiles should preserve only dependencies that can change decisions or consequences.
+- Large group Rituals need playtests where coordination overhead, withdrawal, partial completion, and reduced-purpose success matter without defaulting to arbitrary collapse.
+- Ritual sacrifice examples must expose source agency and exploitation without implying that cruelty is a privileged or mechanically superior path.
+- Solitary, monster, distributed, civic, and nonmagical ceremonies should prevent Ritual canon from becoming synonymous with human religious circles.
+- Collective Capability and institutional continuity must remain external dependencies rather than powers copied into leaders or reincarnated members.
+- Ritual Residue should create useful investigation and world consequences without becoming a universal corruption meter.

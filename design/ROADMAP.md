@@ -4,9 +4,9 @@
 
 **Current phase: Phase 7 — Magic**
 
-**Current task: Define rituals**
+**Current task: Define enchanting**
 
-Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. **Define mana**, **Define magical affinities**, and **Define spell formation** are complete. Work only on **Define rituals** unless the project owner explicitly changes the target. Do not begin enchanting, alchemy, divine magic, forbidden magic, detailed magical development, or Magic's World Engine effects until rituals are complete unless the project owner explicitly changes the target.
+Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. **Define mana**, **Define magical affinities**, **Define spell formation**, and **Define rituals** are complete. Work only on **Define enchanting** unless the project owner explicitly changes the target. Do not begin alchemy, divine magic, forbidden magic, detailed magical development, or Magic's World Engine effects until enchanting is complete unless the project owner explicitly changes the target.
 
 Phases 1 through 6 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -165,7 +165,7 @@ Phase 6 is complete only when dormant Weapon Souls, Awakening, Soul Intertwining
 - [x] Define mana
 - [x] Define magical affinities
 - [x] Define spell formation
-- [ ] Define rituals
+- [x] Define rituals
 - [ ] Define enchanting
 - [ ] Define alchemy
 - [ ] Define divine magic

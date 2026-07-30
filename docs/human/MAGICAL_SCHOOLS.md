@@ -4,7 +4,7 @@
 
 This document defines the canonical social structure and adjudication of Magical Schools for Phase 5. Read [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md), [Human Classes](CLASSES.md), and [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) first.
 
-This document does not define the complete magic systems of Eternal Cycle. [Mana](../magic/MANA.md) owns the shared natural foundation and causal state of magical change, [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns target-specific compatibility, and [Spell Formation](../magic/SPELL_FORMATION.md) owns bounded spell procedures and local grammars. Later Phase 7 tasks own rituals, enchanting, alchemy, divine magic, forbidden magic, and remaining detailed magical laws. This document defines how societies organize, teach, test, preserve, dispute, and recognize magical practice within whatever local magical systems actually exist.
+This document does not define the complete magic systems of Eternal Cycle. [Mana](../magic/MANA.md) owns the shared natural foundation and causal state of magical change, [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) owns target-specific compatibility, [Spell Formation](../magic/SPELL_FORMATION.md) owns bounded spell procedures and local grammars, and [Rituals](../magic/RITUALS.md) owns prepared magical structures and coordinated contributions. Later Phase 7 tasks own enchanting, alchemy, divine magic, forbidden magic, and remaining detailed magical laws. This document defines how societies organize, teach, test, preserve, dispute, and recognize magical practice within whatever local magical systems actually exist.
 
 ## Core Rule
 
@@ -569,14 +569,14 @@ This document does not define:
 
 - complete element taxonomies;
 - local spell catalogs and campaign-specific procedures;
-- ritual mechanics;
+- campaign Ritual Structures and live Ritual States;
 - enchanting or alchemy;
 - divine or forbidden magic;
 - exact magical costs, ranges, durations, damage, or counters;
 - academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-[Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), and [Spell Formation](../magic/SPELL_FORMATION.md) own their completed Magic frameworks. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md), and later Magic tasks own the remaining subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+[Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), and [Rituals](../magic/RITUALS.md) own their completed Magic frameworks. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md), and later Magic tasks own the remaining subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
 ## Related Canon
 
@@ -585,6 +585,7 @@ This document does not define:
 - [Mana](../magic/MANA.md)
 - [Magical Affinities](../magic/MAGICAL_AFFINITIES.md)
 - [Spell Formation](../magic/SPELL_FORMATION.md)
+- [Rituals](../magic/RITUALS.md)
 - [Human Class Philosophy](HUMAN_CLASS_PHILOSOPHY.md)
 - [Human Classes](CLASSES.md)
 - [Professions](PROFESSIONS.md)

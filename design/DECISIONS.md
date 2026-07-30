@@ -2357,3 +2357,79 @@ Circles, grades, colours, danger classes, licences, catalogs, and spell names se
 ## D-589 — Spell Profiles and Instances Remain External
 
 Spell Profiles are qualitative external Campaign Records. Known spell lists, prepared procedures, active Instances, current sources, discovered counters, local secrets, and changing magical state do not belong in the canonical repository.
+
+## D-590 — Rituals Coordinate Differentiated Dependencies
+
+A magical Ritual is a bounded prepared procedure that coordinates distinct sources, roles, contributions, components, sites, timing, authority, safeguards, and consequences toward one magical purpose. Elaboration or repetition alone does not make an act magical.
+
+## D-591 — Ritual and Spell Ownership Remain Separate
+
+Rituals own coordination among dependencies and contributions, while Spell Formation owns every embedded Spell Pattern and its effect. A Ritual may contain no spell, and a slow or elaborate spell is not automatically a Ritual.
+
+## D-592 — Ritual Purpose Must Be Bounded
+
+A Ritual Purpose identifies its exact magical objective, affected subjects, exclusions, scale, completion, success, partial success, refusal, and consequences. Broad ceremonial intent cannot supply missing world law or target meaning.
+
+## D-593 — Ritual Roles Preserve Contribution Ownership
+
+Every Ritual Role states its actual function, actor, capability, authority, consent, interface, Load, and failure behavior. Leaders and participants do not absorb one another's Skills, Mana, Capacity, Development, or action.
+
+## D-594 — Ritual Participation Preserves Agency
+
+Person-like participants retain independent consent, perspective, withdrawal, resistance, and consequence. Office, ownership, law, summoning, kinship, incapacity, Weapon Soul bonding, collective need, or Ritual language cannot manufacture informed consent.
+
+## D-595 — Ritual Preparation Creates Dependencies
+
+Preparation may supply tested components, calibrated tools, permissions, training, timing, sites, sources, and safeguards, but each remains vulnerable to expiry, damage, change, withdrawal, depletion, and false assumptions. Time alone does not improve readiness.
+
+## D-596 — Ritual State Is Causal and External
+
+A live Ritual State tracks completed dependencies, active roles, Transfers, Load, integrity, interruptions, and unresolved consequences. It belongs in the external Campaign Record rather than canonical rules.
+
+## D-597 — Ritual Integrity Is Layered
+
+Integrity is assessed for the relationships required by one purpose. Loss of one role, source, Anchor, Window, or Transfer may permit pause, substitution, reduced purpose, containment, or partial outcome rather than automatic total failure.
+
+## D-598 — Ritual Substitution Must Name Its Exchange
+
+Rituals may exchange personal output for time, roles, materials, site, infrastructure, authority, coordination, narrower conditions, visibility, or consequence only through valid receiving rules. Effort cannot substitute for absent causality.
+
+## D-599 — Ritual Scale Has Coordination Limits
+
+More participants, Mana, materials, time, complexity, or sacrifice does not ensure a larger result. Throughput, coherence, communication, site, target, authority, containment, termination, ecology, and opposition remain limiting.
+
+## D-600 — Offerings Have No Universal Value
+
+An offering matters only through a receiver or law that can perceive and respond to it. Pain, blood, death, memories, souls, vows, rare objects, and destruction possess no universal conversion value or automatic superiority.
+
+## D-601 — Ritual Authority Has Several Layers
+
+Magical authority, source consent, legal permission, social legitimacy, Ritual office, technical competence, affected-party consent, public recognition, and witness are independent facts. No one layer establishes all others.
+
+## D-602 — Ritual Knowledge and Performance Are Distinct
+
+Procedures, symbols, records, role knowledge, and Magical Imprints do not grant current role Skill, coordination, authority, components, participants, site, or reliability. Development belongs only to contributions meaningfully performed and integrated.
+
+## D-603 — Nonhuman Rituals Use Actual Bodies and Collectives
+
+Monster, species, distributed, spirit, and constructed Rituals use their real senses, bodies, lifecycles, communication, ecology, and stable collective ownership. They are not converted into human ceremonial assumptions.
+
+## D-604 — Soul Systems Do Not Fill Ritual Roles Automatically
+
+Soul Resonance, Echoes, Retained Instincts, Titles, Depth, Constellations, Avatars, and Archive Records may support only their established functions. They do not provide extra participants, consent, Mana, authority, sites, actions, or complete Ritual capability.
+
+## D-605 — Weapon Souls Are Ritual Participants Rather Than Owned Components
+
+A Weapon Soul may consent to a Role, Anchor function, interface, negotiation, or other contribution under current capability and form. A Ritual cannot suspend its personhood or bypass Awakening, Bond, Evolution, Manifestation, passage, and consent rules.
+
+## D-606 — Reincarnation Preserves Ritual Reconstruction Inputs
+
+Eligible Ritual Knowledge and bounded role Skills may persist as Imprints, while active state, Load, sites, participants, components, institutions, offices, authority, sources, and Practised Reliability do not. Old procedures must be revalidated and may yield successors rather than continuity.
+
+## D-607 — Ritual Failure Names the Broken Relationship
+
+Purpose, preparation, role, coordination, Anchor, Transfer, Load, integrity, Window, and completion failures retain distinct causes and remedies. Failure may create residue and consequences without awarding progress through harm or repetition.
+
+## D-608 — Ritual Profiles and Residue Remain Causal
+
+Ritual Profiles are qualitative external Campaign Records. Ritual Residue persists through material, magical, ecological, relational, legal, informational, or spiritual causality rather than becoming a universal corruption currency.

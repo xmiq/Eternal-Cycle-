@@ -79,6 +79,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Mana](magic/MANA.md) - the local, causal, world-side capacity and medium of magical change, including sources, state, flow, storage, conversion, embodiment, ecology, persistence, and safeguards.
 - [Magical Affinities](magic/MAGICAL_AFFINITIES.md) - target-specific compatibility and responsiveness, including formation, expression, evidence, conflict, change, Reincarnation, and safeguards.
 - [Spell Formation](magic/SPELL_FORMATION.md) - bounded repeatable magical procedures, local grammars, Patterns, targeting, costs, lifecycle, failure, counterplay, and Reincarnation.
+- [Rituals](magic/RITUALS.md) - prepared magical structures, differentiated roles and contributions, sites, sequence, substitution, integrity, interruption, failure, and aftermath.
 
 ## World Engine
 

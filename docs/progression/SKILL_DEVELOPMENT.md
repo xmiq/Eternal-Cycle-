@@ -554,7 +554,7 @@ Hearing an echo once does not grant spatial mastery. A later body with ordinary 
 
 ### Ritual Casting
 
-Ritual casting may coordinate notation, materials, timing, magical control, participant roles, error detection, and recovery. Knowing the words is not the Composite Skill, and one successful scripted ritual does not establish reliability.
+Ritual casting may coordinate notation, materials, timing, magical control, participant roles, error detection, and recovery under the canonical [Rituals](../magic/RITUALS.md) framework. Knowing the words is not the Composite Skill, and one successful scripted Ritual does not establish reliability or grant the whole group's capability.
 
 Changed magical laws, missing materials, or an incompatible body may leave the retained Skill historically clear but currently unusable.
 
