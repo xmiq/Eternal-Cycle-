@@ -23,7 +23,7 @@ A class claim often sits beside several related facts. Adjudication must keep th
 | Present capability | What can this person actually do now? | [Skills](../skills/README.md) and [Development](../progression/README.md) |
 | Learning framework | Through what organized language, method, and tradition is the expertise taught? | Human Class rules |
 | Professional responsibility | What work, duty, and standard is the person expected to perform? | [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) and later Phase 5 Profession rules |
-| Institutional access | Which people, places, materials, offices, and permissions are available? | Later Phase 5 Institution rules and current world causality |
+| Institutional access | Which people, places, materials, offices, and permissions are available? | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) and current world causality |
 | World recognition | What does a particular society believe, acknowledge, or expect? | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and later Phase 5 recognition rules |
 | Personal identification | Which traditions, names, and communities does the person accept as part of the current self? | Character agency and campaign state |
 
@@ -293,11 +293,11 @@ This philosophy intentionally does not define:
 - the detailed relationship between class frameworks and Professions;
 - martial traditions or magical schools;
 - social advancement procedures;
-- institutions, academies, and their governance;
+- institution and academy rules defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class change, synthesis, decline, or succession;
 - the final limits of human progression.
 
-Those subjects belong to later Phase 5 roadmap tasks. Every later rule must preserve the distinctions and safeguards established here.
+Those subjects belong to their linked Phase 5 owners or the remaining roadmap tasks. Every extending rule must preserve the distinctions and safeguards established here.
 
 ## Related Canon
 

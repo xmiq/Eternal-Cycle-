@@ -24,7 +24,7 @@ These terms must remain distinct.
 | --- | --- | --- |
 | **Magic system** | The actual sources, laws, access routes, costs, limits, interactions, and failure states through which magic functions. | Phase 7 and established world canon |
 | **Magical School** | A class framework through which a society models, teaches, tests, interprets, and recognizes some magical practice. | This document |
-| **Magical Academy** | An institution that organizes people, facilities, records, resources, admission, and governance around learning. | Later Phase 5 institution rules |
+| **Magical Academy** | An institution that organizes people, facilities, records, resources, admission, and governance around learning. | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) |
 | **Magical Skill** | A learned capability used to perceive, control, construct, perform, or respond to magic. | [Skill Engine](../skills/README.md) |
 | **Magical Development** | Change in bounded magical perception, access, regulation, capacity, reliability, and judgment. | [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) |
 | **Magical Profession** | Integrated magical work, standards, service relationships, responsibility, and accountability. | [Professions](PROFESSIONS.md) and [Profession Development](../progression/PROFESSION_DEVELOPMENT.md) |
@@ -372,7 +372,7 @@ For each relationship, identify:
 
 An academy can provide facilities, peers, records, tools, sources, and review. Those are causal advantages, not proof that every graduate is capable or every outsider unsafe.
 
-Detailed academy governance belongs to the later Phase 5 Institutions and Academies task.
+Detailed academy governance is defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md).
 
 ## Cross-Species and Monster Schools
 
@@ -574,10 +574,10 @@ This document does not define:
 - enchanting or alchemy;
 - divine or forbidden magic;
 - exact magical costs, ranges, durations, damage, or counters;
-- academy governance, funding, admission, property, or discipline;
+- academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - final limits of human progression.
 
-Phase 7 and later Phase 5 tasks own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+[Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), Phase 7, and the remaining Phase 5 tasks own those subjects. Any provisional magical ruling must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
 ## Related Canon
 

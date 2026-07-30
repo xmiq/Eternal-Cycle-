@@ -10,6 +10,7 @@ This section defines how human societies organize, teach, preserve, apply, and r
 4. [Martial Traditions](MARTIAL_TRADITIONS.md) - doctrine, Training Ecology, Pressure Practice, use of force, equipment relationships, matchups, counterplay, and adjudication.
 5. [Magical Schools](MAGICAL_SCHOOLS.md) - social models of magic, epistemology, curricula, Access boundaries, verification, safety, interoperability, and adjudication.
 6. [Social Advancement](SOCIAL_ADVANCEMENT.md) - multidimensional Social Position, Advancement Routes, opportunities, portability, gatekeeping, decline, agency, and adjudication.
+7. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) - durable organization, governance, offices, authority, collective capability, institutional memory, academies, continuity, and adjudication.
 
 Later Phase 5 documents extend this foundation in roadmap order. A later document may add playable detail, but it may not turn a class label, profession, rank, credential, or institutional membership into automatic capability.
 
@@ -19,7 +20,7 @@ Later Phase 5 documents extend this foundation in roadmap order. A later documen
 - **Development** describes how capability and reliability change.
 - **Human Classes** describe socially situated frameworks for understanding and transmitting expertise.
 - **Professions** describe organized work, responsibility, and social function.
-- **Institutions** organize people, resources, standards, and access.
+- **Institutions** organize people, roles, procedures, resources, authority, records, and access.
 - **Recognition** describes what a society believes or acknowledges; it is not proof of capability.
 
 These facts may support one another, but none silently grants another.

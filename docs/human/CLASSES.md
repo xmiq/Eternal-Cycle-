@@ -304,7 +304,7 @@ An institution can preserve and police a class, but membership in that instituti
 - hold legal control over a class name without controlling all relevant knowledge;
 - collapse while the class survives elsewhere.
 
-Detailed Profession and institution procedures belong to later Phase 5 documents.
+Detailed Profession rules are defined in [Professions](PROFESSIONS.md), while organization and governance are defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md).
 
 ## Interactions With Monster Societies
 
@@ -413,11 +413,11 @@ This document does not fully define:
 - martial-tradition procedures;
 - magical-school procedures;
 - social advancement;
-- institutional and academy governance;
+- institution and academy governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation, merger, fracture, and succession;
 - final limits on human progression.
 
-Those remain later Phase 5 tasks. Class Profiles may point toward them without deciding their rules.
+Those subjects belong to their dedicated Phase 5 owners or the remaining roadmap tasks. Class Profiles may reference them without deciding their rules.
 
 ## Related Canon
 

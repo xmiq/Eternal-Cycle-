@@ -25,7 +25,7 @@ Social Development is change in a person's capability. Social Advancement is cha
 | **Social or leadership capability** | improved negotiation, teaching, delegation, or cultural judgment | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) |
 | **Class recognition** | accepted as a teacher by one Martial Tradition | [Human Classes](CLASSES.md) and the relevant tradition |
 | **Professional standing** | licensed for one scope of practice | [Professions](PROFESSIONS.md) |
-| **Institutional position** | admitted, employed, elected, appointed, or removed | Later Phase 5 institution rules |
+| **Institutional position** | admitted, employed, elected, appointed, or removed | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) |
 | **Public Reputation** | believed heroic by one city and criminal by another | Current audiences and world causality |
 | **Relationship Strength** | trusted by one colleague after shared work | The participating people and their history |
 | **Formal Authority** | permitted to command one unit or sign one kind of record | The current office, law, contract, or institution |
@@ -362,7 +362,7 @@ A change in Professional Role, scope, credential, licence, clientele, responsibi
 
 Admission, membership, employment, committee role, office, tenure, command, or governance position depends on the institution's actual procedures and power. It creates only the access, resources, authority, and duties that structure can sustain.
 
-Detailed institution and academy rules belong to the next Phase 5 task.
+Detailed institution and academy rules are defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md).
 
 ## Monster and Mixed-Society Advancement
 
@@ -541,7 +541,7 @@ Refusing or leaving a position may cause believable social consequences. The GM 
 
 This document does not fully define:
 
-- institution and academy governance;
+- institution and academy governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - elections, succession, inheritance, property, law, wages, prices, or taxation;
 - faction and political simulation;
 - exact reputational spread procedures;
@@ -550,7 +550,7 @@ This document does not fully define:
 - class transformation;
 - final limits of human progression.
 
-Those remain with later Phase 5 and World Engine tasks. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.
+Those remain with [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md), the remaining Phase 5 tasks, and World Engine tasks. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.
 
 ## Related Canon
 

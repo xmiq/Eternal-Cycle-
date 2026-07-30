@@ -1591,3 +1591,35 @@ A current chance to pursue, accept, negotiate, refuse, or reshape a Social Posit
 ## Status Portability Claim
 
 A scoped claim that one audience should recognize some part of a Social Position established elsewhere for one stated purpose. It does not establish universal status equivalence.
+
+## Institution Profile
+
+A scoped record of an Institution's current identity, purposes, participants, roles, governance, authority, resources, Collective Capabilities, procedures, knowledge, relationships, legitimacy, accountability, continuity, and function-specific condition.
+
+## Academy
+
+An Institution whose sustained purposes substantially include organized learning, inquiry, assessment, preservation, translation, or transmission of knowledge and practice. An Academy is not a Human Class, Magical School, building, or capability package.
+
+## Academy Profile
+
+An Institution Profile extended with learning remit, hosted frameworks, admission, teaching roles, learning routes, practice conditions, assessment, research, learner rights and duties, and obligations to affected parties.
+
+## Institutional Office
+
+A defined institutional role carrying current responsibilities, permissions, limits, selection and succession procedures, and accountability. An Office does not grant personal capability or authority beyond its actual source and scope.
+
+## Institutional Action Claim
+
+A scoped assertion that an Institution decided, knew, promised, authorized, prohibited, certified, taught, owned, owed, or performed something through particular agents, authority, procedure, information, resources, and coordination.
+
+## Institutional Capacity
+
+An Institution's current ability to sustain one stated function under named conditions through actual people, procedures, resources, authority, relationships, infrastructure, and dependencies. It is not a universal institution score.
+
+## Institutional Memory
+
+The world-bound continuity of information, interpretation, procedure, relationships, habits, and lessons preserved through an Institution's people, practices, records, media, infrastructure, and consenting source persons. It remains distributed, accessible only through real routes, and fallible.
+
+## Institutional Capture
+
+A condition in which a person, Office, faction, patron, external power, or narrow interest controls enough decision routes, resources, records, or enforcement to redirect institutional action away from its stated or previously maintained purposes.

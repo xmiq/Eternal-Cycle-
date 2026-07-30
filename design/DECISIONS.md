@@ -1613,3 +1613,55 @@ Promotion, title, office, inheritance, patronage, expectation, oath, debt, or re
 ## D-403 — Reincarnation Preserves No Social Position
 
 Former roles, memberships, offices, licences, property, citizenship, reputation, audiences, followers, patrons, clients, rights, obligations, legitimacy, and authority remain world-bound. Soul continuity may provide learning, evidence, or symbolic pressure but no automatic restoration.
+
+## D-404 — Institutions Require Durable Current Coordination
+
+An Institution is a durable social arrangement coordinating roles, authority, knowledge, resources, procedures, and expectations beyond one immediate relationship. A name, group, building, founder, charter, legal shell, or historical claim alone does not establish an operating Institution.
+
+## D-405 — Academies Are Institutions Rather Than Classes
+
+An Academy is an Institution substantially organized around learning, inquiry, assessment, preservation, translation, or transmission. It may host many Classes, Professions, Martial Traditions, and Magical Schools without becoming any of them or granting their capabilities.
+
+## D-406 — Institutional Action Requires Actual Agents and Routes
+
+A claim that an Institution decided, knew, authorized, promised, certified, taught, owned, owed, or acted must identify the relevant version, agents, authority, procedure, information, resources, communication, dissent, and actual result. A leader, seal, title, majority, or founder does not speak for every purpose automatically.
+
+## D-407 — Institutional Capacity Is Function-Specific
+
+Institutional Capacity is assessed separately for one function through actual contributors, coordination, procedures, infrastructure, resources, authority, consent, maintenance, and dependencies. Prestige, wealth, age, membership, and strength in one function do not create a universal institution level or repair another function.
+
+## D-408 — Collective Capability Does Not Become Personal Capability
+
+An Institution may perform a Collective Capability no participant possesses alone, but the result remains owned by its actual coordination. It is not copied to a leader or every member and remains limited by throughput, communication, resources, sites, timing, maintenance, and failure points.
+
+## D-409 — Institutional Offices Are Scoped Relationships
+
+An Institutional Office carries only the current duties, permissions, limits, procedures, and accountability supplied by its actual source. Selection, appointment, inheritance, election, ritual, conquest, or title does not grant personal Skills, Development, competence, legitimacy to every audience, or authority over the whole Institution.
+
+## D-410 — Admission, Graduation, and Credentials Do Not Install Capability
+
+Academies provide access to teaching, practice, feedback, people, records, tools, and assessment. Admission, attendance, rank, graduation, credentials, years enrolled, fees, obedience, examinations, and institutional prestige neither create capability nor replace present-life Development.
+
+## D-411 — Institutional Memory Is Distributed and Fallible
+
+Institutional Memory persists through current people, practices, records, media, infrastructure, relationships, and consenting source persons. No member knows it all, records are not automatically accessible, and preserved information may be incomplete, forged, obsolete, censored, or misunderstood.
+
+## D-412 — Authority, Legitimacy, Enforcement, and Truth Remain Distinct
+
+An Institution may hold formal authority, cultural legitimacy, practical enforcement, reputation, or factual expertise in different scopes. None proves the others, and institutional doctrine, records, assessment, or law do not become world truth merely through recognition or power.
+
+## D-413 — Institutions Do Not Erase Member or Source Agency
+
+Institutions are not collective persons by default. Members may disagree, comply conditionally, resist, reform, defect, or leave where causally possible, while gods, spirits, Soul Weapons, intelligent constructs, monsters, distributed persons, and other agents retain consent and personhood despite institutional classification.
+
+## D-414 — Institutional Continuity Is Component-Based
+
+Continuity through turnover, migration, merger, division, suppression, dormancy, reconstruction, or collapse depends on actual purposes, participants, procedures, authority, knowledge, resources, obligations, succession, and audience recognition. Shared names, buildings, charters, relics, founders, or records are evidence rather than decisive proof.
+
+## D-415 — Monster and Mixed Institutions Need No Human Form
+
+Institutions and Academies may use nonhuman bodies, senses, lifecycles, communication, territory, media, cognition, or governance. Writing, buildings, money, human speech, permanent individual membership, and human lifespans are not validity requirements, but action ownership, coordination, continuity, and agency remain explicit.
+
+## D-416 — Reincarnation Preserves No Institutional Standing
+
+Reincarnation does not preserve membership, Institutional Office, employment, vote, credential, licence, property, authority, access, debt, obligation, reputation, or legal identity. Retained capability and memory may support re-entry only through present embodiment, evidence, relationships, procedures, and institutional choice.

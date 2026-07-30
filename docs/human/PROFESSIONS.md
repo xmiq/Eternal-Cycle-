@@ -26,7 +26,7 @@ The distinction is deliberate:
 | What socially recognizable field of work exists, and how is it organized? | This document |
 | Through what culturally situated framework is relevant expertise taught and interpreted? | [Human Classes](CLASSES.md) |
 | What individual capabilities are actually present? | [Skill Engine](../skills/README.md) |
-| What organization controls people, resources, procedures, or access? | Later Phase 5 institution rules |
+| What organization controls people, resources, procedures, or access? | [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) |
 | What authority, reputation, relationship, or legitimacy exists? | [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) and current world causality |
 
 A Profession Profile may reference every adjacent fact, but it cannot grant or silently redefine them.
@@ -317,7 +317,7 @@ Reconstruction needs present beneficiaries, methods, standards, materials, testi
 
 A Profession may survive the collapse of a guild, academy, temple, state, or company through independent practitioners, communities, records, successor institutions, or migration. Conversely, an institution may retain a professional title after losing the capability needed to perform the work safely.
 
-Detailed institutional continuity belongs to the later Phase 5 Institutions and Academies task.
+Detailed institutional continuity is defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md).
 
 ## Reincarnation and Soul Interactions
 
@@ -482,13 +482,13 @@ This document does not fully define:
 - martial traditions;
 - magical schools;
 - social advancement and status mobility;
-- institutions, guilds, academies, licensing bodies, or their governance;
+- institutions, guilds, academies, licensing bodies, and governance defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - class transformation and succession;
 - final limits of human progression;
 - wages, prices, markets, taxation, or labor simulation;
 - technical procedures for particular crafts, medicine, law, magic, or other work.
 
-Those subjects remain with later Phase 5, Phase 7, and World Engine tasks. Profession Profiles may reference them without inventing their rules.
+Those subjects remain with their linked owners, the remaining Phase 5 tasks, Phase 7, and World Engine tasks. Profession Profiles may reference them without inventing their rules.
 
 ## Related Canon
 

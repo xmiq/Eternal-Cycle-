@@ -413,3 +413,14 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Status Portability Claims should support migration and cross-cultural play without making titles, licences, and offices universally interchangeable.
 - Refusal, resignation, and lateral movement need genuine consequences without being framed as failed progression or punished with unrelated harm.
 - Soul Titles, Archive evidence, and reincarnated identities can create powerful opportunities and crises but must not restore office, relationships, property, or consent automatically.
+
+## Phase 5 Institutions-and-Academies Watchlist
+
+- Institution Profiles should remain function-specific records rather than exhaustive bureaucratic simulations or substitutes for external campaign state.
+- Institutional Action Claims need enough agent, authority, information, and procedure detail to preserve causality without requiring every routine decision to be simulated.
+- Institutional Capacity must stay plural and conditional; prestige, wealth, age, and membership are especially likely to collapse into an accidental organization score.
+- Academy rules should support practical advantages from teachers, peers, records, tools, and facilities without implying that attendance or graduation installs Development.
+- Institutional Memory needs playtest attention around distributed access, missing context, obsolete records, and the mistaken assumption that one member knows everything the Institution recorded.
+- Capture, reform, and accountability should identify actual decision routes and dependencies without treating every member as equally culpable or every institution as one moral actor.
+- Monster and mixed Institutions need explicit action ownership and accommodation while avoiding human buildings, writing, money, hierarchy, and lifespan as defaults.
+- Reincarnated founders and famous Soul Title bearers can create powerful legitimacy conflicts without automatically regaining property, office, membership, or authority.
