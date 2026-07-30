@@ -329,7 +329,7 @@ It may influence:
 
 Drawing Mana can affect other users and ecological functions. Protecting a source can also preserve harmful dependencies or unequal control. Mana abundance does not guarantee a healthy ecology, and depletion does not imply that every nonmagical organism fails.
 
-Detailed population, resource, economy, migration, faction, and long-timescale simulation belongs to the later World Engine tasks. This document establishes only that Mana changes must enter world causality and cannot be reset after a scene for convenience.
+[Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md) defines the causal handoff for these changes. Detailed population, resource, economy, migration, faction, and long-timescale simulation remains owned by Phase 8. Mana changes enter world causality and cannot be reset after a scene for convenience.
 
 ## Souls and Reincarnation
 

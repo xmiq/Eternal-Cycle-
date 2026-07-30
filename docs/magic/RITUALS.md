@@ -530,7 +530,7 @@ Ritual preparation and performance can affect:
 
 Consequences persist through ordinary world causality. Annual ceremonies do not reset ecological cost, and interrupted Rituals do not vanish from history.
 
-Detailed variable simulation remains owned by the later World Engine task.
+[Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md) defines the causal handoff for these consequences. Detailed variable simulation remains owned by Phase 8.
 
 ## Failure
 

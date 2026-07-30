@@ -2769,3 +2769,55 @@ Teaching, observation, instruments, automated devices, groups, institutions, pat
 ## D-692 — Soul Weapon Co-Practice Preserves Separate Development
 
 A Weapon Soul, Bonded Soul, vessel, source, Enchantment, and outside participant may each change through shared magical practice, but each retains separate evidence, capability, agency, and ownership. Cooperation does not copy one participant's Development into another or turn relationship quality into generic magic mastery.
+
+## D-693 — Magic Enters World Simulation Through Bounded Claims
+
+Every magical world effect begins with an established specialist Magic claim and enters ordinary causality through a stated direct change, footprint, affected scope, responses, time behavior, persistence, evidence, and uncertainty. Magic does not bypass World Engine causality through scale, mystery, divinity, antiquity, prohibition, or narrative importance.
+
+## D-694 — Direct Magical Change Precedes World Inference
+
+Adjudication must state what an established magical cause changes before inferring population, resource, ecological, economic, factional, military, medical, technological, cultural, or stability consequences. A direct effect does not predetermine its downstream outcome.
+
+## D-695 — Magical Scale Requires Adoption
+
+One working procedure, prodigy, artifact, Miracle, Recipe, Weapon Soul, or demonstration does not establish a scalable world system. Repeated use requires actual Access, sources, bodies, Skills, Development, supply, teaching, infrastructure, maintenance, authority, distribution, trust, and failure response appropriate to the claim.
+
+## D-696 — Magical Infrastructure Is World-Bound
+
+Magical Infrastructure is a collective arrangement of sources, sites, tools, procedures, institutions, roles, records, and ordinary support. It is not personal capability, Reincarnation inventory, a free extension of one leader, or automatically permanent and self-maintaining.
+
+## D-697 — Magical Dependencies, Externalities, and Legacies Persist
+
+Magic may create dependencies, displaced burdens, unequal benefits, externalities, lock-in, residue, obligations, and other Legacy Conditions. Stopping the active effect does not erase them or restore the prior world without an actual recovery route.
+
+## D-698 — Magic-World Consequences Preserve Distribution and Agency
+
+World adjudication identifies who benefits, controls, supplies, pays, is excluded, bears risk, and can respond. Sources, communities, institutions, populations, and ecosystems respond from their own conditions, while gods, spirits, Weapon Souls, and other persons retain information, goals, consent, refusal, and action rather than becoming resources in an aggregate result.
+
+## D-699 — World Responses Return Through Existing Owners
+
+World Engine consequences may alter sources, environments, access, demand, institutions, ecology, and future practice. Those changed conditions feed back through the relevant specialist rules and cannot retroactively manufacture a magical source, capability, affinity, Skill, Evolution, Soul effect, or Weapon Function.
+
+## D-700 — Magic Does Not Directly Set World Stability
+
+Magic may stabilize, destabilize, or reorganize conditions only through documented causal effects. No spell, Ritual, artifact, Divine Source, Soul, sacrifice, death, or quantity of Mana automatically adds or removes World Stability.
+
+## D-701 — World Resets Require Magic-World Revalidation
+
+An Age transition or World Reset revalidates sources, laws, affinities, Patterns, sites, Hosts, Reagents, Divine relationships, restrictions, infrastructure, ecology, and knowledge under the new world. It is neither a universal purge nor a free restoration, and Soul-carried history does not preserve world-bound state.
+
+## D-702 — Weapon Souls Enter World Simulation as Persons
+
+A Weapon Soul may become a consequential world actor through consent, refusal, alliance, testimony, source relations, bounded Functions, and public response. It cannot be copied into scalable infrastructure, compelled by ownership, treated as transferable technology, or stripped of its current agency and dependencies.
+
+## D-703 — Restriction Effects and Magical Hazards Remain Separate
+
+Restriction can change access, secrecy, enforcement, research, displacement, markets, stigma, and political response without automatically changing the underlying magical hazard. Permission and prohibition both enter world causality through their actual effects and affected parties.
+
+## D-704 — Magic-World Profiles Are External
+
+Magic-World Profiles are qualitative external Campaign Records. Named current sources, sites, populations, infrastructure, laws, prices, factions, wars, diseases, divine relationships, incidents, and changing world values do not belong in the canonical repository.
+
+## D-705 — World Simulation Cannot Manufacture Magic
+
+The World Engine receives established magical facts and simulates their consequences. A desired social, ecological, political, or dramatic outcome cannot be used to invent a prohibited effect, erase a source limit, waive embodiment, transfer another system's capability, or override completed Magic safeguards.

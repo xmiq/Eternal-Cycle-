@@ -1652,6 +1652,50 @@ The immediate period in which an awakened Weapon Soul and surrounding participan
 
 The rules and procedures that model causal interaction among populations, resources, ecosystems, factions, institutions, magic, technology, and disasters.
 
+## Magic-World Claim
+
+A bounded causal claim connecting one established magical change to possible world consequences under a stated place, population, timescale, resolution, evidence base, and uncertainty.
+
+## Magic-World Profile
+
+A qualitative external Campaign Record for one Magic-World Claim, including its cause, direct effects, footprint, distribution, dependencies, responses, delays, feedback, persistence, recovery, evidence, and uncertainty.
+
+## Magical Footprint
+
+The complete set of inputs, routes, sites, labor, authority, maintenance, traces, burdens, waste, obligations, and affected relationships required or left by a bounded magical arrangement.
+
+## Magical Dependency
+
+A condition in which a world function relies on continued magical supply, access, relationship, infrastructure, knowledge, labor, permission, or maintenance.
+
+## Magical Infrastructure
+
+A durable world-bound arrangement of sources, sites, tools, Enchantments, Ritual Structures, Alchemical Processes, institutions, trained roles, records, and ordinary material support used to provide a magical function.
+
+## Magical Adoption
+
+The causal process through which a magical practice or service becomes repeated, distributed, taught, supplied, trusted, governed, and integrated into ordinary activity.
+
+## Magical Displacement
+
+A shift of activity, cost, risk, labor, extraction, pollution, conflict, or dependence from one being, group, place, method, or time to another rather than a true removal of that burden.
+
+## Magical Lock-In
+
+A condition in which sustained reliance on a magical arrangement weakens alternatives, concentrates expertise or authority, raises switching costs, or makes disruption unusually consequential.
+
+## Magical Externality
+
+A benefit, burden, risk, trace, obligation, or lasting change borne by beings, places, sources, or future participants outside the actors who chose the magical action.
+
+## Recovery Horizon
+
+The qualitative sequence of conditions, actions, and time required for an affected world function to recover, reorganize, or reach a different viable state. It is not a universal countdown.
+
+## Magical Legacy Condition
+
+A world-bound effect that remains after the active magical operation ends, such as altered ecology, residue, infrastructure, law, debt, knowledge, dependency, damaged trust, changed habitat, or an ongoing source relationship.
+
 ## Monster Ecology
 
 The causal network connecting monsters with habitats, resources, other beings, magic, Soul phenomena, reproduction, disease, waste, disturbance, and environmental change.

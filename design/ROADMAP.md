@@ -4,9 +4,9 @@
 
 **Current phase: Phase 7 — Magic**
 
-**Current task: Define magic's effects on the World Engine**
+**Current task: Audit and integrate Phase 7**
 
-Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. The specialist Magic frameworks and **Define magical development** are complete. Work only on **Define magic's effects on the World Engine** unless the project owner explicitly changes the target. Do not begin Phase 8 implementation until Phase 7 is complete and audited.
+Phase 6 is complete and reviewed. Codex must not reopen it unless Phase 7 reveals a direct documented contradiction that cannot be resolved within the current task. Every substantive Phase 7 Magic framework, including Magical Development and Magic's World Engine interactions, is complete. Work only on **Audit and integrate Phase 7** unless the project owner explicitly changes the target. Do not begin Phase 8 implementation until this audit is complete.
 
 Phases 1 through 6 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -171,7 +171,8 @@ Phase 6 is complete only when dormant Weapon Souls, Awakening, Soul Intertwining
 - [x] Define divine magic
 - [x] Define forbidden magic
 - [x] Define magical development
-- [ ] Define magic's effects on the World Engine
+- [x] Define magic's effects on the World Engine
+- [ ] Audit and integrate Phase 7
 
 ## Phase 8 — World Engine
 

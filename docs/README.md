@@ -85,6 +85,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Alchemy](magic/ALCHEMY.md) - controlled magical material processes, Reagents and provenance, Recipes, Batches, Yield, application, toxicity, ecology, failure, and anti-copying safeguards.
 - [Divine Magic](magic/DIVINE_MAGIC.md) - Divine Sources, Domains, Jurisdictions, relationships, Access, Mandates, Covenants, petitions, blessings, miracles, agency, failure, and safeguards.
 - [Forbidden Magic](magic/FORBIDDEN_MAGIC.md) - scoped restrictions, underlying mechanics, hazards, protected interests, authority, controlled practice, knowledge, research, enforcement, review, and safeguards.
+- [Magic and the World Engine](magic/WORLD_ENGINE_INTERACTIONS.md) - the causal handoff from established magical effects to adoption, infrastructure, distribution, domain consequences, feedback, persistence, and recovery without implementing live world state.
 
 ## World Engine
 

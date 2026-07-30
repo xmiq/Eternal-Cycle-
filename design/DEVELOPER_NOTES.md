@@ -664,3 +664,13 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Transfer findings need playtests across bodies, species, sources, worlds, and Ages so direct continuation, adaptation, analogy, and inaccessibility remain meaningfully distinct.
 - Tools, institutions, favorable Mana, Divine Sources, collaborators, and automation should remain visible dependencies rather than becoming hidden personal Development.
 - Soul Weapon co-practice must preserve separate personhood, action, source, Skill, and Development evidence for every participant.
+
+## Phase 7 Magic-World-Interaction Watchlist
+
+- Magic-World Profiles must remain concise external causal records rather than becoming a second World Engine, a campaign database, or universal impact scores.
+- Playtests should distinguish a magical direct effect from demographic, economic, ecological, political, and cultural inferences that require response and time.
+- Adoption and infrastructure need examples where training, ordinary labor, source agency, maintenance, distribution, and alternatives matter without excessive bookkeeping.
+- Dependency, displacement, externality, lock-in, and legacy should produce decisions without making all magical infrastructure inherently harmful or brittle.
+- Regional and Epochal aggregation must preserve unequal distribution, bottlenecks, rare failures, source refusal, and affected minorities that averages would hide.
+- World Reset tests should produce failure, Drift, survival, and novel compatibility according to each owner rather than applying one global magic switch.
+- Phase 8 must accept Magic-World Claims as inputs without duplicating specialist Magic rules or converting Mana into a universal world-state currency.

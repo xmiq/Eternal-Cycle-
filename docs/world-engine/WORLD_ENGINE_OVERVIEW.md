@@ -36,3 +36,7 @@ The GM uses only as much detail as play requires:
 - **Epochal:** decades to centuries, for Ages and civilizational change.
 
 The engine should produce playable consequences, not unnecessary bookkeeping.
+
+## Magic Interface
+
+[Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) defines how an established magical cause enters this framework through direct effects, footprint, distribution, responses, delays, feedback, persistence, and recovery. It does not pre-empt the detailed World Engine domain rules scheduled for Phase 8.
