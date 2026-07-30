@@ -444,6 +444,7 @@ The result preserves consequences and current identity. Further recovery, adapta
 - [Profession Development](PROFESSION_DEVELOPMENT.md)
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
+- [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

@@ -110,7 +110,7 @@ Using reinforcement can create Physical Development only where the body itself p
 
 Stat XP preserves developmental familiarity as Persistent Potential. It is not a direct statistic, body template, starting value, universal physical currency, or proof of current competence.
 
-The dedicated Stat XP document will define its categories and transfer model. This document owns only the rule that physical redevelopment must occur through the current body.
+[Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md) defines its domains, compatibility, transfer loss, access, acceleration, and safeguards. This document owns the rule that physical redevelopment must occur through the current body.
 
 ## Physical Dimensions
 
@@ -554,6 +554,7 @@ The monster remains stronger. The humans become favored for the extraction objec
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
+- [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

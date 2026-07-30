@@ -579,6 +579,7 @@ Only then may the receiving Skill and magic systems recognize a distinct Adaptiv
 - [Magical Development](MAGICAL_DEVELOPMENT.md)
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Species Development](SPECIES_DEVELOPMENT.md)
+- [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Fundamentals](../soul/SOUL_FUNDAMENTALS.md)
 - [Soul Depth](../soul/SOUL_DEPTH.md)

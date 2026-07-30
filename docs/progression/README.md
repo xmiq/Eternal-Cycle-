@@ -11,7 +11,8 @@ This section contains the canonical rules for multidimensional character develop
 - [Magical Development](MAGICAL_DEVELOPMENT.md) - magical access, control, capacity, affinity, authority, relearning, and system-specific embodiment.
 - [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) - communication, culture, relationships, authority, legitimacy, coordination, governance, and agency safeguards.
 - [Species Development](SPECIES_DEVELOPMENT.md) - current-form traits, maturation, lifecycle, body-changing routes, ecology, and bounded reincarnational crossover.
+- [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md) - domain-specific soul-carried familiarity, compatibility, transfer loss, bounded relearning acceleration, and anti-farming rules.
 
 ## Current Scope
 
-The Development System defines the philosophy shared by all Development Tracks. Physical, Skill, Profession, Magical, Social, Leadership, and Species Development are canonical; retained-development and cross-track systems remain separate roadmap tasks and are not implemented by this index.
+The Development System defines the philosophy shared by all Development Tracks. Physical, Skill, Profession, Magical, Social, Leadership, Species, and retained Development are canonical; cross-track interaction and assessment remain separate roadmap tasks and are not implemented by this index.

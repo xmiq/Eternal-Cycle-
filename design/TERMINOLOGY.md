@@ -710,7 +710,47 @@ A weapon or meaningful tool whose Weapon Soul has intertwined with a wielder's s
 
 ## Stat XP
 
-Persistent experience associated with bodily attributes. Statistics reset with a new body, while retained Stat XP accelerates redevelopment.
+Persistent, soul-carried Developmental Familiarity within a bounded Stat XP Domain. Stat XP may accelerate compatible rebuilding, but is not a current statistic, body template, proof of competence, universal currency, or unrestricted transfer across embodiments.
+
+## Retained Development
+
+Protected developmental history that persists through its proper Owning System. Stat XP, Skill Imprints, Retained Instincts, integrated knowledge, Soul Titles, and other retained forms remain distinct rather than becoming one progression pool.
+
+## Developmental Familiarity
+
+Integrated experience with how a bounded capability is built, regulated, corrected, recovered, and stabilized. It can guide compatible redevelopment after Reincarnation without preserving the former result.
+
+## Stat XP Domain
+
+A bounded function and provenance within which Stat XP applies, such as sustained aerial exertion, fine multi-limb coordination, low-light sensory discrimination, or regulation of a particular magical Channel. Domains have no universal exchange rate.
+
+## Compatibility Profile
+
+A qualitative account of how retained familiarity corresponds to a particular current body, species, lifecycle, metaphysical structure, environment, and developmental route. It is evaluated for a specific claim rather than assigned as one permanent percentage between species.
+
+## Transfer Loss
+
+The part of retained familiarity that cannot provide useful acceleration through a current route because source and present embodiment, function, environment, or system do not correspond. Transfer Loss does not delete the retained familiarity.
+
+## Latent Stat XP
+
+Stat XP that persists but presently has no valid developmental route or functional correspondence. It provides no current output while latent.
+
+## Inaccessible Stat XP
+
+Stat XP for which a potentially compatible route exists but Current Access is blocked or obscured by an established access condition.
+
+## Redevelopment Acceleration
+
+A bounded reduction in rediscovery, calibration, or integration waste when current effort acts through a compatible developmental route. It changes the rebuilding process without setting a starting statistic or guaranteeing a ceiling.
+
+## Training Efficiency
+
+How effectively valid current effort, feedback, resources, and recovery become useful adaptation. Improved efficiency cannot make absent, unsafe, trivial, or incompatible training productive.
+
+## Developmental Ceiling
+
+The present limit on a developmental route under the current body's anatomy, lifecycle, health, species, materials, environment, magical laws, and established modifications. Retained progression may help approach a ceiling but does not automatically remove or raise it.
 
 ## Weapon Echo
 

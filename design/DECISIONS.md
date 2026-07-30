@@ -613,3 +613,35 @@ Age, time, kills, consumption, pain, repeated deaths, rapid reincarnation, shall
 ## D-153 — Species Does Not Prescribe Personhood or Culture
 
 A species or monster label may establish real anatomy, lifecycle, instincts, cognition, and constraints without assigning one personality, morality, intelligence, culture, allegiance, social hierarchy, class, or destiny to every member.
+
+## D-154 — Stat XP Is Domain-Specific Developmental Familiarity
+
+Stat XP is persistent, soul-carried familiarity with how a bounded adaptation is built, regulated, corrected, recovered, and integrated. It is not a direct statistic, body template, current proficiency rating, spendable pool, or universal Development currency.
+
+## D-155 — Stat XP Requires Integrated Adaptation
+
+Meaningful strain, challenge, repetition, instruction, reflection, success, or failure can contribute only when a valid present route produces feedback, adaptation, recovery, and integrated later use. Exposure, pain, elapsed time, danger, and effort without adaptation do not establish Stat XP.
+
+## D-156 — Stat XP Transfer Uses a Contextual Compatibility Profile
+
+Transfer compares the original and current functions, embodiments, species, lifecycles, environments, and systems for a specific claim. Close, analogical, distant, and incompatible correspondence may expose different portions of the retained familiarity; unusable portions suffer Transfer Loss or remain latent rather than converting into unrelated capability.
+
+## D-157 — Acceleration Changes Rebuilding, Not Starting State or Ceiling
+
+Compatible Stat XP may reduce rediscovery, improve calibration, and increase the efficiency of valid current training. It does not set starting statistics, supply mature structures, bypass Current Access or present effort, guarantee former capability, or ignore the current Developmental Ceiling.
+
+## D-158 — Stat XP Domains Are Non-Fungible
+
+Physical, coordination, endurance, sensory, magical-channel, and discipline familiarity are descriptive families rather than a mandatory attribute list. Actual Stat XP Domains retain specific provenance and function and cannot be exchanged through a universal rate or spent on Skills, traits, professions, Soul systems, or unrelated domains.
+
+## D-159 — Rebuilding Cannot Recursively Duplicate Retained Gain
+
+Redeveloping a familiar foundation may be faster, but acceleration does not train itself, earn interest, or award duplicate Stat XP for retracing the same adaptation. Only genuinely new integrated development can deepen retained familiarity, and every life remains subject to diminishing returns, recovery, maturation, compatibility, and current ceilings.
+
+## D-160 — Access and Expression Failures Do Not Normally Erase Stat XP
+
+Injury, suppression, incompatible embodiment, changed world laws, obscured memory, and damaged Soul Integrity may make Stat XP latent, inaccessible, unsafe, or poorly transferable without deleting its legitimate provenance. Recovery of access still does not provide the current adaptation.
+
+## D-161 — Stat XP Rejects Harm, Death, and Weak-Body Farming
+
+Suicide training, torture optimization, repeated injury, rapid Reincarnation, passive aging, staged danger, trivial repetition, and deliberately weak bodies grant no automatic Stat XP or multiplier. Legitimate gains require a productive current route and integrated adaptation rather than suffering or disadvantage as such.

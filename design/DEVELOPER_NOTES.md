@@ -54,6 +54,10 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 - The existing evolution-tree template should be checked during the Phase 2 audit and later Phase 4 work against the new Species Development boundaries without treating template fields as automatic mechanics.
 - Artificial, divine, corruptive, and purifying routes need explicit source and agency rules before content can use them as shortcuts around current embodiment.
 - Species catalogs must leave room for individual, cultural, and population variation while still giving forms meaningful shared traits and constraints.
+- Stat XP now uses bounded domains and qualitative Compatibility Profiles; future numerical experiments must not introduce a shared exchange rate or a permanent species-to-species transfer percentage.
+- Any future Stat XP curve should distinguish restoration of familiar foundations from genuinely new retained adaptation so rebuilding cannot recursively duplicate gains.
+- Descriptive familiarity families are optional organization aids, not a canonical mandatory attribute list; content should name the actual function and provenance when transfer matters.
+- Later character-record templates should display retained Stat XP separately from current statistics, current access, current expression, and reliability.
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 

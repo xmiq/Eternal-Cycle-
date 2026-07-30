@@ -279,7 +279,7 @@ Relearning is real Development. The current incarnation earns its reliable expre
 
 ## Retained Stat XP
 
-Stat XP is persistent experience associated with bodily attributes. It records legitimately earned adaptation without preserving the body's final statistics.
+Stat XP is persistent, domain-specific developmental familiarity carried by the soul. It records legitimately integrated adaptation without preserving the body's final statistics. [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md) owns the compatibility, transfer-loss, access, acceleration, and anti-farming rules.
 
 Conceptually, retained Stat XP may:
 
@@ -299,7 +299,7 @@ Retained Stat XP does not:
 - recursively multiply itself each life;
 - award progress when the current body performs no relevant work.
 
-When the current incarnation develops an attribute through valid effort, retained Stat XP may accelerate or improve that redevelopment relative to a comparable novice. Exact rates, curves, compatibility rules, and formulas belong to the later physical-development and retained-Stat-XP tasks.
+When the current incarnation develops an attribute through valid effort, retained Stat XP may accelerate or improve that redevelopment relative to a comparable novice. Exact rates, curves, and formulas remain intentionally undefined. Any later local implementation must preserve the dedicated Stat XP rules and may not create a universal progression currency.
 
 ## Embodiment and Species
 
