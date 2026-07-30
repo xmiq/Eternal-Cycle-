@@ -59,6 +59,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Class Evolution](human/CLASS_EVOLUTION.md) - historical transformation, continuity, variants, synthesis, schism, obsolescence, reconstruction, succession, and adjudication of class frameworks.
 - [Limits of Human Progression](human/LIMITS_OF_HUMAN_PROGRESSION.md) - scoped constraints, embodiment, time, Practice Allocation, maintenance, access, tradeoffs, retained progression, crossover, assessment, and safeguards.
 
+## Soul Weapons
+
+- [Soul Weapons Index](soul-weapons/README.md) - Phase 6 reading order, ownership boundaries, guarantees, and repository scope.
+- [Dormant Weapon Souls](soul-weapons/DORMANT_WEAPON_SOULS.md) - formation, identity, Vessel History, Vessel Continuity, evidence, personhood, and dormant-state safeguards.
+
 ## World Engine
 
 - [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.

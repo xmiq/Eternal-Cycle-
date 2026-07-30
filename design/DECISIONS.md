@@ -1761,3 +1761,27 @@ Known requirements, demonstrated failure, credible risk, social barriers, infere
 ## D-440 — Phase 5 Structures Change Routes Rather Than Personal Ceilings
 
 Human Classes, Professions, Social Advancement, Institutions, Academies, and Class Evolution may change learning routes, access, resources, obligations, recognition, coordination, and opportunity. They do not raise a universal cap, grant personal Development, or waive current embodiment and effort.
+
+## D-441 — Weapon Souls Are Possible but Not Universal
+
+Not every object, weapon, or tool possesses a Weapon Soul. Any sufficiently meaningful weapon or tool may develop one through coherent lived history without being restricted by material, rarity, maker, species, violence, or social status. Age, fame, enchantment, sentiment, and repeated use are not sufficient by themselves.
+
+## D-442 — Dormancy Is Distinct Identity Without Active Capability
+
+A Dormant Weapon Soul is a real distinct continuity but has not awakened into reliable self-awareness, communication, deliberate agency, or expressed capability. Dormancy grants no statistics, Skill, guidance, action, magic, durability, luck, consent, or automatic awakening.
+
+## D-443 — Dormant Formation Is Qualitative and Causal
+
+Weapon Soul formation depends on coherent Vessel History shaped by actual making, purpose, use, care, relationship, alteration, consequence, and meaning. There is no formation counter based on kills, uses, owners, repairs, age, ceremonies, suffering, names, or witnesses, and one dramatic event is not a universal shortcut.
+
+## D-444 — Vessel Continuity Has No Material Percentage
+
+A Weapon Soul may remain anchored through repair, alteration, reforging, or partial replacement when material, functional, relational, historical, identity, and metaphysical continuity support the same Weapon Vessel. Copies and physical division do not duplicate a soul, and intention or original material alone does not settle continuity.
+
+## D-445 — Pre-Intertwining Weapon Souls Remain With Their Vessels
+
+Before intertwining, a dormant Weapon Soul remains anchored to its Weapon Vessel in the world. A user's Final Death and Reincarnation do not carry the soul or vessel as starting equipment, and the user's Echoes or other Soul Imprints cannot be relabelled as the Weapon Soul.
+
+## D-446 — Dormant Evidence Is Source-Bounded and Observer-Relative
+
+Dormant Indications support investigation but do not prove personhood by attachment, silence, fame, or one supernatural anomaly. World truth, observer evidence, doctrine, belief, and uncertainty remain separate, while credible evidence of a Weapon Soul creates proportionate duties of caution without retroactively criminalizing ordinary good-faith use.

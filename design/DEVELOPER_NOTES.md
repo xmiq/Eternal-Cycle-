@@ -457,3 +457,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Human and monster progression remain distinct, while mixed societies and bounded present-life receiving routes permit genuine exchange without tree merger.
 - Stale Phase 5 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
 - Phase 6 should preserve Weapon Souls as distinct persons and avoid turning weapon affiliation, possession, awakening, or persistence into a class, Skill package, authority claim, or bypass around embodied practice.
+
+## Phase 6 Dormant-Weapon-Soul Watchlist
+
+- Playtest evidence should distinguish attachment to a meaningful object from evidence of a distinct Dormant Weapon Soul; Resonance with the user's own history is the main likely source of false positives.
+- Vessel Continuity needs consistent qualitative adjudication across repair, reforging, division, and reconstruction without drifting into either a material-percentage rule or identity by declared intention alone.
+- Ethical caution should increase with credible evidence while avoiding a setting in which every ordinary tool interaction is treated as unknowable personhood harm.
+- Peaceful and noncombat Vessel Histories need continued representation so violence does not become the de facto efficient route to Weapon Soul formation.
+- Later awakening rules must decide how rapidly formation and awakening can follow one another without turning a dramatic event into a universal instant-soul recipe.
+- Unconventional Soul Weapon rules must revisit composite, distributed, body-grown, living, and partly replaceable vessels without duplicating or weakening the one-soul and Vessel Continuity safeguards.

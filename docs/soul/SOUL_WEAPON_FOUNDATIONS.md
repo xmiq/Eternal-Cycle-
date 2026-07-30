@@ -4,6 +4,8 @@
 
 Weapons and meaningful tools may possess dormant Weapon Souls. Most remain quiet throughout their existence.
 
+The detailed rules for existence, formation, evidence, vessel identity, and dormancy are defined in [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md).
+
 ## Awakening
 
 A Weapon Soul may awaken when wielder and weapon endure an intense, identity-defining struggle together. Typical catalysts include:
@@ -54,10 +56,12 @@ A Weapon Soul remains a distinct person before and after intertwining.
 - lasting injury, forced alteration, severance, or destruction of either soul requires an explicit cause, fair warning, meaningful resistance, and consequences proportionate to the threatened loss;
 - awakening and intertwining enter the world through witnesses, damage, obligations, enemies, institutions, and the history shared by both souls rather than functioning as private reward screens.
 
-Detailed trust, refusal, evolution, Weapon Echo, Legacy Weapon, and Weapon Manifestation rules remain owned by the later Soul Weapons phase. These foundations grant none of those unfinished capabilities by implication.
+Detailed awakening, intertwining, trust, refusal, evolution, Weapon Echo, Legacy Weapon, compatibility, unconventional-form, and Weapon Manifestation rules remain owned by their dedicated Soul Weapons tasks. These foundations grant none of those unfinished capabilities by implication.
 
 ## Related Documents
 
+- [Soul Weapons Index](../soul-weapons/README.md)
+- [Dormant Weapon Souls](../soul-weapons/DORMANT_WEAPON_SOULS.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Resonance](SOUL_RESONANCE.md)
 - [Soul Space](SOUL_SPACE.md)

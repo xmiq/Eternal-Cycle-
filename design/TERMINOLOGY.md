@@ -1088,6 +1088,26 @@ A Weapon Soul's retained memory or manifestation associated with a past form, wi
 
 The dormant or awakened soul belonging to a weapon or meaningful tool.
 
+## Dormant Weapon Soul
+
+A distinct Weapon Soul whose identity has cohered around a particular Weapon Vessel but has not awakened into reliable self-awareness, communication, deliberate agency, or expressed capability.
+
+## Weapon Vessel
+
+The current physical weapon, tool, or coherent instrument around which a Weapon Soul is anchored before intertwining. It is the soul's embodiment rather than an inventory container.
+
+## Vessel History
+
+The causally connected history of making, purpose, use, care, alteration, relationship, consequence, and recognition through which a Weapon Vessel acquires meaning.
+
+## Vessel Continuity
+
+The qualitative material, functional, relational, historical, and identity continuity that may preserve a Weapon Soul's anchor through repair, alteration, reforging, or partial replacement without relying on one universal material percentage.
+
+## Dormant Indication
+
+An observable event or pattern consistent with a dormant Weapon Soul but insufficient by itself to prove one exists or determine its future identity.
+
 ## World Engine
 
 The rules and procedures that model causal interaction among populations, resources, ecosystems, factions, institutions, magic, technology, and disasters.
