@@ -637,3 +637,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Medical alchemy must preserve diagnosis, consent, dose, interactions, monitoring, and aftercare instead of making products self-adjudicating cures.
 - Industrial scale and Reagent demand should create ecology, labor, trade, waste, monopoly, and political consequences through the World Engine.
 - Soul Weapon vessel treatment needs mixed-source tests separating material repair, Alchemy, Enchanting, Vessel Continuity, and Weapon Evolution.
+
+## Phase 7 Divine Magic Watchlist
+
+- Divine Profiles must remain source-and-relationship records rather than favor meters, alignment scores, spell lists, or pantheon power rankings.
+- Petition, response, Sign, Silence, doctrine, and attribution need playtests where uncertainty matters without making every divine interaction arbitrary.
+- Divine Sources need varied Domains, Jurisdictions, capacities, motives, moral positions, and vulnerabilities without using divinity as omnipotence shorthand.
+- Blessings and Miracles must remain useful while preserving Skills, embodiment, resistance, costs, withdrawal, and consequences.
+- Monster, collective, nonverbal, adversarial, and non-worshipful relationships need enough examples to prevent human temple assumptions from becoming universal.
+- Reincarnated divine practitioners need tests where recognition survives but office, Mandate, body, route, and trust do not automatically return.

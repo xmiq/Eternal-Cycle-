@@ -89,7 +89,7 @@ Soul Weapon rules own changes to the Weapon Soul's vessel-linked form and weapon
 | Current bodily ability to hold, move, sense, channel, or survive the form | [Development System](../progression/README.md) and present embodiment |
 | Biological species form, Species Traits, organs, and Monster Evolution Routes | [Monster Evolution](../monster-evolution/README.md) |
 | Human Class, Profession, tradition, school, rank, licence, and institution | [Human Classes and Professions](../human/README.md) |
-| Mana, spell sources, enchanting, rituals, divine effects, and magical law | Existing Magical Development and later Magic rules |
+| Mana, spell sources, enchanting, rituals, [divine effects](../magic/DIVINE_MAGIC.md), and magical law | Existing Magical Development and completed Magic rules |
 | Weapon Soul identity, bond, personality, form, and weapon-owned Soul effects | Soul Weapon rules |
 | Current materials, repair, custody, law, witnesses, resources, and consequences | World causality and the external Campaign Record |
 

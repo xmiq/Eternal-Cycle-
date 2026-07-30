@@ -2585,3 +2585,87 @@ Products, Reagents, physical Recipes, Batches, laboratories, tools, sources, lic
 ## D-646 — Alchemical Profiles and Batches Are External
 
 Alchemical Profiles are qualitative external Campaign Records. Current Recipes, Batches, ingredient inventories, suppliers, doses, laboratory state, discovered substitutions, patients, and application outcomes do not belong in the canonical repository.
+
+## D-647 — Divine Magic Requires an Established Source Relationship
+
+Divine magic exists only where an established Divine Source or divine law provides source, permission, judgment, mediation, or effect through a valid current relationship and route. Religion, symbolism, faith, office, power, and divine labels alone are insufficient.
+
+## D-648 — Divine Sources Retain Bounded Nature and Agency
+
+Divine status does not establish omniscience, omnipotence, benevolence, truth, moral authority, or entitlement to obedience. Person-like Divine Sources retain agency, interests, consent, refusal, vulnerability, and world-law limits.
+
+## D-649 — Domain and Jurisdiction Are Separate
+
+A Divine Domain establishes relevant subjects and relationships, while Divine Jurisdiction establishes present scope across place, participants, conditions, Covenants, offices, Ages, or laws. Neither is a power score or ownership claim.
+
+## D-650 — Divine Access Is Effect-Specific
+
+Perception, Petition, mediation, invocation, receipt, and expression are distinct routes. Access to one effect does not establish general approval, source ownership, universal magic, or every other route.
+
+## D-651 — Mandates and Covenants Grant Only Their Terms
+
+Divine Mandates and Covenants define scoped permissions, obligations, limits, duration, transfer, withdrawal, appeal, and breach. Office, doctrine, ancestry, prior service, or unequal power cannot silently expand them.
+
+## D-652 — Faith and Worship Are Not Power Currency
+
+Belief, prayer, praise, worship, offerings, sacrifice, pain, obedience, and follower count do not convert through a universal favor meter, create a Divine Source, compel response, prove doctrine, or automatically grant affinity, Access, Mandate, or power.
+
+## D-653 — Petitions Do Not Compel Responses
+
+A Divine Petition is a request rather than a command. Repetition, precision, desperation, hierarchy, affinity, Title, sacrifice, and self-harm do not guarantee perception, acceptance, timing, form, or outcome.
+
+## D-654 — Divine Silence Remains Ambiguous
+
+The absence of an identifiable Divine Response proves neither approval, refusal, nonexistence, incapacity, ignorance, nor hidden action. Attribution requires evidence and preserves uncertainty.
+
+## D-655 — Blessings Are Bounded External Effects
+
+A Divine Blessing retains source, recipient, Function, Domain, Jurisdiction, receiving route, conditions, duration, limits, withdrawal, resistance, Burdens, and consequences. It does not grant general holiness, moral worth, Skill, Class, Soul Title, or permanent favor.
+
+## D-656 — Miracles Remain Causal and Non-Precedential
+
+A Miracle may exceed ordinary divine procedure but still retains source, Domain, Jurisdiction, receiver, route, cost, evidence, resistance, aftermath, and world consequence. One Miracle creates no reusable Skill, entitlement, universal procedure, doctrine, or promise of repetition.
+
+## D-657 — Divine Rites Preserve Ritual Ownership
+
+Ritual rules own a Divine Rite's Objective, Structure, roles, components, sequence, integrity, failure, and aftermath. Divine magic owns source, Domain, Jurisdiction, Access, Mandate, Covenant, response, withdrawal, and divine consequence.
+
+## D-658 — Divine Intermediaries Are Fallible Participants
+
+Intermediaries retain bounded authority, knowledge, bias, incentives, vulnerability, and agency. They may translate, administer, deceive, misunderstand, or lose Access without becoming the Divine Source or proving doctrine by office.
+
+## D-659 — Divine Evidence Does Not Establish Moral Truth
+
+Signs, miracles, blessings, authenticated responses, and source presence may support bounded factual claims. They do not make every interpretation, intermediary, doctrine, institution, command, or action true or good.
+
+## D-660 — Divine Relationships Preserve Every Participant's Agency
+
+A Divine Source cannot consent for affected persons or own Souls through Domain, creation claims, Covenant, worship, rescue, punishment, prophecy, or power. Characters may refuse, resist, leave, renegotiate, or oppose where causally possible.
+
+## D-661 — Cruelty Has No Divine Efficiency Privilege
+
+Blood, death, pain, humiliation, forced conversion, memory loss, Soul access, and sacrifice are not universal fuels. A source demanding harm creates real victims and consequences without gaining mechanically superior output by cruelty alone.
+
+## D-662 — Divine Magic Preserves Embodiment and Skill
+
+Recognition, Access, Mandate, Blessing, and Miracle cannot create missing anatomy, Channels, senses, communication, technique, professional judgment, or Practised Reliability. Current embodiment and current-life work remain necessary.
+
+## D-663 — Divine Magic Does Not Own Evolution
+
+Divine Alteration, blessing, bloodline, worship, and favor may support only valid Species, Mutation, Hybridization, Monster Evolution, or Weapon Evolution routes. They cannot purchase forms or replace agency, transition, integration, tradeoffs, and failure.
+
+## D-664 — Divine Provision Is Not Infinite
+
+Divine Mana and support retain source rate, Access, Capacity, compatibility, competition, recovery, withdrawal, ecology, and consequence. No personal reserve cost does not mean no cost.
+
+## D-665 — Divine Effects Preserve Soul Weapon Personhood
+
+A Divine Source may interact with a Weapon Soul or vessel only through established routes, consent, resistance, and Source Integration. Holy labels, institutions, ownership, and wielder agreement cannot Awaken, bind, command, evolve, manifest, or consent for a Weapon Soul.
+
+## D-666 — Reincarnation Restores No Divine Entitlement
+
+Former office, Mandate, Covenant, blessing, service, miracle, reputation, and relationship persist only under their own terms and present source recognition. A new incarnation must rebuild embodiment, communication, Practised Reliability, and social role.
+
+## D-667 — Divine Profiles and Pantheons Are External
+
+Divine Profiles are qualitative external Campaign Records. Current gods, doctrines, temples, relationships, mandates, covenants, blessings, signs, conflicts, interventions, and divine world state do not belong in the canonical repository.

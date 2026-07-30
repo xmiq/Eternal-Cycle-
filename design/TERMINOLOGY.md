@@ -884,6 +884,78 @@ The source-specific harmful effect an alchemical product, impurity, concentratio
 
 A qualitative external Campaign Record describing one Alchemical Process, Recipe, Batch, or application without treating products as universal consumable statistics.
 
+## Divine Source
+
+A being, collective, structure, or world-law authority whose established nature permits divine magical relationships within a bounded Divine Domain and Divine Jurisdiction. A person-like Divine Source retains agency, interests, consent, refusal, and vulnerability.
+
+## Divine Domain
+
+The bounded subjects, relationships, processes, places, identities, or responsibilities through which a Divine Source can meaningfully act. A Domain establishes relevance rather than ownership, morality, or unlimited control.
+
+## Divine Jurisdiction
+
+The present scope in which a Divine Source's authority can operate, such as a place, Covenant, community, lineage, office, condition, relationship, Age, or world law.
+
+## Divine Relationship
+
+The actual current connection among a Divine Source and one or more persons, communities, places, offices, objects, species, or other participants, including recognition, history, expectations, consent, obligations, and uncertainty.
+
+## Divine Access
+
+The valid present route through which a participant may request, receive, mediate, invoke, or express one bounded divine effect. It is not ownership of the source or proof of general approval.
+
+## Divine Mandate
+
+A scoped grant of Magical Authority from a Divine Source or divine law to perform, mediate, protect, judge, or maintain defined effects under current terms.
+
+## Divine Covenant
+
+An established divine relationship whose participants recognize defined permissions, obligations, protections, exchanges, limits, remedies, and exit or breach consequences.
+
+## Divine Petition
+
+A directed request for a Divine Source to perceive, consider, authorize, answer, or act. A Petition is neither a command nor proof that the source received or accepted it.
+
+## Divine Response
+
+An identifiable action, permission, refusal, communication, change, or effect produced by a Divine Source in relation to a Petition, Covenant, Mandate, event, or self-chosen purpose.
+
+## Divine Blessing
+
+A bounded beneficial or protective effect established by a Divine Source through a defined recipient, scope, source, conditions, duration, limits, and withdrawal behavior.
+
+## Miracle
+
+An exceptional Divine Response whose occurrence, scale, timing, or form exceeds an ordinary established divine procedure while retaining source, Domain, Jurisdiction, receiver, cost, evidence, and consequence.
+
+## Divine Rite
+
+A Ritual whose Structure includes a Divine Source, divine law, Mandate, Covenant, Petition, or Response as an actual dependency.
+
+## Divine Intermediary
+
+A person, spirit, construct, institution, office, place, object, or other valid participant that carries, translates, witnesses, filters, administers, or contests one part of a divine relationship without becoming the Divine Source by implication.
+
+## Divine Sign
+
+Evidence reasonably attributed to a Divine Source under a stated method and uncertainty. A Sign supports only bounded inferences.
+
+## Divine Silence
+
+The absence of an identifiable Divine Response within the relevant observation window. Silence alone proves neither approval, rejection, absence, incapacity, ignorance, nor hidden action.
+
+## Divine Withdrawal
+
+An identifiable reduction, suspension, alteration, or termination of Divine Access, Mandate, Blessing, protection, communication, or support by its owning source or law.
+
+## Divine Burden
+
+A cost, obligation, exposure, dependency, conflict, responsibility, risk, or consequence created by participation in a divine relationship. It is not a universal payment currency or proof of worth.
+
+## Divine Profile
+
+A qualitative external Campaign Record describing one Divine Source relationship or claim without turning faith, favor, authority, or intervention into a universal score.
+
 ## Environmental Compatibility
 
 The degree to which a magical route can function under the present world's laws, sources, elements, weather, geology, celestial conditions, spirits, and other established environmental factors.

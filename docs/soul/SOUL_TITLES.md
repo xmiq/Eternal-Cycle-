@@ -55,7 +55,7 @@ Soul Titles are related to several other forms of recognition but do not replace
 | **Class or profession** | Training, initiation, practice, role, or progression rules | Structured development and access to techniques | Only according to its own progression and Reincarnation rules |
 | **Skill** | Practice, understanding, and Development | A learned capability | As a Soul Imprint when its rules permit, but it remains a capability rather than identity recognition |
 | **Reputation** | What other people believe about a current identity | Social expectations and reactions, whether accurate or false | No; it remains in the world and may outlive the person as history |
-| **Divine blessing** | A god or divine system granting an external effect | Permission, protection, obligation, power, or favor defined by that blessing | Only if the blessing explicitly says so |
+| **[Divine blessing](../magic/DIVINE_MAGIC.md#blessings)** | A Divine Source granting an external effect | Permission, protection, obligation, power, or support defined by that blessing | Only if the blessing explicitly says so |
 | **Soul Title** | A meaningful identity pattern integrated into the soul | Contextual recognition and identity-bearing consequences | Yes, once genuinely formed, subject to access and damage rules |
 
 A social title and Soul Title may share a name while remaining different things. A ruler may grant someone the social title **Friend of Dragons** for diplomacy even though the soul has no such Soul Title. Conversely, an unknown monster may carry that Soul Title while every human institution calls it an enemy.
