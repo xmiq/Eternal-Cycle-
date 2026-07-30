@@ -47,4 +47,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation, Soul Engine, and Development System are complete. The current phase is **Phase 3 — Skill Engine**, and the sole active task is **Audit and complete Phase 3 Skill Engine**.
+The repository foundation, Soul Engine, Development System, and Skill Engine are complete. The current phase is **Phase 4 — Monster Evolution**, and the sole active task is **Define monster ecology**.

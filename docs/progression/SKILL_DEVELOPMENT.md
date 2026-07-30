@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines how learned capabilities are acquired, practised, adapted, retained, relearned, and assessed across different bodies and progression trees. It establishes the shared Development rules for skills without implementing the complete human and monster Skill Engine reserved for Phase 3.
+This document defines how learned capabilities are acquired, practised, adapted, retained, relearned, and assessed across different bodies and progression trees. It establishes the shared Development foundation used by the complete human and monster [Skill Engine](../skills/README.md).
 
 ## Core Rule
 
@@ -431,7 +431,7 @@ A future fusion candidate must at minimum have:
 - retained dependencies, costs, tradeoffs, and failure states;
 - no duplicated XP, benefits, actions, or mastery from counting the same adaptation twice.
 
-Until Phase 3 defines fusion, component Skills remain distinct and coordinated use creates no fused label or automatic evolution.
+[Skill Fusion](../skills/SKILL_FUSION.md) defines the evidence required for a fused competency. Component Skills otherwise remain distinct, and coordinated use creates no fused label or automatic evolution.
 
 ## Anti-Grinding and Anti-Farming Rules
 

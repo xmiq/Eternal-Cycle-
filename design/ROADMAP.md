@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 3 — Skill Engine**
+**Current phase: Phase 4 — Monster Evolution**
 
-**Current task: Audit and complete Phase 3 Skill Engine**
+**Current task: Define monster ecology**
 
-Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin Phase 4 until the Phase 3 integration audit is complete unless the project owner explicitly changes the target.
+Codex must work only on the current task unless the project owner explicitly changes the target. Codex must not begin species stages, branching evolution, or another later Phase 4 task until monster ecology is complete unless the project owner explicitly changes the target.
 
-Phases 1 and 2 are reviewed and approved. Do not reopen either phase unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 and 2 are reviewed and approved. Phase 3 is complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
 
@@ -95,7 +95,11 @@ Phase 2 is complete only when every Development Track and shared rule is defined
 - [x] Define hidden skills
 - [x] Define conceptual skills
 - [x] Prevent runaway skill proliferation
-- [ ] Audit and complete Phase 3 Skill Engine
+- [x] Audit and complete Phase 3 Skill Engine
+
+### Exit Criteria
+
+Phase 3 is complete only when all ten Skill Engine rule documents are defined, linked, and internally consistent; human and monster Skill Trees remain distinct; Reincarnation crossover is bounded; adaptive creation, Skill Evolution, and Skill Fusion have separate playable rules; active, passive, hidden, and conceptual Skills preserve ordinary requirements and agency; every effect has one owner; anti-proliferation and cleanup procedures are usable; current embodiment and practice remain necessary for present expression; no universal Skill level, score, currency, or tree exists; no blocking questions remain; and Phase 4 can define monster Evolution without inventing foundational Skill rules.
 
 ## Phase 4 — Monster Evolution
 

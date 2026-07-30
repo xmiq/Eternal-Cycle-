@@ -54,7 +54,7 @@ Monster capability often involves several systems at once. Each effect keeps one
 | **Species Trait** | [Species Development](../progression/SPECIES_DEVELOPMENT.md) | Reliable control, tactical judgment, or a learned Skill |
 | **Current Instinct** | Current species, body, and upbringing | Conscious technique, adaptability, perfect information, or compulsion |
 | **Learned Skill** | Skill Development and this Skill tree | Missing anatomy, a new species trait, or automatic biological change |
-| **Adaptive Skill** | Later Phase 3 adaptive-skill rules | Evolution, mutation, or a reward for repetition alone |
+| **Adaptive Skill** | [Adaptive Skills](ADAPTIVE_SKILLS.md) | Evolution, mutation, or a reward for repetition alone |
 | **Evolutionary Trait** | Species Development and later Phase 4 rules | Prior mastery or every Skill commonly associated with the evolved form |
 | **Magical Ability** | Its species, magical, divine, item, or other source | Control, efficiency, interpretation, spells, or magical mastery by itself |
 | **Environmental Adaptation** | Physical or Species Development according to its route | A learned technique unless meaningful practice develops one separately |
@@ -277,6 +277,7 @@ Those systems may use these Skill boundaries without treating a reference as imp
 ## Related Documents
 
 - [Skill Engine Index](README.md)
+- [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)

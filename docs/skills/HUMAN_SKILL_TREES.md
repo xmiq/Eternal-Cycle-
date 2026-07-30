@@ -321,7 +321,7 @@ When placing or adjudicating a human Skill:
 5. separate Persistent Familiarity, Current Access, and Embodied Expression;
 6. require evidence for Practised Reliability;
 7. assess Contextual Effectiveness under the present objective;
-8. record Evolution State without assuming a later evolution rule;
+8. record Evolution State under [Skill Evolution](SKILL_EVOLUTION.md) when qualitative transformation is claimed;
 9. establish Visibility and World Recognition by observer;
 10. reject duplicate labels, automatic bundles, and unsupported future-system claims.
 
@@ -343,6 +343,7 @@ Those systems may build on this structure only through their roadmap tasks.
 ## Related Documents
 
 - [Skill Engine Index](README.md)
+- [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Magical Development](../progression/MAGICAL_DEVELOPMENT.md)

@@ -332,6 +332,7 @@ This document does not define:
 ## Related Documents
 
 - [Skill Engine Index](README.md)
+- [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)

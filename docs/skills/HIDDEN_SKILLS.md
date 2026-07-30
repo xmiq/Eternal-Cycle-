@@ -330,6 +330,7 @@ This document does not define:
 ## Related Documents
 
 - [Skill Engine Index](README.md)
+- [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)

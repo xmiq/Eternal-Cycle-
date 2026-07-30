@@ -56,7 +56,7 @@ Observable support that a qualitative change has become integrated capability: c
 | **Improvement** | Better speed, precision, knowledge, endurance, judgment, or reliability within the same essential Skill identity. Improvement may prepare an evolution without constituting one. |
 | **Mastery** | Deep, adaptable, reliable understanding within a bounded scope. A Skill may be mastered without evolving, and an evolved form may begin with low reliability. |
 | **Skill Evolution** | A qualitative reorganisation or transformation of an established learned capability. |
-| **Skill Fusion** | A later Phase 3 process in which two or more genuinely integrated Skills produce a coherent new competency. Evolution cannot be used to smuggle an undeveloped second Skill into one existing Skill. |
+| **Skill Fusion** | A process defined by [Skill Fusion](SKILL_FUSION.md) in which two or more genuinely integrated Skills produce a coherent new competency. Evolution cannot be used to smuggle an undeveloped second Skill into one existing Skill. |
 | **Mutation** | A change to a body's inherited or current structure through an established bodily route. Mutation may alter Skill requirements or expression but does not itself evolve the Skill. |
 | **Biological Evolution** | A lasting transition into a distinct species form or stage. Phase 4 owns its routes and outcomes. |
 | **Renaming** | A changed label, translation, fashion, or reinterpretation without a material capability change. Renaming records language, not Development. |
@@ -112,7 +112,7 @@ The Skill becomes organised around a persistent environment, role, hazard, oppon
 
 ### Conceptual Elevation
 
-The Skill begins operating through a coherent understanding of an underlying relationship or principle. This pattern requires the later Conceptual Skills rules before it can grant conceptual effects; until then it records only a constrained future route.
+The Skill begins operating through a coherent understanding of an underlying relationship or principle. It grants conceptual effects only when it also satisfies [Conceptual Skills](CONCEPTUAL_SKILLS.md), including foundations, access, a bounded interpretation, and a specific claim.
 
 ### Embodiment Translation
 
@@ -132,7 +132,7 @@ The Skill becomes a repeatable structured process with preparation, roles, check
 
 ### Internalisation
 
-Parts of a once-deliberate process become stable perception, regulation, or response. Internalisation does not make the Skill free, infallible, always active, or immune to conscious override; full active and passive rules belong to the later Phase 3 task.
+Parts of a once-deliberate process become stable perception, regulation, or response. Internalisation does not make the Skill free, infallible, always active, or immune to conscious override; use [Active and Passive Skills](ACTIVE_AND_PASSIVE_SKILLS.md) for its expression, load, disruption, and agency rules.
 
 ## Outcomes and Prior Forms
 
@@ -279,6 +279,7 @@ This document does not define:
 ## Related Documents
 
 - [Skill Engine Index](README.md)
+- [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)
