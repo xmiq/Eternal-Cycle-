@@ -26,6 +26,18 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 
 Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.
 
+## Integrated Guarantees
+
+Together, the completed World Engine rules guarantee that:
+
+- the world continues through autonomous actors, changing conditions, delays, Counterforces, and consequences rather than waiting for the player;
+- world truth, observations, estimates, beliefs, and uncertainty remain distinct;
+- each domain changes only through supported causal handoffs and never manufactures specialist-system progression;
+- Focused, Local, Regional, and Epochal resolution alter detail rather than established truth;
+- Time Skips, Reincarnation intervals, Age Transitions, World Resets, Gate contact, and Gate closure preserve material consequences and surviving agency;
+- qualitative state can guide judgment without becoming a universal score, deterministic script, or substitute for evidence;
+- every named actor, current value, timeline, and completed Profile remains external campaign data.
+
 ## Core Ownership
 
 | Claim | Primary owner |

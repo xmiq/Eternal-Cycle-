@@ -861,7 +861,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Agentive Dungeons and person-like Cores need practical communication and consent routes without making all responsive sites sapient.
 - Delving capability should support combat, diplomacy, logistics, scholarship, repair, rescue, and ecological knowledge as different strengths rather than one party level.
 - Dungeon collapse and clearing should leave usable but changed sites, survivors, hazards, claims, and legacies instead of clean reset states.
-- Later Gate rules must preserve the distinction among ordinary entrances, Dungeon Access Routes, Soul Gates, and world-contact Gates.
+- Gate interactions must preserve the distinction among ordinary entrances, Dungeon Access Routes, Soul Gates, and world-contact Gates.
 
 ## Phase 8 World-Stability Watchlist
 
@@ -872,7 +872,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Buffers should absorb specified strain while preserving consumption, unequal access, maintenance, and future vulnerability.
 - Stability Interventions should expose displaced burdens, excluded alternatives, consent, and maintenance rather than declaring heroic or magical solutions universally successful.
 - Stability Forecasts need enough uncertainty to permit meaningful action without allowing retroactive causes or secret deterministic scripts.
-- The Ages-and-resets task must use stability evidence without inventing a zero-stability trigger, clean slate, or automatic Reset.
+- Ages and World Resets must use stability evidence without inventing a zero-stability trigger, clean slate, or automatic Reset.
 
 ## Phase 8 Ages-and-Resets Watchlist
 
@@ -883,7 +883,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Genre changes should arise from the successor Age Signature while preserving survivors, legacies, and transformed old advantages.
 - A living incarnation caught in a Reset must remain possible; Reset must not become a disguised mandatory death or Reincarnation trigger.
 - World Revalidation should make old knowledge valuable but fallible rather than either useless or automatically authoritative.
-- The Gate task must distinguish Gate contact from Age Transition and World Reset while allowing a sufficiently consequential Gate event to contribute causally to either.
+- World Gates and World-Contact Events must distinguish Gate contact from Age Transition and World Reset while allowing a sufficiently consequential Gate event to contribute causally to either.
 
 ## Phase 8 World-Gate Watchlist
 
@@ -896,7 +896,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Contact Asymmetry should make logistics, maintenance, local knowledge, institutions, Soul knowledge, disease response, and legitimacy matter alongside direct force.
 - Gate Closure tests should preserve stranded populations, dependencies, hybrid institutions, ecology, and unresolved obligations rather than resetting contact.
 - World-Gate Soul interactions must preserve the one-active-incarnation rule, current embodiment, Soul Gate distinction, Echo provenance, and current-incarnation agency.
-- The simulation-abstraction task should preserve Gate Channels, decisive compatibility findings, autonomous actors, closure risk, and Pending Consequences when compressing long contact periods.
+- Simulation Abstraction should preserve Gate Channels, decisive compatibility findings, autonomous actors, closure risk, and Pending Consequences when compressing long contact periods.
 
 ## Phase 8 World-Gate Soul-Interaction Watchlist
 
@@ -914,3 +914,13 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Player Agency Checkpoints should pause only for materially different deliberate choices; routine previously authorized conduct should remain compressible.
 - Expansion should support rich local detail without encouraging retroactive hidden masterminds, capabilities, causes, or traps.
 - Simulation Deltas should stay concise enough for campaign use while preserving the causal bridge needed after long Interlife, absence, or Time Skips.
+
+## Phase 8 Integration Audit
+
+- All Phase 8 roadmap owners are present, linked from the root rules map, the documentation map, and the World Engine reading order.
+- Completed-task deferrals were replaced with direct handoffs to World Gates, World Gate Soul Interactions, and Simulation Abstraction.
+- Every World Engine domain now links to Simulation Abstraction without giving abstraction ownership of domain mechanics.
+- Rule Zero, specialist ownership, autonomous actors, information boundaries, causal persistence, player agency, and the external campaign-record boundary remain intact across the phase.
+- No universal world score, civilization level, deterministic Reset trigger, level-scaled encounter model, or repository-stored campaign state was introduced.
+- No new blocking question or canonical design decision was required by the audit.
+- The full repository validation passed before Phase 8 was marked complete and the roadmap advanced to **Define GM responsibilities**.

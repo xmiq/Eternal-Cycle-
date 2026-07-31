@@ -383,6 +383,7 @@ This document does not define:
 - [Magic](../magic/README.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

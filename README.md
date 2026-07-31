@@ -79,4 +79,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Audit and complete Phase 8 World Engine**.
+The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Define GM responsibilities**.

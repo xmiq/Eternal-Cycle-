@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 8 — World Engine**
+**Current phase: Phase 9 — GM Toolkit**
 
-**Current task: Audit and complete Phase 8 World Engine**
+**Current task: Define GM responsibilities**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless the Phase 8 audit reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and complete Phase 8 World Engine** unless the project owner explicitly changes the target. Do not begin Phase 9 or later roadmap work before the audit is complete.
+Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define GM responsibilities** unless the project owner explicitly changes the target. Do not begin consequence resolution, uncertainty handling, reincarnation generation, generators, or later roadmap work before GM responsibilities are complete.
 
-Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 The reusable Gate-event template requested by the project owner remains queued for Phase 10. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
 
@@ -197,7 +197,11 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define Gates and world-contact events distinct from Soul Gates
 - [x] Integrate world-contact Gates with Reincarnation and Soul Avatars
 - [x] Define simulation abstraction levels
-- [ ] Audit and complete Phase 8 World Engine
+- [x] Audit and complete Phase 8 World Engine
+
+### Exit Criteria
+
+Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Event Chains, populations, resources and food, economies, ecology and migration, faction behaviour, war and unrest, disease evolution, technology and magical advancement, Dungeon activity, World Stability, Ages and World Resets, World Gates, Gate interactions with Reincarnation and Soul Avatars, and Simulation Abstraction are defined, linked, and internally consistent; world change remains autonomous, causal, persistent, evidence-aware, and independent of player presence; each specialist system retains ownership of its mechanics; Simulation Abstraction changes detail without changing truth or granting unsupported progression; World Gates remain distinct from Soul Gates; World Resets remain exceptional causal transformations rather than clean slates or automatic timers; no universal world score, civilization level, encounter scaling, scripted outcome, or mandatory progression route exists; current campaign values and records remain outside the repository; no blocking questions remain; all links and navigation validate; and Phase 9 can apply the World Engine without inventing or duplicating its rules.
 
 ## Phase 9 — GM Toolkit
 

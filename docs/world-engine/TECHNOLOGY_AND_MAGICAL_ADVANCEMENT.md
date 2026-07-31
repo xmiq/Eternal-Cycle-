@@ -608,7 +608,7 @@ The object and knowledge have diffused. The function has not. Researchers may fi
 - Do not erase maintenance, repair, waste, externalities, unequal access, resistance, decline, or legacy.
 - Do not assume a newer, larger, faster, more magical, or more destructive system is contextually superior.
 - Do not script invention or adoption because a desired plot or historical analogy requires it.
-- Do not use this document to replace [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), or [Ages and World Resets](AGES_AND_WORLD_RESETS.md), or to implement Gates or simulation abstraction before their roadmap tasks are complete.
+- Do not use this document to replace [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), [Ages and World Resets](AGES_AND_WORLD_RESETS.md), [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md), or [Simulation Abstraction](SIMULATION_ABSTRACTION.md); hand each claim to its canonical owner.
 - Do not store named current inventions, institutions, infrastructure, projects, standards, technical disputes, or live Technical System Profiles in this repository.
 
 ## Scope Boundaries
@@ -639,6 +639,7 @@ This document does not define:
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)
 - [Monster Evolution](../monster-evolution/README.md)

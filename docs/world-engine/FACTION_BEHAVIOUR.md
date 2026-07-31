@@ -367,7 +367,7 @@ The shared faction identity does not yield one response. Unequal burdens, differ
 - Do not make diplomacy, betrayal, capture, schism, merger, or reform deterministic outcomes.
 - Apply [War and Unrest](WAR_AND_UNREST.md) when faction contestation escalates into Civil Unrest, Armed Conflict, War, occupation, or conflict aftermath; do not use this document to replace that owner.
 - Apply [Disease Evolution](DISEASE_EVOLUTION.md) when faction decisions concern Disease Processes, transmission, public health, or disease legacies; do not use faction motives to determine medical truth.
-- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), or [Ages and World Resets](AGES_AND_WORLD_RESETS.md), or to resolve Gates or long-horizon abstraction before their roadmap tasks are complete.
+- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), [Ages and World Resets](AGES_AND_WORLD_RESETS.md), [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md), or [Simulation Abstraction](SIMULATION_ABSTRACTION.md); hand each claim to its canonical owner.
 - Do not store named live factions, current leaders, memberships, objectives, resources, relationships, decisions, or actions in this repository.
 
 ## External Campaign Records
@@ -400,6 +400,7 @@ This is external campaign state. The repository defines the schema and rules but
 - [War and Unrest](WAR_AND_UNREST.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Institutions and Academies](../human/INSTITUTIONS_AND_ACADEMIES.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Monster Societies](../monster-evolution/MONSTER_SOCIETIES.md)

@@ -273,7 +273,7 @@ When elapsed time, an action, or an external event may change world state:
 12. **Save externally.** Write current values, named facts, and pending consequences only to the Campaign Record.
 13. **Set the next review condition.** Name the elapsed interval, threshold, action, discovery, or disruption that warrants another update.
 
-If a missing later domain rule would determine the outcome, use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) narrowly. Do not invent a universal fallback model.
+If canon lacks a domain rule needed to determine the outcome, use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) narrowly. Do not invent a universal fallback model.
 
 ## Derived Variables and Indices
 
@@ -403,7 +403,7 @@ This document does not define:
 - character sheets, world-state files, save formats, or campaign templates;
 - a method for creating capability, magic, Evolution, Soul growth, or narrative destiny from world variables.
 
-Those subjects remain with their roadmap tasks and owning systems.
+Those subjects remain with their named owners or later roadmap tasks.
 
 ## Related Documents
 

@@ -122,7 +122,7 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) interface;
 - the canonical [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) procedure.
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, and World Engine rules are canonical within their stated scopes. The Phase 8 integration audit, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, and World Engine rules are canonical within their stated scopes. GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
@@ -240,7 +240,7 @@ Keep Mana, affinity, Spell Procedures, Ritual Structures, Enchantment Layers, Al
 
 ### World Engine
 
-While the Phase 8 integration audit remains pending:
+Use the completed World Engine framework as follows:
 
 - use [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) to choose only the resolution needed for current decisions;
 - use established conditions, causal chains, actors, pressures, counterforces, and consequences;

@@ -448,7 +448,7 @@ A World Gate:
 - exists in world-side causality;
 - connects Contact Domains through stated channels;
 - may carry bodies, organisms, material, information, or environmental influence when supported;
-- creates world consequences through Phase 8 systems.
+- creates world consequences through World Engine domains.
 
 A Soul Gate:
 
@@ -459,7 +459,7 @@ A Soul Gate:
 
 One phenomenon does not inherit the other's channels, protections, permissions, or consequences. A World Gate does not expose Soul Space. A Soul Gate does not establish a trade route.
 
-The next Phase 8 task owns detailed interaction with Reincarnation and Soul Avatars. Until that task is complete, a World Gate creates no special Reincarnation destination, Interlife route, alternate incarnation, divergent Echo, Soul Avatar portal, universal interpreter, or soul-level immunity.
+[World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md) owns the detailed cross-system interface. A World Gate creates no special Reincarnation destination, Interlife route, alternate incarnation, divergent Echo, Soul Avatar portal, universal interpreter, or soul-level immunity except through that interface and the specialist Soul rules it preserves.
 
 ## Gate Legacies
 

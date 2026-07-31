@@ -122,7 +122,7 @@ An embodied death is not automatically Final Death. The [Soul Engine](../soul/RE
 
 Movement between categories may be an exit from one population and entry into another without changing total persons. Record transfers once and preserve their origin, destination, delay, and uncertainty.
 
-Later ecology and migration rules own movement routes and settlement consequences. Population rules own the demographic accounting around those movements.
+[Ecology and Migration](ECOLOGY_AND_MIGRATION.md) owns movement routes and settlement consequences. Population rules own the demographic accounting around those movements.
 
 ## Reproduction and Recruitment
 
@@ -349,6 +349,7 @@ This document does not define:
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Soul Engine](../soul/README.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)
