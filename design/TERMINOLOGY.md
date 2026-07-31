@@ -3523,3 +3523,27 @@ The recorded time, condition, observation, actor opportunity, threshold, or deci
 ## Resolution Commitment
 
 The external record fixed before an uncertain result is known, identifying the question, evidence, Supported Branch Set, selected method, weighting or exclusions, disclosure status, resolver, and recording procedure.
+
+## Embodiment Opportunity
+
+A world-side process capable of producing a new viable life or person-like embodiment at a particular time and place through a species-appropriate, constructed, spiritual, or other established route.
+
+## Reincarnation Candidate
+
+One Embodiment Opportunity that passes every applicable reachability, temporal, world-viability, personhood, soul-compatibility, earned-access, causal-placement, and Reincarnation Mode test for a specific soul and transition.
+
+## Candidate Seed
+
+An unvalidated draft incarnation possibility derived from one Embodiment Opportunity for preparation and variety review, carrying no eligibility or selection authority until every required pass succeeds.
+
+## Candidate Pool
+
+The bounded set of currently valid Reincarnation Candidates considered for one transition under its target window, reachable domains, soul conditions, campaign focus, preparation scope, and active Reincarnation Mode.
+
+## Candidate Profile
+
+An external Campaign Record for one Reincarnation Candidate separating embodiment provenance, species and stage, starting context, eligibility findings, established player-facing and hidden facts, uncertainty, dependencies, and selection status.
+
+## Reincarnation Brief
+
+The external GM input to one candidate-generation pass, recording transition identity, target window, active Reincarnation Mode, reachable domains, relevant Soul conditions, campaign focus, participant boundaries, choice requirements, and protected information.

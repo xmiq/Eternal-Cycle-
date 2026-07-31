@@ -3841,3 +3841,43 @@ When open resolution would leak protected world truth, the GM may conceal the me
 ## D-960 — Deferral Preserves Branches
 
 An uncertainty not yet decision-relevant may remain unresolved until a stated Resolution Trigger. Deferral does not secretly select a branch, freeze autonomous processes, or excuse omission of a due player choice.
+
+## D-961 — Reincarnation Generation Owns Candidates, Not Transition
+
+The GM generator operates only within step 5 of the canonical seven-stage Reincarnation sequence. It cannot confirm Final Death, perform Life Reconciliation, determine Interlife awareness, choose a Reincarnation Mode, embody a Soul, or grant retained access.
+
+## D-962 — Every Candidate Requires an Embodiment Opportunity
+
+A Reincarnation Candidate begins from an actual world-side birth, hatching, spawning, formation, construction, awakening, or other established person-producing process at a specific time and place. Soul desire or thematic usefulness cannot conjure one.
+
+## D-963 — Reincarnation Does Not Displace Existing Persons by Default
+
+Unconsciousness, infancy, silence, dormancy, low intelligence, suppression, or unfamiliar communication does not establish vacancy. Overwriting, merging, suppressing, or replacing an existing person or Soul requires an explicit canonical mechanism with agency, consent, continuity, harm, and separation rules.
+
+## D-964 — Reincarnation Modes Govern Selection, Not Eligibility
+
+Emergent, Constrained Choice, and Directed modes determine who chooses among valid possibilities and what direction shapes the search. No mode can waive world availability, reachability, soul compatibility, earned access, personhood, or causal placement.
+
+## D-965 — Candidate Histories Are Real Causal Histories
+
+A mature or predeveloped starting embodiment requires actual prior development, relationships, resource use, constraints, and consequences without inventing years of player-character deliberate choices. It cannot serve as a free package of mastery, property, authority, or allegiance.
+
+## D-966 — Candidate Sets Are Contextual, Not Power Rankings
+
+Candidate variety is assessed through lived embodiment, ecology, society, needs, access, limitations, risks, support, and future opportunity. Candidates are not equalized or ordered by one combat score, rarity, or universal value.
+
+## D-967 — Monster Focus Does Not Remove Reincarnation Choice
+
+Generation should regularly include meaningfully distinct monster lives when valid because monster reincarnation is a primary project focus. It cannot make monster selection mandatory, reduce monsters to combat bodies, or exclude valid non-monster lives by default.
+
+## D-968 — Invalid Candidate Removal Is Correction, Not Rerolling
+
+A Candidate Seed or displayed option that never met eligibility is removed without charging the soul or player an in-world cost. The active mode's promised agency is restored, while deliberate rejection and repeated death create no reroll currency.
+
+## D-969 — Selected Candidates Revalidate Before Embodiment
+
+Every material opportunity, route, occupancy, compatibility, access, and selection dependency is checked immediately before embodiment. Invalidation reopens only the active pre-embodiment selection process; it cannot cancel or reopen a completed incarnation.
+
+## D-970 — Empty Candidate Pools Extend Transition Rather Than Create Bodies
+
+When no valid Embodiment Opportunity currently exists, Interlife continues or another established Reincarnation condition acts until a recorded review condition. The generator cannot create a body, route, species, or compatibility exception to avoid delay.

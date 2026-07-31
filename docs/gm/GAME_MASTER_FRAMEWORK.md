@@ -448,6 +448,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
+- [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

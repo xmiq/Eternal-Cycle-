@@ -9,8 +9,9 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 3. [Game Master Framework](GAME_MASTER_FRAMEWORK.md) - authority, session procedure, continuity, world simulation, information boundaries, records, and AI GM guidance.
 4. [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) - immediate-outcome closure, causal layers, proportionality, handoffs, persistence, and external recording.
 5. [Uncertainty Handling](UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
-6. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
-7. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+6. [Reincarnation Generation](REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, mode-specific presentation, selection handoff, and revalidation.
+7. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
+8. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 
 ## Authority and Boundary
 

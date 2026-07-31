@@ -86,6 +86,8 @@ Interlife awareness depends on established soul development and conditions. It m
 
 ### 5. Generate Valid Incarnation Candidates
 
+[Reincarnation Generation](../gm/REINCARNATION_GENERATION.md) is the canonical GM procedure for finding, filtering, profiling, presenting, and revalidating the valid candidates governed by this stage.
+
 A valid candidate must satisfy all applicable constraints:
 
 - **Embodiment:** There is a plausible birth, hatching, spawning, construction, awakening, or other species-appropriate route into life.
@@ -303,3 +305,4 @@ A seasonal World Gate allows a monster population to establish a viable settleme
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md)
 - [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
+- [Reincarnation Generation](../gm/REINCARNATION_GENERATION.md)

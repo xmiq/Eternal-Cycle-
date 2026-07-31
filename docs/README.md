@@ -116,6 +116,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Game Master Framework](gm/GAME_MASTER_FRAMEWORK.md) - operational responsibilities, authority, session lifecycle, world simulation, continuity, information views, external campaign records, and AI GM guidance.
 - [Consequence Resolution](gm/CONSEQUENCE_RESOLUTION.md) - immediate-outcome boundaries, causal consequence layers, proportionality, owner handoffs, persistence, and recording.
 - [Uncertainty Handling](gm/UNCERTAINTY_HANDLING.md) - truth and observer views, uncertainty sources, evidence, method selection, bounded randomization, deferral, fair secrecy, and correction.
+- [Reincarnation Generation](gm/REINCARNATION_GENERATION.md) - world-grounded incarnation candidates, eligibility passes, personhood, Reincarnation Modes, disclosure, selection handoff, and revalidation.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope
