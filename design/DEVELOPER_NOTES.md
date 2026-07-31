@@ -1563,3 +1563,92 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep faction identity, population, institution, culture, NPC members, leadership, authority, capability, decisions, actions, Encounter roles, and live state separate.
 5. Preserve dissent, imperfect information, member agency, bounded representation, function-specific capacity, succession, adaptation, cross-species participation, no universal alignment, and external records.
 6. Validate, advance only to **Create world-event generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Faction Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator.
+- Create dungeon generator.
+- Create faction generator (`8ab9ae0`, `docs: create faction generator`).
+
+### Active Roadmap Task
+
+- **Create world-event generator**.
+- Do not begin the Time Skip procedure, Age-transition procedure, or later roadmap work until world-event generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/FACTION_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/DUNGEON_GENERATOR.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/NPC_GENERATOR.md`
+- `docs/gm/README.md`
+- `docs/world-engine/FACTION_BEHAVIOUR.md`
+- `docs/world-engine/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 814-line canonical owner document.
+- Validated 134 Markdown files and 4,380 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 916 unique terminology entries and 1,020 unique decision IDs with zero duplicates.
+- Confirmed faction generation is `[x]` and world-event generation is the sole current task at `[ ]`.
+- Confirmed faction classification begins from actual coordination, participants, overlapping interests, relationships, action routes, boundaries, and continuity rather than shared categories or plot need.
+- Confirmed membership, representation, leadership, authority, information, capability, mobilization, decisions, and world outcomes remain distinct and owner-bound.
+- Confirmed dissent, imperfect information, member agency, succession, revalidation, cross-species participation, human/AI GM parity, and external Campaign Records remain preserved.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Faction Generation Brief
+- Faction Basis
+- Faction Seed
+- Faction Version
+- Faction Generation Pass
+
+### Canonical Decisions Added
+
+- D-1011 — Faction Generation Begins With Coordination.
+- D-1012 — Shared Categories Do Not Create Factions.
+- D-1013 — Participation Relationships Remain Distinct.
+- D-1014 — Faction Information Remains Distributed.
+- D-1015 — Decisions and Actions Require Routes.
+- D-1016 — Faction Capacity Is Function-Specific.
+- D-1017 — Member Agency Survives Coordination.
+- D-1018 — Faction Versions Preserve Change and Contest.
+- D-1019 — Faction Randomization Resolves Only Supported Details.
+- D-1020 — Faction Generation Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, World-State Variables, Simulation Abstraction, all specialist World Engine domains, and relevant completed system interfaces.
+2. Create the dedicated canonical owner for **Create world-event generator**; do not implement the Time Skip procedure, Age-transition procedure, or Phase 10 templates.
+3. Generate campaign-local world events from established initiating changes, affected referents, supported Causal Links, autonomous actors, delays, Counterforces, branches, feedback, information views, Pending Consequences, and Review Points rather than plot need or random spectacle.
+4. Keep event generation, immediate outcome adjudication, specialist-domain mechanics, Time Skips, Age Transitions, Encounters, and live world state separate.
+5. Preserve causal provenance, world autonomy, uncertainty, actor agency, proportional simulation, specialist ownership, non-deterministic futures, and external Campaign Records.
+6. Validate, advance only to **Create time-skip procedure** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
