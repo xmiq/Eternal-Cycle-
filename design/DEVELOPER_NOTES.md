@@ -1476,3 +1476,90 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep site generation, Dungeon classification, inhabitants, agentive controllers, resources, encounters, collapse, activity, and campaign state separate.
 5. Preserve existing Dungeon Activity ownership, inhabitant agency, causal topology, extraction consequences, non-respawning resources, fair information, world persistence, and external records.
 6. Validate, advance only to **Create faction generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Dungeon Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator.
+- Create dungeon generator (`cc381f4`, `docs: create Dungeon generator`).
+
+### Active Roadmap Task
+
+- **Create faction generator**.
+- Do not begin world-event generation, Time Skip procedure, Age-transition procedure, or later roadmap work until faction generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/DUNGEON_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/NPC_GENERATOR.md`
+- `docs/gm/README.md`
+- `docs/world-engine/DUNGEON_ACTIVITY.md`
+- `docs/world-engine/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 809-line canonical owner document.
+- Validated 133 Markdown files and 4,342 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 911 unique terminology entries and 1,010 unique decision IDs with zero duplicates.
+- Confirmed Dungeon generation is `[x]` and faction generation is the sole current task at `[ ]`.
+- Confirmed Dungeon classification begins from Formation, Boundary, Sustaining Basis, distinct conditions, exchanges, continuity, and evidence rather than layout or content conventions.
+- Confirmed Topology, Access Routes, inhabitants, resources, Cores, hazards, claims, information, reconfiguration, and revalidation remain source- and owner-bound.
+- Confirmed no level scaling, spawning, resource refresh, loot entitlement, quantum mapping, universal Dungeon mind, or reset-after-play entered the framework.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Dungeon Generation Brief
+- Dungeon Basis
+- Dungeon Seed
+- Dungeon Generation Pass
+- Dungeon Region
+
+### Canonical Decisions Added
+
+- D-1001 — Dungeon Generation Begins With a Dungeon Basis.
+- D-1002 — Dungeon Classification May Fail.
+- D-1003 — Dungeon Topology Follows Causes Rather Than Difficulty.
+- D-1004 — Dungeon Access Is Actor- and Condition-Specific.
+- D-1005 — Dungeon Inhabitants and Resources Require Continuity Routes.
+- D-1006 — Generated Dungeon Cores Are Optional and Function-Bounded.
+- D-1007 — Hazards and Treasure Are Sourced Rather Than Required.
+- D-1008 — Dungeon Randomization Resolves Only Supported Details.
+- D-1009 — Generated Dungeons Persist and Revalidate.
+- D-1010 — Dungeon Generation Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/FACTION_BEHAVIOUR.md`, Populations, Resources, Economies, War and Unrest, Human Institutions, Monster Societies, and relevant Soul, Development, Skill, Magic, and Dungeon interfaces.
+2. Create the dedicated canonical owner for **Create faction generator**; do not implement world-event generation, Time Skip procedure, or Age-transition procedure.
+3. Generate campaign-local factions from a valid constituency, shared relation or organizing basis, interests, objectives, membership, internal groups, decision routes, information distribution, capacity, resources, legitimacy, relationships, current activity, and continuity without treating the faction as one mind.
+4. Keep faction identity, population, institution, culture, NPC members, leadership, authority, capability, decisions, actions, Encounter roles, and live state separate.
+5. Preserve dissent, imperfect information, member agency, bounded representation, function-specific capacity, succession, adaptation, cross-species participation, no universal alignment, and external records.
+6. Validate, advance only to **Create world-event generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
