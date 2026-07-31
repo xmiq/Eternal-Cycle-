@@ -1221,3 +1221,85 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep encounter sourcing, framing, participant intent, information, stakes, uncertainty, resolution, consequence propagation, persistence, and external recording separate.
 5. Preserve player agency, noncombat viability, withdrawal, avoidance, asymmetric contexts, human/AI parity, and specialist-system ownership.
 6. Validate, advance only to **Create monster generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Encounter Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator (`b522110`, `docs: create encounter generator`).
+
+### Active Roadmap Task
+
+- **Create monster generator**.
+- Do not begin NPC generation, Dungeon generation, faction generation, or later roadmap work until monster generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 786-line canonical owner document.
+- Validated 130 Markdown files and 4,221 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 893 unique terminology entries and 980 unique decision IDs with zero duplicates.
+- Confirmed encounter generation is `[x]` and monster generation is the sole current task at `[ ]`.
+- Confirmed Encounter Sources require causal existence, participant and process integrity, player-facing decision relevance, canonical support, and external campaign records.
+- Confirmed the procedure preserves noncombat play, avoidance, withdrawal, asymmetric danger, contextual Capability Assessment, human/AI parity, and specialist ownership.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Encounter
+- Encounter Source
+- Encounter Seed
+- Encounter Frame
+- Encounter Pressure
+- Encounter Handoff
+
+### Canonical Decisions Added
+
+- D-971 — Encounter Sources Precede Encounter Framing.
+- D-972 — Encounters Begin at Material Player Decisions.
+- D-973 — Encounter Generation Frames but Does Not Resolve.
+- D-974 — Encounters Are Never Level-Scaled.
+- D-975 — Encounter Selection Follows Causality and Player Direction.
+- D-976 — Encounter Randomization Has Bounded Authority.
+- D-977 — Participants and Processes Retain Their Own Integrity.
+- D-978 — Avoidance and Quiet Intervals Are Valid Outcomes.
+- D-979 — Encounter Boundaries Follow Decisions, Not Defeat Conditions.
+- D-980 — Encounter Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, the complete Monster Evolution phase, relevant Soul, Development, Skill, Magic, World Engine, and Encounter interfaces, and the Alpha Playtest Rules.
+2. Create the dedicated canonical owner for **Create monster generator**; do not implement NPC, Dungeon, faction, or world-event generation.
+3. Generate world-valid monster profiles from established lineage or origin, embodiment, habitat, ecology, life stage, Development, Skill access, Evolution history, culture or society, and current conditions without creating universal stat blocks.
+4. Keep species definition, individual generation, current capability, behaviour, encounter role, Evolution eligibility, and campaign placement separate.
+5. Preserve monster personhood, noncombat existence, ecological causality, variation, hidden information, current-life effort, no level scaling, and external campaign records.
+6. Validate, advance only to **Create NPC generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
