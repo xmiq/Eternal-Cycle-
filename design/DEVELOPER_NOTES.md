@@ -1652,3 +1652,101 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep event generation, immediate outcome adjudication, specialist-domain mechanics, Time Skips, Age Transitions, Encounters, and live world state separate.
 5. Preserve causal provenance, world autonomy, uncertainty, actor agency, proportional simulation, specialist ownership, non-deterministic futures, and external Campaign Records.
 6. Validate, advance only to **Create time-skip procedure** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — World-Event Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator.
+- Create dungeon generator.
+- Create faction generator.
+- Create world-event generator (`75c3582`, `docs: create world-event generator`).
+
+### Active Roadmap Task
+
+- **Create time-skip procedure**.
+- Do not begin the Age-transition procedure or later roadmap work until the Time Skip procedure is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/WORLD_EVENT_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+- `docs/gm/DUNGEON_GENERATOR.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/FACTION_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/NPC_GENERATOR.md`
+- `docs/gm/README.md`
+- `docs/gm/REINCARNATION_GENERATION.md`
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+- `docs/world-engine/CAUSAL_EVENT_CHAINS.md`
+- `docs/world-engine/README.md`
+- `docs/world-engine/SIMULATION_ABSTRACTION.md`
+- `docs/world-engine/WORLD_STATE_VARIABLES.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 856-line canonical owner document.
+- Validated 135 Markdown files and 4,432 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 922 unique terminology entries and 1,030 unique decision IDs with zero duplicates.
+- Confirmed world-event generation is `[x]` and the Time Skip procedure is the sole current task at `[ ]`.
+- Confirmed every World Event requires a valid initiating input, receiving subject, transition route, timing, conditions, owner, evidence, and bounded direct transition.
+- Confirmed direct events, consequences, Causal Event Chains, World-State Claims, Encounters, Time Skips, Age Transitions, and specialist mechanics remain distinct.
+- Confirmed quiet, prevented, delayed, redirected, misidentified, and unresolved results remain valid; no event quota, random spectacle, actor puppetry, or automatic progression entered the framework.
+- Confirmed world autonomy, information views, distribution, Material Exceptions, human/AI GM parity, and external Campaign Records remain preserved.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- World Event
+- World-Event Generation Brief
+- World-Event Basis
+- World-Event Seed
+- World-Event Generation Pass
+- Event Boundary
+
+### Canonical Decisions Added
+
+- D-1021 — World-Event Generation Begins With a Basis.
+- D-1022 — The Event Boundary Owns Only the Direct Transition.
+- D-1023 — Event Generation May Establish No Occurrence.
+- D-1024 — Actor-Mediated Events Preserve Agency.
+- D-1025 — Event Scale Dimensions Remain Independent.
+- D-1026 — Concurrency Does Not Establish Causation.
+- D-1027 — Events, Consequences, and State Updates Remain Distinct.
+- D-1028 — World-Event Randomization Resolves Only Supported Uncertainty.
+- D-1029 — World Events Do Not Imply Encounters or Temporal Transitions.
+- D-1030 — World-Event Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/SIMULATION_ABSTRACTION.md`, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, `docs/world-engine/WORLD_STATE_VARIABLES.md`, `docs/world-engine/AGES_AND_WORLD_RESETS.md`, every specialist World Engine domain, Reincarnation, Development and Training, and the World-Event Generator.
+2. Create the dedicated canonical owner for **Create time-skip procedure**; do not implement the Age-transition procedure or any Phase 10 template.
+3. Define Time Skip as narrative and simulation compression between established moments, never as a cause, event, clean reset, training award, or permission to invent outcomes.
+4. Require a start state, end horizon, player intent and standing instructions, Simulation Frames, Resolution Anchors, Material Exceptions, autonomous actor passes, due Review Points, event and consequence resolution, specialist handoffs, and an external causal bridge.
+5. Preserve player agency checkpoints, Reincarnation and Interlife continuity, current-life effort, training evidence, world autonomy, uncertainty, distributions, minorities, irreversible changes, unresolved branches, and external Campaign Records.
+6. Validate, advance only to **Create Age-transition procedure** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
