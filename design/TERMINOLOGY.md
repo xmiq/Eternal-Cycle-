@@ -2767,3 +2767,47 @@ Reliable, timely, safe, and socially usable access to adequate sustenance for a 
 ## Waste Burden
 
 Residue or displaced harm created by extraction, transformation, transport, use, or disposal that another process, place, Population, source, or future time must absorb.
+
+## Economic Network
+
+A scoped pattern through which actors produce, control, exchange, allocate, transfer, consume, maintain, or owe goods, services, access, and obligations.
+
+## Exchange Claim
+
+A claim that specified parties can transfer defined goods, services, access, rights, or obligations under stated terms, timing, information, authority, and enforcement.
+
+## Economic Value
+
+The contextual importance an actor or institution places on a good, service, access route, relationship, symbol, or obligation for a particular decision.
+
+## Price
+
+One stated exchange term under particular conditions, distinct from intrinsic worth, moral value, production cost, total social cost, scarcity, and Purchasing Access.
+
+## Purchasing Access
+
+An actor's practical ability to complete one exchange under current terms, routes, permissions, information, trust, compatibility, and risk.
+
+## Economic Position
+
+An actor's contextual access to Stocks, income Flows, productive assets, claims, relationships, credit, authority, protection, and obligations.
+
+## Economic Capacity
+
+The bounded ability of an Economic Network to produce, distribute, maintain, or replace a specified output under current conditions.
+
+## Transaction Friction
+
+A route-specific cost or constraint on completing an exchange, including search, transport, verification, negotiation, law, trust, enforcement, conversion, compatibility, and risk.
+
+## Economic Obligation
+
+An established duty to transfer value, perform service, provide access, refrain from action, or bear risk under stated parties, conditions, timing, authority, and enforcement.
+
+## Economic Concentration
+
+Control of a material source, route, capability, claim, medium, institution, or reserve by comparatively few actors within a stated Economic Network.
+
+## Economic Shock
+
+A comparatively rapid change to source, production, access, information, trust, authority, demand, route, currency, or obligation within an Economic Network.

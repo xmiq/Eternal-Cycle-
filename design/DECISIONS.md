@@ -3009,3 +3009,51 @@ Extraction, transformation, transport, use, and disposal may impose residue or d
 ## D-752 — Resource Use Cannot Manufacture Owned Capability
 
 Consumption, possession, abundance, shortage, or accumulation cannot directly grant Skills, Development, Soul growth, Monster Evolution, Weapon Functions, or magical effects outside their owning rules.
+
+## D-753 — Economies Are Networks, Not Scores
+
+An Economic Network is a scoped pattern of production, control, allocation, exchange, transfer, consumption, maintenance, and obligation among actual actors and institutions. No treasury, market, currency, or index represents the whole economy.
+
+## D-754 — Allocation Forms May Coexist
+
+Household provision, gifts, reciprocity, barter, custom, rationing, markets, wages, tribute, tax, patronage, debt, command, theft, and sacred obligation may coexist. No form is inherently universal, fair, efficient, voluntary, stable, or dominant.
+
+## D-755 — Price Is a Contextual Exchange Term
+
+Price records one offered, negotiated, customary, or imposed exchange term under stated conditions. It is not intrinsic worth, moral value, production cost, total social cost, scarcity, Purchasing Access, or universal preference.
+
+## D-756 — Currency Depends on Recognition Networks
+
+A currency or exchange medium requires recognition, verification, transfer, storage, trust, enforcement, and conversion. No currency or exchange rate is universal across places, species, Ages, Worlds, or Gates.
+
+## D-757 — Purchasing Access Is More Than Wealth
+
+Completing an exchange depends on accepted medium, provider and route access, permission, information, timing, bargaining conditions, trust, compatibility, and ability to bear risk and obligation.
+
+## D-758 — Economic Capacity Does Not Equal Output
+
+Economic Capacity is the bounded ability of a network to produce, distribute, maintain, or replace a specified output. Inputs, capable actors, tools, institutions, coordination, time, maintenance, access, and waste remain necessary.
+
+## D-759 — Supply and Demand Are Scoped Pressures
+
+Need without a route to claim or purchase may remain unmet rather than becoming effective demand. Existing Stock without access, willingness, and offered terms is not effective supply. Neither pressure dictates one price or allocation response.
+
+## D-760 — Ownership, Control, Custody, and Access Differ
+
+Legal title, customary right, possession, custody, effective control, practical access, and source consent remain separate economic claims.
+
+## D-761 — Obligations Require a Valid Route Across Death
+
+Debt, contract, tax, property, and service duties do not automatically follow a soul through Reincarnation. Any continuity requires actual law, covenant, identity, evidence, relationship, inheritance, recognition, or renewed agreement.
+
+## D-762 — Economic Concentration Has Mixed Consequences
+
+Concentrated control may support coordination, standards, projects, or resilience while also creating exclusion, bargaining imbalance, succession risk, corruption opportunity, and single points of failure. It is not inherently beneficial or harmful.
+
+## D-763 — Economic Recovery Does Not Restore Prior Distribution
+
+Output or trade may recover while debts, lost ownership, displaced workers, dependency, inequality, ruined capacity, changed trust, and institutional precedent persist.
+
+## D-764 — Economic Relations Cannot Convert Persons into Commodities
+
+Workers, monsters, Weapon Souls, spirits, gods, and other persons retain agency and personhood. A market, contract, price, custody claim, or coercive institution cannot redefine them as ordinary inventory under canonical rules.

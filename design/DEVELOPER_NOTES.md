@@ -722,3 +722,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Agentive sources need meaningful refusal and negotiation without making every ordinary material a person.
 - Resource Substitution should reveal new dependencies and displaced burdens instead of acting as a costless reset.
 - Food Security must preserve household and cohort distribution when regional production appears adequate.
+
+## Phase 8 Economy Watchlist
+
+- Campaigns should use prices only where exchange terms matter and avoid turning every obligation or gift into coin-equivalent bookkeeping.
+- Need and effective demand must remain distinct so poverty is not misread as absence of need.
+- Economic Capacity should expose skilled-person and maintenance bottlenecks without pooling individual Development.
+- Currency conversion across Gates and Ages needs local trust and verification rather than universal exchange rates.
+- Economic shocks should preserve debt, ownership, trust, and distribution legacies after output recovers.
+- Informal and monster economies need room for unfamiliar allocation forms without forcing human market assumptions onto them.

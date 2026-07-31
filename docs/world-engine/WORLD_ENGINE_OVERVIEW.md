@@ -23,7 +23,7 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 - [population and demographics](POPULATIONS.md);
 - [food and natural resources](RESOURCES_AND_FOOD.md);
 - ecology and migration;
-- trade and economies;
+- [trade and economies](ECONOMIES.md);
 - factions and institutions;
 - war and unrest;
 - disease and medicine;
@@ -54,6 +54,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Populations](POPULATIONS.md)
 - [Resources and Food](RESOURCES_AND_FOOD.md)
+- [Economies](ECONOMIES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
