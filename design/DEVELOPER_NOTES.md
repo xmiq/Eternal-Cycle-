@@ -1388,3 +1388,91 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep personhood, species or body, identity, social role, faction relation, profession, current capability, behaviour, Encounter role, and campaign placement separate.
 5. Preserve NPC agency, imperfect information, internal contradiction, change through consequence, human/monster parity, non-hostile existence, player agency, and external campaign records.
 6. Validate, advance only to **Create dungeon generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — NPC Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator (`c229e4d`, `docs: create NPC generator`).
+
+### Active Roadmap Task
+
+- **Create dungeon generator**.
+- Do not begin faction generation, world-event generation, Time Skip procedure, or later roadmap work until Dungeon generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/NPC_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/MONSTER_GENERATOR.md`
+- `docs/gm/README.md`
+- `docs/human/README.md`
+- `docs/world-engine/FACTION_BEHAVIOUR.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 820-line canonical owner document.
+- Validated 132 Markdown files and 4,303 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 906 unique terminology entries and 1,000 unique decision IDs with zero duplicates.
+- Confirmed NPC generation is `[x]` and Dungeon generation is the sole current task at `[ ]`.
+- Confirmed NPC is a campaign control role rather than a species, metaphysical category, capability rank, hostility flag, or permanent assignment.
+- Confirmed Person Basis, identity, current-life history, capability, social standing, faction relation, Observer View, objectives, decision context, and Encounter placement remain distinct.
+- Confirmed NPCs preserve independent agency, off-screen activity, consequences, control-handoff continuity, proportional detail, and human/AI GM parity.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- NPC
+- NPC Generation Brief
+- Person Basis
+- NPC Seed
+- NPC Profile
+- NPC Continuity Core
+- NPC Decision Frame
+
+### Canonical Decisions Added
+
+- D-991 — NPC Is a Control Role Rather Than an Ontology.
+- D-992 — NPC Generation Requires a Person Basis Before a Plot Function.
+- D-993 — Generated Histories Support Facts Rather Than Award Them.
+- D-994 — NPC Information Is Observer-Specific.
+- D-995 — NPC Generation Establishes Context but Not Future Decisions.
+- D-996 — NPC Relationships Preserve Independent Agency.
+- D-997 — Capability, Role, Authority, and Recognition Stay Separate.
+- D-998 — NPCs Continue Off-Screen Without Plot Immunity.
+- D-999 — NPC Detail Is Proportional to Causal Need.
+- D-1000 — NPC Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/DUNGEON_ACTIVITY.md`, all World Engine source systems, Monster Ecology and Societies, Development, Skills, Magic, Soul Weapons, and relevant Soul interfaces.
+2. Create the dedicated canonical owner for **Create dungeon generator**; do not implement faction, world-event, Time Skip, or Age-transition generation.
+3. Generate campaign-local Dungeons from valid origin, boundary, topology, Sustaining Basis, access routes, conditions, activity, inhabitants, ecology, resources, hazards, claims, information, and current world placement without level scaling or room-reward scripts.
+4. Keep site generation, Dungeon classification, inhabitants, agentive controllers, resources, encounters, collapse, activity, and campaign state separate.
+5. Preserve existing Dungeon Activity ownership, inhabitant agency, causal topology, extraction consequences, non-respawning resources, fair information, world persistence, and external records.
+6. Validate, advance only to **Create faction generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
