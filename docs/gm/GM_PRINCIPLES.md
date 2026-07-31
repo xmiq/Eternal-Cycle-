@@ -72,3 +72,5 @@ When play begins before every roadmap system is complete, use [Alpha Playtest Ru
 ## Operational Framework
 
 Use the [Game Master Framework](GAME_MASTER_FRAMEWORK.md) for the session loop, rules hierarchy, world simulation, campaign continuity, information model, NPC and encounter procedures, external records, feedback flow, and AI Game Master guidance.
+
+Use the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) when lasting historical change may support a successor Age Claim. Classification follows established causality and evidence; it never creates the transition it is meant to assess.

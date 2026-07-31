@@ -4149,3 +4149,43 @@ Death ends the old body's authority and ordinarily invalidates its Skip Mandate.
 ## D-1037 — Compressed Projects Have No Default Yield
 
 Training, work, travel, recovery, relationships, research, construction, administration, and other projects gain no fixed result from elapsed time. Their owners still require valid methods, inputs, effort, feedback, maintenance, actor choices, interruptions, limits, and evidence.
+
+## D-1038 — The Age-Transition Procedure Classifies Rather Than Creates
+
+The procedure assesses established history against canonical Age criteria. It cannot select a desired successor Age, genre, theme, or outcome and invent backward causes to support it.
+
+## D-1039 — No Age Transition Is a Valid Finding
+
+Historical importance, catastrophe, elapsed time, contact, war, death, or extensive change does not require a new Age Claim. The procedure may preserve all consequences while finding that the former Age remains the most useful scoped description.
+
+## D-1040 — A Transition Basis Compares Change and Continuity
+
+Age classification requires an evidence-backed comparison of former and candidate successor Signatures, including causes, influence, durability, distribution, continuities, exceptions, counterevidence, and uncertainty. A list of dramatic events is insufficient.
+
+## D-1041 — Boundary Findings Are Scoped and May Be Intervals
+
+An Age Boundary may differ by region, network, population, institution, Contact Domain, audience, or later interpretation. The GM uses the narrowest supported event or interval and does not invent one universal date for convenience.
+
+## D-1042 — Successor Age Claims Preserve Former Arrangements
+
+A successor Age Signature may be valid while old institutions, minorities, refuges, routes, languages, relationships, ecologies, archives, and other World Legacies remain influential. Exceptions define scope rather than becoming errors to erase.
+
+## D-1043 — Age Names and Genre Do Not Cause Transitions
+
+Names, calendars, prophecies, political declarations, and campaign-facing genre descriptions interpret historical conditions. They do not establish a successor order, grant mechanics, or authorize a World Reset.
+
+## D-1044 — World Reset Qualification Remains Separate
+
+The Age-transition procedure must apply the canonical Reset Preconditions, Trigger where relevant, Mechanism, Footprint, Survivorship, and World Revalidation rules. A valid Reset participates in an Age Transition, while an ordinary transition needs no Reset.
+
+## D-1045 — A Successor Age Signature Is Descriptive Rather Than Deterministic
+
+An established successor claim describes influential current arrangements. It does not guarantee spread, permanence, victory, stability, collapse, or any other future path, and actors retain their agency.
+
+## D-1046 — Persistent Historical Witnesses Remain Source-Bound
+
+Reincarnated souls, Soul Echoes, Soul Avatars, Weapon Souls, Weapon Echoes, gods, spirits, institutions, and Archive Records may preserve evidence across Age Boundaries. Their knowledge, access, interpretation, consent, and authority remain bounded and subject to corroboration or dispute.
+
+## D-1047 — Age-Transition Records Remain Campaign-External
+
+Populated Age-Transition Briefs, Transition Bases, Boundary Findings, current Age Claims, timelines, witnesses, evidence, World Transition Profiles, and revalidation results belong in the external Campaign Record and never become repository canon through play alone.

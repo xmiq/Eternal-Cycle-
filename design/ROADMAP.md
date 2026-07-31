@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 9 — GM Toolkit**
+**Current phase: Phase 10 — Templates and Validation**
 
-**Current task: Create Age-transition procedure**
+**Current task: Character template**
 
-Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create Age-transition procedure** unless the project owner explicitly changes the target. Do not begin Phase 10 or later roadmap work before the Age-transition procedure and the Phase 9 exit audit are complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Character template** unless the project owner explicitly changes the target. Do not begin the Species template or later Phase 10 work before the Character template is complete.
 
-Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 The reusable Gate-event template requested by the project owner remains queued for Phase 10. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
 
@@ -217,7 +217,11 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 - [x] Create faction generator
 - [x] Create world-event generator
 - [x] Create time-skip procedure
-- [ ] Create Age-transition procedure
+- [x] Create Age-transition procedure
+
+### Exit Criteria
+
+Phase 9 is complete only when the alpha-playtest framework, GM responsibilities, consequence resolution, uncertainty handling, Reincarnation generation, Encounter generation, monster generation, NPC generation, Dungeon generation, faction generation, World-Event generation, Time Skip procedure, and Age Transition procedure are defined, linked, and internally consistent; every tool applies existing owners without duplicating their mechanics; player and autonomous-actor agency, uncertainty, causal continuity, persistent consequence, and human/AI GM parity remain explicit; generators produce bounded campaign-external preparation rather than scripted outcomes, level-scaled content, universal scores, or hidden progression; Time Skips compress narration rather than causality; Age transitions classify established history rather than create it; World Reset qualification remains separate; no campaign state or populated tool record enters the repository; no blocking questions remain; and all links, terminology, navigation, ownership boundaries, and roadmap statuses validate.
 
 ## Phase 10 — Templates and Validation
 

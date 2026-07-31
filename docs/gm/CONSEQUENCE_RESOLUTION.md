@@ -525,6 +525,7 @@ This document does not define:
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

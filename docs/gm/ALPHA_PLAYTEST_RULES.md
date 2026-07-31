@@ -45,13 +45,13 @@ A **Canonical Foundation** is an authoritative set of principles and boundaries 
 
 The foundation itself is Canonical. Missing procedures, content, formulas, branches, or generators are not.
 
-Current examples include:
+Examples of canonical foundations that remain useful include:
 
 - the [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md);
 - [GM Principles](GM_PRINCIPLES.md);
-- the candidate constraints and GM preparation in [Reincarnation](../soul/REINCARNATION.md), while later generation tooling remains incomplete.
+- the candidate constraints and GM preparation in [Reincarnation](../soul/REINCARNATION.md).
 
-A Canonical Foundation constrains improvisation. A provisional World Engine event, for example, must preserve causal consequence, world autonomy, uncertainty, and player agency even while detailed simulation procedures remain incomplete.
+A Canonical Foundation constrains improvisation. A provisional detail, for example, must preserve causal consequence, world autonomy, uncertainty, and player agency even when a narrow template or campaign-specific interface remains incomplete.
 
 ### Provisional
 
@@ -92,7 +92,7 @@ The following material is ready to constrain alpha play within its stated scope:
 - the complete [Skill Engine](../skills/README.md), including human and monster Skill Trees, Reincarnation crossover, Adaptive Skills, Skill Evolution, Skill Fusion, active and passive expression, Hidden Skills, Conceptual Skills, and anti-proliferation safeguards;
 - the complete [Monster Evolution](../monster-evolution/README.md) framework, including ecology, pressure, routes, stages, branches, hidden conditions, Mutations, apex forms, societies, adaptation, Hybridization, extinction, Soul interaction, and safeguards;
 - the complete [Human Classes and Professions](../human/README.md) framework, including Classes, Professions, Martial Traditions, Magical Schools, Social Advancement, Institutions, Class Evolution, and human progression limits;
-- the canonical [Game Master Framework](GAME_MASTER_FRAMEWORK.md) and [GM Principles](GM_PRINCIPLES.md);
+- the complete [GM Toolkit](README.md), including [GM Principles](GM_PRINCIPLES.md), [Game Master Responsibilities](GM_RESPONSIBILITIES.md), the [Game Master Framework](GAME_MASTER_FRAMEWORK.md), [Consequence Resolution](CONSEQUENCE_RESOLUTION.md), [Uncertainty Handling](UNCERTAINTY_HANDLING.md), [Reincarnation Generation](REINCARNATION_GENERATION.md), the completed generators, the [Time Skip Procedure](TIME_SKIP_PROCEDURE.md), and the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md);
 - the complete [Soul Weapons](../soul-weapons/README.md) framework;
 - the canonical [Mana](../magic/MANA.md) framework within its completed scope;
 - the canonical [Magical Affinities](../magic/MAGICAL_AFFINITIES.md) framework within its completed scope;
@@ -122,13 +122,12 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) interface;
 - the canonical [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) procedure.
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, and World Engine rules are canonical within their stated scopes. GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, World Engine, and GM Toolkit rules are canonical within their stated scopes. Template, content, formula, and later implementation tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- the Age-transition procedure;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
 Mentioning these areas in this framework does not change their roadmap status.
@@ -251,9 +250,9 @@ Use the completed World Engine framework as follows:
 
 ### GM Tools
 
-Until Phase 9 is complete:
+Use the completed Phase 9 GM Toolkit as follows:
 
-- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), [Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), [Dungeon Generation](DUNGEON_GENERATOR.md), [Faction Generation](FACTION_GENERATOR.md), [World-Event Generation](WORLD_EVENT_GENERATOR.md), and the [Time Skip Procedure](TIME_SKIP_PROCEDURE.md), within their stated scopes;
+- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), [Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), [Dungeon Generation](DUNGEON_GENERATOR.md), [Faction Generation](FACTION_GENERATOR.md), [World-Event Generation](WORLD_EVENT_GENERATOR.md), the [Time Skip Procedure](TIME_SKIP_PROCEDURE.md), and the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md), within their stated scopes;
 - use transparent qualitative judgment;
 - state material uncertainty and its cause;
 - compare capability through [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md);
@@ -403,6 +402,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Faction Generator](FACTION_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

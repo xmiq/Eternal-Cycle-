@@ -3715,3 +3715,15 @@ The intended latest time or condition at which compressed narration returns to o
 ## Causal Bridge
 
 The external continuity account connecting an established Time Skip start state to its established return state through decisive causes, choices, World Events, specialist transitions, changes, continuities, information, uncertainty, and surviving legacies.
+
+## Age-Transition Brief
+
+The external preparation record stating an Age-transition question, scope, assessment interval, audience, former Age Claim, candidate successor claim, established evidence, uncertainty, canonical owners, and intended use without presuming that a transition occurred.
+
+## Transition Basis
+
+The evidence-backed comparison showing how established causes changed, preserved, displaced, or complicated the influential arrangements in a former Age Signature and whether a candidate successor Signature now describes the stated scope more accurately.
+
+## Boundary Finding
+
+A scoped GM conclusion identifying whether an Age Transition is absent, under pressure, established, scope-specific, overlapping, disputed, or includes a separately qualified World Reset, together with its evidence, limits, exceptions, and best-supported boundary description.

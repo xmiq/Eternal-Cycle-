@@ -429,7 +429,7 @@ This document does not define:
 - a mandatory narrative voice, session length, campaign tone, player count, or play style;
 - live characters, worlds, actors, rulings, or play history.
 
-Later Phase 9 documents may define the named procedures and generators within these boundaries. They must preserve responsibility ownership, specialist authority, human/AI parity, external records, player agency, and causal continuity.
+The dedicated Phase 9 procedures and generators define their named operations within these boundaries. They preserve responsibility ownership, specialist authority, human/AI parity, external records, player agency, and causal continuity.
 
 ## Related Documents
 
@@ -446,6 +446,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [Faction Generator](FACTION_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

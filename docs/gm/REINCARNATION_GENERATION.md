@@ -659,6 +659,7 @@ This document does not define:
 - [Monster Generator](MONSTER_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Overview](../soul/SOUL_ENGINE_OVERVIEW.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)

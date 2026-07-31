@@ -618,6 +618,7 @@ This document does not define:
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [Age Transition Procedure](../gm/AGE_TRANSITION_PROCEDURE.md)
 - [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Soul Space](../soul/SOUL_SPACE.md)

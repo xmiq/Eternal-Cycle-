@@ -18,7 +18,8 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 12. [World-Event Generator](WORLD_EVENT_GENERATOR.md) - causal Basis validation, direct Event Boundaries, footprint, timing, uncertainty, owner handoffs, and external records.
 13. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
 14. [Time Skip Procedure](TIME_SKIP_PROCEDURE.md) - player-authorized Skip Mandates, Standing Instructions, interruption, causal advancement, return states, and Causal Bridges.
-15. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+15. [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) - evidence-backed historical classification, scoped and disputed boundaries, World Reset checkpoints, targeted revalidation, and return to play.
+16. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 
 ## Authority and Boundary
 

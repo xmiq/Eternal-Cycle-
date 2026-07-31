@@ -460,6 +460,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Faction Generator](FACTION_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

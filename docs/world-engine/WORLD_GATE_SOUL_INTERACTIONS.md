@@ -548,6 +548,7 @@ This document does not define:
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [Age Transition Procedure](../gm/AGE_TRANSITION_PROCEDURE.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)

@@ -656,7 +656,7 @@ Preserve:
 
 Long duration does not guarantee progress, decline, unification, diversification, technological advancement, magical saturation, Age Transition, or World Reset.
 
-If the evolving state may meet the canonical criteria for an Age Transition, stop at the relevant Review Point and hand classification to the Age-transition procedure once available. Do not prelabel the interval.
+If the evolving state may meet the canonical criteria for an Age Transition, stop at the relevant Review Point and hand classification to the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md). Do not prelabel the interval.
 
 ## Uncertainty and Randomness
 
@@ -713,7 +713,7 @@ Use Consequence Resolution, Uncertainty Handling, Reincarnation Generation, Worl
 
 ### Alpha Playtest Rules
 
-Use a Provisional Rule only for one narrow missing mechanic supported by completed foundations. Do not use the Time Skip procedure to implement the pending Age-transition procedure or Phase 10 templates by implication.
+Use a Provisional Rule only for one narrow missing mechanic supported by completed foundations. Use the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) for historical classification, and do not use Time Skip to implement Phase 10 templates by implication.
 
 ## Worked Examples
 
@@ -757,7 +757,7 @@ The Return Horizon was a goal, not a guaranteed body state. Play resumes early a
 
 Several long-term changes make the old Age description increasingly misleading. The Time Skip records the actual events, transitions, survivals, and uncertainty through Review Points.
 
-It does not declare the new Age. Compression pauses at the material classification point for the dedicated Age-transition procedure.
+It does not declare the new Age. Compression pauses at the material classification point for the dedicated [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md).
 
 ### World Gate Signal During Routine Study
 
@@ -830,6 +830,7 @@ This document does not define:
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
+- [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)

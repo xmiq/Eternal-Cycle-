@@ -124,6 +124,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Faction Generator](gm/FACTION_GENERATOR.md) - Faction Basis and classification, participants, interests, information and decision routes, capacity, continuity, versioning, and external Profiles.
 - [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) - World-Event Basis, direct Event Boundaries, footprint, timing, information, uncertainty, consequence handoffs, and external records.
 - [Time Skip Procedure](gm/TIME_SKIP_PROCEDURE.md) - Skip Mandates, Standing Instructions, Return Horizons, Player Agency Checkpoints, causal Simulation Passes, and return bridges.
+- [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) - Transition Bases, Boundary Findings, scoped and disputed periodization, World Reset checkpoints, targeted revalidation, and return to play.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope

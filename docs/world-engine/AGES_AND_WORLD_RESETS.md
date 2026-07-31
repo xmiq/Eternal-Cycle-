@@ -396,6 +396,8 @@ The GM must establish enough world truth to preserve consistency while keeping l
 
 ## Age and Reset Procedure
 
+The [Age Transition Procedure](../gm/AGE_TRANSITION_PROCEDURE.md) owns the campaign-facing inquiry, Boundary Finding, player-agency pauses, presentation, and return to play. The steps below remain the canonical World Engine ownership sequence that procedure coordinates.
+
 When an Age Transition or World Reset matters:
 
 1. **State the transition claim.** Identify scope, period, current question, and whether an Age Transition, Reset, or both are proposed.
@@ -541,6 +543,7 @@ This document does not define:
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md)
+- [Age Transition Procedure](../gm/AGE_TRANSITION_PROCEDURE.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [Akashic Archive](../soul/AKASHIC_ARCHIVE.md)
