@@ -2711,3 +2711,59 @@ Continued Population change caused by existing composition and delayed life-cycl
 ## Support Burden
 
 The current demand that a specific dependency places on particular providers and systems, without implying lesser personhood or a universal ratio.
+
+## Resource Claim
+
+A claim that a specified subject can use a Stock or Flow for a defined purpose, place, and time through an actual access and transformation route, with stated quality, costs, limits, ownership or agency, and uncertainty.
+
+## Renewable Flow
+
+A resource Flow replenished through an established process whose source health, environment, maintenance, timing, and limits remain active.
+
+## Effective Supply
+
+The portion of a resource that can reach a defined user and purpose in usable condition during the relevant interval after access, processing, storage, transport, distribution, compatibility, agency, and loss are considered.
+
+## Scarcity
+
+Accessible supply limited relative to one or more uses within a stated scope and time, without determining any one response.
+
+## Shortage
+
+A current failure of Effective Supply to meet a specified demand or obligation for identified users, place, and interval.
+
+## Resource Insecurity
+
+Material exposure to future loss, interruption, control, degradation, or unaffordability of Effective Supply.
+
+## Resource Bottleneck
+
+The narrowest current condition limiting one specified supply route or use.
+
+## Depletion
+
+A reduction in accessible quantity, quality, renewal capacity, source health, or future options caused by use, damage, neglect, displacement, or contamination.
+
+## Resource Substitution
+
+Replacement of one input, source, route, or use with another for a stated purpose, preserving differences in function, compatibility, adoption, dependency, and consequence.
+
+## Strategic Reserve
+
+A protected Stock held for defined disruptions, users, or obligations whose value depends on condition, access, security, release authority, distribution, and replacement.
+
+## Supply Redundancy
+
+Materially independent sources, routes, processors, stores, or providers able to sustain a defined function after one fails.
+
+## Sustenance Profile
+
+The embodiment-specific inputs, timing, preparation, compatibility, risks, and substitutes required for one body, life stage, species, colony, or embodied process to remain viable.
+
+## Food Security
+
+Reliable, timely, safe, and socially usable access to adequate sustenance for a defined Population and interval.
+
+## Waste Burden
+
+Residue or displaced harm created by extraction, transformation, transport, use, or disposal that another process, place, Population, source, or future time must absorb.

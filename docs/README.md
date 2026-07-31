@@ -94,6 +94,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [World-State Variables](world-engine/WORLD_STATE_VARIABLES.md) - scoped variables, state families, evidence, trends, persistence, uncertainty, ownership, external Profiles, and the shared update procedure.
 - [Causal Event Chains](world-engine/CAUSAL_EVENT_CHAINS.md) - supported causal links, autonomous responses, branches, Counterforces, feedback, timing, Pending Consequences, and Causal Horizons.
 - [Populations](world-engine/POPULATIONS.md) - demographic boundaries, composition, cohorts, flows, life cycles, continuity, momentum, support, capability distribution, and uncertainty.
+- [Resources and Food](world-engine/RESOURCES_AND_FOOD.md) - Resource Claims, Effective Supply, scarcity, bottlenecks, renewal, depletion, substitution, reserves, sustenance, Food Security, and waste.
 
 ## GM Framework
 

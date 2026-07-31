@@ -4,9 +4,9 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Define resources and food**
+**Current task: Define economies**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define resources and food** unless the project owner explicitly changes the target. Do not begin economies, ecology and migration, faction behaviour, war and unrest, disease evolution, advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define economies** unless the project owner explicitly changes the target. Do not begin ecology and migration, faction behaviour, war and unrest, disease evolution, advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -184,7 +184,7 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define world-state variables as rules, not campaign data
 - [x] Define causal event chains
 - [x] Define populations
-- [ ] Define resources and food
+- [x] Define resources and food
 - [ ] Define economies
 - [ ] Define ecology and migration
 - [ ] Define faction behaviour

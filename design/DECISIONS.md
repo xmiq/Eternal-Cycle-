@@ -2965,3 +2965,47 @@ Support needs are scoped relationships between dependents, providers, and system
 ## D-741 — Population Change Requires Embodied Routes
 
 Growth, decline, survival, maturation, and renewal require valid life processes, time, access, environment, care, compatibility, resources, and agency where applicable. Narrative demand and elapsed time alone are insufficient.
+
+## D-742 — Resource Status Is Relational
+
+A thing is a resource only for a specified user, purpose, form, place, time, method, and access route. Presence, ownership, or quantity does not establish availability, fitness, access, or sustainable use.
+
+## D-743 — Effective Supply Follows the Whole Delivery Route
+
+Effective Supply is the usable portion that reaches a defined user and purpose during the relevant interval after source, quality, collection, transformation, storage, transport, distribution, compatibility, agency, and loss are considered.
+
+## D-744 — Renewability Is Conditional
+
+A Renewable Flow remains renewable only while its actual replenishment process, source health, habitat, maintenance, timing, and waste conditions continue to support use. Renewable never means inexhaustible.
+
+## D-745 — Scarcity, Shortage, and Insecurity Are Distinct
+
+Scarcity is limited accessible supply relative to uses, Shortage is a current failure to meet specified demand, and Resource Insecurity is exposure to future interruption or loss. None automatically determines price, conflict, innovation, migration, or collapse.
+
+## D-746 — Resource Bottlenecks Are Route-Specific
+
+The limiting condition may lie in source, collection, processing, labor, consent, storage, transport, information, security, distribution, tools, waste, or final access. Increasing input before a bottleneck does not guarantee greater delivery.
+
+## D-747 — Depletion Includes Future Capacity and Quality
+
+Depletion may reduce accessible quantity, quality, renewal capacity, source health, or future options. Ending extraction stops one cause but does not erase damage, delay, or World Legacy.
+
+## D-748 — Substitutes Are Not Universally Equivalent
+
+Resource Substitution must preserve differences in function, compatibility, quality, switching time, capability, source, distribution, maintenance, risk, waste, and affected parties.
+
+## D-749 — Food Security Is Access to Suitable Sustenance
+
+Food Security requires reliable, timely, safe, and socially usable access to adequate embodiment-specific sustenance. Production totals alone do not establish it, and no universal food unit applies across all bodies.
+
+## D-750 — Persons and Agentive Sources Are Not Stocks
+
+Labor, spirits, gods, Weapon Souls, Souls, and other persons enter resource chains through capability, relationship, consent, obligation, coercion, refusal, and consequence. Classification cannot turn them into transferable inventory.
+
+## D-751 — Waste Remains a Causal Output
+
+Extraction, transformation, transport, use, and disposal may impose residue or displaced harm on another process, population, place, source, or future time. Calling an output waste does not erase it or make recovery free.
+
+## D-752 — Resource Use Cannot Manufacture Owned Capability
+
+Consumption, possession, abundance, shortage, or accumulation cannot directly grant Skills, Development, Soul growth, Monster Evolution, Weapon Functions, or magical effects outside their owning rules.

@@ -10,6 +10,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 2. [World-State Variables](WORLD_STATE_VARIABLES.md) defines the shared qualitative state model, variable families, evidence, uncertainty, persistence, ownership, external record boundary, and update procedure used by every World Engine domain.
 3. [Causal Event Chains](CAUSAL_EVENT_CHAINS.md) defines supported links, autonomous responses, branches, Counterforces, feedback, delays, Pending Consequences, Causal Horizons, and cross-system handoffs.
 4. [Populations](POPULATIONS.md) defines demographic boundaries, units, composition, cohorts, entry and exit, life cycles, continuity, momentum, dependency, capability distribution, and uncertainty.
+5. [Resources and Food](RESOURCES_AND_FOOD.md) defines Resource Claims, Effective Supply, scarcity, bottlenecks, renewal, depletion, substitution, reserves, sustenance, Food Security, source agency, and Waste Burdens.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 

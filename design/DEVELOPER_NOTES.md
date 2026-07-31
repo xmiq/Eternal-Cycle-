@@ -713,3 +713,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Reproduction playtests should separate output, survival, maturation, and integration so prolific species do not become automatic exponential engines.
 - Population Continuity should recognize transformation, adoption, Hybridization, and cultural exchange without imposing purity as a design value.
 - Capability distribution should expose concentration and replacement risk without becoming a pooled population power score.
+
+## Phase 8 Resources-and-Food Watchlist
+
+- Effective Supply should expose the actual bottleneck without requiring campaigns to quantify every delivery loss.
+- Different embodiments need flexible Sustenance Profiles; playtests should avoid quietly returning to one human food unit.
+- Renewability must be reassessed when extraction, habitat, source agency, maintenance, or waste changes.
+- Agentive sources need meaningful refusal and negotiation without making every ordinary material a person.
+- Resource Substitution should reveal new dependencies and displaced burdens instead of acting as a costless reset.
+- Food Security must preserve household and cohort distribution when regional production appears adequate.

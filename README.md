@@ -51,6 +51,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
 - [`docs/world-engine/CAUSAL_EVENT_CHAINS.md`](docs/world-engine/CAUSAL_EVENT_CHAINS.md) - branching, interruptible causal propagation through autonomous actors, delays, feedback, and cross-system handoffs.
 - [`docs/world-engine/POPULATIONS.md`](docs/world-engine/POPULATIONS.md) - scoped demographic rules for composition, life cycles, continuity, momentum, dependency, and distributed capability.
+- [`docs/world-engine/RESOURCES_AND_FOOD.md`](docs/world-engine/RESOURCES_AND_FOOD.md) - access, quality, supply chains, renewal, depletion, substitution, sustenance, Food Security, and waste.
 
 ## Start Here
 
@@ -66,4 +67,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define resources and food**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define economies**.
