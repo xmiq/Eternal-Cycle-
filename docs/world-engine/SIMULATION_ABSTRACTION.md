@@ -580,7 +580,7 @@ Randomness may settle a supported uncertain branch through an authorized campaig
 
 ## Time Skips
 
-A [Time Skip](AGES_AND_WORLD_RESETS.md#time-skips-and-compression) changes narrative presentation. Simulation Passes change the world through elapsed processes and actor choices.
+A [Time Skip](AGES_AND_WORLD_RESETS.md#time-skips-and-compression) changes narrative presentation. Simulation Passes change the world through elapsed processes and actor choices. The [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md) owns player authorization, interruption, and the return to ordinary play.
 
 Before a Time Skip:
 
@@ -730,4 +730,5 @@ This document does not define:
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
 - [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md)
+- [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

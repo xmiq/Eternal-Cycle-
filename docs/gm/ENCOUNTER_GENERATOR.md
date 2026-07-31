@@ -789,3 +789,4 @@ This document does not define:
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
 - [Faction Generator](FACTION_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
+- [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)

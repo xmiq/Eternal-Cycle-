@@ -30,6 +30,8 @@ Use the [Faction Generator](../gm/FACTION_GENERATOR.md) for campaign-local facti
 
 Use the [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md) to identify and resolve bounded campaign-local occurrences from established causes. Causal Event Chains, World-State Variables, Simulation Abstraction, and each specialist domain retain ownership of propagation, state, resolution, and direct mechanics.
 
+Use the [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md) to authorize and conduct narrative compression across elapsed campaign time. Simulation Abstraction and each specialist system retain ownership of every process and transition advanced during the interval.
+
 Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.
 
 ## Integrated Guarantees

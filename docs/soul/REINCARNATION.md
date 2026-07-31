@@ -286,6 +286,7 @@ A seasonal World Gate allows a monster population to establish a viable settleme
 
 ## Related Documents
 
+- [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)
 - [Soul Depth](SOUL_DEPTH.md)
 - [Soul Resonance](SOUL_RESONANCE.md)

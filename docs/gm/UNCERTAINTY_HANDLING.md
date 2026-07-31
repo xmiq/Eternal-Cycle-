@@ -600,6 +600,7 @@ This document does not define:
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
+- [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)

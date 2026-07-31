@@ -840,6 +840,7 @@ This document does not define:
 - [NPC Generator](NPC_GENERATOR.md)
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
 - [Faction Generator](FACTION_GENERATOR.md)
+- [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [World Engine Index](../world-engine/README.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)

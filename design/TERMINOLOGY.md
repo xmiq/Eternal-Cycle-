@@ -3687,3 +3687,31 @@ One bounded procedure identifying and resolving only the event facts needed for 
 ## Event Boundary
 
 The exact material occurrence or transition established by one World Event, separated from possible consequences, actor responses, interpretations, Encounters, and future branches.
+
+## Time-Skip Brief
+
+The external preparation record stating a Time Skip's start moment, reason for compression, proposed Return Horizon, Skip Mandate, active Simulation Frames, Resolution Anchors, Material Exceptions, known Pending Consequences, information boundaries, and canonical owners.
+
+## Skip Mandate
+
+The player-authorized scope within which the GM may summarize one player character's routine conduct during a Time Skip, including goals, priorities, Standing Instructions, delegation, accepted ordinary variation, limits, and Interruption Triggers without guaranteeing outcomes.
+
+## Standing Instruction
+
+A bounded player decision made in advance for a recurring situation or known range of conditions during compressed time, limited by the character's information, embodiment, access, capability, resources, relationships, consent, and stated stop conditions.
+
+## Player Agency Checkpoint
+
+A Simulation Review Point at which a material deliberate player-character choice is due and no valid Standing Instruction, delegation, or accepted range settles it. Compression must pause before commitment and return the choice to the player.
+
+## Interruption Trigger
+
+A player-specified or canonically required condition that ends or pauses compression so an affected choice, danger, discovery, transition, or relationship change can return to ordinary play.
+
+## Return Horizon
+
+The intended latest time or condition at which compressed narration returns to ordinary play. It is a target rather than authority to cross an earlier Player Agency Checkpoint, specialist transition, unresolved material branch, or required Review Point.
+
+## Causal Bridge
+
+The external continuity account connecting an established Time Skip start state to its established return state through decisive causes, choices, World Events, specialist transitions, changes, continuities, information, uncertainty, and surviving legacies.

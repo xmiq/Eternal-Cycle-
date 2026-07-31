@@ -55,6 +55,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/DUNGEON_GENERATOR.md`](docs/gm/DUNGEON_GENERATOR.md) - Dungeon Basis validation, causal topology, access, activity, inhabitants, resources, hazards, information, revalidation, and external profiles.
 - [`docs/gm/FACTION_GENERATOR.md`](docs/gm/FACTION_GENERATOR.md) - coordination-basis validation, participants, interests, decision routes, information, capacity, continuity, versioning, and external profiles.
 - [`docs/gm/WORLD_EVENT_GENERATOR.md`](docs/gm/WORLD_EVENT_GENERATOR.md) - causal event-basis validation, direct event boundaries, footprint, timing, uncertainty, handoffs, and external records.
+- [`docs/gm/TIME_SKIP_PROCEDURE.md`](docs/gm/TIME_SKIP_PROCEDURE.md) - player-authorized compression, Standing Instructions, Review Points, agency pauses, return states, and causal bridges.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
@@ -89,4 +90,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create time-skip procedure**.
+The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create Age-transition procedure**.

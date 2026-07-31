@@ -376,7 +376,7 @@ During a Time Skip:
 
 A Time Skip may cross an Age Boundary or contain a World Reset, but the underlying transition still requires its own causes and resolution. Compression does not make an event inevitable or erase choices that would reasonably have occurred during the interval.
 
-[Simulation Abstraction](SIMULATION_ABSTRACTION.md) owns the detailed method for choosing resolution across decades and centuries.
+[Simulation Abstraction](SIMULATION_ABSTRACTION.md) owns the detailed method for choosing resolution across decades and centuries. The [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md) owns player authorization, Standing Instructions, interruption, and the Causal Bridge back into ordinary play.
 
 ## Knowledge and Uncertainty
 
@@ -540,6 +540,7 @@ This document does not define:
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
+- [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [Akashic Archive](../soul/AKASHIC_ARCHIVE.md)

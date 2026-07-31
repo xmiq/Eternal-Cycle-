@@ -123,6 +123,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Dungeon Generator](gm/DUNGEON_GENERATOR.md) - Dungeon Basis and classification, causal Regions and Topology, actor-specific access, inhabitants, resources, hazards, information, and external Profiles.
 - [Faction Generator](gm/FACTION_GENERATOR.md) - Faction Basis and classification, participants, interests, information and decision routes, capacity, continuity, versioning, and external Profiles.
 - [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) - World-Event Basis, direct Event Boundaries, footprint, timing, information, uncertainty, consequence handoffs, and external records.
+- [Time Skip Procedure](gm/TIME_SKIP_PROCEDURE.md) - Skip Mandates, Standing Instructions, Return Horizons, Player Agency Checkpoints, causal Simulation Passes, and return bridges.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope

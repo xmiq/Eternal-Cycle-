@@ -4121,3 +4121,31 @@ A World Event may occur off-screen and never become an Encounter. It is not a Ti
 ## D-1030 — World-Event Records Remain Campaign-External
 
 Populated briefs, Seeds, World-Event Records, event histories, timings, footprints, information views, uncertainty results, state changes, Pending Consequences, and Review Points belong in the external Campaign Record and never enter repository canon through play alone.
+
+## D-1031 — Time Skips Require a Skip Mandate
+
+The GM may summarize a player character's routine conduct only within a player-authorized Skip Mandate that states goals, priorities, Standing Instructions, delegation, accepted ordinary variation, limits, and Interruption Triggers. Ambiguity narrows rather than expands that authority.
+
+## D-1032 — Standing Instructions Are Conditional Attempts
+
+A Standing Instruction applies only while its perceivable trigger, information, access, embodiment, capability, resources, authority, and stated limits remain valid. It authorizes an attempt or priority, never success, another actor's response, or an unrelated identity-defining decision.
+
+## D-1033 — A Return Horizon Is a Target Rather Than an Outcome
+
+A proposed date, duration, place, project stage, recovery condition, event, or decision defines the intended latest return to ordinary play. It cannot force the desired condition, cross an earlier Player Agency Checkpoint, or keep compression running after the Mandate becomes invalid.
+
+## D-1034 — Every Time Skip Returns a Causal Bridge
+
+The return state must be connected to the start state by a sufficient external account of decisive causes, choices, World Events, specialist transitions, changes, continuities, information, uncertainty, and legacies. Narrative compression cannot replace that continuity evidence.
+
+## D-1035 — Skip Mandates Are Character-Specific
+
+Each player character retains an independent Skip Mandate, Frame, Standing Instructions, and interruption conditions. Shared location, party membership, one player's authorization, or a group objective cannot transfer control over another character's deliberate choices.
+
+## D-1036 — Reincarnation Requires a New Skip Mandate
+
+Death ends the old body's authority and ordinarily invalidates its Skip Mandate. Interlife decisions and a new incarnation require fresh authorization appropriate to the soul's current stage, new embodiment, dependencies, information, access, and circumstances.
+
+## D-1037 — Compressed Projects Have No Default Yield
+
+Training, work, travel, recovery, relationships, research, construction, administration, and other projects gain no fixed result from elapsed time. Their owners still require valid methods, inputs, effort, feedback, maintenance, actor choices, interruptions, limits, and evidence.
