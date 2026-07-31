@@ -462,7 +462,7 @@ The [Magic-World framework](../magic/WORLD_ENGINE_INTERACTIONS.md) owns the hand
 
 ### Dungeons, Stability, Ages, and Gates
 
-[Dungeon Activity](DUNGEON_ACTIVITY.md) owns Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies. [World Stability](WORLD_STABILITY.md) owns scoped stability claims. Later Phase 8 documents own Age transitions, World Resets, and world-contact Gates. Technical systems may depend on, study, exploit, protect, or be disrupted by those phenomena only after their owning rules establish the relevant facts.
+[Dungeon Activity](DUNGEON_ACTIVITY.md) owns Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies. [World Stability](WORLD_STABILITY.md) owns scoped stability claims. [Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns historical transitions and World Revalidation. Later Phase 8 documents own world-contact Gates. Technical systems may depend on, study, exploit, protect, or be disrupted by those phenomena only after their owning rules establish the relevant facts.
 
 World contact does not transfer a complete technology automatically. Contact supplies possible information, objects, people, pressures, and routes; translation, compatibility, adoption, implementation, maintenance, and politics still apply.
 
@@ -608,7 +608,7 @@ The object and knowledge have diffused. The function has not. Researchers may fi
 - Do not erase maintenance, repair, waste, externalities, unequal access, resistance, decline, or legacy.
 - Do not assume a newer, larger, faster, more magical, or more destructive system is contextually superior.
 - Do not script invention or adoption because a desired plot or historical analogy requires it.
-- Do not use this document to replace [Dungeon Activity](DUNGEON_ACTIVITY.md) or [World Stability](WORLD_STABILITY.md), or to implement Ages, resets, Gates, or simulation abstraction before their roadmap tasks are complete.
+- Do not use this document to replace [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), or [Ages and World Resets](AGES_AND_WORLD_RESETS.md), or to implement Gates or simulation abstraction before their roadmap tasks are complete.
 - Do not store named current inventions, institutions, infrastructure, projects, standards, technical disputes, or live Technical System Profiles in this repository.
 
 ## Scope Boundaries

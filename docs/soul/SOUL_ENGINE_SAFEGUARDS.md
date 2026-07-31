@@ -240,6 +240,8 @@ Public proof of past-life or Archive knowledge may alter religion, law, scholars
 
 ### Time Skips and World Resets
 
+[Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) owns the external transition, Reset, footprint, survivorship, and World Revalidation rules. The safeguards below constrain their interaction with Soul systems.
+
 When compressing years or changing Ages, establish:
 
 - the pressures that caused the transition;

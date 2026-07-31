@@ -503,7 +503,7 @@ No spell, Ritual, artifact, Divine Source, Soul, sacrifice, death, or quantity o
 
 ## Ages and World Resets
 
-At an Age transition or [World Reset](../soul/REINCARNATION.md#time-skips-ages-and-world-resets), revalidate every Magic-World Claim against the new world.
+At an [Age Transition or World Reset](../world-engine/AGES_AND_WORLD_RESETS.md), revalidate every Magic-World Claim affected by changed assumptions against the new world.
 
 Check:
 
@@ -722,6 +722,7 @@ Later Phase 8 documents may define domain-specific state and procedures inside t
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)
 - [World Stability](../world-engine/WORLD_STABILITY.md)
+- [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
 - [Monster Evolution Rules Index](../monster-evolution/README.md)
 - [Human Rules Index](../human/README.md)
 - [Soul Rules Index](../soul/README.md)

@@ -4,9 +4,9 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Define Ages and resets**
+**Current task: Define Gates and world-contact events distinct from Soul Gates**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define Ages and resets** unless the project owner explicitly changes the target. Do not begin Gates or later Phase 8 tasks before the current task is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define Gates and world-contact events distinct from Soul Gates** unless the project owner explicitly changes the target. Do not begin Gate integration with Reincarnation and Soul Avatars or later Phase 8 tasks before the current task is complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -193,7 +193,7 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define technology and magical advancement
 - [x] Define dungeon activity
 - [x] Define World Stability
-- [~] Define Ages and resets
+- [x] Define Ages and resets
 - [ ] Define Gates and world-contact events distinct from Soul Gates
 - [ ] Integrate world-contact Gates with Reincarnation and Soul Avatars
 - [~] Define simulation abstraction levels

@@ -3493,3 +3493,75 @@ A Stability Forecast records assumptions, evidence, unknown dependencies, plausi
 ## D-873 — Stability Recovery Preserves Distribution and Legacy
 
 Restored or transformed function does not erase consumed buffers, maintenance debt, displacement, exclusion, deaths, extinctions, changed relationships, distrust, ecological change, infrastructure loss, or other persistent consequences.
+
+## D-874 — Ages Are Contextual Historical Claims
+
+An Age is recognized through a scoped, dated Age Claim and selective Age Signature rather than one metaphysical label imposed uniformly on the world. Overlapping regional histories, exceptions, enclaves, contested names, and different scholarly boundaries may coexist.
+
+## D-875 — Age Boundaries Are Evidence-Based and Perspectival
+
+An Age Boundary may be abrupt, distributed, regional, disputed, or recognized only in hindsight. No universal duration, event count, death toll, changed-domain count, witness, calendar, or political declaration establishes one.
+
+## D-876 — Age Transitions Follow Causality
+
+An Age Transition requires lasting world changes and autonomous responses that make a successor Age Claim materially more useful than the former one. A chapter break, ruler's death, catastrophe, discovery, prophecy, or desired theme cannot create a transition without that route.
+
+## D-877 — Genre Describes an Age but Does Not Cause It
+
+An Age may support a substantially different genre through changed civilization, technology, Magic, ecology, species relationships, and other conditions. Genre is a campaign-facing description of the result, not an in-world force, Reset Trigger, or permission to erase history.
+
+## D-878 — Every World Reset Participates in an Age Transition
+
+A World Reset changes enough coupled foundational conditions to require a successor Age claim or boundary. An Age Transition may instead emerge through ordinary historical causality and does not require a World Reset.
+
+## D-879 — Reset Means Revalidation, Not Erasure
+
+A World Reset establishes a new baseline for affected claims through World Revalidation. It does not create a clean slate, restore balance, delete prior history, or uniformly destroy and replace the world.
+
+## D-880 — Reset Preconditions, Triggers, and Mechanisms Are Distinct
+
+Reset Preconditions make a specified transformation possible or vulnerable, a Reset Trigger begins a specific mechanism when one exists, and the Reset Mechanism owns each direct effect. Evidence for one does not establish the others or grant unlimited secondary consequences.
+
+## D-881 — Reset Footprints Are Uneven
+
+A world-scale transformation may have different timing, exposure, intensity, refuges, boundaries, indirect effects, and unknown regions. World-scale does not mean uniform, total, simultaneous, equally understood, or equally survivable.
+
+## D-882 — Reset Survivorship Is Claim-Specific
+
+Continuation, adaptation, transformation, dormancy, failure, ending, and uncertainty are resolved owner by owner for each material claim. No global survival label, roll, immunity, or destruction result replaces specialist persistence and causality.
+
+## D-883 — World Revalidation Is Scoped to Changed Assumptions
+
+An Age Transition or World Reset revalidates claims whose relevant world law, source, environment, embodiment, tool, route, permission, institution, or relationship changed. It does not call unrelated established facts into doubt.
+
+## D-884 — World Resets Cannot Manufacture Specialist Effects
+
+A Reset may alter inputs, access, compatibility, pressure, opportunity, and consequence but cannot directly grant Soul change, Skill, Development, Evolution, Class, Profession, Soul Weapon Function, magical capability, adaptation, immunity, authority, or social legitimacy outside the Owning System.
+
+## D-885 — Reincarnation and World Transition Remain Separate
+
+Reincarnation retains its seven-step personal transition from Final Death through embodiment. An Age Transition or World Reset does not automatically cause Final Death, add Reincarnation stages, reopen candidate selection, or create another active incarnation.
+
+## D-886 — Persistence Through a Reset Does Not Guarantee Expression
+
+Protected Soul history, Weapon Soul continuity, knowledge, records, designs, institutions, and other surviving structures may remain inaccessible, obsolete, mistranslated, unsupported, or incompatible in the successor Age. Persistence does not waive current access, embodiment, permission, practice, or World Revalidation.
+
+## D-887 — World Transitions Preserve Actor Agency
+
+Established actors may resist, accelerate, redirect, narrow, exploit, survive, or misunderstand a transition through valid information and causal routes. No protagonist, Soul Avatar, god, faction, monster, or Weapon Soul becomes its mandatory cause or sole solution by narrative importance.
+
+## D-888 — Reset Aftermath Remains Causal
+
+Ending or redirecting a Reset Mechanism does not erase its footprint, survivors, absences, displacement, damage, adaptations, claims, records, ecological changes, political responses, or Pending Consequences. The successor Age inherits World Legacies.
+
+## D-889 — Time Skips Change Resolution, Not World Causality
+
+A Time Skip compresses narration while the world continues through established actors, processes, choices, uncertainty, and consequences. It cannot act as a cause, settle an unresolved branch by convenience, or manufacture progress.
+
+## D-890 — Transitions Grant No Automatic Progression
+
+Crossing an Age Boundary, surviving or causing a Reset, suffering through its footprint, preserving history, or becoming historically important does not automatically grant Skill, Development, Stat XP, Soul growth, Evolution, Class, affinity, Soul Weapon awakening, or any other progression.
+
+## D-891 — World Transition Records Remain External
+
+Current Age Claims, Age Signatures, boundaries, timelines, Reset Preconditions, Triggers, Mechanisms, footprints, survivors, changed laws, aftermath, and World Transition Profiles are campaign state and never belong in the canonical repository.

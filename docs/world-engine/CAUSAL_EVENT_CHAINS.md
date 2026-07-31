@@ -341,6 +341,7 @@ This document does not define:
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [World Stability](WORLD_STABILITY.md)
+- [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

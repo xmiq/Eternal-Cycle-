@@ -329,7 +329,7 @@ No spell, Ritual, artifact, Divine Source, quantity of Mana, sacrifice, or death
 
 World Stability can supply evidence that existing arrangements are robust, brittle, reorganizing, or failing. It does not define an Age, select a transition, trigger a World Reset, choose what survives, or authorize a clean slate.
 
-The later Ages-and-resets rules own:
+[Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns:
 
 - how Age boundaries are recognized;
 - when a transition becomes materially distinct from ordinary change;
@@ -491,6 +491,7 @@ This document does not define:
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
+- [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [Soul Engine](../soul/README.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Development](../progression/README.md)

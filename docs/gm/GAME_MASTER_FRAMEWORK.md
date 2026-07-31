@@ -267,7 +267,7 @@ Continuity records what remains true after change. It does not preserve the old 
 | **Destroyed settlement** | Preserve deaths, displacement, ruins, claims, resource shifts, memories, records, rebuilding attempts, and political or ecological response as applicable |
 | **Extinct species** | Preserve the extinction's causes, absences, ecological effects, cultural memory, remnants, and Archive Traces; do not restore a population without a valid route |
 | **Evolving faction** | Preserve membership, succession, internal conflict, changed goals, institutions, resources, reputation, and consequences rather than treating a label as one timeless actor |
-| **World Reset or Age transition** | Transform conditions without silently erasing history, causal traces, Soul continuity, or consequences protected by their Owning Systems |
+| **[World Reset or Age transition](../world-engine/AGES_AND_WORLD_RESETS.md)** | Transform conditions without silently erasing history, causal traces, Soul continuity, or consequences protected by their Owning Systems |
 
 Corrections may be necessary when records conflict, a factual mistake is discovered, or new canon requires conversion. Record material corrections externally, preserve unaffected consequences where possible, and discuss changes that alter meaningful player choices. A quiet retcon is not continuity management.
 
@@ -449,6 +449,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
 - [War and Unrest](../world-engine/WAR_AND_UNREST.md)
 - [World Stability](../world-engine/WORLD_STABILITY.md)
+- [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
 - [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md)
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)

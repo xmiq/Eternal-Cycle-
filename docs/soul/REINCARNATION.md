@@ -198,6 +198,8 @@ When literal expression is impossible, experience may remain dormant or contribu
 
 Reincarnation may bridge any amount of time needed for a valid new life and a healthy long-term story. A long Interlife is a consequence, not a deletion of history.
 
+[Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) owns Age claims, world-scale transition causes, Reset mechanisms, footprints, survivorship, and World Revalidation. This document continues to own the soul's seven-step personal transition.
+
 - Time skips advance causal world conditions.
 - World Resets may change geography, species, magic, technology, and civilization.
 - A World Reset is not automatically triggered by one death.
@@ -279,3 +281,4 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
+- [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)

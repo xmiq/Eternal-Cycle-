@@ -2,7 +2,7 @@
 
 ## Age
 
-A major historical era with its own civilizations, dominant powers, technologies, magical assumptions, and ecological order.
+A contextual historical era whose materially influential arrangements remain coherent enough that observers can describe a recognizable world order across a stated scope and period, without implying global uniformity.
 
 ## Canonical
 
@@ -3295,3 +3295,55 @@ An evidence-based statement about plausible continuity, reorganization, or failu
 ## World Stability Profile
 
 An external Campaign Record of scoped Stability Referents, findings, supports, strains, couplings, buffers, response capacity, thresholds, distribution, interventions, forecasts, Pending Consequences, evidence, and uncertainty.
+
+## Age Claim
+
+A dated, scoped interpretation that a period has a sufficiently recognizable arrangement of influential conditions to be treated as one Age by a stated audience.
+
+## Age Signature
+
+The selective set of influential political, ecological, technical, magical, social, economic, cosmological, or other arrangements by which an Age Claim is recognized.
+
+## Age Boundary
+
+The evidence-based interval or event by which one Age Claim is separated from another for a stated scope and audience.
+
+## Age Transition
+
+A causal process in which lasting changes make a successor Age Claim more useful and accurate than the former one while preserving historical continuity.
+
+## World Reset
+
+An exceptional causal transformation that reconfigures enough coupled foundational world conditions that all affected claims must be revalidated rather than assumed to continue unchanged.
+
+## Reset Precondition
+
+An established condition required for a particular World Reset mechanism to become possible, vulnerable, or active without guaranteeing that the Reset occurs.
+
+## Reset Trigger
+
+The event, action, or local State Threshold that begins a specific Reset Mechanism once its necessary Preconditions are present.
+
+## Reset Mechanism
+
+The established process by which a World Reset changes one or more foundational world conditions through identified owners and causal interfaces.
+
+## Reset Footprint
+
+The actual distribution of a World Reset's direct and propagated effects across place, time, population, environment, institution, and metaphysical condition.
+
+## Reset Survivorship
+
+The owner-by-owner assessment of what continues, adapts, transforms, becomes dormant, fails, ends, or remains uncertain through a World Reset.
+
+## World Revalidation
+
+The post-transition process of testing material continuing claims against the world conditions and assumptions that now exist.
+
+## Time Skip
+
+A narrative change in simulation resolution that compresses an interval while preserving its material causes, choices, changes, uncertainty, and consequences.
+
+## World Transition Profile
+
+An external Campaign Record of an Age Transition or World Reset claim, preceding and successor Age Claims, pressures, actors, Reset basis, footprint, survivorship, responses, World Revalidation, legacies, Pending Consequences, evidence, and uncertainty.

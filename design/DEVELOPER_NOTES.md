@@ -873,3 +873,14 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Stability Interventions should expose displaced burdens, excluded alternatives, consent, and maintenance rather than declaring heroic or magical solutions universally successful.
 - Stability Forecasts need enough uncertainty to permit meaningful action without allowing retroactive causes or secret deterministic scripts.
 - The Ages-and-resets task must use stability evidence without inventing a zero-stability trigger, clean slate, or automatic Reset.
+
+## Phase 8 Ages-and-Resets Watchlist
+
+- Age Claims should remain scoped historical tools rather than one omniscient calendar or homogeneous world label.
+- Playtests should distinguish ordinary change, catastrophe, Age Transition, World Reset, Reincarnation transition, and Time Skip without relying on event names.
+- World Reset scenarios need explicit Preconditions, Mechanisms, and Footprints without making complete causal knowledge automatically available to characters.
+- Reset Survivorship should preserve uneven exposure and owner-specific outcomes without requiring an exhaustive audit of unaffected facts.
+- Genre changes should arise from the successor Age Signature while preserving survivors, legacies, and transformed old advantages.
+- A living incarnation caught in a Reset must remain possible; Reset must not become a disguised mandatory death or Reincarnation trigger.
+- World Revalidation should make old knowledge valuable but fallible rather than either useless or automatically authoritative.
+- The Gate task must distinguish Gate contact from Age Transition and World Reset while allowing a sufficiently consequential Gate event to contribute causally to either.

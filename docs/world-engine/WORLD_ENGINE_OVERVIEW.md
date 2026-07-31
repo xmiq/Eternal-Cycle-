@@ -30,6 +30,7 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 - [technology and magical advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md);
 - [dungeons and supernatural regions](DUNGEON_ACTIVITY.md);
 - [World Stability](WORLD_STABILITY.md), systemic strain, response, and transformation;
+- [Ages and World Resets](AGES_AND_WORLD_RESETS.md), historical transitions, revalidation, and long continuity;
 - climate and disasters;
 - culture and religion.
 
@@ -63,6 +64,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Stability](WORLD_STABILITY.md)
+- [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

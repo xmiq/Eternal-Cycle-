@@ -367,7 +367,7 @@ The shared faction identity does not yield one response. Unequal burdens, differ
 - Do not make diplomacy, betrayal, capture, schism, merger, or reform deterministic outcomes.
 - Apply [War and Unrest](WAR_AND_UNREST.md) when faction contestation escalates into Civil Unrest, Armed Conflict, War, occupation, or conflict aftermath; do not use this document to replace that owner.
 - Apply [Disease Evolution](DISEASE_EVOLUTION.md) when faction decisions concern Disease Processes, transmission, public health, or disease legacies; do not use faction motives to determine medical truth.
-- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), or [World Stability](WORLD_STABILITY.md), or to resolve Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
+- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), or [Ages and World Resets](AGES_AND_WORLD_RESETS.md), or to resolve Gates or long-horizon abstraction before their roadmap tasks are complete.
 - Do not store named live factions, current leaders, memberships, objectives, resources, relationships, decisions, or actions in this repository.
 
 ## External Campaign Records

@@ -470,7 +470,7 @@ Disease consequences are asymmetric and specific. Contact creates monitoring, tr
 - Do not make Reincarnation a source of inherited bodily immunity or let ordinary disease bypass Soul-harm safeguards.
 - Do not erase consent, privacy, support, appeal, personhood, or unequal burden under a public-health emergency.
 - Do not use Disease Profiles to provide real-world medical advice or claim universal biomedical accuracy.
-- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), or [World Stability](WORLD_STABILITY.md), or to implement Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
+- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), [World Stability](WORLD_STABILITY.md), or [Ages and World Resets](AGES_AND_WORLD_RESETS.md), or to implement Gates or long-horizon abstraction before their roadmap tasks are complete.
 - Do not store named active outbreaks, patients, case counts, current quarantines, treatments, live Reservoirs, or campaign timelines in this repository.
 
 ## External Campaign Records
