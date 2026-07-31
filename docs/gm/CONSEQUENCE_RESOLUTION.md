@@ -21,7 +21,7 @@ A successful action may create costs, exposure, opposition, obligations, or harm
 | Causal propagation, branches, feedback, Counterforces, Pending Consequences, and Causal Horizon | [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) |
 | Current world conditions changed by a consequence | The relevant [World Engine](../world-engine/README.md) domain |
 | What a character or actor knows about a consequence | Campaign information views under the [Game Master Framework](GAME_MASTER_FRAMEWORK.md) |
-| How genuine uncertainty is represented or resolved | The later roadmap task **Define uncertainty handling** |
+| How genuine uncertainty is represented or resolved | [Uncertainty Handling](UNCERTAINTY_HANDLING.md) |
 | Material campaign outcomes and follow-up | External Campaign Record |
 | Reusable canonical change | Repository governance, never ordinary campaign play |
 
@@ -522,6 +522,7 @@ This document does not define:
 - [GM Principles](GM_PRINCIPLES.md)
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
+- [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)

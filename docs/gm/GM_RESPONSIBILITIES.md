@@ -149,7 +149,7 @@ The GM must:
 
 Information stewardship does not require revealing every danger. It requires enough fair evidence and viable inquiry for meaningful choice where hidden information can materially change an outcome.
 
-Detailed uncertainty procedures belong to the later roadmap task **Define uncertainty handling**. This responsibility establishes the boundary that procedure must preserve.
+[Uncertainty Handling](UNCERTAINTY_HANDLING.md) owns the detailed classification, evidence, method selection, deferral, randomization, disclosure, and recording procedures. This responsibility preserves its information boundaries during play.
 
 ### Agency Stewardship
 
@@ -437,6 +437,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [GM Principles](GM_PRINCIPLES.md)
 - [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
+- [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

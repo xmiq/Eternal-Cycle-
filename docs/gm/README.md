@@ -8,8 +8,9 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 2. [Game Master Responsibilities](GM_RESPONSIBILITIES.md) - bounded duties, ownership handoffs, operating discipline, delegation, records, and human/AI parity.
 3. [Game Master Framework](GAME_MASTER_FRAMEWORK.md) - authority, session procedure, continuity, world simulation, information boundaries, records, and AI GM guidance.
 4. [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) - immediate-outcome closure, causal layers, proportionality, handoffs, persistence, and external recording.
-5. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
-6. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+5. [Uncertainty Handling](UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
+6. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
+7. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 
 ## Authority and Boundary
 

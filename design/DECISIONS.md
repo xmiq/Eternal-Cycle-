@@ -3805,3 +3805,39 @@ When a valid defense, refusal, interruption, evacuation, cure, negotiation, or o
 ## D-951 — Consequences Follow Causal Distribution
 
 Consequences reach the subjects, populations, environments, institutions, and observers supported by their routes, scope, timing, and Counterforces. Narrative focus on the protagonist neither attracts every consequence nor shields others from distributed effects.
+
+## D-952 — Uncertainty Is Question- and View-Specific
+
+Every material uncertainty identifies one exact claim and the Factual, Observer, player-facing, record, rule, or intent view in which it is unsettled. Uncertainty in one view does not erase truth established in another.
+
+## D-953 — Hidden Truth Is Not an Unresolved Future
+
+An established fact hidden from an observer remains fixed in the Factual View and is not randomized again. A genuinely unresolved future remains open even when present causes are known.
+
+## D-954 — Record Gaps Grant No Silent Creative Authority
+
+Missing or contradictory campaign records require recovery, explicit correction, agreed reconstruction, or bounded prospective treatment. They cannot be converted into retroactive mysteries, rescues, traps, capabilities, or denials for convenience.
+
+## D-955 — Open Details Cannot Alter Prior Meaningful Choices
+
+The GM may establish a previously immaterial ordinary detail within canon and context, but cannot use unspecified history to invalidate earlier preparation, consent, counters, consequences, or decisions.
+
+## D-956 — Settled and Impossible Outcomes Are Not Randomized
+
+Established facts and canonical owners apply deterministically within their scope. A branch lacking necessary causality receives no minimum chance, while a supported deterministic result receives no mandatory failure chance merely to create suspense.
+
+## D-957 — Resolution Methods Commit Before Results
+
+The question, supported branches, method, relevant weighting or exclusions, disclosure status, and recording procedure are fixed before an uncertain result is known. They cannot be changed afterward to preserve a preferred plot.
+
+## D-958 — Random Results Have Bounded Scope
+
+An authorized random result settles only its declared Uncertainty Question among supported branches. It cannot imply unrelated intent, knowledge, quality, collateral effect, progression, actor response, or future history.
+
+## D-959 — Concealed Resolution Remains Auditable
+
+When open resolution would leak protected world truth, the GM may conceal the method or result from affected players while preserving the Resolution Commitment and outcome in the external Campaign Record. Concealment grants no authority to alter the result.
+
+## D-960 — Deferral Preserves Branches
+
+An uncertainty not yet decision-relevant may remain unresolved until a stated Resolution Trigger. Deferral does not secretly select a branch, freeze autonomous processes, or excuse omission of a due player choice.

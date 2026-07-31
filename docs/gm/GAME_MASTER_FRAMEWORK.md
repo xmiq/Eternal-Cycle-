@@ -183,11 +183,15 @@ Use [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) to separate and route im
 
 ### Uncertainty in Simulation
 
+[Uncertainty Handling](UNCERTAINTY_HANDLING.md) is the canonical owner for classifying uncertainty, selecting a valid resolution method, preserving hidden information, and recording deferred questions.
+
 World truth establishes current causes; it does not make an unresolved future into a fact. The GM may know the present conditions without knowing which possible outcome will occur. Preserve that uncertainty until actions, evidence, or a valid resolution method settle it.
 
 The GM is authoritative about established facts, not omnipotently certain about every prediction. Plans can fail, models can be wrong, hidden actors can remain undiscovered, and several plausible futures can coexist without secret scripting.
 
 ## Information Model
+
+[Uncertainty Handling](UNCERTAINTY_HANDLING.md) defines the Factual, Observer, and player-facing views and their uncertainty boundaries in detail.
 
 These information layers are independent:
 
@@ -443,6 +447,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [GM Principles](GM_PRINCIPLES.md)
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
+- [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

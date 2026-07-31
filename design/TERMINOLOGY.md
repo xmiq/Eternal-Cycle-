@@ -3491,3 +3491,35 @@ A condition in which an actor or process has enough relevant access, information
 ## Consequence Handoff
 
 An explicit routing of an established outcome, cost, trace, or state change to the next canonical owner, preserving affected subjects, causal route, information, constraints, timing, Counterforces, and unresolved portions without deciding the receiving result.
+
+## Factual View
+
+The Game Master's working representation of established world truth, including hidden facts, dated state, estimates, explicit unknowns, unresolved processes, record conflicts, and Pending Consequences without implying perfect prediction or exhaustive detail.
+
+## Observer View
+
+The evidence, memories, records, interpretations, beliefs, and uncertainty available to one situated actor, character, institution, group, or sensing process through its actual access and information routes.
+
+## Uncertainty Question
+
+One exact unsettled claim identifying its subject, scope, time, relevant information view, source of uncertainty, stakes, owners, supported alternatives, and condition for resolution.
+
+## Record Gap
+
+A material campaign fact that cannot be recovered safely because the external record is absent, contradictory, corrupted, or too vague. It requires recovery, correction, agreed reconstruction, or prospective treatment rather than silent invention.
+
+## Open Detail
+
+A previously unspecified fact whose earlier value was immaterial to established decisions, capabilities, consequences, and continuity, allowing bounded establishment now without retroactive mechanical or narrative leverage.
+
+## Supported Branch Set
+
+The bounded alternatives to an Uncertainty Question that retain valid causal routes and owner support after settled and unsupported branches are removed.
+
+## Resolution Trigger
+
+The recorded time, condition, observation, actor opportunity, threshold, or decision that makes a deferred Uncertainty Question material enough to resolve or review.
+
+## Resolution Commitment
+
+The external record fixed before an uncertain result is known, identifying the question, evidence, Supported Branch Set, selected method, weighting or exclusions, disclosure status, resolver, and recording procedure.
