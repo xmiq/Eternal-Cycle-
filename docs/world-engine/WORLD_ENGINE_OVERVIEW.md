@@ -27,7 +27,7 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 - [factions](FACTION_BEHAVIOUR.md) and institutions;
 - [war and unrest](WAR_AND_UNREST.md);
 - [disease and medicine](DISEASE_EVOLUTION.md);
-- magic and technology;
+- [technology and magical advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md);
 - dungeons and supernatural regions;
 - climate and disasters;
 - culture and religion.
@@ -59,6 +59,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)
 - [War and Unrest](WAR_AND_UNREST.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
+- [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

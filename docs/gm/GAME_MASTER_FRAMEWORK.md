@@ -449,6 +449,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
 - [War and Unrest](../world-engine/WAR_AND_UNREST.md)
 - [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md)
+- [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

@@ -16,6 +16,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 8. [Faction Behaviour](FACTION_BEHAVIOUR.md) defines faction boundaries, distributed interests and information, decision routes, mobilization, capability, cohesion, dissent, adaptation, relationships, and continuity.
 9. [War and Unrest](WAR_AND_UNREST.md) defines contestation, Civil Unrest, Armed Conflict, War, escalation, mobilization, Operational Capacity, territorial control, civilian agency, cessation, demobilization, and conflict legacies.
 10. [Disease Evolution](DISEASE_EVOLUTION.md) defines Disease Processes, Etiology, hosts, exposure, transmission, Disease States, outbreaks, agent evolution, interventions, public health, Reincarnation boundaries, and disease legacies.
+11. [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) defines Technical Systems, Discovery, Invention, Validation, Adoption, Diffusion, implementation, maintenance, automation, decline, recovery, and collective magical advancement.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 

@@ -837,3 +837,15 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Public-health interventions need playable tradeoffs among efficacy, trust, support, access, consent, privacy, and unequal burden without making care institutions uniformly villainous or infallible.
 - Cross-world contact should permit novel disease risk in both directions without making every Gate an automatic plague event.
 - Reincarnation must end ordinary body-bound illness without erasing contagion, grief, institutional change, or other world consequences.
+
+## Phase 8 Technology-and-Magical-Advancement Watchlist
+
+- Technical System Profiles should remain selective external records rather than becoming civilization sheets or research-point ledgers.
+- Playtests should keep Discovery, Invention, Prototype, Validation, Adoption, Diffusion, Implementation, and maintenance separate without turning every tool into a project-management exercise.
+- Technical Capability should expose design, production, operation, maintenance, repair, adaptation, and recovery bottlenecks without creating one civilization level.
+- Magical Advancement must remain downstream of specialist Magic rules, especially source agency, Mana relations, embodiment, consent, and failure.
+- Monster and unfamiliar technologies need evaluation by actual function and consequence rather than resemblance to human industrial history.
+- Automation should visibly relocate labor, risk, expertise, and control while avoiding the assumption that all displaced work is either liberation or harm.
+- Reincarnated experts should accelerate inquiry and relearning without importing old infrastructure, authority, standards, or world-law compatibility.
+- Gate contact should make technical translation, adoption, and maintenance consequential rather than granting instant superiority to either side.
+- Technical decline and recovery should preserve partial knowledge, tacit Skill, institutional memory, ecological legacy, and plausible mistaken reconstruction.

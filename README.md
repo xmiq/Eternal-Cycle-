@@ -57,6 +57,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/FACTION_BEHAVIOUR.md`](docs/world-engine/FACTION_BEHAVIOUR.md) - distributed faction interests, information, decisions, mobilization, cohesion, adaptation, and continuity.
 - [`docs/world-engine/WAR_AND_UNREST.md`](docs/world-engine/WAR_AND_UNREST.md) - causal contestation, unrest, organized violence, operations, territorial control, cessation, and conflict legacies.
 - [`docs/world-engine/DISEASE_EVOLUTION.md`](docs/world-engine/DISEASE_EVOLUTION.md) - qualitative disease causality, transmission, outbreak dynamics, agent evolution, care, public health, and legacies.
+- [`docs/world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md`](docs/world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) - contextual technical change from discovery and invention through adoption, infrastructure, maintenance, decline, and recovery.
 
 ## Start Here
 
@@ -72,4 +73,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define technology and magical advancement**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define dungeon activity**.

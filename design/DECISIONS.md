@@ -3293,3 +3293,71 @@ A biotic, symbiotic, colony, prosthetic, or body-linked Soul Weapon Vessel may s
 ## D-823 — Disease Recovery Preserves Legacies
 
 Case decline, agent elimination, restored output, or population replacement does not erase death, disability, chronic illness, grief, changed susceptibility, Reservoirs, debt, institutional power, stigma, distrust, ecological change, magical residue, or other Disease Legacies.
+
+## D-824 — Technical Processes Remain Distinct
+
+Inquiry, Discovery, Invention, Prototype, Validation, Adaptation, Adoption, Diffusion, Implementation, maintenance, decline, and recovery are separate claims. Evidence for one does not establish the others.
+
+## D-825 — Technical Capability Is Function-Specific and Collective Where Appropriate
+
+The ability to design, produce, operate, validate, maintain, repair, adapt, teach, govern, or recover a Technical System may belong to different contributors. It does not pool into a leader, inventor, state, species, artifact, or civilization score.
+
+## D-826 — Pressure Does Not Guarantee Innovation
+
+Need, curiosity, scarcity, war, suffering, funding, repetition, failure, and elapsed time can create motives, evidence, access, or constraints. They do not guarantee a useful Discovery, Invention, adaptation, or advancement reward.
+
+## D-827 — Validation Is Scoped
+
+A successful Prototype or use validates only the function, conditions, bodies, sources, scale, and failure claims actually tested. Prestige, authority, divine origin, ancient provenance, Akashic evidence, or one success does not make a Technical System universally reliable.
+
+## D-828 — Adoption Requires Actor-Specific Routes
+
+Technical Adoption depends on actual usefulness, trust, access, compatibility, training, consent, cost, culture, law, maintenance, control, distribution, and alternatives. Non-adoption does not prove ignorance or backwardness.
+
+## D-829 — Diffusion Does Not Install Capability
+
+Objects, records, observation, teaching, espionage, conquest, migration, salvage, memory, or world contact can carry technical information and components. They do not automatically provide Skill, Development, Access, authority, consent, infrastructure, correct interpretation, or repair capacity.
+
+## D-830 — Scale Requires Implementation Capacity
+
+One working effect, Prototype, prodigy, artifact, Recipe, Ritual, Soul Weapon, or demonstration does not establish scalable production or access. Scaling must preserve required people, sources, materials, sites, coordination, validation, distribution, maintenance, and failure response under changed conditions.
+
+## D-831 — Maintenance Is Part of Technical Capability
+
+Inspection, repair, replacement, source relationships, supply, training, records, waste handling, and recovery are continuing parts of a Technical System. Initial construction or output does not prove sustainable operation.
+
+## D-832 — Automation Relocates Work and Dependency
+
+Automation delegates specified work to an established system. It may alter labor, access, consistency, risk, control, and expertise concentration, but it does not create free output, infinite scale, transferred mastery, erased maintenance, or absent responsibility.
+
+## D-833 — Magical Advancement Retains Magic Ownership
+
+Collective improvement in magical use does not create Mana, affinity, Access, authority, source consent, Spell validity, personal Magical Development, or a new Magic system. Every magical contribution first follows its specialist owner and then enters technical adoption and world causality.
+
+## D-834 — Standards Are Scoped and Political as Well as Technical
+
+Technical Standards and interoperability apply to specified interfaces and conditions. They can improve safety and coordination while excluding valid bodies, methods, cultures, or sources, concentrating control, or creating correlated failure; similarity never proves interoperability.
+
+## D-835 — Technical Systems Preserve Embodiment and Species Difference
+
+Tools, interfaces, records, procedures, and infrastructure operate through actual bodies, senses, life cycles, environments, and cultures. Human resemblance is not a measure of sophistication, and technical exposure does not grant Species Traits, Mutation, or Evolution.
+
+## D-836 — Technical Change Cannot Manufacture Owned Progression
+
+Possession, use, ownership, observation, success, employment, adoption, automation, or exposure cannot directly grant Skills, Development, Soul growth, Class, Profession, Evolution, affinity, or Soul Weapon capability. Change requires evidence and response under each Owning System.
+
+## D-837 — Reincarnation Carries No Technical Infrastructure
+
+Eligible memory and Imprints may support inquiry and relearning, but Reincarnation does not carry tools, laboratories, property, offices, standards, institutions, supply chains, present reliability, old world laws, or another actor's permission.
+
+## D-838 — Weapon Souls Are Technical Participants, Not Components
+
+A Weapon Soul may invent, teach, operate, validate, maintain, or refuse according to its agency. Observation, custody, contract, emergency, strategic value, or repeated use does not make its Function, memories, Bond, consent, or personhood reproducible infrastructure.
+
+## D-839 — Technical Advancement Is Multidirectional
+
+Advancement may improve reliability, safety, access, maintenance, compatibility, evidence, resilience, or ecological burden rather than raw output. Decline, obsolescence, abandonment, recovery, and recombination preserve contextual technical histories rather than movement on one inevitable line.
+
+## D-840 — Technical Consequences Preserve Distribution and Legacy
+
+Every major technical change retains contributors, affected parties, control, unequal access, externalities, dependencies, alternatives, Counterforces, and durable legacies. A recovered output or replacement system does not erase prior harms, obligations, ecological changes, distrust, or lost knowledge.

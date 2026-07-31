@@ -378,6 +378,7 @@ This document does not define:
 - [Human Classes and Professions](../human/README.md)
 - [Soul Weapons](../soul-weapons/README.md)
 - [Magic](../magic/README.md)
+- [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

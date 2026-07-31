@@ -3043,3 +3043,103 @@ A persistent bodily, demographic, ecological, institutional, economic, cultural,
 ## Disease Profile
 
 An external Campaign Record of one Disease Process or related group, including Etiology, Presentation, hosts, states, exposure, Transmission Routes, Vectors, Reservoirs, interventions, evolution, distribution, consequences, legacies, evidence, and uncertainty.
+
+## Technical System
+
+The current arrangement of knowledge, embodied contributors, tools, organisms, materials, sources, procedures, institutions, standards, routes, infrastructure, and support that makes one stated practical function possible.
+
+## Technical Capability
+
+A bounded actor's or network's current ability to produce, operate, maintain, adapt, or recover one specified Technical System under stated conditions.
+
+## Technical Advancement
+
+A contextual change that creates, improves, extends, translates, distributes, maintains, recovers, or responsibly replaces a Technical System for a stated function and population under stated conditions.
+
+## Magical Advancement
+
+Technical Advancement in the organized practical use, study, translation, distribution, maintenance, or governance of established magical sources, effects, procedures, and relationships without replacing Magic or personal Magical Development.
+
+## Discovery
+
+A supported finding about the world, a source, relationship, material, process, or constraint that was not adequately known to the relevant actor or audience.
+
+## Invention
+
+A newly arranged method, process, tool, organism, interface, procedure, or relationship that performs a stated function under demonstrated conditions.
+
+## Prototype
+
+An early implementation used to test whether a claimed Technical System can function under bounded conditions.
+
+## Technical Validation
+
+The evidence-based process of testing a claimed technical function, conditions, limits, failure modes, side effects, and repeatability for a stated audience and use.
+
+## Technical Adaptation
+
+The present work required to make a Technical System function under materially different bodies, species, cultures, sources, laws, environments, scales, or purposes.
+
+## Technical Adoption
+
+The process through which specified actors choose, accept, negotiate, are compelled into, or otherwise begin repeated use of a Technical System under actual conditions.
+
+## Technical Diffusion
+
+The movement of technical knowledge, components, practices, standards, or systems among actors, populations, institutions, regions, species, Ages, or contacted worlds through actual routes.
+
+## Implementation Capacity
+
+The current collective ability to establish a Technical System at a specified scope while preserving its required people, materials, sources, sites, coordination, quality, safety, and support.
+
+## Technical Maintenance Burden
+
+The continuing work, knowledge, resources, access, coordination, consent, and recovery needed to preserve one Technical System's function and acceptable failure behavior.
+
+## Technical Standard
+
+An agreed or enforced specification for one interface, measure, material, procedure, test, record, responsibility, or outcome within a stated scope.
+
+## Technical Interoperability
+
+The demonstrated ability of independently developed components, practices, actors, or systems to work together for a specified function under stated conditions.
+
+## Technical Infrastructure
+
+A durable world-bound arrangement of people, sites, tools, organisms, sources, records, institutions, routes, standards, and support used to sustain one or more Technical Systems.
+
+## Technical Dependency
+
+A condition in which a material function relies on continued access to one Technical System, source, route, institution, standard, or specialist role.
+
+## Path Dependence
+
+The way earlier technical and institutional choices alter the feasibility, cost, meaning, and risk of later options.
+
+## Technical Lock-In
+
+A condition in which dependency, concentrated control, lost alternatives, compatibility, settlement design, training, or switching cost makes replacement of a Technical System materially difficult.
+
+## Technical Automation
+
+The delegation of specified recurring work to a stable tool, process, organism, construct, Enchantment, Ritual Structure, or coordinated system.
+
+## Technical Legacy
+
+A world-bound material, embodied, informational, institutional, ecological, social, or political remainder of a Technical System after its former operation changes or ends.
+
+## Technical Externality
+
+A material consequence imposed on or received by actors outside the immediate technical agreement or decision.
+
+## Technical Obsolescence
+
+A contextual condition in which a Technical System no longer adequately serves a stated use under current requirements and alternatives without becoming false, primitive, or useless in every context.
+
+## Technical Recovery
+
+Present work that restores, reconstructs, adapts, or reinterprets some lost Technical Capability through surviving people, records, artifacts, environments, Soul memories, Archive evidence, experimentation, and current resources.
+
+## Technical System Profile
+
+An external Campaign Record of one Technical System's function, provenance, implementation, capability split, adoption, interfaces, infrastructure, limits, control, pressures, consequences, and uncertainty.

@@ -502,6 +502,7 @@ This Profile is external campaign state. The repository contains no completed Di
 - [Ecology and Migration](ECOLOGY_AND_MIGRATION.md)
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)
 - [War and Unrest](WAR_AND_UNREST.md)
+- [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
