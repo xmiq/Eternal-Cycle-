@@ -381,11 +381,11 @@ Accumulated history may provide strong Archive Bases, World-Bearing Resonance, o
 
 Archive recognition does not create Soul Avatar status. An Interface or Custodian may identify an emergence, but cannot appoint the bearer, decide its morality, or replace present agency.
 
-## Future World-Contact Events
+## World Gates and World Contact
 
-Future World Engine rules may define world-contact Gates or other contact between separated worlds, realms, Ages, regions, and civilizations. World-contact Gates are distinct from the scoped Soul Gates used to enter Soul Space. Until the future rules exist, Avatar Expression creates no portal and grants no cross-world movement.
+[World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) owns the detailed handoff between world contact and Avatar Expression. World Gates remain distinct from the scoped Soul Gates used to enter Soul Space.
 
-When a valid world-contact event exists, it may:
+When an established World-Contact Event is materially relevant to the soul's actual history and present responsibility, it may:
 
 - act as an Avatar Trigger or awaken relevant Echoes and Resonance Links;
 - make an actually lived prior civilization relevant to the present;
@@ -396,7 +396,11 @@ When a valid world-contact event exists, it may:
 - expose a Soul Weapon to unfamiliar materials or metaphysical conditions without granting mastery;
 - create bounded Archive Records with incomplete provenance and perspective.
 
-World contact does not manufacture alternate Soul Echoes, duplicate souls, or prove divergent personal histories. Reincarnation crosses such a boundary only when future rules establish a valid embodiment route, world compatibility, access, and causal placement.
+World contact does not manufacture alternate Soul Echoes, duplicate souls, or prove divergent personal histories. An alternate, counterpart, possible, copied, or simulated life is not an Echo. Reincarnation reaches another Contact Domain only through its normal seven stages, a valid Cross-Domain Reincarnation Route where one is required, and ordinary candidate validity.
+
+Avatar Expression does not open, close, stabilize, redirect, widen, or repair a World Gate; add a Gate Channel; improve Gate Throughput; bypass Contact Compatibility; or carry Echoes as independent travelers. The Avatar Lead crosses only as the current embodied person through a supported channel.
+
+Past-life knowledge remains dated and source-bound. A Soul Avatar may become an imperfect interpreter when accessible lives, Echoes, Imprints, or Records support the task, but gains no universal translation, objective history, diplomatic office, or authority over either Contact Domain.
 
 A contact event continues through factions, ecology, trade, disease, belief, conflict, and institutions without a Soul Avatar's involvement. The player is never automatically its cause, sole mediator, or only historically relevant actor.
 
@@ -423,10 +427,11 @@ When Soul Avatar emergence or Expression may be relevant:
 4. establish the Avatar Lead and protect current-incarnation agency;
 5. identify which active contributors participate willingly and what each source can know;
 6. apply Echo Presence, Archive provenance, species, embodiment, skill, and system limits;
-7. define entry, scope, attention, costs, visibility, and exit before resolving major effects;
-8. present disagreement and missing history without turning the Chorus into a vote or oracle;
-9. resolve external reactions through cultures, institutions, gods, monsters, and ordinary world causality;
-10. record lasting integration, damage, or Association changes without assigning points or universal bonuses.
+7. when world contact is involved, establish the Gate or contact facts before inferring a Trigger or cross-domain capability;
+8. define entry, scope, attention, costs, visibility, and exit before resolving major effects;
+9. present disagreement and missing history without turning the Chorus into a vote or oracle;
+10. resolve external reactions through cultures, institutions, gods, monsters, and ordinary world causality;
+11. record lasting integration, damage, or Association changes without assigning points or universal bonuses.
 
 Use Soul Avatars sparingly. Emergence should occur only when several established systems and lives have become meaningfully connected, not because a dramatic scene needs a stronger form. NPC Soul Avatars should have independent histories and agency, and no Soul Avatar should automatically become central to every crisis.
 
@@ -483,4 +488,6 @@ Their histories place them on opposing sides, and institutions present their con
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
+- [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

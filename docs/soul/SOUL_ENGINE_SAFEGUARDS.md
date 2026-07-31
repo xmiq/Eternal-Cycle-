@@ -254,6 +254,18 @@ When compressing years or changing Ages, establish:
 
 A new genre, magic law, technology, species order, or geography should transform old advantages rather than merely delete inconvenient history.
 
+### World Gates and Soul Continuity
+
+[World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) owns this interface. Apply these protections whenever world contact and soul continuity meet:
+
+- a World Gate is not a Soul Gate, Interlife corridor, disembodied-soul channel, or candidate menu by implication;
+- living Gate transit preserves the current incarnation and does not count as death or Reincarnation;
+- cross-domain placement requires a valid route where the domain boundary matters, then every ordinary candidate condition;
+- one uncertain boundary incident cannot create duplicate bodies, deaths, Echoes, revivals, or incarnations;
+- alternate, counterpart, simulated, copied, or possible lives do not become Soul Echoes;
+- Soul Avatar status grants no Gate operation, extra traveler, universal translation, objective history, or mandatory authority;
+- world contact continues through autonomous actors and specialist systems whether a Soul Avatar participates or refuses.
+
 ## System Safeguard Matrix
 
 | System | Primary exploit resisted | Required narrative consequence |
@@ -269,6 +281,7 @@ A new genre, magic law, technology, species order, or geography should transform
 | **[Retained Instincts](RETAINED_INSTINCTS.md)** | species collection, anatomy bypass, perfect danger sense, and disguised compulsion | old adaptations may help, misfire, conflict, or require present translation |
 | **[Akashic Archive](AKASHIC_ARCHIVE.md)** | omniscience, objective-history claims, skill copying, and reality editing | evidence remains bounded by provenance, interpretation, access politics, and exposure |
 | **[Soul Avatars](SOUL_AVATARS.md)** | prestige qualification, super-mode stacking, past-life voting, and destined centrality | synthesis creates fatigue, identity pressure, visibility, duty, and contested interpretation |
+| **[World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)** | soul-channel inference, candidate tourism, duplicate continuity, universal interpretation, and Avatar centrality | travel, death, placement, history, and contact remain distinct causal claims with specialist owners |
 | **[Soul Weapons](../soul-weapons/README.md)** | staged Awakening, ownership-as-consent, automatic mastery, compulsory progression, unrestricted Manifestation, and replacing all equipment | the Weapon Soul remains a distinct partner with its own personhood, consent, capability, damage, needs, and worldly history |
 | **[Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)** | circular qualification, duplicate rewards, and silent rule overrides | one owner resolves each claim and failed layers produce bounded partial outcomes |
 
@@ -348,4 +361,5 @@ An unusual combination is not an exploit merely because it is effective. Earned 
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

@@ -208,6 +208,20 @@ Reincarnation may bridge any amount of time needed for a valid new life and a he
 
 The GM should summarize enough of the interval to explain the new Age and preserve the consequences of the former one, while leaving discoverable history for play.
 
+## World Gates and Cross-Domain Placement
+
+[World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) owns the interface between the seven-stage transition and world contact.
+
+- A living incarnation crossing a World Gate remains the same embodied life. Crossing is travel, not Reincarnation.
+- A World Gate carries only its supported world-contact channels. It is not a Soul Gate, Interlife corridor, or disembodied-soul route by implication.
+- When a material Contact Domain boundary matters to candidate placement and no broader Reincarnation law already spans both domains, a **Cross-Domain Reincarnation Route** must establish why the target domain is reachable.
+- That route only permits the target domain to enter ordinary candidate consideration. A valid body, soul compatibility, world compatibility, earned access, causal placement, and the active Reincarnation Mode remain necessary.
+- A Gate opening does not add every contacted species to the candidate pool. Population movement, reproduction, construction, ecology, and other world changes may create valid opportunities later.
+- If a route, candidate, or placement changes before embodiment, revalidate the affected claim. Gate Closure does not cancel a completed embodiment or recall a living incarnation.
+- Death in an endpoint or unstable boundary resolves one Final Death, one Life Reconciliation, and at most one Echo for the completed incarnation. Conflicting observations cannot duplicate the soul.
+
+Current Gate state, candidate reasoning, deaths, and incarnations remain external Campaign Record facts.
+
 ## Interference and Failure States
 
 Reincarnation is reliable continuity, not guaranteed comfort. Established forces may cause:
@@ -241,11 +255,12 @@ Before beginning the next incarnation, the GM should establish:
 3. the result of Life Reconciliation;
 4. the Interlife duration and relevant world changes;
 5. the active Reincarnation Mode;
-6. the constraints used to generate valid candidates;
-7. the selected body's species, stage, capabilities, and limitations;
-8. starting access to memories, skills, instincts, bonds, and Soul Weapons;
-9. any fair complications caused by established interference;
-10. the first playable situation of the new life.
+6. the constraints used to generate valid candidates, including any required Cross-Domain Reincarnation Route;
+7. whether a candidate-affecting route remains valid immediately before embodiment;
+8. the selected body's species, stage, capabilities, and limitations;
+9. starting access to memories, skills, instincts, bonds, and Soul Weapons;
+10. any fair complications caused by established interference;
+11. the first playable situation of the new life.
 
 The GM may keep hidden requirements secret, but should preserve enough reasoning that the result remains consistent and can later be explained through play.
 
@@ -262,6 +277,10 @@ A former dragon mage reincarnates as a goblin whose body cannot initially channe
 ### Age Transition
 
 A monster sovereign dies as World Stability is already failing. The resulting Interlife lasts centuries while a Reset changes the continents and dominant magic. The next incarnation enters the new Age with protected soul progression, but the former empire exists only through ruins, descendants, distorted legends, and surviving consequences.
+
+### Cross-Domain Candidate
+
+A seasonal World Gate allows a monster population to establish a viable settlement in another Contact Domain. Generations later, a reincarnating soul may receive a local monster candidate only if an established Cross-Domain Reincarnation Route reaches that domain and the settlement supplies a valid birth, compatibility, and causal placement. Seeing the species through the Gate did not unlock it; sustained world change created the embodiment opportunity.
 
 ## Related Documents
 
@@ -282,3 +301,5 @@ A monster sovereign dies as World Stability is already failing. The resulting In
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
+- [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)

@@ -60,5 +60,6 @@ Persistent breadth never creates unlimited present throughput. Use [Soul Engine 
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)
 - [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [Soul Weapon Foundations](SOUL_WEAPON_FOUNDATIONS.md)

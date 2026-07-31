@@ -3415,3 +3415,7 @@ A persistent consequence remaining after World Gate operation, contact intensity
 ## World Gate Profile
 
 An external Campaign Record of one World Gate's Contact Domains, Basis, endpoints, boundary, footprint, channels, operation, compatibility, information, access, actors, consequences, closure, stranding, Gate Legacies, evidence, and uncertainty.
+
+## Cross-Domain Reincarnation Route
+
+An established soul-and-world causal basis that permits valid Reincarnation candidate generation to treat another Contact Domain as reachable for placement without waiving ordinary candidate requirements.

@@ -62,6 +62,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/WORLD_STABILITY.md`](docs/world-engine/WORLD_STABILITY.md) - scoped continuity and transformation under strain without a universal world-health meter or automatic Reset trigger.
 - [`docs/world-engine/AGES_AND_WORLD_RESETS.md`](docs/world-engine/AGES_AND_WORLD_RESETS.md) - contextual Ages, causal transitions, exceptional World Resets, uneven survivorship, and consequence-preserving revalidation.
 - [`docs/world-engine/GATES_AND_WORLD_CONTACT.md`](docs/world-engine/GATES_AND_WORLD_CONTACT.md) - bounded World Gates, world-contact processes, channel-specific transit, compatibility, asymmetry, closure, and persistent contact consequences.
+- [`docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md`](docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) - bounded interaction among World Gates, Reincarnation placement, Soul Avatar Triggers, provenance, and continuity.
 
 ## Start Here
 
@@ -77,4 +78,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Integrate world-contact Gates with Reincarnation and Soul Avatars**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define simulation abstraction levels**.

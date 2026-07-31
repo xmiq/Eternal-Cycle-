@@ -4,13 +4,13 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Integrate world-contact Gates with Reincarnation and Soul Avatars**
+**Current task: Define simulation abstraction levels**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Integrate world-contact Gates with Reincarnation and Soul Avatars** unless the project owner explicitly changes the target. Do not begin simulation abstraction levels or later roadmap work before the current task is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define simulation abstraction levels** unless the project owner explicitly changes the target. Do not begin Phase 9 or later roadmap work before the current task and the Phase 8 audit are complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
-World-contact Gate and related template work requested by the project owner remains queued in the appropriate later phases below. Those queued entries do not change the current task or authorize implementation before the project owner selects them.
+The reusable Gate-event template requested by the project owner remains queued for Phase 10. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
 
 The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
 
@@ -195,7 +195,7 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define World Stability
 - [x] Define Ages and resets
 - [x] Define Gates and world-contact events distinct from Soul Gates
-- [ ] Integrate world-contact Gates with Reincarnation and Soul Avatars
+- [x] Integrate world-contact Gates with Reincarnation and Soul Avatars
 - [~] Define simulation abstraction levels
 
 ## Phase 9 — GM Toolkit

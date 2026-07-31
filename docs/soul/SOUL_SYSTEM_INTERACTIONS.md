@@ -48,6 +48,7 @@ A Soul Imprint may persist while all four later answers remain uncertain. Clear 
 | --- | --- | --- | --- |
 | **[Soul Fundamentals](SOUL_FUNDAMENTALS.md)** | identity continuity, one active incarnation, Soul Imprints, Integrity, Strain, Wounds, agency baseline | every system that alters or pressures the soul | power, convenience, examples, or future rules not yet defined |
 | **[Reincarnation](REINCARNATION.md)** | Final Death, Life Reconciliation, Interlife, valid candidates, embodiment transition | persistent Imprints, Resonance, Depth, Titles, Constellations, world state | Soul Space travel, Avatar Expression, revival, or desire |
+| **[World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)** | the handoff among Gate state, soul state, cross-domain candidate reach, and Avatar Trigger relevance | World Gate facts, Reincarnation, Soul Avatar rules, provenance, compatibility, and specialist world consequences | World Gate spectacle, destination preference, Gate control, or Soul Avatar status |
 | **[Soul Depth](SOUL_DEPTH.md)** | qualitative capacity to integrate complexity | meaningful transformation and integration | age, power, suffering, repetition, or collection |
 | **[Soul Resonance](SOUL_RESONANCE.md)** | target-specific alignment, Links, Triggers, States, Dissonance | genuine history, Imprints, relationships, places, systems | similarity, possession, title names, or Soul Depth alone |
 | **[Soul Echoes](SOUL_ECHOES.md)** | one completed incarnation's bounded perspective and Presence | Reconciliation, Resonance, Depth, Soul Space, current context | Retained Instincts, Archive Records, copied memories, or Soul Avatars |
@@ -106,6 +107,7 @@ Choose the system that defines the requested result.
 - reading world history belongs to the Akashic Archive;
 - selecting a new body belongs to Reincarnation;
 - whole-soul synthesis belongs to Soul Avatars.
+- establishing whether world contact supplies a valid cross-domain placement handoff belongs to World Gate Soul Interactions, while Reincarnation still owns the candidate and embodiment.
 
 If no existing system owns the effect, the effect is not available merely because several Supporting Systems sound related. Record a design question instead of improvising canon.
 
@@ -305,6 +307,15 @@ An example illustrates rules already established. It cannot introduce a new abil
 5. Keep every contribution bounded by its Owning System.
 6. Resolve world response without making the Soul Avatar automatically central.
 
+### Resolve a World-Gate Soul Claim
+
+1. Establish the World Gate's Contact Domains, Basis, channels, operation, compatibility, and current evidence.
+2. Distinguish a living incarnation, possible death, Final Death, Interlife, candidate generation, embodiment, and Avatar Expression.
+3. Resolve ordinary Gate travel and exposure before inferring a Soul effect.
+4. For cross-domain candidate placement, establish a Cross-Domain Reincarnation Route where one is required and then apply every ordinary candidate condition.
+5. For Avatar Expression, establish a genuine Trigger, provenance, present responsibility, contributors, costs, and exit without granting Gate operation or universal interpretation.
+6. Preserve one active incarnation, current embodiment, source provenance, other persons' agency, and external world consequences.
+
 ### Cooperate With a Soul Weapon
 
 1. Treat the Weapon Soul as a distinct person.
@@ -403,4 +414,5 @@ Track only interactions that matter to play. The purpose of this procedure is pr
 - [Soul Engine Safeguards](SOUL_ENGINE_SAFEGUARDS.md)
 - [Development System](../progression/DEVELOPMENT_SYSTEM.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)

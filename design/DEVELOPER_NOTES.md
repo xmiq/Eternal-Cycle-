@@ -93,7 +93,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
-These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md), and the contact interface is implemented in [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md). Detailed Gate interaction with Reincarnation and Soul Avatars remains the current roadmap task, while the reusable Gate-event template remains queued for Phase 10. Notes here grant no abilities and do not override canonical rules.
+These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md), the contact interface is implemented in [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md), and their detailed handoff is implemented in [World Gate Interactions with Reincarnation and Soul Avatars](../docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md). The reusable Gate-event template remains queued for Phase 10. Notes here grant no abilities and do not override canonical rules.
 
 ### Inspiration References
 
@@ -895,5 +895,13 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Contact Phases should support reversals, parallel actor responses, and peaceful or limited contact without drifting into a mandatory invasion ladder.
 - Contact Asymmetry should make logistics, maintenance, local knowledge, institutions, Soul knowledge, disease response, and legitimacy matter alongside direct force.
 - Gate Closure tests should preserve stranded populations, dependencies, hybrid institutions, ecology, and unresolved obligations rather than resetting contact.
-- The Reincarnation-and-Soul-Avatar integration task must preserve the one-active-incarnation rule, current embodiment, Soul Gate distinction, Echo provenance, and current-incarnation agency.
+- World-Gate Soul interactions must preserve the one-active-incarnation rule, current embodiment, Soul Gate distinction, Echo provenance, and current-incarnation agency.
 - The simulation-abstraction task should preserve Gate Channels, decisive compatibility findings, autonomous actors, closure risk, and Pending Consequences when compressing long contact periods.
+
+## Phase 8 World-Gate Soul-Interaction Watchlist
+
+- Playtests should verify that Cross-Domain Reincarnation Routes broaden candidate consideration without turning every contacted species or endpoint into a selectable destination.
+- Boundary uncertainty should create investigation, legal conflict, rescue pressure, and mistaken beliefs without ever duplicating a death, Echo, revival, or incarnation.
+- Soul Avatar interpretation should remain useful but dated, source-bound, and politically contestable rather than functioning as universal translation or objective history.
+- Gate Closure should revalidate dependent pre-embodiment candidates while leaving living incarnations, established populations, broader Reincarnation laws, and Gate Legacies intact.
+- World-contact scenarios should remain playable when no Soul Avatar participates, preserving autonomous specialists, factions, and local actors.

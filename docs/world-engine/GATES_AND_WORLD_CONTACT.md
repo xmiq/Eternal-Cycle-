@@ -594,7 +594,7 @@ This document does not define:
 
 - a canonical Gate, contacted world, civilization, geography, cosmology, event, or campaign timeline;
 - a universal portal spell, Gate-building technology, cosmological map, or transit formula;
-- detailed Gate interaction with Reincarnation, Interlife, Soul Echoes, or Soul Avatars;
+- Gate interaction with Reincarnation, Interlife, Soul Echoes, or Soul Avatars, which is owned by [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md);
 - a Gate-event generator or reusable Gate-event template;
 - complete culture, religion, climate, disaster, diplomacy, colonization, or law systems beyond existing owner interfaces;
 - long-horizon simulation abstraction;
@@ -618,6 +618,7 @@ This document does not define:
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Soul Space](../soul/SOUL_SPACE.md)
 - [Soul Avatars](../soul/SOUL_AVATARS.md)
 - [Magic Rules Index](../magic/README.md)

@@ -3645,3 +3645,55 @@ Current World Gates, Contact Domains, endpoints, footprints, channels, operating
 ## D-911 — Contact Labels Do Not Establish a Cosmology
 
 Calling a Contact Domain another world, reality, realm, or Age is a scoped contact claim rather than proof of a particular cosmology. An Age label alone creates no time travel, alternate timeline, duplicate history, or second present; any such condition requires its own prior world-side cause and evidence.
+
+## D-912 — Embodied World-Gate Crossing Is Travel
+
+A living incarnation crossing a World Gate remains the same embodied life. Crossing does not cause Final Death, sever the soul, begin Interlife, transport worldly assets through Reincarnation, or reopen candidate selection.
+
+## D-913 — World Gates Have No Implied Disembodied-Soul Channel
+
+Observation, communication, environmental, energy, Mana, material, organism, and embodied-person channels do not carry, confine, redirect, harm, or bargain with a disembodied soul by implication. Any such effect needs an explicit Soul or Reincarnation owner with bounded requirements and consequences.
+
+## D-914 — World Contact Does Not Alter the Seven Reincarnation Stages
+
+World contact may change world facts relevant to Final Death, Interlife, candidate generation, or embodiment, but cannot add, skip, reorder, duplicate, reopen, or complete a Reincarnation stage by itself.
+
+## D-915 — Cross-Domain Placement Requires an Established Route When the Boundary Matters
+
+When a material Contact Domain boundary constrains Reincarnation and no broader established law already spans both domains, candidate generation requires a Cross-Domain Reincarnation Route with explicit scope, reach, requirements, permissions, and current validity.
+
+## D-916 — Cross-Domain Routes Broaden Consideration Rather Than Guarantee Candidates
+
+A Cross-Domain Reincarnation Route makes a target domain reachable for candidate consideration only. Valid embodiment, soul and world compatibility, earned access, causal placement, current world truth, and the active Reincarnation Mode remain necessary.
+
+## D-917 — Gate Changes Affect Candidates Only Through Established Dependencies
+
+Opening a World Gate does not add every contacted species or body to candidate generation. Gate Closure removes a placement route only when that route depended on the closed Gate function; affected candidates are revalidated before embodiment, while completed embodiments and broader placement laws persist.
+
+## D-918 — Gate-Boundary Death Preserves Singular Continuity
+
+An uncertain or collapsing Gate boundary can produce conflicting evidence but not duplicate bodies, souls, Final Deaths, Life Reconciliations, Echoes, revivals, or incarnations. One completed incarnation resolves once according to established world truth and recovery rules.
+
+## D-919 — World Contact Creates No Divergent Echoes
+
+Alternate, counterpart, copied, simulated, prophetic, possible, or merely similar lives are not completed incarnations of the continuing soul and do not form Soul Echoes. World contact cannot split personal history or create a second present incarnation.
+
+## D-920 — World Contact Can Trigger but Not Appoint a Soul Avatar
+
+A World-Contact Event may become an Avatar Trigger only through genuine integrated history, relevant Resonance, accessible contributors, present responsibility, and normal emergence rules. Scale, spectacle, danger, prophecy, or institutional demand cannot compel emergence or Expression.
+
+## D-921 — Soul Avatar Expression Does Not Operate World Gates
+
+Soul Avatar status does not open, close, stabilize, redirect, repair, widen, or add channels to a World Gate; improve Gate Throughput; bypass Contact Compatibility; create a compatible body; or send Echoes as independent travelers. Gate operation remains with its actual causal interface.
+
+## D-922 — Soul Avatar Interpretation Remains Source-Bound
+
+A Soul Avatar may interpret world contact only through accessible, dated, situated, and fallible sources. Avatar Expression grants no universal translation, objective history, current cultural authority, diplomatic office, or omniscient knowledge of a Contact Domain.
+
+## D-923 — World Contact Remains Autonomous Without a Soul Avatar
+
+Factions, populations, specialists, ecologies, institutions, and other actors continue contact, interpretation, adaptation, conflict, and closure independently. A Soul Avatar may contribute causally but is never the automatic discoverer, sole mediator, mandatory sacrifice, or only consequential actor.
+
+## D-924 — World-Gate Soul Records Remain External
+
+Current Gate-soul interactions, candidate routes, deaths, incarnations, Avatar Triggers, contact histories, interpretations, and consequences are campaign state and never belong in the canonical repository.

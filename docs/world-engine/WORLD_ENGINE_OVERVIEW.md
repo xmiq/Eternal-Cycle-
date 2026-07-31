@@ -32,6 +32,7 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 - [World Stability](WORLD_STABILITY.md), systemic strain, response, and transformation;
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md), historical transitions, revalidation, and long continuity;
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md), extraordinary contact routes, channel-specific exchange, compatibility, closure, and persistent contact consequences;
+- [World Gate interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md), bounded cross-domain placement reach, Avatar Trigger relevance, provenance, and continuity safeguards;
 - climate and disasters;
 - culture and religion.
 
@@ -67,6 +68,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
