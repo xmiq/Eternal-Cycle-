@@ -2899,3 +2899,67 @@ The issue-specific ability and willingness of relevant participants to continue 
 ## Faction Continuity
 
 The persistence of recognizable coordination through actual interests, relationships, participants, identity, records, procedures, assets, commitments, and successor recognition rather than a name alone.
+
+## Contestation
+
+Active disagreement over a consequential condition expressed through one or more political, social, economic, institutional, symbolic, coercive, or violent routes.
+
+## Civil Unrest
+
+Sustained or recurring collective disruption within a social order through which actors challenge, refuse, obstruct, evade, or demand change to current authority, burdens, distribution, recognition, safety, or institutions.
+
+## Armed Conflict
+
+Organized, recurring use of materially harmful force between actors pursuing incompatible or contested objectives, whether local, intermittent, asymmetric, or undeclared.
+
+## War
+
+Sustained organized conflict in which Factions or Institutions mobilize substantial coercive and destructive capacity across multiple actions to compel, deny, defend, control, exhaust, displace, or transform opposing actors and conditions.
+
+## Escalation Pressure
+
+A scoped condition that makes broader, more destructive, less reversible, or less controlled conflict responses more likely or attractive to particular actors without deciding their response.
+
+## Conflict Objective
+
+A result a Faction attempts to achieve through Contestation, Coercion, or organized force, with stated subjects, scope, time horizon, routes, acceptable costs, protected commitments, and stopping or revision conditions.
+
+## Operational Capacity
+
+A Faction's current ability to perform and sustain one specified conflict function under stated conditions through actual participants, coordination, logistics, resources, access, and support.
+
+## Force Projection
+
+The ability to deliver and sustain a specified coercive or destructive effect beyond an actor's secure base through actual movement, communication, supply, access, and recovery routes.
+
+## Territorial Control
+
+The function-specific ability to perform, permit, prevent, observe, tax, protect, supply, or enforce particular actions in a place during a stated interval.
+
+## Occupation
+
+Sustained external or contested control over specified governance, movement, resource, institutional, or security functions in a place through present coercive capacity.
+
+## Siege
+
+Sustained containment, pressure, or attack against a bounded site through actual coverage, supply, communication, and coercive routes.
+
+## Blockade
+
+An attempt to deny specified movement, information, resource, or support routes across a boundary through sustained present capacity.
+
+## Ceasefire
+
+An agreement or convergent practice to suspend specified hostile actions under stated participants, scope, timing, verification, exceptions, and response conditions.
+
+## Demobilization
+
+The reduction or transformation of organized conflict capacity through release, disarmament, reassignment, reintegration, institutional change, monitoring, resource conversion, and care.
+
+## Conflict Legacy
+
+A persistent demographic, bodily, relational, institutional, economic, ecological, magical, spatial, cultural, Soul-related, or material condition created or transformed by War or Civil Unrest.
+
+## Conflict Profile
+
+An external Campaign Record of one conflict's current scope, forms, participants, causes, objectives, information, mobilization, Operational Capacities, geography, consequences, escalation, cessation, legacies, and uncertainty.

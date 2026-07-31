@@ -3161,3 +3161,63 @@ Faction membership, success, conflict, practice, instruction, and responsibility
 ## D-790 — Weapon Souls Remain Faction Participants, Not Assets
 
 A Weapon Soul may join, advise, represent, oppose, refuse, or leave a Faction according to its own agency and Bond. Custody, contract, office, or military command does not convert its personhood, consent, knowledge, or capability into ordinary faction property.
+
+## D-791 — Conflict Forms Do Not Make a Mandatory Ladder
+
+Contestation, Civil Unrest, Armed Conflict, and War are distinct, overlapping forms rather than inevitable stages. Pressure, hardship, one violent event, or failed communication does not determine escalation, and de-escalation need not restore the prior order.
+
+## D-792 — War Is Sustained Organized Action
+
+War requires substantial coercive or destructive capacity mobilized across multiple actions for scoped objectives. A declaration, raid, riot, feud, threat, battle, or participant label does not establish War by itself.
+
+## D-793 — Civil Unrest Is Not Synonymous With Violence
+
+Civil Unrest may use peaceful, disruptive, evasive, institutional, coercive, or violent routes. Its existence does not establish criminality, revolution, faction unity, universal participation, or the legitimacy or illegitimacy of any authority.
+
+## D-794 — Triggers Do Not Replace Layered Causes
+
+A triggering event changes conflict timing or coordination only through existing conditions, interpretations, relationships, and action routes. Removing a trigger does not automatically remove underlying pressures, and pressure alone does not guarantee mobilization.
+
+## D-795 — Conflict Objectives Remain Scoped and Revisable
+
+Public justification, leadership aims, member interests, allied objectives, and field orders may differ. Tactical success counts only for its actual objective and does not automatically produce strategic victory, legitimacy, compliance, or peace.
+
+## D-796 — Operational Capacity Is Function-Specific
+
+A conflict actor's ability to detect, mobilize, move, supply, defend, attack, occupy, communicate, heal, replace, or recover must be assessed separately under current conditions. No troop total, destructive feat, leader, Species Stage, spell, Soul Weapon, or army score establishes universal superiority.
+
+## D-797 — Force Projection Requires Sustained Routes
+
+Potential force becomes distant operational effect only through movement, communication, supply, access, maintenance, timing, consent, and recovery. Capability at a secure base does not prove reach or endurance elsewhere.
+
+## D-798 — Territorial Control Is Not Binary Ownership
+
+Territorial Control applies to specified functions, routes, places, actors, and times. Victory, presence, a border claim, occupation, taxation, or a raised flag does not automatically establish ownership, legitimacy, consent, loyalty, information control, or every form of enforcement.
+
+## D-799 — Conflict Preserves Civilian and Noncombatant Agency
+
+People outside current hostilities remain distinct actors with needs, relationships, choices, knowledge, and consequences. Collective identity, proximity, dependence, or a faction claim does not establish support, combatant status, guilt, consent, or expendability.
+
+## D-800 — Responsibility Follows Actual Routes
+
+Responsibility for conflict conduct must trace decisions, participation, authority, knowledge, coercion, capability, and consequence. One actor's conduct cannot automatically assign guilt or authorize harm across a species, culture, faith, Population, settlement, or other category.
+
+## D-801 — Siege and Blockade Resolve Actual Coverage
+
+Siege and Blockade effects depend on covered routes, alternatives, Stocks, Effective Supply, Sustenance Profiles, care, repair, sanitation, internal action, relief, ecology, and enforcement. No universal timer or deprivation threshold compels surrender.
+
+## D-802 — Conflict Cessation and Recovery Are Distinct
+
+A ceasefire, truce, surrender, settlement, demobilization, and recovery each change only their actual scope. Ending hostile action does not erase death, injury, displacement, altered distribution, institutional change, ecological damage, obligations, distrust, or other Conflict Legacies.
+
+## D-803 — Reincarnation Restores No Conflict Position
+
+Reincarnation does not restore military rank, command, citizenship, oath, property, enemy status, sentence, alliance, or authority. Retained memory, Soul Titles, Soul Weapons, records, and recognition may affect present reactions without binding the current incarnation or other actors to continue an earlier war.
+
+## D-804 — Conflict Does Not Manufacture Progression
+
+Fighting, killing, suffering, surviving, victory, defeat, atrocity, sacrifice, or death creates no automatic Skill, Development, Stat XP, Soul growth, Title, Evolution, Soul Weapon awakening, or magical resistance. Only legitimate evidence and response under each Owning System can support change.
+
+## D-805 — War Does Not Suspend Personhood or Source Agency
+
+Command, emergency, necessity, law, ownership, and strategic value do not erase the agency, consent, refusal, information boundaries, or personhood of soldiers, conscripts, civilians, monsters, gods, spirits, Sources, or Weapon Souls.

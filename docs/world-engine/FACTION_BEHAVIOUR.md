@@ -352,7 +352,7 @@ The Institution still has formal procedures, but its action is captured. Compete
 
 A river federation loses half its Effective Supply after upstream contamination. Urban delegates prioritize reserve protection; farming districts demand immediate releases; spirit mediators insist that extraction stop until the source recovers.
 
-The shared faction identity does not yield one response. Unequal burdens, different time horizons, and contested evidence weaken issue-specific cohesion. A provisional bargain might hold, one bloc might capture release authority, or the federation might split. The later war-and-unrest system owns escalation beyond ordinary faction contestation.
+The shared faction identity does not yield one response. Unequal burdens, different time horizons, and contested evidence weaken issue-specific cohesion. A provisional bargain might hold, one bloc might capture release authority, or the federation might split. [War and Unrest](WAR_AND_UNREST.md) owns escalation beyond ordinary faction contestation.
 
 ## Safeguards
 
@@ -365,7 +365,8 @@ The shared faction identity does not yield one response. Unequal burdens, differ
 - Do not make cohesion a loyalty meter or disagreement an automatic failure.
 - Do not make factions perfectly rational, permanently hostile, passively frozen off-screen, or secretly aware of world truth.
 - Do not make diplomacy, betrayal, capture, schism, merger, or reform deterministic outcomes.
-- Do not use this document to resolve war, civil unrest, disease, technological advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
+- Apply [War and Unrest](WAR_AND_UNREST.md) when faction contestation escalates into Civil Unrest, Armed Conflict, War, occupation, or conflict aftermath; do not use this document to replace that owner.
+- Do not use this document to resolve disease, technological advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
 - Do not store named live factions, current leaders, memberships, objectives, resources, relationships, decisions, or actions in this repository.
 
 ## External Campaign Records
@@ -395,6 +396,7 @@ This is external campaign state. The repository defines the schema and rules but
 - [Resources and Food](RESOURCES_AND_FOOD.md)
 - [Economies](ECONOMIES.md)
 - [Ecology and Migration](ECOLOGY_AND_MIGRATION.md)
+- [War and Unrest](WAR_AND_UNREST.md)
 - [Institutions and Academies](../human/INSTITUTIONS_AND_ACADEMIES.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Monster Societies](../monster-evolution/MONSTER_SOCIETIES.md)

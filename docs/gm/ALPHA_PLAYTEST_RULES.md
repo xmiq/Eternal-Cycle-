@@ -111,7 +111,8 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Resources and Food](../world-engine/RESOURCES_AND_FOOD.md) framework;
 - the canonical [Economies](../world-engine/ECONOMIES.md) framework;
 - the canonical [Ecology and Migration](../world-engine/ECOLOGY_AND_MIGRATION.md) framework;
-- the canonical [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md) framework.
+- the canonical [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md) framework;
+- the canonical [War and Unrest](../world-engine/WAR_AND_UNREST.md) framework.
 
 Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, and the complete Phase 7 Magic framework are canonical within their stated scopes. Detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
@@ -119,7 +120,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- domain-specific World Engine variables and procedures for war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
+- domain-specific World Engine variables and procedures for disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
@@ -385,6 +386,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Economies](../world-engine/ECONOMIES.md)
 - [Ecology and Migration](../world-engine/ECOLOGY_AND_MIGRATION.md)
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
+- [War and Unrest](../world-engine/WAR_AND_UNREST.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

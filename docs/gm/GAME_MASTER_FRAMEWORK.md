@@ -246,6 +246,8 @@ Encounters should arise from:
 - deliberate player pursuit, preparation, avoidance, or delay;
 - uncertainty resolved through a valid method.
 
+For organized coercion, Civil Unrest, Armed Conflict, War, occupation, or conflict aftermath, apply [War and Unrest](../world-engine/WAR_AND_UNREST.md) before inferring faction-scale outcomes from a scene.
+
 Do not scale every encounter to produce an even fight. Use [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md) to evaluate the stated objective, conditions, preparation, matchup, support, evidence, and consequences. A dangerous opponent can be avoided, studied, negotiated with, delayed, redirected, escaped, or defeated indirectly. A weak opponent can still matter through information, position, law, ecology, allies, or time.
 
 Fairness means that material danger has appropriate signs, information can be pursued, established counters remain valid, and outcomes follow the declared conditions. It does not mean every threat is beatable through direct force or that the world generates opponents matching a hidden universal level.
@@ -445,6 +447,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
+- [War and Unrest](../world-engine/WAR_AND_UNREST.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

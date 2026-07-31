@@ -814,3 +814,14 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Reincarnated founders and persistent Soul Titles need recognition opportunities without automatically recovering office, ownership, followers, or command.
 - Weapon Souls, monsters, distributed beings, spirits, and gods need faction participation models that preserve their established personhood and communication rules.
 - The war-and-unrest task should build escalation, organized violence, resistance, and civilian consequences from these faction routes without redefining them.
+
+## Phase 8 War-and-Unrest Watchlist
+
+- Conflict Profiles must remain selective external records rather than becoming combat logs, casualty databases, or universal military dashboards.
+- Playtests should distinguish Contestation, Civil Unrest, Armed Conflict, and War without forcing events up or down a single escalation ladder.
+- Operational Capacity needs examples where reconnaissance, logistics, care, communication, legitimacy, and withdrawal matter as much as direct force.
+- Territorial Control should be mapped by decisive functions and routes rather than exhaustive colored borders.
+- Civilian roles and mixed participation need contextual adjudication that preserves agency without flattening responsibility or vulnerability.
+- Siege and Blockade tests should expose alternate routes and unequal Sustenance Profiles without requiring daily arithmetic.
+- Soul Titles, returning commanders, Soul Weapons, monster forms, and Magic need dramatic relevance without bypassing authority, logistics, consent, or current embodiment.
+- Cessation and recovery should preserve Conflict Legacies while leaving credible routes for reconciliation, institutional change, and transformed peace.
