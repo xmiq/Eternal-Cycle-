@@ -177,7 +177,7 @@ Creatures, populations, habitats, resources, disease, migration, predation, comp
 
 ### Consequence Chains
 
-Consequences may be immediate, delayed, local, distributed, misunderstood, interrupted, or transformed by other actors. Trace enough of the chain to preserve future causality. Do not assume that every consequence reaches the player, that every observer interprets it correctly, or that importance guarantees rapid response.
+Use [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) to trace supported links, autonomous responses, Counterforces, delays, branches, feedback, and Pending Consequences. Consequences may be immediate, delayed, local, distributed, misunderstood, interrupted, or transformed by other actors. Trace enough of the chain to preserve future causality. Do not assume that every consequence reaches the player, that every observer interprets it correctly, or that importance guarantees rapid response.
 
 ### Uncertainty in Simulation
 
@@ -443,6 +443,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Skill Engine Index](../skills/README.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
+- [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

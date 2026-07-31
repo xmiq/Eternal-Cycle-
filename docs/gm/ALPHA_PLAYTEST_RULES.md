@@ -105,7 +105,8 @@ The following material is ready to constrain alpha play within its stated scope:
 - the completed specialist integration in [Magical Development](../progression/MAGICAL_DEVELOPMENT.md);
 - the canonical [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) causal interface;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md);
-- the shared [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md) framework.
+- the shared [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md) framework;
+- the canonical [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) procedure.
 
 Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, and the complete Phase 7 Magic framework are canonical within their stated scopes. Detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
@@ -373,6 +374,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
+- [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

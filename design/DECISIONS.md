@@ -2873,3 +2873,51 @@ Focused, Local, Regional, and Epochal representations may summarize or expand es
 ## D-718 — No Universal World Score Is Authoritative
 
 Campaigns may use scoped indicators for defined questions, but no global power rating, civilization level, danger number, prosperity score, plot meter, or world health score is an authoritative World Engine variable.
+
+## D-719 — Causal Chains Are Revisable Networks, Not Scripts
+
+A Causal Event Chain connects established causes, autonomous responses, constraints, consequences, and feedback while preserving supported branches until they are resolved. It cannot fix a future outcome because a planned story expects it.
+
+## D-720 — Every Material Link Requires a Transmitting Route
+
+A Causal Link identifies the process or actor that transmits change, its requirements, scope, timing, Counterforces, receiving owner, and uncertainty. Correlation, genre expectation, symbolism, or dramatic usefulness alone does not establish a link.
+
+## D-721 — Direct Effects and Downstream Consequences Are Separate
+
+The owning rule resolves an action's direct effect first. Exposure, actor response, downstream consequences, feedback, and legacy require their own supported links and cannot be bundled into the initial effect.
+
+## D-722 — Actors Do Not Function as Automatic Links
+
+Actor-mediated consequences depend on available information, interpretation, motive, capability, access, authority, willingness, coordination, alternatives, and opposition. GM knowledge or an objectively optimal response does not grant an actor knowledge or action.
+
+## D-723 — Counterforces May Redirect Rather Than Rewind
+
+A Counterforce may oppose, absorb, delay, narrow, redirect, or transform a cause. Preventing one outcome does not automatically restore prior state or erase costs, displacement, obligations, damage, or other legacies.
+
+## D-724 — Branches Remain Open Until Materially Resolved
+
+Several supported continuations may coexist. The GM resolves a branch only when established conditions, actor choices, elapsed time, an authorized uncertainty method, or an owning rule settles it.
+
+## D-725 — Feedback Is Re-Evaluated on Every Material Pass
+
+Reinforcing and balancing feedback return consequences as changed inputs. No loop is infinite by declaration; each material pass re-evaluates stocks, capacities, information, adaptation, thresholds, actors, delays, and limits.
+
+## D-726 — Pending Consequences Are External Campaign State
+
+An established downstream process whose delay or review condition remains is recorded as a Pending Consequence in the external Campaign Record. It is not a guaranteed scene or canonical repository fact.
+
+## D-727 — A Causal Horizon Limits Necessary Simulation
+
+The GM traces a chain only as far as needed to preserve meaningful decisions, foreseeable consequences, unresolved dependencies, and future continuity. Unbounded simulation and exhaustive consequence enumeration are not required.
+
+## D-728 — Causal Convergence Preserves Material Contributors
+
+When several causes contribute to one outcome, resolution preserves contributors that can alter recovery, blame, recurrence, distribution, or future action. The most visible trigger does not erase deeper or parallel causes.
+
+## D-729 — Compression Cannot Decide Unresolved Futures
+
+Lower-detail simulation may combine repetitive links but cannot convert possibility into fact, erase a decisive actor or Counterforce, average away material distribution, or silently resolve another system's claim.
+
+## D-730 — Randomness Resolves Uncertainty, Not Missing Causality
+
+An authorized random method may settle an uncertain supported branch. It cannot create a missing cause, capability, authority, source, access route, or exception.

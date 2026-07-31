@@ -695,3 +695,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Aggregation must retain affected minorities, bottlenecks, unequal control, exceptional actors, and source agency whenever they can change the result.
 - Later domain documents should reuse the state grammar without forcing every domain into the same variable list, update interval, or formula.
 - World conditions must influence access, opportunity, pressure, and consequence without directly granting capability owned by a completed system.
+
+## Phase 8 Causal-Chain Watchlist
+
+- Playtests should check whether link tests preserve causality without turning every decision into administrative work.
+- Causal Horizons need to stop irrelevant propagation while retaining consequences likely to matter after long absences or Reincarnation.
+- Counterforces should produce transformed outcomes and legacies rather than functioning as binary cancellation switches.
+- Branch tracking should remain selective; unresolved possibilities belong in campaign records only when they can materially change future play.
+- Reinforcing loops require fresh constraints on every pass so they do not become hidden exponential engines.
+- Compression must retain decisive actors, bottlenecks, information routes, and cross-system ownership even when intermediate events are summarized.

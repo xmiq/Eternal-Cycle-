@@ -49,6 +49,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 - [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
+- [`docs/world-engine/CAUSAL_EVENT_CHAINS.md`](docs/world-engine/CAUSAL_EVENT_CHAINS.md) - branching, interruptible causal propagation through autonomous actors, delays, feedback, and cross-system handoffs.
 
 ## Start Here
 
@@ -64,4 +65,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define causal event chains**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define populations**.

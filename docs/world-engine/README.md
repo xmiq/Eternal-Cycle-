@@ -8,6 +8,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 
 1. [World Engine Overview](WORLD_ENGINE_OVERVIEW.md) establishes Rule Zero, causal world autonomy, core domains, and the requirement to scale detail to play.
 2. [World-State Variables](WORLD_STATE_VARIABLES.md) defines the shared qualitative state model, variable families, evidence, uncertainty, persistence, ownership, external record boundary, and update procedure used by every World Engine domain.
+3. [Causal Event Chains](CAUSAL_EVENT_CHAINS.md) defines supported links, autonomous responses, branches, Counterforces, feedback, delays, Pending Consequences, Causal Horizons, and cross-system handoffs.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 

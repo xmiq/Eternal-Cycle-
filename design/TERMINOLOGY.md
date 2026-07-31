@@ -2643,3 +2643,43 @@ A world condition that persists after its initiating event or active support has
 ## State Trend
 
 The direction or pattern of change in one World-State Variable at a stated scale and interval, such as rising, falling, shifting, oscillating, stable, recovering, transforming, or unknown.
+
+## Causal Event Chain
+
+A revisable network connecting established causes, autonomous responses, constraints, consequences, delays, and feedback while preserving supported branches until they are resolved.
+
+## Causal Node
+
+An event, action, decision, state change, threshold crossing, discovery, failure, or established external input that has occurred or become true and may have consequences.
+
+## Causal Link
+
+A supported route by which one node or condition contributes to another through an identified transmitting process or actor, requirements, scope, timing, Counterforces, receiving owner, and uncertainty.
+
+## Active Cause
+
+A currently material influence transmitting through a valid Causal Link.
+
+## Counterforce
+
+An established actor, process, resource, relationship, constraint, adaptation, or alternative that opposes, absorbs, redirects, delays, narrows, or transforms a cause.
+
+## Causal Branch
+
+One supported continuation among several possible consequences that remains unresolved until its requirements and uncertainty are settled.
+
+## Causal Convergence
+
+The contribution of distinct causes to one later condition without erasing the contributors that remain material to recovery, recurrence, responsibility, or future action.
+
+## Feedback Loop
+
+A causal structure in which a consequence returns as an input to an earlier process, reinforcing, balancing, redirecting, or transforming later change.
+
+## Pending Consequence
+
+An established downstream change whose causal requirements are met but whose delay, ongoing process, or stated review condition has not yet resolved.
+
+## Causal Horizon
+
+The furthest point to which a Causal Event Chain must currently be traced to preserve a meaningful decision, foreseeable consequence, or future dependency.

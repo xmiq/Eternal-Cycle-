@@ -12,7 +12,7 @@ It follows [Rule Zero](../core/DESIGN_PHILOSOPHY.md#rule-zero): world change eme
 
 ## Causal Chains
 
-A causal chain links a condition to plausible reactions:
+[Causal Event Chains](CAUSAL_EVENT_CHAINS.md) defines how an established condition links to plausible reactions, Counterforces, branches, delays, feedback, and persistent consequences:
 
 > Dragon extinction → wyvern expansion → griffin migration → livestock loss → village fortification → military recruitment → taxation pressure.
 
@@ -51,6 +51,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 
 - [World Engine Index](README.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
+- [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
