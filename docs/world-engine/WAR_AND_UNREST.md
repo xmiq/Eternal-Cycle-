@@ -443,6 +443,7 @@ This Profile is external campaign state. The repository contains no completed Co
 - [Resources and Food](RESOURCES_AND_FOOD.md)
 - [Economies](ECONOMIES.md)
 - [Ecology and Migration](ECOLOGY_AND_MIGRATION.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)

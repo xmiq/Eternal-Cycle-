@@ -491,7 +491,7 @@ Every magical Dungeon effect requires an established Mana Relation and specialis
 
 [World Stability](WORLD_STABILITY.md) owns stability claims. A Dungeon affects a Stability Referent only through its actual Sustaining Basis, activity, inhabitants, exchanges, dependencies, and consequences; clearing or losing one never adds or removes abstract stability.
 
-[Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns historical transitions and World Revalidation. A Dungeon may preserve, distort, or be transformed by those systems only through its actual Sustaining Basis, footprint, and dependencies. Later Phase 8 documents own world-contact Gates.
+[Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns historical transitions and World Revalidation. A Dungeon may preserve, distort, or be transformed by those systems only through its actual Sustaining Basis, footprint, and dependencies. [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) owns extraordinary contact interfaces and their channels.
 
 A doorway, teleportation circle, spatial fold, sealed threshold, and Dungeon Access Route are not automatically world-contact Gates. A Dungeon surviving an Age transition does not prove immunity to a World Reset.
 
@@ -629,6 +629,7 @@ This document does not define:
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Monster Ecology](../monster-evolution/MONSTER_ECOLOGY.md)
 - [Monster Evolution](../monster-evolution/README.md)
 - [Development](../progression/README.md)

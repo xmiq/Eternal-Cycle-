@@ -462,7 +462,7 @@ The [Magic-World framework](../magic/WORLD_ENGINE_INTERACTIONS.md) owns the hand
 
 ### Dungeons, Stability, Ages, and Gates
 
-[Dungeon Activity](DUNGEON_ACTIVITY.md) owns Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies. [World Stability](WORLD_STABILITY.md) owns scoped stability claims. [Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns historical transitions and World Revalidation. Later Phase 8 documents own world-contact Gates. Technical systems may depend on, study, exploit, protect, or be disrupted by those phenomena only after their owning rules establish the relevant facts.
+[Dungeon Activity](DUNGEON_ACTIVITY.md) owns Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies. [World Stability](WORLD_STABILITY.md) owns scoped stability claims. [Ages and World Resets](AGES_AND_WORLD_RESETS.md) owns historical transitions and World Revalidation. [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) owns extraordinary contact interfaces, channels, compatibility, and closure. Technical systems may depend on, study, exploit, protect, or be disrupted by those phenomena only after their owning rules establish the relevant facts.
 
 World contact does not transfer a complete technology automatically. Contact supplies possible information, objects, people, pressures, and routes; translation, compatibility, adoption, implementation, maintenance, and politics still apply.
 
@@ -638,6 +638,7 @@ This document does not define:
 - [War and Unrest](WAR_AND_UNREST.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)
 - [Monster Evolution](../monster-evolution/README.md)

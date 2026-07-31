@@ -20,6 +20,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 12. [Dungeon Activity](DUNGEON_ACTIVITY.md) defines Dungeon classification, formation, boundaries, Sustaining Bases, Topology, activity regimes, inhabitants, resources, delving, collapse, and persistent legacies.
 13. [World Stability](WORLD_STABILITY.md) defines scoped Stability Referents, supports, World-System Strain, Systemic Coupling, buffers, response, thresholds, qualitative findings, interventions, displacement, forecasts, and legacies without creating a universal meter or Reset trigger.
 14. [Ages and World Resets](AGES_AND_WORLD_RESETS.md) defines contextual Ages, Age Transitions, exceptional World Resets, causal mechanisms, uneven footprints, survivorship, World Revalidation, time skips, and consequence continuity.
+15. [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) defines extraordinary contact interfaces, Contact Domains, Gate Bases, endpoints, independent channels, compatibility, lifecycle, asymmetry, closure, and persistent contact consequences.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 

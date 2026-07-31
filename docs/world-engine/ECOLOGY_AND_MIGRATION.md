@@ -382,6 +382,7 @@ This document does not define:
 - [Extinction and Replacement](../monster-evolution/EXTINCTION_AND_REPLACEMENT.md)
 - [Magic](../magic/README.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

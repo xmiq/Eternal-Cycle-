@@ -40,7 +40,10 @@ It does not absorb either side:
 | Weapon Soul personhood, bond, vessel, form, and Manifestation | [Soul Weapons](../soul-weapons/README.md) |
 | Adoption, diffusion, implementation, maintenance, technical dependency, and collective magical advancement | [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) |
 | Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies | [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md) |
-| Stability, Age, Gate, and long-timescale simulation | Later Phase 8 World Engine documents |
+| Scoped continuity, strain, and transformation | [World Stability](../world-engine/WORLD_STABILITY.md) |
+| Ages, historical transitions, World Resets, and World Revalidation | [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) |
+| World Gates, contact routes, channels, compatibility, and closure | [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md) |
+| Long-timescale simulation abstraction | Later Phase 8 World Engine rules |
 | Named current conditions, actors, sites, incidents, and changing values | External Campaign Records |
 
 One event may create several consequences, but each fact is recorded once under its owner. The World Engine may reveal that an assumed magical cause was misunderstood; it does not retroactively invent a source or rewrite specialist rules to produce a preferred outcome.

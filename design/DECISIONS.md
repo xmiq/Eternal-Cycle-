@@ -3565,3 +3565,83 @@ Crossing an Age Boundary, surviving or causing a Reset, suffering through its fo
 ## D-891 — World Transition Records Remain External
 
 Current Age Claims, Age Signatures, boundaries, timelines, Reset Preconditions, Triggers, Mechanisms, footprints, survivors, changed laws, aftermath, and World Transition Profiles are campaign state and never belong in the canonical repository.
+
+## D-892 — World Contact Is Broader Than World Gates
+
+A World-Contact Event opens or materially changes consequential exchange between previously separated Contact Domains. A World Gate is one possible extraordinary interface for that contact; ordinary routes, removed barriers, and communication-only contact may create a World-Contact Event without a continuing Gate.
+
+## D-893 — World Gates Are Bounded Interfaces
+
+A World Gate requires identified Contact Domains, material separation, an established Gate Basis, endpoints, a boundary, supported channels, current operating conditions, evidence, and a route to world consequence. Appearance, distance, spectacle, local naming, or unusual travel alone does not qualify one.
+
+## D-894 — World Gates and Soul Gates Remain Distinct
+
+A World Gate exists in world-side causality and carries only its supported world-contact channels. A Soul Gate remains a scoped Soul Space connection governed by Resonance, consent, Soul Thresholds, and Soul Intrusion. Neither inherits the other's access, transit, protections, or consequences.
+
+## D-895 — Gate Channels Resolve Independently
+
+Observation, communication, environmental exchange, energy or Mana flow, material transit, organism transit, embodied-person transit, and other supported channels each retain their own direction, throughput, requirements, costs, boundary, and failure conditions. One working channel proves none of the others.
+
+## D-896 — Gate Operation Requires a Continuing Basis
+
+Opening, sustaining, changing, redirecting, expanding, narrowing, or closing a World Gate requires an established causal interface with its Gate Basis. Destroying, repairing, occupying, or naming a visible endpoint changes only the functions that route actually supports.
+
+## D-897 — Gate Direction and Throughput Are Contextual
+
+Directionality and Throughput are channel-specific, evidence-based current claims rather than one Gate level, capacity score, or permanent property. Testing them changes world state and may carry supported risk.
+
+## D-898 — Contact Compatibility Is Multilayered
+
+Physical, environmental, biological, magical, technical, sensory, cognitive, linguistic, social, and legal compatibility are assessed only for the relevant subject, direction, function, and context. No universal compatibility percentage or automatic translation replaces those findings.
+
+## D-899 — Contact Phases Are Descriptive and Non-Sequential
+
+Precursor, opening, discovery, containment, first exchange, escalation or de-escalation, institutional response, adaptation, and durable outcomes may overlap, repeat, reverse, differ by actor, or never occur. They are not a mandatory escalation ladder or scripted invasion arc.
+
+## D-900 — Gate Discovery, Access, Control, and Authority Are Separate
+
+Discovery, reach, use, operation, control, claim, authority, legitimacy, and consent require separate evidence. Finding or occupying an endpoint grants none of the others automatically.
+
+## D-901 — Contact Domains Are Not Unified Sides
+
+A Contact Domain may contain many populations, factions, institutions, species, sources, and independent persons. World contact supplies routes and pressures but does not assign shared goals, knowledge, morality, policy, hostility, or loyalty.
+
+## D-902 — Contact Asymmetry Is Purpose-Specific
+
+Battlefield force, logistics, environment, information, Magic, technology, Soul knowledge, disease response, legitimacy, alliances, ecology, and adaptation remain distinct capabilities. No civilization level, technology rank, magic rank, or power score predicts every contact outcome, and neither technology nor Magic has predetermined superiority.
+
+## D-903 — Gate Consequences Retain Specialist Ownership
+
+World Gate rules own the interface and its supported contact routes. Population, migration, resource, economic, ecological, disease, faction, conflict, advancement, Dungeon, Stability, Age, Reset, Soul, progression, Weapon Soul, and Magic consequences remain with their established Owning Systems.
+
+## D-904 — World Contact Grants No Automatic Progression
+
+Discovering, crossing, controlling, studying, surviving, exploiting, closing, or becoming historically important through a World Gate does not automatically grant Skill, Development, Stat XP, Evolution, Class, magical affinity, Soul growth, Soul Weapon change, authority, or any other progression.
+
+## D-905 — World Gates Do Not Automatically Change Historical Regimes
+
+A World Gate opening or closure is not automatically an Age Transition, World Reset, World Stability verdict, War, Dungeon, or catastrophe. It may contribute causally only when the receiving system's conditions are established.
+
+## D-906 — Gate Closure Preserves Stranding and Legacy
+
+Gate Closure does not erase transferred beings, relationships, dependencies, obligations, damage, ecology, disease, institutions, knowledge, or other Gate Legacies. Stranded populations and systems continue through current resources, environments, relationships, and autonomous choices.
+
+## D-907 — Hidden Gates Require Prior World Truth
+
+A World Gate may operate without public knowledge, but it still requires a prior Gate Basis, supported channels, evidence, and appropriate effects. Observer ignorance does not permit retroactive Gate invention for a desired arrival, threat, item, or revelation.
+
+## D-908 — World Gates Create No Soul Exception by Themselves
+
+World Gate classification alone creates no Reincarnation destination, Interlife route, Soul Gate, alternate incarnation, divergent Soul Echo, Soul Avatar expression, soul duplication, or soul-level immunity. Detailed Reincarnation and Soul Avatar interaction requires its dedicated Phase 8 rules.
+
+## D-909 — Gate Footprints Follow Channels and Causality
+
+A Gate Footprint separates direct boundary and channel effects from broader consequences propagated through specialist systems. It may be uneven, delayed, disputed, or wider than the visible interface and does not make the Gate the direct cause of every change within it.
+
+## D-910 — World Gate Records Remain External
+
+Current World Gates, Contact Domains, endpoints, footprints, channels, operating conditions, compatibility findings, contacted societies, actors, Contact Phases, consequences, closure, stranding, Gate Legacies, and World Gate Profiles are campaign state and never belong in the canonical repository.
+
+## D-911 — Contact Labels Do Not Establish a Cosmology
+
+Calling a Contact Domain another world, reality, realm, or Age is a scoped contact claim rather than proof of a particular cosmology. An Age label alone creates no time travel, alternate timeline, duplicate history, or second present; any such condition requires its own prior world-side cause and evidence.

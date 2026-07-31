@@ -93,7 +93,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
-These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md); world-contact Gate rules and related templates remain queued for their roadmap phases. Notes here grant no abilities and do not override canonical rules.
+These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md), and the contact interface is implemented in [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md). Detailed Gate interaction with Reincarnation and Soul Avatars remains the current roadmap task, while the reusable Gate-event template remains queued for Phase 10. Notes here grant no abilities and do not override canonical rules.
 
 ### Inspiration References
 
@@ -187,11 +187,11 @@ Required future scenarios:
 - an apparently one-sided invasion becomes politically and logistically unsustainable;
 - a Gate closes after decades and strands populations on both sides.
 
-### World Gate Canon Conflicts to Resolve
+### World Gate Canon Conflicts Resolved
 
-- **Soul Gate** already means a scoped Soul Space connection governed by consent and Soul Intrusion rules. The world-contact system should probably use **World Gate** on first reference and reserve unqualified **Gate** for its own document, but terminology remains non-canonical until selected.
-- The repository currently uses `docs/world-engine/`, not `docs/world/`. The future task must decide whether `GATES_AND_WORLD_CONTACT.md` belongs in the established world-engine directory or whether a broader world documentation hierarchy is being intentionally created.
-- Populations, economies, disease, ecology, war, technology, magic, World Stability, and other Phase 8 domains remain incomplete. Gate outcomes should depend on those systems rather than defining silent replacements for them.
+- **Soul Gate** remains the scoped Soul Space connection governed by consent and Soul Intrusion rules. **World Gate** is the canonical first-reference term for the world-contact interface; unqualified **Gate** is used only where the meaning is unambiguous.
+- The canonical rules belong in the established `docs/world-engine/GATES_AND_WORLD_CONTACT.md` path. No parallel `docs/world/` hierarchy was created.
+- Population, economy, disease, ecology, war, advancement, Dungeon, World Stability, Age, Reset, and other consequences retain their completed specialist owners. World Gate rules establish contact routes and hand off effects rather than replacing those systems.
 
 ### Cross-System Integration Brief
 
@@ -884,3 +884,16 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - A living incarnation caught in a Reset must remain possible; Reset must not become a disguised mandatory death or Reincarnation trigger.
 - World Revalidation should make old knowledge valuable but fallible rather than either useless or automatically authoritative.
 - The Gate task must distinguish Gate contact from Age Transition and World Reset while allowing a sufficiently consequential Gate event to contribute causally to either.
+
+## Phase 8 World-Gate Watchlist
+
+- World Gate Profiles should remain selective external records rather than civilization sheets, portal statistics, encounter tables, or scripted contact timelines.
+- Playtests should distinguish World-Contact Events, World Gates, ordinary routes, magical transit, Dungeon Access Routes, Soul Gates, Age Transitions, and World Resets by function rather than appearance.
+- Gate Channels need enough independence to make communication, environmental leakage, organism transit, embodied travel, and material supply meaningfully different without excessive bookkeeping.
+- Contact Compatibility should expose physical, environmental, biological, magical, technical, sensory, linguistic, social, and legal mismatches without producing one percentage.
+- Discovery, reach, use, operation, control, claim, authority, legitimacy, and consent should remain separate in practical endpoint disputes.
+- Contact Phases should support reversals, parallel actor responses, and peaceful or limited contact without drifting into a mandatory invasion ladder.
+- Contact Asymmetry should make logistics, maintenance, local knowledge, institutions, Soul knowledge, disease response, and legitimacy matter alongside direct force.
+- Gate Closure tests should preserve stranded populations, dependencies, hybrid institutions, ecology, and unresolved obligations rather than resetting contact.
+- The Reincarnation-and-Soul-Avatar integration task must preserve the one-active-incarnation rule, current embodiment, Soul Gate distinction, Echo provenance, and current-incarnation agency.
+- The simulation-abstraction task should preserve Gate Channels, decisive compatibility findings, autonomous actors, closure risk, and Pending Consequences when compressing long contact periods.

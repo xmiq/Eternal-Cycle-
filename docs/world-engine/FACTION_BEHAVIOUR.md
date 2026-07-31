@@ -399,6 +399,7 @@ This is external campaign state. The repository defines the schema and rules but
 - [Ecology and Migration](ECOLOGY_AND_MIGRATION.md)
 - [War and Unrest](WAR_AND_UNREST.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Institutions and Academies](../human/INSTITUTIONS_AND_ACADEMIES.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Monster Societies](../monster-evolution/MONSTER_SOCIETIES.md)

@@ -382,7 +382,7 @@ Before inferring disease consequences, establish:
 - effects in both directions;
 - uncertainty and Counterforces.
 
-The later Gate task owns how world-contact events occur. This document owns disease claims only after a valid contact route exists.
+[World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) owns how world contact and its channels occur. This document owns disease claims only after a valid contact route exists.
 
 ## Disease Legacies
 
@@ -454,7 +454,7 @@ The physician notices patterns quickly but needs current study, tools, colleague
 
 Two worlds establish a brief material exchange. A spore can survive on imported wood but cannot establish in local animals; a harmless local symbiont becomes damaging inside one visiting construct species.
 
-Disease consequences are asymmetric and specific. Contact creates monitoring, trade delays, negotiation, and new care needs, not an automatic extinction plague. The future Gate rules own the contact event itself.
+Disease consequences are asymmetric and specific. Contact creates monitoring, trade delays, negotiation, and new care needs, not an automatic extinction plague. [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) owns the contact event itself.
 
 ## Safeguards
 
@@ -503,6 +503,7 @@ This Profile is external campaign state. The repository contains no completed Di
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)
 - [War and Unrest](WAR_AND_UNREST.md)
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Profession Development](../progression/PROFESSION_DEVELOPMENT.md)
 - [Physical Development](../progression/PHYSICAL_DEVELOPMENT.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)

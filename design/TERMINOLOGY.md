@@ -3347,3 +3347,71 @@ A narrative change in simulation resolution that compresses an interval while pr
 ## World Transition Profile
 
 An external Campaign Record of an Age Transition or World Reset claim, preceding and successor Age Claims, pressures, actors, Reset basis, footprint, survivorship, responses, World Revalidation, legacies, Pending Consequences, evidence, and uncertainty.
+
+## World-Contact Event
+
+A change that opens or materially alters consequential exchange between Contact Domains that were previously separated within the relevant scope and horizon.
+
+## Contact Domain
+
+One bounded side of a world-contact model, such as a region, realm, reality, population environment, isolated civilization, or displaced historical context whose current conditions can be assessed at the interface.
+
+## World Gate
+
+A bounded world-side interface that creates, restores, or sustains extraordinary contact between Contact Domains that are not otherwise mutually reachable through comparable current routes.
+
+## Gate Basis
+
+The established process, structure, relationship, source, law, actor, or combination that creates and sustains a World Gate's current functions.
+
+## Gate Endpoint
+
+A bounded world-side location, region, object, condition, or moving interface through which one Contact Domain meets a World Gate.
+
+## Gate Boundary
+
+The interface across which Gate-specific transit, transformation, exclusion, detection, or failure rules apply.
+
+## Gate Footprint
+
+The actual distribution of a World Gate's direct and propagated effects across endpoints, connected routes, populations, environments, institutions, and time.
+
+## Gate Channel
+
+One category of transfer or influence that a World Gate can carry under stated conditions.
+
+## Gate Directionality
+
+The direction or conditional pattern in which one Gate Channel currently operates.
+
+## Gate Throughput
+
+The evidenced amount, frequency, speed, size, or complexity of transfer that one Gate Channel can sustain under current conditions.
+
+## Contact Compatibility
+
+A purpose-specific assessment of how conditions from one Contact Domain interact with a World Gate and another Contact Domain for a stated subject, direction, function, and context.
+
+## Gate Closure
+
+The loss, suspension, sealing, redirection, or ending of one or more World Gate channels through an established cause.
+
+## Gate Stranding
+
+A condition in which beings, populations, material systems, obligations, or dependencies can no longer use a World Gate route on which they relied.
+
+## Contact Phase
+
+A descriptive current pattern within a world-contact process, such as precursor, opening, discovery, first exchange, institutional response, adaptation, or a durable outcome; Contact Phases are not mandatory sequential stages.
+
+## Contact Asymmetry
+
+A purpose-specific difference between Contact Domains that materially affects one interaction without creating a universal civilization rank or power score.
+
+## Gate Legacy
+
+A persistent consequence remaining after World Gate operation, contact intensity, control, or access changes.
+
+## World Gate Profile
+
+An external Campaign Record of one World Gate's Contact Domains, Basis, endpoints, boundary, footprint, channels, operation, compatibility, information, access, actors, consequences, closure, stranding, Gate Legacies, evidence, and uncertainty.

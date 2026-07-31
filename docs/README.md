@@ -104,6 +104,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Dungeon Activity](world-engine/DUNGEON_ACTIVITY.md) - contextual Dungeon classification, formation, boundaries, Sustaining Bases, Topology, activity, inhabitants, resources, delving, collapse, and legacies.
 - [World Stability](world-engine/WORLD_STABILITY.md) - scoped continuity, supports, strain, coupling, buffers, response, qualitative findings, interventions, displacement, forecasts, and legacies without a universal world-health score.
 - [Ages and World Resets](world-engine/AGES_AND_WORLD_RESETS.md) - contextual historical eras, causal transitions, exceptional world-scale transformation, uneven survivorship, revalidation, time skips, and inherited legacies.
+- [World Gates and World-Contact Events](world-engine/GATES_AND_WORLD_CONTACT.md) - extraordinary contact interfaces, independent transfer channels, contextual compatibility, autonomous first contact, closure, stranding, and Gate Legacies.
 
 ## GM Framework
 

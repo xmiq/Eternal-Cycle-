@@ -4,7 +4,7 @@
 
 This document defines how Eternal Cycle traces change from established causes through autonomous responses, delays, consequences, and feedback. It turns [Rule Zero](../core/DESIGN_PHILOSOPHY.md#rule-zero) into a playable procedure without scripting future history or replacing GM judgment.
 
-It uses [World-State Variables](WORLD_STATE_VARIABLES.md) as its state grammar. Later World Engine domains define which population, resource, economic, ecological, factional, military, disease, advancement, dungeon, Stability, Age, Reset, and Gate claims are valid. This document defines how valid claims connect.
+It uses [World-State Variables](WORLD_STATE_VARIABLES.md) as its state grammar. World Engine domain documents define which population, resource, economic, ecological, factional, military, disease, advancement, dungeon, Stability, Age, Reset, and [World Gate](GATES_AND_WORLD_CONTACT.md) claims are valid. This document defines how valid claims connect.
 
 ## Core Rule
 
@@ -342,6 +342,7 @@ This document does not define:
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

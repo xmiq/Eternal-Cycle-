@@ -412,6 +412,7 @@ Those subjects remain with their roadmap tasks and owning systems.
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Soul Engine](../soul/README.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)

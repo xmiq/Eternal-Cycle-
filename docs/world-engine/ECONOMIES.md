@@ -379,6 +379,7 @@ This document does not define:
 - [Soul Weapons](../soul-weapons/README.md)
 - [Magic](../magic/README.md)
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

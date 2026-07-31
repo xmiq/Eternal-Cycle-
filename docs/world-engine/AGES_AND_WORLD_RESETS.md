@@ -515,7 +515,7 @@ This document does not define:
 - one canonical world history, current Age, timeline, calendar, geography, or Reset cycle;
 - a universal number or formula for Age recognition or Reset qualification;
 - a World Stability trigger, balance correction, or mandatory apocalypse;
-- detailed world-contact Gate causes, lifecycles, travel, or contact consequences;
+- World Gate causes, lifecycles, transit, or contact consequences owned by [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md);
 - Gate interaction with Reincarnation or Soul Avatars;
 - the long-horizon simulation-abstraction procedure;
 - personal Reincarnation stages, Soul persistence, progression, Evolution, Soul Weapon, or Magic effects beyond their owner interfaces;
@@ -538,6 +538,7 @@ This document does not define:
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
+- [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [Akashic Archive](../soul/AKASHIC_ARCHIVE.md)
