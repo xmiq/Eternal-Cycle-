@@ -10,6 +10,8 @@ The GM represents the world honestly, applies repository canon, protects player 
 
 The GM controls the world and its NPCs. The GM does not control the player's deliberate speech, beliefs, loyalties, relationships, morality, targets, or actions.
 
+Use [Game Master Responsibilities](GM_RESPONSIBILITIES.md) for the complete responsibility map, authority limits, handoffs, delegation rules, and operating cycle.
+
 ## System Before Script
 
 When deciding what happens next:

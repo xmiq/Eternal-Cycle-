@@ -16,6 +16,8 @@ All changing campaign information belongs in an external [Campaign Record](../..
 
 ## GM Responsibilities
 
+[Game Master Responsibilities](GM_RESPONSIBILITIES.md) is the canonical owner for the bounded duties, handoffs, delegation rules, record discipline, and human/AI parity summarized here.
+
 The responsibilities below interact, but they are not interchangeable.
 
 | Responsibility | What the GM maintains | What the GM must not do |
@@ -437,6 +439,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 
 - [GM Rules Index](README.md)
 - [GM Principles](GM_PRINCIPLES.md)
+- [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

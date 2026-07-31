@@ -3757,3 +3757,27 @@ The World Engine advances world-side inputs and consequences. Soul, Development,
 ## D-939 — Simulation Records Remain External
 
 Current Simulation Frames, Questions, Resolutions, Anchors, Material Exceptions, Review Points, Passes, Deltas, actors, branches, world values, and timelines are campaign state and never belong in the canonical repository.
+
+## D-940 — GM Authority Is Bounded by Ownership
+
+The Game Master may establish and apply campaign facts only through the repository's authority hierarchy and canonical system owners. The GM cannot invent a mechanic, waive an owner's requirements, or convert narrative preference into canonical authority.
+
+## D-941 — GM Responsibilities Are Distinct but Coordinated
+
+Situation presentation, intent clarification, rules adjudication, world simulation, actor portrayal, information management, agency protection, continuity, consequence management, records, and focus stewardship are separate responsibilities joined through explicit handoffs. Authority in one responsibility does not imply authority in another.
+
+## D-942 — Deliberate Player Intent Remains Player-Owned
+
+The GM may describe involuntary effects, constraints, perceptions, and established consequences, but may not choose a player character's deliberate speech, beliefs, loyalties, morality, targets, relationships, or actions. Material ambiguity in declared intent must be clarified rather than exploited.
+
+## D-943 — Material Adjudication Requires an External Trace
+
+A ruling that changes capability, risk, continuity, obligation, information, or future options must leave the smallest sufficient Adjudication Trace in the external Campaign Record. The trace is campaign state and never belongs in the canonical repository.
+
+## D-944 — Delegation Does Not Expand Authority
+
+Dividing GM work among humans, AI systems, tools, or subsystems does not grant any delegate broader authority, perfect information, or permission to bypass canonical ownership. Material handoffs must preserve facts, uncertainty, agency, consequences, and record provenance.
+
+## D-945 — Human and AI GMs Share One Canonical Framework
+
+Human and AI Game Masters use the same responsibilities, authority hierarchy, ownership boundaries, agency safeguards, information model, continuity duties, and record requirements. Implementation medium changes workflow, not canon.

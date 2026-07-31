@@ -112,6 +112,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 - [GM Rules Index](gm/README.md) - reading order and campaign-data boundary for the canonical GM framework.
 - [GM Principles](gm/GM_PRINCIPLES.md) - system-first adjudication, fair uncertainty, meaningful death, and contextual capability judgments.
+- [Game Master Responsibilities](gm/GM_RESPONSIBILITIES.md) - bounded GM duties, authority limits, ownership handoffs, delegation, record discipline, and human/AI parity.
 - [Game Master Framework](gm/GAME_MASTER_FRAMEWORK.md) - operational responsibilities, authority, session lifecycle, world simulation, continuity, information views, external campaign records, and AI GM guidance.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 

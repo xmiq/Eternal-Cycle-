@@ -4,9 +4,9 @@
 
 **Current phase: Phase 9 — GM Toolkit**
 
-**Current task: Define GM responsibilities**
+**Current task: Define consequence resolution**
 
-Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define GM responsibilities** unless the project owner explicitly changes the target. Do not begin consequence resolution, uncertainty handling, reincarnation generation, generators, or later roadmap work before GM responsibilities are complete.
+Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define consequence resolution** unless the project owner explicitly changes the target. Do not begin uncertainty handling, reincarnation generation, generators, or later roadmap work before consequence resolution is complete.
 
 Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -206,7 +206,7 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 ## Phase 9 — GM Toolkit
 
 - [x] Define alpha playtest framework
-- [~] Define GM responsibilities
+- [x] Define GM responsibilities
 - [~] Define consequence resolution
 - [~] Define uncertainty handling
 - [~] Define reincarnation generation

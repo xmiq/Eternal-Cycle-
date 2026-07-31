@@ -3451,3 +3451,19 @@ One advancement of a Simulation Frame from its current state to one Simulation R
 ## Simulation Delta
 
 An external Campaign Record of material changes produced by one or more Simulation Passes, including causes, actor choices, owner handoffs, changed conditions, uncertainty, Pending Consequences, legacies, and the next Review Point.
+
+## Game Master
+
+The campaign role that represents established world truth, applies canonical owners to current facts, preserves meaningful player choice, presents perceivable situations, and records resulting campaign changes. A human, an AI, or a group may perform the role under the same authority limits.
+
+## GM Responsibility
+
+A bounded duty the Game Master must maintain during preparation, adjudication, simulation, presentation, continuity, or record keeping. A GM Responsibility is not a new source of mechanics and grants no authority to override a canonical owner.
+
+## Responsibility Handoff
+
+An explicit routing of a claim, input, or resulting change from one GM Responsibility or canonical owner to another without deciding the receiving owner's result in advance.
+
+## Adjudication Trace
+
+The smallest external Campaign Record sufficient to preserve a material ruling's question, established inputs, authority, ownership, outcome, consequence, uncertainty, and required follow-up.

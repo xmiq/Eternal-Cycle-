@@ -44,6 +44,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/magic/FORBIDDEN_MAGIC.md`](docs/magic/FORBIDDEN_MAGIC.md) - scoped magical restrictions, hazards, authority, protected interests, controlled practice, knowledge, enforcement, review, and safeguards.
 - [`docs/magic/WORLD_ENGINE_INTERACTIONS.md`](docs/magic/WORLD_ENGINE_INTERACTIONS.md) - causal handoff from established magical changes to bounded, persistent world consequences.
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
+- [`docs/gm/GM_RESPONSIBILITIES.md`](docs/gm/GM_RESPONSIBILITIES.md) - bounded GM duties, ownership handoffs, delegation, records, and human/AI parity.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
@@ -79,4 +80,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Define GM responsibilities**.
+The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Define consequence resolution**.
