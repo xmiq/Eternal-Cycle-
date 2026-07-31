@@ -805,5 +805,6 @@ This document does not define:
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Monster Generator](MONSTER_GENERATOR.md)
 - [NPC Generator](NPC_GENERATOR.md)
+- [Faction Generator](FACTION_GENERATOR.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)

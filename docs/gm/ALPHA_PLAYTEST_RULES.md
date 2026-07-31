@@ -128,7 +128,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- faction, world-event, time-skip, and Age-transition generators;
+- world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
 Mentioning these areas in this framework does not change their roadmap status.
@@ -253,7 +253,7 @@ Use the completed World Engine framework as follows:
 
 Until Phase 9 is complete:
 
-- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), [Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), and [Dungeon Generation](DUNGEON_GENERATOR.md), within their stated scopes;
+- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), [Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), [Dungeon Generation](DUNGEON_GENERATOR.md), and [Faction Generation](FACTION_GENERATOR.md), within their stated scopes;
 - use transparent qualitative judgment;
 - state material uncertainty and its cause;
 - compare capability through [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md);
@@ -400,6 +400,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)
 - [World Stability](../world-engine/WORLD_STABILITY.md)
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
+- [Faction Generator](FACTION_GENERATOR.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

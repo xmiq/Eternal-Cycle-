@@ -443,6 +443,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [Monster Generator](MONSTER_GENERATOR.md)
 - [NPC Generator](NPC_GENERATOR.md)
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
+- [Faction Generator](FACTION_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

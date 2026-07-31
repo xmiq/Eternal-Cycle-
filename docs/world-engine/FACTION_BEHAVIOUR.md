@@ -385,11 +385,12 @@ A campaign may maintain a qualitative **Faction Profile** containing only the st
 - current actions, actual results, Pending Consequences, and uncertainty;
 - succession, capture, schism, merger, continuity, and dissolution risks.
 
-This is external campaign state. The repository defines the schema and rules but contains no completed Faction Profile, named live faction, or current world value.
+This is external campaign state. The repository defines the schema and rules but contains no completed Faction Profile, named live faction, or current world value. Use the [Faction Generator](../gm/FACTION_GENERATOR.md) to create, classify, or revalidate a campaign-local Profile; this document remains the owner of subsequent faction decisions, mobilization, adaptation, and consequences.
 
 ## Related Documents
 
 - [NPC Generator](../gm/NPC_GENERATOR.md)
+- [Faction Generator](../gm/FACTION_GENERATOR.md)
 - [World Engine Index](README.md)
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)

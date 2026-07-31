@@ -769,7 +769,7 @@ This document does not define:
 - universal difficulty or challenge ratings;
 - campaign-specific Encounters, maps, participants, or histories.
 
-[Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), [Dungeon Generation](DUNGEON_GENERATOR.md), and later Phase 9 generators may supply canon-compatible source profiles. They cannot alter this document's existence, eligibility, framing, agency, information, or non-scaling rules.
+[Monster Generation](MONSTER_GENERATOR.md), [NPC Generation](NPC_GENERATOR.md), [Dungeon Generation](DUNGEON_GENERATOR.md), [Faction Generation](FACTION_GENERATOR.md), and later Phase 9 generators may supply canon-compatible source profiles. They cannot alter this document's existence, eligibility, framing, agency, information, or non-scaling rules.
 
 ## Related Documents
 
@@ -787,3 +787,4 @@ This document does not define:
 - [Monster Generator](MONSTER_GENERATOR.md)
 - [NPC Generator](NPC_GENERATOR.md)
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
+- [Faction Generator](FACTION_GENERATOR.md)

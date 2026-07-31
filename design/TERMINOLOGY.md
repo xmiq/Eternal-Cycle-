@@ -3643,3 +3643,23 @@ One bounded procedure resolving only the Dungeon facts needed for a stated prepa
 ## Dungeon Region
 
 A bounded part of Dungeon Topology grouped because its conditions, functions, participants, sustaining relations, or Access Routes are usefully resolved together. It is a map and simulation abstraction rather than an inherent room, floor, biome, or difficulty tier.
+
+## Faction Generation Brief
+
+The external input for one faction-generation pass, stating the coordination question, world context, scope, known participants and institutions, information views, preparation horizon, and canonical limits without prescribing morality, leadership, objectives, enemies, or future action.
+
+## Faction Basis
+
+The validated scope, participants, overlapping interests, relationships, information and action routes, boundary conditions, and continuity that permit one faction claim without implying uniform belief, consent, loyalty, capability, or knowledge.
+
+## Faction Seed
+
+An unvalidated preparation possibility combining a possible Faction Basis, history, identity, participant relationships, internal differences, objectives, capacity, current activity, and world placement. It is not established campaign fact until classification, causality, ownership, information, and continuity tests pass.
+
+## Faction Version
+
+One dated configuration of a faction's participants, identity, interests, procedures, information routes, capacity, relationships, and continuity claims. Material change may require a new Version without automatically ending or validating every continuity claim.
+
+## Faction Generation Pass
+
+One bounded procedure resolving only the faction facts needed for a stated issue and preparation horizon while preserving member agency, internal uncertainty, future decisions, and specialist ownership.

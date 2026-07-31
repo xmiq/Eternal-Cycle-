@@ -26,6 +26,8 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 
 Use the [Dungeon Generator](../gm/DUNGEON_GENERATOR.md) for campaign-local Dungeon creation and revalidation. The World Engine remains the owner of every live process and consequence used by that generator.
 
+Use the [Faction Generator](../gm/FACTION_GENERATOR.md) for campaign-local faction classification, creation, and revalidation. Faction Behaviour remains the owner of every live decision, mobilization, adaptation, and consequence used by that generator.
+
 Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.
 
 ## Integrated Guarantees

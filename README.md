@@ -53,6 +53,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/MONSTER_GENERATOR.md`](docs/gm/MONSTER_GENERATOR.md) - world-valid species sketches, individual histories, embodiment, ecology, capability, information, placement, and profile safeguards.
 - [`docs/gm/NPC_GENERATOR.md`](docs/gm/NPC_GENERATOR.md) - person-basis validation, causal identity, actor-specific information, independent decisions, relationships, continuity, and external profiles.
 - [`docs/gm/DUNGEON_GENERATOR.md`](docs/gm/DUNGEON_GENERATOR.md) - Dungeon Basis validation, causal topology, access, activity, inhabitants, resources, hazards, information, revalidation, and external profiles.
+- [`docs/gm/FACTION_GENERATOR.md`](docs/gm/FACTION_GENERATOR.md) - coordination-basis validation, participants, interests, decision routes, information, capacity, continuity, versioning, and external profiles.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
@@ -87,4 +88,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create faction generator**.
+The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create world-event generator**.

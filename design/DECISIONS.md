@@ -4041,3 +4041,43 @@ A generated Dungeon is a current world state that changes through maintenance, p
 ## D-1010 — Dungeon Generation Records Remain Campaign-External
 
 Populated briefs, Dungeon Seeds, Profiles, generation records, maps, Topology, participants, routes, resources, hazards, claims, current activity, and histories belong in the external Campaign Record and never enter repository canon through play alone.
+
+## D-1011 — Faction Generation Begins With Coordination
+
+A generated faction requires actual participants, overlapping interests, relationships, information and action routes, boundaries, and continuity. A shared label, condition, identity, enemy, location, or grievance cannot create coordinated agency by itself.
+
+## D-1012 — Shared Categories Do Not Create Factions
+
+Populations, cultures, faiths, species, Professions, social classes, Institutions, settlements, audiences, and affected groups remain distinct from factions unless actual actors coordinate within a stated scope. A valid classification may therefore find no faction or several overlapping factions.
+
+## D-1013 — Participation Relationships Remain Distinct
+
+Membership, representation, leadership, office, employment, dependence, alliance, patronage, subjecthood, audience, coercion, and support are separate relationships. None silently grants consent, loyalty, authority, knowledge, ownership, or the right to speak for another actor.
+
+## D-1014 — Faction Information Remains Distributed
+
+A Faction Profile records actor- and route-specific information rather than one pooled mind. A fact can influence a faction decision only when relevant participants receive, interpret, and accept it through supported channels.
+
+## D-1015 — Decisions and Actions Require Routes
+
+Faction interests and policies do not become outcomes by declaration. Deliberation, authority, communication, mobilization, execution, resistance, delay, and world response remain distinct stages governed by actual participants and canonical owners.
+
+## D-1016 — Faction Capacity Is Function-Specific
+
+Faction capability is assessed for a particular objective and condition through people, Skills, Development, resources, access, logistics, legitimacy, relationships, information, coordination, and dependencies. No universal faction strength, level, or power score is canonical.
+
+## D-1017 — Member Agency Survives Coordination
+
+Faction generation may establish current relationships, obligations, incentives, procedures, pressures, and plans, but it cannot preselect future loyalty, dissent, refusal, betrayal, reform, sacrifice, or consent. Material choices remain with their actors when their decision contexts arise.
+
+## D-1018 — Faction Versions Preserve Change and Contest
+
+Material reform, capture, schism, merger, revival, dissolution, or succession requires causal revalidation. A Faction Version preserves dated structure and contested continuity without treating a name, symbol, office, founder, or legal declaration as automatic identity continuity.
+
+## D-1019 — Faction Randomization Resolves Only Supported Details
+
+Random tools may choose among world-supported, non-agentic details left open by a Faction Generation Brief. They cannot invent coordination, leadership, morality, consent, objectives, resources, information, capability, future decisions, or guaranteed conflict.
+
+## D-1020 — Faction Generation Records Remain Campaign-External
+
+Populated briefs, Faction Seeds, Profiles, Versions, participants, memberships, objectives, resources, relationships, decisions, current actions, information views, and histories belong in the external Campaign Record and never enter repository canon through play alone.

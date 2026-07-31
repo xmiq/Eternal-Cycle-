@@ -819,3 +819,4 @@ This document does not define:
 - [Soul Weapons](../soul-weapons/README.md)
 - [Magic Rules](../magic/README.md)
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
+- [Faction Generator](FACTION_GENERATOR.md)
