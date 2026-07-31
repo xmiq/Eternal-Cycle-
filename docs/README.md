@@ -96,6 +96,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Populations](world-engine/POPULATIONS.md) - demographic boundaries, composition, cohorts, flows, life cycles, continuity, momentum, support, capability distribution, and uncertainty.
 - [Resources and Food](world-engine/RESOURCES_AND_FOOD.md) - Resource Claims, Effective Supply, scarcity, bottlenecks, renewal, depletion, substitution, reserves, sustenance, Food Security, and waste.
 - [Economies](world-engine/ECONOMIES.md) - production and allocation networks, exchange, value, Price, currencies, Purchasing Access, capacity, obligations, taxation, concentration, shocks, and adaptation.
+- [Ecology and Migration](world-engine/ECOLOGY_AND_MIGRATION.md) - ecosystem state, Habitat Connectivity, functions, disturbance, resilience, succession, Novel Ecologies, routes, displacement, settlement, and migration consequences.
 
 ## GM Framework
 

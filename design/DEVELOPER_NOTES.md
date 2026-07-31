@@ -731,3 +731,73 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Currency conversion across Gates and Ages needs local trust and verification rather than universal exchange rates.
 - Economic shocks should preserve debt, ownership, trust, and distribution legacies after output recovers.
 - Informal and monster economies need room for unfamiliar allocation forms without forcing human market assumptions onto them.
+
+## Phase 8 Ecology-and-Migration Watchlist
+
+- World Ecology must reuse Monster Ecology relationships without duplicating Evolution or species ownership.
+- Ecosystem models should track decisive functions and dependencies rather than exhaustive species lists.
+- Recovery playtests should allow reorganization and Novel Ecologies while preserving identity loss and displaced burdens.
+- Migration records need origin, transit, destination, connected-region, and return effects without treating movers as one actor.
+- Habitat Connectivity should expose life-stage and route bottlenecks that area totals miss.
+- Invasive Population adjudication must remain consequence-based and never become collective guilt or automatic extermination permission.
+
+## Phase 8 Interrupted Checkpoint - Ecology and Migration Complete
+
+### Completed Tasks
+
+- Define world-state variables as rules, not campaign data - committed as `7662613`.
+- Define causal event chains - committed as `2da41e8`.
+- Define populations - committed as `ac28a8e`.
+- Define resources and food - committed as `2f46282`.
+- Define economies - committed as `cebfc96`.
+- Define ecology and migration - implementation and validation complete; commit was blocked when the Codex usage limit prevented Git index access.
+
+### Active Task
+
+The roadmap now names **Define faction behaviour**. Do not begin it until the completed ecology-and-migration diff has been reviewed, staged, and committed as the Phase 8 checkpoint.
+
+### Uncommitted Files
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/world-engine/README.md`
+- `docs/world-engine/WORLD_ENGINE_OVERVIEW.md`
+- `docs/world-engine/ECOLOGY_AND_MIGRATION.md` (new)
+
+### Validation Status
+
+- `git diff --check`: passed before the checkpoint note was added; rerun after resuming.
+- All relative Markdown paths and deep anchors: passed across 115 Markdown files.
+- Decision identifiers: unique through D-777.
+- Terminology headings: 717 unique after reusing the existing `Ecological Recovery` term instead of duplicating it.
+- No blocking unresolved question was recorded.
+- The roadmap names Phase 8 and `Define faction behaviour` as the sole next task.
+- Repository boundary review found no campaign save, current character, inventory, quest, story summary, or live world-state file.
+
+### Remaining Work
+
+- Commit the completed ecology-and-migration task checkpoint.
+- Define faction behaviour.
+- Define war and unrest.
+- Define disease evolution.
+- Define technology and magical advancement.
+- Define dungeon activity.
+- Define World Stability.
+- Define Ages and resets.
+- Define Gates and world-contact events.
+- Define Gate interactions with Reincarnation and Soul Avatars.
+- Define simulation abstraction levels.
+- Complete the Phase 8 integration audit, advance the roadmap without implementing Phase 9, push, and generate `Eternal Cycle.zip` from the final committed tree.
+
+### Exact Resume Point
+
+1. Read the required governance files and confirm the working tree contains only the files listed above plus the pre-existing untracked archive.
+2. Rerun `git diff --check`, complete Markdown path and anchor validation, decision and terminology uniqueness checks, and repository-boundary validation.
+3. Review the complete ecology-and-migration diff.
+4. Stage only the listed files and commit with `chore: checkpoint Phase 8 progress`.
+5. Begin only **Define faction behaviour**.

@@ -2811,3 +2811,59 @@ Control of a material source, route, capability, claim, medium, institution, or 
 ## Economic Shock
 
 A comparatively rapid change to source, production, access, information, trust, authority, demand, route, currency, or obligation within an Economic Network.
+
+## Ecosystem
+
+A scoped network of living, embodied, constructed, magical, spiritual, social, and environmental participants whose conditions and relationships materially affect one another's persistence.
+
+## Ecological State
+
+The current scoped configuration of habitat conditions, populations, resource and waste Flows, ecological relationships, occupied niches, routes, disturbances, recovery, legacies, and uncertainty.
+
+## Habitat Connectivity
+
+The usable connection among places required by one Population, life cycle, or Ecological Function under current routes, timing, embodiment, support sites, barriers, knowledge, access, and magical conditions.
+
+## Ecological Function
+
+A material effect one participant or process performs within a stated Ecosystem, without implying destiny, moral worth, or universal importance.
+
+## Ecological Overshoot
+
+A condition in which current use or Population exceeds what a Habitat can continue sustaining through its actual renewal routes, subject to reserves, movement, adaptation, and Counterforces.
+
+## Ecological Disturbance
+
+A bounded event or changed regime that materially alters Habitat, ecological relationships, resource Flows, Population distribution, or Ecological Functions.
+
+## Ecological Resistance
+
+The extent to which a current Ecosystem limits change during a specified exposure.
+
+## Ecological Resilience
+
+The ability of an Ecosystem to sustain or reorganize material functions after change without requiring return to its prior configuration.
+
+## Ecological Succession
+
+Directional change in Ecosystem composition and relationships as participants arrive, decline, modify conditions, and enable or constrain later participants.
+
+## Novel Ecology
+
+A persistent Ecosystem configuration containing combinations of participants, conditions, or relationships not previously established in that scope.
+
+## Dispersal
+
+Movement away from an origin that changes local distribution or establishes access to another area, whether individual, life-stage-specific, episodic, or one-way.
+
+## Displacement
+
+Movement driven by conditions that materially remove safe or viable choice to remain while preserving the movers' agency among available responses.
+
+## Migration Pressure
+
+A condition that makes movement more relevant, necessary, attractive, or likely for a scoped Population without deciding that movement occurs.
+
+## Migration Corridor
+
+A route and supporting sequence of conditions enabling a specified Population to move between required places during a relevant interval.

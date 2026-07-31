@@ -3057,3 +3057,55 @@ Output or trade may recover while debts, lost ownership, displaced workers, depe
 ## D-764 — Economic Relations Cannot Convert Persons into Commodities
 
 Workers, monsters, Weapon Souls, spirits, gods, and other persons retain agency and personhood. A market, contract, price, custody claim, or coercive institution cannot redefine them as ordinary inventory under canonical rules.
+
+## D-765 — World Ecology Owns Current Cross-System State
+
+The World Engine resolves current ecosystem conditions, relationships, cascades, disturbance, recovery, and movement across all populations. Completed Monster Ecology and other specialist rules retain anatomy, life cycles, capability, Adaptation, Mutation, Evolution, extinction, Soul, and Magic claims.
+
+## D-766 — Ecosystems Have No Prescribed Balance
+
+An ecosystem is a contingent network of participants and conditions. It does not seek one ideal equilibrium, reward purity, punish civilization, guarantee adaptation, or return to a prior state without a causal recovery route.
+
+## D-767 — Habitat Connectivity Is Function-Specific
+
+Habitat Connectivity depends on a specified Population, life cycle, body, route, season, support sites, barriers, knowledge, social access, and magical conditions. Map continuity or total area alone does not establish it.
+
+## D-768 — Ecological Function Is Relational
+
+An Ecological Function is one material effect performed within a stated ecosystem. It is not species destiny or moral worth, and substitutes must match actual timing, scale, access, and dependencies.
+
+## D-769 — Disturbance Is Not Synonymous with Harm
+
+Ecological Disturbance changes habitat, relationships, Flows, distribution, or functions. Its effects depend on regime, participants, timing, and response; suppressing a recurring disturbance can create different risks.
+
+## D-770 — Resilience May Reorganize Rather Than Restore
+
+Ecological Resilience is the ability to sustain or reorganize material functions after change. Recovery need not recreate prior composition, relationships, identity, distribution, or risk.
+
+## D-771 — Ecological Succession Has No Universal Final Stage
+
+Succession depends on residual conditions, source populations, routes, recurrence, climate, Magic, and intervention. Novel Ecologies are assessed by actual functions and consequences rather than conformity to a pristine baseline.
+
+## D-772 — Migration Preserves Movers as Distinct Beings
+
+Migration is embodied movement through actual routes. Migrants remain persons or living beings with different bodies, information, dependencies, choices, and relationships rather than one actor or faceless resource Flow.
+
+## D-773 — Migration Pressure Does Not Decide Movement
+
+Conditions may make movement relevant, necessary, attractive, or likely, but departure depends on information, agency, capability, care, routes, alternatives, timing, and constraints.
+
+## D-774 — Migration Changes Origin, Transit, and Destination
+
+Resolution preserves effects on origin communities, movers in transit, route populations, destinations, connected regions, and possible return. Arrival is not equivalent to settlement or integration.
+
+## D-775 — Migration Corridors Are Supported Routes
+
+A Migration Corridor includes traversable conditions, timing, sustenance, rest or repair, navigation, permission, safety, and destination access for a specified Population. It is more than a line on a map.
+
+## D-776 — Range Expansion Is Not Automatically Invasive
+
+Invasiveness requires sustained disruptive pressure in a receiving ecology where current relationships and Counterforces do not contain the effects. It is not species essence, moral corruption, collective guilt, or a synonym for migration.
+
+## D-777 — Ecological Pressure Cannot Grant Owned Progression
+
+Habitat, disturbance, migration, predation, scarcity, and ecological importance may create exposure, pressure, access, or consequence. They cannot directly grant Skills, Development, Mutation, Evolution, Soul growth, or Magic.
