@@ -1062,3 +1062,82 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Define when deterministic resolution, bounded qualitative judgment, declared randomization, deferred resolution, investigation, or participant clarification is appropriate without imposing one universal roll.
 5. Preserve fair evidence, anti-retroactivity, observer-relative knowledge, player agency, human/AI parity, and external recording.
 6. Validate, advance only to **Define reincarnation generation** if complete, commit the task, then create the next mandatory checkpoint commit.
+
+## Phase 9 Checkpoint — Uncertainty Handling Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling (`2377b15`, `docs: define uncertainty handling`).
+
+### Active Roadmap Task
+
+- **Define reincarnation generation**.
+- Do not begin encounter generation, monster generation, NPC generation, or later roadmap work until Reincarnation generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 608-line canonical owner document.
+- Validated 128 Markdown files and 4,148 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 881 unique terminology entries and 960 unique decision IDs with zero duplicates.
+- Confirmed uncertainty handling is `[x]` and Reincarnation generation is the sole current task at `[~]`.
+- Confirmed deterministic application, evidence, clarification, bounded judgment, declared randomization, deferral, correction, and Provisional rulings remain distinct.
+- Confirmed hidden truth, Observer Views, Record Gaps, Open Details, and genuinely unresolved futures cannot silently overwrite one another.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Factual View
+- Observer View
+- Uncertainty Question
+- Record Gap
+- Open Detail
+- Supported Branch Set
+- Resolution Trigger
+- Resolution Commitment
+
+### Canonical Decisions Added
+
+- D-952 — Uncertainty Is Question- and View-Specific.
+- D-953 — Hidden Truth Is Not an Unresolved Future.
+- D-954 — Record Gaps Grant No Silent Creative Authority.
+- D-955 — Open Details Cannot Alter Prior Meaningful Choices.
+- D-956 — Settled and Impossible Outcomes Are Not Randomized.
+- D-957 — Resolution Methods Commit Before Results.
+- D-958 — Random Results Have Bounded Scope.
+- D-959 — Concealed Resolution Remains Auditable.
+- D-960 — Deferral Preserves Branches.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, all GM documents, `docs/soul/REINCARNATION.md`, Soul persistence owners, World Gate Soul Interactions, and relevant Development, Skill, Monster Evolution, and Human interfaces.
+2. Create the dedicated canonical owner for **Define reincarnation generation** as candidate-generation guidance, not a rewrite of Reincarnation.
+3. Generate bounded candidates only after valid Final Death and Interlife prerequisites; preserve one active incarnation, current world availability, lineage and body causality, species and world compatibility, placement, consent, uncertainty, and campaign tone.
+4. Keep candidate eligibility, presentation, selection, placement, birth or formation, access, retained progression, and embodiment separate.
+5. Prevent wish-list selection, guaranteed optimal bodies, reroll farming, inventory carryover, automatic memory or mastery, and mandatory human or monster routes.
+6. Validate, advance only to **Create encounter generator** if complete, commit the task, then create the next mandatory checkpoint commit.
