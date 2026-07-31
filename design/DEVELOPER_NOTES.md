@@ -1845,3 +1845,102 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Define transition-question scope, former and successor Age Signatures, Transition Basis, boundary interval, uneven survivorship, contested periodization, actor agency, information views, World Revalidation, legacies, and return-to-play handoffs.
 5. Preserve causal history, surviving systems, regional differences, minority continuities, specialist ownership, Reincarnation and long-lived observers, World Gates, Soul Avatars, Weapon Souls, records, uncertainty, and external Campaign Records.
 6. Validate the task, complete the Phase 9 exit audit, mark Phase 9 complete only if every criterion passes, advance the roadmap to Phase 10 without implementing it, commit the task and final integration as appropriate, then create the mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — GM Toolkit Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator.
+- Create dungeon generator.
+- Create faction generator.
+- Create world-event generator.
+- Create time-skip procedure.
+- Create Age-transition procedure (`eb8c575`, `docs: create Age-transition procedure`).
+- Phase 9 exit audit completed successfully.
+
+### Active Roadmap Task
+
+- **Phase 10 — Templates and Validation**.
+- **Character template** is the sole current task.
+- Do not begin the Species template or any later Phase 10 task until the Character template is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/AGE_TRANSITION_PROCEDURE.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_PRINCIPLES.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+- `docs/gm/REINCARNATION_GENERATION.md`
+- `docs/gm/TIME_SKIP_PROCEDURE.md`
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+- `docs/gm/WORLD_EVENT_GENERATOR.md`
+- `docs/world-engine/AGES_AND_WORLD_RESETS.md`
+- `docs/world-engine/GATES_AND_WORLD_CONTACT.md`
+- `docs/world-engine/README.md`
+- `docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and the complete 802-line canonical owner document.
+- Validated 137 Markdown files and 4,548 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 932 unique terminology entries and 1,047 unique decision IDs with zero duplicates.
+- Confirmed all thirteen Phase 9 roadmap tasks are `[x]` and satisfy the new Phase 9 exit criteria.
+- Confirmed the roadmap advanced to Phase 10 without implementing any Phase 10 template.
+- Confirmed the Age Transition Procedure classifies established history, allows no-transition and disputed findings, preserves regional exceptions, and never generates a desired genre.
+- Confirmed World Reset qualification remains separately owned by Ages and World Resets.
+- Confirmed Time Skips, World Events, World Gates, Reincarnation, Soul Avatars, Weapon Souls, and specialist transitions retain their canonical owners.
+- Confirmed player and autonomous-actor agency, causal continuity, information boundaries, targeted World Revalidation, and human/AI GM parity remain explicit.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Age-Transition Brief
+- Transition Basis
+- Boundary Finding
+
+### Canonical Decisions Added
+
+- D-1038 — The Age-Transition Procedure Classifies Rather Than Creates.
+- D-1039 — No Age Transition Is a Valid Finding.
+- D-1040 — A Transition Basis Compares Change and Continuity.
+- D-1041 — Boundary Findings Are Scoped and May Be Intervals.
+- D-1042 — Successor Age Claims Preserve Former Arrangements.
+- D-1043 — Age Names and Genre Do Not Cause Transitions.
+- D-1044 — World Reset Qualification Remains Separate.
+- D-1045 — A Successor Age Signature Is Descriptive Rather Than Deterministic.
+- D-1046 — Persistent Historical Witnesses Remain Source-Bound.
+- D-1047 — Age-Transition Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read `AGENTS.md`, `README.md`, every file under `design/`, every documentation index, and the completed canonical owners relevant to reusable character records.
+2. Resume from **Phase 10 — Templates and Validation / Character template** exactly as stated in `design/ROADMAP.md`.
+3. Create only the reusable unpopulated Character template; do not add a current character, campaign save, inventory, quest, relationship record, live Soul state, or playthrough history.
+4. Preserve the established separations among identity, Soul continuity, embodiment, Development, Skills, Monster Evolution, Human structures, Soul Weapons, Magic, world recognition, information views, and campaign state.
+5. Do not begin the Species template or later Phase 10 tasks until the Character template is complete, linked, internally consistent, validated, and committed.
+6. After completing the roadmap task, update the roadmap honestly, review the complete diff, validate links, navigation, terminology, ownership, and repository boundaries, then commit and create the next required checkpoint.
