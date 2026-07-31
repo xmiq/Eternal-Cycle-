@@ -376,6 +376,7 @@ This document does not define:
 - [Populations](POPULATIONS.md)
 - [Resources and Food](RESOURCES_AND_FOOD.md)
 - [Economies](ECONOMIES.md)
+- [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Monster Ecology](../monster-evolution/MONSTER_ECOLOGY.md)
 - [Evolutionary Pressures](../monster-evolution/EVOLUTIONARY_PRESSURES.md)
 - [Extinction and Replacement](../monster-evolution/EXTINCTION_AND_REPLACEMENT.md)

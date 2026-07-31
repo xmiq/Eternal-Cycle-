@@ -278,7 +278,7 @@ War redirects labor, Stocks, infrastructure, transport, credit, taxation, produc
 
 Conflict also changes habitats, migration routes, predation, waste, fire regimes, Mana conditions, and ecological functions. Monsters and other populations may flee, adapt, exploit disturbance, lose transition sites, or be deliberately weaponized. Apply [Ecology and Migration](ECOLOGY_AND_MIGRATION.md) and preserve source agency and nonhuman consequences.
 
-Using famine, disease, forced migration, ecological collapse, Soul harm, or magical contamination as a method requires actual capability and creates persistent consequences. It is never a consequence-free strategic button.
+Using famine, [disease](DISEASE_EVOLUTION.md), forced migration, ecological collapse, Soul harm, or magical contamination as a method requires actual capability and creates persistent consequences. It is never a consequence-free strategic button.
 
 ## Magic, Monsters, Souls, and Soul Weapons
 
@@ -408,7 +408,8 @@ The victory is real and incomplete. Demobilization, administration, legitimacy, 
 - Do not make atrocities consequence-free, strategically perfect, or required for optimal progression.
 - Do not use hidden forces, reinforcements, weapons, or betrayals without prior causal existence and fair evidence appropriate to their effect.
 - Do not make peace erase aftermath or make every unresolved grievance restart war automatically.
-- Do not use this document to implement disease evolution, advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon simulation before their roadmap tasks are complete.
+- Apply [Disease Evolution](DISEASE_EVOLUTION.md) to disease exposure, transmission, intervention, agent change, and legacies during conflict; do not turn conflict pressure into medical truth.
+- Do not use this document to implement advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon simulation before their roadmap tasks are complete.
 - Do not store named wars, current fronts, live armies, active unrest, casualty lists, occupied places, leaders, treaties, or conflict timelines in this repository.
 
 ## External Campaign Records
@@ -437,6 +438,7 @@ This Profile is external campaign state. The repository contains no completed Co
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)
+- [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Populations](POPULATIONS.md)
 - [Resources and Food](RESOURCES_AND_FOOD.md)
 - [Economies](ECONOMIES.md)

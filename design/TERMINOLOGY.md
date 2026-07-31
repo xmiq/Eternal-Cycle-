@@ -2963,3 +2963,83 @@ A persistent demographic, bodily, relational, institutional, economic, ecologica
 ## Conflict Profile
 
 An external Campaign Record of one conflict's current scope, forms, participants, causes, objectives, information, mobilization, Operational Capacities, geography, consequences, escalation, cessation, legacies, and uncertainty.
+
+## Disease Process
+
+A harmful or materially disruptive change in an embodied being's function, integrity, regulation, development, or relationship with another process, evaluated against that being's actual body, life stage, form, needs, and ordinary variation.
+
+## Disease Etiology
+
+The established or proposed causal account of one Disease Process, including source, route, affected layer, mechanism, enabling conditions, evidence, and uncertainty.
+
+## Disease Presentation
+
+The observable or reported pattern of signs, symptoms, behavior changes, functional limits, stages, and test results in a particular host or cohort.
+
+## Disease Agent
+
+A propagating biological, parasitic, magical, spiritual, constructed, or other established cause capable of producing a Disease Process in compatible hosts or systems.
+
+## Disease Host
+
+An embodied being, organism, colony, vessel, or bounded living system in which a specified Disease Process can begin, persist, develop, or be carried.
+
+## Disease Susceptibility
+
+A host's current, process-specific likelihood of developing a stated Disease State after a defined exposure under present conditions, distinct from moral worth or a universal vulnerability score.
+
+## Protection Factor
+
+One current feature that reduces, redirects, delays, detects, contains, or repairs a specified disease effect or Transmission Route.
+
+## Exposure Event
+
+Actual contact between a possible Disease Host and a disease cause through a stated route, dose or intensity, timing, duration, and environment.
+
+## Transmission Route
+
+The causal path by which a Disease Agent or disease-causing Pattern moves, reproduces, activates, or is carried from a source or Disease Reservoir to another compatible host or site.
+
+## Disease Vector
+
+A being, process, object, or system that carries or enables a Transmission Route without necessarily suffering the same Disease Process.
+
+## Disease Reservoir
+
+A population, host, environment, object network, magical structure, or other persistent source in which a Disease Agent or Pattern can remain available for later transmission.
+
+## Disease State
+
+One host- and process-specific condition at a given time, preserving distinctions among exposure, establishment, latency, presentation, transmissibility, impairment, recovery, protection, recurrence, and death.
+
+## Outbreak
+
+A bounded increase or newly recognized cluster of related Disease Processes, Disease Agents, or transmissions above the expected current pattern for a stated population, place, and interval.
+
+## Endemic Persistence
+
+Continued maintenance of a Disease Agent or Process within a stated population, network, Disease Reservoir, or environment through current transmission, recurrence, reactivation, or replenishment routes.
+
+## Disease Evolution
+
+Heritable or self-preserving change across reproducing or propagating Disease Agent lineages or Patterns that alters relevant traits under actual variation, transmission, persistence, and selection.
+
+## Disease Selection Pressure
+
+A current condition that changes which heritable Disease Agent variants or persistent Patterns reproduce, transmit, remain, or activate more successfully.
+
+## Treatment Pressure
+
+Disease Selection Pressure created when an intervention affects some Disease Agent variants or Pattern states differently from others.
+
+## Public Health Capacity
+
+The function-specific collective ability to observe, prevent, communicate, diagnose, treat, support, contain, and recover from specified Disease Processes within a population under current conditions.
+
+## Disease Legacy
+
+A persistent bodily, demographic, ecological, institutional, economic, cultural, magical, or relational condition left after an Outbreak or Disease Process changes.
+
+## Disease Profile
+
+An external Campaign Record of one Disease Process or related group, including Etiology, Presentation, hosts, states, exposure, Transmission Routes, Vectors, Reservoirs, interventions, evolution, distribution, consequences, legacies, evidence, and uncertainty.

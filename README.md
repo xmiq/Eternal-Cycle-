@@ -56,6 +56,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/ECOLOGY_AND_MIGRATION.md`](docs/world-engine/ECOLOGY_AND_MIGRATION.md) - current ecosystem dynamics, disturbance, recovery, migration routes, displacement, arrival, and cross-region consequences.
 - [`docs/world-engine/FACTION_BEHAVIOUR.md`](docs/world-engine/FACTION_BEHAVIOUR.md) - distributed faction interests, information, decisions, mobilization, cohesion, adaptation, and continuity.
 - [`docs/world-engine/WAR_AND_UNREST.md`](docs/world-engine/WAR_AND_UNREST.md) - causal contestation, unrest, organized violence, operations, territorial control, cessation, and conflict legacies.
+- [`docs/world-engine/DISEASE_EVOLUTION.md`](docs/world-engine/DISEASE_EVOLUTION.md) - qualitative disease causality, transmission, outbreak dynamics, agent evolution, care, public health, and legacies.
 
 ## Start Here
 
@@ -71,4 +72,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define disease evolution**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define technology and magical advancement**.

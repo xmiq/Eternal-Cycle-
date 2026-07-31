@@ -299,7 +299,7 @@ The political chain can continue for decades while the soul is absent. Its conse
 
 A traveler reports that one herb cures a spreading illness. The belief moves faster than verification. Demand rises, prices change, foragers damage habitat, and some patients delay effective care.
 
-The rumor is a real informational cause even if the cure is false. Disease rules own efficacy and transmission. Economy and ecology rules later own their downstream claims. Correcting the rumor requires trusted information routes; merely knowing the truth as GM does not inform the population.
+The rumor is a real informational cause even if the cure is false. [Disease Evolution](DISEASE_EVOLUTION.md) owns efficacy and transmission. Economy and ecology rules own their downstream claims. Correcting the rumor requires trusted information routes; merely knowing the truth as GM does not inform the population.
 
 ### Contained Reinforcing Loop
 
@@ -340,6 +340,7 @@ This document does not define:
 - [World Engine Index](README.md)
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
+- [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)

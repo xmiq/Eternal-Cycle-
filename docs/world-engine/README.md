@@ -15,6 +15,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 7. [Ecology and Migration](ECOLOGY_AND_MIGRATION.md) defines current ecosystem state, Habitat Connectivity, functions, disturbance, resilience, succession, Novel Ecologies, migration pressures and routes, displacement, settlement, and cross-region consequences.
 8. [Faction Behaviour](FACTION_BEHAVIOUR.md) defines faction boundaries, distributed interests and information, decision routes, mobilization, capability, cohesion, dissent, adaptation, relationships, and continuity.
 9. [War and Unrest](WAR_AND_UNREST.md) defines contestation, Civil Unrest, Armed Conflict, War, escalation, mobilization, Operational Capacity, territorial control, civilian agency, cessation, demobilization, and conflict legacies.
+10. [Disease Evolution](DISEASE_EVOLUTION.md) defines Disease Processes, Etiology, hosts, exposure, transmission, Disease States, outbreaks, agent evolution, interventions, public health, Reincarnation boundaries, and disease legacies.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 

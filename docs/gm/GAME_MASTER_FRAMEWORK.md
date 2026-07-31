@@ -173,7 +173,7 @@ Apply [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md). Factions pursue
 
 ### Ecology
 
-Creatures, populations, habitats, resources, disease, migration, predation, competition, cooperation, and environmental change interact causally. The GM may use existing ecological foundations, but must not invent Phase 4 monster ecology rules or universal evolution outcomes under this framework.
+Creatures, populations, habitats, resources, disease, migration, predation, competition, cooperation, and environmental change interact causally. Apply [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md) for disease claims and existing ecological foundations for ecological claims; do not infer universal outcomes from either label.
 
 ### Consequence Chains
 
@@ -448,6 +448,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
 - [War and Unrest](../world-engine/WAR_AND_UNREST.md)
+- [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

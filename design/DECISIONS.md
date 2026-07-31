@@ -3221,3 +3221,75 @@ Fighting, killing, suffering, surviving, victory, defeat, atrocity, sacrifice, o
 ## D-805 — War Does Not Suspend Personhood or Source Agency
 
 Command, emergency, necessity, law, ownership, and strategic value do not erase the agency, consent, refusal, information boundaries, or personhood of soldiers, conscripts, civilians, monsters, gods, spirits, Sources, or Weapon Souls.
+
+## D-806 — Disease Is an Embodied Process, Not an Identity Label
+
+A Disease Process requires a harmful or materially disruptive change assessed against the actual being, body, life stage, form, needs, and ordinary variation. Disability, species, form, Mutation, Evolution, magical affinity, possession, dissent, culture, and unfamiliar behavior are not diseases by default.
+
+## D-807 — Disease Claims Keep Their Layers Separate
+
+Exposure, establishment, infection, Disease Presentation, transmissibility, severity, recovery, acquired protection, persistence, and recurrence are separate claims. Evidence for one does not automatically establish the others.
+
+## D-808 — Disease Susceptibility Is Host- and Process-Specific
+
+Susceptibility depends on a particular process, body, life stage, form, current condition, route, environment, and Protection Factors. A species, Population, migrant group, or social category does not possess one uniform vulnerability or infectiousness by label.
+
+## D-809 — Transmission Requires an Actual Route
+
+A disease cause reaches another host only through an established compatible route with source, viability or activity, contact, timing, and host conditions. Proximity, fear, rumor, shared identity, foreign origin, and population density alone do not prove transmission.
+
+## D-810 — Disease Agents Do Not Erase Personhood
+
+Describing a being or process as a Disease Agent, Vector, Reservoir, parasite, host, or source does not decide personhood, morality, guilt, consent, or permissible treatment. Sapient and person-like participants retain agency under their owning rules.
+
+## D-811 — Outbreak Phases Are Qualitative and Evidenced
+
+Introduction, establishment, amplification, response, decline, elimination, recurrence, and Endemic Persistence are possible findings rather than mandatory stages or universal thresholds. Reported cases and observed presentation remain distinct from complete world truth.
+
+## D-812 — Disease Evolution Requires Propagating Variation
+
+Disease Evolution requires lineage or Pattern continuity, preserved variation, differential propagation or persistence, enough events and time, and real tradeoffs. Age, treatment, suffering, one unusual case, or narrative importance alone cannot evolve a disease.
+
+## D-813 — Selection Pressure Does Not Design a Counter
+
+Disease Selection Pressure changes which existing or arising heritable variants propagate under current conditions; it does not direct a useful response into existence. Treatment failure does not prove evolved resistance until diagnosis, access, application, compatibility, Reservoirs, and nonheritable causes are assessed.
+
+## D-814 — Host Change and Disease-Agent Change Retain Separate Owners
+
+Acquired protection, learned avoidance, care, Skill, Development, treatment, Mutation, inherited population change, Monster Adaptation, and Evolution remain distinct. Disease exposure or survival does not directly grant hereditary immunity, resistance, Species Potential, Mutation, or Evolution.
+
+## D-815 — Disease Interventions Are Layer-Specific
+
+Prevention, diagnosis, symptom relief, agent suppression or removal, transmission control, bodily repair, care, rehabilitation, and recovery are separate functions. Success at one layer does not establish cure, noninfectiousness, restored function, immunity, or population control.
+
+## D-816 — Magic Does Not Create Universal Diagnosis or Cure
+
+Healing, cleansing, purification, Alchemy, divination, divine intervention, resurrection, transformation, and other Magic must state the exact source, target, layer, effect, cost, failure, and persistence. Magical success does not bypass medical judgment, consent, distribution, monitoring, aftercare, or ordinary consequences.
+
+## D-817 — Public Health Capacity Is Function-Specific
+
+The abilities to observe, communicate, prevent, diagnose, treat, support, contain, and recover depend on different people, institutions, resources, trust, authority, infrastructure, and access. They do not combine into one civilization, medicine, or preparedness rank.
+
+## D-818 — Health Emergencies Do Not Suspend Agency
+
+Isolation, quarantine, testing, treatment, movement limits, disclosure, culling, magical marking, and surveillance require evidence, scope, authority, duration, support, review, and accountability. Emergency and collective benefit do not erase consent, privacy, personhood, unequal burden, or the need for alternatives where possible.
+
+## D-819 — Migration and Contact Are Not Disease
+
+Migration and world contact may alter exposure only through actual compatible Transmission Routes. Migrants, visitors, monsters, foreign worlds, and trade are not pathogens, and separation between worlds does not guarantee catastrophic or one-way susceptibility.
+
+## D-820 — Reincarnation Transfers No Ordinary Disease State
+
+Final Death ends the former body's host state, while world consequences persist. A new incarnation does not automatically inherit infection, immunity, scars, medical implants, or medicine; any disease that follows a Soul requires an explicit Soul-level route and full soul-harm safeguards.
+
+## D-821 — Disease Does Not Manufacture Progression
+
+Exposure, infection, suffering, treatment, recovery, survival, disability, caregiving, or death creates no automatic Skill, Development, Stat XP, Soul growth, Mutation, Evolution, Soul Weapon awakening, affinity, or magical resistance.
+
+## D-822 — Living and Soul Weapon Interfaces Remain Separate
+
+A biotic, symbiotic, colony, prosthetic, or body-linked Soul Weapon Vessel may suffer or carry a Disease Process through its actual interfaces. Vessel disease does not automatically infect or injure the Weapon Soul, Bonded Soul, Bond, or every connected body.
+
+## D-823 — Disease Recovery Preserves Legacies
+
+Case decline, agent elimination, restored output, or population replacement does not erase death, disability, chronic illness, grief, changed susceptibility, Reservoirs, debt, institutional power, stigma, distrust, ecological change, magical residue, or other Disease Legacies.

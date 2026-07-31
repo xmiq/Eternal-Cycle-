@@ -99,6 +99,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Ecology and Migration](world-engine/ECOLOGY_AND_MIGRATION.md) - ecosystem state, Habitat Connectivity, functions, disturbance, resilience, succession, Novel Ecologies, routes, displacement, settlement, and migration consequences.
 - [Faction Behaviour](world-engine/FACTION_BEHAVIOUR.md) - faction boundaries, membership, interests, distributed information, decisions, mobilization, cohesion, dissent, adaptation, relationships, and continuity.
 - [War and Unrest](world-engine/WAR_AND_UNREST.md) - contestation, Civil Unrest, Armed Conflict, War, escalation, mobilization, operations, territorial control, civilian agency, cessation, demobilization, and persistent legacies.
+- [Disease Evolution](world-engine/DISEASE_EVOLUTION.md) - Disease Processes, causes, embodiment, exposure, transmission, host states, outbreaks, agent change, interventions, public health, and persistent legacies.
 
 ## GM Framework
 

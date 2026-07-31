@@ -825,3 +825,15 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Siege and Blockade tests should expose alternate routes and unequal Sustenance Profiles without requiring daily arithmetic.
 - Soul Titles, returning commanders, Soul Weapons, monster forms, and Magic need dramatic relevance without bypassing authority, logistics, consent, or current embodiment.
 - Cessation and recovery should preserve Conflict Legacies while leaving credible routes for reconciliation, institutional change, and transformed peace.
+
+## Phase 8 Disease-Evolution Watchlist
+
+- Disease Profiles must remain qualitative external records rather than exhaustive case databases or a substitute for real-world medical guidance.
+- Playtests should keep exposure, establishment, presentation, infectiousness, severity, recovery, protection, and persistence visibly separate without excessive state tracking.
+- Different bodies, life stages, monster forms, distributed beings, and biotic Soul Weapon Vessels need meaningful host differences without species-wide stereotypes.
+- Healing Magic and Alchemy should produce useful layer-specific interventions while leaving diagnosis, distribution, aftercare, and unintended effects consequential.
+- Disease Evolution needs enough lineage evidence to feel causal without requiring population-genetics calculations.
+- Treatment failure should produce an investigation before evolved resistance is assumed.
+- Public-health interventions need playable tradeoffs among efficacy, trust, support, access, consent, privacy, and unequal burden without making care institutions uniformly villainous or infallible.
+- Cross-world contact should permit novel disease risk in both directions without making every Gate an automatic plague event.
+- Reincarnation must end ordinary body-bound illness without erasing contagion, grief, institutional change, or other world consequences.

@@ -347,6 +347,7 @@ This document does not define:
 - [World Engine Index](README.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
+- [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Soul Engine](../soul/README.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)

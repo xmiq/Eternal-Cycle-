@@ -4,9 +4,9 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Define disease evolution**
+**Current task: Define technology and magical advancement**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define disease evolution** unless the project owner explicitly changes the target. Do not begin advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define technology and magical advancement** unless the project owner explicitly changes the target. Do not begin dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -189,7 +189,7 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define ecology and migration
 - [x] Define faction behaviour
 - [x] Define war and unrest
-- [ ] Define disease evolution
+- [x] Define disease evolution
 - [ ] Define technology and magical advancement
 - [ ] Define dungeon activity
 - [ ] Define World Stability

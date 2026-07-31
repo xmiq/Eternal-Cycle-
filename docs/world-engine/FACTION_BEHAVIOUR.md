@@ -366,7 +366,8 @@ The shared faction identity does not yield one response. Unequal burdens, differ
 - Do not make factions perfectly rational, permanently hostile, passively frozen off-screen, or secretly aware of world truth.
 - Do not make diplomacy, betrayal, capture, schism, merger, or reform deterministic outcomes.
 - Apply [War and Unrest](WAR_AND_UNREST.md) when faction contestation escalates into Civil Unrest, Armed Conflict, War, occupation, or conflict aftermath; do not use this document to replace that owner.
-- Do not use this document to resolve disease, technological advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
+- Apply [Disease Evolution](DISEASE_EVOLUTION.md) when faction decisions concern Disease Processes, transmission, public health, or disease legacies; do not use faction motives to determine medical truth.
+- Do not use this document to resolve technological advancement, dungeon activity, World Stability, Ages, resets, Gates, or long-horizon abstraction before their roadmap tasks are complete.
 - Do not store named live factions, current leaders, memberships, objectives, resources, relationships, decisions, or actions in this repository.
 
 ## External Campaign Records
@@ -397,6 +398,7 @@ This is external campaign state. The repository defines the schema and rules but
 - [Economies](ECONOMIES.md)
 - [Ecology and Migration](ECOLOGY_AND_MIGRATION.md)
 - [War and Unrest](WAR_AND_UNREST.md)
+- [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Institutions and Academies](../human/INSTITUTIONS_AND_ACADEMIES.md)
 - [Social and Leadership Development](../progression/SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md)
 - [Monster Societies](../monster-evolution/MONSTER_SOCIETIES.md)
