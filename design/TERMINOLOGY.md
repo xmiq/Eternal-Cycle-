@@ -3239,3 +3239,59 @@ A persistent consequence remaining after Dungeon activity, control, identity, or
 ## Dungeon Profile
 
 An external Campaign Record of one Dungeon's classification, boundary, origin, Sustaining Basis, Topology, conditions, participants, activity, resources, hazards, claims, consequences, evidence, and uncertainty.
+
+## World Stability
+
+The evidenced capacity of a stated world arrangement to preserve specified functions, relationships, or conditions, or to reorganize them without uncontrolled loss, under current and foreseeable strain.
+
+## Stability Scope
+
+The geographic, ecological, social, institutional, technical, magical, metaphysical, or functional boundary within which one World Stability claim applies.
+
+## Stability Referent
+
+The exact function, relationship, condition, or identity whose continuity or transformation a World Stability claim assesses.
+
+## Stability Support
+
+A current condition, relationship, actor, process, reserve, redundancy, or alternative that helps preserve a Stability Referent through an established causal route.
+
+## World-System Strain
+
+An established pressure that tests or erodes one or more Stability Supports or increases the burden required to preserve a specified Stability Referent.
+
+## Systemic Coupling
+
+A dependency through which a material change in one world function can support, constrain, or destabilize another.
+
+## Stability Buffer
+
+A bounded reserve, redundancy, slack, substitute, protective relationship, or delayed-use capacity that can absorb a specified World-System Strain for a limited scope and duration.
+
+## World Response Capacity
+
+The current collective ability of relevant actors and systems to observe, coordinate, adapt, repair, substitute, retreat, transform, or recover in response to a specified World-System Strain.
+
+## Brittle Stability
+
+A World Stability finding in which a Stability Referent appears steady under ordinary conditions but has concentrated dependencies, weak alternatives, hidden maintenance debt, or poor response capacity against a plausible strain.
+
+## World Instability
+
+A World Stability finding in which material strains are changing a scoped arrangement faster or more deeply than its current supports and responses can preserve the stated Stability Referents.
+
+## Stability Intervention
+
+A deliberate action intended to preserve, restore, replace, or safely end one Stability Referent under stated conditions.
+
+## Stability Displacement
+
+The movement of material strain, risk, cost, or loss into another population, place, time, domain, or relationship when one Stability Referent is protected or changed.
+
+## Stability Forecast
+
+An evidence-based statement about plausible continuity, reorganization, or failure under named assumptions, uncertainty, and a stated time horizon.
+
+## World Stability Profile
+
+An external Campaign Record of scoped Stability Referents, findings, supports, strains, couplings, buffers, response capacity, thresholds, distribution, interventions, forecasts, Pending Consequences, evidence, and uncertainty.

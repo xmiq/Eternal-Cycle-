@@ -499,7 +499,7 @@ Examples include:
 - changing species viability or institutional legitimacy;
 - producing widespread Drift, contamination, conflict, or recovery.
 
-No spell, Ritual, artifact, Divine Source, Soul, sacrifice, death, or quantity of Mana automatically adds or removes World Stability. Phase 8 owns the definition and adjudication of World Stability. This document supplies only attributable magical inputs and consequences.
+No spell, Ritual, artifact, Divine Source, Soul, sacrifice, death, or quantity of Mana automatically adds or removes World Stability. [World Stability](../world-engine/WORLD_STABILITY.md) owns its scoped definition and adjudication. This document supplies only attributable magical inputs and consequences.
 
 ## Ages and World Resets
 
@@ -721,6 +721,7 @@ Later Phase 8 documents may define domain-specific state and procedures inside t
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)
+- [World Stability](../world-engine/WORLD_STABILITY.md)
 - [Monster Evolution Rules Index](../monster-evolution/README.md)
 - [Human Rules Index](../human/README.md)
 - [Soul Rules Index](../soul/README.md)

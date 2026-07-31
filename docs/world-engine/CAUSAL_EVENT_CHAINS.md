@@ -340,6 +340,7 @@ This document does not define:
 - [World Engine Index](README.md)
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
+- [World Stability](WORLD_STABILITY.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

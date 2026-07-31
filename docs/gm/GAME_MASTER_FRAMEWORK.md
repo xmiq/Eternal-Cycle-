@@ -448,6 +448,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
 - [War and Unrest](../world-engine/WAR_AND_UNREST.md)
+- [World Stability](../world-engine/WORLD_STABILITY.md)
 - [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md)
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)

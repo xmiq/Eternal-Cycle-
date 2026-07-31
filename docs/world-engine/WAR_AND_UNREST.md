@@ -409,7 +409,7 @@ The victory is real and incomplete. Demobilization, administration, legitimacy, 
 - Do not use hidden forces, reinforcements, weapons, or betrayals without prior causal existence and fair evidence appropriate to their effect.
 - Do not make peace erase aftermath or make every unresolved grievance restart war automatically.
 - Apply [Disease Evolution](DISEASE_EVOLUTION.md) to disease exposure, transmission, intervention, agent change, and legacies during conflict; do not turn conflict pressure into medical truth.
-- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) or [Dungeon Activity](DUNGEON_ACTIVITY.md), or to implement World Stability, Ages, resets, Gates, or long-horizon simulation before their roadmap tasks are complete.
+- Do not use this document to replace [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md), [Dungeon Activity](DUNGEON_ACTIVITY.md), or [World Stability](WORLD_STABILITY.md), or to implement Ages, resets, Gates, or long-horizon simulation before their roadmap tasks are complete.
 - Do not store named wars, current fronts, live armies, active unrest, casualty lists, occupied places, leaders, treaties, or conflict timelines in this repository.
 
 ## External Campaign Records

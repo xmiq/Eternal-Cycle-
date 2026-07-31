@@ -862,3 +862,14 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Delving capability should support combat, diplomacy, logistics, scholarship, repair, rescue, and ecological knowledge as different strengths rather than one party level.
 - Dungeon collapse and clearing should leave usable but changed sites, survivors, hazards, claims, and legacies instead of clean reset states.
 - Later Gate rules must preserve the distinction among ordinary entrances, Dungeon Access Routes, Soul Gates, and world-contact Gates.
+
+## Phase 8 World-Stability Watchlist
+
+- World Stability Profiles should remain selective external records and never collapse into hidden percentages, Reset countdowns, or world-health dashboards.
+- Playtests should require a Stability Referent and scope whenever characters or institutions call something stable.
+- Stable but unjust arrangements and disruptive but adaptive changes should remain possible without World Stability supplying a moral verdict.
+- Systemic Coupling should reveal both support and failure routes without making every shared dependency catastrophically brittle.
+- Buffers should absorb specified strain while preserving consumption, unequal access, maintenance, and future vulnerability.
+- Stability Interventions should expose displaced burdens, excluded alternatives, consent, and maintenance rather than declaring heroic or magical solutions universally successful.
+- Stability Forecasts need enough uncertainty to permit meaningful action without allowing retroactive causes or secret deterministic scripts.
+- The Ages-and-resets task must use stability evidence without inventing a zero-stability trigger, clean slate, or automatic Reset.

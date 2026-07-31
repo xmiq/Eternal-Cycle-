@@ -3429,3 +3429,67 @@ A Dungeon entrance, threshold, teleportation circle, spatial fold, sealed passag
 ## D-857 — Dungeon Change Preserves Legacies
 
 Dormancy, reactivation, clearing, contraction, collapse, transformation, abandonment, or changed control does not erase altered ecology, displacement, infrastructure, disease, depletion, pollution, records, claims, institutions, myths, Soul relationships, hazards, or other Dungeon Legacies.
+
+## D-858 — World Stability Is Scoped and Referent-Specific
+
+World Stability assesses whether a stated arrangement can preserve or reorganize specified functions, relationships, conditions, or identities under current and foreseeable strain. Every finding requires a Stability Scope and one or more explicit Stability Referents; local or domain findings never aggregate automatically into one world verdict.
+
+## D-859 — World Stability Is Not a Universal Meter
+
+No percentage, health bar, currency, balance score, civilization rank, danger rating, prosperity index, or countdown represents authoritative World Stability. Stability findings remain qualitative and retain their underlying supports, strains, couplings, response, distribution, evidence, and uncertainty.
+
+## D-860 — Stability Is Neither Stasis Nor Moral Approval
+
+World Stability does not require resistance to change or return to a preferred prior state, and it does not decide whether a continuing arrangement is just, desirable, legitimate, or safe. Stable oppression, disruptive liberation, adaptive reorganization, and transformed continuity are possible and require separate consequence and agency judgments.
+
+## D-861 — Stability Support Requires a Causal Route
+
+A resource, actor, institution, relationship, capability, Soul, source, artifact, or other condition supports a Stability Referent only through an established interface. Importance, prestige, prophecy, power, abundance, or category alone creates no Stability Support.
+
+## D-862 — World-System Strain Is Not a Point Pool
+
+Every World-System Strain identifies what it affects, how, where, for whom, and over what time. Strains do not add into a universal penalty, and repetition does not guarantee escalation, adaptation, immunity, collapse, or reward.
+
+## D-863 — Coupling Carries Support and Failure
+
+Systemic Coupling can distribute resources, coordination, knowledge, and recovery or propagate shortage, disruption, and failure. Its consequences depend on direction, substitutes, delay, correlated risk, control, distribution, and actor response rather than connectivity alone.
+
+## D-864 — Stability Buffers Are Bounded
+
+Reserves, redundancies, substitutes, refuges, slack, and protective relationships absorb only specified strains within actual access, duration, condition, and maintenance limits. Consuming a buffer changes future state even when immediate failure is avoided.
+
+## D-865 — World Response Capacity Is Function-Specific
+
+Observation, communication, coordination, repair, substitution, adaptation, evacuation, transformation, and recovery may rely on different actors and systems. They do not pool personal capability into a civilization score or imply one another.
+
+## D-866 — Stability Findings Are Qualitative and Non-Sequential
+
+Robust continuity, dependent continuity, Brittle Stability, adaptive reorganization, World Instability, Cascading Failure, and transformed continuity are contextual findings rather than ranks or a mandatory progression ladder. Different referents in one scope may hold different findings at the same time.
+
+## D-867 — Stability Thresholds Remain Local
+
+World Stability reuses evidence-based State Thresholds for specified processes. Crossing one changes the relevant causal situation but does not automatically cause collapse, progression, an Age transition, or a World Reset.
+
+## D-868 — Stabilization Can Displace Harm
+
+Every Stability Intervention retains its target, mechanism, owners, access, consent, maintenance, costs, affected parties, alternatives, and duration. Preserving one referent cannot erase strain, risk, cost, or loss displaced into another population, place, time, domain, or relationship.
+
+## D-869 — World Instability Does Not Trigger a Reset by Itself
+
+World Stability can provide evidence about arrangements under strain, but it does not define an Age, select a transition, trigger a World Reset, choose what survives, or authorize a clean slate. There is no canonical zero-stability condition; every transition and Reset requires its own rules and causal route.
+
+## D-870 — Souls and Soul Weapons Are Not Stability Resources
+
+Soul Depth, Soul Resonance, Soul Titles, Soul Echoes, Retained Instincts, Soul Avatars, Weapon Souls, sacrifice, suffering, death, and Reincarnation do not directly add or remove World Stability. They matter only through current action and the established receiving rules of each Owning System.
+
+## D-871 — Stability Crises Manufacture No Progression
+
+Preventing, enduring, worsening, exploiting, or dying in a stability crisis does not automatically grant Skill, Development, Stat XP, Soul growth, Evolution, Class, affinity, Soul Weapon awakening, or any other progression.
+
+## D-872 — Stability Forecasts Are Not Prophecy
+
+A Stability Forecast records assumptions, evidence, unknown dependencies, plausible branches, Counterforces, horizon, and signs that would change the assessment. Current world truth does not predetermine an unresolved future, and forecasts cannot become secret scripts.
+
+## D-873 — Stability Recovery Preserves Distribution and Legacy
+
+Restored or transformed function does not erase consumed buffers, maintenance debt, displacement, exclusion, deaths, extinctions, changed relationships, distrust, ecological change, infrastructure loss, or other persistent consequences.

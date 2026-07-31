@@ -59,6 +59,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/DISEASE_EVOLUTION.md`](docs/world-engine/DISEASE_EVOLUTION.md) - qualitative disease causality, transmission, outbreak dynamics, agent evolution, care, public health, and legacies.
 - [`docs/world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md`](docs/world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) - contextual technical change from discovery and invention through adoption, infrastructure, maintenance, decline, and recovery.
 - [`docs/world-engine/DUNGEON_ACTIVITY.md`](docs/world-engine/DUNGEON_ACTIVITY.md) - causal Dungeon formation, boundaries, activity, ecology, access, extraction, collapse, and persistent consequences without automatic resets or level scaling.
+- [`docs/world-engine/WORLD_STABILITY.md`](docs/world-engine/WORLD_STABILITY.md) - scoped continuity and transformation under strain without a universal world-health meter or automatic Reset trigger.
 
 ## Start Here
 
@@ -74,4 +75,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define World Stability**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define Ages and resets**.
