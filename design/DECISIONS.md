@@ -3961,3 +3961,43 @@ A generated monster requires valid world placement, ongoing needs, and current a
 ## D-990 — Monster Generation Records Remain Campaign-External
 
 Populated briefs, campaign-local species sketches, Monster Profiles, bounded groups, placements, current objectives, and information views belong in the external Campaign Record. Reusable canon requires separate repository review.
+
+## D-991 — NPC Is a Control Role Rather Than an Ontology
+
+NPC identifies who represents a person's deliberate choices at the current moment. It does not establish species, personhood, Soul status, capability, importance, hostility, or permanent control, and an agreed control handoff preserves all established continuity.
+
+## D-992 — NPC Generation Requires a Person Basis Before a Plot Function
+
+Every generated NPC begins from valid personhood, embodiment, origin, identity, history, world placement, and current activity. Quest, villain, ally, healer, rival, romance, witness, or exposition roles cannot create a person or determine their choices.
+
+## D-993 — Generated Histories Support Facts Rather Than Award Them
+
+An NPC's age and biography must contain actual access, time, practice, relationships, institutions, resources, choices, and consequences sufficient for present capabilities and standing. Backstory cannot grant mastery, wealth, authority, contacts, or Soul progression by assertion.
+
+## D-994 — NPC Information Is Observer-Specific
+
+Every NPC acts from information available through its own senses, records, relationships, expertise, communication, and inference. The GM's Factual View, another actor's knowledge, and player need cannot silently enter the NPC Observer View.
+
+## D-995 — NPC Generation Establishes Context but Not Future Decisions
+
+Profiles may record present values, needs, commitments, objectives, plans, tendencies, constraints, and reconsideration conditions. Each future material choice remains unresolved until its NPC Decision Frame and current consequences are known.
+
+## D-996 — NPC Relationships Preserve Independent Agency
+
+Affection, loyalty, debt, authority, rescue, intimidation, reputation, Soul Resonance, Soul Titles, Constellations, and prior-life relationships may shape opportunity and pressure but never transfer ownership of an NPC's consent, interpretation, or deliberate choice.
+
+## D-997 — Capability, Role, Authority, and Recognition Stay Separate
+
+Skill, Development, Class, Profession, work, office, mandate, rank, credential, institutional membership, faction relationship, reputation, legal standing, and actual capability remain distinct NPC facts with their own scopes and sources.
+
+## D-998 — NPCs Continue Off-Screen Without Plot Immunity
+
+NPCs advance through bodily needs, work, travel, information, relationships, decisions, opposition, and consequences at appropriate simulation resolution. Narrative importance neither freezes them while absent nor protects them from change, failure, injury, displacement, or death.
+
+## D-999 — NPC Detail Is Proportional to Causal Need
+
+Generate only enough history, capability, relationships, information, and continuity to support current and likely material decisions. Naming or briefly meeting a person does not require a hidden destiny, trauma, secret, twist, or guaranteed future relevance.
+
+## D-1000 — NPC Records Remain Campaign-External
+
+Populated briefs, NPC Seeds, Profiles, Continuity Cores, Decision Frames, relationships, current activities, choices, and histories belong in the external Campaign Record and never become repository canon through play alone.

@@ -441,6 +441,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Monster Generator](MONSTER_GENERATOR.md)
+- [NPC Generator](NPC_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

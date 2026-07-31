@@ -389,6 +389,7 @@ This is external campaign state. The repository defines the schema and rules but
 
 ## Related Documents
 
+- [NPC Generator](../gm/NPC_GENERATOR.md)
 - [World Engine Index](README.md)
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)

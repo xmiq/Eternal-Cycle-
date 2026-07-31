@@ -94,6 +94,8 @@ When these rules are applied together:
 - **World Engine** owns populations, economies, law, factions, conflict, migration, institutions in motion, and long-term causal simulation.
 - **GM Toolkit and templates** may adjudicate or record applications but cannot create exceptions to capability ownership, embodiment, evidence, agency, or persistence.
 
+Use the [NPC Generator](../gm/NPC_GENERATOR.md) to create campaign-local actors from these social frameworks. NPC generation records a person's actual relationships to Classes, Professions, Institutions, offices, credentials, and Social Position without converting labels into capability or storing live profiles here.
+
 The [Roadmap](../../design/ROADMAP.md) remains authoritative for implementation status. Mentioning a later system here grants none of its unfinished capabilities.
 
 ## Authority and Repository Boundary

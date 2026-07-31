@@ -119,6 +119,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Reincarnation Generation](gm/REINCARNATION_GENERATION.md) - world-grounded incarnation candidates, eligibility passes, personhood, Reincarnation Modes, disclosure, selection handoff, and revalidation.
 - [Encounter Generator](gm/ENCOUNTER_GENERATOR.md) - world-grounded Encounter Sources, eligibility, framing, noncombat and withdrawal routes, non-scaling, handoffs, and external records.
 - [Monster Generator](gm/MONSTER_GENERATOR.md) - Monster Basis and Species Reference validation, campaign-local species sketches, individual generation, qualitative profiles, placement, and safeguards.
+- [NPC Generator](gm/NPC_GENERATOR.md) - Person Basis, proportional detail, current-life identity, Observer Views, actor decisions, relationships, off-screen continuity, and external profiles.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope

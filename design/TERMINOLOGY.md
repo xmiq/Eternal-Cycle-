@@ -3595,3 +3595,31 @@ An external Campaign Record for one monster individual or explicitly bounded gro
 ## Individual Variation
 
 A difference among members of one species or form produced by inherited variation, lifecycle, condition, Development, Skills, experience, culture, environment, relationships, equipment, magic, Mutation, or another established source. It does not inherently define a new species or form.
+
+## NPC
+
+An established person or agentive being whose deliberate choices are represented by the GM rather than a player at the current moment. NPC is a campaign control role rather than a species, metaphysical category, measure of importance, or permanent assignment.
+
+## NPC Generation Brief
+
+The external input for one NPC-generation pass, stating why an actor profile is needed, what Person Basis and world context exist, which information views matter, how much detail is justified, and which claims remain outside scope.
+
+## Person Basis
+
+The validated embodiment, continuity, personhood, origin, identity, and world-placement foundation that permits one person or agentive being to exist before NPC-specific history and decision context are generated.
+
+## NPC Seed
+
+An unvalidated preparation possibility combining a Person Basis, current-life history, relationships, information, motives, capability, and placement. It is not established campaign fact until ownership, causality, continuity, and placement tests pass.
+
+## NPC Profile
+
+An external Campaign Record for one NPC, separating identity, Person Basis, history, capability, relationships, information views, present objectives, constraints, activity, decision tendencies, and continuity without scripting every future choice.
+
+## NPC Continuity Core
+
+The minimum durable identity, embodiment, location or route, relationship, commitment, knowledge, consequence, objective, activity, and Review Point facts needed to preserve an NPC through changing focus, elapsed time, bodily change, death, or Reincarnation.
+
+## NPC Decision Frame
+
+The bounded current context used to represent one NPC choice from that NPC's Observer View, perceived options, values, relationships, obligations, capability, costs, uncertainty, and time pressure without reducing personality to a deterministic algorithm.

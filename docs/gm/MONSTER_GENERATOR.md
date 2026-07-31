@@ -790,7 +790,7 @@ This document does not define:
 - universal monster statistics, challenge ratings, rarity tiers, or loot;
 - named campaign monsters, populations, societies, habitats, or histories;
 - Evolution Routes, transitions, stages, mutations, hybrids, apex forms, or adaptations;
-- NPC generation for humans or general social actors;
+- NPC identity and decision-context generation beyond a monster's embodiment profile;
 - Encounter generation or outcomes;
 - current campaign ecology or world state.
 
@@ -809,3 +809,4 @@ This document does not define:
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
+- [NPC Generator](NPC_GENERATOR.md)

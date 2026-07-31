@@ -216,6 +216,8 @@ When presenting uncertainty, identify its source where the character could recog
 
 ## NPC Principles
 
+[NPC Generation](NPC_GENERATOR.md) is the canonical owner for building and maintaining causally situated non-player actors, their Observer Views, decision contexts, and Continuity Cores.
+
 For every NPC important enough to affect play, maintain only the detail needed to answer:
 
 1. What do they want now, and why?
@@ -453,6 +455,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Monster Generator](MONSTER_GENERATOR.md)
+- [NPC Generator](NPC_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)
