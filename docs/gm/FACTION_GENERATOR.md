@@ -812,3 +812,4 @@ This document does not define:
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
+- [World-Event Generator](WORLD_EVENT_GENERATOR.md)

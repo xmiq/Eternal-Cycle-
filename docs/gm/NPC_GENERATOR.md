@@ -820,3 +820,4 @@ This document does not define:
 - [Magic Rules](../magic/README.md)
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
 - [Faction Generator](FACTION_GENERATOR.md)
+- [World-Event Generator](WORLD_EVENT_GENERATOR.md)

@@ -4,9 +4,9 @@
 
 **Current phase: Phase 9 — GM Toolkit**
 
-**Current task: Create world-event generator**
+**Current task: Create time-skip procedure**
 
-Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create world-event generator** unless the project owner explicitly changes the target. Do not begin the Time Skip procedure, Age-transition procedure, or later roadmap work before world-event generation is complete.
+Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create time-skip procedure** unless the project owner explicitly changes the target. Do not begin the Age-transition procedure or later roadmap work before the Time Skip procedure is complete.
 
 Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -215,7 +215,7 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 - [x] Create NPC generator
 - [x] Create dungeon generator
 - [x] Create faction generator
-- [ ] Create world-event generator
+- [x] Create world-event generator
 - [ ] Create time-skip procedure
 - [ ] Create Age-transition procedure
 

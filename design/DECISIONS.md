@@ -4081,3 +4081,43 @@ Random tools may choose among world-supported, non-agentic details left open by 
 ## D-1020 — Faction Generation Records Remain Campaign-External
 
 Populated briefs, Faction Seeds, Profiles, Versions, participants, memberships, objectives, resources, relationships, decisions, current actions, information views, and histories belong in the external Campaign Record and never enter repository canon through play alone.
+
+## D-1021 — World-Event Generation Begins With a Basis
+
+Every World-Event Seed requires an established initiating input, receiving subject, valid transition route, enabling and inhibiting conditions, relevant timing, canonical owner, and evidence. Plot need, genre expectation, symbolic fit, elapsed time, or random selection cannot supply missing causality.
+
+## D-1022 — The Event Boundary Owns Only the Direct Transition
+
+A generated World Event establishes one bounded occurrence or transition for a stated subject, scope, and time. Consequences, responses, interpretations, Encounters, historical significance, and future branches require separate owners and supported Causal Links.
+
+## D-1023 — Event Generation May Establish No Occurrence
+
+A valid pass may find a candidate delayed, stalled, prevented, redirected, misidentified, or unresolved. The procedure has no event quota and cannot escalate or reroll merely because a quiet result is less dramatic.
+
+## D-1024 — Actor-Mediated Events Preserve Agency
+
+Where an event depends on a person, faction, Institution, spirit, god, Weapon Soul, monster, or other actor, that actor must receive information and make the relevant choice through existing rules. Event need cannot supply consent, coordination, capability, or action.
+
+## D-1025 — Event Scale Dimensions Remain Independent
+
+Footprint, magnitude, duration, systemic reach, historical significance, visibility, and narrative attention are separate contextual claims. None becomes a universal event level, rarity, threat rank, or proof of another dimension.
+
+## D-1026 — Concurrency Does Not Establish Causation
+
+Events that overlap in time, space, symbolism, or observation remain separate unless a supported Causal Link or genuine convergence connects them. Coincidence may be factual without implying coordination, prophecy, or shared source.
+
+## D-1027 — Events, Consequences, and State Updates Remain Distinct
+
+The World-Event Generator establishes the direct event, Consequence Resolution and Causal Event Chains trace follow-up, and specialist owners update World-State Claims. Each material change is recorded once rather than multiplied across these representations.
+
+## D-1028 — World-Event Randomization Resolves Only Supported Uncertainty
+
+Random methods may settle one committed unresolved field among causally supported possibilities after constraints and evidence are known. They cannot create an event source, actor decision, specialist outcome, target, magnitude, catastrophe, reward, or preferred story direction.
+
+## D-1029 — World Events Do Not Imply Encounters or Temporal Transitions
+
+A World Event may occur off-screen and never become an Encounter. It is not a Time Skip, Age Transition, World Reset, Gate-event template, quest, or narrative arc, and its significance cannot grant any of those classifications by implication.
+
+## D-1030 — World-Event Records Remain Campaign-External
+
+Populated briefs, Seeds, World-Event Records, event histories, timings, footprints, information views, uncertainty results, state changes, Pending Consequences, and Review Points belong in the external Campaign Record and never enter repository canon through play alone.

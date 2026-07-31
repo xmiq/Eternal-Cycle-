@@ -523,6 +523,7 @@ This document does not define:
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
+- [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

@@ -28,6 +28,8 @@ Use the [Dungeon Generator](../gm/DUNGEON_GENERATOR.md) for campaign-local Dunge
 
 Use the [Faction Generator](../gm/FACTION_GENERATOR.md) for campaign-local faction classification, creation, and revalidation. Faction Behaviour remains the owner of every live decision, mobilization, adaptation, and consequence used by that generator.
 
+Use the [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md) to identify and resolve bounded campaign-local occurrences from established causes. Causal Event Chains, World-State Variables, Simulation Abstraction, and each specialist domain retain ownership of propagation, state, resolution, and direct mechanics.
+
 Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.
 
 ## Integrated Guarantees

@@ -3663,3 +3663,27 @@ One dated configuration of a faction's participants, identity, interests, proced
 ## Faction Generation Pass
 
 One bounded procedure resolving only the faction facts needed for a stated issue and preparation horizon while preserving member agency, internal uncertainty, future decisions, and specialist ownership.
+
+## World Event
+
+A bounded material occurrence or transition in world truth, established for a stated subject, scope, and time through valid causes and canonical ownership. It may be sudden or extended, public or hidden, local or widespread, deliberate or emergent.
+
+## World-Event Generation Brief
+
+The external input for one world-event generation pass, stating the event question, relevant scope and horizon, established state and causes, possible receivers, information views, simulation resolution, and canonical limits without requiring that an event occur.
+
+## World-Event Basis
+
+The established initiating condition or action, receiving subject, valid transition route, enabling and inhibiting conditions, relevant timing, canonical owner, and evidence that together support one possible bounded event without proving uncertain occurrence.
+
+## World-Event Seed
+
+An unvalidated preparation possibility combining a possible World-Event Basis, direct transition, footprint, timing, information views, uncertainty, and owner handoffs. It is not campaign truth until its causes, ownership, Event Boundary, and resolution are validated.
+
+## World-Event Generation Pass
+
+One bounded procedure identifying and resolving only the event facts needed for a stated Simulation Question and Causal Horizon while preserving autonomous agency, unresolved branches, specialist ownership, and future consequences.
+
+## Event Boundary
+
+The exact material occurrence or transition established by one World Event, separated from possible consequences, actor responses, interpretations, Encounters, and future branches.

@@ -344,6 +344,7 @@ This document does not define:
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
+- [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

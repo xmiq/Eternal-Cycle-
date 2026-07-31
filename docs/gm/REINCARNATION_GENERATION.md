@@ -657,6 +657,7 @@ This document does not define:
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Monster Generator](MONSTER_GENERATOR.md)
+- [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Overview](../soul/SOUL_ENGINE_OVERVIEW.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)

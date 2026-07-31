@@ -122,6 +122,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [NPC Generator](gm/NPC_GENERATOR.md) - Person Basis, proportional detail, current-life identity, Observer Views, actor decisions, relationships, off-screen continuity, and external profiles.
 - [Dungeon Generator](gm/DUNGEON_GENERATOR.md) - Dungeon Basis and classification, causal Regions and Topology, actor-specific access, inhabitants, resources, hazards, information, and external Profiles.
 - [Faction Generator](gm/FACTION_GENERATOR.md) - Faction Basis and classification, participants, interests, information and decision routes, capacity, continuity, versioning, and external Profiles.
+- [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) - World-Event Basis, direct Event Boundaries, footprint, timing, information, uncertainty, consequence handoffs, and external records.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
 ## Authority and Scope

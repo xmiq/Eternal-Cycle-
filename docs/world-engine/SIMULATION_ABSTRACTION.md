@@ -729,4 +729,5 @@ This document does not define:
 - [Magic](../magic/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

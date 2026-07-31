@@ -415,6 +415,7 @@ Those subjects remain with their named owners or later roadmap tasks.
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
+- [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md)
 - [Soul Engine](../soul/README.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)
