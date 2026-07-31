@@ -1303,3 +1303,88 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep species definition, individual generation, current capability, behaviour, encounter role, Evolution eligibility, and campaign placement separate.
 5. Preserve monster personhood, noncombat existence, ecological causality, variation, hidden information, current-life effort, no level scaling, and external campaign records.
 6. Validate, advance only to **Create NPC generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Monster Generator Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator (`3d60116`, `docs: create monster generator`).
+
+### Active Roadmap Task
+
+- **Create NPC generator**.
+- Do not begin Dungeon generation, faction generation, world-event generation, or later roadmap work until NPC generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/MONSTER_GENERATOR.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+- `docs/gm/REINCARNATION_GENERATION.md`
+- `docs/monster-evolution/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 811-line canonical owner document.
+- Validated 131 Markdown files and 4,264 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 899 unique terminology entries and 990 unique decision IDs with zero duplicates.
+- Confirmed monster generation is `[x]` and NPC generation is the sole current task at `[ ]`.
+- Confirmed Species References, campaign-local species sketches, Monster Profiles, bounded groups, and Reincarnation Candidate support remain distinct and externally recorded.
+- Confirmed Phase 4 retains ownership of ecology, Evolution, Species Stages, adaptation, Mutation, Hybridization, apex claims, societies, extinction, and Soul interaction.
+- Confirmed generated anatomy grants access rather than mastery, capability remains contextual, monsters retain personhood and agency safeguards, and generation does not create Encounters.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Monster Generation Brief
+- Monster Basis
+- Species Reference
+- Monster Seed
+- Monster Profile
+- Individual Variation
+
+### Canonical Decisions Added
+
+- D-981 — Monster Generation Begins From a Valid Basis.
+- D-982 — Species References and Individuals Remain Distinct.
+- D-983 — Material Monster Traits Require Provenance and Ownership.
+- D-984 — Monster Profiles Are Contextual Rather Than Universal Stat Blocks.
+- D-985 — Generated Anatomy Grants Access Rather Than Mastery.
+- D-986 — Individual Variation Uses the Smallest Truthful Owner.
+- D-987 — Monster Category Does Not Determine Personhood or Morality.
+- D-988 — Monster Generation Cannot Award Evolution.
+- D-989 — Monster Placement Does Not Create an Encounter.
+- D-990 — Monster Generation Records Remain Campaign-External.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, Human Classes and Professions, Monster Societies, Faction Behaviour, Development, Skills, Soul systems, Magic, and relevant World Engine actor interfaces.
+2. Create the dedicated canonical owner for **Create NPC generator**; do not implement Dungeon, faction, world-event, Time Skip, or Age-transition generation.
+3. Generate persons from valid embodiment, current-life history, relationships, culture, work, institutions, Development, Skills, information, motives, constraints, and world placement without universal stat blocks or plot roles.
+4. Keep personhood, species or body, identity, social role, faction relation, profession, current capability, behaviour, Encounter role, and campaign placement separate.
+5. Preserve NPC agency, imperfect information, internal contradiction, change through consequence, human/monster parity, non-hostile existence, player agency, and external campaign records.
+6. Validate, advance only to **Create dungeon generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
