@@ -4,6 +4,12 @@
 
 The World Engine models how conditions and decisions create further consequences across time.
 
+It follows [Rule Zero](../core/DESIGN_PHILOSOPHY.md#rule-zero): world change emerges from established causes, pressures, actors, counterforces, and consequences before authorial convenience. It remains a rules framework; current world facts belong in an external Campaign Record.
+
+## Shared State Model
+
+[World-State Variables](WORLD_STATE_VARIABLES.md) defines how every domain scopes, evidences, updates, and preserves changing conditions without creating a universal world score or storing campaign data in this repository.
+
 ## Causal Chains
 
 A causal chain links a condition to plausible reactions:
@@ -40,3 +46,12 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 ## Magic Interface
 
 [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) defines how an established magical cause enters this framework through direct effects, footprint, distribution, responses, delays, feedback, persistence, and recovery. It does not pre-empt the detailed World Engine domain rules scheduled for Phase 8.
+
+## Related Documents
+
+- [World Engine Index](README.md)
+- [World-State Variables](WORLD_STATE_VARIABLES.md)
+- [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
+- [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
+- [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
+- [Roadmap](../../design/ROADMAP.md)

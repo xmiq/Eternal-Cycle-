@@ -2591,3 +2591,55 @@ A cooperative configuration containing two or more already distinct Weapon Souls
 ## Vessel Topology Profile
 
 A qualitative campaign record of a vessel's boundary, Components, soul arrangement, Identity-Bearing Structures, interfaces, topology, continuity, perspective, Agency Routing, compatibility, maintenance, failure, and Reincarnation implications.
+
+## World State
+
+The complete set of current campaign truths, unresolved conditions, relationships, and pending consequences that materially describe a world at a particular time. World State belongs in an external Campaign Record rather than the canonical repository.
+
+## World-State Variable
+
+A scoped, causally meaningful description of one changing world condition or relationship, including its subject, boundary, time, purpose, owner, evidence, trend, dependencies, persistence, and uncertainty where relevant.
+
+## World-State Claim
+
+A statement that one scoped subject has a specified current condition, relation, or trend for a defined purpose, time, evidence basis, and uncertainty.
+
+## World-State Profile
+
+An external Campaign Record grouping only the World-State Variables relevant to one simulation question, together with their scope, findings, trends, drivers, counterforces, dependencies, delays, evidence, uncertainty, and next review condition.
+
+## Stock
+
+Something accumulated or presently available within a stated world scope, with its access, condition, control, and observation time identified where material.
+
+## Flow
+
+Movement or change across time or a boundary, with its origin, destination, route, losses, timing, and interruption conditions identified where material.
+
+## World Capacity
+
+The bounded ability of a place, population, institution, ecology, or infrastructure to sustain one specified process under stated current conditions. It is not individual capability.
+
+## World Pressure
+
+A scoped condition that makes some world responses, transitions, or failures more likely without determining them.
+
+## State Relationship
+
+A material dependency, exchange, rivalry, alliance, jurisdiction, ecological link, information route, obligation, or other connection between scoped world subjects.
+
+## World Constraint
+
+A current, causally established condition that limits one specified world process or route without acting as a general penalty.
+
+## State Threshold
+
+A local, evidence-based condition at which one specified process changes behavior, enters another state, or requires a different resolution. It is not a universal breakpoint.
+
+## World Legacy
+
+A world condition that persists after its initiating event or active support has ended because an established material, ecological, social, institutional, magical, historical, or informational basis remains.
+
+## State Trend
+
+The direction or pattern of change in one World-State Variable at a stated scale and interval, such as rising, falling, shifting, oscillating, stable, recovering, transforming, or unknown.

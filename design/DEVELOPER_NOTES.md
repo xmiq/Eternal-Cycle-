@@ -685,3 +685,13 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Completed Magic documents now link directly to the causal World Engine interface, and stale future-Magic handoffs in earlier phases now point to their completed owners.
 - Actual Mana state, active effects, Profiles, Batches, relationships, restrictions, infrastructure, and world consequences remain external Campaign Records.
 - Full semantic and link validation found no blocking question, universal-level language, campaign data, duplicate decision identifier, or navigation conflict. Phase 8 may now define world-state variables from bounded Magic-World Claims without reopening Phase 7.
+
+## Phase 8 World-State-Variable Watchlist
+
+- World-State Profiles must remain selective external records rather than becoming canonical saves, universal dashboards, or exhaustive databases.
+- Stocks, Flows, Capacities, Pressures, Relationships, Constraints, Thresholds, and Legacies need playtests that keep their questions distinct without creating bookkeeping overhead.
+- Qualitative findings should stay scoped; terms such as scarce, stable, abundant, or volatile must not become hidden ranks shared across unrelated domains.
+- Local numerical measures need provenance, purpose, uncertainty, and omissions so precision does not masquerade as universal truth.
+- Aggregation must retain affected minorities, bottlenecks, unequal control, exceptional actors, and source agency whenever they can change the result.
+- Later domain documents should reuse the state grammar without forcing every domain into the same variable list, update interval, or formula.
+- World conditions must influence access, opportunity, pressure, and consequence without directly granting capability owned by a completed system.

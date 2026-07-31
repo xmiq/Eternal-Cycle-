@@ -1,0 +1,37 @@
+# World Engine
+
+The World Engine defines how changing conditions, autonomous actors, institutions, environments, and established system outputs create persistent consequences across time. It is a reusable simulation framework, not a campaign, save file, scripted timeline, random-event generator, or replacement for GM judgment.
+
+Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weapon, and Magic indexes before adjudicating a world claim that depends on them. The World Engine receives established facts from those systems and returns changed circumstances through their existing owners.
+
+## Canonical Reading Order
+
+1. [World Engine Overview](WORLD_ENGINE_OVERVIEW.md) establishes Rule Zero, causal world autonomy, core domains, and the requirement to scale detail to play.
+2. [World-State Variables](WORLD_STATE_VARIABLES.md) defines the shared qualitative state model, variable families, evidence, uncertainty, persistence, ownership, external record boundary, and update procedure used by every World Engine domain.
+
+Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
+
+## Core Ownership
+
+| Claim | Primary owner |
+| --- | --- |
+| What a current world condition is, how it is scoped, and how it changes through causality | World Engine |
+| Current campaign values, named actors, locations, incidents, and timelines | External Campaign Record |
+| Soul identity, persistence, memory, and Reincarnation | [Soul Engine](../soul/README.md) |
+| Individual capability change and reliability | [Development System](../progression/README.md) |
+| Learned capabilities | [Skill Engine](../skills/README.md) |
+| Monster forms, Evolution Routes, and species-level body change | [Monster Evolution](../monster-evolution/README.md) |
+| Classes, Professions, institutions, offices, and social recognition | [Human Classes and Professions](../human/README.md) |
+| Weapon Soul personhood, bond, form, and weapon-owned capability | [Soul Weapons](../soul-weapons/README.md) |
+| Mana, affinities, Spells, Rituals, Enchantments, Alchemy, Divine Magic, and restrictions | [Magic](../magic/README.md) |
+| Campaign operation, information views, continuity, and provisional rulings | [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) |
+
+One event may alter several world conditions while involving several specialist owners. Record each effect once. The World Engine can change access, environment, demand, opportunity, risk, recognition, and consequences; it cannot manufacture a Skill, Soul effect, Evolution, Class, Weapon Function, or magical capability.
+
+## Repository Boundary
+
+World Engine documents contain rules, schemas, procedures, examples, and safeguards. Actual World-State Profiles, current values, named populations, resource stocks, prices, factions, wars, diseases, dungeons, Gates, settlements, and timelines are campaign data and remain outside this repository.
+
+## Authority
+
+Files in this section contain playable canonical rules. Accepted governance remains in [Design Decisions](../../design/DECISIONS.md), canonical vocabulary remains in [Terminology](../../design/TERMINOLOGY.md), and implementation order remains controlled by the [Roadmap](../../design/ROADMAP.md). Any conflict must be resolved before an affected task can be complete.

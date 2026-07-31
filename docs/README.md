@@ -89,7 +89,9 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 
 ## World Engine
 
-- [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - causal chains, core simulation domains, and scalable resolution.
+- [World Engine Index](world-engine/README.md) - canonical reading order, ownership boundaries, and repository boundary for persistent world simulation.
+- [World Engine Overview](world-engine/WORLD_ENGINE_OVERVIEW.md) - Rule Zero, causal autonomy, core simulation domains, and scalable resolution.
+- [World-State Variables](world-engine/WORLD_STATE_VARIABLES.md) - scoped variables, state families, evidence, trends, persistence, uncertainty, ownership, external Profiles, and the shared update procedure.
 
 ## GM Framework
 

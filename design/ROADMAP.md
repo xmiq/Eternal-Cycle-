@@ -4,9 +4,9 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Define world-state variables as rules, not campaign data**
+**Current task: Define causal event chains**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define world-state variables as rules, not campaign data** unless the project owner explicitly changes the target. Do not begin populations, resources and food, economies, ecology and migration, faction behaviour, war and unrest, disease evolution, advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define causal event chains** unless the project owner explicitly changes the target. Do not begin populations, resources and food, economies, ecology and migration, faction behaviour, war and unrest, disease evolution, advancement, dungeon activity, World Stability, Gates, or later Phase 8 tasks before the current task is complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -181,7 +181,7 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 ## Phase 8 — World Engine
 
 - [x] Define Rule Zero
-- [ ] Define world-state variables as rules, not campaign data
+- [x] Define world-state variables as rules, not campaign data
 - [~] Define causal event chains
 - [ ] Define populations
 - [ ] Define resources and food

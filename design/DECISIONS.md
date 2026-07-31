@@ -2821,3 +2821,55 @@ Magic-World Profiles are qualitative external Campaign Records. Named current so
 ## D-705 — World Simulation Cannot Manufacture Magic
 
 The World Engine receives established magical facts and simulates their consequences. A desired social, ecological, political, or dramatic outcome cannot be used to invent a prohibited effect, erase a source limit, waive embodiment, transfer another system's capability, or override completed Magic safeguards.
+
+## D-706 — World-State Rules and Campaign Values Are Separate
+
+The canonical repository defines how world conditions are scoped, evidenced, updated, and related. Actual current values, named subjects, incidents, timelines, and World-State Profiles are external Campaign Records.
+
+## D-707 — Every World-State Variable Is Scoped
+
+A World-State Variable must identify the subject, boundary, time, purpose, owner, evidence, and uncertainty relevant to its claim. A finding cannot be silently generalized across populations, places, institutions, worlds, or times.
+
+## D-708 — State Families Are Non-Fungible
+
+Stocks, Flows, World Capacities, World Pressures, State Relationships, World Constraints, State Thresholds, and World Legacies answer different questions. They do not exchange through a universal rate or aggregate into one authoritative world score.
+
+## D-709 — Existence Does Not Prove Access or Fitness
+
+A present Stock, route, institution, source, or infrastructure does not prove usable access, valid authority, adequate quality, compatibility, safe operation, or equitable distribution. These remain separate state claims.
+
+## D-710 — World Truth, Observation, Estimate, and Belief Remain Distinct
+
+World truth, recorded observations, inferred estimates, and actor beliefs can differ. A false or incomplete belief may cause real action without becoming true, and no State Profile grants in-world omniscience.
+
+## D-711 — State Change Requires a Causal Route
+
+A World-State Variable changes through established inputs, actors, processes, dependencies, and elapsed time. Narrative need, dramatic importance, a player entering or leaving a scene, or a desired later event is not a sufficient cause.
+
+## D-712 — Delays, Momentum, Recovery, and Legacy Persist
+
+World-state resolution distinguishes current condition, direction, drivers, counterforces, delay, momentum, persistence basis, recovery route, and remaining legacy. Ending an initiating cause does not rewind consequences.
+
+## D-713 — State Thresholds Are Local Conditions
+
+A State Threshold applies only to its stated process, scope, evidence, and receiving rule. Crossing it cannot automatically grant an unrelated collapse, war, Evolution, Skill, Soul effect, magical event, or World Reset.
+
+## D-714 — Aggregation Must Preserve Material Distribution
+
+Regional and Epochal summaries must retain bottlenecks, minorities, excluded groups, exceptional actors, unequal control, and hidden dependencies whenever averaging them away could change a decision or consequence.
+
+## D-715 — World State Cannot Manufacture Personal Capability
+
+World conditions may alter access, opportunity, tools, instruction, demand, pressure, risk, and consequence. They cannot directly create Development, a Skill, Soul growth, Monster Evolution, Human standing, a Weapon Function, or Magic outside the owning rules.
+
+## D-716 — World Feedback Returns Through Existing Owners
+
+When changed world conditions affect a specialist system, that system resolves the next claim. The World Engine supplies changed inputs and context rather than taking ownership of identity, capability, embodiment, authority, or source-specific effects.
+
+## D-717 — Simulation Resolution Changes Detail, Not Truth
+
+Focused, Local, Regional, and Epochal representations may summarize or expand established state. Changing resolution cannot create, erase, average away, or retroactively decide a material cause, dependency, actor, or consequence.
+
+## D-718 — No Universal World Score Is Authoritative
+
+Campaigns may use scoped indicators for defined questions, but no global power rating, civilization level, danger number, prosperity score, plot meter, or world health score is an authoritative World Engine variable.

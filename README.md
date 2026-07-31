@@ -46,7 +46,9 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
+- [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
+- [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
 
 ## Start Here
 
@@ -62,4 +64,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define world-state variables as rules, not campaign data**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define causal event chains**.

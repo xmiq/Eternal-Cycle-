@@ -65,7 +65,7 @@ Campaign state may include:
 | Category | Typical contents |
 | --- | --- |
 | **Rules profile** | Repository revision, adopted optional premises, active Provisional Rules, and conversion notes |
-| **World state** | Current conditions, geography, ecology, resources, institutions, threats, and unresolved causal pressures |
+| **World state** | Current conditions, geography, ecology, resources, institutions, threats, and unresolved causal pressures represented under [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md) |
 | **Timeline** | Dated events, elapsed time, time skips, Interlife periods, Age changes, and causal ordering |
 | **Reincarnations** | Completed incarnations, Final Deaths, Life Reconciliation outcomes, Interlife, and embodiment history |
 | **Current bodies** | Species, form, maturation, condition, injuries, access, expression, and present limitations |
@@ -442,6 +442,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Progression Rules Index](../progression/README.md)
 - [Skill Engine Index](../skills/README.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
+- [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
