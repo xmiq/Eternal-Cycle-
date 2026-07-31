@@ -3623,3 +3623,23 @@ The minimum durable identity, embodiment, location or route, relationship, commi
 ## NPC Decision Frame
 
 The bounded current context used to represent one NPC choice from that NPC's Observer View, perceived options, values, relationships, obligations, capability, costs, uncertainty, and time pressure without reducing personality to a deterministic algorithm.
+
+## Dungeon Generation Brief
+
+The external input for one Dungeon-generation pass, stating the exact site question, world context, generation scope, known evidence, information views, preparation horizon, and canonical limits without prescribing layout, threat, purpose, reward, or Encounter.
+
+## Dungeon Basis
+
+The validated Formation history, practical Dungeon Boundary, Sustaining Basis, distinct internal conditions or processes, Dungeon Exchanges, and continuity that make one current Dungeon classification possible.
+
+## Dungeon Seed
+
+An unvalidated preparation possibility combining a possible Dungeon Basis, current world placement, Topology, participants, activity, resources, hazards, claims, and information. It is not established campaign fact until source, coherence, ownership, causality, and continuity tests pass.
+
+## Dungeon Generation Pass
+
+One bounded procedure resolving only the Dungeon facts needed for a stated preparation horizon while preserving hidden truth, unresolved branches, specialist handoffs, and future causal change.
+
+## Dungeon Region
+
+A bounded part of Dungeon Topology grouped because its conditions, functions, participants, sustaining relations, or Access Routes are usefully resolved together. It is a map and simulation abstraction rather than an inherent room, floor, biome, or difficulty tier.

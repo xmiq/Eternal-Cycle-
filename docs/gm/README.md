@@ -13,8 +13,9 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 7. [Encounter Generator](ENCOUNTER_GENERATOR.md) - causal source collection, eligibility, decision framing, non-scaling, agency routes, adjudication handoffs, and external records.
 8. [Monster Generator](MONSTER_GENERATOR.md) - world-valid species sketches, individual histories, sourced variation, embodiment, capability, information, placement, and external profiles.
 9. [NPC Generator](NPC_GENERATOR.md) - person-basis validation, proportional actor detail, bounded knowledge, independent decisions, relationships, continuity, and external profiles.
-10. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
-11. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+10. [Dungeon Generator](DUNGEON_GENERATOR.md) - Dungeon Basis validation, causal Topology, actor-specific access, activity, inhabitants, resources, hazards, claims, and revalidation.
+11. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
+12. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 
 ## Authority and Boundary
 

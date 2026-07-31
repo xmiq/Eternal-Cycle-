@@ -530,6 +530,8 @@ A campaign may maintain an external **Dungeon Profile** containing only what pla
 
 This Profile is live campaign state and remains outside this repository.
 
+Use the [Dungeon Generator](../gm/DUNGEON_GENERATOR.md) to create, reconstruct, expand, or revalidate a campaign-local Dungeon Profile from these rules. Generation does not replace the Activity procedure or authorize live site state to enter this repository.
+
 ## Worked Examples
 
 ### Irrigation Ruin Without a Core
@@ -642,6 +644,7 @@ This document does not define:
 - [Magic](../magic/README.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
+- [Dungeon Generator](../gm/DUNGEON_GENERATOR.md)
 - [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

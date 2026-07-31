@@ -4001,3 +4001,43 @@ Generate only enough history, capability, relationships, information, and contin
 ## D-1000 — NPC Records Remain Campaign-External
 
 Populated briefs, NPC Seeds, Profiles, Continuity Cores, Decision Frames, relationships, current activities, choices, and histories belong in the external Campaign Record and never become repository canon through play alone.
+
+## D-1001 — Dungeon Generation Begins With a Dungeon Basis
+
+Formation, practical Boundary, Sustaining Basis, distinct internal conditions or processes, boundary exchanges, and continuity must support the site before topology, inhabitants, resources, hazards, or other contents are generated.
+
+## D-1002 — Dungeon Classification May Fail
+
+A dangerous, magical, underground, ancient, inhabited, or culturally labelled site is not automatically a Dungeon. When the canonical classification test fails, the generator preserves the truthful site type rather than manufacturing a Dungeon Basis.
+
+## D-1003 — Dungeon Topology Follows Causes Rather Than Difficulty
+
+Regions, routes, interfaces, barriers, distances, and reconfiguration derive from formation, function, environment, habitation, construction, damage, maintenance, living processes, or established magic. They cannot be arranged as a universal floor ladder or challenge sequence.
+
+## D-1004 — Dungeon Access Is Actor- and Condition-Specific
+
+Each Dungeon Access Route identifies what can cross, in which direction, under what timing, embodiment, equipment, Skill, permission, relationship, source, supply, navigation, and return conditions. An entrance never grants universal access by existence alone.
+
+## D-1005 — Dungeon Inhabitants and Resources Require Continuity Routes
+
+Every inhabitant requires reproduction, migration, construction, summoning, transformation, revival, release, or another valid origin, while every resource requires source, Stock or Flow, renewal, extraction, waste, claim, and consequence. Dungeon labels create neither.
+
+## D-1006 — Generated Dungeon Cores Are Optional and Function-Bounded
+
+A generator may include a Core only when an established concentrated component performs stated coordinating, anchoring, supplying, recording, or regulating functions. It gains no automatic personhood, omniscience, ownership, control, uniqueness, or universal weakness.
+
+## D-1007 — Hazards and Treasure Are Sourced Rather Than Required
+
+Structures, traps, wards, dangers, records, artifacts, valuables, and other yields require origins, current conditions, maintenance or preservation, evidence, access, ownership, and consequences. No Dungeon requires them or refreshes them as content.
+
+## D-1008 — Dungeon Randomization Resolves Only Supported Details
+
+Random tools may select one committed field among world-supported options. They cannot invent sources, level-scaled threats, Cores, inhabitants, resources, rewards, actor decisions, hidden geometry after player commitment, or automatic resets.
+
+## D-1009 — Generated Dungeons Persist and Revalidate
+
+A generated Dungeon is a current world state that changes through maintenance, participants, processes, exchanges, damage, repair, extraction, and consequences. Material change prompts revalidation while preserving prior maps, survivors, claims, absences, and Dungeon Legacies rather than resetting the site.
+
+## D-1010 — Dungeon Generation Records Remain Campaign-External
+
+Populated briefs, Dungeon Seeds, Profiles, generation records, maps, Topology, participants, routes, resources, hazards, claims, current activity, and histories belong in the external Campaign Record and never enter repository canon through play alone.

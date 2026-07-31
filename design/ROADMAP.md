@@ -4,9 +4,9 @@
 
 **Current phase: Phase 9 — GM Toolkit**
 
-**Current task: Create dungeon generator**
+**Current task: Create faction generator**
 
-Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create dungeon generator** unless the project owner explicitly changes the target. Do not begin faction generation, world-event generation, Time Skip procedure, or later roadmap work before Dungeon generation is complete.
+Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create faction generator** unless the project owner explicitly changes the target. Do not begin world-event generation, Time Skip procedure, Age-transition procedure, or later roadmap work before faction generation is complete.
 
 Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -213,7 +213,7 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 - [x] Create encounter generator
 - [x] Create monster generator
 - [x] Create NPC generator
-- [ ] Create dungeon generator
+- [x] Create dungeon generator
 - [ ] Create faction generator
 - [ ] Create world-event generator
 - [ ] Create time-skip procedure
