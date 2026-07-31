@@ -439,6 +439,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
+- [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)

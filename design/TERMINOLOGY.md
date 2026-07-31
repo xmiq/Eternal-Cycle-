@@ -3547,3 +3547,27 @@ An external Campaign Record for one Reincarnation Candidate separating embodimen
 ## Reincarnation Brief
 
 The external GM input to one candidate-generation pass, recording transition identity, target window, active Reincarnation Mode, reachable domains, relevant Soul conditions, campaign focus, participant boundaries, choice requirements, and protected information.
+
+## Encounter
+
+A bounded period in which at least one established actor, process, condition, hazard, opportunity, obligation, trace, or consequence becomes materially relevant to a player-controlled character's available choices. It is not necessarily combat and may be avoided, redirected, postponed, or left.
+
+## Encounter Source
+
+An established world-side actor, process, condition, hazard, opportunity, obligation, trace, or Pending Consequence capable of reaching a current situation through a valid causal route.
+
+## Encounter Seed
+
+An unselected preparation possibility describing how one or more Encounter Sources could intersect current participants within a stated time and place. It is not established fact until its dependencies resolve and it passes encounter eligibility.
+
+## Encounter Frame
+
+The current playable boundary around one eligible encounter intersection, separating present conditions, sources, participants, information views, pressures, player decisions, dependencies, Counterforces, specialist owners, and boundary-change conditions without scripting an outcome.
+
+## Encounter Pressure
+
+A condition that makes action, delay, refusal, or commitment materially consequential within an Encounter, without itself authorizing forced choice or manufactured urgency.
+
+## Encounter Handoff
+
+A bounded routing of one framed Encounter claim to its canonical owner, identifying the exact question, facts, Observer View, player intent, uncertainty, and required result without pre-deciding that result.

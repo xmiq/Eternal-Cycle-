@@ -128,7 +128,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
+- monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
 Mentioning these areas in this framework does not change their roadmap status.
@@ -253,6 +253,7 @@ Use the completed World Engine framework as follows:
 
 Until Phase 9 is complete:
 
+- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), within their stated scopes;
 - use transparent qualitative judgment;
 - state material uncertainty and its cause;
 - compare capability through [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md);
@@ -268,7 +269,7 @@ The alpha framework adds no Reincarnation mechanics. Use [Reincarnation](../soul
 3. **Classify continuity.** Separate what ends with the body, what remains in the world, and what legitimately persists with the soul.
 4. **Form the Soul Echo.** Create the completed incarnation's Echo through [Soul Echoes](../soul/SOUL_ECHOES.md), without treating death as an advancement reward.
 5. **Resolve Interlife.** Advance external time and apply relevant world consequences at an appropriate level of detail.
-6. **Generate valid candidates.** Use the embodiment, world-state, soul-compatibility, earned-access, and causal-placement constraints in Reincarnation; keep any incomplete selection tool narrow and Provisional.
+6. **Generate valid candidates.** Use [Reincarnation Generation](REINCARNATION_GENERATION.md) for world-grounded candidate sourcing, eligibility, presentation, selection handoff, and revalidation.
 7. **Apply the Reincarnation Mode.** Use the campaign's established Emergent, Constrained Choice, or Directed mode without reopening the result for optimization.
 8. **Determine memory and access.** Apply [Soul Depth](../soul/SOUL_DEPTH.md), [Soul Resonance](../soul/SOUL_RESONANCE.md), Echo, [Retained Instinct](../soul/RETAINED_INSTINCTS.md), Soul Integrity, and other established access rules.
 9. **Establish the new body.** Define its valid species, stage, context, anatomy, capabilities, limitations, and current conditions without importing former bodily statistics.

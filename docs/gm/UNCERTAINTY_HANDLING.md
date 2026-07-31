@@ -598,6 +598,7 @@ This document does not define:
 - [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
+- [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)

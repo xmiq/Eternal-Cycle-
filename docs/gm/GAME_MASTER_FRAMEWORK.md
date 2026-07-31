@@ -240,6 +240,8 @@ An NPC may make a poor decision when its information, values, pressure, or limit
 
 ## Encounter Principles
 
+[Encounter Generation](ENCOUNTER_GENERATOR.md) is the canonical owner for turning established world-side sources into eligible, decision-relevant Encounter Frames.
+
 An encounter is a point where actors, hazards, ecology, institutions, resources, or consequences become relevant to player choice. It is not necessarily combat.
 
 Encounters should arise from:
@@ -449,6 +451,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
+- [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

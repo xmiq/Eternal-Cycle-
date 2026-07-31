@@ -4,9 +4,9 @@
 
 **Current phase: Phase 9 — GM Toolkit**
 
-**Current task: Create encounter generator**
+**Current task: Create monster generator**
 
-Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create encounter generator** unless the project owner explicitly changes the target. Do not begin monster generation, NPC generation, Dungeon generation, or later roadmap work before encounter generation is complete.
+Phase 8 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Create monster generator** unless the project owner explicitly changes the target. Do not begin NPC generation, Dungeon generation, faction generation, or later roadmap work before monster generation is complete.
 
 Phases 1 through 8 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -210,7 +210,7 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 - [x] Define consequence resolution
 - [x] Define uncertainty handling
 - [x] Define reincarnation generation
-- [ ] Create encounter generator
+- [x] Create encounter generator
 - [ ] Create monster generator
 - [ ] Create NPC generator
 - [ ] Create dungeon generator

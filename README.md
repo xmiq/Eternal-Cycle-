@@ -49,6 +49,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.
+- [`docs/gm/ENCOUNTER_GENERATOR.md`](docs/gm/ENCOUNTER_GENERATOR.md) - causal encounter sourcing, eligibility, framing, non-scaling, agency routes, specialist handoffs, and external records.
 - [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
@@ -83,4 +84,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create encounter generator**.
+The repository foundation and Phases 1 through 8 are complete and reviewed. The current phase is **Phase 9 — GM Toolkit**, and the sole current task is **Create monster generator**.

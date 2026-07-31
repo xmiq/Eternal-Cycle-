@@ -3881,3 +3881,43 @@ Every material opportunity, route, occupancy, compatibility, access, and selecti
 ## D-970 — Empty Candidate Pools Extend Transition Rather Than Create Bodies
 
 When no valid Embodiment Opportunity currently exists, Interlife continues or another established Reincarnation condition acts until a recorded review condition. The generator cannot create a body, route, species, or compatibility exception to avoid delay.
+
+## D-971 — Encounter Sources Precede Encounter Framing
+
+Every Encounter begins from an established actor, process, condition, hazard, opportunity, obligation, trace, or Pending Consequence with a valid causal route into the current situation. Session pacing, desired drama, and unused preparation cannot create the source.
+
+## D-972 — Encounters Begin at Material Player Decisions
+
+A world event, observation, participant presence, or causal chain becomes an Encounter only when it is materially relevant to an available player-controlled choice. Ordinary description and off-screen simulation need no artificial Encounter boundary.
+
+## D-973 — Encounter Generation Frames but Does Not Resolve
+
+The Encounter generator may collect sources, test eligibility, choose a useful Frame, and create specialist handoffs. It cannot choose deliberate actor intent, establish unsupported capabilities, resolve contested effects, or determine consequences.
+
+## D-974 — Encounters Are Never Level-Scaled
+
+Encounter existence, participants, danger, opportunity, and timing follow world state and causal routes rather than participant power, party composition, narrative importance, desired reward, or a universal challenge measure.
+
+## D-975 — Encounter Selection Follows Causality and Player Direction
+
+The next Encounter follows due timing, established routes, autonomous actors, unresolved decisions, and player pursuit, preparation, avoidance, or delay. The GM cannot move prepared content to preserve a preferred scene.
+
+## D-976 — Encounter Randomization Has Bounded Authority
+
+Randomization may select one committed intersection only among causally supported Encounter Seeds. It cannot invent sources, settle participant choices, establish surprise, resolve outcomes, assign rewards, or determine later consequences.
+
+## D-977 — Participants and Processes Retain Their Own Integrity
+
+Agentive participants keep their own information, motives, agency, constraints, and response timing, while non-agentive processes keep their conditions, rates, triggers, and Counterforces. Neither may be rewritten to fit an Encounter role.
+
+## D-978 — Avoidance and Quiet Intervals Are Valid Outcomes
+
+Preparation, changed routes, successful concealment, timing, negotiation, withdrawal, or absence of a due source may prevent an Encounter. The GM does not replace avoided content or compensate for uneventful time with an unrelated threat.
+
+## D-979 — Encounter Boundaries Follow Decisions, Not Defeat Conditions
+
+An Encounter continues, splits, expands, compresses, or closes when its material decision boundary changes. It does not require every opponent to be defeated, every source exhausted, or every prepared beat presented.
+
+## D-980 — Encounter Records Remain Campaign-External
+
+Encounter Briefs, Frames, selected intersections, outcomes, participant states, unresolved branches, and played histories belong in the external Campaign Record. Canonical documentation contains procedures and blank examples only.
