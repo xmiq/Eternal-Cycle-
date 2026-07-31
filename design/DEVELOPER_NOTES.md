@@ -924,3 +924,70 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - No universal world score, civilization level, deterministic Reset trigger, level-scaled encounter model, or repository-stored campaign state was introduced.
 - No new blocking question or canonical design decision was required by the audit.
 - The full repository validation passed before Phase 8 was marked complete and the roadmap advanced to **Define GM responsibilities**.
+
+## Phase 9 Checkpoint — GM Responsibilities Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities (`68fbf32`, `docs: define GM responsibilities`).
+
+### Active Roadmap Task
+
+- **Define consequence resolution**.
+- Do not begin uncertainty handling, Reincarnation generation, generators, Time Skip procedure, or Age-transition procedure until consequence resolution is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/GM_RESPONSIBILITIES.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_PRINCIPLES.md`
+- `docs/gm/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and the complete 453-line canonical owner document.
+- Validated 126 Markdown files and 4,087 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 867 unique terminology entries and 945 unique decision IDs with zero duplicates.
+- Confirmed Phase 9 remains current, GM responsibilities is `[x]`, and consequence resolution is the sole current task at `[~]`.
+- Confirmed no campaign save, current character, live world state, inventory, active quest, story summary, or playthrough-history file entered the repository.
+- `git diff --check` passed; only the pre-existing stale `Eternal Cycle.zip` remains untracked pending final phase regeneration.
+
+### Terminology Added
+
+- Game Master
+- GM Responsibility
+- Responsibility Handoff
+- Adjudication Trace
+
+### Canonical Decisions Added
+
+- D-940 — GM Authority Is Bounded by Ownership.
+- D-941 — GM Responsibilities Are Distinct but Coordinated.
+- D-942 — Deliberate Player Intent Remains Player-Owned.
+- D-943 — Material Adjudication Requires an External Trace.
+- D-944 — Delegation Does Not Expand Authority.
+- D-945 — Human and AI GMs Share One Canonical Framework.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read repository governance, all GM documents, and the consequence-related interfaces in completed systems.
+2. Inspect the substantial consequence material already present in `docs/gm/GAME_MASTER_FRAMEWORK.md`, `docs/gm/GM_RESPONSIBILITIES.md`, and the World Engine without treating mentions as completion.
+3. Create the dedicated canonical owner for **Define consequence resolution** without implementing uncertainty handling or any later Phase 9 task.
+4. Preserve causal ownership, proportionality, player agency, information boundaries, external campaign records, human/AI parity, and specialist-system handoffs.
+5. Validate, update the roadmap to the next exact task only if consequence resolution is genuinely complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
