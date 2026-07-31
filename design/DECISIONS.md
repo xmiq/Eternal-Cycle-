@@ -3921,3 +3921,43 @@ An Encounter continues, splits, expands, compresses, or closes when its material
 ## D-980 — Encounter Records Remain Campaign-External
 
 Encounter Briefs, Frames, selected intersections, outcomes, participant states, unresolved branches, and played histories belong in the external Campaign Record. Canonical documentation contains procedures and blank examples only.
+
+## D-981 — Monster Generation Begins From a Valid Basis
+
+Every generated species sketch, individual, or bounded group requires world-supported origin, embodiment, lifecycle, ecology, history, and placement. A desired visual theme, combat role, rarity, or Encounter function is not a Monster Basis.
+
+## D-982 — Species References and Individuals Remain Distinct
+
+A Species Reference describes a range of ordinary forms, traits, needs, variation, and routes. A Monster Profile describes one causally situated individual or bounded group; neither may silently substitute for the other.
+
+## D-983 — Material Monster Traits Require Provenance and Ownership
+
+Every material trait, capability, variation, alteration, or support relation must identify its source, canonical owner, access route, expression limits, costs, and current conditions. Generation cannot assemble unrelated traits into a convenient package.
+
+## D-984 — Monster Profiles Are Contextual Rather Than Universal Stat Blocks
+
+Monster capability is described for actual objectives through embodiment, Development, Skills, magic, preparation, environment, support, dependencies, and evidence. Body size, age, Stage, Evolution history, rarity, or threat category does not become one total.
+
+## D-985 — Generated Anatomy Grants Access Rather Than Mastery
+
+Species Traits and current form may permit expression, but reliable interpretation, control, tactics, magic, and learned use still require present Development, Skills, history, and practice.
+
+## D-986 — Individual Variation Uses the Smallest Truthful Owner
+
+Inherited difference, condition, Development, Skill, adaptation, Mutation, culture, equipment, magic, and history remain distinct. Variation creates no new species, Evolved Form, branch, Skill, or destiny unless its proper owner independently requires one.
+
+## D-987 — Monster Category Does Not Determine Personhood or Morality
+
+Monster classification alone establishes neither personhood, intelligence, culture, hostility, allegiance, moral character, legal status, nor ecological role. Factual evidence and relevant owners govern those claims, while cultural labels remain Observer Views.
+
+## D-988 — Monster Generation Cannot Award Evolution
+
+Evolution Routes, readiness, transitions, forms, Mutations, Hybrids, apex claims, and adaptations require their completed Phase 4 procedures and causal histories. They cannot be added as rarity features or profile decoration.
+
+## D-989 — Monster Placement Does Not Create an Encounter
+
+A generated monster requires valid world placement, ongoing needs, and current activity independent of the player. Contact becomes an Encounter only when its actual route intersects a material player decision under the Encounter generator.
+
+## D-990 — Monster Generation Records Remain Campaign-External
+
+Populated briefs, campaign-local species sketches, Monster Profiles, bounded groups, placements, current objectives, and information views belong in the external Campaign Record. Reusable canon requires separate repository review.

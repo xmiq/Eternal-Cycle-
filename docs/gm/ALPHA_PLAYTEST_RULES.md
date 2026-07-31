@@ -128,7 +128,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
+- NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
 Mentioning these areas in this framework does not change their roadmap status.
@@ -253,7 +253,7 @@ Use the completed World Engine framework as follows:
 
 Until Phase 9 is complete:
 
-- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md), within their stated scopes;
+- use completed canonical GM owners, including [Encounter Generation](ENCOUNTER_GENERATOR.md) and [Monster Generation](MONSTER_GENERATOR.md), within their stated scopes;
 - use transparent qualitative judgment;
 - state material uncertainty and its cause;
 - compare capability through [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md);

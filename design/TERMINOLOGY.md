@@ -3571,3 +3571,27 @@ A condition that makes action, delay, refusal, or commitment materially conseque
 ## Encounter Handoff
 
 A bounded routing of one framed Encounter claim to its canonical owner, identifying the exact question, facts, Observer View, player intent, uncertainty, and required result without pre-deciding that result.
+
+## Monster Generation Brief
+
+The external input for one monster-generation pass, stating its exact profile scope, world context, established species or origin material, information views, canonical limits, and preparation horizon without prescribing an outcome.
+
+## Monster Basis
+
+The validated origin, lineage, form, lifecycle, ecological, structural, magical, social, and historical facts that permit a particular monster species sketch, individual, or bounded group to exist.
+
+## Species Reference
+
+A reusable or campaign-local description of one species or form's ordinary anatomy, lifecycle, Species Potential, Species Traits, needs, variation, ecology, and known route structure. It defines a range rather than a complete individual.
+
+## Monster Seed
+
+An unvalidated preparation possibility combining a possible Monster Basis, individual history, and world placement. It is not established campaign fact until all relevant ownership, coherence, causality, and placement tests pass.
+
+## Monster Profile
+
+An external Campaign Record for one monster individual or explicitly bounded group, separating provenance, current embodiment, history, capabilities, needs, relationships, information views, present condition, and specialist handoffs without becoming a universal stat block.
+
+## Individual Variation
+
+A difference among members of one species or form produced by inherited variation, lifecycle, condition, Development, Skills, experience, culture, environment, relationships, equipment, magic, Mutation, or another established source. It does not inherently define a new species or form.

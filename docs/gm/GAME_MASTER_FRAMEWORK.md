@@ -452,6 +452,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
+- [Monster Generator](MONSTER_GENERATOR.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)
