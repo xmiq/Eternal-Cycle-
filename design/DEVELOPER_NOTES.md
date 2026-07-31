@@ -1750,3 +1750,98 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Require a start state, end horizon, player intent and standing instructions, Simulation Frames, Resolution Anchors, Material Exceptions, autonomous actor passes, due Review Points, event and consequence resolution, specialist handoffs, and an external causal bridge.
 5. Preserve player agency checkpoints, Reincarnation and Interlife continuity, current-life effort, training evidence, world autonomy, uncertainty, distributions, minorities, irreversible changes, unresolved branches, and external Campaign Records.
 6. Validate, advance only to **Create Age-transition procedure** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Time Skip Procedure Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation.
+- Create encounter generator.
+- Create monster generator.
+- Create NPC generator.
+- Create dungeon generator.
+- Create faction generator.
+- Create world-event generator.
+- Create time-skip procedure (`6943e64`, `docs: create time-skip procedure`).
+
+### Active Roadmap Task
+
+- **Create Age-transition procedure**.
+- Do not begin Phase 10 or later roadmap work until the Age-transition procedure and the Phase 9 exit audit are complete.
+
+### Files Created
+
+- `docs/gm/TIME_SKIP_PROCEDURE.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+- `docs/gm/ENCOUNTER_GENERATOR.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+- `docs/gm/REINCARNATION_GENERATION.md`
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+- `docs/gm/WORLD_EVENT_GENERATOR.md`
+- `docs/soul/REINCARNATION.md`
+- `docs/world-engine/AGES_AND_WORLD_RESETS.md`
+- `docs/world-engine/README.md`
+- `docs/world-engine/SIMULATION_ABSTRACTION.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 849-line canonical owner document.
+- Validated 136 Markdown files and 4,481 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 929 unique terminology entries and 1,037 unique decision IDs with zero duplicates.
+- Confirmed the Time Skip procedure is `[x]` and the Age-transition procedure is the sole current task at `[ ]`.
+- Confirmed Time Skips change narrative presentation while Simulation Passes and specialist owners produce every material transition.
+- Confirmed Skip Mandates, Standing Instructions, independent player-character authority, Interruption Triggers, Player Agency Checkpoints, Return Horizons, and Causal Bridges are playable and bounded.
+- Confirmed training, work, recovery, relationships, Interlife, Reincarnation, multiple player characters, World Events, long intervals, and uncertainty preserve current-life effort, actor agency, causes, distribution, and specialist ownership.
+- Confirmed no automatic endpoint, downtime yield, mastery, recovery, project completion, relationship outcome, death, Reincarnation choice, Age Transition, or Reset entered the procedure.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Time-Skip Brief
+- Skip Mandate
+- Standing Instruction
+- Player Agency Checkpoint
+- Interruption Trigger
+- Return Horizon
+- Causal Bridge
+
+### Canonical Decisions Added
+
+- D-1031 — Time Skips Require a Skip Mandate.
+- D-1032 — Standing Instructions Are Conditional Attempts.
+- D-1033 — A Return Horizon Is a Target Rather Than an Outcome.
+- D-1034 — Every Time Skip Returns a Causal Bridge.
+- D-1035 — Skip Mandates Are Character-Specific.
+- D-1036 — Reincarnation Requires a New Skip Mandate.
+- D-1037 — Compressed Projects Have No Default Yield.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/AGES_AND_WORLD_RESETS.md`, `docs/world-engine/WORLD_STABILITY.md`, `docs/world-engine/SIMULATION_ABSTRACTION.md`, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, every specialist World Engine domain, the World-Event Generator, and the Time Skip Procedure.
+2. Create the dedicated canonical owner for **Create Age-transition procedure**; do not implement Phase 10 templates or later roadmap work.
+3. Classify an Age Transition only after lasting, multi-domain changes make a new scoped Age description more useful and accurate than the former one; do not generate a desired genre, declare transition from elapsed time, or equate every transition with a World Reset.
+4. Define transition-question scope, former and successor Age Signatures, Transition Basis, boundary interval, uneven survivorship, contested periodization, actor agency, information views, World Revalidation, legacies, and return-to-play handoffs.
+5. Preserve causal history, surviving systems, regional differences, minority continuities, specialist ownership, Reincarnation and long-lived observers, World Gates, Soul Avatars, Weapon Souls, records, uncertainty, and external Campaign Records.
+6. Validate the task, complete the Phase 9 exit audit, mark Phase 9 complete only if every criterion passes, advance the roadmap to Phase 10 without implementing it, commit the task and final integration as appropriate, then create the mandatory Phase 9 checkpoint commit.
