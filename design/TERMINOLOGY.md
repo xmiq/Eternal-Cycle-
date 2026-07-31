@@ -2683,3 +2683,31 @@ An established downstream change whose causal requirements are met but whose del
 ## Causal Horizon
 
 The furthest point to which a Causal Event Chain must currently be traced to preserve a meaningful decision, foreseeable consequence, or future dependency.
+
+## Population
+
+A scoped set of beings or living bodies grouped for one demographic question under an explicit membership rule, counted unit, boundary, and time.
+
+## Population Composition
+
+Consequential differences among members of a Population, such as species, life stage, embodiment, health, role, access, location, status, or affiliation.
+
+## Demographic Cohort
+
+A Population subset sharing one time-relevant condition, such as birth interval, maturation stage, arrival period, exposure, intake, or displacement event.
+
+## Demographic Flow
+
+Entry, exit, or transfer that changes membership in a scoped Population over time, kept distinct from discovery, reclassification, or revised observation.
+
+## Population Continuity
+
+The capacity of a scoped Population to remain meaningfully present through replacement, care, knowledge transfer, reproduction, recruitment, movement, adaptation, or institutional support.
+
+## Demographic Momentum
+
+Continued Population change caused by existing composition and delayed life-cycle structure after an initiating pressure changes.
+
+## Support Burden
+
+The current demand that a specific dependency places on particular providers and systems, without implying lesser personhood or a universal ratio.

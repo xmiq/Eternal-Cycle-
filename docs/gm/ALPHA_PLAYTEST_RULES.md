@@ -106,7 +106,8 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) causal interface;
 - the Canonical Foundation for the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md);
 - the shared [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md) framework;
-- the canonical [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) procedure.
+- the canonical [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) procedure;
+- the canonical [Populations](../world-engine/POPULATIONS.md) framework.
 
 Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, and the complete Phase 7 Magic framework are canonical within their stated scopes. Detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
@@ -114,7 +115,7 @@ Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- domain-specific World Engine variables and procedures for populations, resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
+- domain-specific World Engine variables and procedures for resources, economics, ecology, factions, war, disease, advancement, dungeons, World Stability, Gates, and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
@@ -375,6 +376,7 @@ This example directory belongs outside the Eternal Cycle canonical repository. D
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
+- [Populations](../world-engine/POPULATIONS.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

@@ -2921,3 +2921,47 @@ Lower-detail simulation may combine repetitive links but cannot convert possibil
 ## D-730 — Randomness Resolves Uncertainty, Not Missing Causality
 
 An authorized random method may settle an uncertain supported branch. It cannot create a missing cause, capability, authority, source, access route, or exception.
+
+## D-731 — Populations Require Question-Specific Boundaries
+
+A Population is a scoped set of beings or living bodies grouped under an explicit membership rule for one demographic question. No population category or counted unit is universal across species, places, institutions, or life cycles.
+
+## D-732 — Population Aggregation Does Not Create Collective Personhood
+
+A Population is not one actor, mind, Soul, culture, opinion, alignment, or capability. Collective action requires actual information, relationships, coordination, institutions, and participating persons.
+
+## D-733 — Persons and Embodiments May Require Different Counts
+
+Population claims distinguish persistent persons from current bodies whenever Reincarnation, dormancy, distributed embodiment, manifestation, transformation, or species life cycle makes the difference material.
+
+## D-734 — Demographic Flow Separates Reality from Observation
+
+Birth, formation, migration, maturation, transfer, death, departure, and transformation can change actual membership. Discovery, reclassification, and revised estimates change recorded knowledge unless evidence establishes an actual demographic change.
+
+## D-735 — Reproductive Output Does Not Equal Mature Population
+
+Initiation, viable development, birth or formation, survival, maturation, and social integration are separate demographic stages. High reproductive output does not establish exponential growth.
+
+## D-736 — Population Continuity Is More Than Current Abundance
+
+Continuity may depend on future generations, habitat, care, teachers, knowledge, symbionts, recognition, movement, sources, and infrastructure. A currently numerous population can face continuity failure, while transformation can preserve continuity without purity.
+
+## D-737 — Demographic Momentum Preserves Life-Cycle Delays
+
+Existing cohort composition can sustain growth or decline after an initiating pressure changes. Momentum remains redirectable and is not a hidden multiplier or predetermined future.
+
+## D-738 — Population Capability Is Distributed, Not Pooled
+
+Population rules may describe the availability, location, access, willingness, support, and replacement of capable persons. Individual Development, Skills, Classes, magic, Soul traits, and Weapon Functions never combine into one population capability score.
+
+## D-739 — Souls Are Not a Demographic Resource
+
+Population demand, fertility, mortality, rarity, or policy cannot allocate Souls, guarantee Reincarnation candidates, or spread retained progression. Soul persistence and embodiment remain under Soul Engine rules.
+
+## D-740 — Dependency Does Not Reduce Personhood
+
+Support needs are scoped relationships between dependents, providers, and systems. They are not measures of worth, agency, or universal burden, and may change across life stages and circumstances.
+
+## D-741 — Population Change Requires Embodied Routes
+
+Growth, decline, survival, maturation, and renewal require valid life processes, time, access, environment, care, compatibility, resources, and agency where applicable. Narrative demand and elapsed time alone are insufficient.

@@ -704,3 +704,12 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Branch tracking should remain selective; unresolved possibilities belong in campaign records only when they can materially change future play.
 - Reinforcing loops require fresh constraints on every pass so they do not become hidden exponential engines.
 - Compression must retain decisive actors, bottlenecks, information routes, and cross-system ownership even when intermediate events are summarized.
+
+## Phase 8 Population Watchlist
+
+- Campaigns need flexible demographic units for ordinary people, monsters, colonies, distributed beings, and Weapon Souls without treating unlike units as directly interchangeable.
+- Cohort detail should be added only when maturation, care, replacement, or delayed consequences can change play.
+- Hidden-population uncertainty must support discovery and fair consequence without requiring false census precision.
+- Reproduction playtests should separate output, survival, maturation, and integration so prolific species do not become automatic exponential engines.
+- Population Continuity should recognize transformation, adoption, Hybridization, and cultural exchange without imposing purity as a design value.
+- Capability distribution should expose concentration and replacement risk without becoming a pooled population power score.
