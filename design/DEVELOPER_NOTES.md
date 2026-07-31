@@ -991,3 +991,74 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 3. Create the dedicated canonical owner for **Define consequence resolution** without implementing uncertainty handling or any later Phase 9 task.
 4. Preserve causal ownership, proportionality, player agency, information boundaries, external campaign records, human/AI parity, and specialist-system handoffs.
 5. Validate, update the roadmap to the next exact task only if consequence resolution is genuinely complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
+
+## Phase 9 Checkpoint — Consequence Resolution Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution (`9cfe506`, `docs: define consequence resolution`).
+
+### Active Roadmap Task
+
+- **Define uncertainty handling**.
+- Do not begin Reincarnation generation, generators, Time Skip procedure, or Age-transition procedure until uncertainty handling is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/CONSEQUENCE_RESOLUTION.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 540-line canonical owner document.
+- Validated 127 Markdown files and 4,118 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 873 unique terminology entries and 951 unique decision IDs with zero duplicates.
+- Confirmed consequence resolution is `[x]` and uncertainty handling is the sole current task at `[~]`.
+- Confirmed causal ownership, one-time state application, proportionality, information boundaries, player agency, specialist handoffs, and external record boundaries remain intact.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Consequence Resolution
+- Immediate Outcome
+- Stakes Declaration
+- Direct Consequence
+- Response Opportunity
+- Consequence Handoff
+
+### Canonical Decisions Added
+
+- D-946 — Immediate Outcomes Close Before Consequences Propagate.
+- D-947 — Each State Change Is Applied Once.
+- D-948 — Stakes Declarations Preserve Meaningful Commitment.
+- D-949 — Response Opportunities Preserve Actor Agency.
+- D-950 — Prevention Needs No Replacement Complication.
+- D-951 — Consequences Follow Causal Distribution.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, all GM documents, Causal Event Chains, Simulation Abstraction, and completed-system uncertainty interfaces.
+2. Create the dedicated canonical owner for **Define uncertainty handling**; do not implement Reincarnation generation or any generator.
+3. Distinguish established truth, hidden truth, mistaken belief, incomplete records, model uncertainty, and genuinely unresolved futures.
+4. Define when deterministic resolution, bounded qualitative judgment, declared randomization, deferred resolution, investigation, or participant clarification is appropriate without imposing one universal roll.
+5. Preserve fair evidence, anti-retroactivity, observer-relative knowledge, player agency, human/AI parity, and external recording.
+6. Validate, advance only to **Define reincarnation generation** if complete, commit the task, then create the next mandatory checkpoint commit.
