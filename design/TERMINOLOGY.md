@@ -3467,3 +3467,27 @@ An explicit routing of a claim, input, or resulting change from one GM Responsib
 ## Adjudication Trace
 
 The smallest external Campaign Record sufficient to preserve a material ruling's question, established inputs, authority, ownership, outcome, consequence, uncertainty, and required follow-up.
+
+## Consequence Resolution
+
+The ordered GM procedure that begins after an effect's owning system establishes its Immediate Outcome and then identifies, applies, routes, presents, and records supported consequences without replacing downstream owners.
+
+## Immediate Outcome
+
+The narrowest established result of the current attempted effect under its owning system, including the resolved layer, subjects, scope, timing, costs already incurred, and any portion that remains unresolved.
+
+## Stakes Declaration
+
+A player-facing summary of materially foreseeable kinds of gain, loss, exposure, uncertainty, or commitment before an irreversible decision, bounded by what the current character could recognize and never promising exhaustive prediction.
+
+## Direct Consequence
+
+An established change that follows from an Immediate Outcome or incurred cost without requiring another unresolved actor decision, communication route, operating process, delay, or specialist claim.
+
+## Response Opportunity
+
+A condition in which an actor or process has enough relevant access, information, time, capability, authority, motivation, or operating support to respond. It permits but does not guarantee a response, timing, or form.
+
+## Consequence Handoff
+
+An explicit routing of an established outcome, cost, trace, or state change to the next canonical owner, preserving affected subjects, causal route, information, constraints, timing, Counterforces, and unresolved portions without deciding the receiving result.

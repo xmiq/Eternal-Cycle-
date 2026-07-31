@@ -179,7 +179,7 @@ Creatures, populations, habitats, resources, disease, migration, predation, comp
 
 ### Consequence Chains
 
-Use [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) to trace supported links, autonomous responses, Counterforces, delays, branches, feedback, and Pending Consequences. Consequences may be immediate, delayed, local, distributed, misunderstood, interrupted, or transformed by other actors. Trace enough of the chain to preserve future causality. Do not assume that every consequence reaches the player, that every observer interprets it correctly, or that importance guarantees rapid response.
+Use [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) to separate and route immediate outcomes, direct changes, costs, traces, affected subjects, and Response Opportunities. Use [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) to trace supported links, autonomous responses, Counterforces, delays, branches, feedback, and Pending Consequences. Consequences may be immediate, delayed, local, distributed, misunderstood, interrupted, or transformed by other actors. Trace enough of the chain to preserve future causality. Do not assume that every consequence reaches the player, that every observer interprets it correctly, or that importance guarantees rapid response.
 
 ### Uncertainty in Simulation
 
@@ -274,6 +274,8 @@ Continuity records what remains true after change. It does not preserve the old 
 Corrections may be necessary when records conflict, a factual mistake is discovered, or new canon requires conversion. Record material corrections externally, preserve unaffected consequences where possible, and discuss changes that alter meaningful player choices. A quiet retcon is not continuity management.
 
 ## Consequence Management
+
+[Consequence Resolution](CONSEQUENCE_RESOLUTION.md) is the canonical owner for the procedure summarized here.
 
 For a material action or event, consider consequences in separate layers:
 
@@ -440,6 +442,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [GM Rules Index](README.md)
 - [GM Principles](GM_PRINCIPLES.md)
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
+- [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Canonical Rules Map](../README.md)

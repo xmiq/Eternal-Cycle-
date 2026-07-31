@@ -3781,3 +3781,27 @@ Dividing GM work among humans, AI systems, tools, or subsystems does not grant a
 ## D-945 — Human and AI GMs Share One Canonical Framework
 
 Human and AI Game Masters use the same responsibilities, authority hierarchy, ownership boundaries, agency safeguards, information model, continuity duties, and record requirements. Implementation medium changes workflow, not canon.
+
+## D-946 — Immediate Outcomes Close Before Consequences Propagate
+
+The applicable owning system first establishes the narrowest Immediate Outcome of an attempted effect. Consequence Resolution may route further changes but cannot enlarge, reverse, or supplement that outcome to obtain a preferred narrative result.
+
+## D-947 — Each State Change Is Applied Once
+
+One cause may create several distinct consequences, but the same expenditure, injury, loss, exposure, or other state change cannot be charged repeatedly under different owners or narrative labels.
+
+## D-948 — Stakes Declarations Preserve Meaningful Commitment
+
+Before a materially irreversible choice, the GM communicates the kinds of consequence the current character could reasonably foresee, including recognizable uncertainty. This framing neither reveals hidden truth nor promises an exhaustive prediction.
+
+## D-949 — Response Opportunities Preserve Actor Agency
+
+An established consequence may create a Response Opportunity, but it does not pre-decide whether an autonomous actor responds, when they do so, or which valid response they choose.
+
+## D-950 — Prevention Needs No Replacement Complication
+
+When a valid defense, refusal, interruption, evacuation, cure, negotiation, or other Counterforce prevents a threatened consequence, the GM preserves its actual costs and traces without inventing a consolation penalty merely to restore drama.
+
+## D-951 — Consequences Follow Causal Distribution
+
+Consequences reach the subjects, populations, environments, institutions, and observers supported by their routes, scope, timing, and Counterforces. Narrative focus on the protagonist neither attracts every consequence nor shields others from distributed effects.

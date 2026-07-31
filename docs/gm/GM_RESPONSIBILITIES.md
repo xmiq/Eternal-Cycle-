@@ -189,7 +189,7 @@ The GM ensures that resolved actions and events produce only consequences suppor
 
 At minimum, the GM identifies which direct changes must be recorded, which actors may respond, which costs or traces persist, and which claims require later review. The GM does not treat failure as permission for unrelated punishment or success as immunity from the world.
 
-The dedicated roadmap task **Define consequence resolution** owns the detailed procedure. This document does not pre-resolve its layers, propagation rules, proportionality tests, or update sequence.
+[Consequence Resolution](CONSEQUENCE_RESOLUTION.md) owns the detailed layers, causal routing, proportionality tests, update sequence, and recording discipline. This responsibility applies that procedure without replacing its specialist owners.
 
 ### Record Stewardship
 
@@ -436,6 +436,7 @@ Later Phase 9 documents may define the named procedures and generators within th
 - [GM Rules Index](README.md)
 - [GM Principles](GM_PRINCIPLES.md)
 - [Game Master Framework](GAME_MASTER_FRAMEWORK.md)
+- [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)
