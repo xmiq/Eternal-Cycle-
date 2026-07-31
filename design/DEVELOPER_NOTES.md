@@ -1141,3 +1141,83 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 4. Keep candidate eligibility, presentation, selection, placement, birth or formation, access, retained progression, and embodiment separate.
 5. Prevent wish-list selection, guaranteed optimal bodies, reroll farming, inventory carryover, automatic memory or mastery, and mandatory human or monster routes.
 6. Validate, advance only to **Create encounter generator** if complete, commit the task, then create the next mandatory checkpoint commit.
+
+## Phase 9 Checkpoint — Reincarnation Generation Complete
+
+### Completed Roadmap Tasks
+
+- Define alpha playtest framework.
+- Define GM responsibilities.
+- Define consequence resolution.
+- Define uncertainty handling.
+- Define reincarnation generation (`ed10935`, `docs: define reincarnation generation`).
+
+### Active Roadmap Task
+
+- **Create encounter generator**.
+- Do not begin monster generation, NPC generation, Dungeon generation, or later roadmap work until encounter generation is complete, validated, and committed.
+
+### Files Created
+
+- `docs/gm/REINCARNATION_GENERATION.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_RESPONSIBILITIES.md`
+- `docs/gm/README.md`
+- `docs/gm/UNCERTAINTY_HANDLING.md`
+- `docs/soul/REINCARNATION.md`
+
+### Validation Results
+
+- Reviewed the complete task diff and complete 675-line canonical owner document.
+- Validated 129 Markdown files and 4,184 internal links with zero missing files or anchors.
+- Validated all 10 documentation indexes with zero navigation omissions.
+- Validated 887 unique terminology entries and 970 unique decision IDs with zero duplicates.
+- Confirmed Reincarnation generation is `[x]` and encounter generation is the sole current task at `[ ]`.
+- Confirmed candidate generation remains bounded to stage 5 of the seven-stage Reincarnation sequence and does not own Final Death, Interlife, mode choice, embodiment, or retained access.
+- Confirmed personhood, world availability, causal body histories, current-life effort, player choice, revalidation, and external Campaign Record boundaries remain intact.
+- Confirmed no campaign-state artifact entered the repository; `git diff --check` passed.
+
+### Terminology Added
+
+- Embodiment Opportunity
+- Reincarnation Candidate
+- Candidate Seed
+- Candidate Pool
+- Candidate Profile
+- Reincarnation Brief
+
+### Canonical Decisions Added
+
+- D-961 — Reincarnation Generation Owns Candidates, Not Transition.
+- D-962 — Every Candidate Requires an Embodiment Opportunity.
+- D-963 — Reincarnation Does Not Displace Existing Persons by Default.
+- D-964 — Reincarnation Modes Govern Selection, Not Eligibility.
+- D-965 — Candidate Histories Are Real Causal Histories.
+- D-966 — Candidate Sets Are Contextual, Not Power Rankings.
+- D-967 — Monster Focus Does Not Remove Reincarnation Choice.
+- D-968 — Invalid Candidate Removal Is Correction, Not Rerolling.
+- D-969 — Selected Candidates Revalidate Before Embodiment.
+- D-970 — Empty Candidate Pools Extend Transition Rather Than Create Bodies.
+
+### Unresolved Questions
+
+- No new unresolved question was introduced.
+- Blocking questions: none.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, every GM document, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, `docs/world-engine/SIMULATION_ABSTRACTION.md`, all completed-system encounter interfaces, and the Alpha Playtest Rules.
+2. Create the dedicated canonical owner for **Create encounter generator**; do not implement monster, NPC, Dungeon, faction, or world-event generation.
+3. Generate encounters from established world actors, processes, places, pressures, and causal intersections rather than player level, desired plot, or isolated random tables.
+4. Keep encounter sourcing, framing, participant intent, information, stakes, uncertainty, resolution, consequence propagation, persistence, and external recording separate.
+5. Preserve player agency, noncombat viability, withdrawal, avoidance, asymmetric contexts, human/AI parity, and specialist-system ownership.
+6. Validate, advance only to **Create monster generator** if complete, commit the task, then create the next mandatory Phase 9 checkpoint commit.
