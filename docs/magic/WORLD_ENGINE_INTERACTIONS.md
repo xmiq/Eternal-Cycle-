@@ -39,7 +39,8 @@ It does not absorb either side:
 | Soul identity, persistence, Resonance, Echoes, Titles, and Reincarnation | [Soul Engine](../soul/README.md) |
 | Weapon Soul personhood, bond, vessel, form, and Manifestation | [Soul Weapons](../soul-weapons/README.md) |
 | Adoption, diffusion, implementation, maintenance, technical dependency, and collective magical advancement | [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) |
-| Dungeon, stability, Age, Gate, and long-timescale simulation | Later Phase 8 World Engine documents |
+| Dungeon boundaries, Sustaining Bases, activity, inhabitants, exchanges, and legacies | [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md) |
+| Stability, Age, Gate, and long-timescale simulation | Later Phase 8 World Engine documents |
 | Named current conditions, actors, sites, incidents, and changing values | External Campaign Records |
 
 One event may create several consequences, but each fact is recorded once under its owner. The World Engine may reveal that an assumed magical cause was misunderstood; it does not retroactively invent a source or rewrite specialist rules to produce a preferred outcome.
@@ -719,6 +720,7 @@ Later Phase 8 documents may define domain-specific state and procedures inside t
 - [Magical Development](../progression/MAGICAL_DEVELOPMENT.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
+- [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)
 - [Monster Evolution Rules Index](../monster-evolution/README.md)
 - [Human Rules Index](../human/README.md)
 - [Soul Rules Index](../soul/README.md)

@@ -101,6 +101,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [War and Unrest](world-engine/WAR_AND_UNREST.md) - contestation, Civil Unrest, Armed Conflict, War, escalation, mobilization, operations, territorial control, civilian agency, cessation, demobilization, and persistent legacies.
 - [Disease Evolution](world-engine/DISEASE_EVOLUTION.md) - Disease Processes, causes, embodiment, exposure, transmission, host states, outbreaks, agent change, interventions, public health, and persistent legacies.
 - [Technology and Magical Advancement](world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) - Technical Systems, discovery, invention, validation, adaptation, adoption, diffusion, implementation, maintenance, automation, decline, recovery, and collective magical advancement.
+- [Dungeon Activity](world-engine/DUNGEON_ACTIVITY.md) - contextual Dungeon classification, formation, boundaries, Sustaining Bases, Topology, activity, inhabitants, resources, delving, collapse, and legacies.
 
 ## GM Framework
 

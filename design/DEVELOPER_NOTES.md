@@ -849,3 +849,16 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Reincarnated experts should accelerate inquiry and relearning without importing old infrastructure, authority, standards, or world-law compatibility.
 - Gate contact should make technical translation, adoption, and maintenance consequential rather than granting instant superiority to either side.
 - Technical decline and recovery should preserve partial knowledge, tacit Skill, institutional memory, ecological legacy, and plausible mistaken reconstruction.
+
+## Phase 8 Dungeon-Activity Watchlist
+
+- Dungeon Profiles should remain selective external records rather than becoming exhaustive room maps, encounter logs, or loot ledgers.
+- Playtests should test whether the Dungeon classification helps simulation without forcing every cave, ruin, monster settlement, magical site, or dangerous region into one metaphysical category.
+- Dungeon Sustaining Bases need enough causal detail to support intervention without requiring the GM to solve an entire hidden machine before play can proceed.
+- Dungeon Activity Regimes should create believable off-screen change without timer-based respawns, refreshes, or arbitrary reconfiguration.
+- Inhabitant agency and personhood should remain visible when explorer cultures use hostile labels such as monster, boss, infestation, or core.
+- Dungeon resource extraction should expose renewal, waste, ecological function, ownership, and market consequences without turning every delve into accounting.
+- Agentive Dungeons and person-like Cores need practical communication and consent routes without making all responsive sites sapient.
+- Delving capability should support combat, diplomacy, logistics, scholarship, repair, rescue, and ecological knowledge as different strengths rather than one party level.
+- Dungeon collapse and clearing should leave usable but changed sites, survivors, hazards, claims, and legacies instead of clean reset states.
+- Later Gate rules must preserve the distinction among ordinary entrances, Dungeon Access Routes, Soul Gates, and world-contact Gates.

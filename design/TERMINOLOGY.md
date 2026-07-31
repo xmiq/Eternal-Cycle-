@@ -3143,3 +3143,99 @@ Present work that restores, reconstructs, adapts, or reinterprets some lost Tech
 ## Technical System Profile
 
 An external Campaign Record of one Technical System's function, provenance, implementation, capability split, adoption, interfaces, infrastructure, limits, control, pressures, consequences, and uncertainty.
+
+## Dungeon
+
+A bounded place or spatial system whose sustained internal conditions, structure, processes, or relationships create materially distinct patterns of access, habitation, hazard, resource flow, transformation, or outward consequence.
+
+## Dungeon Formation
+
+The causal process through which a place or spatial system acquires the boundary, Sustaining Basis, distinct conditions, exchanges, and continuity needed for a valid Dungeon claim.
+
+## Dungeon Boundary
+
+The practical transition across which one or more material Dungeon conditions change enough to matter for access, simulation, or consequence.
+
+## Dungeon Access Route
+
+A currently usable path by which a specified being, object, signal, resource, agent, or effect can cross a Dungeon Boundary under stated conditions.
+
+## Dungeon Sustaining Basis
+
+The current set of causes and relationships that preserves a Dungeon's distinct boundary, structure, internal conditions, or recurring processes.
+
+## Dungeon Core
+
+An optional concentrated component that materially coordinates, anchors, supplies, records, or regulates part of a Dungeon Sustaining Basis.
+
+## Dungeon Topology
+
+The current spatial and relational arrangement of Dungeon regions, routes, barriers, interfaces, distances, and connections.
+
+## Dungeon Reconfiguration
+
+A material change in Dungeon Topology, boundary, access, or functional arrangement caused by an established process.
+
+## Dungeon Condition
+
+One current scoped feature of a Dungeon that can affect participants, routes, processes, or consequences.
+
+## Dungeon Activity
+
+The current operation, change, and exchange produced by a Dungeon Sustaining Basis, internal participants, conditions, inputs, cycles, disturbances, and responses.
+
+## Dungeon Activity Driver
+
+A current cause that materially changes or sustains a Dungeon process.
+
+## Dungeon Activity Regime
+
+A recurring or persistent pattern of Dungeon Activity under a known range of conditions.
+
+## Dungeon Dormancy
+
+A condition in which one or more visible or resource-intensive Dungeon processes are reduced, suspended, inaccessible, or awaiting enabling conditions while enough continuity remains for possible reactivation.
+
+## Dungeon Reactivation
+
+The resumed or transformed operation of a dormant, suppressed, disconnected, or degraded Dungeon process through a valid enabling route.
+
+## Dungeon Expansion
+
+A supported outward extension of a Dungeon Boundary, Topology, Sustaining Basis, or materially distinct conditions.
+
+## Dungeon Contraction
+
+A supported loss, withdrawal, containment, or reorganization of a Dungeon Boundary, Topology, Sustaining Basis, or materially distinct conditions.
+
+## Dungeon Exchange
+
+A Flow of beings, resources, energy, Mana, information, disease, waste, authority, or consequence across a Dungeon Boundary.
+
+## Dungeon Yield
+
+The actual material or informational output obtained from one bounded Dungeon interaction after access, extraction, transformation, loss, and consequence.
+
+## Dungeon Delving
+
+Purposeful entry into or movement through a Dungeon to pursue a stated objective under current routes, knowledge, support, and risk.
+
+## Dungeon Map Claim
+
+One observer's dated evidence about Dungeon Topology, conditions, routes, landmarks, timing, and uncertainty.
+
+## Dungeon Collapse
+
+The failure, loss, or major reorganization of enough Sustaining Basis, structure, access, or internal function that the former Dungeon can no longer continue in the same material form.
+
+## Dungeon Transformation
+
+A change in Dungeon identity, Sustaining Basis, conditions, inhabitants, or functions substantial enough to require a new current model while preserving causal continuity.
+
+## Dungeon Legacy
+
+A persistent consequence remaining after Dungeon activity, control, identity, or operation changes.
+
+## Dungeon Profile
+
+An external Campaign Record of one Dungeon's classification, boundary, origin, Sustaining Basis, Topology, conditions, participants, activity, resources, hazards, claims, consequences, evidence, and uncertainty.

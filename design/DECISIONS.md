@@ -3361,3 +3361,71 @@ Advancement may improve reliability, safety, access, maintenance, compatibility,
 ## D-840 — Technical Consequences Preserve Distribution and Legacy
 
 Every major technical change retains contributors, affected parties, control, unequal access, externalities, dependencies, alternatives, Counterforces, and durable legacies. A recovered output or replacement system does not erase prior harms, obligations, ecological changes, distrust, or lost knowledge.
+
+## D-841 — Dungeon Is a Contextual World Classification
+
+A Dungeon is a bounded place or spatial system whose sustained internal conditions, structure, processes, or relationships create materially distinct patterns of access, habitation, hazard, resource flow, transformation, or outward consequence. The label is neither one universal metaphysical species nor proof of danger, hostility, ownership, purpose, or personhood.
+
+## D-842 — Dungeon Claims Require Material Foundations
+
+A valid Dungeon claim identifies a practical boundary, Sustaining Basis, distinct internal condition or process, routes to the surrounding world, meaningful continuity, evidence, and uncertainty. A dangerous cave, ruin, settlement, magical site, or living body is not automatically a Dungeon.
+
+## D-843 — Dungeons Have No Universal Anatomy or Reward Model
+
+Dungeon Cores, floors, rooms, traps, monsters, bosses, treasure, quests, safe zones, and reset points are optional local features rather than defining requirements. Depth, floor number, age, rarity, and size are not universal threat or reward ranks.
+
+## D-844 — Dungeon Activity Is Causal
+
+Dungeon Activity follows its Sustaining Basis, participants, conditions, inputs, cycles, disturbances, maintenance, and responses. Visitor entry, elapsed time, monster death, room clearance, or narrative need does not automatically trigger activity, reconfiguration, replenishment, or reward.
+
+## D-845 — Dungeon Boundaries and Topology Change Through Routes
+
+Dungeon Boundaries, Access Routes, Topology, expansion, contraction, and reconfiguration change only through established physical, ecological, technical, magical, living, social, Gate, Age, or Reset causes. Observer ignorance is not permission for retroactive spatial change.
+
+## D-846 — Dungeon Cores Are Optional and Function-Specific
+
+A Dungeon Core is an optional concentrated component that performs stated coordinating, anchoring, supplying, recording, or regulating functions. It is not automatically sapient, omniscient, controlling, vulnerable, unique, or necessary, and its loss changes only supported functions.
+
+## D-847 — Dungeon Inhabitants Preserve Independent Agency
+
+Sapient inhabitants retain personhood, goals, knowledge, relationships, institutions, claims, and choices. Non-sapient inhabitants retain actual needs, senses, behavior, and ecology. Location does not make either group hostile, summoned, owned, guilty, disposable, or incapable of society.
+
+## D-848 — Dungeon Populations and Resources Use Ordinary Causal Routes
+
+Dungeon inhabitants require reproduction, migration, construction, summoning, transformation, or another valid entry route. Resources and treasure require sources, access, extraction, renewal, claims, losses, waste, and consequences. Nothing respawns or refreshes by category alone.
+
+## D-849 — Dungeon Encounters Are Not Level-Scaled
+
+Hazards, inhabitants, routes, and conditions follow world state rather than visitor power, party composition, narrative importance, or desired reward. Capability is assessed contextually through embodiment, information, preparation, support, relationships, objectives, and Counterforces.
+
+## D-850 — Delving Grants Neither Ownership Nor Progression
+
+Discovering, entering, mapping, clearing, defending, conquering, surviving, extracting from, or dying within a Dungeon does not automatically grant ownership, authority, Skill, Development, Soul growth, Evolution, Soul Weapon awakening, or reward.
+
+## D-851 — Agentive Dungeons Require Established Persons or Systems
+
+Responsive mechanisms, coordinated ecology, controllers, and visitor belief do not establish one Dungeon mind. Any Dungeon agency belongs to the actual living being, spirit, construct, god, Weapon Soul, distributed mind, institution, community, or other established actor and does not confer ownership of every inhabitant or process.
+
+## D-852 — Clearing and Collapse Do Not Reset a Dungeon
+
+Removing a threat, controller, Core, or visible Population ends only its supported functions. Dungeon Collapse or Transformation preserves surviving inhabitants, structures, hazards, routes, claims, ecology, resources, damage, and legacies rather than producing an automatic reset or reward state.
+
+## D-853 — Dungeon Knowledge Is View-Bound and Dated
+
+A Dungeon Map Claim records one observer's evidence about Topology, routes, conditions, timing, and uncertainty at a stated date. Maps and memories do not update automatically, and hidden changes require prior causes.
+
+## D-854 — Reincarnation Creates No Dungeon Checkpoint
+
+Reincarnation does not restore a Dungeon location, current map, key, contract, claim, office, faction standing, hazard immunity, or rights over inhabitants. Eligible memory can support recognition and inquiry while world state continues independently.
+
+## D-855 — Dungeon Effects Retain Specialist Ownership
+
+Dungeon classification cannot create Mana, Magic, populations, resources, disease, Technical Capability, Evolution, Soul effects, Weapon Soul functions, faction decisions, or conflict outcomes. Each contribution follows its established Owning System before entering Dungeon Activity and world causality.
+
+## D-856 — Dungeon Routes Are Not Gates by Default
+
+A Dungeon entrance, threshold, teleportation circle, spatial fold, sealed passage, or Access Route is not automatically a Soul Gate or world-contact Gate. Gate classification requires the separate owning rules and cannot be inferred from unusual travel alone.
+
+## D-857 — Dungeon Change Preserves Legacies
+
+Dormancy, reactivation, clearing, contraction, collapse, transformation, abandonment, or changed control does not erase altered ecology, displacement, infrastructure, disease, depletion, pollution, records, claims, institutions, myths, Soul relationships, hazards, or other Dungeon Legacies.
