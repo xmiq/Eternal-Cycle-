@@ -54,6 +54,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/world-engine/RESOURCES_AND_FOOD.md`](docs/world-engine/RESOURCES_AND_FOOD.md) - access, quality, supply chains, renewal, depletion, substitution, sustenance, Food Security, and waste.
 - [`docs/world-engine/ECONOMIES.md`](docs/world-engine/ECONOMIES.md) - contextual production, allocation, exchange, prices, currencies, obligations, distribution, and adaptation.
 - [`docs/world-engine/ECOLOGY_AND_MIGRATION.md`](docs/world-engine/ECOLOGY_AND_MIGRATION.md) - current ecosystem dynamics, disturbance, recovery, migration routes, displacement, arrival, and cross-region consequences.
+- [`docs/world-engine/FACTION_BEHAVIOUR.md`](docs/world-engine/FACTION_BEHAVIOUR.md) - distributed faction interests, information, decisions, mobilization, cohesion, adaptation, and continuity.
 
 ## Start Here
 
@@ -69,4 +70,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define faction behaviour**.
+The repository foundation and Phases 1 through 7 are complete and reviewed. The current phase is **Phase 8 — World Engine**, and the sole current task is **Define war and unrest**.

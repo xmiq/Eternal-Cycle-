@@ -169,7 +169,7 @@ NPCs act for their own reasons. They may cooperate, refuse, misunderstand, wait,
 
 ### Faction Goals
 
-Factions pursue distributed interests through particular people, institutions, resources, procedures, and internal disagreements. A faction is not one mind. Its response depends on who learned what, who can authorize action, what members want, and what coordination is possible.
+Apply [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md). Factions pursue distributed interests through particular people, institutions, resources, procedures, and internal disagreements. A faction is not one mind. Its response depends on who learned what, who can authorize action, what members want, what can be mobilized, and what coordination is possible.
 
 ### Ecology
 
@@ -444,6 +444,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
+- [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

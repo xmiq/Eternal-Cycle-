@@ -2867,3 +2867,35 @@ A condition that makes movement more relevant, necessary, attractive, or likely 
 ## Migration Corridor
 
 A route and supporting sequence of conditions enabling a specified Population to move between required places during a relevant interval.
+
+## Faction
+
+A scoped coordination among distinct actors pursuing one or more overlapping interests through recognizable relationships and action routes while retaining their separate agency.
+
+## Faction Profile
+
+An external Campaign Record of one faction's current version, scope, participants, interests, information distribution, decision routes, function-specific capabilities, resources, relationships, cohesion, actions, consequences, continuity, and uncertainty.
+
+## Faction Objective
+
+A current proposed or accepted result around which some portion of a Faction can coordinate, with a stated scope, sponsors, implementation route, costs, dependencies, opposition, and stopping or revision conditions.
+
+## Faction Information Position
+
+The issue-specific distribution of observations, records, interpretations, uncertainty, secrecy, and access among a Faction's relevant participants and communication routes.
+
+## Faction Action Claim
+
+A scoped assertion that a Faction knew, decided, promised, prohibited, supported, opposed, provided, or did something through identified participants, information, authority or support, procedure, communication, resources, dissent, and execution.
+
+## Faction Mobilization
+
+The process of turning an accepted or attempted Faction Objective into coordinated action through actual participants, communication, resources, access, logistics, authority, consent, and timing.
+
+## Faction Cohesion
+
+The issue-specific ability and willingness of relevant participants to continue coordinating despite disagreement, cost, uncertainty, and pressure, distinct from affection, Loyalty, obedience, uniformity, moral agreement, or a universal statistic.
+
+## Faction Continuity
+
+The persistence of recognizable coordination through actual interests, relationships, participants, identity, records, procedures, assets, commitments, and successor recognition rather than a name alone.

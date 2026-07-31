@@ -801,3 +801,16 @@ The roadmap now names **Define faction behaviour**. Do not begin it until the co
 3. Review the complete ecology-and-migration diff.
 4. Stage only the listed files and commit with `chore: checkpoint Phase 8 progress`.
 5. Begin only **Define faction behaviour**.
+
+The interrupted ecology-and-migration checkpoint was subsequently validated and committed as `3ca6750` before faction work began.
+
+## Phase 8 Faction-Behaviour Watchlist
+
+- Faction Profiles should remain selective external records rather than becoming universal organization sheets or hidden power scores.
+- Playtests should distinguish membership, participation, representation, support, dependency, compliance, and consent without excessive social bookkeeping.
+- Information and decision routes need enough friction to produce believable delay and disagreement without making every faction inert.
+- Faction Cohesion must remain issue-specific; coercive compliance should create different fragilities from trust or legitimate coordination.
+- Collective Capability should expose people, communication, infrastructure, resources, and bottlenecks rather than pooling personal progression.
+- Reincarnated founders and persistent Soul Titles need recognition opportunities without automatically recovering office, ownership, followers, or command.
+- Weapon Souls, monsters, distributed beings, spirits, and gods need faction participation models that preserve their established personhood and communication rules.
+- The war-and-unrest task should build escalation, organized violence, resistance, and civilian consequences from these faction routes without redefining them.

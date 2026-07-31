@@ -3109,3 +3109,55 @@ Invasiveness requires sustained disruptive pressure in a receiving ecology where
 ## D-777 — Ecological Pressure Cannot Grant Owned Progression
 
 Habitat, disturbance, migration, predation, scarcity, and ecological importance may create exposure, pressure, access, or consequence. They cannot directly grant Skills, Development, Mutation, Evolution, Soul growth, or Magic.
+
+## D-778 — Factions Are Distributed Coordinations
+
+A Faction consists of distinct actors coordinating around overlapping interests through actual relationships and action routes. It has no automatic single mind, knowledge pool, motive, morality, capability score, or guaranteed response.
+
+## D-779 — Faction Boundaries Are Claim-Specific
+
+Membership, participation, leadership, support, dependency, representation, subjection, and affected status remain separate relationships. A Population, species, culture, faith, Profession, settlement, state, or Institution does not automatically form one Faction or share one agenda.
+
+## D-780 — Faction Information Is Distributed
+
+A Faction Information Position depends on observations, records, interpretations, secrecy, trust, access, and communication routes among particular participants. A Faction does not automatically know what one member, the player, another Faction, or the GM knows.
+
+## D-781 — Faction Decisions Require Routes
+
+A Faction decision must identify the relevant participants, information, agenda route, authority or influence, procedure, dissent, and result. A leader, founder, title, majority, prophecy, slogan, or public declaration does not speak for every purpose or participant automatically.
+
+## D-782 — Decision and Mobilization Are Distinct
+
+A policy, order, promise, prohibition, or plan changes the world only through actual mobilization and execution. Participants, resources, communication, access, willingness, timing, and opposition may delay, divide, redirect, or prevent implementation.
+
+## D-783 — Faction Capability Is Function-Specific
+
+Faction capability arises from the current coordination of embodied participants, Skills, Development, institutions, resources, relationships, tools, Soul Weapons, magical access, and conditions. It is not a universal power score and is not copied into leaders, members, founders, or successors.
+
+## D-784 — Faction Cohesion Is Issue-Specific
+
+Faction Cohesion records the ability and willingness to coordinate on one issue under current pressure. It does not prove affection, Loyalty, consent, obedience, legitimacy, moral agreement, uniformity, or future cohesion on another issue.
+
+## D-785 — Faction Adaptation Requires Feedback
+
+A Faction learns or changes only when consequences become available evidence and that evidence reaches routes capable of altering interpretation, authority, procedure, incentives, membership, relationships, or action. Success, failure, age, or institutional memory alone does not guarantee accurate learning.
+
+## D-786 — Faction Relations Are Issue-Specific
+
+Alliance, rivalry, patronage, dependence, competition, and opposition apply within stated issues and conditions. Cooperation does not merge identity, knowledge, authority, or capability, and rivalry does not mandate constant hostility.
+
+## D-787 — Faction Continuity Requires Material Routes
+
+Faction continuity depends on surviving interests, relationships, participants, identity, records, procedures, assets, commitments, and successor recognition. Succession, capture, schism, merger, fragmentation, dissolution, and revival preserve only what has a causal continuity route.
+
+## D-788 — Reincarnation Restores No Faction Position
+
+Reincarnation does not preserve membership, office, authority, followers, contracts, secrets, resources, or access as Soul property. Evidence, Soul Titles, memory, witnesses, Soul Weapons, and surviving relationships may affect recognition without restoring trust, legitimacy, consent, or command automatically.
+
+## D-789 — Faction Pressure Cannot Grant Owned Progression
+
+Faction membership, success, conflict, practice, instruction, and responsibility may create access, exposure, relationships, opportunity, pressure, and evidence. They cannot directly grant Skills, Development, Soul growth, Evolution, Class, Profession, Soul Weapon capability, or Magic.
+
+## D-790 — Weapon Souls Remain Faction Participants, Not Assets
+
+A Weapon Soul may join, advise, represent, oppose, refuse, or leave a Faction according to its own agency and Bond. Custody, contract, office, or military command does not convert its personhood, consent, knowledge, or capability into ordinary faction property.

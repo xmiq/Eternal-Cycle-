@@ -97,6 +97,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Resources and Food](world-engine/RESOURCES_AND_FOOD.md) - Resource Claims, Effective Supply, scarcity, bottlenecks, renewal, depletion, substitution, reserves, sustenance, Food Security, and waste.
 - [Economies](world-engine/ECONOMIES.md) - production and allocation networks, exchange, value, Price, currencies, Purchasing Access, capacity, obligations, taxation, concentration, shocks, and adaptation.
 - [Ecology and Migration](world-engine/ECOLOGY_AND_MIGRATION.md) - ecosystem state, Habitat Connectivity, functions, disturbance, resilience, succession, Novel Ecologies, routes, displacement, settlement, and migration consequences.
+- [Faction Behaviour](world-engine/FACTION_BEHAVIOUR.md) - faction boundaries, membership, interests, distributed information, decisions, mobilization, cohesion, dissent, adaptation, relationships, and continuity.
 
 ## GM Framework
 

@@ -13,6 +13,7 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 5. [Resources and Food](RESOURCES_AND_FOOD.md) defines Resource Claims, Effective Supply, scarcity, bottlenecks, renewal, depletion, substitution, reserves, sustenance, Food Security, source agency, and Waste Burdens.
 6. [Economies](ECONOMIES.md) defines production and allocation networks, Exchange Claims, value, Price, currencies, Purchasing Access, Economic Capacity, obligations, taxation, concentration, shocks, and adaptation.
 7. [Ecology and Migration](ECOLOGY_AND_MIGRATION.md) defines current ecosystem state, Habitat Connectivity, functions, disturbance, resilience, succession, Novel Ecologies, migration pressures and routes, displacement, settlement, and cross-region consequences.
+8. [Faction Behaviour](FACTION_BEHAVIOUR.md) defines faction boundaries, distributed interests and information, decision routes, mobilization, capability, cohesion, dissent, adaptation, relationships, and continuity.
 
 Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
 
