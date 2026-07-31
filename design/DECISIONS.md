@@ -3697,3 +3697,63 @@ Factions, populations, specialists, ecologies, institutions, and other actors co
 ## D-924 — World-Gate Soul Records Remain External
 
 Current Gate-soul interactions, candidate routes, deaths, incarnations, Avatar Triggers, contact histories, interpretations, and consequences are campaign state and never belong in the canonical repository.
+
+## D-925 — Simulation Frames Separate Scope, Interval, and Resolution
+
+Every material simulation identifies its question, subjects, start state, interval or Causal Horizon, resolution, owners, information, anchors, exceptions, and next Review Point. Map size, elapsed time, spectacle, or narrative importance cannot select all of those dimensions by implication.
+
+## D-926 — Simulation Resolution Has Four Descriptive Levels
+
+Focused, Local, Regional, and Epochal Resolution describe increasing abstraction for one Frame. They are not fixed time bands, geographic scales, population categories, threat levels, power ranks, or measures of importance.
+
+## D-927 — Use the Coarsest Resolution That Preserves Material Causality
+
+The GM uses the lowest detail that preserves every choice, dependency, exception, threshold, owner handoff, uncertainty, and consequence capable of changing the current question or future continuity.
+
+## D-928 — Different Frames May Use Different Resolutions
+
+One world may be represented through several linked Frames at different resolutions. A finer Frame returns only its established changes to broader Frames, and no campaign requires one global current resolution.
+
+## D-929 — Compression Must Preserve Anchors and Material Exceptions
+
+Compression may aggregate sufficiently similar repetition but must retain any fact, actor, minority, bottleneck, branch, threshold, source, obligation, or exceptional condition whose omission could change a conclusion or later decision.
+
+## D-930 — Compression Cannot Resolve by Omission
+
+Changing to coarser detail cannot turn possibility into fact, assume perfect coordination or information, average away material distribution, skip a retained player choice, hide an irreversible transition, or manufacture change from elapsed time.
+
+## D-931 — Expansion Cannot Invent a Missing Cause
+
+Expansion may add previously immaterial texture and ordinary detail consistent with established history. It cannot retroactively supply a decisive cause, capability, authority, exception, or trap that would invalidate prior choices or replace the recorded causal bridge.
+
+## D-932 — Long Intervals Advance Through Causal Review Points
+
+Days, generations, and centuries are divided by Pending Consequences, actor opportunities, thresholds, cycles, transitions, specialist handoffs, and returns to play rather than universal turns or equal calendar increments.
+
+## D-933 — Compression Preserves Autonomous Agency
+
+Off-screen actors continue through their own information, motives, capability, authority, procedures, alternatives, and opposition. Compression grants no GM knowledge, optimal strategy, unanimous coordination, unlimited resources, or exemption from succession and error.
+
+## D-934 — Material Player Choices Create Agency Checkpoints
+
+The GM cannot compress through a deliberate player-character choice that could materially change the interval unless the player supplied a bounded standing intention, plan, delegation, or acceptable range. Otherwise simulation pauses at a Review Point and returns the choice to the player.
+
+## D-935 — Elapsed Time Grants No Specialist Progression
+
+Time alone does not grant Development, Skill, Evolution, Soul growth, Awakening, affinity, authority, recovery, or other specialist change. Compressed training, work, adaptation, and transformation still require their owners' evidence, access, effort, feedback, constraints, and agency.
+
+## D-936 — Century Simulation Does Not Presume Progress or Reset
+
+Epochal Resolution preserves maintenance, succession, reproduction, knowledge transmission, loss, recovery, feedback, and Material Exceptions without assuming advancement, decline, optimization, unity, moral progress, an Age Transition, or a World Reset.
+
+## D-937 — Abstraction Preserves Information Boundaries
+
+World truth, genuinely unresolved futures, immaterial unspecified detail, actor observation, actor belief, player knowledge, and surviving evidence remain distinct at every resolution. Simulation does not reveal hidden truth merely because the GM resolved it.
+
+## D-938 — Simulation Abstraction Does Not Replace Specialist Ownership
+
+The World Engine advances world-side inputs and consequences. Soul, Development, Skill, Monster Evolution, Human, Soul Weapon, Magic, and other owners still determine their own transitions at material Review Points.
+
+## D-939 — Simulation Records Remain External
+
+Current Simulation Frames, Questions, Resolutions, Anchors, Material Exceptions, Review Points, Passes, Deltas, actors, branches, world values, and timelines are campaign state and never belong in the canonical repository.

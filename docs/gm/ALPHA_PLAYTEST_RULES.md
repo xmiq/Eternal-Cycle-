@@ -117,15 +117,17 @@ The following material is ready to constrain alpha play within its stated scope:
 - the canonical [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md) framework;
 - the canonical [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md) framework;
 - the canonical [World Stability](../world-engine/WORLD_STABILITY.md) framework;
-- the canonical [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) framework.
+- the canonical [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) framework;
+- the canonical [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md) framework;
+- the canonical [World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) interface;
+- the canonical [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) procedure.
 
-Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, and the complete Phase 7 Magic framework are canonical within their stated scopes. Detailed World Engine, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
+Soul, Development, Skill, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, and World Engine rules are canonical within their stated scopes. The Phase 8 integration audit, GM-tool, content, formula, and generator tasks are not complete merely because adjacent ownership boundaries are canonical.
 
 ### Incomplete or Provisional Areas
 
 The [Roadmap](../../design/ROADMAP.md) remains authoritative. Alpha play should expect provisional or unsupported gaps in:
 
-- domain-specific World Engine variables and procedures for Gates and long simulations;
 - encounter, monster, NPC, dungeon, faction, world-event, time-skip, and Age-transition generators;
 - character, species, Skill, Soul Weapon, faction, settlement, dungeon, Soul Avatar, and Gate-event templates not marked complete on the Roadmap.
 
@@ -238,9 +240,9 @@ Keep Mana, affinity, Spell Procedures, Ritual Structures, Enchantment Layers, Al
 
 ### World Engine
 
-Until Phase 8 is complete:
+While the Phase 8 integration audit remains pending:
 
-- simulate only the resolution needed for current decisions;
+- use [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) to choose only the resolution needed for current decisions;
 - use established conditions, causal chains, actors, pressures, counterforces, and consequences;
 - track major populations or pressures instead of every person or transaction;
 - preserve plausible off-screen change without predetermining outcomes;

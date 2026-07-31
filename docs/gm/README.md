@@ -6,7 +6,8 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 
 1. [GM Principles](GM_PRINCIPLES.md) - concise commitments for fair, systemic, agency-preserving play.
 2. [Game Master Framework](GAME_MASTER_FRAMEWORK.md) - responsibilities, authority, session procedure, continuity, world simulation, information boundaries, records, and AI GM guidance.
-3. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+3. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
+4. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 
 ## Authority and Boundary
 

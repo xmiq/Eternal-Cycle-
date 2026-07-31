@@ -4,7 +4,7 @@
 
 This document defines how Eternal Cycle represents changing world conditions without placing campaign values in the canonical repository or reducing the world to one score.
 
-It supplies the shared state grammar for every later World Engine domain. It does not define the detailed variables, formulas, or procedures for populations, resources, economies, ecology, factions, war, disease, advancement, dungeons, World Stability, Ages, Gates, or long simulations.
+It supplies the shared state grammar for every World Engine domain. It does not define the detailed variables, formulas, or procedures for populations, resources, economies, ecology, factions, war, disease, advancement, dungeons, World Stability, Ages, Gates, or [Simulation Abstraction](SIMULATION_ABSTRACTION.md).
 
 ## Core Rule
 
@@ -227,7 +227,7 @@ The same world may be represented at several resolutions without contradiction.
 - **Regional:** aggregated patterns with preserved bottlenecks, minorities, dependencies, and exceptional actors.
 - **Epochal:** long-horizon tendencies, transformations, and legacies with only decisive causal branches retained.
 
-Later [Simulation Abstraction](WORLD_ENGINE_OVERVIEW.md#simulation-resolution) rules will define the full change-of-resolution procedure. Until then, resolution changes may summarize facts but cannot create, erase, average away, or retroactively decide a material dependency.
+[Simulation Abstraction](SIMULATION_ABSTRACTION.md) defines the full change-of-resolution procedure. Resolution changes may summarize facts but cannot create, erase, average away, or retroactively decide a material dependency.
 
 ## World-State Profile
 
@@ -396,7 +396,8 @@ This document does not define:
 
 - canonical campaign values or a default world;
 - complete variable lists for any World Engine domain;
-- population, food, market, migration, faction, war, disease, advancement, dungeon, Stability, Age, Reset, Gate, or long-simulation procedures;
+- population, food, market, migration, faction, war, disease, advancement, dungeon, Stability, Age, Reset, or Gate procedures beyond their owners;
+- change-of-resolution and long-horizon procedures owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - universal formulas, scales, thresholds, units, or update intervals;
 - random-event or encounter generation;
 - character sheets, world-state files, save formats, or campaign templates;
@@ -413,6 +414,7 @@ Those subjects remain with their roadmap tasks and owning systems.
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Soul Engine](../soul/README.md)
 - [Development System](../progression/README.md)
 - [Skill Engine](../skills/README.md)

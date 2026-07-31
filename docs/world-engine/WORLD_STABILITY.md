@@ -471,7 +471,7 @@ This document does not define:
 - current stability values, named crises, world conditions, or campaign histories;
 - Age boundaries, Age-transition procedures, World Reset causes, or Reset survival rules;
 - world-contact Gates or their effects;
-- long-horizon simulation abstraction;
+- long-horizon change-of-resolution rules owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - specialist population, resource, economic, ecological, factional, conflict, disease, technical, Dungeon, Soul, progression, Weapon Soul, or Magic effects;
 - encounter, quest, catastrophe, timeline, or event generators;
 - personal capability, advancement, reward, destiny, or narrative importance.
@@ -482,6 +482,7 @@ This document does not define:
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Populations](POPULATIONS.md)
 - [Resources and Food](RESOURCES_AND_FOOD.md)
 - [Economies](ECONOMIES.md)

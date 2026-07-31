@@ -22,8 +22,9 @@ Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weap
 14. [Ages and World Resets](AGES_AND_WORLD_RESETS.md) defines contextual Ages, Age Transitions, exceptional World Resets, causal mechanisms, uneven footprints, survivorship, World Revalidation, time skips, and consequence continuity.
 15. [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md) defines extraordinary contact interfaces, Contact Domains, Gate Bases, endpoints, independent channels, compatibility, lifecycle, asymmetry, closure, and persistent contact consequences.
 16. [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md) defines living transit, cross-domain candidate reach, Gate-related Avatar Triggers, source-bound interpretation, continuity, and anti-duplication safeguards.
+17. [Simulation Abstraction](SIMULATION_ABSTRACTION.md) defines Focused, Local, Regional, and Epochal resolution; mixed Frames; compression and expansion; Review Points; long-horizon passes; specialist handoffs; and player-agency safeguards.
 
-Later Phase 8 documents add domain-specific rules in roadmap order. A mention of a later domain here does not complete or partially implement its task.
+Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.
 
 ## Core Ownership
 

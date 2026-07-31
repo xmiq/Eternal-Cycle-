@@ -905,3 +905,12 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Soul Avatar interpretation should remain useful but dated, source-bound, and politically contestable rather than functioning as universal translation or objective history.
 - Gate Closure should revalidate dependent pre-embodiment candidates while leaving living incarnations, established populations, broader Reincarnation laws, and Gate Legacies intact.
 - World-contact scenarios should remain playable when no Soul Avatar participates, preserving autonomous specialists, factions, and local actors.
+
+## Phase 8 Simulation-Abstraction Watchlist
+
+- Playtests should verify that Review Points reduce century-scale bookkeeping without skipping decisions, thresholds, maintenance failures, or Pending Consequences.
+- Mixed-resolution Frames should remain easier to use than one exhaustive global simulation while still exchanging established state changes cleanly.
+- Resolution Anchors and Material Exceptions should preserve minorities, dissent, rare actors, bottlenecks, source agency, and stranded populations without turning every exception into a permanent spotlight.
+- Player Agency Checkpoints should pause only for materially different deliberate choices; routine previously authorized conduct should remain compressible.
+- Expansion should support rich local detail without encouraging retroactive hidden masterminds, capabilities, causes, or traps.
+- Simulation Deltas should stay concise enough for campaign use while preserving the causal bridge needed after long Interlife, absence, or Time Skips.

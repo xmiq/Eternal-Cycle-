@@ -3419,3 +3419,35 @@ An external Campaign Record of one World Gate's Contact Domains, Basis, endpoint
 ## Cross-Domain Reincarnation Route
 
 An established soul-and-world causal basis that permits valid Reincarnation candidate generation to treat another Contact Domain as reachable for placement without waiving ordinary candidate requirements.
+
+## Simulation Question
+
+The exact decision, interval, continuity claim, or future dependency that one World Engine simulation must resolve.
+
+## Simulation Frame
+
+A scoped simulation description identifying its question, subjects, start state, interval or Causal Horizon, resolution, owners, information, Resolution Anchors, Material Exceptions, and next Simulation Review Point.
+
+## Simulation Resolution
+
+The amount and kind of causal detail represented for one Simulation Frame, using the descriptive Focused, Local, Regional, or Epochal level independently of fixed duration, distance, population, or importance.
+
+## Resolution Anchor
+
+An established fact, actor, dependency, branch, threshold, obligation, or consequence that must remain explicit through compression because losing it could change a later decision or invalidate continuity.
+
+## Material Exception
+
+A subject or condition that differs from its aggregate enough to change a conclusion, duty, risk, recovery route, or future branch.
+
+## Simulation Review Point
+
+The next causally supported time or condition at which a Simulation Frame's state, branches, agency, ownership, or appropriate resolution must be reconsidered.
+
+## Simulation Pass
+
+One advancement of a Simulation Frame from its current state to one Simulation Review Point using only the causal detail required at the selected resolution.
+
+## Simulation Delta
+
+An external Campaign Record of material changes produced by one or more Simulation Passes, including causes, actor choices, owner handoffs, changed conditions, uncertainty, Pending Consequences, legacies, and the next Review Point.

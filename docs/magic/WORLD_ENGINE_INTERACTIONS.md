@@ -43,7 +43,7 @@ It does not absorb either side:
 | Scoped continuity, strain, and transformation | [World Stability](../world-engine/WORLD_STABILITY.md) |
 | Ages, historical transitions, World Resets, and World Revalidation | [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) |
 | World Gates, contact routes, channels, compatibility, and closure | [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md) |
-| Long-timescale simulation abstraction | Later Phase 8 World Engine rules |
+| Long-timescale simulation abstraction | [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) |
 | Named current conditions, actors, sites, incidents, and changing values | External Campaign Records |
 
 One event may create several consequences, but each fact is recorded once under its owner. The World Engine may reveal that an assumed magical cause was misunderstood; it does not retroactively invent a source or rewrite specialist rules to produce a preferred outcome.
@@ -200,14 +200,14 @@ Removal of the cause does not guarantee restoration of the prior world. Recovery
 
 ## Scale, Resolution, and Aggregation
 
-Use the [World Engine's resolution](../world-engine/WORLD_ENGINE_OVERVIEW.md#simulation-resolution) appropriate to current decisions:
+Use the [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) appropriate to current decisions:
 
 | Resolution | Magic-world focus |
 | --- | --- |
-| **Immediate** | direct effect, exposure, interruption, failure, witnesses, traces, and urgent response over moments to days; |
-| **Local** | service access, maintenance, site ecology, settlement behavior, institutions, prices, and nearby migration over weeks to years; |
-| **Regional** | networks, source competition, trade, population movement, warfare, ecological adaptation, and political change over years to decades; |
-| **Epochal** | magical infrastructure, institutional dependence, species distributions, knowledge systems, source relationships, and Age transitions over decades to centuries. |
+| **Focused** | direct effect, exposure, interruption, failure, witnesses, traces, and urgent response at decision-sensitive detail; |
+| **Local** | service access, maintenance, site ecology, settlement behavior, institutions, prices, and nearby migration within a bounded system; |
+| **Regional** | networks, source competition, trade, population movement, warfare, ecological adaptation, and political change in aggregate; |
+| **Epochal** | long-horizon magical infrastructure, institutional dependence, species distributions, knowledge systems, source relationships, and Age transitions. |
 
 Resolution changes detail, not causality. Do not simulate every lamp in a city, but preserve what makes the lighting network possible and what happens if its supply, maintenance, authority, or adoption changes.
 
@@ -698,7 +698,7 @@ The Reset changes world conditions rather than deleting history. Salvage, migrat
 This document does not define:
 
 - live world state or campaign events;
-- Phase 8's detailed domain variables, formulas, update cadence, or simulation procedures;
+- World Engine domain formulas or universal update cadence beyond the completed owners;
 - universal measures for magical output, adoption, externality, dependency, recovery, prosperity, danger, or stability;
 - a catalog of magical industries, resources, institutions, laws, settlements, gods, species, or disasters;
 - a guarantee that every magical act has regional or epochal significance;
@@ -707,7 +707,7 @@ This document does not define:
 - content generators or encounter scaling;
 - a method for converting world consequences into personal Development, Soul growth, Skill XP, affinity, Evolution, or Soul Weapon advancement.
 
-Later Phase 8 documents may define domain-specific state and procedures inside these boundaries. They must preserve specialist Magic ownership, source agency, distribution, causal accounting, uncertainty, recovery, and the repository's campaign-data boundary.
+World Engine domains and Simulation Abstraction operate inside these boundaries. They preserve specialist Magic ownership, source agency, distribution, causal accounting, uncertainty, recovery, and the repository's campaign-data boundary.
 
 ## Related Documents
 
@@ -726,6 +726,7 @@ Later Phase 8 documents may define domain-specific state and procedures inside t
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)
 - [World Stability](../world-engine/WORLD_STABILITY.md)
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
+- [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)
 - [Monster Evolution Rules Index](../monster-evolution/README.md)
 - [Human Rules Index](../human/README.md)
 - [Soul Rules Index](../soul/README.md)

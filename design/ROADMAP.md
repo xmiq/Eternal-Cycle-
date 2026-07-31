@@ -4,9 +4,9 @@
 
 **Current phase: Phase 8 — World Engine**
 
-**Current task: Define simulation abstraction levels**
+**Current task: Audit and complete Phase 8 World Engine**
 
-Phase 7 is complete and reviewed. Codex must not reopen it unless Phase 8 reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define simulation abstraction levels** unless the project owner explicitly changes the target. Do not begin Phase 9 or later roadmap work before the current task and the Phase 8 audit are complete.
+Phase 7 is complete and reviewed. Codex must not reopen it unless the Phase 8 audit reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and complete Phase 8 World Engine** unless the project owner explicitly changes the target. Do not begin Phase 9 or later roadmap work before the audit is complete.
 
 Phases 1 through 7 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -196,7 +196,8 @@ Phase 7 is complete only when Mana, Magical Affinities, Spell Formation, Rituals
 - [x] Define Ages and resets
 - [x] Define Gates and world-contact events distinct from Soul Gates
 - [x] Integrate world-contact Gates with Reincarnation and Soul Avatars
-- [~] Define simulation abstraction levels
+- [x] Define simulation abstraction levels
+- [ ] Audit and complete Phase 8 World Engine
 
 ## Phase 9 — GM Toolkit
 

@@ -38,18 +38,18 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 
 ## Simulation Resolution
 
-The GM uses only as much detail as play requires:
+[Simulation Abstraction](SIMULATION_ABSTRACTION.md) defines the complete procedure for choosing detail, compressing intervals, expanding into play, and preserving agency and continuity. The canonical resolutions are:
 
-- **Immediate:** moments to days, for scenes and crises.
-- **Local:** weeks to years, for settlements and factions.
-- **Regional:** years to decades, for kingdoms and ecosystems.
-- **Epochal:** decades to centuries, for Ages and civilizational change.
+- **Focused:** actors, sequence, timing, and choices for one contested decision or sensitive transition.
+- **Local:** material relationships within a bounded community, site, route, habitat, institution, or project.
+- **Regional:** aggregate patterns across connected populations, territories, networks, ecosystems, institutions, or conflicts.
+- **Epochal:** structural tendencies, transformations, survivorship, succession, and legacies across generations or Ages.
 
-The engine should produce playable consequences, not unnecessary bookkeeping.
+Scope, elapsed interval, and resolution are chosen independently. Use the coarsest resolution that preserves every material choice, dependency, exception, and uncertainty. The engine should produce playable consequences, not unnecessary bookkeeping.
 
 ## Magic Interface
 
-[Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) defines how an established magical cause enters this framework through direct effects, footprint, distribution, responses, delays, feedback, persistence, and recovery. It does not pre-empt the detailed World Engine domain rules scheduled for Phase 8.
+[Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) defines how an established magical cause enters this framework through direct effects, footprint, distribution, responses, delays, feedback, persistence, and recovery. World Engine domains and Simulation Abstraction resolve the resulting world-side changes without taking ownership of Magic.
 
 ## Related Documents
 
@@ -69,6 +69,7 @@ The engine should produce playable consequences, not unnecessary bookkeeping.
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
 - [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

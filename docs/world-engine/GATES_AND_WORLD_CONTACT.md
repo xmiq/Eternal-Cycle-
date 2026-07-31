@@ -597,7 +597,7 @@ This document does not define:
 - Gate interaction with Reincarnation, Interlife, Soul Echoes, or Soul Avatars, which is owned by [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md);
 - a Gate-event generator or reusable Gate-event template;
 - complete culture, religion, climate, disaster, diplomacy, colonization, or law systems beyond existing owner interfaces;
-- long-horizon simulation abstraction;
+- long-horizon change-of-resolution rules owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - a mandatory Gate lifecycle, invasion arc, Age transition, or World Reset;
 - campaign state, named actors, current endpoints, live world truth, or playthrough history.
 
@@ -619,6 +619,7 @@ This document does not define:
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gate Interactions with Reincarnation and Soul Avatars](WORLD_GATE_SOUL_INTERACTIONS.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Soul Space](../soul/SOUL_SPACE.md)
 - [Soul Avatars](../soul/SOUL_AVATARS.md)
 - [Magic Rules Index](../magic/README.md)

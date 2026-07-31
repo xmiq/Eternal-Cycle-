@@ -106,6 +106,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Ages and World Resets](world-engine/AGES_AND_WORLD_RESETS.md) - contextual historical eras, causal transitions, exceptional world-scale transformation, uneven survivorship, revalidation, time skips, and inherited legacies.
 - [World Gates and World-Contact Events](world-engine/GATES_AND_WORLD_CONTACT.md) - extraordinary contact interfaces, independent transfer channels, contextual compatibility, autonomous first contact, closure, stranding, and Gate Legacies.
 - [World Gate Interactions with Reincarnation and Soul Avatars](world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) - living transit, cross-domain candidate reach, Gate-related Avatar Triggers, source-bound interpretation, and continuity safeguards.
+- [Simulation Abstraction](world-engine/SIMULATION_ABSTRACTION.md) - Focused, Local, Regional, and Epochal resolution; mixed Frames; compression, expansion, long-horizon passes, and agency safeguards.
 
 ## GM Framework
 

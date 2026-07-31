@@ -263,7 +263,7 @@ Compression may combine repetitive links into one supported interval. It cannot 
 
 Expansion restores detail from established causes. It does not retroactively invent convenient hidden actors, capabilities, or exceptions.
 
-The later Simulation Abstraction task defines the complete procedure for moving between resolutions.
+[Simulation Abstraction](SIMULATION_ABSTRACTION.md) defines the complete procedure for moving between resolutions.
 
 ## Worked Examples
 
@@ -332,7 +332,7 @@ This document does not define:
 - universal probabilities, thresholds, event tables, or random generators;
 - encounters, quests, plots, or mandatory story beats;
 - specialist capability, Soul, Evolution, Class, Soul Weapon, or Magic outcomes;
-- the final simulation-resolution procedure;
+- the change-of-resolution procedure owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - World Stability, Ages, Resets, or Gates.
 
 ## Related Documents
@@ -343,6 +343,7 @@ This document does not define:
 - [World Stability](WORLD_STABILITY.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

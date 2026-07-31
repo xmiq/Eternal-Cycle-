@@ -161,7 +161,7 @@ The world continues when the player is absent, unconscious, dead, in Interlife, 
 - previous player actions and other established causes;
 - uncertainty that remains genuinely unresolved.
 
-Off-screen change should be proportionate to its causal support and simulated at the lowest useful detail. The GM need not decide every meal or transaction to establish that a migration, siege, recovery, succession, or shortage progressed.
+Off-screen change should be proportionate to its causal support and simulated at the lowest useful detail through [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md). The GM need not decide every meal or transaction to establish that a migration, siege, recovery, succession, or shortage progressed.
 
 ### NPC Autonomy
 
@@ -450,6 +450,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [War and Unrest](../world-engine/WAR_AND_UNREST.md)
 - [World Stability](../world-engine/WORLD_STABILITY.md)
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
+- [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)
 - [Disease Evolution](../world-engine/DISEASE_EVOLUTION.md)
 - [Technology and Magical Advancement](../world-engine/TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](../world-engine/DUNGEON_ACTIVITY.md)

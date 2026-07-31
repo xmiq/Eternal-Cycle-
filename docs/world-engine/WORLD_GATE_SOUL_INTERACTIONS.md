@@ -538,7 +538,7 @@ This document does not define:
 - ordinary Soul Gate, Soul Intrusion, Echo, Avatar, Gate, Skill, Development, Magic, or World Engine mechanics beyond their handoff;
 - soul division, alternate incarnations, timeline branches, counterpart identity, or omniversal versions of one soul;
 - a Gate-event, Reincarnation, Soul Avatar, encounter, or campaign-state template;
-- long-horizon simulation abstraction;
+- long-horizon change-of-resolution rules owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - campaign events, current state, playthrough history, or live rulings.
 
 ## Related Documents
@@ -548,6 +548,7 @@ This document does not define:
 - [World-State Variables](WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](CAUSAL_EVENT_CHAINS.md)
 - [Ages and World Resets](AGES_AND_WORLD_RESETS.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [World Stability](WORLD_STABILITY.md)
 - [Faction Behaviour](FACTION_BEHAVIOUR.md)
 - [Reincarnation](../soul/REINCARNATION.md)

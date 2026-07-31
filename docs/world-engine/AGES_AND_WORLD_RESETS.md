@@ -376,7 +376,7 @@ During a Time Skip:
 
 A Time Skip may cross an Age Boundary or contain a World Reset, but the underlying transition still requires its own causes and resolution. Compression does not make an event inevitable or erase choices that would reasonably have occurred during the interval.
 
-The later simulation-abstraction task owns the detailed method for choosing resolution across decades and centuries.
+[Simulation Abstraction](SIMULATION_ABSTRACTION.md) owns the detailed method for choosing resolution across decades and centuries.
 
 ## Knowledge and Uncertainty
 
@@ -517,7 +517,7 @@ This document does not define:
 - a World Stability trigger, balance correction, or mandatory apocalypse;
 - World Gate causes, lifecycles, transit, or contact consequences owned by [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md);
 - Gate interaction with Reincarnation or Soul Avatars;
-- the long-horizon simulation-abstraction procedure;
+- the long-horizon change-of-resolution procedure owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
 - personal Reincarnation stages, Soul persistence, progression, Evolution, Soul Weapon, or Magic effects beyond their owner interfaces;
 - Age, catastrophe, Reset, setting, theme, or genre generators;
 - campaign events, named survivors, live world state, or playthrough history.
@@ -539,6 +539,7 @@ This document does not define:
 - [Technology and Magical Advancement](TECHNOLOGY_AND_MAGICAL_ADVANCEMENT.md)
 - [Dungeon Activity](DUNGEON_ACTIVITY.md)
 - [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md)
+- [Simulation Abstraction](SIMULATION_ABSTRACTION.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [Akashic Archive](../soul/AKASHIC_ARCHIVE.md)
