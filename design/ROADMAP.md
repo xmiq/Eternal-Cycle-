@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define persistence validation**
+**Current task: Audit and integrate Campaign Persistence Engine**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define persistence validation** unless the project owner explicitly changes the target. Do not begin the final Campaign Persistence Engine audit or Phase 11 before persistence validation is complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and integrate Campaign Persistence Engine** unless the project owner explicitly changes the target. Do not begin Phase 11 before the Campaign Persistence Engine audit is complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -237,7 +237,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define migration and versioning
 - [x] Define continuity resolution
 - [x] Define save update protocol
-- [ ] Define persistence validation
+- [x] Define persistence validation
 - [ ] Audit and integrate Campaign Persistence Engine
 
 ### Exit Criteria

@@ -4629,3 +4629,55 @@ A caused future pressure records source, scope, route, horizon, trigger, capable
 ## D-1157 — Save Updates Preserve Numerical Provenance
 
 Every material number change follows its owning mechanic through a Numerical Change Trace. Save integration cannot silently balance, average, round, zero, or otherwise adjust progression and state.
+
+## D-1158 — Persistence Validation Is Read-Only
+
+Validation evaluates one immutable baseline and reports evidence-bearing findings. It never silently repairs, invents, retcons, leaks, adjudicates, or overrides an Authoritative Record Owner.
+
+## D-1159 — Validation Gates Save and Migration Activation
+
+Every Save Point candidate and every Campaign Migration target must pass its required Validation Profile, or receive only authorized non-blocking warning dispositions, before activation.
+
+## D-1160 — Validation Scope Is Explicit and Reproducible
+
+Every Validation Run identifies its baseline, versions, profile, included dependency closure, exclusions, access, checks, limitations, and method. A result never claims a wider scope than was inspected.
+
+## D-1161 — Validation Severity Follows Continuity Impact
+
+Blocker, Error, Warning, and Notice classifications follow authority, data-loss, identity, information, mechanical, and causal impact rather than repair difficulty or narrative convenience.
+
+## D-1162 — Findings Preserve Evidence and Repair Ownership
+
+Every Validation Finding records the violated invariant, observed evidence, affected identities and scope, authority, owner, uncertainty, exposure, and repair route. Repair creates a new candidate and requires a rerun.
+
+## D-1163 — Duplicate Identity Requires Evidence Beyond Labels
+
+Matching names, labels, professions, or summaries are candidate signals rather than proof. NPCs, settlements, discoveries, Souls, factions, items, and other identities are merged or split only through evidence and authorized owner procedures.
+
+## D-1164 — Broken Dangling and Orphaned Records Remain Distinct
+
+Malformed or invalid links, unresolved expected targets, and records without valid ownership or attachment are separate defect classes. Detection never authorizes deletion or automatic repair.
+
+## D-1165 — Knowledge and GM Secret Leaks Block Affected Activation
+
+Information that reaches an observer or view without a valid route, especially protected GM Secrets, blocks activation for the exposed scope and requires containment, redacted reporting, owner-routed repair, and revalidation.
+
+## D-1166 — Legitimate Theory and Perspective Conflict Is Preserved
+
+Competing theories, disputed dates, and differing observer perspectives are not validation defects merely because they disagree. Validation protects their separate identity, evidence, scope, confidence, and unresolved status.
+
+## D-1167 — Numerical Validation Requires Owner Traces
+
+Every material numerical change must reconcile through its prior value, cause, owning mechanic, inputs, costs, result, and Transaction identity. Validation cannot invent, balance, average, round, or default missing values.
+
+## D-1168 — Repeated Error Does Not Become Canon
+
+Continuity Drift remains a defect even when an unsupported claim appears repeatedly in narration, summaries, tools, or participant expectations. Frequency never supplies authority or causal provenance.
+
+## D-1169 — Warning Dispositions Are Bounded
+
+A Warning may be carried only with authorized scope, owner, rationale, risk, participant disclosure where required, Review Point, and rerun condition. Repeated renewal without repair or new evidence creates Continuity Drift.
+
+## D-1170 — Incremental Validation Does Not Replace Full Audit
+
+Save, load, migration, and continuity checks validate their declared scopes. Periodic full audits remain necessary to detect cross-version drift, duplication, orphaning, long-term chronology defects, and information-boundary erosion.

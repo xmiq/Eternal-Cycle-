@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define persistence validation**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, continuity resolution, and save updates are complete through the Save Update Protocol task.
-- Do not begin the final Campaign Persistence Engine audit or Phase 11 before persistence validation is complete, validated, and committed.
+- **Audit and integrate Campaign Persistence Engine**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, continuity resolution, save updates, and persistence validation are complete through the Persistence Validation task.
+- Do not begin Phase 11 before the final Campaign Persistence Engine audit is complete, validated, and committed.
 
 ### Validation Status
 
-- The Save Update Protocol checkpoint validates 150 Markdown files and 4,832 relative links with no missing targets or anchors.
+- The Persistence Validation checkpoint validates 151 Markdown files and 4,855 relative links with no missing targets or anchors.
 - All 12 documentation indexes are present.
-- All 1,157 decision IDs and 1,046 terminology entries are unique.
+- All 1,170 decision IDs and 1,058 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Save Update Protocol task.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Persistence Validation task.
 
 ### Exact Resume Instructions
 
-1. Read every completed persistence owner, every validation reference, repository validation conventions, and all specialist safeguards that produce persisted claims.
-2. Define validation scopes, severity, blocking behavior, evidence, reports, and repair routing for saves, migrations, continuity corrections, loaded state, and periodic audits.
-3. Detect duplicate NPCs, settlements, and discoveries; broken and dangling references; Relationship, Timeline, Knowledge, Secret, theory, numerical, identity, ownership, and continuity defects; orphaned records; and continuity drift.
-4. Require validation after every Migration and before every Save Point activation; validators report but never silently repair, invent, retcon, leak, or override owners.
-5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before the final Phase 10 integration audit.
+1. Read every completed persistence owner and every completed-system interface that produces or consumes persisted claims.
+2. Audit the complete Campaign Persistence Engine for ownership gaps, duplicated mechanics, stale placeholders, terminology conflict, navigation omissions, and exit-criteria failures.
+3. Define the final cross-system integration and operational handoffs without storing campaign data or implementing Phase 11 templates.
+4. Resolve every affected link, navigation, terminology, governance, and boundary issue discovered by the audit.
+5. Validate the complete repository, mark Phase 10 complete only if every exit criterion passes, advance the roadmap to Phase 11 / Character template without implementing it, commit, and generate the repository archive.

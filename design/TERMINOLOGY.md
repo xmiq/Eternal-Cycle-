@@ -4183,3 +4183,51 @@ The ordered owner-routed create, amend, append, close, supersede, archive, corre
 ## No-Op Update
 
 The explicit result that a completed Gameplay Interaction caused no persistent campaign-state change, allowing a material Session Log entry without fake state, Timeline, progression, or counter changes.
+
+## Persistence Validation
+
+The canonical read-only process that evaluates an immutable campaign baseline for structural, authority, continuity, information, identity, chronological, mechanical, and version integrity and routes defects without repairing them silently.
+
+## Validation Run
+
+One identified application of a defined Validation Profile to one immutable Validation Baseline with explicit scope, access, checks, findings, limitations, and outcome.
+
+## Validation Baseline
+
+The immutable candidate, active version, recovery state, Backup, or Snapshot against which one Validation Run evaluates campaign claims without combining incompatible versions.
+
+## Validation Profile
+
+A trigger-specific set of required validation checks, scope rules, evidence expectations, and activation consequences for a save, Migration, Continuity Case, load, recovery, or periodic audit.
+
+## Validation Finding
+
+An evidence-bearing record of one detected or suspected invariant failure, including affected identities, authority, owner, scope, severity, uncertainty, exposure, and repair route.
+
+## Broken Reference
+
+A malformed, unreadable, unauthorized, or semantically invalid reference that cannot perform its declared relation safely.
+
+## Dangling Reference
+
+A reference to an identity that should resolve within the declared validation scope but does not.
+
+## Orphaned Record
+
+A record lacking a valid authoritative owner, subject, parent, source, or required incoming relation and therefore unsafe to interpret in its present scope.
+
+## GM Secret Leak
+
+Exposure of protected factual, preparatory, identity, motive, location, causal, or Mystery information to an unauthorized participant, view, index, report, or tool.
+
+## Continuity Drift
+
+Cumulative divergence between authoritative persistence and the claims actually used in narration, adjudication, Derived Views, summaries, tools, or participant expectations.
+
+## Validation Report
+
+The external, potentially audience-redacted record of one Validation Run's baseline, scope, checks, findings, outcome, limitations, repair routes, warning dispositions, and required reruns.
+
+## Warning Disposition
+
+An authorized, bounded, owner-assigned decision to carry a non-blocking validation Warning until a stated Review Point without treating it as repaired or permitting authority, secrecy, identity, or mechanical failure.

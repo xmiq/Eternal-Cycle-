@@ -142,6 +142,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Migration and Versioning](persistence/MIGRATION_AND_VERSIONING.md) - storage-neutral campaign versions and mandatory Backup, Audit, Merge, and Validation with manifests, activation, rollback, and interruption safety.
 - [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) - authority-ordered diagnosis and correction of narration errors, stale saves, incomplete information, authorized retcons, and in-world deception.
 - [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) - post-interaction Affected Sets, owner-routed Session Deltas, history appends, atomic Save Points, idempotent retries, and recovery.
+- [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) - read-only validation baselines and profiles, evidence-bearing findings, defect detection, protected reports, severity, activation outcomes, and repair routing.
 
 ## Authority and Scope
 

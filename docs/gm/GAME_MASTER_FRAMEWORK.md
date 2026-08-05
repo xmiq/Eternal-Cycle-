@@ -484,3 +484,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md)
 - [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)
 - [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md)
+- [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)
