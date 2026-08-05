@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define research engine**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, and relationship memory are complete pending the relationship task's focused commit.
-- Do not begin the timeline engine or any later Phase 10 task until the research engine is complete, validated, and committed.
+- **Define timeline engine**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, and research are complete and committed through the Research Engine task.
+- Do not begin migration and versioning or any later Phase 10 task until the timeline engine is complete, validated, and committed.
 
 ### Validation Status
 
-- The pre-change audit validated 137 Markdown files and 4,548 relative links with no missing targets or anchors.
-- All 11 documentation indexes were present.
-- All 1,047 decision IDs and 932 terminology entries were unique.
+- The Research Engine checkpoint validates 146 Markdown files and 4,739 relative links with no missing targets or anchors.
+- All 12 documentation indexes are present.
+- All 1,108 decision IDs and 998 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- The restructuring changes project order only and does not implement persistence rules or templates.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Research Engine task.
 
 ### Exact Resume Instructions
 
-1. Commit the completed relationship memory task after reviewing its full diff and validation results.
-2. Read Truth Layers, Campaign State, Knowledge, Uncertainty Handling, Magical Schools, advancement, Projects, and existing research references.
-3. Define Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with competing, obsolete, forgotten, disproved, and rediscovered theories plus the approved confidence values.
-4. Keep Research distinct from Campaign Canon and require In-World Confirmation through the factual owner; elapsed time, repetition, authority, and correct guesses grant no automatic progress.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the timeline engine.
+1. Read the completed persistence owners, World Engine chronology references, Reincarnation and Age rules, Time Skip and Age Transition procedures, and established History terminology.
+2. Define separate world history, campaign history, Session Log, personal chronology, and Soul chronology with stable event identity, temporal uncertainty, parallel events, time skips, World Resets, and Age transitions.
+3. Keep Campaign History append-only except for factual correction through an authorized retcon, and distinguish event occurrence, record creation, discovery, narration, and integration times.
+4. Preserve unknown dates, competing calendars, causal ordering, and concurrent events without inventing precision or allowing chronology to override specialist owners.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to migration and versioning.

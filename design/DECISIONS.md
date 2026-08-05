@@ -4393,3 +4393,43 @@ Former relationships, family roles, marriages, debts, offices, consent, authorit
 ## D-1098 — Relationship Migration Preserves Stable Identity
 
 Migration retains participant IDs, Incarnation and role scope, first and latest meetings, important encounters, directional dimensions, commitments, Knowledge boundaries, chronology, closure, and unresolved issues. Names alone never merge people or relationships.
+
+## D-1099 — Research Is Iterative Rather Than a Guaranteed Ladder
+
+Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge describe an iterative evidence cycle. Inquiry may branch, repeat, stall, fail, become obsolete, be disproved, be forgotten, or require Rediscovery without granting automatic progress.
+
+## D-1100 — Research Confidence Is Qualitative and Claim-Specific
+
+Confirmed, Strong, Supported, Tentative, Speculative, Rumour, and Disproved assess one exact scoped claim. They are not percentages, universal truth ranks, researcher power, or automatic probabilities of success.
+
+## D-1101 — In-World Confirmation Is Required for Campaign Fact
+
+Research enters Campaign Canon only when sufficient evidence establishes the exact claim through In-World Confirmation accepted by the relevant factual and specialist owners. Authority, consensus, correct guesses, and confidence labels cannot substitute for that route.
+
+## D-1102 — Competing Theories Remain Distinct
+
+Materially different explanations retain separate assumptions, evidence, predictions, proponents, access, and confidence until valid inquiry reconciles or distinguishes them. Narrative convenience and institutional prestige do not select a winner.
+
+## D-1103 — Obsolete Forgotten and Disproved Are Distinct
+
+Obsolete describes lost current applicability, Forgotten describes lost access, and Disproved describes evidentiary defeat within scope. None silently erases the theory's provenance, consequences, or remaining valid claims.
+
+## D-1104 — Research Requires Present Effort and Inputs
+
+Inquiry advances through actual observation, method, experimentation, evidence, interpretation, access, infrastructure, communication, and review. Elapsed time, repetition, suffering, killing, possession of records, or prior-life expertise alone grants no fixed progress.
+
+## D-1105 — Failed Experiments Grant No Automatic Reward
+
+Failure creates useful Evidence only when its conditions and result support a valid inference. Repeated or dramatic failure does not guarantee insight, Development, Skill growth, discovery, or narrative compensation.
+
+## D-1106 — Research Knowledge Is Observer-Specific
+
+Research records, Character Knowledge, publication, secrecy, Rumours, Player Theories, GM Secrets, and Campaign Canon remain separate. Confirmation does not make a result universally known, understood, accessible, or believed.
+
+## D-1107 — Research Migration Preserves Provenance and Contradiction
+
+Migration retains stable Research, claim, source, Evidence, theory, investigator, Project, and confirmation identities together with methods, scope, confidence history, contradictions, access, retirement states, and unresolved questions. Summaries cannot replace source records.
+
+## D-1108 — Research Does Not Grant Capability or Adoption
+
+Knowing a confirmed claim does not grant the Skill, Development, embodiment, resources, authority, safety, production, maintenance, social adoption, or magical access needed to apply it. Each specialist owner continues to govern practical use and consequence.

@@ -3935,3 +3935,59 @@ The source-preserving account of a promisor, beneficiary, exact commitment, cond
 ## Recognition State
 
 One observer's current relationship between perceived signs and an identity, including known, familiar, suspected, role-recognized, remembered, emotionally familiar, mistaken, concealed, unrecognized, or unknown states.
+
+## Research Engine
+
+The canonical persistence system for in-world inquiry, evidence provenance, competing explanations, qualitative confidence, confirmation, loss, disproof, and Rediscovery without turning a plausible claim into fact automatically.
+
+## Research Question
+
+An exact, scoped unknown or disputed claim whose subject, definitions, current Knowledge, affected parties, canonical owners, useful evidence, and exclusions define a Research undertaking.
+
+## Observation Record
+
+A source-preserving account of what an observer, instrument, spell, archive, experiment, or other established source detected under stated conditions, kept distinct from interpretation.
+
+## Hypothesis
+
+A provisional scoped explanatory or predictive claim that identifies assumptions, expected findings, alternatives, and evidence capable of changing or defeating it.
+
+## Experiment Record
+
+The source-preserving account of a deliberate in-world procedure used to distinguish hypotheses, measure a process, reproduce an effect, or test a prediction together with its methods, risks, deviations, outcomes, and consequences.
+
+## Evidence Record
+
+A provenance-bearing observation, measurement, sample, testimony, trace, result, or comparison related to one or more exact Research claims without belonging exclusively to any theory.
+
+## Theory Record
+
+An integrated, revisable explanatory model connecting evidence within a defined scope and preserving assumptions, predictions, anomalies, alternatives, confidence, and revision history.
+
+## Research Confidence
+
+A qualitative, claim-specific assessment of evidentiary support using Confirmed, Strong, Supported, Tentative, Speculative, Rumour, or Disproved without serving as a universal probability or researcher rank.
+
+## Confirmed Knowledge
+
+A scoped Research claim that has passed In-World Confirmation through its factual owner while retaining provenance, limitations, uncertainty, and observer-specific access.
+
+## Competing Theory
+
+One of two or more materially different explanations, mechanisms, scopes, or predictions preserved against overlapping evidence until valid inquiry distinguishes or reconciles them.
+
+## Obsolete Theory
+
+A theory that was useful or valid in a former context but no longer describes current conditions, available practice, or the best model without necessarily having always been false.
+
+## Forgotten Theory
+
+A theory whose records, practitioners, institutional continuity, or Character Knowledge are no longer accessible enough for current use or evaluation, regardless of its truth value.
+
+## Disproved Theory
+
+A theory whose exact claim or required assumptions have been defeated by evidence within its stated scope while its history and consequences remain preserved.
+
+## Rediscovery
+
+A new in-world Research process that recovers, reconstructs, reinterprets, or independently reaches lost or inaccessible knowledge through present access, methods, verification, and provenance.

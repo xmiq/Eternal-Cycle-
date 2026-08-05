@@ -88,6 +88,8 @@ This list defines information categories, not required software or a universal s
 
 Material relationship continuity follows the [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md). Known actors, first and latest meetings, important encounters, directional trust and hostility, promises, betrayals, debts, gifts, family, organizations, shared discoveries, dependencies, and unresolved issues do not reset when they leave the current narration.
 
+In-world inquiry follows the [Research Engine](../persistence/RESEARCH_ENGINE.md). Observations, competing hypotheses, experiments, Evidence, theories, confidence, failed work, and Confirmed Knowledge remain distinct from world truth and Character Knowledge until their proper routes establish and communicate them.
+
 ## Session Lifecycle
 
 ### 1. Prepare
@@ -477,3 +479,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Persistence Levels](../persistence/PERSISTENCE_LEVELS.md)
 - [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md)
 - [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md)
+- [Research Engine](../persistence/RESEARCH_ENGINE.md)
