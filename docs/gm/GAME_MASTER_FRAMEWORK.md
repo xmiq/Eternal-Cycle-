@@ -289,7 +289,7 @@ Continuity records what remains true after change. It does not preserve the old 
 | **Evolving faction** | Preserve membership, succession, internal conflict, changed goals, institutions, resources, reputation, and consequences rather than treating a label as one timeless actor |
 | **[World Reset or Age transition](../world-engine/AGES_AND_WORLD_RESETS.md)** | Transform conditions without silently erasing history, causal traces, Soul continuity, or consequences protected by their Owning Systems |
 
-Corrections may be necessary when records conflict, a factual mistake is discovered, or new canon requires conversion. Record material corrections externally, preserve unaffected consequences where possible, and discuss changes that alter meaningful player choices. A quiet retcon is not continuity management. Structural or version conversion follows [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md).
+Corrections may be necessary when records conflict, a factual mistake is discovered, or new canon requires conversion. Use [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md) to stop the conflicting claim, inspect authority, classify the problem, preserve reliance and hidden-information boundaries, correct the affected dependency closure, and validate before resuming. A quiet retcon is not continuity management. Structural or version conversion follows [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md).
 
 ## Consequence Management
 
@@ -482,3 +482,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Research Engine](../persistence/RESEARCH_ENGINE.md)
 - [Timeline Engine](../persistence/TIMELINE_ENGINE.md)
 - [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md)
+- [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)

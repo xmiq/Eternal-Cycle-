@@ -614,3 +614,4 @@ This document does not define:
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)
+- [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)

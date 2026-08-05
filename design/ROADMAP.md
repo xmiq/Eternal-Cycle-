@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define continuity resolution**
+**Current task: Define save update protocol**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define continuity resolution** unless the project owner explicitly changes the target. Do not begin the save update protocol or later Phase 10 work before continuity resolution is complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define save update protocol** unless the project owner explicitly changes the target. Do not begin persistence validation or later Phase 10 work before the save update protocol is complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -235,7 +235,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define research engine
 - [x] Define timeline engine
 - [x] Define migration and versioning
-- [ ] Define continuity resolution
+- [x] Define continuity resolution
 - [ ] Define save update protocol
 - [ ] Define persistence validation
 - [ ] Audit and integrate Campaign Persistence Engine

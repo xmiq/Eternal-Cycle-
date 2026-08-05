@@ -4115,3 +4115,43 @@ A traceable migration correction that separates distinct subjects incorrectly co
 ## Recovery Candidate
 
 An incomplete, failed, restored, or otherwise non-active Campaign Version retained for inspection or recovery without authority to replace the current validated version.
+
+## Continuity Resolution
+
+The canonical procedure for containing, classifying, resolving, correcting, validating, and communicating incompatible campaign claims through the persistence authority hierarchy.
+
+## Continuity Conflict
+
+Two or more claims that cannot all govern the same subject, property, scope, and effective time after truth layer, perspective, chronology, and ownership differences are considered.
+
+## Continuity Case
+
+The external source-preserving record of one material Continuity Conflict, its claims, authority, classification, freeze, evidence, reliance, resolution, corrections, validation, and resumption point.
+
+## Continuity Freeze
+
+A narrow temporary prohibition on using a disputed claim and its unvalidated dependents for adjudication while independent play and world processes may continue.
+
+## Narration Error
+
+A lower-authority presented statement that conflicts with established higher-authority continuity and lacks a valid event or decision changing it.
+
+## Outdated Save
+
+A valid older Campaign Version, Snapshot, Derived View, cache, or export presented as if it were the active authoritative Campaign State.
+
+## Incomplete Information
+
+A continuity condition in which available records cannot responsibly settle a claim and must retain an explicit unknown, estimated, disputed, provisional, or source-recovery status.
+
+## Authorized Retcon
+
+An explicit Campaign Canon decision that intentionally replaces or reinterprets an established campaign claim within a recorded scope, authority, reliance assessment, and validation process.
+
+## Intentional In-World Deception
+
+An established actor's deliberate communication, staging, concealment, falsification, impersonation, or other presentation intended to mislead an observer without changing underlying world truth automatically.
+
+## Reliance Effect
+
+A material choice, cost, lost opportunity, interpretation, consent decision, or downstream consequence produced because a participant or system reasonably acted on a presented claim.

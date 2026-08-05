@@ -4533,3 +4533,47 @@ Rollback restores a validated ancestor or verified Backup through a new recovery
 ## D-1133 — Migration Preserves Unknowns and Conflicts
 
 Unknown, disputed, unsupported, inaccessible, and Requires Source Recovery claims retain those states through migration. Target schemas and summaries cannot convert absence into certainty.
+
+## D-1134 — Conflicting Narration Is Stopped Before Further Use
+
+When narration conflicts with persistence, the disputed claim and its unvalidated dependents enter a narrow Continuity Freeze until Repository Canon and Campaign persistence are inspected, the conflict is classified, and resolution validates.
+
+## D-1135 — Recent Narration Has No Overwrite Authority
+
+The GM never defends incorrect continuity because it appeared most recently, repeatedly, vividly, secretly, or confidently. Current Narration remains below Session, Campaign State, Historical Record, Campaign Canon, and Repository Canon.
+
+## D-1136 — Five Primary Conflict Classes Remain Distinct
+
+Narration Error, Outdated Save, Incomplete Information, Authorized Retcon, and Intentional In-World Deception require different authority, correction, Knowledge, and consequence treatment and cannot be collapsed for convenience.
+
+## D-1137 — Incomplete Continuity Remains Explicitly Unknown
+
+Unknown, Not Yet Verified, Estimated, Requires Source Recovery, Player Theory, Rumour, and Disputed claims retain their supported state. Narrative flow, schema requirements, likely intent, and balance do not fill gaps.
+
+## D-1138 — Continuity Correction Preserves Reliance Effects
+
+Correcting an underlying claim does not automatically erase choices, costs, lost opportunities, consent decisions, or consequences reasonably produced in reliance on its presentation. Remedies are bounded, causal, and participant-aware.
+
+## D-1139 — Authorized Retcons Are Explicit and Scoped
+
+A retcon records campaign authority, reason, original and replacement claims, effective scope, affected choices, preserved and changed consequences, Knowledge treatment, chronology, version route, and validation. Silence or GM preference is not authorization.
+
+## D-1140 — Deception Is Not a Record Error
+
+World truth, a deceiver's Knowledge and intent, the deceptive act, a target's belief, and resulting consequences may all coexist. Deception requires an established actor, method, opportunity, and causal route and cannot be invented to excuse bad narration.
+
+## D-1141 — Continuity Numerical Changes Require Mechanical Traces
+
+Every corrected number retains its prior authoritative value, conflicting claim, causal event, owner, mechanic, inputs, costs, result, dependencies, authority, and validation. Unknown values are never averaged, balanced, or silently set.
+
+## D-1142 — Corrections Change Only the Dependency Closure
+
+Continuity Resolution creates source-preserving Correction Events and updates only affected owners and dependents. Unrelated records, history, progression, Relationships, and consequences remain unchanged.
+
+## D-1143 — Hidden Information Survives Resolution
+
+Correcting GM or persistence state does not grant Character Knowledge or expose GM Secrets. Communication explains only what authorized participants need to resume valid play.
+
+## D-1144 — Reincarnation Conflicts Preserve Soul and Life Identity
+
+Continuity correction links rather than collapses Soul and Incarnation records and cannot transfer bodily state, Inventory, authority, world-bound Knowledge, recognition, or relationships without their established routes.

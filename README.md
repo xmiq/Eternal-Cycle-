@@ -69,6 +69,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/RESEARCH_ENGINE.md`](docs/persistence/RESEARCH_ENGINE.md) - iterative evidence-based inquiry, confidence, confirmation, competing theories, and rediscovery.
 - [`docs/persistence/TIMELINE_ENGINE.md`](docs/persistence/TIMELINE_ENGINE.md) - stable temporal identity, five distinct chronologies, parallel events, uncertain dating, and source-preserving correction.
 - [`docs/persistence/MIGRATION_AND_VERSIONING.md`](docs/persistence/MIGRATION_AND_VERSIONING.md) - versioned Backup, Audit, Merge, Validation, activation, rollback, and storage-neutral conversion.
+- [`docs/persistence/CONTINUITY_RESOLUTION.md`](docs/persistence/CONTINUITY_RESOLUTION.md) - bounded conflict diagnosis, authority resolution, reliance protection, correction, and resumption.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 - [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
@@ -102,4 +103,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Define continuity resolution**. Templates and final validation follow in Phase 11.
+The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Define save update protocol**. Templates and final validation follow in Phase 11.

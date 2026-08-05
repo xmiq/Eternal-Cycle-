@@ -16,8 +16,9 @@ It is a canonical game system, not a populated campaign, save-file format, stora
 8. [Research Engine](RESEARCH_ENGINE.md) defines iterative Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with qualitative confidence, competing theories, loss, disproof, and Rediscovery.
 9. [Timeline Engine](TIMELINE_ENGINE.md) defines stable events, temporal coordinates and precision, World and Campaign History, Session Logs, Personal and Soul chronologies, parallel ordering, Time Skips, Age boundaries, and source-preserving correction.
 10. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) defines Repository, Campaign, persistence-model, and storage versions plus the mandatory Backup, Audit, Merge, and Validation transaction, Migration Manifest, activation, interruption, rollback, and storage conversion.
+11. [Continuity Resolution](CONTINUITY_RESOLUTION.md) defines narrow conflict containment, authority-ordered diagnosis, narration, save, uncertainty, retcon, and deception classifications, reliance review, source-preserving correction, and validated resumption.
 
-Later Phase 10 documents will define continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
+Later Phase 10 documents will define update procedures, validation, and repository-wide integration in roadmap order.
 
 ## Foundational Boundary
 

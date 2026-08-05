@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define continuity resolution**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, and migration are complete through the Migration and Versioning task.
-- Do not begin the save update protocol or any later Phase 10 task until continuity resolution is complete, validated, and committed.
+- **Define save update protocol**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, and continuity resolution are complete through the Continuity Resolution task.
+- Do not begin persistence validation or later Phase 10 work until the save update protocol is complete, validated, and committed.
 
 ### Validation Status
 
-- The Migration and Versioning checkpoint validates 148 Markdown files and 4,788 relative links with no missing targets or anchors.
+- The Continuity Resolution checkpoint validates 149 Markdown files and 4,811 relative links with no missing targets or anchors.
 - All 12 documentation indexes are present.
-- All 1,133 decision IDs and 1,029 terminology entries are unique.
+- All 1,144 decision IDs and 1,039 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Migration and Versioning task.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Continuity Resolution task.
 
 ### Exact Resume Instructions
 
-1. Read Persistence Authority, Campaign State, Timeline, Migration and Versioning, Uncertainty Handling, Alpha Playtest Rules, and every existing correction or retcon rule.
-2. Define the required conflict response: stop using conflicting narration, inspect Repository rules and Campaign persistence, classify the conflict, resolve through authority, correct affected records, and validate before continuing.
-3. Distinguish narration errors, outdated saves, incomplete information, authorized retcons, and intentional in-world deception; preserve Unknown, Not Yet Verified, Estimated, Requires Source Recovery, and Player Theory labels.
-4. Require mechanically justified numerical changes and prohibit silent progression adjustment, recent-narration preference, invented gap filling, or retroactive loss of meaningful choices.
-5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before the save update protocol.
+1. Read Campaign State, Persistence Levels, Timeline, Relationships, Research, Migration, Continuity Resolution, consequence handling, and Session lifecycle rules.
+2. Define the transaction after every completed gameplay interaction: determine affected sections, build the Session Delta, update only those owners, append Session Log and Timeline, append Campaign History when material, validate, and establish the next Save Point.
+3. Require explicit handling of new Projects, Mysteries, completed discoveries, disproved theories, numerical traces, Relationships, Knowledge, Secrets, world consequences, and pending work.
+4. Define atomicity, interruption, recovery, no-op interactions, batching boundaries, Review Points, and prohibition on rewriting unrelated records.
+5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before persistence validation.

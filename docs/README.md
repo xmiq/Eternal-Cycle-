@@ -140,6 +140,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Research Engine](persistence/RESEARCH_ENGINE.md) - Observation through Confirmed Knowledge, qualitative confidence, competing theories, failed inquiry, disproof, loss, and Rediscovery.
 - [Timeline Engine](persistence/TIMELINE_ENGINE.md) - stable events, honest temporal precision, five distinct chronologies, parallel ordering, calendar conversion, Time Skips, Age boundaries, and historical correction.
 - [Migration and Versioning](persistence/MIGRATION_AND_VERSIONING.md) - storage-neutral campaign versions and mandatory Backup, Audit, Merge, and Validation with manifests, activation, rollback, and interruption safety.
+- [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) - authority-ordered diagnosis and correction of narration errors, stale saves, incomplete information, authorized retcons, and in-world deception.
 
 ## Authority and Scope
 
