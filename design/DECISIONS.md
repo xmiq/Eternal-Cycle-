@@ -4209,3 +4209,27 @@ History, research, relationships, infrastructure, and memory create causal oppor
 ## D-1052 — Populated Persistence Remains Campaign-External
 
 The repository may contain persistence rules, logical schemas, validators, and unpopulated templates, but every populated character, Soul, relationship, inventory, world, research, timeline, secret, migration, and session record remains outside repository canon.
+
+## D-1053 — Persistence Uses a Fixed Authority Chain
+
+Campaign-fact authority descends from Repository Canon through Campaign Canon, Historical Record, Current Campaign State, Current Session, and Current Narration. The chain is claim-specific and does not imply that a higher layer contains every lower-layer fact.
+
+## D-1054 — Lower Authority Cannot Silently Overwrite Higher Authority
+
+An incompatible lower claim must be stopped, classified, and routed through an explicit save update, correction, retcon, or migration. Recency, repetition, vividness, secrecy, and storage location create no overwrite authority.
+
+## D-1055 — Rule Authority and Persistence Authority Remain Distinct
+
+The GM rule-status hierarchy determines which mechanic governs, while the Persistence Authority Chain determines which campaign-fact account governs. A material claim must satisfy both without letting either hierarchy replace the other.
+
+## D-1056 — Repository Changes Require Campaign Adoption
+
+A new repository revision does not automatically rewrite a campaign's rules profile, history, current state, or prior valid outcomes. Adoption requires an explicit campaign migration or conversion with preserved provenance and validation.
+
+## D-1057 — Campaign Canon Cannot Amend Repository Canon
+
+A campaign may adopt permitted options, premises, external experiments, older rules profiles, authorized retcons, and conversions. Labelling a campaign rule canonical cannot change Eternal Cycle's reusable mechanics or governance.
+
+## D-1058 — Narration Errors Do Not Become Continuity
+
+When narration conflicts with higher persistence authority, stop relying on the conflicting wording and resolve the discrepancy. The GM must not invent retroactive support or compound the error merely because it has already appeared in prose.

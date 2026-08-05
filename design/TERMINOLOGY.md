@@ -3731,3 +3731,31 @@ A scoped GM conclusion identifying whether an Age Transition is absent, under pr
 ## Campaign Persistence Engine
 
 The canonical system that preserves established campaign reality, causal history, information distinctions, continuity, correction provenance, migration, and validation outside the rules repository without deciding the specialist mechanics that produce those facts.
+
+## Persistence Authority Chain
+
+The claim-specific precedence order Repository Canon, Campaign Canon, Historical Record, Current Campaign State, Current Session, and Current Narration used to prevent a lower campaign-persistence source from silently overwriting a higher one.
+
+## Repository Canon
+
+Eternal Cycle's reusable playable rules, accepted design governance, canonical terminology, ownership boundaries, and safeguards. It defines how campaign facts are interpreted but contains no populated campaign state.
+
+## Campaign Canon
+
+The highest campaign-specific authority permitted by Repository Canon, containing the campaign's identity, active rules profile, adopted premises, authorized retcons, accepted conversions, and other explicitly governed campaign-level commitments.
+
+## Historical Record
+
+The durable, ordered, normally append-only account of established campaign events, transitions, discoveries, corrections, and consequences, with enough provenance to distinguish fact from testimony, belief, theory, and narration.
+
+## Current Campaign State
+
+The latest integrated structured representation of what is established now for its covered campaign scopes, derived from Campaign Canon and the Historical Record and authoritative over informal memory without erasing valid unintegrated Session changes.
+
+## Current Session
+
+The bounded working layer of resolved outcomes, player decisions, adjudication traces, state deltas, drafts, and uncertainties created since the last confirmed save integration, whose established changes remain pending formal integration.
+
+## Current Narration
+
+The immediate presentation of scenes, descriptions, dialogue, summaries, and observer-limited information during play; it is the lowest persistence authority and cannot overwrite established records through recency, repetition, or vividness.

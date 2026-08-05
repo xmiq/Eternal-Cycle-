@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define persistence authority hierarchy**.
-- The campaign persistence philosophy is complete pending its focused commit.
-- Do not begin structured persistence architecture or any later Phase 10 task until the authority hierarchy is complete, validated, and committed.
+- **Define structured persistence architecture**.
+- Campaign persistence philosophy and persistence authority are complete pending the authority task's focused commit.
+- Do not begin truth layers or any later Phase 10 task until the structured persistence architecture is complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed campaign persistence philosophy after reviewing its full diff and validation results.
-2. Read the philosophy, Game Master rules hierarchy, repository authority conventions, uncertainty model, and existing external Campaign Record rules.
-3. Define the exact persistence authority hierarchy without implementing the structured module architecture or truth-layer lifecycle prematurely.
-4. Preserve the distinction between design authority, campaign authority, historical evidence, current state, session changes, and narration.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to structured persistence architecture.
+1. Commit the completed persistence authority task after reviewing its full diff and validation results.
+2. Read the persistence philosophy and authority chain, every existing external Profile or Campaign Record boundary, and the GM session lifecycle.
+3. Define a storage-neutral modular architecture, stable references, ownership, provenance, indexing, and dependency rules without implementing truth-layer or module-specific mechanics prematurely.
+4. Preserve one authoritative owner per fact, cross-module references, proportional detail, and campaign-external populated records.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to truth layers.

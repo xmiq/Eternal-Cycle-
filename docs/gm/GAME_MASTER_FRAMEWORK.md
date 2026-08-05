@@ -35,6 +35,8 @@ The GM follows the repository rather than competing with it. Canon determines wh
 
 ## Rules Hierarchy
 
+This section governs the status of rules used in adjudication. [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md) separately governs conflicts among Repository Canon, Campaign Canon, Historical Record, Current Campaign State, Current Session, and Current Narration. A material ruling must satisfy both models.
+
 Use this order of authority for every material adjudication:
 
 1. **Repository canon.** Playable rules under `docs/` and accepted governance in `design/DECISIONS.md` jointly govern their stated scopes. Neither silently overrides the other.
@@ -482,3 +484,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
