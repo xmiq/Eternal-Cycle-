@@ -2,6 +2,8 @@
 
 This file records open design questions that have not yet become canonical decisions.
 
+Questions remain here until resolved through project governance. Suspected issues that require gameplay evidence before future design work belong in the [Future Revisions register](FUTURE_REVISIONS.md); cross-referencing a question there does not resolve or promote it.
+
 ## Blocking
 
 Questions that prevent a roadmap task from being completed.

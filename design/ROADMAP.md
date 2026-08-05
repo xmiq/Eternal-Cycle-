@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Establish Future Revisions register**
+**Current task: Cross-reference and ownership audit**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Template coverage and AI operating procedures are complete. Work only on **Establish Future Revisions register** unless the project owner explicitly changes the target. Do not begin the cross-reference and ownership audit or any later incomplete Phase 11 task before the Future Revisions register is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, and the Future Revisions register are complete. Work only on **Cross-reference and ownership audit** unless the project owner explicitly changes the target. Do not begin the rule consistency audit or any later incomplete Phase 11 task before the cross-reference and ownership audit is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -260,7 +260,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Gate-event template
 - [x] Complete supplemental template coverage
 - [x] Add AI operating procedures
-- [ ] Establish Future Revisions register
+- [x] Establish Future Revisions register
 - [ ] Cross-reference and ownership audit
 - [ ] Rule consistency audit
 - [ ] Terminology audit

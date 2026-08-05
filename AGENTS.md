@@ -14,10 +14,11 @@ Before making changes:
 2. Read `design/DECISIONS.md`.
 3. Read `design/TERMINOLOGY.md`.
 4. Read `design/REPOSITORY_CONVENTIONS.md`.
-5. Identify the exact current task named in the roadmap.
-6. If that task is marked `[!]`, consult `design/UNRESOLVED_QUESTIONS.md` and do not proceed until the blocking question is resolved or the project owner explicitly changes the target.
-7. Inspect the relevant existing documents.
-8. Work only on the named current task unless the project owner explicitly changes it.
+5. Read `design/FUTURE_REVISIONS.md` when evaluating playtest evidence, balance concerns, or proposed post-roadmap work.
+6. Identify the exact current task named in the roadmap.
+7. If that task is marked `[!]`, consult `design/UNRESOLVED_QUESTIONS.md` and do not proceed until the blocking question is resolved or the project owner explicitly changes the target.
+8. Inspect the relevant existing documents.
+9. Work only on the named current task unless the project owner explicitly changes it.
 
 After making changes:
 
@@ -25,9 +26,10 @@ After making changes:
 2. Record new canonical decisions in `design/DECISIONS.md`.
 3. Record unresolved design questions in `design/UNRESOLVED_QUESTIONS.md`.
 4. Record balance concerns, alternatives, and experiments in `design/DEVELOPER_NOTES.md`.
-5. Check terminology, authority boundaries, internal links, and scope boundaries.
-6. Review the full diff.
-7. Commit only files related to the selected task.
+5. Record evidence-backed candidates for later design work in `design/FUTURE_REVISIONS.md` without treating them as canon or roadmap authorization.
+6. Check terminology, authority boundaries, internal links, and scope boundaries.
+7. Review the full diff.
+8. Commit only files related to the selected task.
 
 ## Status Rules
 

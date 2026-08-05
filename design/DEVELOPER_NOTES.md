@@ -6,6 +6,8 @@ This file is a non-canonical workshop. Record uncertainties, balance concerns, a
 
 Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS.md). This file remains the workshop for balance concerns, alternatives, and experiments that are not yet proposed as canonical decisions.
 
+Evidence-backed concerns that may justify owner-authorized post-roadmap work are tracked in [Future Revisions](FUTURE_REVISIONS.md). Recording a candidate there does not change canon or authorize implementation.
+
 ## Balance Watchlist
 
 - Reincarnation crossover must not erase meaningful distinctions between monster and human development.
@@ -2489,3 +2491,43 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Establish Future Revisions register**.
 - Do not begin the cross-reference and ownership audit before the register is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Future Revisions Register
+
+### Completed Roadmap Task
+
+- Establish Future Revisions register.
+
+### Files Created
+
+- `design/FUTURE_REVISIONS.md`
+
+### Files Modified
+
+- `AGENTS.md`
+- `README.md`
+- `design/REPOSITORY_CONVENTIONS.md`
+- `design/UNRESOLVED_QUESTIONS.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/ROADMAP.md`
+
+### Integration Notes
+
+- The register is non-canonical, evidence-driven design tracking governed by D-1174; it is not a second roadmap and cannot authorize implementation.
+- Twelve candidates capture existing playtest watch areas without asserting that a defect exists or prescribing a rule change.
+- Open questions, workshop notes, Future Revisions, roadmap tasks, accepted decisions, and canonical rules retain separate owners and promotion routes.
+- Campaign evidence remains external and may be referenced only through anonymized evidence identifiers or bounded summaries.
+- No gameplay mechanic, terminology entry, canonical decision, or campaign data was added.
+
+### Validation Results
+
+- Repository-wide Markdown files: 189.
+- Relative Markdown links: 5,513 checked, zero broken.
+- Markdown anchors: 100 checked, zero broken.
+- All register entries include issue, affected systems, gameplay impact, evidence needs, suggested future phase, and priority.
+- Repository boundary and Phase 11 scope remain intact.
+
+### Active Roadmap Task
+
+- **Cross-reference and ownership audit**.
+- Do not begin the rule consistency audit before the cross-reference and ownership audit is complete, validated, and committed.

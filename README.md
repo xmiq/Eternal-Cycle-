@@ -104,8 +104,9 @@ Contributors and coding agents should read, in order:
 4. [`design/TERMINOLOGY.md`](design/TERMINOLOGY.md)
 5. [`design/REPOSITORY_CONVENTIONS.md`](design/REPOSITORY_CONVENTIONS.md)
 6. [`design/UNRESOLVED_QUESTIONS.md`](design/UNRESOLVED_QUESTIONS.md)
-7. [`docs/core/DESIGN_PHILOSOPHY.md`](docs/core/DESIGN_PHILOSOPHY.md)
+7. [`design/FUTURE_REVISIONS.md`](design/FUTURE_REVISIONS.md)
+8. [`docs/core/DESIGN_PHILOSOPHY.md`](docs/core/DESIGN_PHILOSOPHY.md)
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Establish Future Revisions register**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Cross-reference and ownership audit**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.

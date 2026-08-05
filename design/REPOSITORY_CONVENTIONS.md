@@ -8,6 +8,7 @@
 - `design/ROADMAP.md` controls task scope and implementation status.
 - `design/UNRESOLVED_QUESTIONS.md` records open design questions and is not canonical rules text.
 - `design/DEVELOPER_NOTES.md` is a non-canonical workshop for balance concerns, alternatives, and experiments.
+- `design/FUTURE_REVISIONS.md` is the non-canonical evidence register for suspected issues that may justify later owner-authorized roadmap work.
 - Files under `templates/` define reusable formats but contain no live campaign data.
 - Files under `agents/` guide AI contributors and are not game rules.
 
@@ -29,6 +30,8 @@ System documents should normally include:
 8. Related documents
 
 Open design questions belong in `design/UNRESOLVED_QUESTIONS.md` rather than being presented as playable rules.
+
+Evidence-backed post-roadmap concerns belong in `design/FUTURE_REVISIONS.md`. Registering a concern does not change canon, resolve an open question, reopen a completed phase, or authorize implementation.
 
 ## Internal Links
 
