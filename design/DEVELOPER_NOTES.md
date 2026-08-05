@@ -2246,3 +2246,37 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Settlement template**.
 - Do not begin the Dungeon template before the Settlement template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Settlement Template
+
+### Completed Roadmap Task
+
+- Settlement template.
+
+### Files Created
+
+- `templates/SETTLEMENT_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template treats a settlement as a Locations-owned place identity and current view linked to Population, ecology, Resource, Infrastructure, Economy, Faction, Institution, Magic, conflict, simulation, Knowledge, and Timeline owners.
+- Residents remain distinct persons and scoped populations; resource access, distribution, services, governance, legitimacy, ecology, and continuity remain separate claims.
+- World-State Claims and Simulation Frames retain their existing causal and resolution rules.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,105 checked, zero broken.
+- Repository boundary: blank template only; no named place, resident, current resource, service, project, or live world value added.
+- No settlement level, prosperity score, technology grade, or encounter scaling was introduced.
+
+### Active Roadmap Task
+
+- **Dungeon template**.
+- Do not begin the Soul Avatar template before the Dungeon template is complete, validated, and committed.

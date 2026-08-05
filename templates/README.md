@@ -13,6 +13,7 @@ Populate campaign instances only in an external Campaign Record. Reusable refere
 - [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
 - [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) - Weapon Soul personhood, vessel continuity, bond and consent, forms, capabilities, Echoes, compatibility, manifestation, Legacy status, and passage.
 - [Faction Profile Template](FACTION_TEMPLATE.md) - scoped coordination, participation, information, decision routes, capacity, cohesion, action, relationships, and versioned continuity.
+- [Settlement Record Template](SETTLEMENT_TEMPLATE.md) - place identity, populations, ecology, resources, infrastructure, economy, governance, Magic, simulation, knowledge, and continuity.
 
 ## Shared Use Rules
 
