@@ -4485,3 +4485,51 @@ Forecasts, intentions, appointments, deadlines, and prophecies remain conditiona
 ## D-1121 — Historical Discovery Does Not Move the Event
 
 Discovering, narrating, confirming, or integrating an older event creates later information or record changes while preserving the original Occurrence Time and actor-specific Knowledge boundaries.
+
+## D-1122 — Campaign Migration Uses Four Ordered Stages
+
+Every Campaign Migration follows Backup, Audit, Merge, and Validation in order. A target cannot skip a stage because its storage conversion appears simple or automation reports success.
+
+## D-1123 — Backup and Audit Are Read-Only
+
+No source or active Campaign State edit occurs during Backup or Audit. Backup preserves a complete recoverable pre-change source, and Audit produces an evidence map without changing Campaign Canon.
+
+## D-1124 — Repository Campaign Model and Storage Versions Remain Distinct
+
+Repository Version, Campaign Version, Persistence Model Version, and Storage Format Version describe different authorities and compatibility concerns. No newer timestamp or implementation version overrides campaign meaning.
+
+## D-1125 — Every Migration Has a Unique Manifested Identity
+
+One immutable Migration ID links the Backup, Audit Report, Merge Plan, validation, target Campaign Version, and Migration Manifest. Failed, cancelled, interrupted, and rolled-back identifiers are never reused.
+
+## D-1126 — Merge Changes Require Audit Traceability
+
+Merge updates only the affected dependency closure identified by the Audit Report or an attached authorized resolution. Missing values, conflicts, and unrelated records are not rewritten for completeness or convenience.
+
+## D-1127 — Validation Precedes Activation
+
+A candidate Campaign Version becomes active only after required semantic, authority, reference, chronology, identity, Knowledge, Secret, and mechanical checks pass or receive an authorized non-blocking warning disposition.
+
+## D-1128 — Interrupted Targets Never Become Active Implicitly
+
+Until activation completes, the former validated Campaign Version remains authoritative. Partial writes, recent timestamps, and apparently complete candidate records do not establish a new active state.
+
+## D-1129 — Storage Migration Preserves Semantic Ownership
+
+Moving among Markdown, databases, drives, Git, or other storage implementations preserves logical modules, stable identity, references, truth layers, Persistence Levels, versions, chronology, and validation. Storage layout does not become canon.
+
+## D-1130 — Repository Upgrades Do Not Silently Rewrite Campaign Canon
+
+New Repository Canon governs future rule interpretation but changes established Campaign Canon only through explicit compatibility assessment, conversion, adjudication, or authorized retcon that preserves affected consequences and provenance.
+
+## D-1131 — Identity Conversion Requires Evidence Beyond Names
+
+Identity Merge and Identity Split compare stable references, origin, Person Basis, chronology, embodiment, Relationships, location, source, and contradiction. Matching names or labels are never sufficient.
+
+## D-1132 — Rollback Is a Recorded Continuity Operation
+
+Rollback restores a validated ancestor or verified Backup through a new recovery record, preserves the failed target, and treats any play after activation as a continuity conflict rather than silently erasing it.
+
+## D-1133 — Migration Preserves Unknowns and Conflicts
+
+Unknown, disputed, unsupported, inaccessible, and Requires Source Recovery claims retain those states through migration. Target schemas and summaries cannot convert absence into certainty.

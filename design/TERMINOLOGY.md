@@ -4059,3 +4059,59 @@ A validated boundary at which two or more parallel event branches reconcile thei
 ## Correction Event
 
 The append-preserving record of an identified historical error or authorized retcon, including the original claim, source, reason, authorization, replacement scope, affected dependencies, and validation.
+
+## Campaign Migration
+
+A storage-neutral, versioned campaign transformation that follows Backup, Audit, Merge, and Validation to preserve authority, identity, history, uncertainty, secrecy, and causal traceability.
+
+## Repository Version
+
+The exact immutable revision of Eternal Cycle rules and governance against which a Campaign Version is interpreted.
+
+## Campaign Version
+
+One validated Campaign State at a Save Point with unique identity, parentage, active Repository Version, included changes, validation, and lifecycle status.
+
+## Persistence Model Version
+
+The version of the storage-neutral logical architecture, ownership contracts, truth layers, reference semantics, chronology, and validation model used by a campaign.
+
+## Storage Format Version
+
+Implementation metadata identifying a file layout, serialization, database schema, encoding, or application format without authority over campaign meaning.
+
+## Compatibility Assessment
+
+The source-to-target classification Compatible, Compatible With Conversion, Requires Adjudication, Requires Authorized Retcon, Incompatible, or Unknown based on semantic rather than merely technical readability.
+
+## Backup Record
+
+The immutable, recovery-checked account of a complete pre-migration source copy, its identity, versions, scope, storage route, integrity, access, retention, custodian, and known defects.
+
+## Audit Report
+
+The read-only migration artifact that inventories sources, classifies claims, maps source to target, identifies affected records, gaps, conflicts, retcons, and blockers, and proposes validation without changing Campaign Canon.
+
+## Merge Plan
+
+The Audit-traceable, record-level plan for creating, updating, linking, superseding, splitting, merging, archiving, or correcting only the candidate Campaign Version's affected dependency closure.
+
+## Migration Manifest
+
+The append-preserving record joining one Migration ID to its versions, Source, Backup, Audit Report, Merge Plan, updated records, validation, warnings, conflicts, actors, status, activation, and recovery references.
+
+## Migration ID
+
+A unique immutable campaign identifier assigned before Backup and retained across every migration stage, result, failure, cancellation, rollback, and historical reference.
+
+## Identity Merge
+
+A traceable migration operation that combines records only after affirmative evidence establishes one subject while preserving former IDs, sources, and contradictory claims.
+
+## Identity Split
+
+A traceable migration correction that separates distinct subjects incorrectly combined in one record while preserving former identity, provenance, supported attribution, and uncertainty.
+
+## Recovery Candidate
+
+An incomplete, failed, restored, or otherwise non-active Campaign Version retained for inspection or recovery without authority to replace the current validated version.

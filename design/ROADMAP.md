@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define migration and versioning**
+**Current task: Define continuity resolution**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define migration and versioning** unless the project owner explicitly changes the target. Do not begin continuity resolution or later Phase 10 work before migration and versioning are complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define continuity resolution** unless the project owner explicitly changes the target. Do not begin the save update protocol or later Phase 10 work before continuity resolution is complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -234,7 +234,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define relationship memory engine
 - [x] Define research engine
 - [x] Define timeline engine
-- [ ] Define migration and versioning
+- [x] Define migration and versioning
 - [ ] Define continuity resolution
 - [ ] Define save update protocol
 - [ ] Define persistence validation

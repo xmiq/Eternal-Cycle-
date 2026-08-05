@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define migration and versioning**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, and chronology are complete through the Timeline Engine task.
-- Do not begin continuity resolution or any later Phase 10 task until migration and versioning are complete, validated, and committed.
+- **Define continuity resolution**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, and migration are complete through the Migration and Versioning task.
+- Do not begin the save update protocol or any later Phase 10 task until continuity resolution is complete, validated, and committed.
 
 ### Validation Status
 
-- The Timeline Engine checkpoint validates 147 Markdown files and 4,768 relative links with no missing targets or anchors.
+- The Migration and Versioning checkpoint validates 148 Markdown files and 4,788 relative links with no missing targets or anchors.
 - All 12 documentation indexes are present.
-- All 1,121 decision IDs and 1,015 terminology entries are unique.
+- All 1,133 decision IDs and 1,029 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Timeline Engine task.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Migration and Versioning task.
 
 ### Exact Resume Instructions
 
-1. Read every completed persistence owner plus repository version, conversion, validation, and campaign continuity references.
-2. Define the required four-stage migration transaction: Backup, Audit, Merge, and Validation, with no edits during Backup or Audit.
-3. Require unique Migration IDs and a Migration Manifest containing Repository Version, Campaign Version, source, backup, files or records updated, validation, warnings, conflicts, and notes.
-4. Preserve stable identities, provenance, truth layers, temporal history, secrets, unknowns, and rollback boundaries; update only records traceable to the Audit Report.
-5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before continuity resolution.
+1. Read Persistence Authority, Campaign State, Timeline, Migration and Versioning, Uncertainty Handling, Alpha Playtest Rules, and every existing correction or retcon rule.
+2. Define the required conflict response: stop using conflicting narration, inspect Repository rules and Campaign persistence, classify the conflict, resolve through authority, correct affected records, and validate before continuing.
+3. Distinguish narration errors, outdated saves, incomplete information, authorized retcons, and intentional in-world deception; preserve Unknown, Not Yet Verified, Estimated, Requires Source Recovery, and Player Theory labels.
+4. Require mechanically justified numerical changes and prohibit silent progression adjustment, recent-narration preference, invented gap filling, or retroactive loss of meaningful choices.
+5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before the save update protocol.
