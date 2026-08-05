@@ -2087,3 +2087,31 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Character template** remains the sole active task.
 - Do not begin the Species template or later Phase 11 work until the Character template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Character Template
+
+### Completed Roadmap Task
+
+- Character template.
+
+### Files Created
+
+- `templates/README.md`
+- `templates/CHARACTER_TEMPLATE.md`
+
+### Files Modified
+
+- `README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Validation Intent
+
+- The template derives from the Common Record Contract, Campaign State, authority, Truth Layers, Persistence Levels, specialist owners, Save Updates, and Persistence Validation.
+- It separates actor, Incarnation, body, Soul, and control identities; the six capability layers; specialist capabilities; world-bound state; information layers; and current versus persistent claims.
+- It contains placeholders and guidance only. Every populated character remains external campaign data.
+
+### Active Roadmap Task
+
+- **Species template**.
+- The completed Evolution-tree template remains unchanged; do not begin the Skill template before the Species template is complete.

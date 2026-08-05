@@ -27,6 +27,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 ## Rules Map
 
 - [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
+- [`templates/README.md`](templates/README.md) - reusable blank record contracts, ownership boundaries, and validation guidance.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
