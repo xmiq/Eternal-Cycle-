@@ -2212,3 +2212,37 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Faction template**.
 - Do not begin the Settlement template before the Faction template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Faction Template
+
+### Completed Roadmap Task
+
+- Faction template.
+
+### Files Created
+
+- `templates/FACTION_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template records one scoped Faction Version through actual participants, overlapping interests, distributed information, decision and mobilization routes, function-specific capacity, issue-specific cohesion, relationships, action, and continuity.
+- Membership, participation, leadership, representation, authority, legitimacy, consent, compliance, knowledge, resources, and execution remain distinct.
+- World Engine, Institution, Relationship, conflict, and other specialist owners retain their mechanics and current facts.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,081 checked, zero broken.
+- Repository boundary: blank template only; no named faction, objective, participant, resource, or live state added.
+- No universal faction power, alignment, threat, or cohesion score was introduced.
+
+### Active Roadmap Task
+
+- **Settlement template**.
+- Do not begin the Dungeon template before the Settlement template is complete, validated, and committed.
