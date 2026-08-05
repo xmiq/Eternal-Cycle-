@@ -138,6 +138,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Campaign State Model](persistence/CAMPAIGN_STATE_MODEL.md) - authoritative state graph, State Claims, required Read Sets, Session Deltas, numerical provenance, unknowns, and Snapshots.
 - [Relationship Memory Engine](persistence/RELATIONSHIP_MEMORY_ENGINE.md) - persistent identities, meetings, encounters, trust trajectories, hostility, communication, commitments, kinship, recognition, and causal relationship change.
 - [Research Engine](persistence/RESEARCH_ENGINE.md) - Observation through Confirmed Knowledge, qualitative confidence, competing theories, failed inquiry, disproof, loss, and Rediscovery.
+- [Timeline Engine](persistence/TIMELINE_ENGINE.md) - stable events, honest temporal precision, five distinct chronologies, parallel ordering, calendar conversion, Time Skips, Age boundaries, and historical correction.
 
 ## Authority and Scope
 

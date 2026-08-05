@@ -14,8 +14,9 @@ It is a canonical game system, not a populated campaign, save-file format, stora
 6. [Campaign State Model](CAMPAIGN_STATE_MODEL.md) defines the authoritative current-state graph, claim contract, required Read Sets, Session Deltas, numerical provenance, unknown handling, and Snapshot boundaries.
 7. [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) defines persistent participant identities, first and latest meetings, important encounters, directional dimensions, trust trajectories, commitments, recognition, and causal relationship change.
 8. [Research Engine](RESEARCH_ENGINE.md) defines iterative Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with qualitative confidence, competing theories, loss, disproof, and Rediscovery.
+9. [Timeline Engine](TIMELINE_ENGINE.md) defines stable events, temporal coordinates and precision, World and Campaign History, Session Logs, Personal and Soul chronologies, parallel ordering, Time Skips, Age boundaries, and source-preserving correction.
 
-Later Phase 10 documents will define chronology, migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
+Later Phase 10 documents will define migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
 
 ## Foundational Boundary
 

@@ -3991,3 +3991,71 @@ A theory whose exact claim or required assumptions have been defeated by evidenc
 ## Rediscovery
 
 A new in-world Research process that recovers, reconstructs, reinterprets, or independently reaches lost or inaccessible knowledge through present access, methods, verification, and provenance.
+
+## Timeline Engine
+
+The canonical persistence system for stable event identity, honest temporal claims, distinct world, campaign, Session, personal, and Soul chronologies, parallel ordering, and source-preserving historical correction.
+
+## Timeline Event
+
+A stable temporal record for one material occurrence, process, transition, decision, finding, correction, or bounded state change owned by the system that established it.
+
+## Temporal Coordinate
+
+One time associated with an event's occurrence, effect, recording, discovery, narration, or integration, kept distinct from the others rather than collapsed into one date.
+
+## Occurrence Time
+
+The moment or interval in which an event or process happened in the world, expressed with its source calendar and honest Temporal Precision.
+
+## Effective Time
+
+The moment or interval from which an established rule, office, obligation, condition, or other result applies, which may differ from its cause, recording, or discovery.
+
+## Record Time
+
+The time at which a source or persistence record was created, distinct from the time of the event it describes.
+
+## Discovery Time
+
+The time at which a specific actor or information holder first learned or recovered information about an event, without moving the event's Occurrence Time.
+
+## Narration Time
+
+The point in Session order when an event or claim was presented to participants, which may differ from both world chronology and discovery.
+
+## Integration Time
+
+The point at which an established event or change entered validated Campaign State, without becoming the event's Occurrence Time by convenience.
+
+## Temporal Precision
+
+The claim-specific reliability of temporal placement expressed as Exact, Bounded, Approximate, Relative, Disputed, or Unknown.
+
+## World History
+
+The chronology of established material world events and processes regardless of player presence, causation, observation, or Knowledge.
+
+## Campaign History
+
+The append-preserving chronology of material established changes relevant to campaign continuity, corrected only through a source-preserving authorized retcon.
+
+## Session Log
+
+The persistence record of play order, loaded authority, scenes, declarations, adjudications, revelations, Session Deltas, unresolved claims, and Save Point outcome for one Session.
+
+## Personal Chronology
+
+The chronology of one actor's embodied continuity across one incarnation or another valid personal span without automatically merging with Soul-level or world-level history.
+
+## Soul Chronology
+
+The chronology of established Soul-level continuity across Final Death, Life Reconciliation, Interlife, Reincarnation, incarnations, and explicitly Soul-owned events.
+
+## Synchronization Point
+
+A validated boundary at which two or more parallel event branches reconcile their current states, temporal precision, communication delays, dependencies, and unresolved conflicts without sharing unsupported Knowledge.
+
+## Correction Event
+
+The append-preserving record of an identified historical error or authorized retcon, including the original claim, source, reason, authorization, replacement scope, affected dependencies, and validation.

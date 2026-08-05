@@ -72,7 +72,7 @@ Campaign state may include:
 | --- | --- |
 | **Rules profile** | Repository revision, adopted optional premises, active Provisional Rules, and conversion notes |
 | **World state** | Current conditions, geography, ecology, resources, institutions, threats, and unresolved causal pressures represented under [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md) |
-| **Timeline** | Dated events, elapsed time, time skips, Interlife periods, Age changes, and causal ordering |
+| **[Timeline](../persistence/TIMELINE_ENGINE.md)** | Dated events, elapsed time, time skips, Interlife periods, Age changes, and causal ordering |
 | **Reincarnations** | Completed incarnations, Final Deaths, Life Reconciliation outcomes, Interlife, and embodiment history |
 | **Current bodies** | Species, form, maturation, condition, injuries, access, expression, and present limitations |
 | **Soul state** | Soul Imprints, Soul Depth, Soul Resonance, Soul Echoes, Soul Titles, Soul Constellations, Retained Instincts, Soul Integrity, and valid access conditions |
@@ -480,3 +480,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md)
 - [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md)
 - [Research Engine](../persistence/RESEARCH_ENGINE.md)
+- [Timeline Engine](../persistence/TIMELINE_ENGINE.md)

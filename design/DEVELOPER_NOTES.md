@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define timeline engine**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, and research are complete and committed through the Research Engine task.
-- Do not begin migration and versioning or any later Phase 10 task until the timeline engine is complete, validated, and committed.
+- **Define migration and versioning**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, and chronology are complete through the Timeline Engine task.
+- Do not begin continuity resolution or any later Phase 10 task until migration and versioning are complete, validated, and committed.
 
 ### Validation Status
 
-- The Research Engine checkpoint validates 146 Markdown files and 4,739 relative links with no missing targets or anchors.
+- The Timeline Engine checkpoint validates 147 Markdown files and 4,768 relative links with no missing targets or anchors.
 - All 12 documentation indexes are present.
-- All 1,108 decision IDs and 998 terminology entries are unique.
+- All 1,121 decision IDs and 1,015 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Research Engine task.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Timeline Engine task.
 
 ### Exact Resume Instructions
 
-1. Read the completed persistence owners, World Engine chronology references, Reincarnation and Age rules, Time Skip and Age Transition procedures, and established History terminology.
-2. Define separate world history, campaign history, Session Log, personal chronology, and Soul chronology with stable event identity, temporal uncertainty, parallel events, time skips, World Resets, and Age transitions.
-3. Keep Campaign History append-only except for factual correction through an authorized retcon, and distinguish event occurrence, record creation, discovery, narration, and integration times.
-4. Preserve unknown dates, competing calendars, causal ordering, and concurrent events without inventing precision or allowing chronology to override specialist owners.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to migration and versioning.
+1. Read every completed persistence owner plus repository version, conversion, validation, and campaign continuity references.
+2. Define the required four-stage migration transaction: Backup, Audit, Merge, and Validation, with no edits during Backup or Audit.
+3. Require unique Migration IDs and a Migration Manifest containing Repository Version, Campaign Version, source, backup, files or records updated, validation, warnings, conflicts, and notes.
+4. Preserve stable identities, provenance, truth layers, temporal history, secrets, unknowns, and rollback boundaries; update only records traceable to the Audit Report.
+5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before continuity resolution.

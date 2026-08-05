@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define timeline engine**
+**Current task: Define migration and versioning**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define timeline engine** unless the project owner explicitly changes the target. Do not begin migration and versioning or later Phase 10 work before the timeline engine is complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define migration and versioning** unless the project owner explicitly changes the target. Do not begin continuity resolution or later Phase 10 work before migration and versioning are complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -233,7 +233,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define campaign state model
 - [x] Define relationship memory engine
 - [x] Define research engine
-- [ ] Define timeline engine
+- [x] Define timeline engine
 - [ ] Define migration and versioning
 - [ ] Define continuity resolution
 - [ ] Define save update protocol

@@ -4433,3 +4433,55 @@ Migration retains stable Research, claim, source, Evidence, theory, investigator
 ## D-1108 — Research Does Not Grant Capability or Adoption
 
 Knowing a confirmed claim does not grant the Skill, Development, embodiment, resources, authority, safety, production, maintenance, social adoption, or magical access needed to apply it. Each specialist owner continues to govern practical use and consequence.
+
+## D-1109 — Five Chronologies Remain Distinct
+
+World History, Campaign History, Session Log, Personal Chronology, and Soul Chronology are linked views with different subjects and purposes. No chronology silently substitutes for another or becomes a universal history.
+
+## D-1110 — Timeline Events Retain Stable Identity
+
+A material event keeps one stable Event ID across chronologies, calendars, summaries, discoveries, narration, migration, and correction. Different witnesses or names do not duplicate the occurrence.
+
+## D-1111 — Temporal Coordinates Remain Separate
+
+Occurrence, effective, record, discovery, narration, and integration times describe different relationships to an event. Convenience, delayed discovery, or Session order cannot collapse them into one date.
+
+## D-1112 — Temporal Precision Must Remain Honest
+
+Exact, Bounded, Approximate, Relative, Disputed, and Unknown temporal claims retain their supported precision and source calendar. Missing precision is never invented to make a timeline sort neatly.
+
+## D-1113 — Chronology Does Not Establish Causation
+
+Before, after, simultaneity, overlap, and temporal proximity do not prove cause. Causal links require support from the owning system, adjudication, or evidence and remain distinct from display order.
+
+## D-1114 — Campaign History Is Append-Preserving
+
+Material Campaign History is append-only except for factual correction through an authorized retcon. Correction preserves the original claim, authorization, reason, replacement scope, dependencies, and unaffected consequences.
+
+## D-1115 — Session Order Is Not World Order
+
+The Session Log records play, adjudication, revelation, and integration order. Flashbacks, parallel scenes, recovered history, and corrections keep their actual or uncertain Occurrence Times.
+
+## D-1116 — Parallel Events Preserve Information Boundaries
+
+Concurrent world branches reconcile through explicit Synchronization Points using valid temporal, communication, and dependency constraints. Synchronization does not grant actors Knowledge of unobserved branches.
+
+## D-1117 — Time Skips Compress Narration Rather Than Causality
+
+A Time Skip records an actual interval, material parallel changes, interruptions, and a Causal Bridge. It does not erase intervening history or grant automatic progress, recovery, production, Research, relationship change, or success.
+
+## D-1118 — Age Transitions and World Resets Preserve Chronology
+
+Age boundaries and Reset events retain evidence, scope, survivorship, causal traces, calendar discontinuities, uncertainty, and prior history. Neither creates a clean timeline or one mandatory global date.
+
+## D-1119 — Soul Chronology Links Lives Without Collapsing Them
+
+Soul Chronology links Final Death, Life Reconciliation, Interlife, Reincarnation, and new Embodiment while each incarnation retains its own Personal Chronology and world-bound state remains with its owners.
+
+## D-1120 — Plans and Prophecies Are Not Completed History
+
+Forecasts, intentions, appointments, deadlines, and prophecies remain conditional records until established causes produce an event. The arrival of an expected date does not guarantee the predicted outcome.
+
+## D-1121 — Historical Discovery Does Not Move the Event
+
+Discovering, narrating, confirming, or integrating an older event creates later information or record changes while preserving the original Occurrence Time and actor-specific Knowledge boundaries.
