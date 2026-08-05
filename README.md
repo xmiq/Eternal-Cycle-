@@ -106,4 +106,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Validation**, and the sole current task is **Character template**.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Character template**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.

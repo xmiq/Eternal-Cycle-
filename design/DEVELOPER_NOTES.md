@@ -2061,3 +2061,29 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 3. Derive the unpopulated Character template from the Structured Persistence Architecture, Campaign State Model, Truth Layers, Persistence Levels, Save Update Protocol, Persistence Validation, and Campaign Persistence Integration contract.
 4. Preserve specialist ownership, stable identities, typed references, information boundaries, storage neutrality, and the prohibition on campaign data.
 5. Do not begin the Species template or any later task until the Character template is complete, linked, internally consistent, validated, and committed.
+
+## Phase 11 Scope Alignment
+
+The project owner renamed the final planned development phase **Phase 11 — Templates and Repository Standardization** and expanded its documentation-only scope. The phase now includes supplemental template coverage, implementation-neutral AI operating procedures, a Future Revisions register, explicit cross-reference ownership, complete repository validation, and a gameplay-validation readiness checkpoint.
+
+### Governance Outcome
+
+- Phase 11 cannot add gameplay mechanics or redesign Phases 0 through 10.
+- The former Version 1 release checklist is replaced by a repository-validation and gameplay-validation readiness checklist.
+- Successful completion ends at **Feature Complete — Gameplay Validation Ongoing** rather than Version 1.0 or another release status.
+- Blank templates remain repository material; every populated use remains external campaign data.
+
+### Initial Audit Baseline
+
+- Working tree clean before the governance update.
+- 152 Markdown files and 4,951 relative links; no missing file target found.
+- No orphaned canonical document found.
+- 1,170 unique decision IDs and 1,058 unique terminology entries; no duplicate found.
+- Two templates exist: the generic system template and completed evolution-tree template.
+- `docs/ai/` and `design/FUTURE_REVISIONS.md` do not yet exist.
+- Explicit owner, dependency, extension, and consumer metadata is not yet consistent across all canonical documents; the dedicated Phase 11 cross-reference audit owns that correction.
+
+### Active Roadmap Task
+
+- **Character template** remains the sole active task.
+- Do not begin the Species template or later Phase 11 work until the Character template is complete, validated, and committed.

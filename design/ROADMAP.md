@@ -2,11 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 11 — Templates and Validation**
+**Current phase: Phase 11 — Templates and Repository Standardization**
 
 **Current task: Character template**
 
 Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Character template** unless the project owner explicitly changes the target. Do not begin the Species template or any later Phase 11 task before the Character template is complete.
+
+Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
 Phases 1 through 10 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -244,7 +246,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 
 Phase 10 is complete only when continuity, authority, truth layers, persistence lifetimes, modular campaign state, relationship memory, research, chronology, migration, conflict correction, save updates, and validation are defined, linked, and internally consistent; the structured persistence model is authoritative for campaign state while remaining storage-neutral; the World Engine owns simulated change and the GM Toolkit operates through persistence without replacing either; missing information remains unknown; numerical changes require established mechanical causes; campaign history remains traceable; migration requires backup, audit, merge, and validation; Repository Canon and campaign data remain separate; no populated campaign record enters the repository; no blocking questions remain; and all links, numbering, navigation, terminology, ownership boundaries, and continuity safeguards validate.
 
-## Phase 11 — Templates and Validation
+## Phase 11 — Templates and Repository Standardization
 
 - [ ] Character template
 - [ ] Species template
@@ -256,12 +258,16 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [ ] Dungeon template
 - [ ] Soul Avatar template
 - [ ] Gate-event template
+- [ ] Complete supplemental template coverage
+- [ ] Add AI operating procedures
+- [ ] Establish Future Revisions register
+- [ ] Cross-reference and ownership audit
 - [ ] Rule consistency audit
 - [ ] Terminology audit
-- [ ] Internal-link audit
+- [ ] Internal-link and navigation audit
 - [ ] Balance review
-- [ ] Version 1 release checklist
+- [ ] Repository validation and gameplay-validation readiness checklist
 
 ### Exit Criteria
 
-Phase 11 is complete only when every listed reusable template and validation task is complete, reviewed, linked, terminology-consistent, free of campaign data, and compatible with the completed canonical systems; repository-wide consistency, terminology, links, balance, and release readiness have been audited; and the Version 1 release checklist passes without unresolved blocking questions.
+Phase 11 is complete only when every listed reusable template, operating procedure, governance record, standardization task, and validation task is complete, reviewed, linked, terminology-consistent, free of campaign data, and compatible with the completed canonical systems; all major document families have clear owners, dependencies, extensions, and consumers; repository-wide consistency, terminology, links, navigation, ownership, balance risks, and gameplay-validation readiness have been audited; no unresolved blocking question remains; and the repository is marked **Feature Complete — Gameplay Validation Ongoing** without making a release claim.

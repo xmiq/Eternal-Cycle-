@@ -4681,3 +4681,19 @@ A Warning may be carried only with authorized scope, owner, rationale, risk, par
 ## D-1170 — Incremental Validation Does Not Replace Full Audit
 
 Save, load, migration, and continuity checks validate their declared scopes. Periodic full audits remain necessary to detect cross-version drift, duplication, orphaning, long-term chronology defects, and information-boundary erosion.
+
+## D-1171 — Phase 11 Standardizes Existing Canon
+
+Phase 11 may create blank templates, implementation-neutral operating procedures, navigation, validation tooling, ownership maps, and documentation corrections. It may not add gameplay mechanics, redesign a completed phase, or make a template field into a new rule.
+
+## D-1172 — Templates Are Unpopulated Contracts
+
+Repository templates describe storage-neutral fields, ownership, validation, and cross-references derived from existing canonical owners. A populated use of a template is campaign data and remains outside the repository; completing a field cannot create truth, capability, authority, progression, or an exception to canon.
+
+## D-1173 — Feature Complete Is Not a Release Declaration
+
+Completing Phase 11 establishes **Feature Complete — Gameplay Validation Ongoing** status. It does not declare Version 1.0, Release Candidate, Stable, Production Ready, balance completion, or freedom from future revision.
+
+## D-1174 — Future Revisions Require Evidence Before Canon
+
+The Future Revisions register records issues, affected systems, gameplay impact, suggested future phase, priority, and evidence needs. An entry is non-canonical design tracking and changes no rule until separately authorized, implemented, reviewed, and validated.
