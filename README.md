@@ -123,4 +123,8 @@ The validator checks local Markdown links and anchors, navigation and registry c
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Repository validation and gameplay-validation readiness checklist**. The completed [Balance Review](design/audits/BALANCE_REVIEW.md) routes remaining evidence-dependent risks without changing mechanics. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+**Repository Status: Feature Complete — Gameplay Validation Ongoing**
+
+The repository foundation and Phases 1 through 11 are complete and reviewed. There is no active development task. The [Repository Validation and Gameplay-Validation Readiness Report](design/audits/GAMEPLAY_VALIDATION_READINESS.md) records the completed checks and the handoff into long-term external playtesting.
+
+Feature complete means the planned rules, procedures, templates, navigation, and validation framework exist. It does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Gameplay evidence may enter [Future Revisions](design/FUTURE_REVISIONS.md), but completed mechanics remain closed until the project owner authorizes a new roadmap.

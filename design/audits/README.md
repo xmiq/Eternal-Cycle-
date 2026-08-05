@@ -9,6 +9,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 - [Terminology Audit](TERMINOLOGY_AUDIT.md) - canonical vocabulary, neighboring concepts, deprecated labels, and documentation spelling.
 - [Internal-Link and Navigation Audit](LINK_AND_NAVIGATION_AUDIT.md) - link and anchor integrity, index coverage, registry coverage, orphan detection, and reusable validation.
 - [Balance Review](BALANCE_REVIEW.md) - contextual balance, progression incentives, optionality, cross-system stress, and gameplay-evidence routing.
+- [Repository Validation and Gameplay-Validation Readiness](GAMEPLAY_VALIDATION_READINESS.md) - final Phase 11 completion gates, repository statistics, external-playtest handoff, and non-release status.
 
 ## Audit Boundary
 

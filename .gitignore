@@ -15,3 +15,6 @@ campaigns/
 saves/
 world-state/
 player-data/
+
+# Generated repository archive
+/Eternal Cycle.zip

@@ -2,15 +2,15 @@
 
 ## Current Target
 
-**Current phase: Phase 11 — Templates and Repository Standardization**
+**Current phase: Long-term gameplay validation**
 
-**Current task: Repository validation and gameplay-validation readiness checklist**
+**Current task: No active development task; gather external gameplay evidence**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, cross-reference and ownership, rule consistency, terminology, internal navigation, and balance review are complete. Work only on **Repository validation and gameplay-validation readiness checklist** unless the project owner explicitly changes the target. Do not declare a release, Version 1.0, Release Candidate, Stable, or Production Ready state.
+**Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
+Phases 0 through 11 are complete and reviewed. No development phase or implementation task is active. Gameplay findings may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not reopen a completed phase, implement a candidate, or infer a new roadmap without explicit project-owner authorization.
 
-Phases 1 through 10 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
 The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
@@ -266,7 +266,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Terminology audit
 - [x] Internal-link and navigation audit
 - [x] Balance review
-- [ ] Repository validation and gameplay-validation readiness checklist
+- [x] Repository validation and gameplay-validation readiness checklist
 
 ### Exit Criteria
 

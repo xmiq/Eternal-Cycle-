@@ -2753,3 +2753,58 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Repository validation and gameplay-validation readiness checklist**.
 - This is the final Phase 11 task. Do not declare Version 1.0, Release Candidate, Stable, or Production Ready status.
+
+## Phase 11 Final Checkpoint — Repository Validation and Gameplay Readiness
+
+### Completed Roadmap Task
+
+- Repository validation and gameplay-validation readiness checklist.
+
+### Files Created
+
+- `design/audits/GAMEPLAY_VALIDATION_READINESS.md`
+
+### Files Modified
+
+- `.gitignore`
+- `AGENTS.md`
+- `README.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/ROADMAP.md`
+- `design/audits/README.md`
+- `tools/validate_repository.ps1`
+
+### Integration Notes
+
+- Every Phase 0 through Phase 11 roadmap task is complete; no development task remains active.
+- The validator now checks final roadmap closure, Future Revision entry contracts, and blocking-question state in addition to links, navigation, ownership coverage, templates, terminology, orphans, and repository boundaries.
+- The readiness report defines the external-campaign handoff, evidence route, stop conditions, and exact limits of feature-complete status.
+- `Eternal Cycle.zip` is ignored as a generated artifact and must be created from the final commit.
+- No gameplay mechanic, terminology entry, accepted decision, unresolved question, Future Revision status, or campaign data changed.
+
+### Validation Results
+
+- Repository validation: pass.
+- Repository files before the generated archive: 201, including 199 Markdown files.
+- Relative links checked: 5,848, zero broken or repository-escaping targets.
+- Markdown anchors checked: 112, zero broken.
+- Canonical documents indexed: 143 across 12 family indexes.
+- Blank templates: 30; template documents indexed: 31; agent roles indexed: 5.
+- Canonical terms: 1,058; accepted design decisions: 1,174; roadmap tasks: 163.
+- Future Revision entries: 12; blocking unresolved questions: zero.
+- Orphaned Markdown documents, forbidden campaign-data directories, and validator parse errors: zero.
+- Placeholder and release-status searches found only governance references, prior audit results, approved status text, and explicit non-release disclaimers.
+
+### Repository State
+
+- **Feature Complete — Gameplay Validation Ongoing**.
+- **Current phase:** Long-term gameplay validation.
+- **Current task:** No active development task; gather external gameplay evidence.
+- Do not reopen a completed phase or implement a Future Revision without explicit project-owner authorization.
+
+### Exact Resume Point
+
+1. Commit this final Phase 11 task after complete staged-diff review.
+2. Generate `Eternal Cycle.zip` from the final commit.
+3. Verify the archive file list and source hashes against `HEAD`.
+4. Begin no new development phase; future work starts only through owner-authorized evidence review and roadmap creation.

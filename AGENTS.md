@@ -20,6 +20,8 @@ Before making changes:
 8. Inspect the relevant existing documents.
 9. Work only on the named current task unless the project owner explicitly changes it.
 
+When the roadmap reports **Feature Complete — Gameplay Validation Ongoing** and names no active development task, do not infer implementation work from playtest feedback. Record qualifying evidence in `design/FUTURE_REVISIONS.md` and wait for an owner-authorized roadmap before changing completed mechanics.
+
 After making changes:
 
 1. Update the task status in `design/ROADMAP.md`.

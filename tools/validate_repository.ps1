@@ -236,21 +236,77 @@ $roadmapPath = Join-Path $rootPath 'design/ROADMAP.md'
 $roadmap = Get-Content -Raw -LiteralPath $roadmapPath
 $phaseMatches = [regex]::Matches($roadmap, '(?m)^\*\*Current phase: (.+)\*\*$')
 $taskMatches = [regex]::Matches($roadmap, '(?m)^\*\*Current task: (.+)\*\*$')
+$roadmapStatuses = [regex]::Matches($roadmap, '(?m)^- \[(.)\] ')
 if ($phaseMatches.Count -ne 1) {
     Add-ValidationError "Roadmap must contain exactly one Current phase declaration."
 }
 if ($taskMatches.Count -ne 1) {
     Add-ValidationError "Roadmap must contain exactly one Current task declaration."
 }
-foreach ($status in [regex]::Matches($roadmap, '(?m)^- \[(.)\] ')) {
+foreach ($status in $roadmapStatuses) {
     if (' ', 'x', '~', '!' -notcontains $status.Groups[1].Value) {
         Add-ValidationError "Invalid roadmap status token: [$($status.Groups[1].Value)]"
     }
 }
-if ($taskMatches.Count -eq 1 -and $roadmap -notmatch 'Repository Status: Feature Complete — Gameplay Validation Ongoing') {
+$finalRepositoryState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
+if ($finalRepositoryState) {
+    $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -ne 'x' })
+    if ($unfinished.Count -gt 0) {
+        Add-ValidationError "Feature-complete roadmap contains $($unfinished.Count) unfinished checklist item(s)."
+    }
+    if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Long-term gameplay validation') {
+        Add-ValidationError "Feature-complete roadmap must identify Long-term gameplay validation as the current phase."
+    }
+}
+elseif ($taskMatches.Count -eq 1) {
     $task = [regex]::Escape($taskMatches[0].Groups[1].Value)
     if ($roadmap -notmatch "(?m)^- \[[ ~!]\] $task$") {
         Add-ValidationError "Current roadmap task is not an open, partial, or blocked checklist item."
+    }
+}
+
+$unresolvedPath = Join-Path $rootPath 'design/UNRESOLVED_QUESTIONS.md'
+$unresolved = Get-Content -Raw -LiteralPath $unresolvedPath
+$blockingSection = [regex]::Match($unresolved, '(?ms)^## Blocking\s*(?<body>.*?)(?=^## )')
+if (-not $blockingSection.Success) {
+    Add-ValidationError "Unresolved Questions lacks a Blocking section."
+}
+elseif ($blockingSection.Groups['body'].Value -match '(?m)^- ') {
+    Add-ValidationError "Blocking unresolved questions remain."
+}
+
+$futurePath = Join-Path $rootPath 'design/FUTURE_REVISIONS.md'
+$future = Get-Content -Raw -LiteralPath $futurePath
+$openRegister = [regex]::Match($future, '(?ms)^## Open Register\s*(?<body>.*?)(?=^## Roadmapped)')
+$futureEntries = @()
+if (-not $openRegister.Success) {
+    Add-ValidationError "Future Revisions lacks an Open Register section."
+}
+else {
+    $futureEntries = @([regex]::Matches(
+        $openRegister.Groups['body'].Value,
+        '(?ms)^### (?<id>FR-[0-9]{3}) - .+?(?=^### FR-[0-9]{3} - |\z)'
+    ))
+    $futureIds = @($futureEntries | ForEach-Object { $_.Groups['id'].Value })
+    foreach ($duplicate in $futureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
+        Add-ValidationError "Duplicate Future Revision ID: $($duplicate.Name)"
+    }
+    $requiredFutureFields = @(
+        'Status',
+        'Issue',
+        'Affected systems',
+        'Gameplay impact',
+        'Evidence needed',
+        'Suggested future phase',
+        'Priority'
+    )
+    foreach ($entry in $futureEntries) {
+        foreach ($field in $requiredFutureFields) {
+            $escapedField = [regex]::Escape($field)
+            if ($entry.Value -notmatch "(?m)^- \*\*$escapedField`:\*\* .+") {
+                Add-ValidationError "$($entry.Groups['id'].Value) lacks required field: $field"
+            }
+        }
     }
 }
 
@@ -276,5 +332,8 @@ Write-Output "Documentation family indexes: $($familyIndexes.Count)"
 Write-Output "Templates indexed: $($templateFiles.Count)"
 Write-Output "Agent roles indexed: $($agentFiles.Count)"
 Write-Output "Canonical terms checked: $($termHeadings.Count)"
+Write-Output "Roadmap tasks checked: $($roadmapStatuses.Count)"
+Write-Output "Future Revision entries checked: $($futureEntries.Count)"
+Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'
