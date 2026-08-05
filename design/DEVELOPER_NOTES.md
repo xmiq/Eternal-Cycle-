@@ -2177,3 +2177,38 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Soul Weapon template**.
 - Do not begin the Faction template before the Soul Weapon template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Soul Weapon Template
+
+### Completed Roadmap Task
+
+- Soul Weapon template.
+
+### Files Created
+
+- `templates/SOUL_WEAPON_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/CHARACTER_TEMPLATE.md`
+- `templates/README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template separates Weapon Soul, vessel, Bonded Soul, bond, form, Echo, Manifestation route, Compatibility Profile, custody, and Relationship identities.
+- Dormancy, Awakening, Soul Intertwining, Evolution, Weapon Echoes, Manifestation, Legacy Status, unconventional topology, and Reincarnation passage remain owned by their completed specialist rules.
+- Consent, trust, cooperation, compatibility, bond status, legal ownership, and physical custody remain independent facts.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,063 checked, zero broken.
+- Repository boundary: blank template only; no Soul Weapon, wielder, inventory, or live state added.
+- Phase 1 through Phase 10 rules remain unchanged.
+
+### Active Roadmap Task
+
+- **Faction template**.
+- Do not begin the Settlement template before the Faction template is complete, validated, and committed.

@@ -11,6 +11,7 @@ Populate campaign instances only in an external Campaign Record. Reusable refere
 - [Species Reference Template](SPECIES_TEMPLATE.md) - ordinary species or form range, embodiment, lifecycle, traits, ecology, variation, and specialist interfaces.
 - [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) - reusable species-route structure governed by Monster Evolution.
 - [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
+- [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) - Weapon Soul personhood, vessel continuity, bond and consent, forms, capabilities, Echoes, compatibility, manifestation, Legacy status, and passage.
 
 ## Shared Use Rules
 

@@ -246,7 +246,7 @@ Soul persistence never implies current access, bodily expression, Skill mastery,
 - **Weapon Echoes, Evolution, or Manifestation:** `<specialist owner references>`
 - **Communication, trust, refusal, and unresolved issues:** `<Relationship records>`
 
-Never list a Weapon Soul as owned equipment or copy its capabilities into the character's personal Development.
+Use the [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) for each linked partnership. Never list a Weapon Soul as owned equipment or copy its capabilities into the character's personal Development.
 
 ## Relationships, Recognition, and Obligations
 

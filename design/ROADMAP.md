@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Soul Weapon template**
+**Current task: Faction template**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character, Species, Evolution-tree, and Skill templates are complete. Work only on **Soul Weapon template** unless the project owner explicitly changes the target. Do not begin the Faction template or any later incomplete Phase 11 task before the Soul Weapon template is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character, Species, Evolution-tree, Skill, and Soul Weapon templates are complete. Work only on **Faction template** unless the project owner explicitly changes the target. Do not begin the Settlement template or any later incomplete Phase 11 task before the Faction template is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -252,7 +252,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Species template
 - [x] Evolution-tree template
 - [x] Skill template
-- [ ] Soul Weapon template
+- [x] Soul Weapon template
 - [ ] Faction template
 - [ ] Settlement template
 - [ ] Dungeon template
