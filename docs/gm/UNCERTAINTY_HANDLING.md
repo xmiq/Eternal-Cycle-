@@ -411,7 +411,7 @@ Do not permit unlimited rerolls against an unchanged state when failure has alre
 
 ### Random Tables and Generators
 
-A table or generator supplies candidates or resolves a declared branch only within its scope. It does not establish canon, bypass eligibility, replace actor choice, or guarantee suitability. Later Phase 9 generator documents preserve this rule.
+A table or generator supplies candidates or resolves a declared branch only within its scope. It does not establish canon, bypass eligibility, replace actor choice, or guarantee suitability. Every dedicated [GM generator](README.md) preserves this rule.
 
 ## Fair Hidden Information
 

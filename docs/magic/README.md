@@ -16,7 +16,7 @@ Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this se
 6. [Alchemy](ALCHEMY.md) defines controlled magical material processes, Reagent provenance and properties, Recipes, stages, Process Windows, Batches, Yield, application, toxicity, ecology, and failure.
 7. [Divine Magic](DIVINE_MAGIC.md) defines source-bound divine relationships, Domains, Jurisdictions, Access, Mandates, Covenants, petitions, responses, blessings, miracles, rites, agency, evidence, withdrawal, and failure.
 8. [Forbidden Magic](FORBIDDEN_MAGIC.md) defines scoped magical restrictions, underlying mechanics, hazard assessment, protected interests, authority, controlled practice, restricted knowledge, research, enforcement, review, persistence, and safeguards.
-9. [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md) defines how established magical causes create bounded, distributed, delayed, and persistent world consequences without implementing Phase 8's detailed simulation domains.
+9. [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md) defines how established magical causes create bounded, distributed, delayed, and persistent world consequences without duplicating the detailed simulation domains owned by the [World Engine](../world-engine/README.md).
 
 [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) owns capability change across these specialist systems. Together, these documents form the complete Phase 7 Magic framework.
 

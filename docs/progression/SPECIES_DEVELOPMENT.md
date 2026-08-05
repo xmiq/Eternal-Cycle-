@@ -113,7 +113,7 @@ A spider life's attention to tension may survive. Spinnerets, web silk, leg-born
 
 ### Species Development and Monster Evolution
 
-Species Development establishes the shared concepts and boundaries that any evolution system must respect. Monster Evolution in Phase 4 will define:
+Species Development establishes the shared concepts and boundaries that any evolution system must respect. The completed [Monster Evolution](../monster-evolution/README.md) framework defines:
 
 - evolution branches and stage structures;
 - visible and hidden requirements;
@@ -252,7 +252,7 @@ Every branch must define gains, losses, changed needs, Body Compatibility, ident
 
 Artificial Modification may add, replace, remove, reprogram, or connect structures through technology, craft, alchemy, magic, or constructed bodies.
 
-The modification retains its maker, maintenance, resource, interface, failure, and compatibility rules. Installation does not make it inherited, soul-owned, or mastered. A sufficiently integrated constructed lineage may later qualify as a species under rules that Phase 4 or the World Engine establishes.
+The modification retains its maker, maintenance, resource, interface, failure, and compatibility rules. Installation does not make it inherited, soul-owned, or mastered. A sufficiently integrated constructed lineage may qualify as a species only through the applicable [Monster Evolution](../monster-evolution/README.md) and [World Engine](../world-engine/README.md) rules.
 
 ### Divine Alteration
 
@@ -378,7 +378,7 @@ This document does not define:
 - damage, combat actions, natural-weapon formulas, or threat ratings;
 - a route for purchasing arbitrary Species Traits with retained progression.
 
-Phase 4 must define evolution branches and requirements inside these boundaries. It must preserve current embodiment, provenance, human and monster distinction, ecological consequence, meaningful tradeoffs, anti-farming rules, and the ownership of every supporting Track.
+The [Monster Evolution](../monster-evolution/README.md) framework defines evolution branches and requirements inside these boundaries. It preserves current embodiment, provenance, human and monster distinction, ecological consequence, meaningful tradeoffs, anti-farming rules, and the ownership of every supporting Track.
 
 ## GM Procedure
 
@@ -395,7 +395,7 @@ When Species Development or a body-changing claim matters:
 9. test for duplicate traits, rewards, actions, and recursive reincarnation gains;
 10. assess ecological, social, and world consequences as well as personal capability;
 11. communicate uncertainty and variation without treating a species label as a complete profile;
-12. defer branches, hidden requirements, rare forms, and evolution generation to Phase 4.
+12. route branches, hidden requirements, rare forms, and evolution generation to their [Monster Evolution](../monster-evolution/README.md) owners.
 
 ## Worked Examples
 
@@ -415,7 +415,7 @@ Gills, pressure tolerance, fins, lateral-line senses, and aquatic evolution rout
 
 A dragon soul reincarnates as a small, physically weak monster. It remembers aerial scale, breath timing, territory, and magical pressure but has no wings, dragon mass, mature Channels, or breath organ.
 
-Those histories may guide training or later qualify as evidence for a compatible hidden route if Phase 4 defines one. They do not make the current monster secretly dragon-strength or guarantee dragon evolution.
+Those histories may guide training or qualify as evidence for a compatible route under [Hidden Evolution Conditions](../monster-evolution/HIDDEN_EVOLUTION_CONDITIONS.md). They do not make the current monster secretly dragon-strength or guarantee dragon evolution.
 
 ### Monster Gains Social Development
 

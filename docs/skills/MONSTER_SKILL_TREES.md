@@ -4,7 +4,7 @@
 
 This document defines how monster learned capabilities form through species embodiment, Current Instincts, ecology, behavior, cognition, social learning, magical traits, and individual experience.
 
-It establishes monster-native Skill structures without treating monsters as incomplete humans or prematurely defining the biological evolution branches reserved for Phase 4.
+It establishes monster-native Skill structures without treating monsters as incomplete humans or defining the biological routes owned by [Monster Evolution](../monster-evolution/README.md).
 
 ## Core Rule
 
@@ -55,7 +55,7 @@ Monster capability often involves several systems at once. Each effect keeps one
 | **Current Instinct** | Current species, body, and upbringing | Conscious technique, adaptability, perfect information, or compulsion |
 | **Learned Skill** | Skill Development and this Skill tree | Missing anatomy, a new species trait, or automatic biological change |
 | **Adaptive Skill** | [Adaptive Skills](ADAPTIVE_SKILLS.md) | Evolution, mutation, or a reward for repetition alone |
-| **Evolutionary Trait** | Species Development and later Phase 4 rules | Prior mastery or every Skill commonly associated with the evolved form |
+| **Evolutionary Trait** | [Species Development](../progression/SPECIES_DEVELOPMENT.md) and [Monster Evolution](../monster-evolution/README.md) | Prior mastery or every Skill commonly associated with the evolved form |
 | **Magical Ability** | Its species, magical, divine, item, or other source | Control, efficiency, interpretation, spells, or magical mastery by itself |
 | **Environmental Adaptation** | Physical or Species Development according to its route | A learned technique unless meaningful practice develops one separately |
 

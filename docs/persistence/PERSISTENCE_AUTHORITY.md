@@ -330,7 +330,7 @@ This document defines authority precedence and conflict routing. It does not def
 - save-update transactions;
 - validators or templates.
 
-Those procedures are owned by their dedicated documents; storage-specific templates remain Phase 11 work.
+Those procedures are owned by their dedicated documents; [blank templates](../../templates/README.md) implement their record contracts without gaining authority over them.
 
 ## Related Documents
 

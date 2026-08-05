@@ -36,7 +36,7 @@ The [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) supplies changing e
 
 ## Phase 2 Boundaries
 
-Later phases may add local tree schemas, ranks, formulas, content, procedures, and institutions. They must preserve:
+Specialist systems may add local tree schemas, ranks, formulas, content, procedures, and institutions. They must preserve:
 
 - the separation of Persistent Potential, Current Access, Embodied Expression, Practised Reliability, Contextual Effectiveness, and World Recognition;
 - one Owning System for each claimed effect and no duplicate gain from overlapping descriptions;
@@ -46,4 +46,4 @@ Later phases may add local tree schemas, ranks, formulas, content, procedures, a
 - qualitative, scoped capability assessment instead of a universal level, combat rating, power score, or progression currency;
 - diminishing returns, Plateaus, maintenance, regression, and safeguards against grinding, farming, recursive retained gain, and unrestricted trait stacking.
 
-Phase 3 may now define Skill trees without inventing new foundational Development rules. It may specialize these boundaries but may not silently replace them.
+The completed [Skill Engine](../skills/README.md) defines Skill trees inside these boundaries without inventing or silently replacing foundational Development rules.

@@ -390,11 +390,11 @@ Route defects by kind:
 
 Do not use an easier route merely to avoid preserving evidence or authorization.
 
-## Storage and Phase 11 Templates
+## Storage and Blank Templates
 
 Logical organization, authority, identity, truth layers, lifetimes, history, transactions, and validation are canonical. Markdown, databases, cloud drives, Git, paper records, and applications are implementation choices.
 
-Phase 11 templates must derive from:
+The repository's [blank templates](../../templates/README.md) derive from:
 
 - the Common Record Contract;
 - logical module ownership;
@@ -485,7 +485,7 @@ A Campaign Persistence implementation is internally integrated only when:
 
 ## Scope Boundaries
 
-This document defines completed-system interfaces, the integrated operating cycle, owner handoffs, cross-system state changes, correction routes, and the Phase 11 template boundary. It does not reproduce specialist mechanics, define a storage syntax, create a campaign, populate a save, implement a template, automate adjudication, or begin Phase 11.
+This document defines completed-system interfaces, the integrated operating cycle, owner handoffs, cross-system state changes, correction routes, and the blank-template boundary. It does not reproduce specialist mechanics, define a storage syntax, create a campaign, populate a save, create or populate a template, or automate adjudication.
 
 ## Related Documents
 

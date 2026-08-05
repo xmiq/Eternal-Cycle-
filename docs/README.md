@@ -154,7 +154,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) - authority-ordered diagnosis and correction of narration errors, stale saves, incomplete information, authorized retcons, and in-world deception.
 - [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) - post-interaction Affected Sets, owner-routed Session Deltas, history appends, atomic Save Points, idempotent retries, and recovery.
 - [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) - read-only validation baselines and profiles, evidence-bearing findings, defect detection, protected reports, severity, activation outcomes, and repair routing.
-- [Campaign Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, load-to-activation operating cycle, specialist handoffs, correction routes, and the Phase 11 template boundary.
+- [Campaign Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, load-to-activation operating cycle, specialist handoffs, correction routes, and the blank-template boundary.
 
 ## Authority and Scope
 

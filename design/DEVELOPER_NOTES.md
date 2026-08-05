@@ -2573,3 +2573,42 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Rule consistency audit**.
 - Do not begin the terminology audit before the rule consistency audit is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Rule Consistency Audit
+
+### Completed Roadmap Task
+
+- Rule consistency audit.
+
+### Files Created
+
+- `design/audits/RULE_CONSISTENCY_AUDIT.md`
+
+### Files Modified
+
+- 21 canonical documents across Development, Skills, Human Classes, Soul Weapons, Magic, the World Engine handoff, GM procedures, Campaign Persistence, and canonical navigation
+- `README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- Roadmap-time promises in early-phase documents now route to the completed specialist owners in present tense.
+- Universal-level, embodiment, retained-progression, human/monster, Soul Weapon, Magic, World Engine, GM, persistence, and template invariants were checked across all completed families.
+- The persistence authority order and repository-versus-campaign boundary remain unchanged.
+- Remaining generic references to later work are governance boundaries that remain valid for future owner-authorized roadmaps.
+- No gameplay mechanic, terminology entry, canonical decision, unresolved question, or campaign data was added.
+
+### Validation Results
+
+- Repository-wide Markdown files: 192.
+- Relative Markdown links: 5,746 checked, zero broken.
+- Markdown anchors: 111 checked, zero broken.
+- Stale completed-phase future-tense markers: zero.
+- Placeholder and incomplete-system markers: zero.
+- Repository boundaries and Phase 11 scope remain intact.
+
+### Active Roadmap Task
+
+- **Terminology audit**.
+- Do not begin the internal-link and navigation audit before the terminology audit is complete, validated, and committed.

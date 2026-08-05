@@ -483,7 +483,7 @@ This document does not define:
 - magical laws, spell construction, species evolution, or body mutation;
 - one universal Mastery threshold shared by every capability.
 
-Phase 3 may define tree-specific mechanics inside these boundaries. It must preserve current embodiment, present-life practice, provenance, human and monster distinction, and the non-fungibility of Development Tracks.
+The [Skill Engine](../skills/README.md) defines tree-specific mechanics inside these boundaries. It preserves current embodiment, present-life practice, provenance, human and monster distinction, and the non-fungibility of Development Tracks.
 
 ## GM Procedure
 
@@ -500,7 +500,7 @@ When a character attempts to acquire, improve, retain, or translate a Skill:
 9. require functional correspondence and current-tree permission for cross-species translation;
 10. test Adaptive or Composite claims against distinct function, integration, and reliability;
 11. communicate proficiency through scoped evidence rather than a universal rank;
-12. defer tree generation, fusion, evolution, and numerical formulas to Phase 3.
+12. route tree generation, Skill Fusion, and Skill Evolution to their [Skill Engine](../skills/README.md) owners and any numerical formulas to the narrow system that authorizes them.
 
 ## Worked Examples
 

@@ -479,7 +479,7 @@ A character dashboard displays body condition, accessible Skills, carried items,
 - A module records specialist outcomes without redefining their mechanics.
 - Architecture does not grant actor control, progression, resources, success, or future outcomes.
 - Populated modules, saves, backups, and migrations remain outside this repository.
-- Phase 11 templates must derive from this architecture rather than silently changing it.
+- [Blank templates](../../templates/README.md) derive from this architecture rather than silently changing it.
 
 ## Scope Boundaries
 

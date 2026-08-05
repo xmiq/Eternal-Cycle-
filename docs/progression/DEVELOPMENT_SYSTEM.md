@@ -336,7 +336,7 @@ Reincarnation may later permit bounded crossover when an explicit rule establish
 
 Crossover may recover a close analogue, produce a new hybrid expression, or reveal that no current route exists. It never converts every human skill into a monster version or every monster adaptation into a human technique automatically.
 
-The detailed crossover, skill-tree, and evolution rules belong to later phases.
+Detailed crossover and Skill-tree rules belong to the [Skill Engine](../skills/README.md); biological Evolution belongs to [Monster Evolution](../monster-evolution/README.md).
 
 ## Breadth and Mastery
 

@@ -558,7 +558,7 @@ The source must define:
 - how containment, suppression, environment, and countermeasures work;
 - why ending one expression does or does not threaten the Weapon Soul.
 
-This document does not create magical matter or a free source for such vessels. Until [Phase 7](../../design/ROADMAP.md) defines the relevant Magic rules, unsupported magical contributions remain Provisional under the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+This document does not create magical matter or a free source for such vessels. Magical contributions must qualify under the relevant [Magic](../magic/README.md) owner; a genuinely missing narrow mechanic may be handled only as Provisional under the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
 
 ## Conceptual-Only Claims Do Not Qualify
 

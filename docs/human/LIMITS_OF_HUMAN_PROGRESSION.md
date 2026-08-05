@@ -651,7 +651,7 @@ It does not define:
 - universal numerical growth curves, statistics, combat ratings, or encounter levels;
 - live world state or campaign history.
 
-Future phases may add routes and procedures. They must preserve present embodiment, current-life effort, scoped ownership, human-monster separation, contextual assessment, non-compounding persistence, and player agency.
+Other specialist systems may define additional routes and procedures. They must preserve present embodiment, current-life effort, scoped ownership, human-monster separation, contextual assessment, non-compounding persistence, and player agency.
 
 ## Related Canon
 

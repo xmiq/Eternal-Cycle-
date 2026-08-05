@@ -291,7 +291,7 @@ Repair changes current state; it does not erase the period when the road was abs
 - Persistence cannot freeze actors into recorded plans or make forecasts deterministic.
 - A migration cannot silently rewrite campaign history.
 - Meta discussion never becomes campaign truth merely because it shares a storage location or transcript.
-- Templates remain a Phase 11 concern and are not implemented by this philosophy.
+- [Blank templates](../../templates/README.md) may instantiate this philosophy's record boundaries but cannot change them.
 
 ## Scope Boundaries
 

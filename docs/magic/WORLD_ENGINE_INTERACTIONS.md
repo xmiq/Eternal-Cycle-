@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines how established magical causes enter the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) as persistent, bounded consequences. It connects the completed Magic frameworks to world simulation without defining Phase 8's detailed variables, domain procedures, campaign state, or event generators.
+This document defines how established magical causes enter the [World Engine](../world-engine/WORLD_ENGINE_OVERVIEW.md) as persistent, bounded consequences. It connects the completed Magic frameworks to world simulation without duplicating the World Engine's detailed variables, domain procedures, campaign state boundary, or GM event procedures.
 
 Magic is part of the world. A spell, Ritual, Enchantment, Alchemical Process, Divine Response, Mana change, affinity pattern, restriction, or magical institution can affect ecology and society only through its actual source, route, scale, duration, distribution, dependencies, responses, and aftermath.
 
@@ -179,7 +179,7 @@ Consider:
 - **rebound**, where efficiency or abundance increases total use;
 - **legacy**, where consequences outlive active operation.
 
-These are causal patterns, not universal numerical mechanics. The relevant Phase 8 domain will later define any detailed state variables or procedures.
+These are causal patterns, not universal numerical mechanics. The relevant [World Engine](../world-engine/README.md) domain owns any detailed state variables or procedures.
 
 ### 7. Determine Persistence and Recovery
 

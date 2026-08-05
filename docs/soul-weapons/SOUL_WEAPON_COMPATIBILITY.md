@@ -215,7 +215,7 @@ Relevant facts include:
 - counters, suppression, contamination, and world law;
 - whether the weapon-owned effect remains accessible in the current bond state.
 
-Soul Weapon rules cannot invent missing magic to solve a source conflict. Phase 7 and other owning systems define those sources when completed.
+Soul Weapon rules cannot invent missing magic to solve a source conflict. The [Magic framework](../magic/README.md) and any other source-owning system define those contributions.
 
 ### 7. Environmental and Operational Compatibility
 

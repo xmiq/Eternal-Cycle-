@@ -4,7 +4,7 @@
 
 This document defines how human learned capabilities may be represented as structured relationships among competencies, techniques, Disciplines, traditions, Professions, and conceptual understanding.
 
-It defines a design and adjudication structure. It does not prescribe one tree for every human, make trees universally visible in-world, or implement the detailed classes, institutions, and content reserved for later phases.
+It defines a design and adjudication structure. It does not prescribe one tree for every human, make trees universally visible in-world, or implement the Classes, institutions, and campaign-specific content owned by the [Human Classes and Professions](../human/README.md) framework.
 
 ## Core Rule
 
