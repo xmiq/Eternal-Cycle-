@@ -3867,3 +3867,39 @@ The review performed before Ephemeral disposal to determine whether material aff
 ## Promotion Gate
 
 The receiving-owner review that establishes a record's materiality, authority, provenance, scope, truth layer, target Persistence Level, dependencies, and validation before longer-lived retention.
+
+## Campaign State Graph
+
+The connected set of current authoritative campaign records and Typed References describing what is Confirmed, Pending, unknown, disputed, or otherwise active now together with the history and rules needed to interpret it.
+
+## Campaign State Claim
+
+One exact assertion about a current campaign subject, property, relationship, value, condition, or unknown with effective scope, record owner, canonical owner, provenance, dependencies, authority, truth layer, Persistence Level, visibility, and validation status.
+
+## State Status
+
+The explicit integration and reliability condition of a State Claim, including Confirmed, Pending, Stale, Disputed, Unknown, Estimated, Requires Source Recovery, Superseded, or Archived.
+
+## Read Set
+
+The initial claim-specific set of Save Index, Session, actor, location, time, and owning records loaded before adjudication and expanded through material references into the full Dependency Closure.
+
+## Numerical Change Trace
+
+The source-preserving record of one numerical change's subject, prior value, pending adjustments, delta or replacement, event, mechanic, owner, inputs, costs, resulting value, dependents, and validation.
+
+## State Transition
+
+An owned causal passage from one valid campaign state to another through an initiating event or actor choice, adjudicated outcome, direct changes, costs, information effects, consequences, history reference, and integrated current result.
+
+## Session Delta
+
+The claim-bounded set of established new, updated, closed, historical, informational, numerical, relational, project, mystery, research, and consequence changes since the last confirmed Save Point.
+
+## Save Point
+
+The campaign version identified by the Save Index at which every included change has been integrated and the required persistence validation has passed.
+
+## State Snapshot
+
+A read-consistent representation of the Campaign State Graph at one Save Point or explicit Pending boundary used for backup, loading, comparison, or migration without becoming a second owner of its facts.

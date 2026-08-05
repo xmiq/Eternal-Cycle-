@@ -62,7 +62,9 @@ An established campaign fact can describe what happened without creating a new u
 
 ## Campaign State
 
-**Campaign state** is the changing play-specific content held by an external Campaign Record. The repository defines how such information is interpreted; it never stores the live information itself.
+[Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) is the canonical owner of the structured state graph, current State Claims, required Read Sets, Pending Session changes, numerical provenance, unknown handling, and Snapshots summarized here.
+
+**Campaign state** is the changing play-specific content held by an external Campaign Record. The repository defines how such information is interpreted; it never stores the live information itself. Conversation context may supplement this record and may not silently override it.
 
 Campaign state may include:
 
@@ -101,7 +103,7 @@ Preparation creates causes, opportunities, and likely responses. It does not res
 
 ### 2. Load Campaign State
 
-Restore the last confirmed world truth, current bodies, Soul state, locations, relationships, possessions, knowledge views, active objectives, and provisional rulings from the external Campaign Record.
+Load the Save Index, Current Session, canonical owner, current time and location, and the claim's required Read Set under the [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md). Restore the last confirmed world truth, current bodies, Soul state, locations, relationships, possessions, knowledge views, active objectives, and Provisional Rules from the external Campaign Record, then apply valid Pending Session Deltas without treating them as already integrated.
 
 If a material fact is absent or contradictory, identify the uncertainty before relying on it. Do not fill a continuity gap silently merely because one answer would be convenient.
 
@@ -470,3 +472,5 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - [Structured Persistence Architecture](../persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)
+- [Persistence Levels](../persistence/PERSISTENCE_LEVELS.md)
+- [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md)

@@ -4325,3 +4325,35 @@ Movement to a longer-lived Persistence Level passes through the receiving owner 
 ## D-1081 — Storage Deletion Is Not In-World Erasure
 
 Deleting, archiving, redacting, or moving a campaign record does not destroy an item, erase history, cause forgetting, harm a Soul, or retcon reality. Each in-world or canonical change requires its own owner and record.
+
+## D-1082 — Structured Campaign State Is Authoritative
+
+The Campaign State Graph is the authoritative current representation of established campaign reality. Conversation context, narration, transcripts, summaries, participant memory, and model memory may supply evidence or navigation but cannot silently override structured state.
+
+## D-1083 — State Claims Require Ownership and Provenance
+
+Every material current claim identifies its subject, property, effective scope, Authoritative Record Owner, canonical owner, source event or decision, dependencies, authority, truth layer, Persistence Level, uncertainty, and validation status.
+
+## D-1084 — Material Adjudication Requires a Read Set
+
+Before adjudicating, the GM loads the Save Index, Current Session, canonical owner, current time and location, relevant Player data, and every material Relationship, Species, Location, Project, Research, Timeline, Knowledge, Inventory, and world dependency appropriate to the claim.
+
+## D-1085 — Current State, History, and Session Remain Separate
+
+Confirmed Current State describes the last validated integration, Historical Record explains established change, and Pending Session state preserves valid unintegrated deltas. None silently substitutes for another.
+
+## D-1086 — Numerical State Changes Require Mechanical Traces
+
+Every material numerical change records its prior value, Pending adjustments, exact change, causal event, owning mechanic, inputs, costs, result, dependencies, and validation. Missing values do not default to zero, balance targets, or narrative estimates.
+
+## D-1087 — Missing Campaign State Remains Unknown
+
+Absent or conflicting material information uses Unknown, Not Yet Verified, Estimated, Requires Source Recovery, Disputed, or the appropriate Truth Layer. The GM may not invent a value merely because a schema or scene expects one.
+
+## D-1088 — Snapshots Are Read Views Rather Than Owners
+
+A State Snapshot supports backup, loading, comparison, and migration at one Save Point or Pending boundary. Newer storage timestamps and convenient summaries do not make it authoritative over the records from which it derives.
+
+## D-1089 — Reincarnation Links Rather Than Overwrites State
+
+Final Death closes one body and Incarnation state while preserving history and eligible Soul continuity. Reincarnation creates new identity links and access conditions without overwriting prior lives or transferring Inventory, standing, Knowledge, or capability outside their owners.

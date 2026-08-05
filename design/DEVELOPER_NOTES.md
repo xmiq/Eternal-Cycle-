@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define campaign state model**.
-- Campaign persistence philosophy, authority, architecture, truth layers, and persistence levels are complete pending the persistence-level task's focused commit.
-- Do not begin the relationship memory engine or any later Phase 10 task until the campaign state model is complete, validated, and committed.
+- **Define relationship memory engine**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, and campaign state model are complete pending the state-model task's focused commit.
+- Do not begin the research engine or any later Phase 10 task until the relationship memory engine is complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed persistence-level task after reviewing its full diff and validation results.
-2. Read all completed persistence documents, the GM session lifecycle, every canonical Profile boundary, and the World Engine's state model.
-3. Define the authoritative campaign state graph, module contracts, required read sets, numerical-change provenance, unknown handling, snapshots, deltas, and specialist interfaces without implementing relationship or research lifecycles prematurely.
-4. Require the GM to read the Save Index and relevant Player, Relationship, Species, Location, Project, Research, and Timeline records before adjudication as appropriate.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the relationship memory engine.
+1. Commit the completed campaign state model after reviewing its full diff and validation results.
+2. Read the state model, Truth Layers, NPC and faction continuity, Soul Constellations, Social Development, and every existing relationship interface.
+3. Define identity, first and latest meeting, important encounters, trust, trajectory, hostility, communication, promises, betrayals, debts, gifts, family, organizations, discoveries, dependencies, and unresolved issues without reducing them to one score.
+4. Require causal relationship change, preserve actor agency, distinguish perspectives, and prevent known characters from resetting to strangers without an in-world explanation.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the research engine.

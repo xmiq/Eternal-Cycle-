@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define campaign state model**
+**Current task: Define relationship memory engine**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define campaign state model** unless the project owner explicitly changes the target. Do not begin the relationship memory engine or later Phase 10 work before the campaign state model is complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define relationship memory engine** unless the project owner explicitly changes the target. Do not begin the research engine or later Phase 10 work before the relationship memory engine is complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -230,7 +230,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define structured persistence architecture
 - [x] Define truth layers
 - [x] Define persistence levels
-- [ ] Define campaign state model
+- [x] Define campaign state model
 - [ ] Define relationship memory engine
 - [ ] Define research engine
 - [ ] Define timeline engine
