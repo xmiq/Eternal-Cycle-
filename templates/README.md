@@ -16,6 +16,7 @@ Populate campaign instances only in an external Campaign Record. Reusable refere
 - [Settlement Record Template](SETTLEMENT_TEMPLATE.md) - place identity, populations, ecology, resources, infrastructure, economy, governance, Magic, simulation, knowledge, and continuity.
 - [Dungeon Profile Template](DUNGEON_TEMPLATE.md) - Dungeon Basis, boundary, topology, access, sustaining causes, conditions, participants, activity, exchanges, hazards, claims, and legacy.
 - [Soul Avatar Profile Template](SOUL_AVATAR_TEMPLATE.md) - emergence evidence, Avatar Lead agency, integrated contributors, Continuity Concordance, Associations, embodied expression, Reincarnation continuity, and world response.
+- [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md) - Contact Domains, route classification, Gate structure, channels, compatibility, information, authority, causal handoffs, closure, stranding, and Legacies.
 
 ## Shared Use Rules
 

@@ -2349,3 +2349,40 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Gate-event template**.
 - Do not begin supplemental template coverage before the Gate-event template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Gate-Event Template
+
+### Completed Roadmap Task
+
+- Gate-event template.
+
+### Files Created
+
+- `templates/GATE_EVENT_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `templates/SETTLEMENT_TEMPLATE.md`
+- `templates/DUNGEON_TEMPLATE.md`
+- `templates/SOUL_AVATAR_TEMPLATE.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template treats a World-Contact Event as the primary process and records zero or more separately identified World Gates only when they qualify under the existing World Engine rules.
+- Contact Domains, routes, Gate Basis, endpoints, boundaries, channels, operation, compatibility, actor-specific Contact Phases, information, authority, crossings, handoffs, Closure, Stranding, and Gate Legacies remain distinct claims.
+- Reincarnation, Soul Avatar Expression, Dungeons, Magic, world simulation, and every downstream consequence retain their specialist owners.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,189 checked, zero broken.
+- Repository boundary: blank template only; no Gate, Contact Domain, endpoint, crossing, actor, faction, compatibility finding, or live world state added.
+- No universal Gate level, compatibility percentage, civilization rank, power score, mandatory contact ladder, scripted conflict, universal translation, or player-centered outcome was introduced.
+
+### Active Roadmap Task
+
+- **Complete supplemental template coverage**.
+- Do not begin AI operating procedures before supplemental template coverage is complete, validated, and committed.

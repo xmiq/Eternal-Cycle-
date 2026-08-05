@@ -385,6 +385,6 @@ Generation establishes a starting state, not a scripted adventure. It cannot pre
 
 ## Extensions and Consumers
 
-Use the [Settlement Record Template](SETTLEMENT_TEMPLATE.md), [Faction Profile Template](FACTION_TEMPLATE.md), [Character Record Template](CHARACTER_TEMPLATE.md), and [Species Reference Template](SPECIES_TEMPLATE.md) for records a Dungeon view references but does not own. Gate-event records remain separate even when a Gate overlaps Dungeon space.
+Use the [Settlement Record Template](SETTLEMENT_TEMPLATE.md), [Faction Profile Template](FACTION_TEMPLATE.md), [Character Record Template](CHARACTER_TEMPLATE.md), [Species Reference Template](SPECIES_TEMPLATE.md), and [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md) for records a Dungeon view references but does not own. Gate-event records remain separate even when a Gate overlaps Dungeon space.
 
 Session preparation, exploration, encounters, extraction, world simulation, Research, continuity review, and validation consume only relevant Profile fields and permitted Truth Layers. Update the Affected Set after play instead of regenerating or resetting unrelated Dungeon state.

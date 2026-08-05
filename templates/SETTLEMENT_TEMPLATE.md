@@ -358,6 +358,6 @@ Campaign History is append-only except for authorized factual correction. Curren
 
 ## Extensions and Consumers
 
-Use the [Faction Profile Template](FACTION_TEMPLATE.md), [Character Record Template](CHARACTER_TEMPLATE.md), [Species Reference Template](SPECIES_TEMPLATE.md), and later dedicated Dungeon or Gate-event templates for their own records. A settlement view links those records and never becomes their competing owner.
+Use the [Faction Profile Template](FACTION_TEMPLATE.md), [Character Record Template](CHARACTER_TEMPLATE.md), [Species Reference Template](SPECIES_TEMPLATE.md), [Dungeon Profile Template](DUNGEON_TEMPLATE.md), and [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md) for their own records. A settlement view links those records and never becomes their competing owner.
 
 Session preparation, encounters, travel, world simulation, migration, continuity review, Research, and validation consume only the modules and Truth Layers relevant to their question. Update the Affected Set after play rather than rewriting the whole settlement.

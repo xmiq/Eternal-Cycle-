@@ -342,7 +342,7 @@ Record only established interfaces and retain each system's ownership.
 
 ### Conditional Fields
 
-- **World-Contact Event ID:** `<external event reference>`
+- **World-Contact Event ID:** `<external event reference>`; use the [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md)
 - **Contact Domains:** `<actual domains and relationship>`
 - **Relevance to lived history:** `<Incarnation, Resonance, or Archive basis>`
 - **Trigger status:** `<whether contact genuinely acts as an Avatar Trigger and why>`
