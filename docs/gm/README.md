@@ -20,6 +20,7 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 14. [Time Skip Procedure](TIME_SKIP_PROCEDURE.md) - player-authorized Skip Mandates, Standing Instructions, interruption, causal advancement, return states, and Causal Bridges.
 15. [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) - evidence-backed historical classification, scoped and disputed boundaries, World Reset checkpoints, targeted revalidation, and return to play.
 16. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
+17. [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - the load, owner-resolution, Save Update, validation, activation, and presentation contract used by human and AI GMs.
 
 ## Authority and Boundary
 

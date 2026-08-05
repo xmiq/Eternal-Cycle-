@@ -155,7 +155,7 @@ Conversation context may not silently:
 - create a number, item, relationship, Skill, or progression change;
 - defend a contradiction merely because the conflicting narration is more recent.
 
-The later authority and continuity documents define the exact resolution procedures. The philosophical boundary is already binding: remembered prose supplements persistence; it does not govern persistence by recency alone.
+[Persistence Authority](PERSISTENCE_AUTHORITY.md) and [Continuity Resolution](CONTINUITY_RESOLUTION.md) define the exact resolution procedures. Remembered prose supplements persistence; it does not govern persistence by recency alone.
 
 ## Persistence Principles
 
@@ -183,7 +183,7 @@ A belief may be consequential without being correct. A secret may be true withou
 
 An absent material fact remains unknown unless a canonical procedure supports establishing it as a previously immaterial open detail. Missing information does not authorize the most convenient answer.
 
-Useful labels include `Unknown`, `Not Yet Verified`, `Estimated`, `Requires Source Recovery`, and `Player Theory`. Later documents define their exact placement and validation.
+Useful labels include `Unknown`, `Not Yet Verified`, `Estimated`, `Requires Source Recovery`, and `Player Theory`. [Truth Layers](TRUTH_LAYERS.md), the [Campaign State Model](CAMPAIGN_STATE_MODEL.md), and [Persistence Validation](PERSISTENCE_VALIDATION.md) define their placement and checks.
 
 ### 7. Numbers Require Causes
 
@@ -218,7 +218,7 @@ The Campaign Persistence Engine owns rules for:
 - bounded save updates;
 - persistence validation.
 
-These owners will be defined in later Phase 10 tasks. Naming them here does not implement them early.
+Their dedicated documents and the [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) contract define how those owners cooperate without replacing one another.
 
 ## What the Engine Does Not Own
 
@@ -326,3 +326,4 @@ Those subjects remain separate roadmap tasks.
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md)

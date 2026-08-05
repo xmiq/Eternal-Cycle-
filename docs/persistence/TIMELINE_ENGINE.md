@@ -402,7 +402,7 @@ After a material event:
 9. validate references, ordering, overlaps, and authority;
 10. integrate the result at the next valid Save Point.
 
-This procedure describes the Timeline contribution to persistence. The later Save Update Protocol owns the complete campaign update transaction.
+This procedure describes the Timeline contribution to persistence. The [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) owns the complete campaign update transaction.
 
 ## Worked Examples
 

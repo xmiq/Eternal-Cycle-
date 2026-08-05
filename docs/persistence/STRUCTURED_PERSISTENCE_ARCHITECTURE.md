@@ -54,7 +54,7 @@ The Campaign Record has four logical architectural layers.
 | **World and activity** | Preserves current environments, organizations, systems, projects, and unresolved processes | World, Locations, Factions, Magic, Infrastructure, Projects |
 | **Knowledge and history** | Preserves chronology, evidence, beliefs, research, mysteries, secrets, and historical consequences | Timeline, Campaign History, Knowledge, Research, Mysteries, Secrets |
 
-These layers organize access and dependency. They do not define the [Persistence Authority Chain](PERSISTENCE_AUTHORITY.md) or later truth and lifetime classifications.
+These layers organize access and dependency. They do not define the [Persistence Authority Chain](PERSISTENCE_AUTHORITY.md), [Truth Layers](TRUTH_LAYERS.md), or [Persistence Levels](PERSISTENCE_LEVELS.md).
 
 ## The Common Record Contract
 
@@ -207,7 +207,7 @@ It logically identifies:
 
 The Save Index does not duplicate module contents. It tells a GM or tool what exists, where its logical owners are, which versions apply, and whether the campaign is safe to load.
 
-The **Protocol** portion points to the canonical update, migration, and validation procedures as they are completed. It does not invent those procedures here.
+The **Protocol** portion points to the [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md), [Migration and Versioning](MIGRATION_AND_VERSIONING.md), [Continuity Resolution](CONTINUITY_RESOLUTION.md), and [Persistence Validation](PERSISTENCE_VALIDATION.md). It does not invent those procedures here.
 
 ## Campaign Canon and Rules Profile
 
@@ -289,7 +289,7 @@ It preserves stable identity, Person Basis, current embodiment, Observer View re
 
 Relationships owns durable intersubjective and organizational relationship records, including their participants, history references, present dimensions, commitments, conflicts, and unresolved issues.
 
-It does not reduce relationships to one score or duplicate each participant's entire biography. The dedicated Relationship Memory Engine defines its semantics later in Phase 10.
+It does not reduce relationships to one score or duplicate each participant's entire biography. The [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) defines its semantics.
 
 ## Species
 
@@ -328,7 +328,7 @@ It references [Faction Behaviour](../world-engine/FACTION_BEHAVIOUR.md), [Factio
 
 Research owns questions, observations, hypotheses, experiments, evidence, theories, confidence, disputes, disproof, confirmation, loss, and rediscovery.
 
-It references Knowledge for who knows what and the relevant world or specialist record for confirmed truth. Its lifecycle is defined by the dedicated Research Engine later in Phase 10.
+It references Knowledge for who knows what and the relevant world or specialist record for confirmed truth. The [Research Engine](RESEARCH_ENGINE.md) defines its lifecycle.
 
 ## Magic
 
@@ -352,7 +352,7 @@ It distinguishes ownership from custody, access, use, legal claim, bond, and kno
 
 Timeline owns chronological placement and temporal relationships among events, intervals, sessions, lives, Ages, time skips, and parallel processes.
 
-It does not replace the fuller Campaign History. The dedicated Timeline Engine defines chronology semantics later in Phase 10.
+It does not replace the fuller Campaign History. The [Timeline Engine](TIMELINE_ENGINE.md) defines chronology semantics.
 
 ## Campaign History
 
@@ -388,13 +388,13 @@ It does not create a second world truth. Every secret references an authoritativ
 
 Validation owns check definitions, runs, results, warnings, unresolved conflicts, and repair references.
 
-It checks architecture and campaign coherence without changing facts by itself. Detailed validation rules are a later Phase 10 task.
+It checks architecture and campaign coherence without changing facts by itself. [Persistence Validation](PERSISTENCE_VALIDATION.md) defines validation profiles, findings, outcomes, and repair routing.
 
 ## Migration History
 
 Migration History owns campaign-version transitions, backups, audits, manifests, merges, validation results, warnings, conflicts, and rollback references.
 
-It does not store backups inside the rules repository and does not make a migration valid merely by recording one. The migration procedure is defined later in Phase 10.
+It does not store backups inside the rules repository and does not make a migration valid merely by recording one. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) defines the migration procedure.
 
 ## Module Partitioning
 
@@ -426,11 +426,11 @@ At minimum:
 5. include unresolved consequences and pending Session changes;
 6. stop and mark missing dependencies rather than invent them.
 
-The later Campaign State Model defines required read sets for common adjudications.
+The [Campaign State Model](CAMPAIGN_STATE_MODEL.md) defines required Read Sets for common adjudications.
 
 ## Update Boundaries
 
-Architecture identifies what an update may touch; the Save Update Protocol later defines exactly how.
+Architecture identifies what an update may touch; the [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines exactly how.
 
 An update set should be:
 
@@ -483,7 +483,7 @@ A character dashboard displays body condition, accessible Skills, carried items,
 
 ## Scope Boundaries
 
-This document defines logical organization and record interfaces. It deliberately leaves these semantics to later owners:
+This document defines logical organization and record interfaces. It delegates these semantics to their dedicated owners:
 
 - truth-layer ownership, visibility, and promotion;
 - persistence-level lifetime and deletion;
@@ -502,6 +502,7 @@ This document defines logical organization and record interfaces. It deliberatel
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)
 - [Persistence Authority](PERSISTENCE_AUTHORITY.md)
 - [Truth Layers](TRUTH_LAYERS.md)
+- [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Game Master Responsibilities](../gm/GM_RESPONSIBILITIES.md)
 - [World Engine](../world-engine/README.md)

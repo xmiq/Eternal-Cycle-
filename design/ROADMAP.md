@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Phase 10 — Campaign Persistence Engine**
+**Current phase: Phase 11 — Templates and Validation**
 
-**Current task: Audit and integrate Campaign Persistence Engine**
+**Current task: Character template**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Audit and integrate Campaign Persistence Engine** unless the project owner explicitly changes the target. Do not begin Phase 11 before the Campaign Persistence Engine audit is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Character template** unless the project owner explicitly changes the target. Do not begin the Species template or any later Phase 11 task before the Character template is complete.
 
-Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
+Phases 1 through 10 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
 The reusable Gate-event template requested by the project owner remains queued for Phase 11. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
 
@@ -238,7 +238,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define continuity resolution
 - [x] Define save update protocol
 - [x] Define persistence validation
-- [ ] Audit and integrate Campaign Persistence Engine
+- [x] Audit and integrate Campaign Persistence Engine
 
 ### Exit Criteria
 

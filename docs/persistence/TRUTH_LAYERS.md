@@ -158,7 +158,7 @@ Visibility follows access to sites, notes, publications, participants, instituti
 
 ### Update Rules
 
-Research changes through observation, hypothesis, experiment, evidence, critique, replication, theory, confirmation, disproof, loss, and rediscovery under the later Research Engine.
+Research changes through observation, hypothesis, experiment, evidence, critique, replication, theory, confirmation, disproof, loss, and rediscovery under the [Research Engine](RESEARCH_ENGINE.md).
 
 A conclusion becomes Campaign Canon only through **In-World Confirmation** sufficient for the exact claim. The relevant world or specialist owner establishes the corresponding fact. The Research record remains as the history of inquiry.
 

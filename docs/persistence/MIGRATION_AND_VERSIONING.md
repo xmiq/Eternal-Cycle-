@@ -49,7 +49,7 @@ A Campaign Migration is required when a campaign must materially change its pers
 - applying an authorized bulk correction whose effects cross many owners;
 - rebuilding indexes or references when stable identity and meaning must be preserved.
 
-An ordinary Save Update uses the later Save Update Protocol when the logical model, authority, and version compatibility remain valid. A large number of changed records does not by itself make an update a migration; a structural or compatibility boundary does.
+An ordinary Save Update uses the [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) when the logical model, authority, and version compatibility remain valid. A large number of changed records does not by itself make an update a migration; a structural or compatibility boundary does.
 
 ## Version Model
 

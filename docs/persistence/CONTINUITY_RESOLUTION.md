@@ -428,7 +428,7 @@ If the conflict is discovered after integration:
 - preserve ancestry and former records;
 - assess intervening Reliance Effects.
 
-The later Save Update Protocol owns ordinary transactional integration. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) owns structural, version, import, and broad conversion changes.
+The [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) owns ordinary transactional integration. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) owns structural, version, import, and broad conversion changes.
 
 ## AI and Human GM Guidance
 

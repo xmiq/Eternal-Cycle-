@@ -279,7 +279,7 @@ Each delta separates:
 - Pending Consequences;
 - validation requirements.
 
-A delta references owners rather than rewriting whole modules. The later Save Update Protocol defines integration order and confirmation.
+A delta references owners rather than rewriting whole modules. The [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines integration order and confirmation.
 
 ## Save Point and Snapshot
 
@@ -320,7 +320,7 @@ A known character is not treated as a stranger merely because:
 
 Recognition may still fail through valid disguise, memory limits, identity uncertainty, changed embodiment, or lack of information. That failure requires an in-world explanation and its owning rules.
 
-The later Relationship Memory Engine owns relationship dimensions and change.
+The [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) owns relationship dimensions and change.
 
 ## Species and Forms
 

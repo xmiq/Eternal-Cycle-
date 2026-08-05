@@ -100,7 +100,7 @@ The Historical Record does not convert testimony, belief, research, or narration
 
 **Current Campaign State** is the latest authoritative structured representation of what is established now for the scopes it covers.
 
-It may include current bodies, Soul state, relationships, locations, possessions, institutions, projects, research positions, world conditions, unresolved processes, and other live campaign facts. Its exact modules are defined later in Phase 10.
+It may include current bodies, Soul state, relationships, locations, possessions, institutions, projects, research positions, world conditions, unresolved processes, and other live campaign facts. The [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md) and [Campaign State Model](CAMPAIGN_STATE_MODEL.md) define the logical modules and current-state graph.
 
 Current state is derived from Campaign Canon and the Historical Record. It may summarize prior changes, but it cannot contradict their material consequences without a valid new event, correction, retcon, or migration.
 
@@ -121,7 +121,7 @@ Current Session material has limited authority:
 - an apparent contradiction must be classified before integration;
 - incomplete recording creates a recovery problem, not permission to discard the session.
 
-The save-update protocol will define how confirmed Session changes enter the Historical Record and Current Campaign State. Until integration, the session delta must remain identifiable and must not be mistaken for either a draft or a fully validated save.
+The [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines how confirmed Session changes enter the Historical Record and Current Campaign State. Until atomic activation, the Session Delta remains identifiable and must not be mistaken for either a draft or a fully validated Save Point.
 
 ## Current Narration
 
@@ -168,7 +168,7 @@ A layer's authority does not determine who may see it.
 - Session material may contain private adjudication notes.
 - Narration may reveal only one Observer View.
 
-Truth-layer visibility is defined by a later Phase 10 document. Authority answers which claim governs; visibility answers who may access it.
+[Truth Layers](TRUTH_LAYERS.md) define visibility. Authority answers which claim governs; visibility answers who may access it.
 
 ## Authority Does Not Equal Certainty
 
@@ -330,7 +330,7 @@ This document defines authority precedence and conflict routing. It does not def
 - save-update transactions;
 - validators or templates.
 
-Those remain later Phase 10 and Phase 11 tasks.
+Those procedures are owned by their dedicated documents; storage-specific templates remain Phase 11 work.
 
 ## Related Documents
 

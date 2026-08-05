@@ -356,6 +356,10 @@ Whatever format is used should:
 
 The Campaign Record is authoritative for established campaign fiction within canon. It is not authoritative design governance and cannot change what the rules mean.
 
+### Persistence Operating Cycle
+
+The [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) contract governs the GM's complete state interface. The GM loads the active authority and required Read Set, applies each canonical owner, establishes a bounded outcome, writes through the [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md), runs [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md), and continues from the activated Campaign Version. Conversation context and narration may supplement this process but never silently override it.
+
 ## Playtest Feedback
 
 Useful observations flow back into repository development through this sequence:
@@ -485,3 +489,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)
 - [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)
+- [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)

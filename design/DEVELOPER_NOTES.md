@@ -1970,3 +1970,94 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 3. Define the final cross-system integration and operational handoffs without storing campaign data or implementing Phase 11 templates.
 4. Resolve every affected link, navigation, terminology, governance, and boundary issue discovered by the audit.
 5. Validate the complete repository, mark Phase 10 complete only if every exit criterion passes, advance the roadmap to Phase 11 / Character template without implementing it, commit, and generate the repository archive.
+
+## Phase 10 Checkpoint — Campaign Persistence Engine Complete
+
+### Roadmap Restructuring
+
+- The former **Phase 10 — Templates and Validation** remains **Phase 11 — Templates and Validation** with its original ordering, dependencies, statuses, and exit criteria.
+- The owner-approved **Phase 10 — Campaign Persistence Engine** is complete.
+- Phase 11 implementation was not started by this audit.
+
+### Completed Roadmap Tasks
+
+- Define campaign persistence philosophy.
+- Define persistence authority hierarchy.
+- Define structured persistence architecture.
+- Define truth layers.
+- Define persistence levels.
+- Define campaign state model.
+- Define relationship memory engine.
+- Define research engine.
+- Define timeline engine.
+- Define migration and versioning.
+- Define continuity resolution.
+- Define save update protocol.
+- Define persistence validation.
+- Audit and integrate Campaign Persistence Engine.
+
+### Active Roadmap Task
+
+- **Phase 11 — Templates and Validation**.
+- **Character template** is the sole current task.
+- Do not begin the Species template or any later Phase 11 task before the Character template is complete unless the project owner changes the target.
+
+### Canonical Files Created in Phase 10
+
+- `docs/persistence/README.md`
+- `docs/persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md`
+- `docs/persistence/PERSISTENCE_AUTHORITY.md`
+- `docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md`
+- `docs/persistence/TRUTH_LAYERS.md`
+- `docs/persistence/PERSISTENCE_LEVELS.md`
+- `docs/persistence/CAMPAIGN_STATE_MODEL.md`
+- `docs/persistence/RELATIONSHIP_MEMORY_ENGINE.md`
+- `docs/persistence/RESEARCH_ENGINE.md`
+- `docs/persistence/TIMELINE_ENGINE.md`
+- `docs/persistence/MIGRATION_AND_VERSIONING.md`
+- `docs/persistence/CONTINUITY_RESOLUTION.md`
+- `docs/persistence/SAVE_UPDATE_PROTOCOL.md`
+- `docs/persistence/PERSISTENCE_VALIDATION.md`
+- `docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md`
+
+### Final Integration Files Modified
+
+- `README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+- `docs/README.md`
+- `docs/gm/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- early persistence owners containing superseded forward references
+
+### Validation Results
+
+- Validated 152 Markdown files and 4,951 relative links with zero missing targets or anchors.
+- Validated all 12 documentation indexes and the new persistence and GM navigation entries.
+- Validated 1,170 unique decision IDs and 1,058 unique terminology entries with zero duplicates.
+- Confirmed all fourteen Phase 10 roadmap tasks are `[x]` and no Phase 11 task was implemented.
+- Confirmed the current target is Phase 11 / Character template.
+- Confirmed no blocking unresolved question exists; the four non-blocking Soul Engine questions remain unchanged.
+- Confirmed no populated campaign, current character, Inventory, quest, story summary, or live world-state artifact entered the repository.
+- Confirmed stale future references to completed Phase 10 owners were replaced by direct canonical links.
+- Confirmed the Soul Engine, Development, Skills, Monster Evolution, Human Classes and Professions, Soul Weapons, Magic, World Engine, and GM Toolkit retain their ownership.
+- Confirmed `git diff --check` and the complete repository validation pass.
+
+### Terminology and Decisions
+
+- The final integration audit added no new canonical term; it composes existing Phase 10 vocabulary.
+- The final integration audit added no new canonical decision; it applies D-1048 through D-1170 without redefining them.
+
+### Unresolved Questions
+
+- Blocking questions: none.
+- No new non-blocking question was introduced.
+- The four existing non-blocking Soul Engine questions remain unchanged.
+
+### Exact Resume Instructions
+
+1. Read governance, the completed Campaign Persistence Engine, and the Phase 11 roadmap entry.
+2. Resume from **Phase 11 — Templates and Validation / Character template** exactly as stated in `design/ROADMAP.md`.
+3. Derive the unpopulated Character template from the Structured Persistence Architecture, Campaign State Model, Truth Layers, Persistence Levels, Save Update Protocol, Persistence Validation, and Campaign Persistence Integration contract.
+4. Preserve specialist ownership, stable identities, typed references, information boundaries, storage neutrality, and the prohibition on campaign data.
+5. Do not begin the Species template or any later task until the Character template is complete, linked, internally consistent, validated, and committed.

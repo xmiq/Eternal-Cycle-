@@ -268,7 +268,7 @@ Apply the explicit handling rules below for Projects, Mysteries, Research, Relat
 
 ### 12. Validate the Candidate
 
-Run all currently applicable persistence checks over the full candidate dependency closure. A later canonical Persistence Validation document owns the complete check catalogue.
+Run the applicable [Persistence Validation](PERSISTENCE_VALIDATION.md) profile over the full candidate dependency closure.
 
 ### 13. Activate the Save Point
 

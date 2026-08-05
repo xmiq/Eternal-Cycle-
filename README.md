@@ -72,6 +72,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/CONTINUITY_RESOLUTION.md`](docs/persistence/CONTINUITY_RESOLUTION.md) - bounded conflict diagnosis, authority resolution, reliance protection, correction, and resumption.
 - [`docs/persistence/SAVE_UPDATE_PROTOCOL.md`](docs/persistence/SAVE_UPDATE_PROTOCOL.md) - bounded post-interaction transactions, owner-routed updates, atomic Save Points, and recovery.
 - [`docs/persistence/PERSISTENCE_VALIDATION.md`](docs/persistence/PERSISTENCE_VALIDATION.md) - immutable validation baselines, trigger-specific profiles, defect detection, protected reporting, severity, and owner-routed repair.
+- [`docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md`](docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, operating cycle, specialist handoffs, correction routes, and the template boundary.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 - [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
@@ -105,4 +106,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Audit and integrate Campaign Persistence Engine**. Templates and final validation follow in Phase 11.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Validation**, and the sole current task is **Character template**.
