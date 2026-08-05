@@ -4233,3 +4233,31 @@ A campaign may adopt permitted options, premises, external experiments, older ru
 ## D-1058 — Narration Errors Do Not Become Continuity
 
 When narration conflicts with higher persistence authority, stop relying on the conflicting wording and resolve the discrepancy. The GM must not invent retroactive support or compound the error merely because it has already appeared in prose.
+
+## D-1059 — Persistence Architecture Is Logical and Storage-Neutral
+
+Campaign modules, ownership, identity, references, provenance, indexing, dependencies, and validation are canonical responsibilities. Files, tables, applications, cloud services, Git repositories, and physical records may implement them without changing their meaning.
+
+## D-1060 — Every Material Campaign Fact Has One Record Owner
+
+One Persistence Module owns each material fact. Other modules use Typed References or Derived Views and cannot become unsynchronized competing authorities merely because they display the same information.
+
+## D-1061 — Record Identity Survives Presentation Changes
+
+Names, aliases, bodies, forms, titles, owners, locations, factions, and storage paths may change without changing a subject's Record Identity. IDs are never reused, while mergers, divisions, copies, replacements, and Reincarnations require explicit continuity relationships.
+
+## D-1062 — Cross-Module References Are Typed and Validated
+
+Material references identify their relationship and must resolve, remain explicitly external, or carry an honest recovery status. Deletion, archiving, merging, and migration review affected dependents rather than creating dangling or silently redirected links.
+
+## D-1063 — Derived Views Are Subordinate
+
+Dashboards, summaries, briefs, recaps, and player-facing views improve use but do not own their displayed facts. Conflict is repaired from authoritative records, and protected information cannot leak through view generation.
+
+## D-1064 — Safe Adjudication Loads the Dependency Closure
+
+A GM or tool may load only relevant campaign modules, but it must follow material dependencies, pending Session changes, and unresolved consequences for the claim. Missing dependencies remain gaps and cannot be replaced by invention.
+
+## D-1065 — Persistence Modules Record Rather Than Grant Mechanics
+
+A module records established specialist-system outcomes and current access without granting Skills, Development, forms, magic, authority, ownership, consent, resources, progression, or future success through schema presence.

@@ -3759,3 +3759,35 @@ The bounded working layer of resolved outcomes, player decisions, adjudication t
 ## Current Narration
 
 The immediate presentation of scenes, descriptions, dialogue, summaries, and observer-limited information during play; it is the lowest persistence authority and cannot overwrite established records through recency, repetition, or vividness.
+
+## Structured Persistence Architecture
+
+The canonical storage-neutral organization of a Campaign Record as logical modules of authoritative records connected through stable identities, typed references, provenance, indexes, dependencies, and validation.
+
+## Persistence Module
+
+One logical responsibility within the Structured Persistence Architecture that owns a coherent family of campaign claims regardless of whether an implementation stores it in one file, many files, tables, documents, or another medium.
+
+## Record Identity
+
+A stable campaign-local identifier for one record or subject that survives changes to names, forms, titles, owners, locations, and storage paths and is never reused for a different subject.
+
+## Authoritative Record Owner
+
+The single Persistence Module responsible for maintaining one campaign fact while other modules reference it or present Derived Views without becoming competing owners.
+
+## Typed Reference
+
+A cross-record link that identifies both the referenced Record Identity and the relationship's function, direction, and relevant scope where material.
+
+## Derived View
+
+A task- or audience-specific presentation assembled from authoritative records that remains subordinate to, traceable to, and repairable from those owners.
+
+## Save Index
+
+The control-plane entry point identifying one campaign continuity, active versions, registered modules, last confirmed integration point, pending Session material, validation state, migrations, backups, conflicts, and Record Gaps without duplicating module contents.
+
+## Dependency Closure
+
+The smallest set of authoritative records, typed references, rules, pending changes, and unresolved consequences that must be loaded together to adjudicate or update one material campaign claim safely.

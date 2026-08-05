@@ -8,8 +8,9 @@ It is a canonical game system, not a populated campaign, save-file format, stora
 
 1. [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) establishes why persistence exists, what it owns, and how it relates to the World Engine and GM Toolkit.
 2. [Persistence Authority](PERSISTENCE_AUTHORITY.md) defines the authority chain from Repository Canon through Current Narration, conflict routing, explicit correction, and the separation of authority from visibility, certainty, and agency.
+3. [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md) defines storage-neutral modules, record contracts, stable identities, typed references, ownership, indexes, partitioning, and dependency closure.
 
-Later Phase 10 documents will define structured architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
+Later Phase 10 documents will define truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
 
 ## Foundational Boundary
 

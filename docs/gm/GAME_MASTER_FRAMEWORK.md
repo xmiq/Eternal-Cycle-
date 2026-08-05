@@ -332,26 +332,7 @@ Ordinary names, appearances, local customs, motives, schedules, weather details,
 
 ## External Campaign Records
 
-Campaign records may be organized in any reliable form. A larger campaign may benefit from external logical files such as:
-
-```text
-CAMPAIGN/
-  CAMPAIGN_INDEX.md
-  RULES_PROFILE.md
-  WORLD_TRUTH.md
-  TIMELINE.md
-  SOULS_AND_INCARNATIONS.md
-  ACTORS_AND_RELATIONSHIPS.md
-  PLACES_FACTIONS_AND_ECOLOGY.md
-  INVENTORIES.md
-  QUESTS_AND_OBJECTIVES.md
-  KNOWLEDGE_LEDGER.md
-  PROVISIONAL_RULINGS.md
-  SESSION_DELTAS/
-  PLAYTEST_FEEDBACK.md
-```
-
-This is an external interface recommendation, not a directory to create in the Eternal Cycle repository.
+Campaign records implement the logical modules, stable identities, typed references, ownership, indexing, and dependency rules in the [Structured Persistence Architecture](../persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md). They may use any reliable storage technology that preserves those canonical distinctions. No example file tree or product is itself canonical.
 
 Whatever format is used should:
 
@@ -485,3 +466,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
+- [Structured Persistence Architecture](../persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)

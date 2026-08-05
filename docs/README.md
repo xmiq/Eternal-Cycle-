@@ -132,6 +132,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Campaign Persistence Engine Index](persistence/README.md) - canonical reading order, ownership boundary, and repository scope for campaign continuity.
 - [Campaign Persistence Philosophy](persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) - persistence as causal memory, its relationship to the World Engine and GM Toolkit, storage neutrality, and foundational safeguards.
 - [Persistence Authority](persistence/PERSISTENCE_AUTHORITY.md) - the authority chain from Repository Canon through Current Narration, including conflict routing and explicit correction.
+- [Structured Persistence Architecture](persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral modules, common record contracts, stable identities, typed references, ownership, and dependency closure.
 
 ## Authority and Scope
 

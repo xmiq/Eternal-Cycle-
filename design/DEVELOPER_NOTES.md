@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define structured persistence architecture**.
-- Campaign persistence philosophy and persistence authority are complete pending the authority task's focused commit.
-- Do not begin truth layers or any later Phase 10 task until the structured persistence architecture is complete, validated, and committed.
+- **Define truth layers**.
+- Campaign persistence philosophy, persistence authority, and structured persistence architecture are complete pending the architecture task's focused commit.
+- Do not begin persistence levels or any later Phase 10 task until truth layers are complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed persistence authority task after reviewing its full diff and validation results.
-2. Read the persistence philosophy and authority chain, every existing external Profile or Campaign Record boundary, and the GM session lifecycle.
-3. Define a storage-neutral modular architecture, stable references, ownership, provenance, indexing, and dependency rules without implementing truth-layer or module-specific mechanics prematurely.
-4. Preserve one authoritative owner per fact, cross-module references, proportional detail, and campaign-external populated records.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to truth layers.
+1. Commit the completed structured persistence architecture after reviewing its full diff and validation results.
+2. Read the persistence authority and architecture, Uncertainty Handling, information model, Knowledge, Research, Secret, and Meta boundaries.
+3. Define Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta as distinct truth layers with ownership, visibility, updates, and migration rules.
+4. Prevent promotion by repetition, storage location, secrecy, or convenience; Meta must never enter Campaign Canon.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to persistence levels.
