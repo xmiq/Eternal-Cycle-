@@ -4357,3 +4357,39 @@ A State Snapshot supports backup, loading, comparison, and migration at one Save
 ## D-1089 — Reincarnation Links Rather Than Overwrites State
 
 Final Death closes one body and Incarnation state while preserving history and eligible Soul continuity. Reincarnation creates new identity links and access conditions without overwriting prior lives or transferring Inventory, standing, Knowledge, or capability outside their owners.
+
+## D-1090 — Relationships Are Multidimensional and Directional
+
+Familiarity, recognition, trust, hostility, fear, affection, respect, obligation, dependency, authority, communication, and shared purpose remain separate, participant-specific dimensions. No universal relationship or approval score is canonical.
+
+## D-1091 — Relationship Change Requires Causal Events
+
+A Relationship Dimension changes through an established event or ongoing process interpreted by the affected participants. Elapsed time, proximity, gifts, praise, killing, shared scenes, and repeated dialogue do not apply automatic drift or rewards.
+
+## D-1092 — Known Relationships Never Reset Silently
+
+Prior identity, meetings, commitments, conflicts, and unresolved issues remain in the Relationship Record when actors leave current focus. Treating a known actor as a stranger requires a valid recognition, memory, disguise, identity, or information explanation.
+
+## D-1093 — Trust Is Function-Specific and Trajectory-Based
+
+Trust records who relies on whom, for what function, under which uncertainty, based on which evidence and vulnerabilities. A qualitative trajectory may change without predicting the next choice or changing unrelated trust scopes.
+
+## D-1094 — Commitments and Exchanges Remain Distinct
+
+Promises, betrayals, debts, gifts, duties, custody, and organizational obligations preserve their own parties, terms, interpretations, authority, status, and consequences. None automatically creates another or grants control over a participant.
+
+## D-1095 — Family and Organization Do Not Override Agency
+
+Kinship, membership, office, employment, patronage, representation, dependence, and alliance may create scoped rights, duties, expectations, and pressures but never automatic love, trust, loyalty, consent, obedience, Knowledge, or authority.
+
+## D-1096 — Relationship Perspectives Remain Separate
+
+Shared facts, each participant's Knowledge and interpretation, institutional views, and GM-hidden truth may differ. Persistence does not average them into one mood or promote one participant's betrayal claim into universal fact.
+
+## D-1097 — Reincarnation Preserves History Rather Than Claims
+
+Former relationships, family roles, marriages, debts, offices, consent, authority, standing, and recognition do not restore automatically in a new incarnation. Persistent Soul links may create bounded evidence or opportunity while current participants retain agency.
+
+## D-1098 — Relationship Migration Preserves Stable Identity
+
+Migration retains participant IDs, Incarnation and role scope, first and latest meetings, important encounters, directional dimensions, commitments, Knowledge boundaries, chronology, closure, and unresolved issues. Names alone never merge people or relationships.

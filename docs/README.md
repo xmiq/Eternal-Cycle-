@@ -136,6 +136,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Truth Layers](persistence/TRUTH_LAYERS.md) - ownership, visibility, updates, promotion, and migration for facts, knowledge, research, theories, rumours, secrets, and Meta.
 - [Persistence Levels](persistence/PERSISTENCE_LEVELS.md) - Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes with deletion, promotion, archival, and migration safeguards.
 - [Campaign State Model](persistence/CAMPAIGN_STATE_MODEL.md) - authoritative state graph, State Claims, required Read Sets, Session Deltas, numerical provenance, unknowns, and Snapshots.
+- [Relationship Memory Engine](persistence/RELATIONSHIP_MEMORY_ENGINE.md) - persistent identities, meetings, encounters, trust trajectories, hostility, communication, commitments, kinship, recognition, and causal relationship change.
 
 ## Authority and Scope
 

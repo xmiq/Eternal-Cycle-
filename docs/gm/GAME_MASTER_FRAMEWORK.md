@@ -86,6 +86,8 @@ Campaign state may include:
 
 This list defines information categories, not required software or a universal save format. A campaign may use Markdown, a database, a notebook, or another reliable medium as long as the required distinctions remain visible.
 
+Material relationship continuity follows the [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md). Known actors, first and latest meetings, important encounters, directional trust and hostility, promises, betrayals, debts, gifts, family, organizations, shared discoveries, dependencies, and unresolved issues do not reset when they leave the current narration.
+
 ## Session Lifecycle
 
 ### 1. Prepare
@@ -474,3 +476,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)
 - [Persistence Levels](../persistence/PERSISTENCE_LEVELS.md)
 - [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md)
+- [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md)

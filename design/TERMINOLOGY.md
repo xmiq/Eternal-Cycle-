@@ -3903,3 +3903,35 @@ The campaign version identified by the Save Index at which every included change
 ## State Snapshot
 
 A read-consistent representation of the Campaign State Graph at one Save Point or explicit Pending boundary used for backup, loading, comparison, or migration without becoming a second owner of its facts.
+
+## Relationship Memory Engine
+
+The canonical persistence system for stable participant identities, relationship history, directional perspectives and dimensions, commitments, recognition, change, closure, and migration without reducing relationships to scores or scripts.
+
+## Relationship Record
+
+The authoritative campaign record for one pairwise, group, organizational, familial, mediated, or networked relationship, preserving participants, first and latest meetings, important encounters, dimensions, commitments, dependencies, perspectives, and unresolved issues.
+
+## Relationship Dimension
+
+One directional, scoped aspect of a relationship such as familiarity, recognition, trust, hostility, fear, affection, respect, obligation, dependency, authority, communication, reliability, vulnerability, shared purpose, or ideological relation.
+
+## Relationship Perspective
+
+One participant's Knowledge, interpretation, expectation, emotion, and belief about a relationship kept separate from shared facts, other participants' perspectives, and audience interpretations.
+
+## Relationship Event
+
+An established event or ongoing process that materially changes, confirms, tests, or reveals a Relationship Dimension, commitment, recognition state, dependency, or unresolved issue.
+
+## Trust Trajectory
+
+A qualitative evidence-backed direction for one participant's trust in another within a stated function and interval, such as Forming, Strengthening, Stable, Conditional, Strained, Declining, Broken, Repairing, Volatile, or Unknown.
+
+## Promise Record
+
+The source-preserving account of a promisor, beneficiary, exact commitment, conditions, limits, timing, witnesses, interpretations, capacity, status, attempts, fulfilment, breach, release, renegotiation, impossibility, dispute, and consequences.
+
+## Recognition State
+
+One observer's current relationship between perceived signs and an identity, including known, familiar, suspected, role-recognized, remembered, emotionally familiar, mistaken, concealed, unrecognized, or unknown states.

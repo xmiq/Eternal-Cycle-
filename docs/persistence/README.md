@@ -12,8 +12,9 @@ It is a canonical game system, not a populated campaign, save-file format, stora
 4. [Truth Layers](TRUTH_LAYERS.md) separates Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta with explicit ownership, visibility, update, promotion, and migration rules.
 5. [Persistence Levels](PERSISTENCE_LEVELS.md) defines Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes, ownership, deletion, migration, promotion, and archival boundaries.
 6. [Campaign State Model](CAMPAIGN_STATE_MODEL.md) defines the authoritative current-state graph, claim contract, required Read Sets, Session Deltas, numerical provenance, unknown handling, and Snapshot boundaries.
+7. [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) defines persistent participant identities, first and latest meetings, important encounters, directional dimensions, trust trajectories, commitments, recognition, and causal relationship change.
 
-Later Phase 10 documents will define relationship memory, research, chronology, migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
+Later Phase 10 documents will define research, chronology, migration, continuity correction, update procedures, validation, and repository-wide integration in roadmap order.
 
 ## Foundational Boundary
 

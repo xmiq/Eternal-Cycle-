@@ -529,6 +529,8 @@ Consistency means continuity of causes, not repeating the same behavior forever.
 
 ## Relationships and Player Agency
 
+Persistent relationship identity, first and latest meetings, important encounters, directional dimensions, promises, debts, recognition, and unresolved issues follow the [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md). NPC generation and revalidation must load those records rather than infer a fresh relationship from recent narration.
+
 An NPC may admire, fear, love, resent, trust, depend on, owe, recognize, or oppose a player-controlled character. These states:
 
 - require their own histories and evidence;
@@ -821,3 +823,4 @@ This document does not define:
 - [Dungeon Generator](DUNGEON_GENERATOR.md)
 - [Faction Generator](FACTION_GENERATOR.md)
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
+- [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md)

@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define relationship memory engine**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, and campaign state model are complete pending the state-model task's focused commit.
-- Do not begin the research engine or any later Phase 10 task until the relationship memory engine is complete, validated, and committed.
+- **Define research engine**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, and relationship memory are complete pending the relationship task's focused commit.
+- Do not begin the timeline engine or any later Phase 10 task until the research engine is complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed campaign state model after reviewing its full diff and validation results.
-2. Read the state model, Truth Layers, NPC and faction continuity, Soul Constellations, Social Development, and every existing relationship interface.
-3. Define identity, first and latest meeting, important encounters, trust, trajectory, hostility, communication, promises, betrayals, debts, gifts, family, organizations, discoveries, dependencies, and unresolved issues without reducing them to one score.
-4. Require causal relationship change, preserve actor agency, distinguish perspectives, and prevent known characters from resetting to strangers without an in-world explanation.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the research engine.
+1. Commit the completed relationship memory task after reviewing its full diff and validation results.
+2. Read Truth Layers, Campaign State, Knowledge, Uncertainty Handling, Magical Schools, advancement, Projects, and existing research references.
+3. Define Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with competing, obsolete, forgotten, disproved, and rediscovered theories plus the approved confidence values.
+4. Keep Research distinct from Campaign Canon and require In-World Confirmation through the factual owner; elapsed time, repetition, authority, and correct guesses grant no automatic progress.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the timeline engine.
