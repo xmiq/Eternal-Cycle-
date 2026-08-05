@@ -63,6 +63,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/PERSISTENCE_AUTHORITY.md`](docs/persistence/PERSISTENCE_AUTHORITY.md) - campaign-fact authority from Repository Canon through Current Narration.
 - [`docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral campaign modules, record ownership, identity, references, and dependency closure.
 - [`docs/persistence/TRUTH_LAYERS.md`](docs/persistence/TRUTH_LAYERS.md) - canonical separation of facts, history, character knowledge, research, theories, rumours, secrets, and Meta.
+- [`docs/persistence/PERSISTENCE_LEVELS.md`](docs/persistence/PERSISTENCE_LEVELS.md) - canonical lifetimes for Repository, Soul, Historical, Campaign, Session, and Ephemeral records.
 - [`docs/world-engine/README.md`](docs/world-engine/README.md) - World Engine reading order, ownership boundaries, and campaign-data boundary.
 - [`docs/world-engine/WORLD_ENGINE_OVERVIEW.md`](docs/world-engine/WORLD_ENGINE_OVERVIEW.md) - causal world-simulation foundations.
 - [`docs/world-engine/WORLD_STATE_VARIABLES.md`](docs/world-engine/WORLD_STATE_VARIABLES.md) - shared rules for scoped, evidenced, persistent world conditions without repository-stored values.
@@ -96,4 +97,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Define persistence levels**. Templates and final validation follow in Phase 11.
+The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Define campaign state model**. Templates and final validation follow in Phase 11.

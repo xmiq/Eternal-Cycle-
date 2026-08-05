@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define persistence levels**.
-- Campaign persistence philosophy, authority, architecture, and truth layers are complete pending the truth-layer task's focused commit.
-- Do not begin the campaign state model or any later Phase 10 task until persistence levels are complete, validated, and committed.
+- **Define campaign state model**.
+- Campaign persistence philosophy, authority, architecture, truth layers, and persistence levels are complete pending the persistence-level task's focused commit.
+- Do not begin the relationship memory engine or any later Phase 10 task until the campaign state model is complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed truth-layer task after reviewing its full diff and validation results.
-2. Read the persistence philosophy, authority, architecture, truth layers, Soul persistence rules, and campaign-record boundaries.
-3. Define Repository, Soul, Historical, Campaign, Session, and Ephemeral persistence levels with lifetime, ownership, deletion, migration, and bounded promotion rules.
-4. Keep lifetime separate from truth, authority, visibility, and mechanical persistence; no level may grant Soul persistence or Campaign Canon by naming alone.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the campaign state model.
+1. Commit the completed persistence-level task after reviewing its full diff and validation results.
+2. Read all completed persistence documents, the GM session lifecycle, every canonical Profile boundary, and the World Engine's state model.
+3. Define the authoritative campaign state graph, module contracts, required read sets, numerical-change provenance, unknown handling, snapshots, deltas, and specialist interfaces without implementing relationship or research lifecycles prematurely.
+4. Require the GM to read the Save Index and relevant Player, Relationship, Species, Location, Project, Research, and Timeline records before adjudication as appropriate.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the relationship memory engine.

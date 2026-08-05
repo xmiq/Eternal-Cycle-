@@ -4297,3 +4297,31 @@ An observer gains information only through valid perception, communication, memo
 ## D-1074 — Migration Preserves Information Boundaries
 
 Every migration preserves truth layer, ownership, provenance, observer scope, visibility, confidence, uncertainty, and disclosure history. A destination unable to protect GM Secrets or sensitive Meta material cannot receive them through an unsafe flattening operation.
+
+## D-1075 — Persistence Uses Six Lifetime Levels
+
+Repository, Soul, Historical, Campaign, Session, and Ephemeral classify intended record lifetime and retention ownership independently from truth layer, authority, visibility, certainty, narrative importance, and mechanical power.
+
+## D-1076 — Soul-Level Records Require Soul-System Authority
+
+Only an established Soul or related canonical process can make a current-life outcome eligible for Soul-level retention. Labels, storage fields, dramatic events, Final Death, and player or GM preference cannot preserve bodily, social, material, or world-bound state.
+
+## D-1077 — Historical Records Remain Traceable
+
+Material events and corrections are normally append-only. Archival, compaction, privacy redaction, factual correction, and authorized retcon preserve resolvable identity, provenance, dependencies, and supersession rather than silently deleting history.
+
+## D-1078 — Session Material Survives Until Explicit Resolution
+
+Established Session changes remain pending until integrated and validated, rejected as invalid or draft, corrected, or recovered. Conversation progress, storage closure, interruption, and failure to save do not erase valid play automatically.
+
+## D-1079 — Ephemeral Disposal Requires a Materiality Check
+
+Temporary presentation, calculations, caches, searches, and drafts may be discarded only after confirming they established no material identity, choice, state, relationship, knowledge, chronology, consequence, uncertainty, or dependency.
+
+## D-1080 — Promotion Is Source-Preserving and Owner-Accepted
+
+Movement to a longer-lived Persistence Level passes through the receiving owner with authority, provenance, scope, dependencies, and validation. It cannot launder unsupported material into truth or bypass Soul, Historical, Campaign, or Repository requirements.
+
+## D-1081 — Storage Deletion Is Not In-World Erasure
+
+Deleting, archiving, redacting, or moving a campaign record does not destroy an item, erase history, cause forgetting, harm a Soul, or retcon reality. Each in-world or canonical change requires its own owner and record.

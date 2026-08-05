@@ -3831,3 +3831,39 @@ Evidence and resolution sufficient under the relevant canonical owner to establi
 ## Knowledge Leak
 
 The transfer or exposure of information to an observer, participant, view, index, or tool without a valid perception, communication, memory, research, disclosure, authorization, or inference route.
+
+## Persistence Level
+
+One of Repository, Soul, Historical, Campaign, Session, or Ephemeral, classifying a record's intended lifetime, retention owner, deletion or archival conditions, migration treatment, and permitted promotion without determining truth, authority, visibility, or mechanical persistence.
+
+## Repository Level
+
+The lifetime for reusable canonical rules, governance, terminology, validation, and unpopulated templates maintained through repository version history and never used for populated campaign data.
+
+## Soul Level
+
+The campaign-external lifetime for records whose survival across Final Death and Reincarnation has been established by the Soul Engine or another proper owner without implying present access or expression.
+
+## Historical Level
+
+The campaign lifetime for material events, corrections, discoveries, migrations, disclosures, and consequences retained to preserve causal history and normally changed only through append, archive, correction, or authorized retcon.
+
+## Campaign Level
+
+The cross-session lifetime for current or durable campaign conditions that remain active until an established change, closure, archive, correction, or retention decision routes their consequences and dependents.
+
+## Session Level
+
+The lifetime for working facts and deltas established after the last confirmed save integration and retained until they are integrated, rejected, corrected, recovered, or otherwise resolved explicitly.
+
+## Ephemeral Level
+
+The short lifetime for presentation, calculation, search, drafting, cache, or unselected material that may be discarded only after confirming it established no material continuity.
+
+## Materiality Check
+
+The review performed before Ephemeral disposal to determine whether material affected identity, choice, adjudication, numerical state, relationships, knowledge, chronology, projects, world conditions, consequences, uncertainty, or later dependencies.
+
+## Promotion Gate
+
+The receiving-owner review that establishes a record's materiality, authority, provenance, scope, truth layer, target Persistence Level, dependencies, and validation before longer-lived retention.

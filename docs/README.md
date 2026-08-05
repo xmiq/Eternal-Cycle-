@@ -134,6 +134,7 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Persistence Authority](persistence/PERSISTENCE_AUTHORITY.md) - the authority chain from Repository Canon through Current Narration, including conflict routing and explicit correction.
 - [Structured Persistence Architecture](persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral modules, common record contracts, stable identities, typed references, ownership, and dependency closure.
 - [Truth Layers](persistence/TRUTH_LAYERS.md) - ownership, visibility, updates, promotion, and migration for facts, knowledge, research, theories, rumours, secrets, and Meta.
+- [Persistence Levels](persistence/PERSISTENCE_LEVELS.md) - Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes with deletion, promotion, archival, and migration safeguards.
 
 ## Authority and Scope
 
