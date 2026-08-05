@@ -2314,3 +2314,38 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Soul Avatar template**.
 - Do not begin the Gate-event template before the Soul Avatar template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Soul Avatar Template
+
+### Completed Roadmap Task
+
+- Soul Avatar template.
+
+### Files Created
+
+- `templates/SOUL_AVATAR_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `templates/CHARACTER_TEMPLATE.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template separates persistent Soul Avatar emergence, current access, Continuity Concordance, Avatar Associations, and individual Avatar Expression events.
+- The current Incarnation remains the Avatar Lead; Echoes, Imprints, instincts, Titles, bonds, Archive Records, and Soul Weapons retain their own identities, consent, provenance, and mechanical owners.
+- The ordinary seven-stage Reincarnation transition is recorded as continuity provenance rather than an Avatar progression ladder.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,158 checked, zero broken.
+- Repository boundary: blank template only; no named Soul, Incarnation, Echo, Association, Trigger, expression event, or live state added.
+- No universal Avatar rank, life-count threshold, inherited mastery, missing anatomy, extra action, Gate control, or current-incarnation replacement was introduced.
+
+### Active Roadmap Task
+
+- **Gate-event template**.
+- Do not begin supplemental template coverage before the Gate-event template is complete, validated, and committed.

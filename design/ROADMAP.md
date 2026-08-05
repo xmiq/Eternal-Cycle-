@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Soul Avatar template**
+**Current task: Gate-event template**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character, Species, Evolution-tree, Skill, Soul Weapon, Faction, Settlement, and Dungeon templates are complete. Work only on **Soul Avatar template** unless the project owner explicitly changes the target. Do not begin the Gate-event template or any later incomplete Phase 11 task before the Soul Avatar template is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character, Species, Evolution-tree, Skill, Soul Weapon, Faction, Settlement, Dungeon, and Soul Avatar templates are complete. Work only on **Gate-event template** unless the project owner explicitly changes the target. Do not begin supplemental template coverage or any later incomplete Phase 11 task before the Gate-event template is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -256,7 +256,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Faction template
 - [x] Settlement template
 - [x] Dungeon template
-- [ ] Soul Avatar template
+- [x] Soul Avatar template
 - [ ] Gate-event template
 - [ ] Complete supplemental template coverage
 - [ ] Add AI operating procedures

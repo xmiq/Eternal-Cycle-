@@ -228,7 +228,7 @@ Never use this section as generic MP, spell slots, caster level, universal acces
 - **Soul Titles:** `<Title IDs, expression state, reach, and observer-specific recognition>`
 - **Soul Space:** `<access, Anchor, Regions, Thresholds, and current constraints>`
 - **Soul Constellations:** `<participant and pattern references>`
-- **Soul Avatars:** `<Avatar Profile references and current expression access>`
+- **Soul Avatars:** `<Soul Avatar Profile references and current expression access>`; use the [Soul Avatar Profile Template](SOUL_AVATAR_TEMPLATE.md)
 - **Akashic Archive:** `<Archive relationship, attunement, records, and knowledge provenance>`
 - **Soul harm, suppression, or recovery:** `<owner records and Review Points>`
 
