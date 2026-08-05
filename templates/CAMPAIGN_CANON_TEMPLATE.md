@@ -1,13 +1,13 @@
 # Campaign Canon and Rules Profile Template
 
-Use this storage-neutral template to record campaign-level commitments permitted by repository canon without copying, revising, or silently overriding the rules repository.
+Use this storage-neutral template to record campaign-level commitments permitted by Repository Canon without copying, revising, or silently overriding the rules repository.
 
 A populated Rules Profile belongs outside the repository. This blank template creates no campaign premise, optional rule, Provisional Rule, retcon, consent agreement, or version transition.
 
 ## Document Control
 
 - **Template owner:** Campaign Canon and Rules Profile in the [Structured Persistence Architecture](../docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
-- **Primary governance owners:** [Persistence Authority](../docs/persistence/PERSISTENCE_AUTHORITY.md) and repository canon
+- **Primary governance owners:** [Persistence Authority](../docs/persistence/PERSISTENCE_AUTHORITY.md) and Repository Canon
 - **Dependencies:** Campaign identity, Repository Version, permitted options, provisional rulings, retcons, consent, and migration history
 - **Extensions:** table conventions, safety agreements, authorized interfaces, and setting premises allowed by canon
 - **Consumers:** Save Index, session start, adjudication, continuity resolution, migration, validation, and Derived Views

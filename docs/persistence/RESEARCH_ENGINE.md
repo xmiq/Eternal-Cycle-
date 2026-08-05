@@ -225,7 +225,7 @@ Different communities may assign different confidence based on the evidence they
 
 ## Competing Theories
 
-**Competing Theories** offer materially different explanations, mechanisms, scopes, or predictions for overlapping evidence.
+Each **Competing Theory** offers a materially different explanation, mechanism, scope, or prediction for overlapping evidence.
 
 The engine preserves:
 

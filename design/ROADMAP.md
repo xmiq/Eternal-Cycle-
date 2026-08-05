@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Terminology audit**
+**Current task: Internal-link and navigation audit**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, cross-reference and ownership, and rule consistency are complete. Work only on **Terminology audit** unless the project owner explicitly changes the target. Do not begin the internal-link and navigation audit or any later incomplete Phase 11 task before the terminology audit is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, cross-reference and ownership, rule consistency, and terminology are complete. Work only on **Internal-link and navigation audit** unless the project owner explicitly changes the target. Do not begin the balance review or final repository validation before the internal-link and navigation audit is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -54,7 +54,7 @@ Phase 0 is complete only when a new contributor or agent can understand the repo
 - [x] Define Soul Titles
 - [x] Define Retained Instincts
 - [x] Define Akashic Archive
-- [x] Resolve Soul Avatar terminology against Echo and Weapon avatars
+- [x] Resolve Soul Avatar terminology against Echo Delegation and Weapon Manifestations
 - [x] Define Soul Avatar system
 - [x] Document interactions among soul systems
 - [x] Review exploit resistance and narrative consequences
@@ -263,7 +263,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Establish Future Revisions register
 - [x] Cross-reference and ownership audit
 - [x] Rule consistency audit
-- [ ] Terminology audit
+- [x] Terminology audit
 - [ ] Internal-link and navigation audit
 - [ ] Balance review
 - [ ] Repository validation and gameplay-validation readiness checklist

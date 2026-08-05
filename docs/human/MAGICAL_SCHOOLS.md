@@ -165,11 +165,11 @@ A school's doctrine can be:
 
 The GM should let evidence and world causality expose these differences fairly. School prestige is not proof, and outsider status is not disproof.
 
-## Curricula and Learning Roles
+## Curricula and Magical Learning Roles
 
 A Magical School may teach people with different access and responsibilities.
 
-Possible learning roles include:
+Possible Magical Learning Roles include:
 
 - source-sensitive observer;
 - noncasting theorist;

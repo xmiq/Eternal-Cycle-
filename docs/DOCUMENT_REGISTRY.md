@@ -55,7 +55,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Soul Depth](soul/SOUL_DEPTH.md) | Qualitative Soul capacity, integration, and Depth Horizons | Consumed by advanced Soul access and capability assessment. |
 | [Soul Resonance](soul/SOUL_RESONANCE.md) | Contextual alignment among Soul identity, history, beings, places, and phenomena | Extended by bounded specialist triggers and expressions. |
 | [Soul Echoes](soul/SOUL_ECHOES.md) | Past-life imprints, awakening, perspective, memory, and advisory expression | Consumed by Soul Avatars, persistence, and GM information handling. |
-| [Soul Space](soul/SOUL_SPACE.md) | Internal Soul environment, access, structure, residents, and limits | Extended by Echo, Avatar, and Weapon-Soul presence where their owners permit it. |
+| [Soul Space](soul/SOUL_SPACE.md) | Internal Soul environment, access, structure, residents, and limits | Extended by Echo, Avatar, and Weapon Soul presence where their owners permit it. |
 | [Soul Constellations](soul/SOUL_CONSTELLATIONS.md) | Persistent inter-Soul relationship patterns and recognition boundaries | Consumed by relationship persistence and world-side encounters. |
 | [Soul Titles](soul/SOUL_TITLES.md) | Persistent Soul-identity titles, formation, expression, conflict, and transformation | Consumed by reactions, opportunities, symbolic authority, and persistence views. |
 | [Retained Instincts](soul/RETAINED_INSTINCTS.md) | Cross-life procedural tendencies and embodiment-bounded recovery | Consumed by Development, Skill crossover, and Monster Evolution. |
@@ -254,7 +254,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) | Procedure for identifying and framing direct causal world events | Consumes Causal Event Chains and specialist owners. |
 | [Time Skip Procedure](gm/TIME_SKIP_PROCEDURE.md) | Player-authorized narrative compression, Standing Instructions, Review Points, and return state | Consumes Simulation Abstraction and persistence. |
 | [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) | Evidence-backed Age classification and transition return to play | Consumes Ages, chronology, and World Reset checkpoints. |
-| [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) | Campaign-local provisional ruling status, testing, recording, and review | Extended by external playtest observations; cannot alter repository canon automatically. |
+| [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) | Campaign-local provisional ruling status, testing, recording, and review | Extended by external playtest observations; cannot alter Repository Canon automatically. |
 
 ## Campaign Persistence Engine
 
@@ -268,7 +268,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | --- | --- | --- |
 | [Persistence Index](persistence/README.md) | Persistence reading order, authority boundary, and repository scope | Routes continuity and storage-neutral record claims. |
 | [Campaign Persistence Philosophy](persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) | Persistence as causal memory and its boundary with simulation and operation | Required by every persistence document. |
-| [Persistence Authority](persistence/PERSISTENCE_AUTHORITY.md) | Authority hierarchy from Repository Canon through narration | Consumed by every read, write, conflict, migration, and validation procedure. |
+| [Persistence Authority](persistence/PERSISTENCE_AUTHORITY.md) | Authority hierarchy from Repository Canon through Current Narration | Consumed by every read, write, conflict, migration, and validation procedure. |
 | [Structured Persistence Architecture](persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) | Logical modules, common contracts, stable identity, typed references, and dependency closure | Extended by blank templates and storage-specific implementations. |
 | [Truth Layers](persistence/TRUTH_LAYERS.md) | Ownership, visibility, update, promotion, and migration of distinct information layers | Consumed by knowledge, research, secrets, narration, and validation. |
 | [Persistence Levels](persistence/PERSISTENCE_LEVELS.md) | Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes | Consumed by record creation, promotion, deletion, archival, and migration. |

@@ -1,5 +1,9 @@
 # Canonical Terminology
 
+Canonical term headings define the preferred spelling, capitalization, spacing, and hyphenation when a document invokes the term's rules meaning. Ordinary-language uses may remain lowercase where they do not name that canonical concept. Plurals retain the significant capitalization of the singular term, and deprecated labels may appear only when governance records explain their replacement.
+
+This standard governs documentation wording; it does not make every matching common noun a rules term or alter the meaning owned by the linked canonical documents. Audit method and results are recorded in the [Terminology Audit](audits/TERMINOLOGY_AUDIT.md).
+
 ## Age
 
 A contextual historical era whose materially influential arrangements remain coherent enough that observers can describe a recognizable world order across a stated scope and period, without implying global uniformity.

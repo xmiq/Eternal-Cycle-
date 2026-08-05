@@ -110,4 +110,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Terminology audit**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Internal-link and navigation audit**. The completed [Terminology Audit](design/audits/TERMINOLOGY_AUDIT.md) records the repository-wide terminology checks and documentation-only corrections. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.

@@ -10,7 +10,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 - **Owner:** this index owns AI-procedure reading order and scope only
 - **Primary authorities:** [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md), [Game Master Responsibilities](../gm/GM_RESPONSIBILITIES.md), and [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
-- **Dependencies:** repository canon, Campaign Canon, external Campaign Record, Truth Layers, required Read Sets, Save Updates, and validation
+- **Dependencies:** Repository Canon, Campaign Canon, external Campaign Record, Truth Layers, required Read Sets, Save Updates, and validation
 - **Extensions:** interface-specific retrieval, presentation, storage, and automation may implement these procedures without changing them
 - **Consumers:** AI GMs, human GMs using automated assistants, campaign interfaces, state-maintenance tools, and validation tools
 - **Repository boundary:** no prompt, model configuration, credential, transcript, save, current character, live world state, hidden campaign fact, or play history belongs here

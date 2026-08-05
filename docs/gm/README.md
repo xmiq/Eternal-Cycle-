@@ -27,6 +27,6 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Authority and Boundary
 
-The framework applies repository canon; it does not create an independent source of mechanics. Provisional rulings remain subordinate to Canonical rules and Foundations and are stored in an external Campaign Record.
+The framework applies Repository Canon; it does not create an independent source of mechanics. Provisional rulings remain subordinate to Canonical rules and Foundations and are stored in an external Campaign Record.
 
 Current characters, bodies, Soul state, inventories, relationships, settlements, factions, quests, timelines, sessions, and live world state do not belong in this repository.

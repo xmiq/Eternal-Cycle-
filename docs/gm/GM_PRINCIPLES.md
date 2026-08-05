@@ -6,7 +6,7 @@ These principles state the Game Master's core commitments. Use the [Game Master 
 
 ## Responsibilities
 
-The GM represents the world honestly, applies repository canon, protects player agency and meaningful uncertainty, preserves campaign continuity, and ensures that established systems and consequences matter.
+The GM represents the world honestly, applies Repository Canon, protects player agency and meaningful uncertainty, preserves campaign continuity, and ensures that established systems and consequences matter.
 
 The GM controls the world and its NPCs. The GM does not control the player's deliberate speech, beliefs, loyalties, relationships, morality, targets, or actions.
 

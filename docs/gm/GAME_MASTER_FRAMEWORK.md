@@ -8,7 +8,7 @@ The framework applies to any campaign format, including solo play, group play, l
 
 ## Core Rule
 
-The Game Master represents a persistent causal world, adjudicates player intent through repository canon, preserves established campaign truth, and presents meaningful uncertainty without deciding the player's deliberate choices.
+The Game Master represents a persistent causal world, adjudicates player intent through Repository Canon, preserves established campaign truth, and presents meaningful uncertainty without deciding the player's deliberate choices.
 
 The GM may create people, places, situations, motives, sensory detail, and causal developments that fit established rules and campaign facts. The GM does not silently invent mechanics. When canon leaves a narrow playable gap, the GM uses the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) and labels any Provisional Rule explicitly. When the gap would require a major unsupported system, the GM narrows, delays, or discusses the situation rather than disguising invention as canon.
 
@@ -39,7 +39,7 @@ This section governs the status of rules used in adjudication. [Persistence Auth
 
 Use this order of authority for every material adjudication:
 
-1. **Repository canon.** Playable rules under `docs/` and accepted governance in `design/DECISIONS.md` jointly govern their stated scopes. Neither silently overrides the other.
+1. **Repository Canon.** Playable rules under `docs/` and accepted governance in `design/DECISIONS.md` jointly govern their stated scopes. Neither silently overrides the other.
 2. **Canonical Foundations.** A completed foundation constrains play even when a later procedure, content set, generator, or subsystem remains unfinished.
 3. **Provisional Rules.** A narrow, explicit, campaign-local ruling may fill only a remaining gap under the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md).
 4. **Narrative judgment.** The GM may choose plausible description, pacing, sequencing, ordinary detail, and actor response within the first three layers. Narrative judgment cannot create a new mechanic or reverse an established rule.
@@ -86,7 +86,7 @@ Campaign state may include:
 
 This list defines information categories, not required software or a universal save format. A campaign may use Markdown, a database, a notebook, or another reliable medium as long as the required distinctions remain visible.
 
-Material relationship continuity follows the [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md). Known actors, first and latest meetings, important encounters, directional trust and hostility, promises, betrayals, debts, gifts, family, organizations, shared discoveries, dependencies, and unresolved issues do not reset when they leave the current narration.
+Material relationship continuity follows the [Relationship Memory Engine](../persistence/RELATIONSHIP_MEMORY_ENGINE.md). Known actors, first and latest meetings, important encounters, directional trust and hostility, promises, betrayals, debts, gifts, family, organizations, shared discoveries, dependencies, and unresolved issues do not reset when they leave the Current Narration.
 
 In-world inquiry follows the [Research Engine](../persistence/RESEARCH_ENGINE.md). Observations, competing hypotheses, experiments, Evidence, theories, confidence, failed work, and Confirmed Knowledge remain distinct from world truth and Character Knowledge until their proper routes establish and communicate them.
 
@@ -435,8 +435,8 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - The GM framework cannot grant a capability, progression reward, species trait, Skill, Soul effect, social response, or world event by itself.
 - GM authority over world truth does not grant authority over the player's deliberate choices.
 - Hidden information must have prior causal existence before materially changing an outcome.
-- A campaign record cannot amend repository canon.
-- Repository canon cannot silently rewrite established campaign history; conversion follows the alpha continuity procedure where applicable.
+- A Campaign Record cannot amend Repository Canon.
+- Repository Canon cannot silently rewrite established campaign history; conversion follows the alpha continuity procedure where applicable.
 - Narrative importance does not create immunity, guaranteed success, guaranteed failure, or universal recognition.
 - Simulation detail is a tool for continuity, not proof that the GM must model every event.
 - Improvisation cannot complete a later roadmap system or change its status.

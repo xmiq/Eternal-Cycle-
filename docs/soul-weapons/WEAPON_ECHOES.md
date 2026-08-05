@@ -502,7 +502,7 @@ Weapon Echoes may reveal prior cooperation, conflict, body mismatch, or communic
 
 ### Weapon Manifestations
 
-A Weapon Echo cannot independently manifest, take physical form, wield the vessel, or become a Weapon Avatar. Replaying an image in Soul Space is memory presentation rather than external Manifestation.
+A Weapon Echo cannot independently manifest, take physical form, wield the vessel, or become a Weapon Manifestation. Replaying an image in Soul Space is memory presentation rather than external Manifestation.
 
 ## System Interactions
 

@@ -56,7 +56,7 @@ A valid claim identifies:
 5. **State owner.** The World Engine domain or specialist system that defines the underlying fact.
 6. **State type.** The kind of condition being represented.
 7. **Current finding.** A qualitative state, local measure, bounded quantity, relation, or uncertainty statement.
-8. **Trend.** Whether the condition is rising, falling, shifting, oscillating, stable, recovering, or unknown at the chosen scale.
+8. **State Trend.** Whether the condition is rising, falling, shifting, oscillating, stable, recovering, or unknown at the chosen scale.
 9. **Evidence.** The observations, records, testimony, measurement, inference, or established causes supporting the finding.
 10. **Dependencies.** Conditions that sustain, limit, expose, or transform the variable.
 11. **Distribution.** Who benefits, controls, supplies, pays, is excluded, bears risk, or can respond.
@@ -202,7 +202,7 @@ Confidence describes the support for one claim, not the importance of the subjec
 
 No State Profile grants omniscience to players, characters, factions, institutions, or the GM's in-world agents.
 
-## Trends, Delays, and Persistence
+## State Trends, Delays, and Persistence
 
 A state update distinguishes:
 
@@ -242,7 +242,7 @@ Observation time:
 Relevant subjects:
 Variables and state types:
 Current findings:
-Trends:
+State Trends:
 Drivers and counterforces:
 Dependencies and constraints:
 Distribution and affected parties:

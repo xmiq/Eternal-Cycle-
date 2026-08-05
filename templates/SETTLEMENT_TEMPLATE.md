@@ -203,7 +203,7 @@ The settlement has no single wealth, prosperity, technology, or economy score. V
 ### Conditional Fields
 
 - **External rule, occupation, tribute, or protection:** `<Faction, Institution, conflict, and Relationship references>`
-- **Religious, divine, spiritual, or Soul-Title recognition:** `<source, Jurisdiction, audience, and limits>`
+- **Religious, divine, spiritual, or Soul Title recognition:** `<source, Jurisdiction, audience, and limits>`
 - **Monster-human or multispecies governance interfaces:** `<bodies, communication, law, culture, and personhood safeguards>`
 - **Emergency authority:** `<trigger, scope, duration, oversight, and expiry>`
 
@@ -316,7 +316,7 @@ Missing information remains unknown. A map, census, law, legend, or official rep
 - **Occupation or rule change:** `<world continuity versus political control>`
 - **Age transition or Reset:** `<specialist persistence, loss, inheritance, and changed law>`
 
-Campaign History is append-only except for authorized factual correction. Current narration cannot restore a destroyed district, erased service, extinct population, or former government without an in-world cause.
+Campaign History is append-only except for authorized factual correction. Current Narration cannot restore a destroyed district, erased service, extinct population, or former government without an in-world cause.
 
 ## Validation Checklist
 

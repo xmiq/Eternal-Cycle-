@@ -460,7 +460,7 @@ The future Soul Avatar template should cover soul identity, current incarnation,
 - Stale Phase 5 handoffs were replaced with direct links to completed specialist rules. No blocking question or repository-boundary violation remains.
 - Phase 6 should preserve Weapon Souls as distinct persons and avoid turning weapon affiliation, possession, awakening, or persistence into a class, Skill package, authority claim, or bypass around embodied practice.
 
-## Phase 6 Dormant-Weapon-Soul Watchlist
+## Phase 6 Dormant Weapon Soul Watchlist
 
 - Playtest evidence should distinguish attachment to a meaningful object from evidence of a distinct Dormant Weapon Soul; Resonance with the user's own history is the main likely source of false positives.
 - Vessel Continuity needs consistent qualitative adjudication across repair, reforging, division, and reconstruction without drifting into either a material-percentage rule or identity by declared intention alone.
@@ -2612,3 +2612,53 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Terminology audit**.
 - Do not begin the internal-link and navigation audit before the terminology audit is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Terminology Audit
+
+### Completed Roadmap Task
+
+- Terminology audit.
+
+### Files Created
+
+- `design/audits/TERMINOLOGY_AUDIT.md`
+
+### Files Modified
+
+- `README.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `design/DEVELOPER_NOTES.md`
+- `docs/DOCUMENT_REGISTRY.md`
+- `docs/ai/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `docs/gm/GM_PRINCIPLES.md`
+- `docs/gm/README.md`
+- `docs/human/MAGICAL_SCHOOLS.md`
+- `docs/persistence/RESEARCH_ENGINE.md`
+- `docs/soul-weapons/WEAPON_ECHOES.md`
+- `docs/world-engine/WORLD_STATE_VARIABLES.md`
+- `templates/CAMPAIGN_CANON_TEMPLATE.md`
+- `templates/SETTLEMENT_TEMPLATE.md`
+
+### Integration Notes
+
+- The glossary now states how canonical spelling differs from ordinary-language use without turning common nouns into mechanics.
+- `Magical Learning Role`, `State Trend`, and `Competing Theory` now appear explicitly in their owning rules.
+- The last active-rule `Weapon Avatar` label now uses the accepted `Weapon Manifestation` term.
+- Formal persistence-authority labels and stray `Soul-Title` and `Weapon-Soul` compounds were standardized.
+- No gameplay mechanic, term definition, accepted decision, unresolved question, or campaign data changed.
+
+### Validation Results
+
+- Repository-wide Markdown files: 193.
+- Relative Markdown links: 5,755 checked, zero broken.
+- Markdown anchors: 111 checked, zero broken.
+- Canonical term entries: 1,058; normalized duplicate headings: zero; identical definition groups: zero.
+- Active-rule `Weapon Avatar`, `Soul-Title`, and `Weapon-Soul` matches: zero.
+- Repository boundaries and Phase 11 scope remain intact.
+
+### Active Roadmap Task
+
+- **Internal-link and navigation audit**.
+- Do not begin the balance review before the internal-link and navigation audit is complete, validated, and committed.
