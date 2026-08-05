@@ -4189,3 +4189,23 @@ Reincarnated souls, Soul Echoes, Soul Avatars, Weapon Souls, Weapon Echoes, gods
 ## D-1047 — Age-Transition Records Remain Campaign-External
 
 Populated Age-Transition Briefs, Transition Bases, Boundary Findings, current Age Claims, timelines, witnesses, evidence, World Transition Profiles, and revalidation results belong in the external Campaign Record and never become repository canon through play alone.
+
+## D-1048 — Campaign Persistence Preserves Causality
+
+Persistence records enough current state, history, provenance, information, uncertainty, and dependency to preserve why established campaign reality exists. A value-only snapshot or prose recap is insufficient when it loses material causal context.
+
+## D-1049 — The World Engine Simulates and Persistence Remembers
+
+The World Engine owns how reality changes, the Campaign Persistence Engine owns how established change is retained and recovered, and the GM Toolkit operates through both. None may duplicate or replace another's specialist ownership.
+
+## D-1050 — Persistence Is Storage-Neutral
+
+Logical organization, authority distinctions, update rules, migration, and validation are canonical. Markdown, databases, cloud storage, Git, paper, and other storage technologies are implementation choices and cannot change campaign truth by themselves.
+
+## D-1051 — Continuity-Bearing Domains Are Gameplay
+
+History, research, relationships, infrastructure, and memory create causal opportunities, constraints, knowledge, obligations, and consequences. They are gameplay state rather than disposable narration or administrative decoration.
+
+## D-1052 — Populated Persistence Remains Campaign-External
+
+The repository may contain persistence rules, logical schemas, validators, and unpopulated templates, but every populated character, Soul, relationship, inventory, world, research, timeline, secret, migration, and session record remains outside repository canon.

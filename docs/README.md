@@ -127,6 +127,11 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) - Transition Bases, Boundary Findings, scoped and disputed periodization, World Reset checkpoints, targeted revalidation, and return to play.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
+## Campaign Persistence Engine
+
+- [Campaign Persistence Engine Index](persistence/README.md) - canonical reading order, ownership boundary, and repository scope for campaign continuity.
+- [Campaign Persistence Philosophy](persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) - persistence as causal memory, its relationship to the World Engine and GM Toolkit, storage neutrality, and foundational safeguards.
+
 ## Authority and Scope
 
 Canonical rules and design governance have different responsibilities. Rules under `docs/` must remain consistent with accepted decisions in [Design Decisions](../design/DECISIONS.md); neither source silently overrides the other. Any conflict must be resolved in both places before the affected material is complete.

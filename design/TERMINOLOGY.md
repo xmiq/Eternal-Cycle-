@@ -3727,3 +3727,7 @@ The evidence-backed comparison showing how established causes changed, preserved
 ## Boundary Finding
 
 A scoped GM conclusion identifying whether an Age Transition is absent, under pressure, established, scope-specific, overlapping, disputed, or includes a separately qualified World Reset, together with its evidence, limits, exceptions, and best-supported boundary description.
+
+## Campaign Persistence Engine
+
+The canonical system that preserves established campaign reality, causal history, information distinctions, continuity, correction provenance, migration, and validation outside the rules repository without deciding the specialist mechanics that produce those facts.

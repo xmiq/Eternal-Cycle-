@@ -1951,8 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define campaign persistence philosophy**.
-- Do not begin the persistence authority hierarchy or any later Phase 10 task until the philosophy is complete, validated, and committed.
+- **Define persistence authority hierarchy**.
+- The campaign persistence philosophy is complete pending its focused commit.
+- Do not begin structured persistence architecture or any later Phase 10 task until the authority hierarchy is complete, validated, and committed.
 
 ### Validation Status
 
@@ -1964,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Read the governance files, all documentation indexes, the GM framework, World Engine state and simulation rules, and completed system persistence interfaces.
-2. Create the canonical Campaign Persistence Engine index and philosophy owner without storing populated campaign data or choosing a storage technology.
-3. Establish that the World Engine simulates reality, the Campaign Persistence Engine remembers established reality, and the GM Toolkit operates through that persistent record.
-4. Treat continuity, history, research, relationships, infrastructure, and memory as consequential play rather than disposable narration.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the authority hierarchy.
+1. Commit the completed campaign persistence philosophy after reviewing its full diff and validation results.
+2. Read the philosophy, Game Master rules hierarchy, repository authority conventions, uncertainty model, and existing external Campaign Record rules.
+3. Define the exact persistence authority hierarchy without implementing the structured module architecture or truth-layer lifecycle prematurely.
+4. Preserve the distinction between design authority, campaign authority, historical evidence, current state, session changes, and narration.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to structured persistence architecture.
