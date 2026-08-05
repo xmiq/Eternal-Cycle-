@@ -28,8 +28,9 @@ After making changes:
 4. Record balance concerns, alternatives, and experiments in `design/DEVELOPER_NOTES.md`.
 5. Record evidence-backed candidates for later design work in `design/FUTURE_REVISIONS.md` without treating them as canon or roadmap authorization.
 6. Check terminology, authority boundaries, internal links, and scope boundaries.
-7. Review the full diff.
-8. Commit only files related to the selected task.
+7. Run `pwsh -NoProfile -File .\tools\validate_repository.ps1`.
+8. Review the full diff.
+9. Commit only files related to the selected task.
 
 ## Status Rules
 

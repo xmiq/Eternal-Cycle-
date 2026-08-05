@@ -36,6 +36,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 
 | Document | Owner | Interface refinement |
 | --- | --- | --- |
+| [Core Rules Index](core/README.md) | Core-family reading order and specialist-owner routing | Creates no independent mechanical claim. |
 | [Design Philosophy](core/DESIGN_PHILOSOPHY.md) | Rule Zero, earned progression, meaningful consequence, fair mystery, and system-wide design constraints | Direct foundation for all families. |
 
 ## Soul Engine

@@ -39,6 +39,10 @@ Evidence-backed post-roadmap concerns belong in `design/FUTURE_REVISIONS.md`. Re
 
 Use relative Markdown links. Do not duplicate another system's full rules merely to avoid linking.
 
+Every documentation family has an index, and every Markdown document must be reachable from the repository navigation graph. Family indexes own local reading order; `docs/README.md` owns canonical family discovery; `docs/DOCUMENT_REGISTRY.md` owns canonical document routing; `design/README.md`, `templates/README.md`, and `agents/README.md` own their respective non-rule maps.
+
+Run `pwsh -NoProfile -File .\tools\validate_repository.ps1` after documentation changes. A task is not link-complete while the validator reports a missing target, missing anchor, unindexed document, orphan document, coverage gap, invalid roadmap declaration, duplicate normalized term heading, or forbidden campaign-data directory.
+
 ## Examples
 
 Examples illustrate rules but do not silently create new canonical exceptions.

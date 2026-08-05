@@ -1,0 +1,14 @@
+# Repository Audit Index
+
+These Phase 11 audits record repository-wide review methods, findings, and documentation-only corrections. They do not own gameplay rules, supersede specialist documents, resolve open design questions, or convert playtest evidence into canon.
+
+## Completed Audits
+
+- [Cross-Reference and Ownership Audit](CROSS_REFERENCE_AND_OWNERSHIP_AUDIT.md) - document ownership, dependencies, extensions, consumers, and registry coverage.
+- [Rule Consistency Audit](RULE_CONSISTENCY_AUDIT.md) - completed-system invariants, stale handoffs, authority boundaries, and documentation drift.
+- [Terminology Audit](TERMINOLOGY_AUDIT.md) - canonical vocabulary, neighboring concepts, deprecated labels, and documentation spelling.
+- [Internal-Link and Navigation Audit](LINK_AND_NAVIGATION_AUDIT.md) - link and anchor integrity, index coverage, registry coverage, orphan detection, and reusable validation.
+
+## Audit Boundary
+
+Audit findings route gameplay concerns to [Future Revisions](../FUTURE_REVISIONS.md), unresolved design questions to [Unresolved Questions](../UNRESOLVED_QUESTIONS.md), and accepted changes through ordinary repository governance. Audit files may correct navigation and documentation inconsistencies within their roadmap scope; they may not invent or rebalance mechanics.

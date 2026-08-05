@@ -2662,3 +2662,53 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Internal-link and navigation audit**.
 - Do not begin the balance review before the internal-link and navigation audit is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Internal-Link and Navigation Audit
+
+### Completed Roadmap Task
+
+- Internal-link and navigation audit.
+
+### Files Created
+
+- `tools/validate_repository.ps1`
+- `design/README.md`
+- `design/audits/README.md`
+- `design/audits/LINK_AND_NAVIGATION_AUDIT.md`
+- `docs/core/README.md`
+
+### Files Modified
+
+- `AGENTS.md`
+- `README.md`
+- `agents/README.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/REPOSITORY_CONVENTIONS.md`
+- `design/ROADMAP.md`
+- `docs/README.md`
+- `docs/DOCUMENT_REGISTRY.md`
+
+### Integration Notes
+
+- Design governance, repository audits, and the Core rules family now have bounded navigation indexes.
+- Agent-role files are reachable through actual Markdown links.
+- The reusable validator checks targets, anchors, family indexes, registry coverage, template coverage, orphan documents, roadmap declarations, terminology-heading uniqueness, and forbidden campaign-data directories.
+- Indexes remain navigation owners only and create no gameplay claim.
+- No gameplay mechanic, terminology entry, accepted decision, unresolved question, or campaign data changed.
+
+### Validation Results
+
+- Repository validation: pass.
+- Markdown files: 197.
+- Relative links checked: 5,804, zero broken or repository-escaping targets.
+- Markdown anchors checked: 112, zero broken.
+- Canonical documents indexed: 143 across 12 family indexes.
+- Templates indexed: 31; agent roles indexed: 5.
+- Canonical terminology headings checked: 1,058, with zero normalized duplicates.
+- Orphaned Markdown documents: zero, excluding the root README entry point.
+- Forbidden campaign-data directories: zero.
+
+### Active Roadmap Task
+
+- **Balance review**.
+- Do not begin final repository validation before the balance review is complete, validated, and committed.

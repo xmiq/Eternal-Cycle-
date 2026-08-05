@@ -26,9 +26,12 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Rules Map
 
+- [`design/README.md`](design/README.md) - design-governance reading order, authority boundaries, and repository audit map.
 - [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
 - [`docs/DOCUMENT_REGISTRY.md`](docs/DOCUMENT_REGISTRY.md) - claim owners, dependencies, extensions, and consumers for every canonical document family.
 - [`templates/README.md`](templates/README.md) - reusable blank record contracts, ownership boundaries, validation guidance, and complete [system coverage map](templates/TEMPLATE_COVERAGE.md).
+- [`agents/README.md`](agents/README.md) - focused contributor roles subordinate to `AGENTS.md`.
+- [`docs/core/README.md`](docs/core/README.md) - system-wide design constraints and Core reading order.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
@@ -108,6 +111,16 @@ Contributors and coding agents should read, in order:
 7. [`design/FUTURE_REVISIONS.md`](design/FUTURE_REVISIONS.md)
 8. [`docs/core/DESIGN_PHILOSOPHY.md`](docs/core/DESIGN_PHILOSOPHY.md)
 
+## Repository Validation
+
+Run [`tools/validate_repository.ps1`](tools/validate_repository.ps1) from the repository root after documentation changes:
+
+```powershell
+pwsh -NoProfile -File .\tools\validate_repository.ps1
+```
+
+The validator checks local Markdown links and anchors, navigation and registry coverage, template coverage, orphan documents, roadmap declarations, duplicate terminology headings, and forbidden campaign-data directories.
+
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Internal-link and navigation audit**. The completed [Terminology Audit](design/audits/TERMINOLOGY_AUDIT.md) records the repository-wide terminology checks and documentation-only corrections. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Balance review**. The completed [Internal-Link and Navigation Audit](design/audits/LINK_AND_NAVIGATION_AUDIT.md) records repository-wide structural validation. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
