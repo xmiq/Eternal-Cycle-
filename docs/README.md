@@ -2,6 +2,8 @@
 
 Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the section indexes before using a subsystem, because they state the intended order and the boundaries later rules must preserve.
 
+Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every document's claim owner, inherited dependencies, permitted extensions, and consumers.
+
 ## Core
 
 - [Design Philosophy](core/DESIGN_PHILOSOPHY.md) - Rule Zero, earned progression, fair mystery, meaningful death, and emergent consequences.

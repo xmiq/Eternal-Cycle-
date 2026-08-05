@@ -2,6 +2,8 @@
 
 Human Classes and Professions describe how societies organize, teach, preserve, apply, change, and recognize expertise. They do not create a universal character level, mandatory class progression, automatic Skill package, Profession XP bar, or metaphysical class lock.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#human-classes-and-professions).
+
 Read the [Development System](../progression/README.md) and [Skill Engine](../skills/README.md) before using these rules. Development owns changes in capability and reliability. Skills own bounded learned capabilities. This section owns the social frameworks, work structures, relationships, organizations, and constraints built around them.
 
 ## Canonical Reading Order

@@ -2,6 +2,8 @@
 
 The World Engine defines how changing conditions, autonomous actors, institutions, environments, and established system outputs create persistent consequences across time. It is a reusable simulation framework, not a campaign, save file, scripted timeline, random-event generator, or replacement for GM judgment.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#world-engine).
+
 Read the completed Soul, Development, Skill, Monster Evolution, Human, Soul Weapon, and Magic indexes before adjudicating a world claim that depends on them. The World Engine receives established facts from those systems and returns changed circumstances through their existing owners.
 
 ## Canonical Reading Order

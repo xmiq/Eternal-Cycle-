@@ -29,6 +29,8 @@ System documents should normally include:
 7. Examples
 8. Related documents
 
+The [Canonical Document Registry](../docs/DOCUMENT_REGISTRY.md) centralizes owner, dependency, extension, and consumer metadata for major canonical documents. Family-level inheritance is preferred to repeating identical metadata throughout every rules file; a document must still state local ownership where ambiguity would otherwise remain.
+
 Open design questions belong in `design/UNRESOLVED_QUESTIONS.md` rather than being presented as playable rules.
 
 Evidence-backed post-roadmap concerns belong in `design/FUTURE_REVISIONS.md`. Registering a concern does not change canon, resolve an open question, reopen a completed phase, or authorize implementation.

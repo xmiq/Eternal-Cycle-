@@ -2,6 +2,8 @@
 
 This section contains the canonical Development System. It replaces a universal character level with distinct but interacting Development Tracks and keeps retained history separate from present access, embodiment, reliability, context, and recognition.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#development-system).
+
 ## Reading Order
 
 1. [Development System](DEVELOPMENT_SYSTEM.md) - establishes the six-layer capability model, earned growth, diminishing returns, mastery boundaries, retained redevelopment, and the prohibition on universal levels or currencies.

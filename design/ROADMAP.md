@@ -4,15 +4,15 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Cross-reference and ownership audit**
+**Current task: Rule consistency audit**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, and the Future Revisions register are complete. Work only on **Cross-reference and ownership audit** unless the project owner explicitly changes the target. Do not begin the rule consistency audit or any later incomplete Phase 11 task before the cross-reference and ownership audit is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, and the cross-reference and ownership audit are complete. Work only on **Rule consistency audit** unless the project owner explicitly changes the target. Do not begin the terminology audit or any later incomplete Phase 11 task before the rule consistency audit is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
 Phases 1 through 10 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
-The reusable Gate-event template requested by the project owner remains queued for Phase 11. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
+The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
 The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
 
@@ -261,7 +261,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Complete supplemental template coverage
 - [x] Add AI operating procedures
 - [x] Establish Future Revisions register
-- [ ] Cross-reference and ownership audit
+- [x] Cross-reference and ownership audit
 - [ ] Rule consistency audit
 - [ ] Terminology audit
 - [ ] Internal-link and navigation audit

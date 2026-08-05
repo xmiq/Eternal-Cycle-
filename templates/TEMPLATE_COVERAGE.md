@@ -95,4 +95,4 @@ Coverage does not require one file per canonical document. A record-family templ
 
 ## Coverage Result
 
-Every completed gameplay phase and every logical Campaign Persistence module has a reusable blank contract. Later playtesting may reveal usability or representation issues; record those in `design/FUTURE_REVISIONS.md` once that later Phase 11 task is complete rather than changing mechanics during standardization.
+Every completed gameplay phase and every logical Campaign Persistence module has a reusable blank contract. Later playtesting may reveal usability or representation issues; record evidence-backed candidates in the [Future Revisions register](../design/FUTURE_REVISIONS.md) rather than changing mechanics during standardization.

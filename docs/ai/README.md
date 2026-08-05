@@ -4,6 +4,8 @@ These procedures define how an AI Game Master operates the completed Eternal Cyc
 
 A human GM may use the same procedures. Automation changes retrieval and execution methods; it does not change authority, responsibility, player agency, or the standard of evidence.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#ai-game-master-operations).
+
 ## Document Control
 
 - **Owner:** this index owns AI-procedure reading order and scope only

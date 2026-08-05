@@ -2,6 +2,8 @@
 
 Monster Evolution describes how monster forms, populations, and societies respond to ecology, embodiment, meaningful pressure, and world change. Evolution is an emergent bodily transition, not a universal level system, kill-count reward, rarity ladder, mandatory tree, or substitute for Skills, Development, or Soul progression.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#monster-evolution).
+
 ## Required Foundations
 
 Read these foundations before adjudicating Monster Evolution:

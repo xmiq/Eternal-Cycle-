@@ -2,6 +2,8 @@
 
 The Soul Engine governs identity, memory, relationships, and progression that can persist across death. Persistence does not guarantee immediate access, present expression, or freedom from the current body's limits.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#soul-engine).
+
 ## Core Rules
 
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md) - map of persistent and temporary elements.

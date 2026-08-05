@@ -4,6 +4,8 @@ The Campaign Persistence Engine defines how an Eternal Cycle campaign preserves 
 
 It is a canonical game system, not a populated campaign, save-file format, storage product, or substitute for the systems whose outcomes it records.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#campaign-persistence-engine).
+
 ## Canonical Reading Order
 
 1. [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) establishes why persistence exists, what it owns, and how it relates to the World Engine and GM Toolkit.

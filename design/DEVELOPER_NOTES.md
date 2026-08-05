@@ -2531,3 +2531,45 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Cross-reference and ownership audit**.
 - Do not begin the rule consistency audit before the cross-reference and ownership audit is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Cross-Reference and Ownership Audit
+
+### Completed Roadmap Task
+
+- Cross-reference and ownership audit.
+
+### Files Created
+
+- `docs/DOCUMENT_REGISTRY.md`
+- `design/audits/CROSS_REFERENCE_AND_OWNERSHIP_AUDIT.md`
+
+### Files Modified
+
+- `README.md`
+- `docs/README.md`
+- every family index under `docs/`
+- `design/REPOSITORY_CONVENTIONS.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+- `templates/TEMPLATE_COVERAGE.md`
+
+### Integration Notes
+
+- The registry assigns every canonical document a claim owner and family-inherited dependencies, extensions, and consumers.
+- Family-level inheritance avoids repeating interface boilerplate across 142 indexed documents while refinements preserve narrow handoffs.
+- The registry routes claims to existing specialist owners and cannot override canonical rules or accepted design governance.
+- Stale references to the completed Gate-event template and Future Revisions task were corrected.
+- No gameplay mechanic, terminology entry, canonical decision, or campaign data was added.
+
+### Validation Results
+
+- Repository-wide Markdown files: 191.
+- Relative Markdown links: 5,688 checked, zero broken.
+- Markdown anchors: 111 checked, zero broken.
+- Registry subjects: 142 expected, 142 present, zero missing, zero extra, and zero duplicate subjects.
+- Repository boundaries and Phase 11 scope remain intact.
+
+### Active Roadmap Task
+
+- **Rule consistency audit**.
+- Do not begin the terminology audit before the rule consistency audit is complete, validated, and committed.

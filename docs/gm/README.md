@@ -2,6 +2,8 @@
 
 The GM rules define how Eternal Cycle canon is applied during play without placing any live campaign state in this repository.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#game-master-toolkit).
+
 ## Reading Order
 
 1. [GM Principles](GM_PRINCIPLES.md) - concise commitments for fair, systemic, agency-preserving play.

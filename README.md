@@ -27,6 +27,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 ## Rules Map
 
 - [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
+- [`docs/DOCUMENT_REGISTRY.md`](docs/DOCUMENT_REGISTRY.md) - claim owners, dependencies, extensions, and consumers for every canonical document family.
 - [`templates/README.md`](templates/README.md) - reusable blank record contracts, ownership boundaries, validation guidance, and complete [system coverage map](templates/TEMPLATE_COVERAGE.md).
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
@@ -109,4 +110,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Cross-reference and ownership audit**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Rule consistency audit**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.

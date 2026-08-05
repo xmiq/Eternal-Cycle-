@@ -2,6 +2,8 @@
 
 Soul Weapons are persistent partnerships between a continuing soul and a distinct Weapon Soul. They are not equipment tiers, inventory rewards, Skill packages, Classes, species traits, or substitutes for current-life Development.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#soul-weapons).
+
 Read the [Soul Weapon Foundations](../soul/SOUL_WEAPON_FOUNDATIONS.md) before this section. The foundations establish emergence through meaningful shared history, Weapon Soul personhood, the separation between awakening and intertwining, Reincarnation persistence, and the safeguards every detailed rule must preserve.
 
 ## Canonical Reading Order

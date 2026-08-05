@@ -2,6 +2,8 @@
 
 The Skill Engine defines how bounded learned capabilities are structured, related, translated, transformed, expressed, discovered, and represented. It creates neither a universal character level nor a universal Skill currency, score, tree, or interface.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#skill-engine).
+
 ## Authority and Use
 
 The files in this directory are the canonical Skill Engine. Read the Development foundations first, then the ten Skill documents in the order below. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) appears last because it consolidates the completed engine, but its ownership and representation rules apply throughout.

@@ -2,6 +2,8 @@
 
 Magic is a natural family of world phenomena expressed through the interaction of Mana, sources, embodiment, Souls, learned methods, authority, environment, and current world laws. It is not an independent progression currency, a universal spell list, or an automatic advantage over nonmagical paths.
 
+Repository-wide ownership, dependency, extension, and consumer metadata is maintained in the [Canonical Document Registry](../DOCUMENT_REGISTRY.md#magic).
+
 Read [Magical Development](../progression/MAGICAL_DEVELOPMENT.md) before this section. It owns how magical capability changes. The documents here own the natural processes and procedures through which that capability can act.
 
 ## Canonical Reading Order
