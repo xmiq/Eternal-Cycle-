@@ -1951,22 +1951,22 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define save update protocol**.
-- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, and continuity resolution are complete through the Continuity Resolution task.
-- Do not begin persistence validation or later Phase 10 work until the save update protocol is complete, validated, and committed.
+- **Define persistence validation**.
+- Campaign persistence philosophy, authority, architecture, truth layers, persistence levels, campaign state, relationship memory, research, chronology, migration, continuity resolution, and save updates are complete through the Save Update Protocol task.
+- Do not begin the final Campaign Persistence Engine audit or Phase 11 before persistence validation is complete, validated, and committed.
 
 ### Validation Status
 
-- The Continuity Resolution checkpoint validates 149 Markdown files and 4,811 relative links with no missing targets or anchors.
+- The Save Update Protocol checkpoint validates 150 Markdown files and 4,832 relative links with no missing targets or anchors.
 - All 12 documentation indexes are present.
-- All 1,144 decision IDs and 1,039 terminology entries are unique.
+- All 1,157 decision IDs and 1,046 terminology entries are unique.
 - No prohibited campaign-state filename was present.
-- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Continuity Resolution task.
+- Repository navigation, roadmap status, terminology, authority boundaries, and the campaign-data exclusion remain consistent through the Save Update Protocol task.
 
 ### Exact Resume Instructions
 
-1. Read Campaign State, Persistence Levels, Timeline, Relationships, Research, Migration, Continuity Resolution, consequence handling, and Session lifecycle rules.
-2. Define the transaction after every completed gameplay interaction: determine affected sections, build the Session Delta, update only those owners, append Session Log and Timeline, append Campaign History when material, validate, and establish the next Save Point.
-3. Require explicit handling of new Projects, Mysteries, completed discoveries, disproved theories, numerical traces, Relationships, Knowledge, Secrets, world consequences, and pending work.
-4. Define atomicity, interruption, recovery, no-op interactions, batching boundaries, Review Points, and prohibition on rewriting unrelated records.
-5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before persistence validation.
+1. Read every completed persistence owner, every validation reference, repository validation conventions, and all specialist safeguards that produce persisted claims.
+2. Define validation scopes, severity, blocking behavior, evidence, reports, and repair routing for saves, migrations, continuity corrections, loaded state, and periodic audits.
+3. Detect duplicate NPCs, settlements, and discoveries; broken and dangling references; Relationship, Timeline, Knowledge, Secret, theory, numerical, identity, ownership, and continuity defects; orphaned records; and continuity drift.
+4. Require validation after every Migration and before every Save Point activation; validators report but never silently repair, invent, retcon, leak, or override owners.
+5. Update terminology and accepted decisions only for genuinely new outcomes, validate the complete diff, and commit before the final Phase 10 integration audit.

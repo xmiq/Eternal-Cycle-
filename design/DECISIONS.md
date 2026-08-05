@@ -4577,3 +4577,55 @@ Correcting GM or persistence state does not grant Character Knowledge or expose 
 ## D-1144 — Reincarnation Conflicts Preserve Soul and Life Identity
 
 Continuity correction links rather than collapses Soul and Incarnation records and cannot transfer bodily state, Inventory, authority, world-bound Knowledge, recognition, or relationships without their established routes.
+
+## D-1145 — Every Completed Gameplay Interaction Runs the Save Protocol
+
+Once a bounded interaction has established intent, adjudication, outcome, costs, information effects, and currently resolvable consequences, its persistence transaction completes before later adjudication depends on the changed state.
+
+## D-1146 — Interaction Boundaries Are Semantic Rather Than Conversational
+
+A message, sentence, roll, lookup, or draft is not automatically a Gameplay Interaction. Save at the smallest established boundary needed for continuity without persisting unresolved narration or relying on unrecorded state.
+
+## D-1147 — Save Updates Touch Only the Affected Set
+
+Every transaction maps direct effects to Authoritative Record Owners and follows only their material dependency closure. Unrelated records are not rewritten for formatting, synchronization convenience, or apparent completeness.
+
+## D-1148 — Save Transactions Are Uniquely Identified and Idempotent
+
+One Transaction ID joins an interaction, Session Delta, Write Set, validation, activation, and recovery. Retrying the same transaction cannot duplicate events, costs, items, progression, Relationships, or consequences.
+
+## D-1149 — Session Timeline and Campaign History Appends Are Distinct
+
+Every completed interaction appends Session order; material in-world events append Timeline records; materially durable continuity appends Campaign History. One append does not substitute for the others.
+
+## D-1150 — Save Activation Is Atomic
+
+One validated candidate activates from one parent Campaign Version with its complete Write Set or not at all. No Save Point may expose a partially integrated Session Delta.
+
+## D-1151 — Interrupted Saves Preserve the Prior Authority
+
+Before atomic activation, the parent Campaign Version remains active while Transaction identity, Pending Session state, staged operations, and recovery position remain durable. Attempted writes are never assumed successful.
+
+## D-1152 — Concurrent Saves Never Use Last Writer Wins
+
+A changed parent Campaign Version blocks overwrite. Duplicate, independent, conflicting, and sequential branches are classified and resolved through a valid descendant, Continuity Resolution, or Migration.
+
+## D-1153 — No-Op Updates Create No Fake State
+
+When an interaction causes no persistent change, the protocol may record a material No-Op in Session order but creates no false Timeline Event, progression, counter, evidence, consequence, or owner rewrite.
+
+## D-1154 — Projects Mysteries and Research Receive Explicit Updates
+
+Save Updates record actual Project work and state, bounded Mystery questions and clues, Research observations and evidence, completed discoveries, disproved theories, and Review Points without inventing completion or hidden truth.
+
+## D-1155 — Information Effects Update Only Valid Observers
+
+Each information change identifies its exact claim, observer, source, acquisition route, truth layer, time, confidence, and disclosure boundary. World truth and GM Secrets are not copied into Character Knowledge by saving.
+
+## D-1156 — Pending Consequences Are Pressures Rather Than Outcomes
+
+A caused future pressure records source, scope, route, horizon, trigger, capable actors, uncertainty, and Review Point. It does not predetermine the later actor choice or result.
+
+## D-1157 — Save Updates Preserve Numerical Provenance
+
+Every material number change follows its owning mechanic through a Numerical Change Trace. Save integration cannot silently balance, average, round, zero, or otherwise adjust progression and state.

@@ -148,7 +148,7 @@ Do not simulate unrelated detail merely to appear comprehensive. Use the smalles
 
 ### 7. Save Campaign State
 
-Write the confirmed changes to the external Campaign Record. Preserve the distinction among world truth, character knowledge, player knowledge, mistaken beliefs, and hidden information. Record material Provisional Rules with their source, scope, and review condition.
+Apply the [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md) after every completed gameplay interaction. Determine the Affected Set, update only its Authoritative Record Owners, append Session and temporal records, preserve Pending work, validate, and establish the next Save Point before dependent adjudication continues. Preserve the distinction among world truth, character knowledge, player knowledge, mistaken beliefs, and hidden information. Record material Provisional Rules with their source, scope, and review condition.
 
 The repository remains unchanged by ordinary campaign play.
 
@@ -483,3 +483,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Timeline Engine](../persistence/TIMELINE_ENGINE.md)
 - [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md)
 - [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)
+- [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md)

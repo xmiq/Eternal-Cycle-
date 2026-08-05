@@ -4155,3 +4155,31 @@ An established actor's deliberate communication, staging, concealment, falsifica
 ## Reliance Effect
 
 A material choice, cost, lost opportunity, interpretation, consent decision, or downstream consequence produced because a participant or system reasonably acted on a presented claim.
+
+## Save Update Protocol
+
+The canonical post-interaction transaction that determines the Affected Set, constructs a Session Delta, updates only its owners, appends logs and history, validates, and atomically establishes the next Save Point.
+
+## Gameplay Interaction
+
+One bounded unit of play whose material intent, adjudication, immediate outcome, costs, information effects, and currently resolvable consequences are established enough to persist.
+
+## Save Transaction
+
+One idempotent, owner-routed campaign update from a single parent Campaign Version through a bounded Affected Set and Write Set to a validated candidate Save Point.
+
+## Transaction ID
+
+A unique immutable identifier joining one Gameplay Interaction to its Session Delta, staged operations, validation, activation, interruption, retry, and recovery history.
+
+## Affected Set
+
+The smallest dependency-complete set of campaign claims and records that one interaction creates, changes, closes, supersedes, corrects, or materially references.
+
+## Write Set
+
+The ordered owner-routed create, amend, append, close, supersede, archive, correct, and Pending operations staged by one Save Transaction without touching unrelated records.
+
+## No-Op Update
+
+The explicit result that a completed Gameplay Interaction caused no persistent campaign-state change, allowing a material Session Log entry without fake state, Timeline, progression, or counter changes.
