@@ -93,7 +93,7 @@ Open design questions are tracked in [Unresolved Questions](UNRESOLVED_QUESTIONS
 
 ## Queued Soul Avatar and World-Contact Gate Additions
 
-These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md), the contact interface is implemented in [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md), and their detailed handoff is implemented in [World Gate Interactions with Reincarnation and Soul Avatars](../docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md). The reusable Gate-event template remains queued for Phase 10. Notes here grant no abilities and do not override canonical rules.
+These notes record the design provenance of owner-requested systems. The Soul Avatar brief is implemented canonically in [Soul Avatars](../docs/soul/SOUL_AVATARS.md), the contact interface is implemented in [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md), and their detailed handoff is implemented in [World Gate Interactions with Reincarnation and Soul Avatars](../docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md). The reusable Gate-event template remains queued for Phase 11. Notes here grant no abilities and do not override canonical rules.
 
 ### Inspiration References
 
@@ -1647,7 +1647,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 ### Exact Resume Instructions
 
 1. Read governance, every GM document, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, World-State Variables, Simulation Abstraction, all specialist World Engine domains, and relevant completed system interfaces.
-2. Create the dedicated canonical owner for **Create world-event generator**; do not implement the Time Skip procedure, Age-transition procedure, or Phase 10 templates.
+2. Create the dedicated canonical owner for **Create world-event generator**; do not implement the Time Skip procedure, Age-transition procedure, or Phase 11 templates.
 3. Generate campaign-local world events from established initiating changes, affected referents, supported Causal Links, autonomous actors, delays, Counterforces, branches, feedback, information views, Pending Consequences, and Review Points rather than plot need or random spectacle.
 4. Keep event generation, immediate outcome adjudication, specialist-domain mechanics, Time Skips, Age Transitions, Encounters, and live world state separate.
 5. Preserve causal provenance, world autonomy, uncertainty, actor agency, proportional simulation, specialist ownership, non-deterministic futures, and external Campaign Records.
@@ -1745,7 +1745,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 ### Exact Resume Instructions
 
 1. Read governance, every GM document, `docs/world-engine/SIMULATION_ABSTRACTION.md`, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, `docs/world-engine/WORLD_STATE_VARIABLES.md`, `docs/world-engine/AGES_AND_WORLD_RESETS.md`, every specialist World Engine domain, Reincarnation, Development and Training, and the World-Event Generator.
-2. Create the dedicated canonical owner for **Create time-skip procedure**; do not implement the Age-transition procedure or any Phase 10 template.
+2. Create the dedicated canonical owner for **Create time-skip procedure**; do not implement the Age-transition procedure or any Phase 11 template.
 3. Define Time Skip as narrative and simulation compression between established moments, never as a cause, event, clean reset, training award, or permission to invent outcomes.
 4. Require a start state, end horizon, player intent and standing instructions, Simulation Frames, Resolution Anchors, Material Exceptions, autonomous actor passes, due Review Points, event and consequence resolution, specialist handoffs, and an external causal bridge.
 5. Preserve player agency checkpoints, Reincarnation and Interlife continuity, current-life effort, training evidence, world autonomy, uncertainty, distributions, minorities, irreversible changes, unresolved branches, and external Campaign Records.
@@ -1840,11 +1840,11 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 ### Exact Resume Instructions
 
 1. Read governance, every GM document, `docs/world-engine/AGES_AND_WORLD_RESETS.md`, `docs/world-engine/WORLD_STABILITY.md`, `docs/world-engine/SIMULATION_ABSTRACTION.md`, `docs/world-engine/CAUSAL_EVENT_CHAINS.md`, every specialist World Engine domain, the World-Event Generator, and the Time Skip Procedure.
-2. Create the dedicated canonical owner for **Create Age-transition procedure**; do not implement Phase 10 templates or later roadmap work.
+2. Create the dedicated canonical owner for **Create Age-transition procedure**; do not implement Phase 11 templates or later roadmap work.
 3. Classify an Age Transition only after lasting, multi-domain changes make a new scoped Age description more useful and accurate than the former one; do not generate a desired genre, declare transition from elapsed time, or equate every transition with a World Reset.
 4. Define transition-question scope, former and successor Age Signatures, Transition Basis, boundary interval, uneven survivorship, contested periodization, actor agency, information views, World Revalidation, legacies, and return-to-play handoffs.
 5. Preserve causal history, surviving systems, regional differences, minority continuities, specialist ownership, Reincarnation and long-lived observers, World Gates, Soul Avatars, Weapon Souls, records, uncertainty, and external Campaign Records.
-6. Validate the task, complete the Phase 9 exit audit, mark Phase 9 complete only if every criterion passes, advance the roadmap to Phase 10 without implementing it, commit the task and final integration as appropriate, then create the mandatory Phase 9 checkpoint commit.
+6. Validate the task, complete the Phase 9 exit audit, mark Phase 9 complete only if every criterion passes, advance the roadmap without implementing later work, commit the task and final integration as appropriate, then create the mandatory Phase 9 checkpoint commit.
 
 ## Phase 9 Checkpoint — GM Toolkit Complete
 
@@ -1867,9 +1867,9 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 
 ### Active Roadmap Task
 
-- **Phase 10 — Templates and Validation**.
-- **Character template** is the sole current task.
-- Do not begin the Species template or any later Phase 10 task until the Character template is complete, validated, and committed.
+- **Phase 11 — Templates and Validation** is queued after the owner-approved Campaign Persistence Engine phase.
+- **Character template** remains the first Phase 11 task.
+- Do not begin the Character template or any later Phase 11 task before Phase 10 is complete, validated, and committed.
 
 ### Files Created
 
@@ -1904,7 +1904,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - Validated all 10 documentation indexes with zero navigation omissions.
 - Validated 932 unique terminology entries and 1,047 unique decision IDs with zero duplicates.
 - Confirmed all thirteen Phase 9 roadmap tasks are `[x]` and satisfy the new Phase 9 exit criteria.
-- Confirmed the roadmap advanced to Phase 10 without implementing any Phase 10 template.
+- Confirmed Phase 9 advanced the roadmap without implementing any template; the unchanged template backlog is now Phase 11.
 - Confirmed the Age Transition Procedure classifies established history, allows no-transition and disputed findings, preserves regional exceptions, and never generates a desired genre.
 - Confirmed World Reset qualification remains separately owned by Ages and World Resets.
 - Confirmed Time Skips, World Events, World Gates, Reincarnation, Soul Avatars, Weapon Souls, and specialist transitions retain their canonical owners.
@@ -1938,9 +1938,34 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 
 ### Exact Resume Instructions
 
-1. Read `AGENTS.md`, `README.md`, every file under `design/`, every documentation index, and the completed canonical owners relevant to reusable character records.
-2. Resume from **Phase 10 — Templates and Validation / Character template** exactly as stated in `design/ROADMAP.md`.
-3. Create only the reusable unpopulated Character template; do not add a current character, campaign save, inventory, quest, relationship record, live Soul state, or playthrough history.
-4. Preserve the established separations among identity, Soul continuity, embodiment, Development, Skills, Monster Evolution, Human structures, Soul Weapons, Magic, world recognition, information views, and campaign state.
-5. Do not begin the Species template or later Phase 10 tasks until the Character template is complete, linked, internally consistent, validated, and committed.
-6. After completing the roadmap task, update the roadmap honestly, review the complete diff, validate links, navigation, terminology, ownership, and repository boundaries, then commit and create the next required checkpoint.
+1. Read `AGENTS.md`, `README.md`, every file under `design/`, every documentation index, and the completed canonical owners relevant to campaign continuity and external records.
+2. Resume from **Phase 10 — Campaign Persistence Engine / Define campaign persistence philosophy** exactly as stated in `design/ROADMAP.md`.
+3. Define only the shared persistence purpose, principles, ownership boundary, and relationship to the World Engine and GM Toolkit; do not implement later Phase 10 procedures prematurely.
+4. Preserve the established separations among Repository Canon, campaign data, identity, Soul continuity, embodiment, Development, Skills, Monster Evolution, Human structures, Soul Weapons, Magic, world simulation, information views, and GM adjudication.
+5. Do not begin the persistence authority hierarchy or later Phase 10 tasks until the philosophy is complete, linked, internally consistent, validated, and committed.
+6. After completing the roadmap task, update the roadmap honestly, review the complete diff, validate links, navigation, terminology, ownership, and repository boundaries, then commit before advancing.
+
+## Roadmap Restructuring — Campaign Persistence Engine
+
+The project owner permanently inserted **Phase 10 — Campaign Persistence Engine** between the completed GM Toolkit and the template backlog. The former Phase 10 task list moved to **Phase 11 — Templates and Validation** in the same order and with the same statuses. The Evolution-tree template remains complete; no other template task was started by the restructuring.
+
+### Active Roadmap Task
+
+- **Define campaign persistence philosophy**.
+- Do not begin the persistence authority hierarchy or any later Phase 10 task until the philosophy is complete, validated, and committed.
+
+### Validation Status
+
+- The pre-change audit validated 137 Markdown files and 4,548 relative links with no missing targets or anchors.
+- All 11 documentation indexes were present.
+- All 1,047 decision IDs and 932 terminology entries were unique.
+- No prohibited campaign-state filename was present.
+- The restructuring changes project order only and does not implement persistence rules or templates.
+
+### Exact Resume Instructions
+
+1. Read the governance files, all documentation indexes, the GM framework, World Engine state and simulation rules, and completed system persistence interfaces.
+2. Create the canonical Campaign Persistence Engine index and philosophy owner without storing populated campaign data or choosing a storage technology.
+3. Establish that the World Engine simulates reality, the Campaign Persistence Engine remembers established reality, and the GM Toolkit operates through that persistent record.
+4. Treat continuity, history, research, relationships, infrastructure, and memory as consequential play rather than disposable narration.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the authority hierarchy.

@@ -2,15 +2,15 @@
 
 ## Current Target
 
-**Current phase: Phase 10 — Templates and Validation**
+**Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Character template**
+**Current task: Define campaign persistence philosophy**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Character template** unless the project owner explicitly changes the target. Do not begin the Species template or later Phase 10 work before the Character template is complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define campaign persistence philosophy** unless the project owner explicitly changes the target. Do not begin the persistence authority hierarchy or later Phase 10 work before the campaign persistence philosophy is complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
-The reusable Gate-event template requested by the project owner remains queued for Phase 10. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
+The reusable Gate-event template requested by the project owner remains queued for Phase 11. That queued entry does not change the current task or authorize implementation before the roadmap reaches it.
 
 The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
 
@@ -223,7 +223,28 @@ Phase 8 is complete only when Rule Zero, shared world-state variables, Causal Ev
 
 Phase 9 is complete only when the alpha-playtest framework, GM responsibilities, consequence resolution, uncertainty handling, Reincarnation generation, Encounter generation, monster generation, NPC generation, Dungeon generation, faction generation, World-Event generation, Time Skip procedure, and Age Transition procedure are defined, linked, and internally consistent; every tool applies existing owners without duplicating their mechanics; player and autonomous-actor agency, uncertainty, causal continuity, persistent consequence, and human/AI GM parity remain explicit; generators produce bounded campaign-external preparation rather than scripted outcomes, level-scaled content, universal scores, or hidden progression; Time Skips compress narration rather than causality; Age transitions classify established history rather than create it; World Reset qualification remains separate; no campaign state or populated tool record enters the repository; no blocking questions remain; and all links, terminology, navigation, ownership boundaries, and roadmap statuses validate.
 
-## Phase 10 — Templates and Validation
+## Phase 10 — Campaign Persistence Engine
+
+- [ ] Define campaign persistence philosophy
+- [ ] Define persistence authority hierarchy
+- [ ] Define structured persistence architecture
+- [ ] Define truth layers
+- [ ] Define persistence levels
+- [ ] Define campaign state model
+- [ ] Define relationship memory engine
+- [ ] Define research engine
+- [ ] Define timeline engine
+- [ ] Define migration and versioning
+- [ ] Define continuity resolution
+- [ ] Define save update protocol
+- [ ] Define persistence validation
+- [ ] Audit and integrate Campaign Persistence Engine
+
+### Exit Criteria
+
+Phase 10 is complete only when continuity, authority, truth layers, persistence lifetimes, modular campaign state, relationship memory, research, chronology, migration, conflict correction, save updates, and validation are defined, linked, and internally consistent; the structured persistence model is authoritative for campaign state while remaining storage-neutral; the World Engine owns simulated change and the GM Toolkit operates through persistence without replacing either; missing information remains unknown; numerical changes require established mechanical causes; campaign history remains traceable; migration requires backup, audit, merge, and validation; Repository Canon and campaign data remain separate; no populated campaign record enters the repository; no blocking questions remain; and all links, numbering, navigation, terminology, ownership boundaries, and continuity safeguards validate.
+
+## Phase 11 — Templates and Validation
 
 - [ ] Character template
 - [ ] Species template
@@ -240,3 +261,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [ ] Internal-link audit
 - [ ] Balance review
 - [ ] Version 1 release checklist
+
+### Exit Criteria
+
+Phase 11 is complete only when every listed reusable template and validation task is complete, reviewed, linked, terminology-consistent, free of campaign data, and compatible with the completed canonical systems; repository-wide consistency, terminology, links, balance, and release readiness have been audited; and the Version 1 release checklist passes without unresolved blocking questions.

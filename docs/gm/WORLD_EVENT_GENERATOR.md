@@ -718,7 +718,7 @@ An established World Event may later become an Encounter Source, require new NPC
 
 ### Alpha Playtest Rules
 
-Use Provisional Rules only for narrow unresolved mechanics supported by completed foundations. Event generation cannot use provisional authority to implement Time Skip, Age-transition, Phase 10 templates, or a missing specialist system wholesale.
+Use Provisional Rules only for narrow unresolved mechanics supported by completed foundations. Event generation cannot use provisional authority to implement Time Skip, Age-transition, Phase 11 templates, or a missing specialist system wholesale.
 
 ## Worked Examples
 

@@ -621,7 +621,7 @@ No generator may create historical significance simply because a transition woul
 
 ### Alpha Playtest Rules
 
-Where an adjacent Phase 10 template or narrow campaign-specific mechanic remains incomplete, use the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md). Do not make the Age classification provisional merely because a separate template is unfinished.
+Where an adjacent Phase 11 template or narrow campaign-specific mechanic remains incomplete, use the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md). Do not make the Age classification provisional merely because a separate template is unfinished.
 
 ## Uncertainty and Randomness
 

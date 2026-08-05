@@ -91,4 +91,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Templates and Validation**, and the sole current task is **Character template**.
+The repository foundation and Phases 1 through 9 are complete and reviewed. The current phase is **Phase 10 — Campaign Persistence Engine**, and the sole current task is **Define campaign persistence philosophy**. Templates and final validation now follow in Phase 11.

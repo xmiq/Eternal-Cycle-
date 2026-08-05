@@ -713,7 +713,7 @@ Use Consequence Resolution, Uncertainty Handling, Reincarnation Generation, Worl
 
 ### Alpha Playtest Rules
 
-Use a Provisional Rule only for one narrow missing mechanic supported by completed foundations. Use the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) for historical classification, and do not use Time Skip to implement Phase 10 templates by implication.
+Use a Provisional Rule only for one narrow missing mechanic supported by completed foundations. Use the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) for historical classification, and do not use Time Skip to implement Phase 11 templates by implication.
 
 ## Worked Examples
 
