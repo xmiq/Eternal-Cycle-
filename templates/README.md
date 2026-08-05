@@ -10,6 +10,7 @@ Populate campaign instances only in an external Campaign Record. Reusable refere
 - [Character Record Template](CHARACTER_TEMPLATE.md) - current character identity, embodiment, capability references, agency, continuity, and persistence boundaries.
 - [Species Reference Template](SPECIES_TEMPLATE.md) - ordinary species or form range, embodiment, lifecycle, traits, ecology, variation, and specialist interfaces.
 - [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) - reusable species-route structure governed by Monster Evolution.
+- [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
 
 ## Shared Use Rules
 

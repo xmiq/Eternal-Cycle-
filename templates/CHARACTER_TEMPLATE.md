@@ -187,7 +187,7 @@ Record every gain once under its owner. Support may change access or effectivene
 - **Evolution, Fusion, or Adaptive Skill state:** `<owner record, evidence, and cleanup status>`
 - **Maintenance, rust, suppression, or inaccessible mastery:** `<current causes and Review Points>`
 
-A name in this section does not prove present expression or reliability. Use the [Skill Template](README.md) once its dedicated Phase 11 task is complete; until then, link the authoritative campaign Skill record.
+A name in this section does not prove present expression or reliability. Use the [Skill Record Template](SKILL_TEMPLATE.md) for each authoritative campaign Skill record.
 
 ## Human, Monster, and Social Frameworks
 

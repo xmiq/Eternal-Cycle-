@@ -2143,3 +2143,37 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Skill template**.
 - Do not begin the Soul Weapon template before the Skill template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Skill Template
+
+### Completed Roadmap Task
+
+- Skill template.
+
+### Files Created
+
+- `templates/SKILL_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/CHARACTER_TEMPLATE.md`
+- `templates/README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template separates Skill identity, Capability Representation, origin tree, requirements, persistent familiarity, the six capability layers, expression, visibility, and history.
+- Adaptive emergence, Skill Evolution, Skill Fusion, hiddenness, conceptual operation, and reincarnation crossover remain conditional extensions owned by their existing specialist rules.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,031 checked, zero broken.
+- Repository boundary: blank template only; no campaign data added.
+- Phase 1 through Phase 10 rules remain unchanged.
+
+### Active Roadmap Task
+
+- **Soul Weapon template**.
+- Do not begin the Faction template before the Soul Weapon template is complete, validated, and committed.
