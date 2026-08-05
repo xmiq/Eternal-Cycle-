@@ -2280,3 +2280,37 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Dungeon template**.
 - Do not begin the Soul Avatar template before the Dungeon template is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Dungeon Template
+
+### Completed Roadmap Task
+
+- Dungeon template.
+
+### Files Created
+
+- `templates/DUNGEON_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template derives directly from the Dungeon Profile and Dungeon Generator contracts: Formation, Boundary, Sustaining Basis, distinct conditions, exchanges, continuity, Topology, Access Routes, participants, activity, resources, hazards, claims, and Legacies.
+- Factual Topology, observer Map Claims, optional Cores, agentive participants, and source-owned specialist effects remain separate.
+- Inhabitants retain personhood and every material change persists through world causality rather than Dungeon conventions.
+- No campaign record, new mechanic, terminology entry, or canonical decision was added.
+
+### Validation Results
+
+- Repository-wide relative Markdown links and anchors: 5,131 checked, zero broken.
+- Repository boundary: blank template only; no named Dungeon, map, inhabitant, route, hazard, resource, expedition, or live state added.
+- No universal Dungeon anatomy, difficulty, depth tier, threat rank, room quota, reward budget, respawn, reset, or Dungeon XP was introduced.
+
+### Active Roadmap Task
+
+- **Soul Avatar template**.
+- Do not begin the Gate-event template before the Soul Avatar template is complete, validated, and committed.
