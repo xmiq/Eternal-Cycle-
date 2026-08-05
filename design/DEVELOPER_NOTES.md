@@ -1951,9 +1951,9 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Active Roadmap Task
 
-- **Define truth layers**.
-- Campaign persistence philosophy, persistence authority, and structured persistence architecture are complete pending the architecture task's focused commit.
-- Do not begin persistence levels or any later Phase 10 task until truth layers are complete, validated, and committed.
+- **Define persistence levels**.
+- Campaign persistence philosophy, authority, architecture, and truth layers are complete pending the truth-layer task's focused commit.
+- Do not begin the campaign state model or any later Phase 10 task until persistence levels are complete, validated, and committed.
 
 ### Validation Status
 
@@ -1965,8 +1965,8 @@ The project owner permanently inserted **Phase 10 — Campaign Persistence Engin
 
 ### Exact Resume Instructions
 
-1. Commit the completed structured persistence architecture after reviewing its full diff and validation results.
-2. Read the persistence authority and architecture, Uncertainty Handling, information model, Knowledge, Research, Secret, and Meta boundaries.
-3. Define Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta as distinct truth layers with ownership, visibility, updates, and migration rules.
-4. Prevent promotion by repetition, storage location, secrecy, or convenience; Meta must never enter Campaign Canon.
-5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to persistence levels.
+1. Commit the completed truth-layer task after reviewing its full diff and validation results.
+2. Read the persistence philosophy, authority, architecture, truth layers, Soul persistence rules, and campaign-record boundaries.
+3. Define Repository, Soul, Historical, Campaign, Session, and Ephemeral persistence levels with lifetime, ownership, deletion, migration, and bounded promotion rules.
+4. Keep lifetime separate from truth, authority, visibility, and mechanical persistence; no level may grant Soul persistence or Campaign Canon by naming alone.
+5. Update terminology and accepted decisions only for genuinely new canonical outcomes, validate the complete diff, and commit before advancing to the campaign state model.

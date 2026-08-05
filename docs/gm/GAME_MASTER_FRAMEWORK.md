@@ -195,6 +195,8 @@ The GM is authoritative about established facts, not omnipotently certain about 
 
 [Uncertainty Handling](UNCERTAINTY_HANDLING.md) defines the Factual, Observer, and player-facing views and their uncertainty boundaries in detail.
 
+[Truth Layers](../persistence/TRUTH_LAYERS.md) defines how Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta remain durably separated. These classifications supplement the situational views below rather than replacing them.
+
 These information layers are independent:
 
 | Layer | Meaning |
@@ -467,3 +469,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Roadmap](../../design/ROADMAP.md)
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - [Structured Persistence Architecture](../persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
+- [Truth Layers](../persistence/TRUTH_LAYERS.md)

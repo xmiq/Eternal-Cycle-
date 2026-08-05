@@ -376,13 +376,13 @@ A Mystery is not authority to invent a hidden answer later. Established hidden t
 
 Knowledge owns observer-specific access to facts, memories, records, beliefs, interpretations, estimates, and unknowns.
 
-It references authoritative facts without copying protected truth into every observer record. The later Truth Layers document defines the distinction among Character Knowledge, Research, Player Theories, Rumours, and related layers.
+It references authoritative facts without copying protected truth into every observer record. [Truth Layers](TRUTH_LAYERS.md) defines the distinction among Character Knowledge, Research, Player Theories, Rumours, and related layers.
 
 ## Secrets
 
 Secrets is the protected access view for established or deliberately prepared information not available to specified participants.
 
-It does not create a second world truth. Every secret references an authoritative owner, identifies who may access it, and avoids leaking content through indexes, aliases, metadata, or Derived Views. A GM draft or preferred future is not an established secret merely because it is hidden.
+It does not create a second world truth. Every secret references an authoritative owner, identifies who may access it under [Truth Layers](TRUTH_LAYERS.md), and avoids leaking content through indexes, aliases, metadata, or Derived Views. A GM draft or preferred future is not an established secret merely because it is hidden.
 
 ## Validation
 
@@ -501,6 +501,7 @@ This document defines logical organization and record interfaces. It deliberatel
 - [Campaign Persistence Engine Index](README.md)
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)
 - [Persistence Authority](PERSISTENCE_AUTHORITY.md)
+- [Truth Layers](TRUTH_LAYERS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Game Master Responsibilities](../gm/GM_RESPONSIBILITIES.md)
 - [World Engine](../world-engine/README.md)

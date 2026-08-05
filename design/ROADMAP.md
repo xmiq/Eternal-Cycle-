@@ -4,9 +4,9 @@
 
 **Current phase: Phase 10 — Campaign Persistence Engine**
 
-**Current task: Define truth layers**
+**Current task: Define persistence levels**
 
-Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define truth layers** unless the project owner explicitly changes the target. Do not begin persistence levels or later Phase 10 work before truth layers are complete.
+Phase 9 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Work only on **Define persistence levels** unless the project owner explicitly changes the target. Do not begin the campaign state model or later Phase 10 work before persistence levels are complete.
 
 Phases 1 through 9 are complete and reviewed. Do not reopen them unless later work reveals a direct documented contradiction that cannot be resolved within the current task.
 
@@ -228,7 +228,7 @@ Phase 9 is complete only when the alpha-playtest framework, GM responsibilities,
 - [x] Define campaign persistence philosophy
 - [x] Define persistence authority hierarchy
 - [x] Define structured persistence architecture
-- [ ] Define truth layers
+- [x] Define truth layers
 - [ ] Define persistence levels
 - [ ] Define campaign state model
 - [ ] Define relationship memory engine

@@ -3791,3 +3791,43 @@ The control-plane entry point identifying one campaign continuity, active versio
 ## Dependency Closure
 
 The smallest set of authoritative records, typed references, rules, pending changes, and unresolved consequences that must be loaded together to adjudicate or update one material campaign claim safely.
+
+## Truth Layer
+
+One canonical classification of an informational claim as Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theory, Rumour, GM Secret, or Meta, preserving ownership, visibility, update authority, provenance, and migration behavior.
+
+## Character Knowledge
+
+The facts, observations, memories, communicated claims, beliefs, interpretations, estimates, rumours, research, and explicit unknowns available to one specific in-world observer through valid information and memory routes.
+
+## Research
+
+A structured in-world inquiry into a defined question through observations, hypotheses, experiments, evidence, theories, confidence, critique, confirmation, disproof, loss, and rediscovery without owning world truth by default.
+
+## Player Theory
+
+An out-of-character hypothesis owned by a player that does not become Character Knowledge, Research, GM Secret, or Campaign Canon without an independent valid route.
+
+## Rumour
+
+A circulating in-world claim with a speaker or source where known, audience, transmission route, version, reach, confidence, and factual status kept distinct from the fact it alleges.
+
+## GM Secret
+
+A protected information view whose underlying content remains classified as an established hidden fact, observer-limited record, unresolved question, prepared possibility, actor intention, or Meta note; secrecy itself grants no factual authority.
+
+## Meta
+
+Out-of-character information about play, tools, preferences, feedback, prompts, plans, scheduling, design, or participant coordination that remains separate from campaign truth even when it authorizes a distinct campaign action or decision.
+
+## Truth Promotion
+
+An explicit, source-preserving creation or reclassification of a claim in a more authoritative factual layer after that receiving layer's own requirements are met.
+
+## In-World Confirmation
+
+Evidence and resolution sufficient under the relevant canonical owner to establish one exact campaign fact while preserving source, method, scope, alternatives, uncertainty, chronology, and observer-specific knowledge.
+
+## Knowledge Leak
+
+The transfer or exposure of information to an observer, participant, view, index, or tool without a valid perception, communication, memory, research, disclosure, authorization, or inference route.

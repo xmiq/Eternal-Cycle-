@@ -30,6 +30,8 @@ This procedure selects how to settle a supported question. It cannot create miss
 
 ## Information Views
 
+The [Truth Layers](../persistence/TRUTH_LAYERS.md) define durable classification, ownership, visibility, update, and migration for facts, Knowledge, Research, theories, Rumours, secrets, and Meta. The views below define which representation of those records is relevant to one uncertainty question.
+
 ### Factual View
 
 The **Factual View** is the GM's working representation of established world truth. It includes hidden facts and dated state records but not every future outcome, every unspecified trivial detail, or perfect knowledge of another agent's eventual choice.
@@ -611,3 +613,4 @@ This document does not define:
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Truth Layers](../persistence/TRUTH_LAYERS.md)

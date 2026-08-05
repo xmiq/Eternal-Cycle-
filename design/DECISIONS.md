@@ -4261,3 +4261,39 @@ A GM or tool may load only relevant campaign modules, but it must follow materia
 ## D-1065 — Persistence Modules Record Rather Than Grant Mechanics
 
 A module records established specialist-system outcomes and current access without granting Skills, Development, forms, magic, authority, ownership, consent, resources, progression, or future success through schema presence.
+
+## D-1066 — Truth Layers Are Independent Classifications
+
+Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta classify informational claims independently from authority precedence, visibility, certainty, and persistence lifetime.
+
+## D-1067 — Every Truth Layer Preserves Ownership and Migration
+
+Each material informational claim records its layer, owner, source, visibility, status, update route, and migration behavior. Storage conversion cannot collapse layers merely because an implementation lacks separate fields.
+
+## D-1068 — Research Requires In-World Confirmation to Establish Fact
+
+Research confidence, expertise, repetition, institutional approval, and correct prediction do not create Campaign Canon alone. The exact claim must receive sufficient in-world evidence and resolution through its factual and specialist owners.
+
+## D-1069 — Player Theories Do Not Leak Into Character Knowledge
+
+A player's hypothesis becomes an in-world character belief or inquiry only through a deliberate or otherwise valid character-specific route. Correctness, disclosure to the GM, or repetition does not grant Character Knowledge.
+
+## D-1070 — Rumour Existence and Rumour Truth Are Separate
+
+The circulation, wording, reach, belief, and consequences of a Rumour may be established even when its allegation is false, mixed, outdated, or unknown. Verification creates a separate factual claim and does not erase the Rumour's history.
+
+## D-1071 — GM Secrecy Grants No Truth Authority
+
+Every GM Secret distinguishes established hidden fact, observer-limited record, unresolved question, prepared possibility, autonomous actor intention, and Meta planning. A hidden draft or desired twist is not Campaign Canon.
+
+## D-1072 — Meta Never Enters Campaign Canon
+
+Out-of-character discussion, prompts, preferences, feedback, and plans remain Meta. They may authorize a separate campaign decision, retcon, or in-world action through the proper process, but the raw Meta information never becomes campaign truth or Character Knowledge.
+
+## D-1073 — Knowledge Requires a Causal Route
+
+An observer gains information only through valid perception, communication, memory, research, disclosure, or inference. Party membership, shared storage, GM access, player knowledge, Reincarnation, secrecy, and Derived Views do not pool knowledge automatically.
+
+## D-1074 — Migration Preserves Information Boundaries
+
+Every migration preserves truth layer, ownership, provenance, observer scope, visibility, confidence, uncertainty, and disclosure history. A destination unable to protect GM Secrets or sensitive Meta material cannot receive them through an unsafe flattening operation.
