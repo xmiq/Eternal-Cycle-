@@ -2712,3 +2712,44 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Balance review**.
 - Do not begin final repository validation before the balance review is complete, validated, and committed.
+
+## Phase 11 Checkpoint — Balance Review
+
+### Completed Roadmap Task
+
+- Balance review.
+
+### Files Created
+
+- `design/audits/BALANCE_REVIEW.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/ROADMAP.md`
+- `design/audits/README.md`
+
+### Integration Notes
+
+- Contextual balance was reviewed across every completed system using acquisition, expression, cost, counterplay, agency, and persistence criteria.
+- Cross-system stress review covered old-soul snowballing, breadth versus specialization, optional systems becoming functionally mandatory, soft compulsion, fair mystery, and simulation burden.
+- All twelve Future Revisions remain Candidate entries; none was promoted, closed, reprioritized, or implemented.
+- No additional Future Revision or blocking question was justified without gameplay evidence.
+- No gameplay mechanic, terminology entry, accepted decision, unresolved question, or campaign data changed.
+
+### Validation Results
+
+- Repository validation: pass.
+- Markdown files: 198.
+- Relative links checked: 5,826, zero broken or repository-escaping targets.
+- Markdown anchors checked: 112, zero broken.
+- Canonical documents indexed: 143 across 12 family indexes.
+- Templates indexed: 31; agent roles indexed: 5.
+- Canonical terminology headings checked: 1,058, with zero normalized duplicates.
+- Orphaned Markdown documents and forbidden campaign-data directories: zero.
+
+### Active Roadmap Task
+
+- **Repository validation and gameplay-validation readiness checklist**.
+- This is the final Phase 11 task. Do not declare Version 1.0, Release Candidate, Stable, or Production Ready status.

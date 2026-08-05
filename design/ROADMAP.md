@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Balance review**
+**Current task: Repository validation and gameplay-validation readiness checklist**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, cross-reference and ownership, rule consistency, terminology, and internal navigation are complete. Work only on **Balance review** unless the project owner explicitly changes the target. Do not begin final repository validation before the balance review is complete.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. Templates, AI operating procedures, the Future Revisions register, cross-reference and ownership, rule consistency, terminology, internal navigation, and balance review are complete. Work only on **Repository validation and gameplay-validation readiness checklist** unless the project owner explicitly changes the target. Do not declare a release, Version 1.0, Release Candidate, Stable, or Production Ready state.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -265,7 +265,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 - [x] Rule consistency audit
 - [x] Terminology audit
 - [x] Internal-link and navigation audit
-- [ ] Balance review
+- [x] Balance review
 - [ ] Repository validation and gameplay-validation readiness checklist
 
 ### Exit Criteria

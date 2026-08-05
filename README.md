@@ -123,4 +123,4 @@ The validator checks local Markdown links and anchors, navigation and registry c
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Balance review**. The completed [Internal-Link and Navigation Audit](design/audits/LINK_AND_NAVIGATION_AUDIT.md) records repository-wide structural validation. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Repository validation and gameplay-validation readiness checklist**. The completed [Balance Review](design/audits/BALANCE_REVIEW.md) routes remaining evidence-dependent risks without changing mechanics. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
