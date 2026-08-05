@@ -2115,3 +2115,31 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Species template**.
 - The completed Evolution-tree template remains unchanged; do not begin the Skill template before the Species template is complete.
+
+## Phase 11 Checkpoint — Species Template
+
+### Completed Roadmap Task
+
+- Species template.
+
+### Files Created
+
+- `templates/SPECIES_TEMPLATE.md`
+
+### Files Modified
+
+- `templates/README.md`
+- `design/DECISIONS.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The template separates reusable species range, campaign-local species knowledge, current populations, and individual embodiment.
+- Anatomy, Species Potential, Trait Expression, learned control, ecology, culture, Magic, Evolution, and Soul interaction retain distinct owners.
+- D-1172 was clarified to preserve the already-canonical route by which separately reviewed reusable reference material may enter `docs/`; campaign-populated records remain external.
+
+### Active Roadmap Task
+
+- **Skill template**.
+- Do not begin the Soul Weapon template before the Skill template is complete, validated, and committed.

@@ -4688,7 +4688,7 @@ Phase 11 may create blank templates, implementation-neutral operating procedures
 
 ## D-1172 — Templates Are Unpopulated Contracts
 
-Repository templates describe storage-neutral fields, ownership, validation, and cross-references derived from existing canonical owners. A populated use of a template is campaign data and remains outside the repository; completing a field cannot create truth, capability, authority, progression, or an exception to canon.
+Repository templates describe storage-neutral fields, ownership, validation, and cross-references derived from existing canonical owners. A populated campaign use remains outside the repository. Reusable reference material may enter `docs/` only through ordinary canonical governance; completing a field cannot create truth, capability, authority, progression, or an exception to canon.
 
 ## D-1173 — Feature Complete Is Not a Release Declaration
 

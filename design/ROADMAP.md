@@ -4,9 +4,9 @@
 
 **Current phase: Phase 11 — Templates and Repository Standardization**
 
-**Current task: Species template**
+**Current task: Skill template**
 
-Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character template is complete. Work only on **Species template** unless the project owner explicitly changes the target. Do not begin the Skill template or any later incomplete Phase 11 task before the Species template is complete; the already-complete Evolution-tree template remains unchanged.
+Phase 10 is complete and reviewed. Codex must not reopen it unless later work reveals a direct documented contradiction that cannot be resolved within the current task. The Character, Species, and Evolution-tree templates are complete. Work only on **Skill template** unless the project owner explicitly changes the target. Do not begin the Soul Weapon template or any later incomplete Phase 11 task before the Skill template is complete.
 
 Phase 11 standardizes, documents, templates, and validates existing canon. It must not add gameplay mechanics, redesign a completed phase, or declare Version 1.0, Release Candidate, Stable, or Production Ready status. When every Phase 11 task passes, the repository enters **Feature Complete — Gameplay Validation Ongoing** status and future design changes are driven through documented playtest evidence.
 
@@ -249,7 +249,7 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 ## Phase 11 — Templates and Repository Standardization
 
 - [x] Character template
-- [ ] Species template
+- [x] Species template
 - [x] Evolution-tree template
 - [ ] Skill template
 - [ ] Soul Weapon template

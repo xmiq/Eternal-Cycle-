@@ -2,12 +2,13 @@
 
 Templates are storage-neutral, unpopulated contracts derived from Eternal Cycle canon. They identify required information, optional extensions, ownership, validation, and cross-references; they do not create campaign truth or replace the rules they cite.
 
-Populate templates only in an external Campaign Record. A completed template containing a current character, location, faction, item, event, or other live state does not belong in this repository.
+Populate campaign instances only in an external Campaign Record. Reusable reference material derived from a template may enter `docs/` only through ordinary canonical governance; a completed form does not gain authority merely because it uses a repository template.
 
 ## Available Templates
 
 - [System Template](SYSTEM_TEMPLATE.md) - structure for proposing or documenting a reusable canonical system without bypassing repository governance.
 - [Character Record Template](CHARACTER_TEMPLATE.md) - current character identity, embodiment, capability references, agency, continuity, and persistence boundaries.
+- [Species Reference Template](SPECIES_TEMPLATE.md) - ordinary species or form range, embodiment, lifecycle, traits, ecology, variation, and specialist interfaces.
 - [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) - reusable species-route structure governed by Monster Evolution.
 
 ## Shared Use Rules
