@@ -47,6 +47,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GM_RESPONSIBILITIES.md`](docs/gm/GM_RESPONSIBILITIES.md) - bounded GM duties, ownership handoffs, delegation, records, and human/AI parity.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
+- [`docs/ai/README.md`](docs/ai/README.md) - implementation-neutral AI Game Master workflow, session start, play, save, and validation procedures.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.
@@ -107,4 +108,4 @@ Contributors and coding agents should read, in order:
 
 ## Current Status
 
-The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Add AI operating procedures**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.
+The repository foundation and Phases 1 through 10 are complete and reviewed. The current phase is **Phase 11 — Templates and Repository Standardization**, and the sole current task is **Establish Future Revisions register**. Phase completion will move the repository into gameplay validation; it will not declare Version 1.0 or release readiness.

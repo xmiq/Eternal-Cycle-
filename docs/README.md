@@ -127,6 +127,15 @@ Files under `docs/` contain Eternal Cycle's playable canonical rules. Read the s
 - [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) - Transition Bases, Boundary Findings, scoped and disputed periodization, World Reset checkpoints, targeted revalidation, and return to play.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
+## AI Game Master Operations
+
+- [AI Operating Procedures Index](ai/README.md) - scope, reading order, authority boundaries, guarantees, and human/AI parity.
+- [AI GM Workflow](ai/AI_GM_WORKFLOW.md) - end-to-end authority, loading, adjudication, narration, persistence, recovery, and handoff cycle.
+- [AI Session Start](ai/AI_SESSION_START.md) - version, Save Index, visibility, Read Set, freshness, readiness, and resume checks before play.
+- [AI Play Protocol](ai/AI_PLAY_PROTOCOL.md) - player-input classification, intent, owner retrieval, information separation, resolution, narration, and interaction closure.
+- [AI Save Protocol](ai/AI_SAVE_PROTOCOL.md) - writer-capability disclosure and faithful operation of Affected Sets, Session Deltas, validation, activation, and recovery.
+- [AI Game Master Checklist](ai/AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, continuation, correction, and handoff.
+
 ## Campaign Persistence Engine
 
 - [Campaign Persistence Engine Index](persistence/README.md) - canonical reading order, ownership boundary, and repository scope for campaign continuity.

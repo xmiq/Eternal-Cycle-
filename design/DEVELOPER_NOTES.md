@@ -2442,3 +2442,50 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 
 - **Add AI operating procedures**.
 - Do not begin the Future Revisions register before AI operating procedures are complete, validated, and committed.
+
+## Phase 11 Checkpoint — AI Operating Procedures
+
+### Completed Roadmap Task
+
+- Add AI operating procedures.
+
+### Files Created
+
+- `docs/ai/README.md`
+- `docs/ai/AI_GM_WORKFLOW.md`
+- `docs/ai/AI_SESSION_START.md`
+- `docs/ai/AI_PLAY_PROTOCOL.md`
+- `docs/ai/AI_SAVE_PROTOCOL.md`
+- `docs/ai/AI_CHECKLIST.md`
+
+### Files Modified
+
+- `README.md`
+- `docs/README.md`
+- `docs/gm/README.md`
+- `docs/gm/GAME_MASTER_FRAMEWORK.md`
+- `design/ROADMAP.md`
+- `design/DEVELOPER_NOTES.md`
+
+### Integration Notes
+
+- The AI procedures sequence existing GM and Campaign Persistence owners without creating mechanics, storage architecture, prompts, or AI-only authority.
+- Session start requires exact versions, Save Index, Current Session, visibility, a material Read Set, freshness checks, and an honest readiness state.
+- The play protocol preserves player intent, observer-specific information, owner-routed adjudication, fair uncertainty, and semantic Gameplay Interaction boundaries.
+- The save procedure distinguishes authorized writer, proposal-only, read-only, and unavailable modes and never claims activation without validation and read-back.
+- Human and AI GMs remain subject to the same authority, evidence, agency, continuity, and persistence rules.
+- No terminology entry, canonical design decision, or unresolved question was added.
+
+### Validation Results
+
+- Repository-wide Markdown files: 188.
+- Relative Markdown links: 5,493 checked, zero broken.
+- Markdown anchors: 96 checked, zero broken.
+- All six AI documents declare ownership, dependencies, extensions, consumers, and repository boundaries.
+- No implementation-specific platform, prompt, model configuration, campaign data, or new gameplay mechanic was introduced.
+- Roadmap and navigation are consistent with the completed task.
+
+### Active Roadmap Task
+
+- **Establish Future Revisions register**.
+- Do not begin the cross-reference and ownership audit before the register is complete, validated, and committed.

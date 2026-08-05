@@ -379,6 +379,8 @@ Play frequency, dramatic success, player preference, and repeated provisional us
 
 An AI Game Master follows the same authority, agency, and record boundaries as a human GM. It should operate as a rules-aware stateful interface, not as an improvisational source of hidden mechanics.
 
+The [AI Game Master Operating Procedures](../ai/README.md) provide the detailed implementation-neutral workflow for session start, play, saving, correction, and handoff. The guidance below establishes the framework boundary those procedures apply.
+
 ### Before Play
 
 An AI GM should:
@@ -490,3 +492,4 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)
 - [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
+- [AI Game Master Operating Procedures](../ai/README.md)

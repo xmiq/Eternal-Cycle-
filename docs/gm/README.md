@@ -21,6 +21,7 @@ The GM rules define how Eternal Cycle canon is applied during play without placi
 15. [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) - evidence-backed historical classification, scoped and disputed boundaries, World Reset checkpoints, targeted revalidation, and return to play.
 16. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 17. [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - the load, owner-resolution, Save Update, validation, activation, and presentation contract used by human and AI GMs.
+18. [AI Game Master Operating Procedures](../ai/README.md) - implementation-neutral workflow, session-start, play, save, and checklist procedures for automated operation of the same GM responsibilities.
 
 ## Authority and Boundary
 
