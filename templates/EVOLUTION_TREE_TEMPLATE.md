@@ -2,9 +2,12 @@
 
 Use this template to record branches after their evolution rules exist. Completing fields does not itself create a valid route, waive an Owning System's requirements, or authorize a character to evolve. Apply the [Monster Evolution Safeguards](../docs/monster-evolution/EVOLUTION_SAFEGUARDS.md) before treating any entry as complete.
 
+A reusable cross-campaign route is governed by the [Living Codex Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md) and stored outside this repository. A campaign-local route remains in its external Campaign Record.
+
 ## Tree Identity
 
 - Progression tree: Human, monster, or another explicitly defined tree
+- Stable route ID and record mode: Living Codex route, campaign-local route, or other governed external record
 - Species or form family:
 - Evolution Owning System:
 - Related canonical rules:
@@ -73,3 +76,4 @@ Use this template to record branches after their evolution rules exist. Completi
 - [ ] Physical, Skill, Magical, Profession, Social, Soul, and Species effects keep their proper owners.
 - [ ] Temporary, artificial, divine, corruptive, and borrowed changes retain their sources and dependencies.
 - [ ] All relative links resolve and the branch introduces no live campaign data.
+- [ ] A reusable route has Living Codex identity and approval; a campaign-local route has not been promoted implicitly.

@@ -99,7 +99,7 @@ When these rules are applied together:
 
 ## Reusable Design Records
 
-Use the [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md) when documenting a reusable species route structure. A completed template belongs in the canonical repository only when it defines reusable rules or reference material. Any populated record describing a current campaign creature, lineage state, discovered route, active population, or live ecology belongs in an external Campaign Record.
+Use the [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md) when documenting a species route structure. A GM-approved reusable species or route belongs in the separately deployed [GM Living Codex](../gm-living-codex/README.md); a campaign-local creature, lineage state, discovered route, population, or ecology belongs in its external Campaign Record. Neither populated record belongs in this rules repository.
 
 Use the [Monster Generator](../gm/MONSTER_GENERATOR.md) to create world-valid campaign-local species sketches, individuals, and bounded groups from these rules. Generation does not alter Evolution ownership or authorize campaign profiles to enter the canonical repository.
 

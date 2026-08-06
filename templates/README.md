@@ -2,7 +2,7 @@
 
 Templates are storage-neutral, unpopulated contracts derived from Eternal Cycle canon. They identify required information, optional extensions, ownership, validation, and cross-references; they do not create campaign truth or replace the rules they cite.
 
-Populate campaign instances only in an external Campaign Record. Reusable reference material derived from a template may enter `docs/` only through ordinary canonical governance; a completed form does not gain authority merely because it uses a repository template.
+Populate campaign instances only in an external Campaign Record. Reusable rules may enter `docs/` through ordinary repository governance; populated cross-campaign world-design assets belong in the separately deployed [GM Living Codex](../docs/gm-living-codex/README.md). A completed form gains no authority merely because it uses a repository template.
 
 ## Available Templates
 
@@ -15,6 +15,7 @@ Populate campaign instances only in an external Campaign Record. Reusable refere
 - [Development Profile Template](DEVELOPMENT_PROFILE_TEMPLATE.md) - six-layer, objective-specific capability assessment across distinct Development Tracks.
 - [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) - Classes, Professions, traditions, schools, Institutions, Social Position, Class Change, and constraints.
 - [Species Reference Template](SPECIES_TEMPLATE.md) - ordinary species or form range, embodiment, lifecycle, traits, ecology, variation, and specialist interfaces.
+- [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) - Codex stable identity, inclusion, governance, characteristic capability routes, Evolution graph references, variants, procedural reuse, and validation.
 - [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) - reusable species-route structure governed by Monster Evolution.
 - [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
 - [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) - one continuing Soul, distinct Incarnations, Reincarnation stages, persistent structures, access, and embodiment.

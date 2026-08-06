@@ -159,6 +159,8 @@ A reusable divergence may later be proposed as a Codex variant or distinct speci
 
 This plan is the authoritative order for implementing the Living Codex architecture. It is a maintenance plan, not a numbered development phase and not a claim that a populated deployment exists in this repository.
 
+Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Later documents own the persistence and Reproductive Compatibility steps without changing this order.
+
 ### Step 1 - Codex Philosophy and Authority
 
 Define purpose, ownership, exclusions, campaign divergence, and the relationship among repository rules, Living Codex Canon, Campaign Configuration, and Campaign Canon.
@@ -229,6 +231,7 @@ The canonical design requires one separate Living Codex SQLite database and a ve
 ## Related Documents
 
 - [GM Living Codex Index](README.md)
+- [Species Registry](SPECIES_REGISTRY.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Monster Evolution Rules](../monster-evolution/README.md)

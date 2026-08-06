@@ -4311,3 +4311,39 @@ An immutable Living Codex identifier that survives renaming, reclassification, c
 ## Campaign Divergence
 
 A campaign-scoped, explicitly recorded departure from a referenced Living Codex entry. It changes Campaign Canon within its stated scope without silently changing the reusable base design.
+
+## Species Registry Entry
+
+One stable, revisioned Living Codex record describing a reusable species or sufficiently distinct form as a bounded range without asserting campaign presence, individual capability, or player knowledge.
+
+## Innate Trait
+
+A Species Trait supplied by the current form's valid biological, constructed, spawned, magical, metaphysical, or other established origin without learned acquisition. Innate does not mean mature, universal, controlled, heritable, or always expressed.
+
+## Instinctive Skill
+
+A bounded Skill for which current species instinct supplies an initial receiving route or, where a local Skill scale uses the term, Level 0 expression. Reliable use still requires present embodiment, feedback, practice, and Development.
+
+## Typical Learned Skill
+
+A Skill commonly developed by members of a species because embodiment, ecology, work, or recurring problems create opportunity, without being innate or mandatory.
+
+## Cultural Skill
+
+A Skill transmitted through a culture, family, institution, profession, tradition, or teaching ecology rather than through species biology.
+
+## Rare Species Skill
+
+A Skill available to unusual members through a bounded structural, source, Development, route, or instruction condition. Rarity alone provides neither provenance nor power.
+
+## Evolution Skill
+
+A Skill whose receiving route is granted or materially changed by an Evolved Form. Evolution may make initial access available but does not grant mature mastery.
+
+## Living Codex Variant
+
+A reusable, stably identified form that records causal differences from a base Species Registry Entry without yet requiring a distinct species identity.
+
+## Reuse Priority
+
+Qualitative Living Codex guidance about how readily a reusable entry should be considered during generation. It does not rank power, guarantee selection, or establish campaign presence.

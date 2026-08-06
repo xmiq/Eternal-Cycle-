@@ -4,7 +4,7 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: Gameplay-validation maintenance — Define Living Codex Species Registry**
+**Current task: Gameplay-validation maintenance — Define Living Codex persistence model**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
@@ -31,9 +31,9 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 
 - **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
 - **Status:** In progress.
-- **Completed:** Defined the Living Codex philosophy, authority hierarchy, GM ownership, consultation rules, inclusion and exclusion boundary, campaign divergence model, stable-identity principle, safeguards, and authoritative twelve-step implementation plan.
-- **Current:** Define Living Codex Species Registry.
-- **Remaining:** Define the Species Registry; define the independent SQLite and Google Drive persistence model; define Step 12 Reproductive Compatibility; complete cross-system integration, navigation, and validation.
+- **Completed:** Defined the Living Codex philosophy and authority; defined stable identity and indexing, complete Species Registry records, trait and Skill ownership, Evolution graphs, variants, procedural-generation metadata, player-species integration, operating procedure, and a blank Codex species template.
+- **Current:** Define Living Codex persistence model.
+- **Remaining:** Define the independent SQLite and Google Drive persistence model; define Step 12 Reproductive Compatibility; complete cross-system integration, navigation, and validation.
 - **Boundary:** Cross-campaign reusable GM design only. No campaign state, populated Codex database, numbered development phase, completed-mechanic redesign, or release declaration is authorized.
 
 ## Status Legend

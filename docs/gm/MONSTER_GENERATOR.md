@@ -35,7 +35,7 @@ It does not own:
 - actor decisions;
 - Encounter selection or outcomes;
 - current populations, ecology, factions, settlements, or world state;
-- reusable canonical species entries.
+- Living Codex species entries.
 
 [Monster Evolution Rules](../monster-evolution/README.md) remain authoritative for every form and transition claim. The generator organizes their application to campaign-local content.
 
@@ -101,9 +101,9 @@ Choose one scope before generation.
 
 ### Species Sketch
 
-Create a campaign-local Species Reference when the world needs a species or form not yet defined.
+Search the configured [GM Living Codex Species Registry](../gm-living-codex/SPECIES_REGISTRY.md), then create a campaign-local Species Reference only when no suitable reusable species or explicit divergence exists.
 
-The sketch must pass the existing Monster Evolution owners and remain external unless separately reviewed as reusable canonical reference material. It cannot be invented as a shortcut to one desired individual ability.
+The sketch must pass the existing Monster Evolution owners and remain external unless separately reviewed and saved as Living Codex Canon. It cannot be invented as a shortcut to one desired individual ability.
 
 ### Individual From a Known Species
 
@@ -293,7 +293,7 @@ Use the [Magic Rules](../magic/README.md). A magical creature is not an unlimite
 
 ## Species Sketch Procedure
 
-Use this procedure only when no suitable Species Reference exists.
+Use this procedure only after the configured Living Codex and campaign records contain no suitable Species Reference or bounded divergence.
 
 ### Step 1: Begin From a World Need or Origin
 
@@ -356,6 +356,10 @@ Apply [Monster Evolution Safeguards](../monster-evolution/EVOLUTION_SAFEGUARDS.m
 ### Step 13: Record the Species Reference Externally
 
 Preserve sources, limits, variation, uncertainty, and owners. Do not add the campaign-local species to this canonical repository.
+
+### Step 14: Consider Reusable Promotion Separately
+
+If the design is broadly reusable, submit it through the Living Codex Species Registry procedure. Promotion is a separate GM decision and Codex save; gameplay does not wait for optional promotion, and campaign facts never enter the reusable entry automatically.
 
 ## Individual Generation Procedure
 

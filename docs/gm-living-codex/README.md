@@ -22,8 +22,9 @@ The Living Codex is not player knowledge, a campaign save, a bestiary that every
 ## Reading Order
 
 1. [GM Living Codex Design](GM_LIVING_CODEX.md) - purpose, authority, inclusion, consultation, campaign divergence, safeguards, and the approved twelve-step implementation plan.
+2. [Species Registry](SPECIES_REGISTRY.md) - stable identity, species records, trait and Skill ownership, Evolution graphs, variants, procedural reuse, player species, and validation.
 
-The Species Registry, persistence model, and Reproductive Compatibility documents extend this index as their dedicated implementation steps are completed. Their eventual contents remain subordinate to existing Species Development, Monster Evolution, Skill, Magic, Soul, World Engine, GM, and persistence owners.
+The persistence model and Reproductive Compatibility documents extend this index as their dedicated implementation steps are completed. Every Codex document remains subordinate to existing Species Development, Monster Evolution, Skill, Magic, Soul, World Engine, GM, and persistence owners.
 
 ## Operational Boundary
 

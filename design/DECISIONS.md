@@ -4688,7 +4688,7 @@ Phase 11 may create blank templates, implementation-neutral operating procedures
 
 ## D-1172 — Templates Are Unpopulated Contracts
 
-Repository templates describe storage-neutral fields, ownership, validation, and cross-references derived from existing canonical owners. A populated campaign use remains outside the repository. Reusable reference material may enter `docs/` only through ordinary canonical governance; completing a field cannot create truth, capability, authority, progression, or an exception to canon.
+Repository templates describe storage-neutral fields, ownership, validation, and cross-references derived from existing canonical owners. A populated campaign use remains outside the repository. Reusable rules may enter `docs/` only through ordinary canonical governance, while populated cross-campaign world-design assets use the separately governed Living Codex; completing a field cannot create truth, capability, authority, progression, or an exception to canon.
 
 ## D-1173 — Feature Complete Is Not a Release Declaration
 
@@ -4733,3 +4733,19 @@ The Codex primarily includes reusable ecological or societal designs. Unique bos
 ## D-1183 — Player Species Use the Shared Species Registry
 
 Humanoid and non-humanoid player species use the same Living Codex Species Registry as other reusable species. Species-level design remains separate from personal Skills, mastery, Mutations, injuries, Soul systems, relationships, memories, unique Evolution, and campaign history.
+
+## D-1184 — Species Identity Survives Names and Taxonomy
+
+Every reusable species or independently indexed form uses one immutable Codex Stable ID. Names and classifications may overlap or change; renaming preserves identity, while merges, splits, deprecations, and replacements preserve former IDs and revision relations instead of rewriting history.
+
+## D-1185 — Species Capability Records Grant Routes Rather Than Packages
+
+The Species Registry records Innate Traits, Instinctive Skills, Typical Learned Skills, Cultural Skills, Rare Species Skills, and Evolution Skills under their existing owners. Listing a capability establishes characteristic access or availability only within its stated conditions and never grants every member mastery.
+
+## D-1186 — Codex Evolution Graphs Are Descriptive and Branching
+
+Living Codex Evolution graphs preserve route provenance, conditions, transitions, gains, losses, restrictions, further routes, and consequences. They may contain several branches, remain non-exhaustive, and never become deterministic upgrade menus or universal rankings.
+
+## D-1187 — Reusable Variants and Campaign Divergences Remain Distinct
+
+A Living Codex Variant is a reusable stable difference from a base entry. A Campaign Divergence is campaign-specific state referencing that base. Neither is copied into the other automatically, and a materially distinct reusable form receives its own species identity through review rather than an arbitrary difference count.

@@ -2,7 +2,7 @@
 
 Use this storage-neutral template to describe the ordinary range of one species or distinct form without turning that range into an individual stat block, universal behaviour, fixed culture, power tier, or automatic Evolution route.
 
-The repository keeps this template blank. A campaign-local Species Reference remains in an external Campaign Record. Reusable reference material may enter `docs/` only through ordinary canonical review; using this template does not grant that status.
+The repository keeps this template blank. A campaign-local Species Reference remains in an external Campaign Record. A reusable cross-campaign design uses this template as a payload within the separately deployed [GM Living Codex](../docs/gm-living-codex/README.md); using this template does not grant either authority.
 
 ## Document Control
 
@@ -18,12 +18,13 @@ This template organizes a Species Reference. It owns no anatomy, trait, route, c
 ## Usage Guidance
 
 1. State whether the intended output is a campaign-local Species Reference or a separately governed reusable reference proposal.
-2. Define the species or form boundary before listing traits. Similar appearance, ancestry, function, or name does not by itself establish one species.
-3. Describe ranges, dependencies, variation, and evidence instead of a single ideal specimen.
-4. Separate inherited or form-native potential from current expression, learned control, individual Development, and contextual effectiveness.
-5. Link Evolution Routes, Skills, cultures, magical procedures, and current world state to their owners rather than embedding them as species bonuses.
-6. Use explicit unknown and disputed states where the campaign has incomplete evidence.
-7. Validate every populated campaign record before activation and every reusable proposal through repository governance.
+2. For a reusable proposal, use the [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) as the governing wrapper and this file only for its Species Reference payload.
+3. Define the species or form boundary before listing traits. Similar appearance, ancestry, function, or name does not by itself establish one species.
+4. Describe ranges, dependencies, variation, and evidence instead of a single ideal specimen.
+5. Separate inherited or form-native potential from current expression, learned control, individual Development, and contextual effectiveness.
+6. Link Evolution Routes, Skills, cultures, magical procedures, and current world state to their owners rather than embedding them as species bonuses.
+7. Use explicit unknown and disputed states where the campaign has incomplete evidence.
+8. Validate every populated campaign record before activation and every reusable proposal through Living Codex governance.
 
 ## Required Field Policy
 
@@ -35,7 +36,7 @@ This template organizes a Species Reference. It owns no anatomy, trait, route, c
 
 - **Record ID:** `<stable Species Reference ID>`
 - **Record type:** `Species Reference`
-- **Reference mode:** `<campaign-local | reusable canonical proposal>`
+- **Reference mode:** `<campaign-local | Living Codex payload proposal>`
 - **Authoritative module:** `Species`
 - **Species or form name:** `<primary current label or explicit unknown>`
 - **Subject scope:** `<species, form, stage, lineage range, or another bounded taxon>`
@@ -250,7 +251,7 @@ Do not place any populated version of these fields in the repository template.
 ## Validation Checklist
 
 - [ ] The repository copy remains blank; any campaign-local record is external.
-- [ ] Reusable reference material, if proposed, follows ordinary repository governance and contains no live state.
+- [ ] Reusable reference material, if proposed, follows Living Codex governance and contains no live state.
 - [ ] The species or form boundary is explicit and supported.
 - [ ] Ordinary range is separated from individual variation and current population state.
 - [ ] Anatomy, Species Potential, Trait Expression, learned control, and Practised Reliability remain distinct.
@@ -281,9 +282,10 @@ Do not place any populated version of these fields in the repository template.
 - [Monster Generator](../docs/gm/MONSTER_GENERATOR.md)
 - [Structured Persistence Architecture](../docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Persistence Validation](../docs/persistence/PERSISTENCE_VALIDATION.md)
+- [GM Living Codex Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md)
 
 ## Extensions and Consumers
 
-Use the [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) only for route structure and the [Character Record Template](CHARACTER_TEMPLATE.md) only for one current individual. Population, ecology, Research, Location, and Timeline records consume the Species Reference without copying it into live world state.
+Use the [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) only for route structure, the [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) only for reusable Codex governance, and the [Character Record Template](CHARACTER_TEMPLATE.md) only for one current individual. Population, ecology, Research, Location, and Timeline records consume the Species Reference without copying it into live world state.
 
 Character creation, Reincarnation generation, monster generation, Skills, Magic, Evolution, and World simulation may consume only the fields relevant to their claim and must preserve uncertainty and owner boundaries.

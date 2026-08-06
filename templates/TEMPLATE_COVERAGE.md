@@ -70,6 +70,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Bounded learned capability | [Skill Record Template](SKILL_TEMPLATE.md) |
 | Human social framework | [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) |
 | Species and form range | [Species Reference Template](SPECIES_TEMPLATE.md) |
+| Cross-campaign reusable species design | [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) |
 | Monster Evolution routes | [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) |
 | Soul continuity | [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) |
 | Soul Avatar | [Soul Avatar Profile Template](SOUL_AVATAR_TEMPLATE.md) |
@@ -82,6 +83,12 @@ Coverage does not require one file per canonical document. A record-family templ
 | World contact and Gates | [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md) |
 | Maintained infrastructure | [Infrastructure Record Template](INFRASTRUCTURE_TEMPLATE.md) |
 | Item, lot, container, or custody | [Inventory and Custody Record Template](INVENTORY_CUSTODY_TEMPLATE.md) |
+
+## Cross-Campaign GM Asset Coverage
+
+| Reusable asset family | Template coverage | Boundary |
+| --- | --- | --- |
+| GM Living Codex Species Registry | [Living Codex Species Entry](LIVING_CODEX_SPECIES_TEMPLATE.md), [Species Reference](SPECIES_TEMPLATE.md), [Evolution Tree](EVOLUTION_TREE_TEMPLATE.md) | separately deployed reusable design; never a current campaign species, population, or character record |
 
 ## Template Selection Rules
 
