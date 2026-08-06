@@ -4347,3 +4347,23 @@ A reusable, stably identified form that records causal differences from a base S
 ## Reuse Priority
 
 Qualitative Living Codex guidance about how readily a reusable entry should be considered during generation. It does not rank power, guarantee selection, or establish campaign presence.
+
+## Living Codex Database
+
+The one separately configured SQLite database carrying authoritative populated Living Codex records. It is distinct from every campaign database; repository documents define its structure, while actual bytes, backups, configuration, and populated records remain external.
+
+## Codex Version
+
+An immutable identifier for one complete validated state of the Living Codex Database. It is not a Campaign Version and does not establish adoption by any campaign.
+
+## Codex Revision
+
+An append-preserving accepted change to one Living Codex entry or related reusable-design set, linked to its parent and resulting Codex Versions.
+
+## Codex Migration
+
+A uniquely identified, backup-first operation that transforms one Codex Version candidate into another through a dependency-closed transaction, validation, deployment, read-back, and recovery contract. It is distinct from a campaign migration.
+
+## Codex Validation Run
+
+A recorded validation of one Living Codex candidate or active version, including scope, checks, findings, evidence, result, limitations, and required recovery. It cannot approve design or repair the candidate it evaluates.

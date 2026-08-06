@@ -4749,3 +4749,15 @@ Living Codex Evolution graphs preserve route provenance, conditions, transitions
 ## D-1187 — Reusable Variants and Campaign Divergences Remain Distinct
 
 A Living Codex Variant is a reusable stable difference from a base entry. A Campaign Divergence is campaign-specific state referencing that base. Neither is copied into the other automatically, and a materially distinct reusable form receives its own species identity through review rather than an arbitrary difference count.
+
+## D-1188 — The Living Codex Uses a Separate SQLite Authority
+
+One separately configured SQLite database carries authoritative populated Living Codex state. It is physically and logically distinct from every campaign database; rendered Markdown and exports are secondary views, while actual database files, locators, and populated records remain outside the rules repository.
+
+## D-1189 — Living Codex Saves Require Complete Remote Verification
+
+An accepted Codex change becomes complete only after a dependency-closed SQLite transaction, constraint and semantic validation, read-only reopen, canonical Google Drive replacement, canonical read-back, required current and dated backup deployment, backup read-back, and migration evidence succeed. A local SQLite commit alone is only a candidate, and any failure preserves the last fully validated Codex.
+
+## D-1190 — Codex and Campaign Persistence Remain Distinct
+
+Codex Versions, revisions, migrations, validation runs, and stable reusable-design records are not Campaign Versions, Save Transactions, Truth Layers, or Campaign State. They may reuse adapter procedures, but neither authority hierarchy silently substitutes for the other.

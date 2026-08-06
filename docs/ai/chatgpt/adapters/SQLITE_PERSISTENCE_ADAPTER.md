@@ -197,6 +197,12 @@ In that chain:
 
 Neither adapter may treat the other's successful operation as proof that its own responsibility passed.
 
+### Living Codex Specialization
+
+The same SQLite transaction boundary may carry a separately configured [GM Living Codex database](../../../gm-living-codex/PERSISTENCE_MODEL.md). In that chain, the adapter opens exactly one identified Codex artifact, enforces Codex foreign keys and constraints, applies the complete reusable-design affected set, validates the candidate read-only, and passes only validated bytes onward.
+
+The Living Codex database is not a campaign database. Codex Versions, revisions, migrations, validation runs, and stable species identities use their Codex owners rather than the Campaign Persistence Engine's Save Index, Campaign Version, Truth Layers, or campaign record owners. An implementation must choose the correct specialization explicitly and must never mix the two schemas or infer that a Codex entry is campaign truth.
+
 ## Schema Boundary
 
 Schema design, inspection, migration, and repair occur only in Development Context.
@@ -220,6 +226,7 @@ Gameplay Context does not expose tables, columns, indexes, migration statements,
 
 - [ChatGPT GM Universal Instructions](../CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md)
 - [Google Drive Persistence Adapter](GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
+- [GM Living Codex Persistence Model](../../../gm-living-codex/PERSISTENCE_MODEL.md)
 - [AI Runtime Model](../../AI_RUNTIME_MODEL.md)
 - [AI Capabilities and Limitations](../../AI_CAPABILITIES_AND_LIMITATIONS.md)
 - [AI Save Protocol](../../AI_SAVE_PROTOCOL.md)

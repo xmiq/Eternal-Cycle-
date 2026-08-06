@@ -159,7 +159,7 @@ A reusable divergence may later be proposed as a Codex variant or distinct speci
 
 This plan is the authoritative order for implementing the Living Codex architecture. It is a maintenance plan, not a numbered development phase and not a claim that a populated deployment exists in this repository.
 
-Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Later documents own the persistence and Reproductive Compatibility steps without changing this order.
+Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Steps 10 and 11 are defined in the [Living Codex Persistence Model](PERSISTENCE_MODEL.md). A later dedicated document owns Reproductive Compatibility without changing this order.
 
 ### Step 1 - Codex Philosophy and Authority
 
@@ -199,11 +199,11 @@ Define how playable species use the same Codex while personal state, earned capa
 
 ### Step 10 - SQLite Persistence Schema
 
-Define normalized storage, constraints, stable references, revisions, migrations, and validation for one separate Living Codex database.
+Define normalized storage, constraints, stable references, revisions, migrations, and validation for one separate Living Codex database, as specified by the [Living Codex Persistence Model](PERSISTENCE_MODEL.md).
 
 ### Step 11 - Google Drive Deployment and Full-Save Protocol
 
-Define the canonical copy, current backup, dated snapshots, manifests, remote replacement, read-back, exact comparison, and recovery behavior.
+Define the canonical copy, current backup, dated snapshots, manifests, remote replacement, read-back, exact comparison, and recovery behavior, as specified by the [Living Codex Persistence Model](PERSISTENCE_MODEL.md).
 
 ### Step 12 - Reproductive Compatibility
 
@@ -232,6 +232,7 @@ The canonical design requires one separate Living Codex SQLite database and a ve
 
 - [GM Living Codex Index](README.md)
 - [Species Registry](SPECIES_REGISTRY.md)
+- [Living Codex Persistence Model](PERSISTENCE_MODEL.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Monster Evolution Rules](../monster-evolution/README.md)

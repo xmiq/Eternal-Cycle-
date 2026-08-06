@@ -270,6 +270,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [GM Living Codex Index](gm-living-codex/README.md) | Living Codex reading order, authority boundary, operational scope, and family navigation | Routes reusable-design claims without creating campaign facts. |
 | [GM Living Codex Design](gm-living-codex/GM_LIVING_CODEX.md) | Cross-campaign reusable-design authority, GM ownership, consultation, inclusion, divergence, stable identity, safeguards, and implementation order | Constrains all Codex modules and deployments while remaining subordinate to specialist mechanics. |
 | [Living Codex Species Registry](gm-living-codex/SPECIES_REGISTRY.md) | Stable species identity, reusable record contracts, capability classification, Evolution graphs, variants, procedural metadata, and player-species integration | Consumes specialist mechanics and supplies reusable designs without storing individuals or live world state. |
+| [Living Codex Persistence Model](gm-living-codex/PERSISTENCE_MODEL.md) | Separate Codex SQLite authority, normalized schema, stable references, revisions, migrations, validation, Google Drive deployment, backups, and full-save completion | Reuses adapter procedures while remaining distinct from Campaign Persistence and every populated campaign database. |
 
 ## Campaign Persistence Engine
 

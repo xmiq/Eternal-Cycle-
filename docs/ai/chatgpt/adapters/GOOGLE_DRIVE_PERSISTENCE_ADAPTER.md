@@ -263,6 +263,12 @@ When Google Drive carries a SQLite store:
 
 Google Drive may also deploy another supported logical format. Replacing the inner adapter must not change remote identity rules or Campaign Persistence meaning.
 
+### Living Codex Specialization
+
+Google Drive may deploy the separately configured [GM Living Codex SQLite database](../../../gm-living-codex/PERSISTENCE_MODEL.md). That deployment uses its own exact canonical identity, current verified backup, dated recovery snapshots, migration manifests, concurrency evidence, canonical read-back, and backup read-back. It remains separate from every campaign canonical file and backup area.
+
+In this specialization, the Living Codex persistence model owns reusable-design meaning and full-save completion while Google Drive owns remote transport and identity. The adapter must not treat a Codex file as Campaign State, place campaign facts in it, or infer campaign adoption from successful deployment.
+
 ## Safeguards
 
 - Exact observed remote identity is required.
@@ -280,6 +286,7 @@ Google Drive may also deploy another supported logical format. Replacing the inn
 
 - [ChatGPT GM Universal Instructions](../CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md)
 - [SQLite Persistence Adapter](SQLITE_PERSISTENCE_ADAPTER.md)
+- [GM Living Codex Persistence Model](../../../gm-living-codex/PERSISTENCE_MODEL.md)
 - [AI Runtime Model](../../AI_RUNTIME_MODEL.md)
 - [AI Capabilities and Limitations](../../AI_CAPABILITIES_AND_LIMITATIONS.md)
 - [AI Save Protocol](../../AI_SAVE_PROTOCOL.md)
