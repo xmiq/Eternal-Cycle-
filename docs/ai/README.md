@@ -25,6 +25,12 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 6. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
 7. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
+## Runtime-Specific Profiles
+
+- [ChatGPT GM Universal Instructions](chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT-specific Gameplay and Development Contexts, boot, action fidelity, world simulation, strict Save-Before-Delivery, correction, and failure behavior.
+
+Runtime-specific profiles are replaceable operational extensions. They do not redefine gameplay mechanics, Campaign Persistence semantics, or shared human and AI GM responsibilities.
+
 ## Authority Boundary
 
 These documents sequence existing owners. They do not replace them.

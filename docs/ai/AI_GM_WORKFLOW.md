@@ -71,13 +71,15 @@ Use [AI Play Protocol](AI_PLAY_PROTOCOL.md) to identify the intended effect, met
 
 A retrieved example may illustrate a rule but cannot replace the rule's requirements.
 
-### 7. Narrate the established result
+### 7. Prepare the established presentation
 
-Narration renders the established situation and outcome from the appropriate observer view. It may add ordinary sensory and connective detail that does not change material facts. It may not introduce a new mechanic, hidden countermeasure, relationship state, numerical change, historical event, or guaranteed future outcome.
+Prepared narration renders the established situation and outcome from the appropriate observer view. It may add ordinary sensory and connective detail that does not change material facts. It may not introduce a new mechanic, hidden countermeasure, relationship state, numerical change, historical event, or guaranteed future outcome.
 
 Clearly separate an attempted action from an achieved effect. Do not disguise an estimate as certainty or an unresolved question as a secret answer.
 
-### 8. Persist before dependent play
+Preparing text does not determine when it may be delivered. The selected AI Execution Profile owns presentation ordering and may require validated persistence before delivery.
+
+### 8. Persist before dependent play or a stricter delivery gate
 
 At the semantic boundary of every completed Gameplay Interaction, follow [AI Save Protocol](AI_SAVE_PROTOCOL.md). Determine the Affected Set, stage one owner-routed Session Delta, append the required Session, Timeline, and Campaign History records, validate the candidate, and activate atomically when authorized.
 

@@ -4701,3 +4701,7 @@ The Future Revisions register records issues, affected systems, gameplay impact,
 ## D-1175 — AI Runtime Layers Preserve Canonical Ownership
 
 An AI Game Master, AI Execution Profile, Persistence Adapter, and Campaign Configuration operate through Repository Canon and Canonical Campaign State without owning or redefining either. Runtime-specific layers are replaceable operational implementations; changing one does not alter fictional mechanics, Campaign Persistence semantics, or established campaign truth unless a separately authorized repository or campaign migration does so.
+
+## D-1176 — ChatGPT Uses Strict Save-Before-Delivery
+
+ChatGPT may deliver narration asserting durable consequences only after the corresponding Save Transaction, required validation, deployment, backup policy, and Read-Back Validation succeed. This is a replaceable AI Execution Profile constraint rather than fictional physics, a gameplay mechanic, or a universal human-GM requirement; failure preserves the last validated campaign authority and blocks dependent durable narration.

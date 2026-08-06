@@ -4,7 +4,7 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: Integrate AI Runtime Profile — integrate ChatGPT GM execution profile**
+**Current task: Integrate AI Runtime Profile — integrate canonical persistence adapters**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
@@ -21,9 +21,9 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 ### AI Runtime Profile Integration
 
 - **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
-- **Completed:** Add the implementation-neutral AI Runtime Model; document AI capabilities and limitations.
-- **Current:** Integrate the ChatGPT GM execution profile.
-- **Remaining:** Integrate the SQLite and Google Drive adapters under canonical names; reconcile navigation, decisions, and integration notes; validate and archive.
+- **Completed:** Add the implementation-neutral AI Runtime Model; document AI capabilities and limitations; integrate the ChatGPT GM execution profile.
+- **Current:** Integrate the SQLite and Google Drive persistence adapters under canonical names.
+- **Remaining:** Reconcile navigation, decisions, and integration notes; validate and archive.
 - **Boundary:** Operational AI documentation only. No campaign data, fictional mechanic, numbered phase, release declaration, or completed-phase redesign is authorized.
 
 ## Status Legend

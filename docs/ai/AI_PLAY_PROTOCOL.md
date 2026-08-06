@@ -101,9 +101,9 @@ Establish only what the interaction currently resolves:
 
 Do not resolve every possible future response or treat consequences as punishment. A Pending Consequence is pressure, not a scripted outcome.
 
-### 8. Narrate from the correct view
+### 8. Prepare narration from the correct view
 
-Render the established result in a form appropriate to the campaign. Narration should:
+Prepare the established result in a form appropriate to the campaign. Narration should:
 
 - make the immediate situation intelligible;
 - distinguish perception from inference when it matters;
@@ -113,6 +113,8 @@ Render the established result in a form appropriate to the campaign. Narration s
 - end at a natural agency or information boundary.
 
 Narration must not add unsupported mechanics, retroactive hidden counters, unearned recognition, arbitrary hostility, plot immunity, guaranteed success, or guaranteed failure.
+
+The selected AI Execution Profile determines when prepared narration may be delivered. The [ChatGPT profile](chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) requires successful persistence and validation before durable consequence narration is delivered.
 
 ### 9. Identify the Gameplay Interaction boundary
 
