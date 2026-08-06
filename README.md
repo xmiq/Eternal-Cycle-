@@ -51,7 +51,12 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GM_RESPONSIBILITIES.md`](docs/gm/GM_RESPONSIBILITIES.md) - bounded GM duties, ownership handoffs, delegation, records, and human/AI parity.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
-- [`docs/ai/README.md`](docs/ai/README.md) - implementation-neutral AI Game Master workflow, session start, play, save, and validation procedures.
+- [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
+- [`docs/ai/AI_RUNTIME_MODEL.md`](docs/ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, transaction flow, adapter composition, failure boundaries, and extension rules.
+- [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
+- [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.
+- [`docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md`](docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - SQLite transaction, integrity, stale-write, rollback, and read-only validation procedures.
+- [`docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md`](docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - Google Drive identity, replacement, read-back, backup, concurrency, and security procedures.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.

@@ -31,6 +31,19 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 - Specialist systems remain authoritative for the mechanics and outcomes they own.
 - Populated campaign records remain outside this repository.
 
+## Runtime Implementation Boundary
+
+The Campaign Persistence Engine remains storage-neutral. The [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) defines how an AI GM, execution profile, Persistence Adapters, Campaign Configuration, Canonical Campaign State, and repository rules relate without changing persistence semantics.
+
+Runtime-specific [execution profiles and adapters](../ai/README.md#runtime-specific-profiles) are replaceable implementations:
+
+- an execution profile may order loading, adjudication, persistence, validation, and delivery but cannot define mechanics;
+- an adapter may implement transactions, remote deployment, backup, and Read-Back Validation but cannot adjudicate gameplay;
+- external Campaign Configuration selects profile and Adapter Chain and supplies deployment-specific identifiers;
+- campaign facts, discoveries, secrets, credentials, locators, and populated state remain outside universal repository documents.
+
+Save-Before-Delivery is an execution-profile constraint, not fictional physics. Read-only validation observes a candidate or activated state without mutating it.
+
 ## Authority and Scope
 
 Files in this section contain playable canonical rules. Accepted governance remains in [Design Decisions](../../design/DECISIONS.md), canonical vocabulary remains in [Terminology](../../design/TERMINOLOGY.md), and implementation order remains controlled by the [Roadmap](../../design/ROADMAP.md). Any conflict must be resolved before an affected task can be complete.

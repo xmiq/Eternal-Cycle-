@@ -4,11 +4,11 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: Integrate AI Runtime Profile — complete navigation and integration audit**
+**Current task: No active development task; gather external gameplay evidence**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phases 0 through 11 are complete and reviewed. No numbered development phase is active. The project owner has authorized a bounded gameplay-validation maintenance task to integrate the AI Runtime Profile as operational documentation; it does not reopen a completed phase or authorize gameplay-mechanic changes. Gameplay findings outside this maintenance scope may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not implement them or infer a new roadmap without explicit project-owner authorization.
+Phases 0 through 11 are complete and reviewed. No numbered development phase or maintenance task is active. The AI Runtime Profile maintenance integration is complete and did not reopen a completed phase or authorize gameplay-mechanic changes. Gameplay findings may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not implement them or infer a new roadmap without explicit project-owner authorization.
 
 This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
@@ -21,9 +21,10 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 ### AI Runtime Profile Integration
 
 - **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
-- **Completed:** Add the implementation-neutral AI Runtime Model; document AI capabilities and limitations; integrate the ChatGPT GM execution profile; integrate the SQLite and Google Drive persistence adapters under canonical names.
-- **Current:** Complete navigation, integration, repository-boundary, and naming audit.
-- **Remaining:** Validate the complete maintenance change, close the maintenance target, and generate the repository archive.
+- **Status:** Complete.
+- **Completed:** Added the implementation-neutral AI Runtime Model; documented AI capabilities and limitations; integrated the ChatGPT GM execution profile; integrated the SQLite and Google Drive persistence adapters under canonical names; completed navigation, integration, repository-boundary, naming, and validation audits.
+- **Current:** None.
+- **Remaining:** None.
 - **Boundary:** Operational AI documentation only. No campaign data, fictional mechanic, numbered phase, release declaration, or completed-phase redesign is authorized.
 
 ## Status Legend

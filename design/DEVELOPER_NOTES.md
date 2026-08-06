@@ -2808,3 +2808,72 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 2. Generate `Eternal Cycle.zip` from the final commit.
 3. Verify the archive file list and source hashes against `HEAD`.
 4. Begin no new development phase; future work starts only through owner-authorized evidence review and roadmap creation.
+
+## Gameplay Validation Maintenance Checkpoint — AI Runtime Profile Integration
+
+### Completed Maintenance Tasks
+
+- Added the implementation-neutral AI Runtime Model.
+- Documented AI capabilities and limitations.
+- Integrated the ChatGPT GM execution profile.
+- Integrated the SQLite and Google Drive persistence adapters under canonical names.
+- Completed the navigation, integration, repository-boundary, naming, and validation audits.
+
+### Files Created
+
+- `docs/ai/AI_RUNTIME_MODEL.md`
+- `docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`
+- `docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`
+- `docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md`
+- `docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md`
+
+### Files Modified
+
+- `README.md`
+- `design/DECISIONS.md`
+- `design/DEVELOPER_NOTES.md`
+- `design/ROADMAP.md`
+- `design/TERMINOLOGY.md`
+- `docs/DOCUMENT_REGISTRY.md`
+- `docs/README.md`
+- `docs/ai/AI_GM_WORKFLOW.md`
+- `docs/ai/AI_PLAY_PROTOCOL.md`
+- `docs/ai/README.md`
+- `docs/gm/README.md`
+- `docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md`
+- `docs/persistence/README.md`
+
+### Terminology and Decisions
+
+- Added thirteen canonical terms covering the runtime model, profiles, adapters, configuration, state, validation, failures, and operating contexts.
+- Added decisions D-1175 through D-1178 for runtime ownership, strict ChatGPT Save-Before-Delivery, non-adjudicating adapters, and explicit Adapter Chain responsibilities.
+- No unresolved question or Future Revision was added. Existing gameplay-validation candidates remain unchanged.
+
+### Validation Results
+
+- Repository validation: pass.
+- Markdown files: 204.
+- Relative links checked: 5,961, zero broken or repository-escaping targets.
+- Markdown anchors checked: 115, zero broken.
+- Canonical documents indexed: 148 across 12 family indexes.
+- Templates indexed: 31; agent roles indexed: 5.
+- Canonical terms checked: 1,071; roadmap tasks checked: 163.
+- Future Revision entries: 12; blocking unresolved questions: zero.
+- Orphaned Markdown documents and forbidden campaign-data directories: zero.
+- Obsolete adapter names and files: zero.
+- Private or absolute URLs and credential-like assignments in AI documents: zero.
+- Provider names in core gameplay-document families: zero.
+- Complete diff review: pass.
+
+### Repository State
+
+- **Feature Complete — Gameplay Validation Ongoing**.
+- **Current phase:** Long-term gameplay validation.
+- **Current task:** No active development task; gather external gameplay evidence.
+- No completed phase reopened, no gameplay mechanic changed, and no campaign data entered the repository.
+
+### Exact Resume Point
+
+1. No development or maintenance task is active.
+2. Gather external gameplay evidence and obtain explicit owner authorization before changing the roadmap or mechanics.
+3. Before distribution, verify `Eternal Cycle.zip` against `HEAD`; regenerate it after any future authorized commit.

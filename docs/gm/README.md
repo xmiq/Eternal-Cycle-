@@ -24,9 +24,12 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 16. [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) - campaign-local provisional adjudication where later roadmap systems remain incomplete.
 17. [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - the load, owner-resolution, Save Update, validation, activation, and presentation contract used by human and AI GMs.
 18. [AI Game Master Operating Procedures](../ai/README.md) - implementation-neutral workflow, session-start, play, save, and checklist procedures for automated operation of the same GM responsibilities.
+19. [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) - the implementation-neutral relationship among AI execution, Campaign Persistence, adapters, campaign state, and repository rules; runtime profiles remain replaceable extensions.
 
 ## Authority and Boundary
 
 The framework applies Repository Canon; it does not create an independent source of mechanics. Provisional rulings remain subordinate to Canonical rules and Foundations and are stored in an external Campaign Record.
+
+AI execution profiles and persistence adapters implement these responsibilities without gaining mechanical or campaign authority. The [AI operating index](../ai/README.md) classifies shared procedures, runtime-specific profiles, and adapters while preserving human and AI GM parity.
 
 Current characters, bodies, Soul state, inventories, relationships, settlements, factions, quests, timelines, sessions, and live world state do not belong in this repository.

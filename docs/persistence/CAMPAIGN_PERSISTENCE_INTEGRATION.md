@@ -390,6 +390,30 @@ Route defects by kind:
 
 Do not use an easier route merely to avoid preserving evidence or authorization.
 
+## AI Runtime and Adapter Boundary
+
+The Campaign Persistence Engine owns the logical continuity contract: what must persist, which record owns it, how authority and Truth Layers constrain it, and how Save, Migration, Continuity, and Validation procedures operate. It remains storage-neutral.
+
+The [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) owns the implementation-neutral relationship among the player, AI Game Master, execution profile, adapters, campaign configuration, Canonical Campaign State, and repository rules. Runtime layers implement this integration contract without outranking it.
+
+Operational ownership is divided as follows:
+
+| Concern | Owner |
+| --- | --- |
+| Logical campaign meaning, authority, history, and validation requirements | Campaign Persistence Engine |
+| Runtime ordering and provider-specific operating constraints | selected AI Execution Profile |
+| Storage transaction, deployment, backup, and Read-Back Validation procedures | selected Persistence Adapter or Adapter Chain |
+| Deployment-specific profile, adapter selection, locators, versions, and active rulings | external Campaign Configuration |
+| Populated characters, discoveries, relationships, secrets, timelines, and world state | external Canonical Campaign State |
+
+An Adapter Chain may compose distinct responsibilities. For example, the [SQLite adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) may own database transactions and integrity while the [Google Drive adapter](../ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) owns canonical remote identity, deployment, backup, and remote read-back. Campaign Configuration selects and orders the chain; neither adapter adjudicates gameplay.
+
+Save-Before-Delivery is an execution constraint of profiles that adopt it. It is not fictional physics, a new persistence authority, or a change to when an in-world event occurs. Validation remains read-only with respect to the state being evaluated.
+
+Campaign discoveries never migrate into universal runtime files merely because a profile or adapter observed them. Runtime documents remain replaceable, and campaign-specific identifiers, URLs, credentials, facts, and rulings remain in protected external configuration or campaign records.
+
+The canonical adapter naming convention is `<TECHNOLOGY>_PERSISTENCE_ADAPTER.md`. A future profile or adapter may be added only when it preserves these ownership boundaries and repository conventions.
+
 ## Storage and Blank Templates
 
 Logical organization, authority, identity, truth layers, lifetimes, history, transactions, and validation are canonical. Markdown, databases, cloud drives, Git, paper records, and applications are implementation choices.

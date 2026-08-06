@@ -132,12 +132,17 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 ## AI Game Master Operations
 
-- [AI Operating Procedures Index](ai/README.md) - scope, reading order, authority boundaries, guarantees, and human/AI parity.
+- [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, persistence adapters, scope, and authority boundaries.
+- [AI Runtime Model](ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, campaign boot and action flows, adapter composition, failure boundaries, and extension rules.
+- [AI Capabilities and Limitations](ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical discipline, and failure handling.
 - [AI GM Workflow](ai/AI_GM_WORKFLOW.md) - end-to-end authority, loading, adjudication, narration, persistence, recovery, and handoff cycle.
 - [AI Session Start](ai/AI_SESSION_START.md) - version, Save Index, visibility, Read Set, freshness, readiness, and resume checks before play.
 - [AI Play Protocol](ai/AI_PLAY_PROTOCOL.md) - player-input classification, intent, owner retrieval, information separation, resolution, narration, and interaction closure.
 - [AI Save Protocol](ai/AI_SAVE_PROTOCOL.md) - writer-capability disclosure and faithful operation of Affected Sets, Session Deltas, validation, activation, and recovery.
 - [AI Game Master Checklist](ai/AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, continuation, correction, and handoff.
+- [ChatGPT GM Universal Instructions](ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - runtime-specific Gameplay and Development Contexts, strict Save-Before-Delivery, action fidelity, correction, and failure behavior.
+- [SQLite Persistence Adapter](ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - local database transactions, integrity, stale-write protection, rollback, and read-only reopen validation.
+- [Google Drive Persistence Adapter](ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - remote identity, fetch-latest, canonical replacement, read-back, backup, concurrency, and security.
 
 ## Campaign Persistence Engine
 
