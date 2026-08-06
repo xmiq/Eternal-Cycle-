@@ -183,6 +183,7 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 ## Related Documents
 
 - [AI Operating Procedures Index](README.md)
+- [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md)
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
 - [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
