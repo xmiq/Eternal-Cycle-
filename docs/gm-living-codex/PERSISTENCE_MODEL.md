@@ -110,6 +110,18 @@ An implementation may refine column names, use integer surrogate keys, or add su
 | `procedural_tags` | Controlled tag definitions for generation and discovery. |
 | `species_tags` | Many-to-many species-to-tag assignments with relevance and provenance. |
 
+### Reproductive Compatibility Tables
+
+| Table | Required purpose |
+|---|---|
+| `species_reproductive_compatibility` | Sparse ordered source-to-partner relations and the established nonzero natural baseline. |
+| `compatibility_assistance_methods` | One normalized record per established magical, ritual, alchemical, divine, artificial, symbiotic, or mixed assistance method. |
+| `compatibility_conditions` | Typed conditions applying to a natural baseline or one assistance method. |
+| `compatibility_results` | Nullable viability, fertility, and resulting-species claims scoped to a baseline or assistance method. |
+| `compatibility_revisions` | Append-preserving change evidence for compatibility records and their complete affected sets. |
+
+These tables are governed by [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). An absent directional pair is Not Yet Defined, and no schema routine may expand the sparse relation into a completed matrix.
+
 ### Governance Tables
 
 | Table | Required purpose |
@@ -275,6 +287,7 @@ At minimum, validation confirms:
 - Evolution graph restrictions and lifecycle states are coherent;
 - every trait and Skill reference resolves through its owner;
 - variants retain valid bases and explicit differences;
+- Reproductive Compatibility relations remain directional, sparse, nonzero where defined, and nullable where later outcomes are not yet established;
 - all expected records exist after the transaction;
 - no unrelated record changed or disappeared;
 - the candidate reopens read-only;
@@ -415,6 +428,7 @@ Rendered views must not:
 - [GM Living Codex Index](README.md)
 - [GM Living Codex Design](GM_LIVING_CODEX.md)
 - [Species Registry](SPECIES_REGISTRY.md)
+- [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md)
 - [Campaign Persistence Engine](../persistence/README.md)
 - [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md)
 - [AI Save Protocol](../ai/AI_SAVE_PROTOCOL.md)

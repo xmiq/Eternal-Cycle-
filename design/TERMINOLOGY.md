@@ -1530,7 +1530,7 @@ A bounded function and provenance within which Stat XP applies, such as sustaine
 
 ## Compatibility Profile
 
-A qualitative account of how retained familiarity corresponds to a particular current body, species, lifecycle, metaphysical structure, environment, and developmental route. It is evaluated for a specific claim rather than assigned as one permanent percentage between species.
+A qualitative Development account of how retained familiarity corresponds to a particular current body, species, lifecycle, metaphysical structure, environment, and developmental route. It is evaluated for a specific claim rather than assigned as one permanent percentage between species, and it is not a Reproductive Compatibility record.
 
 ## Transfer Loss
 
@@ -1990,7 +1990,7 @@ The biological, magical, artificial, symbiotic, evolutionary, divine, corruptive
 
 ## Hybrid Compatibility Profile
 
-A qualitative assessment of how specific Source Lineages can or cannot integrate across origin, anatomy, material, regulation, lifecycle, magic, cognition, Soul inhabitation, and ecology for one proposed form.
+A qualitative assessment of how specific Source Lineages can or cannot integrate across origin, anatomy, material, regulation, lifecycle, magic, cognition, Soul inhabitation, and ecology for one proposed form. It is not replaced by Reproductive Compatibility initiation, viability, or fertility percentages.
 
 ## Integration Bridge
 
@@ -4367,3 +4367,39 @@ A uniquely identified, backup-first operation that transforms one Codex Version 
 ## Codex Validation Run
 
 A recorded validation of one Living Codex candidate or active version, including scope, checks, findings, evidence, result, limitations, and required recovery. It cannot approve design or repair the candidate it evaluates.
+
+## Reproductive Compatibility
+
+A sparse directional Living Codex relationship recording the probability of successful reproductive initiation or equivalent formation for one ordered species pairing under stated conditions. It is neither a universal compatibility score nor a guarantee of later development, birth, survival, inheritance, or individual participation.
+
+## Natural Compatibility
+
+The greater-than-zero probability of reproductive initiation for one directional species pair under its recorded baseline conditions without targeted assistance. Ordinary ambient Magic may be part of the baseline only when the record says so.
+
+## Assisted Compatibility
+
+The greater-than-zero probability of reproductive initiation for one directional species pair under one specifically recorded Assistance Class, mechanism, and condition set. It remains undefined until that method is established.
+
+## Offspring Viability
+
+The greater-than-zero probability, when established, that an offspring or equivalent already formed under an identified baseline or assistance method develops into a viable being under the recorded conditions. Unknown remains undefined rather than zero.
+
+## Offspring Fertility
+
+The greater-than-zero probability, when established, that a resulting viable offspring or equivalent can participate in a valid reproductive or renewal process under the recorded scope. It does not define lineage or inherited expression.
+
+## Compatibility Direction
+
+The ordered source-species-to-partner-species role of one Reproductive Compatibility record. The reverse order is a separate relationship and is never inferred automatically.
+
+## Undefined Pairing
+
+A directional species pairing for which the Living Codex contains no Reproductive Compatibility row. It means Not Yet Defined, not zero, impossible, compatible, incompatible, probable, or improbable.
+
+## Assistance Class
+
+A controlled category identifying the kind of targeted or environmental mediation used by one assisted Reproductive Compatibility method, such as ritual, alchemy, Soul alignment, divine intervention, artificial incubation, evolutionary adaptation, symbiotic mediation, or reality alteration. The category grants no mechanism or result by itself.
+
+## Reproductive Distance
+
+The qualitative collection of biological, anatomical, developmental, magical, elemental, evolutionary, environmental, renewal, and Soul-level differences relevant to one directional reproductive claim. It guides adjudication but is not a universal equation or score.

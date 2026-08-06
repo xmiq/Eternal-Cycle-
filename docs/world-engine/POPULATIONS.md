@@ -137,6 +137,8 @@ Population renewal requires an actual route. Depending on the beings involved, t
 
 Fertility, fecundity, eggs, seeds, births, or created bodies do not equal surviving members. Distinguish conception or initiation, successful development, birth or formation, survival, maturation, and integration.
 
+Where Campaign Configuration adopts them, established [Living Codex Reproductive Compatibility](../gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) records may supply directional initiation, viability, or fertility inputs. An absent Codex row supplies no value, and a species-level percentage does not establish individual availability, consent, health, attempt frequency, successful birth or formation, survival, maturation, or population growth.
+
 No species receives exponential growth by premise alone. Repeated reproduction encounters finite time, embodied cost, ecology, resources, predation, disease, care, competition, dispersal, and changing behavior.
 
 ## Mortality and Survival
@@ -264,6 +266,8 @@ Population composition can describe access to capable people, teachers, institut
 ### Monster Evolution
 
 Population density, composition, mortality, reproduction, and continuity can create ecological and Evolutionary Pressures. [Monster Evolution](../monster-evolution/README.md) owns species stages, Adaptation, Mutation, Evolution Routes, Hybridization, and extinction adjudication.
+
+Reusable species and compatibility baselines may be selected from the [GM Living Codex](../gm-living-codex/README.md), while current populations, actual pairings, campaign divergences, and outcomes remain Campaign State.
 
 ### Human Classes and Professions
 

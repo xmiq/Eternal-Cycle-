@@ -4761,3 +4761,31 @@ An accepted Codex change becomes complete only after a dependency-closed SQLite 
 ## D-1190 — Codex and Campaign Persistence Remain Distinct
 
 Codex Versions, revisions, migrations, validation runs, and stable reusable-design records are not Campaign Versions, Save Transactions, Truth Layers, or Campaign State. They may reuse adapter procedures, but neither authority hierarchy silently substitutes for the other.
+
+## D-1191 — Reproductive Compatibility Is Sparse and Directional
+
+The Living Codex records Reproductive Compatibility as a many-to-many ordered species relation only when the pairing becomes narratively or procedurally relevant. An absent row means Not Yet Defined rather than zero, impossible, compatible, incompatible, likely, or unlikely; one direction never creates its reverse automatically.
+
+## D-1192 — Every Established Compatibility Probability Is Nonzero
+
+Every stored Natural Compatibility, Assisted Compatibility, Offspring Viability, and Offspring Fertility value is greater than zero and no greater than 100 percent. Magic makes every pairing theoretically possible in principle, while greater biological and metaphysical distance generally lowers practical probability and increases the conditions, precision, risk, and assistance required.
+
+## D-1193 — Initiation Viability and Fertility Are Separate Claims
+
+Natural Compatibility records reproductive initiation under a stated baseline. Each assistance method records its own Assisted Compatibility, while Offspring Viability, Offspring Fertility, and resulting species remain nullable until relevant and established. No field silently supplies another, and an unknown value never becomes zero.
+
+## D-1194 — Forms Do Not Inherit Compatibility Records Automatically
+
+Evolved species and sufficiently distinct variants use separate directional Reproductive Compatibility records. Parent, prior-Evolution, related-variant, or superficially similar values may inform later GM judgement but do not become the new form's values without explicit review and persistence.
+
+## D-1195 — Species Compatibility Does Not Determine Individual Participation
+
+Species-level Reproductive Compatibility establishes no individual's attraction, consent, willingness, relationship, health, personal fertility, access to assistance, or guaranteed result. Those remain campaign facts or later reproduction-system claims under their own authority.
+
+## D-1196 — Compatibility Changes Use the Living Codex Full Save
+
+A compatibility change is one dependency-closed Codex migration containing pair, assistance, condition, result, revision, index, and validation records as applicable. It follows SQLite transaction, read-only reopen, canonical Google Drive replacement, verified current and dated backups, remote read-back, and exact-comparison requirements; partial local persistence cannot activate it.
+
+## D-1197 — Complete Lineage and Inheritance Rules Remain Future Work
+
+Reproductive Compatibility determines whether formation can begin and may record viability or fertility. It does not determine resulting lineage, mixed or pure-line expression, inherited Evolution, born-evolved forms, Instinctive Skills, hereditary echoes, or inheritance distributions; those require a separately authorized later module.

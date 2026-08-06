@@ -159,7 +159,7 @@ A reusable divergence may later be proposed as a Codex variant or distinct speci
 
 This plan is the authoritative order for implementing the Living Codex architecture. It is a maintenance plan, not a numbered development phase and not a claim that a populated deployment exists in this repository.
 
-Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Steps 10 and 11 are defined in the [Living Codex Persistence Model](PERSISTENCE_MODEL.md). A later dedicated document owns Reproductive Compatibility without changing this order.
+Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Steps 10 and 11 are defined in the [Living Codex Persistence Model](PERSISTENCE_MODEL.md). Step 12 is defined in [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md) without changing this order.
 
 ### Step 1 - Codex Philosophy and Authority
 
@@ -207,7 +207,7 @@ Define the canonical copy, current backup, dated snapshots, manifests, remote re
 
 ### Step 12 - Reproductive Compatibility
 
-Define sparse directional species relationships, nonzero scoped probabilities, assistance methods, viability and fertility separation, Evolution and variant boundaries, and the full-save procedure. This step is only the compatibility scaffold; it does not define courtship, pregnancy, heredity, hybrid development, family structures, or the later lineage and inheritance system.
+Define sparse directional species relationships, nonzero scoped probabilities, assistance methods, viability and fertility separation, Evolution and variant boundaries, and the full-save procedure under [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). This step is only the compatibility scaffold; it does not define courtship, pregnancy, heredity, hybrid development, family structures, or the later lineage and inheritance system.
 
 ## Implementation and Deployment Boundary
 
@@ -233,6 +233,7 @@ The canonical design requires one separate Living Codex SQLite database and a ve
 - [GM Living Codex Index](README.md)
 - [Species Registry](SPECIES_REGISTRY.md)
 - [Living Codex Persistence Model](PERSISTENCE_MODEL.md)
+- [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Monster Evolution Rules](../monster-evolution/README.md)

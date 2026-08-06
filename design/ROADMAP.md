@@ -4,7 +4,7 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: Gameplay-validation maintenance — Define Reproductive Compatibility**
+**Current task: Gameplay-validation maintenance — Complete Living Codex integration and navigation**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
@@ -31,9 +31,9 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 
 - **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
 - **Status:** In progress.
-- **Completed:** Defined the Living Codex philosophy and authority; defined stable identity and indexing, complete Species Registry records, trait and Skill ownership, Evolution graphs, variants, procedural-generation metadata, player-species integration, operating procedure, and a blank Codex species template; defined the independent normalized SQLite authority, Codex revisions and migrations, validation, Google Drive deployment, backups, and full-save protocol.
-- **Current:** Define Step 12 Reproductive Compatibility.
-- **Remaining:** Define Step 12 Reproductive Compatibility; complete cross-system integration, navigation, and validation.
+- **Completed:** Defined the Living Codex philosophy and authority; defined stable identity and indexing, complete Species Registry records, trait and Skill ownership, Evolution graphs, variants, procedural-generation metadata, player-species integration, operating procedure, and a blank Codex species template; defined the independent normalized SQLite authority, Codex revisions and migrations, validation, Google Drive deployment, backups, and full-save protocol; defined Step 12 Reproductive Compatibility as a sparse directional nonzero relationship with normalized assistance, conditions, outcomes, revision evidence, species and individual boundaries, and future-lineage separation.
+- **Current:** Complete cross-system integration, navigation, and validation.
+- **Remaining:** Complete cross-system integration, navigation, and validation.
 - **Boundary:** Cross-campaign reusable GM design only. No campaign state, populated Codex database, numbered development phase, completed-mechanic redesign, or release declaration is authorized.
 
 ## Status Legend

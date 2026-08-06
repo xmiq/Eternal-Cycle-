@@ -134,7 +134,7 @@ Anatomy creates access. It does not grant Skill mastery, perfect control, extra 
 - care, environmental, resource, social, magical, or infrastructure requirements;
 - mortality and ordinary failure routes.
 
-Detailed reproductive systems and inheritance outcomes remain outside this initial Registry design. Step 12 adds only a compatibility scaffold, and the future lineage module owns resulting lineage and inherited expression.
+Detailed reproductive systems and inheritance outcomes remain outside this Registry design. [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md) adds only a sparse directional initiation, viability, and fertility scaffold, and the future lineage module owns resulting lineage and inherited expression. Compatibility rows remain separate relations rather than embedded assumptions in every species record.
 
 ### Habitat Ecology and Diet
 
@@ -264,6 +264,7 @@ A reusable variant records:
 - altered Skill access;
 - altered Evolution access;
 - altered ecology and magical architecture;
+- separately established Reproductive Compatibility relations where the altered structures are materially relevant;
 - ordinary variation and stability;
 - reuse intent;
 - whether it remains a variant or has become distinct enough for a species ID.
@@ -361,6 +362,7 @@ This document defines reusable species records and their interfaces. It does not
 - [Monster Evolution Rules](../monster-evolution/README.md)
 - [Branching Evolution](../monster-evolution/BRANCHING_EVOLUTION.md)
 - [Hybridization](../monster-evolution/HYBRIDIZATION.md)
+- [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md)
 - [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md)
 - [Skill Engine Safeguards](../skills/SKILL_ENGINE_SAFEGUARDS.md)
 - [Magic Rules](../magic/README.md)

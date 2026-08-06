@@ -44,6 +44,8 @@ Read these foundations before adjudicating Monster Evolution:
 13. [Soul Interaction with Evolution](SOUL_INTERACTIONS.md) defines bounded pressure, discovery, condition, compatibility, transition support, and interpretation from established Soul systems.
 14. [Monster Evolution Safeguards](EVOLUTION_SAFEGUARDS.md) consolidates the phase-wide claim audit, anti-grinding rules, form distinction, route consolidation, ownership, agency, and cleanup.
 
+The external [GM Living Codex](../gm-living-codex/README.md) may preserve reusable species, Evolution graphs, and sparse [Reproductive Compatibility](../gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) records. It does not alter this reading order, define campaign presence, or replace Hybridization and Evolution adjudication.
+
 ## Evolution Claim Resolution
 
 Use this sequence when a proposed change might be Evolution. Open only the linked specialist rules relevant to the claim; the sequence is an ownership map, not a requirement to apply every subsystem every time.

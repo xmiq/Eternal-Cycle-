@@ -8,8 +8,8 @@ The repository keeps this template blank. Populated Living Codex entries belong 
 
 - **Template owner:** GM Living Codex Species Registry
 - **Primary mechanical owners:** Species Development, Monster Evolution, Skills, Magic, Souls, and the World Engine for their respective claims
-- **Dependencies:** [GM Living Codex](../docs/gm-living-codex/GM_LIVING_CODEX.md), [Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md), [Species Reference Template](SPECIES_TEMPLATE.md), and [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md)
-- **Extensions:** Living Codex persistence records, variants, Evolution edges, procedural tags, and later compatibility records
+- **Dependencies:** [GM Living Codex](../docs/gm-living-codex/GM_LIVING_CODEX.md), [Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md), [Reproductive Compatibility](../docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md), [Species Reference Template](SPECIES_TEMPLATE.md), and [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md)
+- **Extensions:** Living Codex persistence records, variants, Evolution edges, procedural tags, and Reproductive Compatibility records
 - **Consumers:** human and AI GMs, species and ecosystem generators, player-species creation, Evolution adjudication, Campaign Configuration, and validation
 - **Repository boundary:** no populated Codex entry, current population, campaign divergence, player character, location, discovery, or deployment locator belongs in this blank file
 
@@ -114,6 +114,21 @@ Repeat the relevant record block. A capability appears once under its narrowest 
 - **Promotion considerations:** `<evidence needed for later reusable review>`
 - **External-state reminder:** `Campaign divergences remain outside the Living Codex until promoted.`
 
+## Established Reproductive Compatibility
+
+Expose only directional relationships already present in the validated Living Codex database. Do not create placeholders for every possible partner.
+
+| Partner | Direction | Natural | Assisted | Viability | Fertility | Assistance |
+|---|---|---:|---:|---:|---:|---|
+| `<established partner or omit row>` | `<source -> partner>` | `<greater than 0 through 100>` | `<greater than 0 through 100 or Unknown>` | `<greater than 0 through 100 or Unknown>` | `<greater than 0 through 100 or Unknown>` | `<established method or None>` |
+
+«Unlisted pairings have not yet been defined. They are not presumed impossible or incompatible.»
+
+- **Directional relation IDs:** `<stable compatibility references>`
+- **View Codex Version:** `<validated source version>`
+- **Campaign divergence boundary:** `<base remains unchanged; campaign differences stay external>`
+- **Individual-state boundary:** `<species values establish no attraction, consent, willingness, health, or personal fertility>`
+
 ## Procedural Generation
 
 - **Search tags:** `<habitat, ecology, body, senses, cognition, society, Magic, route, and theme tags>`
@@ -144,6 +159,7 @@ Repeat the relevant record block. A capability appears once under its narrowest 
 - [ ] Characteristic Skills are access routes rather than mandatory packages or inherited mastery.
 - [ ] Evolution graph supports contextual branches without becoming deterministic, exhaustive, or ranked.
 - [ ] Variants remain distinct from individual variation and campaign divergence.
+- [ ] Only established directional Reproductive Compatibility rows appear; unknown values remain unknown and no reverse row is inferred.
 - [ ] Procedural tags do not create mechanics, power ranks, or guaranteed selection.
 - [ ] Player-species use does not waive Reincarnation, embodiment, agency, or campaign-availability rules.
 - [ ] No campaign state, theory, Secret, personal capability, current population, or deployment credential entered the record.
@@ -153,6 +169,7 @@ Repeat the relevant record block. A capability appears once under its narrowest 
 
 - [GM Living Codex](../docs/gm-living-codex/GM_LIVING_CODEX.md)
 - [Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md)
+- [Reproductive Compatibility](../docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md)
 - [Species Development](../docs/progression/SPECIES_DEVELOPMENT.md)
 - [Monster Evolution](../docs/monster-evolution/README.md)
 - [Monster Skill Trees](../docs/skills/MONSTER_SKILL_TREES.md)

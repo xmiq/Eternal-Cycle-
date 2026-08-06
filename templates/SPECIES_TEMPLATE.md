@@ -113,6 +113,7 @@ Anatomy creates possible expression. It does not grant learned technique, safe u
 ### Conditional or Optional
 
 - **Metamorphosis:** `<source, stages, vulnerability, reversibility, and distinction from Evolution>`
+- **Established Reproductive Compatibility references:** `<directional Living Codex relation IDs or explicit campaign-local divergences; omit unestablished pairings>`
 - **Inheritance:** `<what may pass, through which route, with what variation and expression conditions>`
 - **Dormant stages or Refugia:** `<viability, activation, and ecological role>`
 - **Care structures:** `<parental, communal, institutional, symbiotic, or environmental support>`
@@ -270,6 +271,7 @@ Do not place any populated version of these fields in the repository template.
 ## Canonical Dependencies
 
 - [Species Development](../docs/progression/SPECIES_DEVELOPMENT.md)
+- [Living Codex Reproductive Compatibility](../docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md)
 - [Development System](../docs/progression/README.md)
 - [Skill Engine](../docs/skills/README.md)
 - [Monster Evolution](../docs/monster-evolution/README.md)

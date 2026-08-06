@@ -136,6 +136,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [GM Living Codex Design](gm-living-codex/GM_LIVING_CODEX.md) - purpose, GM ownership, automatic consultation, inclusion and exclusion, campaign divergence, stable identity, safeguards, and the approved twelve-step implementation plan.
 - [Living Codex Species Registry](gm-living-codex/SPECIES_REGISTRY.md) - stable species identity, complete reusable records, trait and Skill ownership, Evolution graphs, variants, procedural reuse, and player-species integration.
 - [Living Codex Persistence Model](gm-living-codex/PERSISTENCE_MODEL.md) - independent SQLite authority, normalized schema, revisions, migrations, validation, Google Drive deployment, backup, and full-save protocol.
+- [Reproductive Compatibility](gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) - sparse directional compatibility, nonzero probabilities, normalized assistance and result records, species and individual boundaries, and full-save operation.
 
 ## AI Game Master Operations
 

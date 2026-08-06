@@ -91,11 +91,13 @@ Reincarnation Skill Crossover translates retained learned capability into a curr
 
 Compatibility is not a single yes-or-no relationship between two species. Assess one proposed form and origin across several layers.
 
+The [Living Codex Reproductive Compatibility](../gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) scaffold may provide a sparse directional probability for reproductive initiation and, where separately established, offspring viability or fertility. Those values answer only that bounded origin question. They do not replace this whole-form Hybrid Compatibility Profile, determine trait expression or inheritance, establish an Integration Bridge, or prove Hybrid Stability.
+
 ### Origin Compatibility
 
 Can the contributing sources participate in the same birth, hatching, spawning, construction, awakening, fission, seeding, ritual, Evolution Transition, or other renewal process?
 
-Two adult forms may cooperate physically while their renewal systems cannot combine. Conversely, an artificial or magical origin may bridge sources that cannot reproduce together.
+Two adult forms may cooperate physically while no practical natural combination route has been established. Conversely, an artificial or magical origin may bridge sources whose natural relationship is extraordinarily improbable.
 
 ### Structural Compatibility
 
@@ -263,7 +265,7 @@ Source traits can interact in several ways:
 
 Hybridization never promises the best version of every source trait. It may inherit vulnerabilities, dependencies, or incompatibilities without their associated advantages.
 
-Hybrid Inheritance follows the actual origin process. An individual artificial or magical hybrid is not heritable unless its route can produce successor bodies. A stable inherited hybrid can vary among successors. No universal percentage determines trait transfer.
+Hybrid Inheritance follows the actual origin process. An individual artificial or magical hybrid is not heritable unless its route can produce successor bodies. A stable inherited hybrid can vary among successors. No universal percentage determines trait transfer. Reproductive Compatibility percentages govern initiation, viability, or fertility only in their recorded scope; they are not inheritance distributions.
 
 Skills, Profession Development, cultural knowledge, reputation, Soul Titles, memories, and relationships are not inherited Species Traits.
 
@@ -437,6 +439,7 @@ This document does not provide species pairings, reproduction formulas, trait pe
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md)
 - [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md)
+- [Living Codex Reproductive Compatibility](../gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md)
 - [Skill Fusion](../skills/SKILL_FUSION.md)
 - [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
 - [Reincarnation](../soul/REINCARNATION.md)
