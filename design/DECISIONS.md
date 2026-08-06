@@ -4705,3 +4705,11 @@ An AI Game Master, AI Execution Profile, Persistence Adapter, and Campaign Confi
 ## D-1176 — ChatGPT Uses Strict Save-Before-Delivery
 
 ChatGPT may deliver narration asserting durable consequences only after the corresponding Save Transaction, required validation, deployment, backup policy, and Read-Back Validation succeed. This is a replaceable AI Execution Profile constraint rather than fictional physics, a gameplay mechanic, or a universal human-GM requirement; failure preserves the last validated campaign authority and blocks dependent durable narration.
+
+## D-1177 — Persistence Adapters Never Adjudicate Gameplay
+
+Persistence Adapters implement storage-specific freshness, transaction, transfer, validation, read-back, backup, concurrency, and recovery behavior. They never decide gameplay outcomes, change Campaign Persistence meaning, promote information, or outrank the logical state they carry.
+
+## D-1178 — Adapter Chains Divide Responsibility Explicitly
+
+An Adapter Chain may divide logical storage, remote deployment, and backup duties among replaceable adapters. Campaign Configuration identifies the active chain, ordering, locators, and policies outside universal runtime documents; each adapter must prove its own boundary, and one adapter's success cannot substitute for another's required validation.

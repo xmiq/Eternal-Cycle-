@@ -31,6 +31,13 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 Runtime-specific profiles are replaceable operational extensions. They do not redefine gameplay mechanics, Campaign Persistence semantics, or shared human and AI GM responsibilities.
 
+## Persistence Adapters
+
+- [SQLite Persistence Adapter](chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - bounded transactions, foreign-key enforcement, integrity checks, expected-versus-actual validation, stale-write protection, and read-only reopen.
+- [Google Drive Persistence Adapter](chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - exact remote identity, fetch-latest, canonical replacement, remote read-back, backup propagation, and sharing protection.
+
+Adapters use the `<TECHNOLOGY>_PERSISTENCE_ADAPTER.md` naming convention. They may compose into an Adapter Chain, but each retains explicit responsibility and none adjudicates gameplay.
+
 ## Authority Boundary
 
 These documents sequence existing owners. They do not replace them.

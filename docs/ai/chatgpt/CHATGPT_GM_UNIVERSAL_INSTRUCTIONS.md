@@ -268,6 +268,8 @@ A failed delivery after successful activation does not erase the activated Save 
 - [AI GM Workflow](../AI_GM_WORKFLOW.md)
 - [AI Play Protocol](../AI_PLAY_PROTOCOL.md)
 - [AI Save Protocol](../AI_SAVE_PROTOCOL.md)
+- [SQLite Persistence Adapter](adapters/SQLITE_PERSISTENCE_ADAPTER.md)
+- [Google Drive Persistence Adapter](adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
 - [Game Master Framework](../../gm/GAME_MASTER_FRAMEWORK.md)
 - [Campaign Persistence Engine](../../persistence/README.md)
 - [Campaign Persistence Integration](../../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
