@@ -4697,3 +4697,7 @@ Completing Phase 11 establishes **Feature Complete — Gameplay Validation Ongoi
 ## D-1174 — Future Revisions Require Evidence Before Canon
 
 The Future Revisions register records issues, affected systems, gameplay impact, suggested future phase, priority, and evidence needs. An entry is non-canonical design tracking and changes no rule until separately authorized, implemented, reviewed, and validated.
+
+## D-1175 — AI Runtime Layers Preserve Canonical Ownership
+
+An AI Game Master, AI Execution Profile, Persistence Adapter, and Campaign Configuration operate through Repository Canon and Canonical Campaign State without owning or redefining either. Runtime-specific layers are replaceable operational implementations; changing one does not alter fictional mechanics, Campaign Persistence semantics, or established campaign truth unless a separately authorized repository or campaign migration does so.

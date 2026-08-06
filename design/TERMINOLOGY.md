@@ -4235,3 +4235,55 @@ The external, potentially audience-redacted record of one Validation Run's basel
 ## Warning Disposition
 
 An authorized, bounded, owner-assigned decision to carry a non-blocking validation Warning until a stated Review Point without treating it as repaired or permitting authority, secrecy, identity, or mechanical failure.
+
+## AI Game Master
+
+A Game Master whose shared canonical responsibilities are performed through an AI runtime. An AI Game Master receives no greater authority than a human GM and must disclose material limits in source access, tool capability, persistence, and validation.
+
+## AI Runtime Model
+
+The implementation-neutral architecture separating Eternal Cycle rules, Campaign Persistence semantics, AI operation, execution profiles, Persistence Adapters, Campaign Configuration, and populated Campaign State.
+
+## AI Execution Profile
+
+A replaceable operational document defining how one identified AI runtime boots, retrieves, adjudicates, presents, persists, validates, corrects, and handles failure without defining gameplay mechanics or campaign facts.
+
+## Persistence Adapter
+
+An implementation-specific component that fetches, writes, validates, deploys, backs up, or recovers campaign storage while preserving the Campaign Persistence Engine's logical authority and never adjudicating gameplay.
+
+## Adapter Chain
+
+An ordered composition of Persistence Adapters with explicit responsibility for each storage, deployment, validation, backup, and recovery boundary.
+
+## Campaign Configuration
+
+The campaign-external deployment record selecting rules and campaign versions, active profiles and adapters, authorized locators, permissions, policies, and runtime metadata. It locates or selects authorities but does not own the campaign facts it references.
+
+## Canonical Campaign State
+
+The active validated Campaign State Graph and its authoritative supporting records for one campaign. This operational label creates no new Truth Layer, Persistence Level, or record owner.
+
+## Local Working Copy
+
+A temporary local representation of campaign storage used for bounded reading, transaction, validation, or transfer. It has no canonical authority until the configured write, activation, and Read-Back Validation procedures succeed.
+
+## Save-Before-Delivery
+
+An AI Execution Profile constraint requiring durable consequence narration to remain undelivered until the corresponding Save Transaction, required validation, deployment, and read-back have succeeded. It is not fictional physics or a universal human-GM requirement.
+
+## Read-Back Validation
+
+A post-write check that retrieves the authoritative destination again and compares its identity, bytes, hashes, semantics, expected changes, or other configured evidence with the validated candidate rather than trusting the write request alone.
+
+## Operational Failure
+
+A material failure or unverifiable result in retrieval, tooling, transaction, deployment, backup, validation, or recovery. It changes runtime readiness and permitted claims but does not itself create an in-world event.
+
+## Gameplay Context
+
+The default AI operating context for active play, in which the runtime presents authorized fiction and relevant consequences while keeping schemas, credentials, migrations, connector details, and repository maintenance backstage.
+
+## Development Context
+
+An explicitly requested AI operating context for runtime design, configuration, audit, repair, migration, canonical reconciliation, or repository maintenance. It is unrelated to character Development and does not relax campaign secrecy, authority, or evidence requirements.

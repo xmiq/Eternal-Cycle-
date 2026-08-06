@@ -4,17 +4,27 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: No active development task; gather external gameplay evidence**
+**Current task: Integrate AI Runtime Profile — document AI capabilities and limitations**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phases 0 through 11 are complete and reviewed. No development phase or implementation task is active. Gameplay findings may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not reopen a completed phase, implement a candidate, or infer a new roadmap without explicit project-owner authorization.
+Phases 0 through 11 are complete and reviewed. No numbered development phase is active. The project owner has authorized a bounded gameplay-validation maintenance task to integrate the AI Runtime Profile as operational documentation; it does not reopen a completed phase or authorize gameplay-mechanic changes. Gameplay findings outside this maintenance scope may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not implement them or infer a new roadmap without explicit project-owner authorization.
 
 This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
 The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
 The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
+
+## Gameplay Validation Maintenance
+
+### AI Runtime Profile Integration
+
+- **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
+- **Completed:** Add the implementation-neutral AI Runtime Model.
+- **Current:** Document AI capabilities and limitations.
+- **Remaining:** Integrate the ChatGPT execution profile; integrate the SQLite and Google Drive adapters under canonical names; reconcile navigation, terminology, decisions, and integration notes; validate and archive.
+- **Boundary:** Operational AI documentation only. No campaign data, fictional mechanic, numbered phase, release declaration, or completed-phase redesign is authorized.
 
 ## Status Legend
 

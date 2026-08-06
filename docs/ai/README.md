@@ -1,6 +1,6 @@
 # AI Game Master Operating Procedures
 
-These procedures define how an AI Game Master operates the completed Eternal Cycle rules, GM framework, and Campaign Persistence Engine. They are implementation-neutral operating procedures, not prompts, software architecture, a mandatory narrative voice, or an independent source of mechanics.
+These documents define how an AI Game Master operates the completed Eternal Cycle rules, GM framework, and Campaign Persistence Engine. The family contains implementation-neutral architecture and procedures plus explicitly classified execution profiles and persistence adapters. None is an independent source of mechanics or campaign truth.
 
 A human GM may use the same procedures. Automation changes retrieval and execution methods; it does not change authority, responsibility, player agency, or the standard of evidence.
 
@@ -17,11 +17,12 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Reading Order
 
-1. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
-2. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
-3. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
-4. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
-5. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
+1. [AI Runtime Model](AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, boot and action flows, adapter composition, and extension rules.
+2. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
+3. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
+4. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
+5. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
+6. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
 ## Authority Boundary
 

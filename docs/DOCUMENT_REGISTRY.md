@@ -294,6 +294,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | Document | Owner | Interface refinement |
 | --- | --- | --- |
 | [AI Operations Index](ai/README.md) | AI procedure reading order, scope, parity, and authority boundary | Routes operators through the complete cycle. |
+| [AI Runtime Model](ai/AI_RUNTIME_MODEL.md) | Runtime layers, authority boundaries, boot and action flows, adapter composition, and extension rules | Separates rules, persistence semantics, execution profiles, adapters, configuration, and campaign state. |
 | [AI GM Workflow](ai/AI_GM_WORKFLOW.md) | End-to-end load, adjudicate, narrate, persist, recover, and handoff sequence | Consumed as the main AI operating loop. |
 | [AI Session Start](ai/AI_SESSION_START.md) | Version, Save Index, visibility, Read Set, freshness, readiness, and resume checks | Required before AI-facilitated play. |
 | [AI Play Protocol](ai/AI_PLAY_PROTOCOL.md) | Intent classification, owner retrieval, information separation, resolution, narration, and closure | Consumed for each Gameplay Interaction. |
