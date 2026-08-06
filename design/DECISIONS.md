@@ -4713,3 +4713,23 @@ Persistence Adapters implement storage-specific freshness, transaction, transfer
 ## D-1178 — Adapter Chains Divide Responsibility Explicitly
 
 An Adapter Chain may divide logical storage, remote deployment, and backup duties among replaceable adapters. Campaign Configuration identifies the active chain, ordering, locators, and policies outside universal runtime documents; each adapter must prove its own boundary, and one adapter's success cannot substitute for another's required validation.
+
+## D-1179 — The GM Living Codex Is Cross-Campaign Design Authority
+
+The GM Living Codex stores reusable GM-approved world-design assets between Repository Canon and campaign adoption. It is distinct from campaign saves, player knowledge, campaign history, Research, rumours, theories, and current world state, and it never outranks the specialist rules it applies.
+
+## D-1180 — The GM Determines Editable Living Codex Canon
+
+The GM deliberately accepts, expands, corrects, renames, splits, merges, deprecates, or replaces Codex entries through the Codex procedure. Generated drafts, player theories, observations, repeated campaign use, and narrative prominence do not become Living Codex Canon automatically; stable identities and revision history survive editorial change.
+
+## D-1181 — Campaign Divergence Is Explicit and Non-Destructive
+
+A campaign may adopt, disable, reinterpret, vary, or diverge from a Living Codex entry through Campaign Configuration and Campaign Canon. The divergence preserves its base reference, does not silently rewrite the Codex, and may enter the Codex later only through separate reusable-design review.
+
+## D-1182 — Codex Inclusion Follows Reusability Rather Than Importance
+
+The Codex primarily includes reusable ecological or societal designs. Unique bosses, singular villains, one-off horrors, plot-specific entities, temporary changes, unique divine beings, and memorable individuals remain excluded unless a distinct reusable species design exists beyond the unique subject.
+
+## D-1183 — Player Species Use the Shared Species Registry
+
+Humanoid and non-humanoid player species use the same Living Codex Species Registry as other reusable species. Species-level design remains separate from personal Skills, mastery, Mutations, injuries, Soul systems, relationships, memories, unique Evolution, and campaign history.

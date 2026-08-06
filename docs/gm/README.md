@@ -26,6 +26,10 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 18. [AI Game Master Operating Procedures](../ai/README.md) - implementation-neutral workflow, session-start, play, save, and checklist procedures for automated operation of the same GM responsibilities.
 19. [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) - the implementation-neutral relationship among AI execution, Campaign Persistence, adapters, campaign state, and repository rules; runtime profiles remain replaceable extensions.
 
+## Cross-Campaign Reusable Design
+
+Use the [GM Living Codex](../gm-living-codex/README.md) before creating reusable species, variants, or Evolution structures. The Codex is a separate GM-approved design authority, not campaign state or player knowledge, and it remains subordinate to the mechanics in this repository.
+
 ## Authority and Boundary
 
 The framework applies Repository Canon; it does not create an independent source of mechanics. Provisional rulings remain subordinate to Canonical rules and Foundations and are stored in an external Campaign Record.

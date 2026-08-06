@@ -4287,3 +4287,27 @@ The default AI operating context for active play, in which the runtime presents 
 ## Development Context
 
 An explicitly requested AI operating context for runtime design, configuration, audit, repair, migration, canonical reconciliation, or repository maintenance. It is unrelated to character Development and does not relax campaign secrecy, authority, or evidence requirements.
+
+## GM Living Codex
+
+The persistent cross-campaign library of reusable GM-approved species and other world-design assets, subordinate to Repository Canon and distinct from every campaign's configuration, canon, state, knowledge, and history.
+
+## Living Codex Canon
+
+The GM's current accepted reusable design inside the GM Living Codex, with stable identity and revision history. It defines a reusable baseline rather than truth that every campaign must adopt.
+
+## Species Registry
+
+The primary GM Living Codex module that identifies reusable species and sufficiently distinct forms, their characteristic structures, capability routes, Evolution relations, variants, ecology, design intent, and revision state without storing live populations or individuals.
+
+## Living Codex Entry
+
+One stable, revisioned reusable-design record governed by Living Codex Canon. An entry is neither a campaign fact nor automatic player knowledge.
+
+## Codex Stable ID
+
+An immutable Living Codex identifier that survives renaming, reclassification, correction, deprecation, merging, splitting, and replacement through explicit typed relations.
+
+## Campaign Divergence
+
+A campaign-scoped, explicitly recorded departure from a referenced Living Codex entry. It changes Campaign Canon within its stated scope without silently changing the reusable base design.

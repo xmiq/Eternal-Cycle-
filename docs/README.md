@@ -130,6 +130,11 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) - Transition Bases, Boundary Findings, scoped and disputed periodization, World Reset checkpoints, targeted revalidation, and return to play.
 - [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
 
+## GM Living Codex
+
+- [GM Living Codex Index](gm-living-codex/README.md) - authority boundary, reading order, operational scope, and cross-campaign reusable-design navigation.
+- [GM Living Codex Design](gm-living-codex/GM_LIVING_CODEX.md) - purpose, GM ownership, automatic consultation, inclusion and exclusion, campaign divergence, stable identity, safeguards, and the approved twelve-step implementation plan.
+
 ## AI Game Master Operations
 
 - [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, persistence adapters, scope, and authority boundaries.

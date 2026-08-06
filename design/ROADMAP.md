@@ -4,11 +4,11 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: No active development task; gather external gameplay evidence**
+**Current task: Gameplay-validation maintenance — Define Living Codex Species Registry**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phases 0 through 11 are complete and reviewed. No numbered development phase or maintenance task is active. The AI Runtime Profile maintenance integration is complete and did not reopen a completed phase or authorize gameplay-mechanic changes. Gameplay findings may be recorded as evidence candidates in `design/FUTURE_REVISIONS.md`, but Codex must not implement them or infer a new roadmap without explicit project-owner authorization.
+Phases 0 through 11 remain complete and reviewed. The project owner has authorized a bounded GM Living Codex maintenance sequence based on gameplay validation. This work creates cross-campaign reusable-design architecture without reopening a numbered phase, changing completed mechanics, adding campaign data, or making a release declaration.
 
 This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
@@ -26,6 +26,15 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 - **Current:** None.
 - **Remaining:** None.
 - **Boundary:** Operational AI documentation only. No campaign data, fictional mechanic, numbered phase, release declaration, or completed-phase redesign is authorized.
+
+### GM Living Codex Integration
+
+- **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
+- **Status:** In progress.
+- **Completed:** Defined the Living Codex philosophy, authority hierarchy, GM ownership, consultation rules, inclusion and exclusion boundary, campaign divergence model, stable-identity principle, safeguards, and authoritative twelve-step implementation plan.
+- **Current:** Define Living Codex Species Registry.
+- **Remaining:** Define the Species Registry; define the independent SQLite and Google Drive persistence model; define Step 12 Reproductive Compatibility; complete cross-system integration, navigation, and validation.
+- **Boundary:** Cross-campaign reusable GM design only. No campaign state, populated Codex database, numbered development phase, completed-mechanic redesign, or release declaration is authorized.
 
 ## Status Legend
 

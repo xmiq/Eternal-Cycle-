@@ -257,6 +257,19 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) | Evidence-backed Age classification and transition return to play | Consumes Ages, chronology, and World Reset checkpoints. |
 | [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) | Campaign-local provisional ruling status, testing, recording, and review | Extended by external playtest observations; cannot alter Repository Canon automatically. |
 
+## GM Living Codex
+
+**Dependencies:** every referenced specialist rules owner, accepted design governance, GM authority, and the repository-versus-campaign boundary.
+
+**Extensions:** a separately deployed Living Codex database, rendered views, campaign configuration references, and campaign-local divergences may instantiate these reusable designs without entering the repository.
+
+**Consumers:** human and AI GMs, monster and ecosystem generators, player-species creation, Evolution adjudication, Campaign Configuration, and validation tools.
+
+| Document | Owner | Interface refinement |
+| --- | --- | --- |
+| [GM Living Codex Index](gm-living-codex/README.md) | Living Codex reading order, authority boundary, operational scope, and family navigation | Routes reusable-design claims without creating campaign facts. |
+| [GM Living Codex Design](gm-living-codex/GM_LIVING_CODEX.md) | Cross-campaign reusable-design authority, GM ownership, consultation, inclusion, divergence, stable identity, safeguards, and implementation order | Constrains all Codex modules and deployments while remaining subordinate to specialist mechanics. |
+
 ## Campaign Persistence Engine
 
 **Dependencies:** Repository Canon, World Engine outcomes, GM procedures, every specialist record owner, and accepted persistence decisions.
