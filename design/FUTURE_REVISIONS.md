@@ -15,6 +15,8 @@ This register records evidence-driven issues that may require design work after 
 
 Use this file for a suspected usability, balance, coherence, or maintainability issue that needs gameplay evidence before design work is authorized.
 
+Gameplay does not write to this register directly. A gameplay GM may surface an observation or preserve campaign-local evidence, but only the project owner may mediate that material into a Future Revision entry, change its priority or status, merge or remove it, or authorize promotion into roadmap work. Development agents must not infer authorization from gameplay text alone.
+
 Use [Unresolved Questions](UNRESOLVED_QUESTIONS.md) when an unanswered question blocks or materially shapes current roadmap work. Use [Developer Notes](DEVELOPER_NOTES.md) for exploratory alternatives, observations, and workshop material that have not qualified for this register. Use the [Roadmap](ROADMAP.md) only after the project owner authorizes implementation.
 
 An entry must not:
@@ -187,9 +189,33 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Suggested future phase:** Lineage, inheritance, and descendant-expression design.
 - **Priority:** High
 
+### FR-014 - Autonomous Registry
+
+- **Status:** Candidate
+- **Issue:** Independently operating campaign entities and systems may be scattered across infrastructure, inventory, relationships, world state, and ad hoc records, making identity, assignment, memory continuity, network state, maintenance, and autonomous action difficult to preserve consistently.
+- **Affected systems:** Campaign Persistence Engine, GM Toolkit, World Engine, AI Save Protocol, SQLite persistence, Google Drive persistence, relationships, infrastructure, summons, familiars, undead, constructs, remote bodies, and autonomous infrastructure.
+- **Gameplay impact:** Autonomous units may be forgotten, duplicated, treated as models rather than persistent identities, lose assignments or network relationships, or be rebuilt without a clear distinction between restoration and replacement.
+- **Evidence needed:** Owner-mediated gameplay evidence involving independently acting units or systems whose identities, groups, models, memory continuity, condition, assignments, networks, maintenance needs, upgrade lineage, or personhood state cannot be represented cleanly in the current structured save.
+- **Suggested future phase:** Campaign Persistence Engine extension — Autonomous Registry.
+- **Priority:** High
+- **Status reason:** Owner identified the need through gameplay but has not yet promoted it into implementation work.
+
+### FR-015 - Entity Knowledge, Controller, and Perspective Separation
+
+- **Status:** Candidate
+- **Issue:** The current engine separates truth layers but may need a more explicit reusable model for entity-specific knowledge, controller assignment, and active perspectives so objective state is not conflated with who controls, observes, remembers, or believes it.
+- **Affected systems:** Simulation architecture, Campaign Persistence Engine, GM Toolkit, AI Runtime, relationships, uncertainty handling, player interface, remote bodies, possession, delegated control, and possible future multi-perspective play.
+- **Gameplay impact:** Knowledge may leak between actors, controller changes may accidentally reset identity, companions may be treated as extensions of the player, and future remote-body or delegated-control mechanics may require ad hoc schema changes.
+- **Evidence needed:** Owner-mediated gameplay cases involving contradictory beliefs, controller changes, remote or delegated bodies, independent companions, hidden information, or multiple valid perspectives on the same objective state.
+- **Suggested future phase:** Knowledge and perspective-model review after the core Simulation Architecture step.
+- **Priority:** High
+- **Status reason:** The architectural need is plausible and partially overlaps the approved Simulation Architecture step, but a dedicated Knowledge System is not yet authorized.
+
 ## Roadmapped
 
-No Future Revision is currently authorized as roadmap work.
+FR-013 is approved in principle as **GM Living Codex Step 13 — Lineage, Hybridization, and Evolutionary Inheritance** in the long-term gameplay-validation maintenance sequence. Implementation remains pending until the current Living Codex integration checkpoint is complete.
+
+The Autonomous Registry and dedicated Knowledge System remain Future Revision candidates and are not authorized for implementation.
 
 ## Closed
 

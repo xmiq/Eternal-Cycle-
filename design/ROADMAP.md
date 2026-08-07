@@ -8,7 +8,9 @@
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phases 0 through 11 remain complete and reviewed. The project owner has authorized a bounded GM Living Codex maintenance sequence based on gameplay validation. This work creates cross-campaign reusable-design architecture without reopening a numbered phase, changing completed mechanics, adding campaign data, or making a release declaration.
+Phases 0 through 11 remain complete and reviewed. The project owner has authorized a bounded gameplay-validation maintenance sequence. This work may add or refine reusable architecture when explicitly mediated and approved by the project owner, without reopening a numbered phase, silently changing completed mechanics, adding campaign data, or making a release declaration.
+
+Gameplay itself does not write roadmap tasks or Future Revisions. Gameplay may expose needs, contradictions, or opportunities, but the project owner remains the mediator who decides what becomes repository work, what enters Future Revisions, and what remains campaign-specific.
 
 This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
@@ -33,8 +35,24 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 - **Status:** In progress.
 - **Completed:** Defined the Living Codex philosophy and authority; defined stable identity and indexing, complete Species Registry records, trait and Skill ownership, Evolution graphs, variants, procedural-generation metadata, player-species integration, operating procedure, and a blank Codex species template; defined the independent normalized SQLite authority, Codex revisions and migrations, validation, Google Drive deployment, backups, and full-save protocol; defined Step 12 Reproductive Compatibility as a sparse directional nonzero relationship with normalized assistance, conditions, outcomes, revision evidence, species and individual boundaries, and future-lineage separation.
 - **Current:** Complete cross-system integration, navigation, and validation.
-- **Remaining:** Complete cross-system integration, navigation, and validation.
+- **Remaining:** Complete integration, then implement the owner-approved lineage/inheritance continuation below.
 - **Boundary:** Cross-campaign reusable GM design only. No campaign state, populated Codex database, numbered development phase, completed-mechanic redesign, or release declaration is authorized.
+
+### Gameplay-Validation Maintenance Sequence
+
+This sequence is the owner-approved execution order after the current Codex checkpoint. It is maintenance work under long-term gameplay validation, not a new numbered phase. New owner-approved work is inserted immediately before **Future Revisions**, which always remains the final rolling step.
+
+1. [x] **AI Runtime Profile integration** — Runtime model, capability limits, ChatGPT execution profile, SQLite adapter, Google Drive adapter, navigation, and validation.
+2. [x] **GM Living Codex Steps 1–11** — Philosophy and authority; stable identity and indexing; species core records; traits; species and Evolution Skills; Evolution graphs; variants and divergences; procedural-generation integration; player-species integration; SQLite persistence; Google Drive deployment and full-save protocol.
+3. [x] **GM Living Codex Step 12 — Reproductive Compatibility** — Sparse directional many-to-many compatibility; undefined-by-default pairings; nonzero established probabilities; Magic-assisted possibility; separate natural compatibility, assisted compatibility, offspring viability, and offspring fertility; evolution/variant separation; normalized persistence.
+4. [~] **Complete Living Codex cross-system integration, navigation, and validation** — Finish repository links, indexes, ownership maps, terminology, persistence cross-references, and validation for the implemented Living Codex foundation. Do not expand the system while closing this step.
+5. [ ] **GM Living Codex Step 13 — Lineage, Hybridization, and Evolutionary Inheritance** — Define Lineage Templates, mixed lineage, pure-line throwbacks, Mana reconciliation and equalization, Species Expression, Evolution Expression, born-evolved offspring, Level 0 as instinct within the existing Skill system, ancestral hereditary echoes distinct from Soul Echoes, inheritance distributions, advanced-evolution attenuation, and artificial stabilization of advanced inherited forms. Compatibility determines whether formation succeeds; Step 13 determines what developmental architecture results. Campaign-specific examples and personal facts remain outside reusable canon.
+6. [ ] **Simulation Architecture and Perspective Model** — Promote the three-layer architecture into reusable repository architecture: Layer 1 Immutable Rules, Layer 2 GM Simulation Engine, and Layer 3 Player RPG Interface. Separate entities from controllers and perspectives; preserve objective state independently from viewpoint; define controller reassignment without identity reset; and align the model with the World Engine, Campaign Persistence Engine, GM Toolkit, and AI Runtime. Campaign-specific examples from gameplay are excluded.
+7. [∞] **Future Revisions** — Permanent owner-mediated final step. Gameplay may surface observations but cannot add, promote, reprioritize, or implement Future Revision entries. Only the project owner may mediate gameplay findings into the register. When the owner approves an entry for implementation, insert a new numbered maintenance step immediately before Future Revisions and push this final step later. Future Revisions is intentionally never completed.
+
+### Approved Near-Term Boundary
+
+The next implementation session should finish Step 4 before beginning Step 5. Step 5 should be completed and validated before Step 6 unless a direct dependency requires a small architecture correction. Autonomous Registry and other unrelated systems remain in Future Revisions until explicitly promoted by the project owner.
 
 ## Status Legend
 
@@ -42,6 +60,7 @@ The owner-authorized alpha-playtest framework exception is complete. It added re
 - `[~]` — Intentionally started and substantially implemented
 - `[x]` — Complete, reviewed, linked, and internally consistent
 - `[!]` — Blocked by an unresolved design decision
+- `[∞]` — Permanent rolling governance/backlog step; intentionally never complete
 
 A passing mention, dependency, constraint, placeholder, or reference in another file does not make a later roadmap task `[~]`. When a task is `[!]`, its blocker must be recorded in [Unresolved Questions](UNRESOLVED_QUESTIONS.md).
 
