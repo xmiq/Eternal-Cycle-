@@ -495,6 +495,16 @@ Assess separately:
 
 An evolved form may begin powerful in potential but clumsy, inaccessible, dangerous, or narrow in current use.
 
+## Exceptional Capability and the Equipment Baseline
+
+A developed Soul Weapon may substantially outperform ordinary, masterwork, enchanted, magical, technological, or other conventional weapons. Canon does not force parity merely because the difference is large.
+
+Soul Weapon status alone does not establish present superiority. A newly awakened, poorly coordinated, damaged, unsuitable, or lightly developed partner may be less effective than an exceptional conventional weapon. Actual capability follows established Weapon Evolution, bond expression, embodiment, Skills, costs, and context rather than category.
+
+An ancient and deeply developed Soul Weapon may vastly exceed ordinary equipment without redefining society's equipment baseline. Soul Weapons are exceptionally rare, individually Soul-bound persons, normally non-transferable as useful equipment, and cannot ordinarily be manufactured or issued across an army. Ordinary beings still depend on forged weapons, armor, tools, enchantments, artifacts, logistics, maintenance, and institutions.
+
+Individual binding also prevents one extraordinary partner from solving faction-wide scarcity. Any exception to transfer or use must follow its own established Soul Weapon rules and cannot be inferred from power alone. No universal comparison formula is required.
+
 ## Persistence Across Reincarnation
 
 A completed Soul Weapon Evolution persists with the Weapon Soul and established bond as part of Soul Weapon continuity. It does not reset to a base weapon merely because the Bonded Soul receives a new body.

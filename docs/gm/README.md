@@ -12,7 +12,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 4. [Game Master Framework](GAME_MASTER_FRAMEWORK.md) - authority, session procedure, continuity, world simulation, information boundaries, records, and AI GM guidance.
 5. [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) - immediate-outcome closure, causal layers, proportionality, handoffs, persistence, and external recording.
 6. [Uncertainty Handling](UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
-7. [Reincarnation Generation](REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, mode-specific presentation, selection handoff, and revalidation.
+7. [Reincarnation Generation](REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, contextual adjudication, eligibility, personhood, mode-specific presentation, selection handoff, and revalidation.
 8. [Encounter Generator](ENCOUNTER_GENERATOR.md) - causal source collection, eligibility, decision framing, non-scaling, agency routes, adjudication handoffs, and external records.
 9. [Monster Generator](MONSTER_GENERATOR.md) - world-valid species sketches, individual histories, sourced variation, embodiment, capability, information, placement, and external profiles.
 10. [NPC Generator](NPC_GENERATOR.md) - person-basis validation, proportional actor detail, bounded knowledge, independent decisions, relationships, continuity, and external profiles.

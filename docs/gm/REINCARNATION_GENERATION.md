@@ -440,6 +440,31 @@ Pass the selected candidate to step 7 of Reincarnation with:
 
 Reincarnation then owns embodiment and awakening. Development, Skill, Monster Evolution, Human, Magic, and Soul Weapon owners set current access and expression.
 
+## Contextual Candidate Adjudication
+
+The GM generates and selects among valid possibilities through bounded judgement rather than a mandatory weight equation. Relevant inputs may include prior lives and species, Final Death, Soul condition, elapsed Interlife, current world and Age, embodiment opportunities, cosmology, consequences, themes, and established player wishes. Inputs inform the search; they neither create eligibility nor guarantee a candidate.
+
+Use this procedure:
+
+1. determine current Soul and Reincarnation state;
+2. establish elapsed Interlife and relevant world changes;
+3. identify valid Embodiment Opportunities and domain reachability;
+4. consider established consequences and player wishes;
+5. consider known or contacted worlds only where a valid route makes them relevant;
+6. generate candidates through GM judgement within the active Reincarnation Mode;
+7. verify every candidate against Canon, compatibility, world state, exceptional unlocks, and prerequisites;
+8. present and revalidate candidates through the ordinary procedure.
+
+The GM cannot use discretion as arbitrary reward, punishment, or contradiction of Canon. No reusable formula maps a chosen death circumstance to a guaranteed species or destination.
+
+### Player Preference
+
+A request for a particular species is meaningful input. If that species has no valid body, route, compatibility, or world presence, the request cannot create one. The GM may present a valid related possibility, wait where the mode permits it, or adjudicate another valid candidate.
+
+### Final Death Context
+
+Dying while defending a volcanic settlement may leave consequences relevant to an ember-associated opportunity, local relationships, or Soul Resonance. It does not invoke a universal rule that weights fire species or guarantees an ember incarnation.
+
 ## Reincarnation Modes in Detail
 
 ### Emergent Mode

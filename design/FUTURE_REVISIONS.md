@@ -56,58 +56,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Open Register
 
-### FR-002 - Reincarnation Candidate Selection
-
-- **Status:** Roadmapped
-- **Issue:** Repeated species choices and the circumstances of Final Death may need bounded influence on candidate formation, but any influence could become a deterministic route or farmable bonus.
-- **Affected systems:** Reincarnation, candidate generation, Final Death, Soul identity, and GM procedures.
-- **Gameplay impact:** An unclear relationship may weaken continuity between lives; an overstrong relationship may reward engineered death or collapse meaningful choice.
-- **Evidence needed:** Candidate-generation outcomes across repeated species families and varied death circumstances, including player expectations, attempted exploitation, and world-basis constraints.
-- **Approved direction:** Candidate selection remains primarily GM adjudication within existing Reincarnation constraints. Any valid Interlife duration and any valid location, world, Age, or circumstance remain possible. Previous incarnations and species, Final Death, Soul state, elapsed Interlife time, world state, embodiment routes, cosmology, Age, consequences, and campaign themes may inform judgement but never form a mandatory deterministic weighting formula or guarantee. Every candidate still satisfies existing validity, embodiment, world-state, Soul-compatibility, and exceptional-unlock rules. Selection cannot become arbitrary reward or punishment or a farmable engineered-death route.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** Medium
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 rule and GM-procedure clarification; this planning update does not implement candidate selection.
-- **Authorized roadmap link:** [FR-002 — Reincarnation Candidate Selection](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
-### FR-003 - Soul Depth Information Visibility
-
-- **Status:** Roadmapped
-- **Issue:** Depth Horizons may be too opaque to support informed play or too explicit to preserve discovery and in-world interpretation.
-- **Affected systems:** Soul Depth, Soul Resonance, information views, uncertainty handling, and campaign presentation.
-- **Gameplay impact:** The wrong disclosure pattern could produce arbitrary-feeling access changes or turn qualitative Soul growth into a visible progression ladder.
-- **Evidence needed:** Playtests using direct disclosure, in-world signs, and tone-dependent disclosure, measuring comprehension, mystery, planning, and metagaming pressure.
-- **Approved direction:** Use hybrid visibility. Legitimately established Soul properties, persistent capabilities, Echoes, Resonance structures, Soul Depth phenomena, and discovered thresholds or conditions may be explicit. Unknown deeper structures remain hidden or appear through existing sensations, Resonance, Reincarnation changes, Soul Space behavior, Research, abilities, rituals, artifacts, or qualified observers. Exact information requires a valid revealing mechanic; Soul Depth and its Horizons remain qualitative rather than a universal progression meter.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** Medium
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the visibility model.
-- **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
-### FR-008 - Soul Weapon Rarity and Equipment Relevance
-
-- **Status:** Roadmapped
-- **Issue:** Soul Weapon partnership may unintentionally make ordinary tools, replacement equipment, crafting, logistics, and non-partner combat paths feel secondary.
-- **Affected systems:** Soul Weapons, equipment, Professions, Skills, embodiment, Magic, and resource logistics.
-- **Gameplay impact:** A major optional relationship could become functionally mandatory or narrow equipment choices over long play.
-- **Evidence needed:** Campaign comparisons with no Soul Weapon, an inaccessible or unsuitable Soul Weapon, unconventional partners, and ordinary equipment specialists.
-- **Approved direction:** Soul Weapons may become substantially superior to ordinary weapons. Their exceptional rarity, Soul binding, individual ownership, limited transferability, and personal development prevent them from replacing the normal equipment economy or military baseline. Present capability depends on established growth: a new or poorly developed Soul Weapon does not automatically outperform every mundane, crafted, magical, enchanted, technological, or otherwise exceptional ordinary weapon. Preserve existing constraints and do not impose artificial parity or a universal balance formula.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** Medium
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 clarification; this planning update does not change Soul Weapon or equipment mechanics.
-- **Authorized roadmap link:** [FR-008 — Soul Weapon Rarity and Equipment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
-### FR-009 - World Contact, Travel, and Reincarnation Discretion
-
-- **Status:** Roadmapped
-- **Issue:** Separate World-Gate Channels and cross-domain candidate reach may be difficult to adjudicate without either excessive bookkeeping or treating every contacted destination as selectable.
-- **Affected systems:** World Gates, world-contact events, Reincarnation, Soul Avatars, information views, and GM procedures.
-- **Gameplay impact:** Contact may become mechanically blurry, administratively heavy, or an unrestricted travel and reincarnation menu.
-- **Evidence needed:** Contact events with asymmetric channels, closures, stranded actors, incompatible routes, and candidate searches that include and exclude contacted domains for established reasons.
-- **Approved direction:** World knowledge, world contact or channel, a valid travel route, and current Reincarnation possibility are distinct. None automatically grants the others or creates an unrestricted destination menu, and prior contact need not remain permanently reachable outside existing Gate, channel, cosmological, temporal, Age, ability, infrastructure, and world-state requirements. Player Reincarnation wishes are meaningful input, not commands. Under FR-002, the GM considers those wishes alongside Soul state, world state, elapsed Interlife time, cosmology, embodiment routes, and existing rules, and retains final destination adjudication. Player action may legitimately change future possibilities through established mechanics without guaranteeing selection.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** Medium
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 clarification; this planning update does not change World-Gate, travel, or Reincarnation mechanics.
-- **Authorized roadmap link:** [FR-009 — World Contact, Travel, and Reincarnation Discretion](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-010 - Long-Horizon Simulation Summaries
 
 - **Status:** Roadmapped
@@ -167,11 +115,67 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-002, FR-003, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001, FR-004, FR-005, FR-006, and FR-007 are closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001 through FR-009, FR-012, and FR-014 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-002 - Reincarnation Candidate Selection
+
+- **Status:** Closed
+- **Issue:** Repeated species choices and Final Death circumstances needed bounded influence without becoming deterministic or farmable.
+- **Affected systems:** Reincarnation, candidate generation, Final Death, Soul identity, and GM procedures.
+- **Gameplay impact:** Unclear influence weakened continuity; excessive influence could reward engineered death or collapse meaningful choice.
+- **Evidence needed:** Candidate outcomes across repeated species families, varied deaths, player wishes, exploitation attempts, and world constraints.
+- **Approved direction:** Use contextual GM adjudication within existing eligibility, embodiment, world-state, Soul-compatibility, and exceptional-unlock constraints; contextual inputs and player wishes inform but never command or guarantee selection.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** Medium
+- **Status reason:** Implemented and validated through canonical Reincarnation and GM candidate-adjudication rules, anti-farming safeguards, terminology, and structural validation.
+- **Authorized roadmap link:** [FR-002 — Reincarnation Candidate Selection](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Reincarnation](../docs/soul/REINCARNATION.md), [Reincarnation Generation](../docs/gm/REINCARNATION_GENERATION.md), and [FR-002/FR-003/FR-008/FR-009 Audit](audits/FR_002_FR_003_FR_008_FR_009_CLARIFICATION_AUDIT.md)
+
+### FR-003 - Soul Depth Information Visibility
+
+- **Status:** Closed
+- **Issue:** Depth Horizons needed enough visibility for informed play without becoming an omniscient progression ladder.
+- **Affected systems:** Soul Depth, Soul Resonance, information views, uncertainty handling, and campaign presentation.
+- **Gameplay impact:** Poor disclosure could make access arbitrary or reduce qualitative growth to a visible meter.
+- **Evidence needed:** Direct, in-world, and tone-dependent disclosure cases measuring comprehension, mystery, planning, and metagaming pressure.
+- **Approved direction:** Established properties may be explicit; unknown deeper structure remains hidden or appears through valid signs and revealing mechanics, with exact information requiring justified access.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** Medium
+- **Status reason:** Implemented and validated through hybrid Soul Depth visibility, qualitative safeguards, knowledge separation, examples, terminology, and structural validation.
+- **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Soul Depth](../docs/soul/SOUL_DEPTH.md) and [FR-002/FR-003/FR-008/FR-009 Audit](audits/FR_002_FR_003_FR_008_FR_009_CLARIFICATION_AUDIT.md)
+
+### FR-008 - Soul Weapon Rarity and Equipment Relevance
+
+- **Status:** Closed
+- **Issue:** Exceptional Soul Weapons risked making ordinary equipment, crafting, logistics, and non-partner paths appear irrelevant.
+- **Affected systems:** Soul Weapons, equipment, Professions, Skills, embodiment, Magic, and resource logistics.
+- **Gameplay impact:** An optional relationship could become functionally mandatory or narrow long-term equipment choices.
+- **Evidence needed:** Campaigns without Soul Weapons, inaccessible or unsuitable partners, unconventional partners, and conventional-equipment specialists.
+- **Approved direction:** Developed Soul Weapons may substantially exceed conventional equipment; rarity, individual binding, limited transfer, actual growth, and social logistics preserve the ordinary baseline without artificial parity.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** Medium
+- **Status reason:** Implemented and validated through Weapon Evolution capability and equipment-baseline boundaries, index integration, and structural validation.
+- **Authorized roadmap link:** [FR-008 — Soul Weapon Rarity and Equipment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Weapon Evolution](../docs/soul-weapons/WEAPON_EVOLUTION.md) and [FR-002/FR-003/FR-008/FR-009 Audit](audits/FR_002_FR_003_FR_008_FR_009_CLARIFICATION_AUDIT.md)
+
+### FR-009 - World Contact, Travel, and Reincarnation Discretion
+
+- **Status:** Closed
+- **Issue:** Contact and cross-domain reach needed clear separation from travel and selectable Reincarnation destinations.
+- **Affected systems:** World Gates, world-contact events, Reincarnation, Soul Avatars, information views, and GM procedures.
+- **Gameplay impact:** Ambiguity could turn contact into excessive bookkeeping or an unrestricted destination menu.
+- **Evidence needed:** Asymmetric contacts, closures, stranded actors, incompatible routes, and included or excluded candidate domains.
+- **Approved direction:** World knowledge, contact, travel routes, and Reincarnation possibility are independent claims; prior contact and player wishes inform contextual adjudication without guaranteeing current access or selection.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** Medium
+- **Status reason:** Implemented and validated through World Gate distinctions, cross-domain Reincarnation guidance, terminology, and structural validation.
+- **Authorized roadmap link:** [FR-009 — World Contact, Travel, and Reincarnation Discretion](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [World Gates and World-Contact Events](../docs/world-engine/GATES_AND_WORLD_CONTACT.md), [World Gate Soul Interactions](../docs/world-engine/WORLD_GATE_SOUL_INTERACTIONS.md), and [FR-002/FR-003/FR-008/FR-009 Audit](audits/FR_002_FR_003_FR_008_FR_009_CLARIFICATION_AUDIT.md)
 
 ### FR-006 - Adaptive Skill Consolidation and Merge Rules
 

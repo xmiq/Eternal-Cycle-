@@ -4667,3 +4667,19 @@ A proposed use sharing a theme with an existing Skill while depending on a mater
 ## Unsupported Interpretation
 
 A proposed Skill use justified primarily by a label, metaphor, or linguistic reading rather than historical capability and present enabling mechanics.
+
+## World Knowledge
+
+Established information about a world. Knowledge neither creates present contact nor grants travel or Reincarnation access.
+
+## World Contact
+
+A currently or historically established channel by which worlds can affect, observe, or communicate with one another. Contact neither guarantees transit nor makes a world a current Reincarnation destination.
+
+## Travel Route
+
+A presently valid means of moving a living actor or other supported subject between worlds under its established requirements. It is distinct from knowledge, contact, and Reincarnation possibility.
+
+## Reincarnation Possibility
+
+A world and embodiment opportunity that is currently eligible for consideration during valid Reincarnation adjudication. Eligibility does not guarantee selection.

@@ -37,6 +37,15 @@ Contact creates new possible causal routes. Existing actors and specialist syste
 | **Age Transition** | Makes a successor historical Age Claim more useful through lasting causal change | That one contact event alone defines the new Age |
 | **World Reset** | Reconfigures enough foundational conditions to require broad World Revalidation | That a Gate opening, closure, or breach is automatically a Reset |
 
+For cross-world adjudication, preserve four additional claims:
+
+| Claim | Meaning | Does not imply |
+| --- | --- | --- |
+| **World Knowledge** | An observer has established that another world or Contact Domain exists. | Contact, communication, travel, or Reincarnation access. |
+| **World Contact** | An established observation, communication, Resonance, influence, or exchange route reaches another domain. | Safe or embodied travel, permanent access, or Reincarnation possibility. |
+| **Travel Route** | A valid current mechanism can carry the relevant traveler or payload to the destination under stated conditions. | Reincarnation eligibility, Soul transit, or future availability. |
+| **Reincarnation Possibility** | Reincarnation adjudication currently permits one or more valid candidates in that domain. | A reusable Travel Route, guaranteed selection, or unrestricted destination choice. |
+
 The classification follows function and causality, not appearance or local vocabulary. A stone arch may be an ordinary door, a magical portal, a Dungeon Access Route, a World Gate, or merely ceremonial. A society may call all of them gates without making the mechanics interchangeable.
 
 ## World-Contact Events
@@ -281,6 +290,14 @@ Stranding can create:
 - ecological populations cut off from migration or reproduction routes.
 
 Stranding is not automatic death, assimilation, return, or narrative removal. Existing resources, relationships, knowledge, embodiment, environment, and actor choices determine what follows.
+
+## Knowledge, Contact, Travel, and Reincarnation
+
+These claims may causally support one another but remain independent. Knowing a world exists does not open a route. Contact through a signal channel does not prove embodied passage. A Travel Route does not create a valid incarnation. Reincarnation in a world does not establish a route another being can reuse.
+
+Prior contact is not permanent access. Time, Gate Closure, changed cosmology, World Reset, Age transition, destruction, migration, new infrastructure, and current world state may remove, alter, or create possibilities. Revalidate the relevant claim at the time of use.
+
+A known or contacted world may inform GM adjudication and player planning without becoming an unrestricted Reincarnation destination menu. Research, exploration, Gate construction, infrastructure, Soul development, relationships, and cosmological discovery remain meaningful because their actual effects can create knowledge, contact, travel, or valid embodiment opportunities. None silently grants all four.
 
 ## World-Contact Process
 

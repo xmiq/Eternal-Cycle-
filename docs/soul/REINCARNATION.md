@@ -99,6 +99,14 @@ A valid candidate must satisfy all applicable constraints:
 
 Soul history may influence valid candidates through Soul Resonance, Soul Titles, [Retained Instincts](RETAINED_INSTINCTS.md), prior species mastery, Soul Constellations, World Reset effects, or other explicit rules.
 
+#### Candidate Adjudication
+
+Candidate generation is contextual GM adjudication, not a mandatory deterministic weighting formula. The GM may consider prior incarnations and species, Final Death, Soul state, elapsed Interlife time, current world state, embodiment availability, cosmology, Age, established consequences, campaign themes, and other canonical inputs. Those considerations never waive candidate validity or guarantee a result.
+
+The player may express meaningful wishes about species, world, environment, proximity, or kind of life. A wish informs adjudication but does not command it. Established player action can change real routes and opportunities without becoming a direct destination-selection power.
+
+No universal rule permits engineered Final Death to guarantee a species, world, rarity, or favorable circumstance. Death may create consequences under its actual cause; it is not candidate currency.
+
 ### 6. Apply the Reincarnation Mode
 
 Use the mode established for the campaign or current Cycle:
@@ -243,6 +251,7 @@ Interference must have an established cause, fair warning appropriate to the thr
 - Suicide, repeated weak lives, and manufactured deaths do not improve Reincarnation by themselves.
 - Reincarnation cannot be activated before Final Death as an escape from danger or consequence.
 - A candidate cannot be rerolled repeatedly without a new valid transition and its costs.
+- Final Death circumstances, short lives, and self-engineered deaths cannot be converted into a predictable candidate-weighting exploit.
 - Directed selection cannot create extinct, unique, or forbidden forms without a valid embodiment route and earned access.
 - A later incarnation does not inherit property, authority, relationships, or consent from a former identity.
 - Long Interlife periods cannot be used for unlimited training or automatic Soul Wound recovery.

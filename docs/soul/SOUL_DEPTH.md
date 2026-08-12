@@ -152,6 +152,27 @@ The GM should consider:
 
 A singular transformative event can reveal that a soul has crossed a Horizon, but the event does not award a predetermined amount of Depth. The Horizon describes the soul after the transformation; it is not payment for the event.
 
+## Hybrid Information Visibility
+
+Soul Depth remains qualitative. It is never displayed as a universal numerical meter, XP bar, hidden-point total, or complete map of dormant Soul structure.
+
+Player-facing information may state legitimately established facts explicitly, including known Soul properties, confirmed persistent capabilities, discovered Soul Echoes, identified Resonance structures, observed Depth phenomena, discovered Horizon changes, or confirmed Soul Weapon interactions. Useful mechanical disclosure does not require vague prose when the fact is already established.
+
+Unknown deeper structure remains unknown. It may produce fair signs through sensation, Resonance, Soul Space behavior, Reincarnation effects, Research, rituals, abilities, artifacts, qualified observers, or another established route without revealing its complete cause or extent.
+
+Player Knowledge and Character Knowledge remain separate. A player-facing mechanical statement does not automatically give the current Entity a scientific explanation; direct in-world discovery may legitimately create Character Knowledge. This distinction does not implement autobiographical memory continuity.
+
+Precision must be earned or mechanically justified. A valid Soul-analysis ritual may establish a precise bounded property, while ordinary intuition cannot expose an omniscient profile merely because the GM tracks more information.
+
+### Visibility Procedure
+
+1. identify objective Soul truth within the required scope;
+2. identify what has actually been discovered and by whom;
+3. disclose confirmed player-facing information at useful precision;
+4. communicate undiscovered changes through legitimate signs where relevant;
+5. preserve unknown deeper structure and separate knowledge views;
+6. reveal exact information only through a source capable of establishing it.
+
 ## Active and Dormant Imprints
 
 Legitimately acquired skills, Skill XP, Stat XP, and other protected Soul Imprints persist regardless of current Depth.
@@ -229,6 +250,14 @@ A former saint and a former monster tyrant leave opposed Soul Echoes. Silencing 
 ### Power Without Depth
 
 A dragon inherits extraordinary natural power and dominates its territory without meaningful challenge or reflection. Its body and species development may be exceptional while its Soul Depth remains Nascent or Rooted.
+
+### Known Soul Property
+
+A validated Soul-analysis ritual confirms that a Soul can maintain awareness during a bounded kind of Interlife transition. The player may receive that capability explicitly. The result does not reveal every dormant structure or make the current character understand the ritual's complete theory.
+
+### Unknown Deeper Change
+
+After integrating opposed lives, the Soul Space begins holding two previously incompatible regions without collapse. The player observes the stable change and Resonance signs, but no valid source has established a new Horizon or hidden numerical value. The deeper state remains unknown rather than being displayed as `Soul Depth: 47/100`.
 
 ## Related Documents
 

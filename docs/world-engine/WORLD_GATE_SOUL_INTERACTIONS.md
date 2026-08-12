@@ -190,6 +190,10 @@ The following do not create a Cross-Domain Reincarnation Route by themselves:
 
 ## Cross-Domain Candidate Resolution
 
+World Knowledge, World Contact, a Travel Route, and current Reincarnation Possibility are separate claims. A World Gate channel can support only the channels it actually owns. Contact may inform candidate adjudication, but it neither guarantees a destination nor turns every previously contacted domain into a permanent menu option.
+
+Player wishes are meaningful adjudication input. Soul state, elapsed Interlife, current world and Gate state, cosmology, valid embodiments, consequences, and Reincarnation rules remain controlling constraints. No numerical destination weighting is implied.
+
 When another Contact Domain may enter candidate generation, test the ordinary Reincarnation requirements plus the cross-domain interface.
 
 ### 1. Confirm Final Death and Interlife

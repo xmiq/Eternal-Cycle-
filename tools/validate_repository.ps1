@@ -270,16 +270,16 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-002, FR-003, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
+    '**Approved pending objectives:** FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
-    '- [ ] **FR-002 — Reincarnation Candidate Selection**',
-    '- [ ] **FR-003 — Soul Depth Information Visibility**',
+    '- [x] **FR-002 — Reincarnation Candidate Selection**',
+    '- [x] **FR-003 — Soul Depth Information Visibility**',
     '- [x] **FR-004 — Life Archive and Old-Soul Indexing**',
     '- [x] **FR-005 — Cross-Embodiment Skill Transfer**',
     '- [x] **FR-006 — Adaptive Skill Consolidation and Merge Rules**',
     '- [x] **FR-007 — Conceptual Skill Scope and Historical Interpretation**',
-    '- [ ] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
-    '- [ ] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
+    '- [x] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
+    '- [x] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
     '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
     '- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
@@ -639,6 +639,49 @@ else {
 }
 
 $compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
+
+$phase12ClarificationContracts = @(
+    @{
+        Path = 'docs/soul/REINCARNATION.md'
+        Name = 'FR-002 Reincarnation Candidate Selection'
+        Required = @('#### Candidate Adjudication', 'A wish informs adjudication but does not command it.', 'predictable candidate-weighting exploit')
+    },
+    @{
+        Path = 'docs/gm/REINCARNATION_GENERATION.md'
+        Name = 'FR-002 GM Candidate Adjudication'
+        Required = @('## Contextual Candidate Adjudication', 'bounded judgement rather than a mandatory weight equation', 'No reusable formula maps a chosen death circumstance to a guaranteed species or destination.')
+    },
+    @{
+        Path = 'docs/soul/SOUL_DEPTH.md'
+        Name = 'FR-003 Soul Depth Visibility'
+        Required = @('## Hybrid Information Visibility', 'Soul Depth remains qualitative.', 'Player Knowledge and Character Knowledge remain separate.', 'Soul Depth: 47/100')
+    },
+    @{
+        Path = 'docs/soul-weapons/WEAPON_EVOLUTION.md'
+        Name = 'FR-008 Soul Weapon Equipment Baseline'
+        Required = @('## Exceptional Capability and the Equipment Baseline', 'may substantially outperform ordinary', 'Soul Weapon status alone does not establish present superiority.', 'cannot ordinarily be manufactured or issued across an army.')
+    },
+    @{
+        Path = 'docs/world-engine/GATES_AND_WORLD_CONTACT.md'
+        Name = 'FR-009 World Access Distinctions'
+        Required = @('## Knowledge, Contact, Travel, and Reincarnation', 'World Knowledge', 'World Contact', 'Travel Route', 'Reincarnation Possibility', 'Prior contact is not permanent access.', 'unrestricted Reincarnation destination menu')
+    }
+)
+
+foreach ($contract in $phase12ClarificationContracts) {
+    $contractPath = Join-Path $rootPath $contract.Path
+    if (-not (Test-Path -LiteralPath $contractPath)) {
+        Add-ValidationError "Missing $($contract.Name) contract."
+        continue
+    }
+    $contractContent = Get-Content -Raw -LiteralPath $contractPath
+    foreach ($requiredText in $contract.Required) {
+        if ($contractContent -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "$($contract.Name) lacks required invariant: $requiredText"
+        }
+    }
+}
+
 if (Test-Path -LiteralPath $compatibilityPath) {
     $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
     foreach ($requiredText in @(
@@ -693,6 +736,7 @@ Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertaint
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
+Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visibility, Soul Weapon baseline, and world-access distinctions checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'
