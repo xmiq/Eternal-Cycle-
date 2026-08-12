@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-006 and FR-007 Skill Consolidation Implementation Audit](FR_006_FR_007_SKILL_CONSOLIDATION_AUDIT.md) - routine consolidation, Fusion/Evolution boundaries, Development reconciliation, provenance, conceptual scope, migration, and validation.
 - [FR-001 and FR-005 Retained Development Implementation Audit](FR_001_FR_005_RETAINED_DEVELOPMENT_AUDIT.md) - bounded stacking, embodiment relevance, Skill familiarity and translation, persistence, migration, and future compatibility.
 - [FR-004 Life Archive Implementation Audit](FR_004_LIFE_ARCHIVE_AUDIT.md) - Akashic boundary, stable Life identity, Soul Overview and Life Summary retrieval, ownership, migration, future-objective hooks, and validation.
 - [FR-014 Autonomous Registry Implementation Audit](FR_014_AUTONOMOUS_REGISTRY_AUDIT.md) - autonomous identity, Models, Groups, Controllers, memory and upgrade lineage, networks, uncertainty, migration, templates, and validation.

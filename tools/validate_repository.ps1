@@ -270,14 +270,14 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-002, FR-003, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
+    '**Approved pending objectives:** FR-002, FR-003, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [ ] **FR-002 — Reincarnation Candidate Selection**',
     '- [ ] **FR-003 — Soul Depth Information Visibility**',
     '- [x] **FR-004 — Life Archive and Old-Soul Indexing**',
     '- [x] **FR-005 — Cross-Embodiment Skill Transfer**',
-    '- [ ] **FR-006 — Adaptive Skill Consolidation and Merge Rules**',
-    '- [ ] **FR-007 — Conceptual Skill Scope and Historical Interpretation**',
+    '- [x] **FR-006 — Adaptive Skill Consolidation and Merge Rules**',
+    '- [x] **FR-007 — Conceptual Skill Scope and Historical Interpretation**',
     '- [ ] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
     '- [ ] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
     '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
@@ -605,6 +605,39 @@ else {
     }
 }
 
+$skillConsolidationPath = Join-Path $rootPath 'docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md'
+if (-not (Test-Path -LiteralPath $skillConsolidationPath)) {
+    Add-ValidationError 'Missing Skill Consolidation and Historical Scope contract.'
+}
+else {
+    $skillConsolidation = Get-Content -Raw -LiteralPath $skillConsolidationPath
+    foreach ($requiredText in @(
+        'Skills should consolidate regularly when accumulated play establishes that several records represent substantially the same underlying capability.',
+        'Are these records meaningfully developing the same capability?',
+        'Two Level 10 predecessors do not automatically create Level 20.',
+        'Skill Consolidation is not Skill Fusion.',
+        'Established Application',
+        'Reasonable Extension',
+        'Related but Distinct Capability',
+        'Unsupported Interpretation',
+        'Why can this Skill do this?',
+        'Boundary Cutting',
+        'Life 1 developed `Heat Resistance`',
+        'This repository performs no populated campaign migration.',
+        '### A. Clear Redundant Merge',
+        '### B. Meaningful Distinction',
+        '### C. Excessively Broad Merge',
+        '### D. Conceptual-Name Abuse',
+        '### E. Earned Extension',
+        '### F. Cross-Life Provenance',
+        '### G. Repeated Injury'
+    )) {
+        if ($skillConsolidation -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Skill Consolidation lacks required invariant: $requiredText"
+        }
+    }
+}
+
 $compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
 if (Test-Path -LiteralPath $compatibilityPath) {
     $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
@@ -659,6 +692,7 @@ Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundarie
 Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
+Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

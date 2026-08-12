@@ -6,7 +6,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Authority and Use
 
-The files in this directory are the canonical Skill Engine. Read the Development foundations first, then the ten Skill documents in the order below. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) appears last because it consolidates the completed engine, but its ownership and representation rules apply throughout.
+The files in this directory are the canonical Skill Engine. Read the Development foundations first, then the thirteen Skill documents in the order below. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) appears near the end because it consolidates the completed engine, but its ownership and representation rules apply throughout.
 
 When two documents describe one event, assign each exact effect to one Owning System. A supporting rule may change access, cost, reliability, scale, timing, or Contextual Effectiveness without taking ownership of the effect it supports. [Level 0 Instinct](LEVEL_ZERO_INSTINCT.md) is the narrow representation rule for species-, Evolution-, or lineage-granted instinctive Skill access.
 
@@ -45,13 +45,14 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 3. [Reincarnation Skill Crossover](REINCARNATION_SKILL_CROSSOVER.md) - bounded recovery and translation of retained Skill history through valid present-life Receiving Routes.
 4. [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) - shared cross-Life contribution, Embodiment Relevance, bounded stacking, Familiarity Unlock, Translation Bridge, and Historical Territory rules.
 5. [Adaptive Skills](ADAPTIVE_SKILLS.md) - emergence of stable novel capabilities through recurring need, variation, feedback, adjustment, and integration.
-6. [Skill Evolution](SKILL_EVOLUTION.md) - qualitative transformation of an established Skill through route-specific evidence, requirements, and tradeoffs.
-7. [Skill Fusion](SKILL_FUSION.md) - formation of a distinct competency through sustained integration of established Component Skills.
-8. [Active and Passive Skills](ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes with load, disruption, Conscious Override, and agency rules.
-9. [Hidden Skills](HIDDEN_SKILLS.md) - observer-relative hiddenness, factual provenance, fair evidence, discovery, misclassification, and concealment.
-10. [Conceptual Skills](CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through deeply integrated principles, relationships, meanings, and metaphysical concepts.
-11. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) - unified Capability Representation, Ownership Tests, anti-proliferation rules, cleanup procedures, and the new-Skill checklist.
-12. [Level 0 Instinct](LEVEL_ZERO_INSTINCT.md) - instinct represented in existing Skill tracking without Level 1 capability, inherited mastery, or a parallel Skill Seed system.
+6. [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md) - routine evidence-based cleanup of redundant Skills, Development preservation, lineage, and history-based interpretation of broad or Conceptual scope.
+7. [Skill Evolution](SKILL_EVOLUTION.md) - qualitative transformation of an established Skill through route-specific evidence, requirements, and tradeoffs.
+8. [Skill Fusion](SKILL_FUSION.md) - formation of a distinct competency through sustained integration of established Component Skills.
+9. [Active and Passive Skills](ACTIVE_AND_PASSIVE_SKILLS.md) - active, passive, and mixed expression modes with load, disruption, Conscious Override, and agency rules.
+10. [Hidden Skills](HIDDEN_SKILLS.md) - observer-relative hiddenness, factual provenance, fair evidence, discovery, misclassification, and concealment.
+11. [Conceptual Skills](CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through deeply integrated principles, relationships, meanings, and metaphysical concepts.
+12. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) - unified Capability Representation, Ownership Tests, anti-proliferation rules, cleanup procedures, and the new-Skill checklist.
+13. [Level 0 Instinct](LEVEL_ZERO_INSTINCT.md) - instinct represented in existing Skill tracking without Level 1 capability, inherited mastery, or a parallel Skill Seed system.
 
 ## Document Responsibilities
 
@@ -60,6 +61,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 | **Human Skill Trees** | relationships among human learned foundations, branches, techniques, traditions, and routes | universal human trees, classes, automatic Profession bundles, or institutional authority |
 | **Monster Skill Trees** | monster-native learned routes and traditions | Species Traits, biological Evolution, identical species mastery, or renamed human trees |
 | **Reincarnation Skill Crossover** | assessment and translation of one retained source into one present result | former anatomy, unrestricted transfer, free mastery, or merger of human and monster trees |
+| **Skill Consolidation and Historical Scope** | redundant-record consolidation, lineage preservation, Development reconciliation, and history-based application scope | Fusion, Evolution, new effects, current Development, or name-based authority |
 | **Adaptive Skills** | emergence of a stable distinct Skill from meaningful adaptation | action spam, bodily mutation, crisis rewards, or every useful Tactic |
 | **Skill Evolution** | qualitative transformation of an established Skill | ordinary improvement, renaming, Skill Fusion, mutation, or biological Evolution |
 | **Skill Fusion** | a coherent new competency formed through genuine component integration | routine combinations, Synergy, equipment effects, or pairwise fusion multiplication |

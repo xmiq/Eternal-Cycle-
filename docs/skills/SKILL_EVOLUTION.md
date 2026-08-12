@@ -181,6 +181,8 @@ No reincarnation count, Soul Depth horizon, Resonance state, or volume of Skill 
 
 ## Interactions
 
+- **Skill Consolidation:** consolidation supersedes substantially redundant records under one coherent active identity. It is not an Evolution unless one Skill also undergoes an independently evidenced qualitative transformation. Historical lineage remains traceable in either case.
+
 - **Adaptive Skills:** an Adaptive Skill can later evolve once it has an established identity and sufficient Evolution Evidence. Novel emergence and transformation are separate claims.
 - **Human and Monster Skill Trees:** evolution follows the practitioner's actual route and may create a branch without turning either tree into a universal ladder.
 - **Skill Crossover:** crossover may supply retained principles or a Receiving Route, but present-life Development owns any evolved expression.
@@ -280,6 +282,7 @@ This document does not define:
 
 - [Skill Engine Index](README.md)
 - [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)

@@ -263,6 +263,7 @@ A later incarnation assesses the Skill through [Reincarnation Skill Crossover](R
 - **No external-support theft:** tools, allies, magic, institutions, and transformations retain their effects and requirements.
 - **No trait conversion:** learned use cannot turn anatomy, acclimation, mutation, or Evolution into a personal Skill effect.
 - **No duplicate labels:** if an existing Skill or branch owns the adaptation, update that record rather than creating another Skill.
+- **Routine consolidation:** when later evidence shows that several legitimately emerged records represent one capability, apply [Skill Consolidation](SKILL_CONSOLIDATION_AND_SCOPE.md) without denying their original emergence or counting shared Development twice.
 - **No free fusion:** coordinating multiple Skills does not create fusion or duplicate their benefits.
 - **No unlimited scope:** an adaptation remains bounded by the problem and variation through which it developed.
 - **No retroactive invention:** the GM must be able to identify prior attempts, feedback, and change before recognizing a hidden emergence.
@@ -282,6 +283,7 @@ When an Adaptive Skill may emerge:
 8. classify the result at the smallest truthful representation;
 9. if a Skill emerged, record all ten shared Skill dimensions and its relation to the current tree;
 10. reject duplicate XP, action-spam, crisis farming, body bypass, and premature Evolution claims.
+11. during ordinary review, flag substantially overlapping established Skills for evidence-based consolidation rather than spawning further narrow copies.
 
 ## Scope Boundaries
 
@@ -298,6 +300,7 @@ This document does not define:
 
 - [Skill Engine Index](README.md)
 - [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)
 - [Reincarnation Skill Crossover](REINCARNATION_SKILL_CROSSOVER.md)

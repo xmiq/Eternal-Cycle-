@@ -422,6 +422,8 @@ Later systems may define their owned capabilities. They must use the Ownership T
 
 ## Related Documents
 
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
+
 - [Skill Engine Index](README.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md)

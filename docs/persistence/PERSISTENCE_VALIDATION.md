@@ -641,6 +641,17 @@ Life Archive validation checks unique Life IDs, one Life per Incarnation, valid 
 
 Validate source Life/Soul consistency, capability and embodiment references, meaningful historical evidence, Familiarity Unlock versus Development Boost, Zero versus Unknown relevance, additive bounded stacking, Historical Territory tapering, prerequisites, assessment provenance, supersession, and Derived-profile freshness. Current attributes and Skill levels must not be copied from historical peaks; recalculation must not mutate source history; retained familiarity must not create Character Knowledge.
 
+### Skill Consolidation and Historical Scope Profile
+
+- confirm each active Skill and predecessor reference resolves through stable identity;
+- confirm superseded predecessors remain Historical and do not compete as current Skill owners;
+- confirm overlapping Development evidence is counted once while distinct evidence and peaks remain traceable;
+- confirm lineage preserves source Lives, embodiments, expressions, Evolution, Fusion, and translation provenance;
+- confirm resulting scope is supported by historical capability rather than labels alone;
+- confirm ambiguous or mechanically distinct Skills remain separate;
+- confirm current embodiment, access, prerequisites, costs, and authority remain enforced;
+- confirm player-facing scope does not leak protected history or undiscovered capability.
+
 
 1. **Identify trigger.** Save, Migration, Continuity Case, load, recovery, or periodic audit.
 2. **Freeze the baseline.** Record exact versions, scope, and integrity.

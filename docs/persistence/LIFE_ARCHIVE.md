@@ -16,7 +16,7 @@ It supports Souls with dozens or hundreds of lives without loading every histori
 
 - **Owner:** stable Life identity, archive status, Soul Overview indexing, finalized Life Summaries, archive references, and Life Over derivation
 - **Dependencies:** [Reincarnation](../soul/REINCARNATION.md), [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md), [Timeline](TIMELINE_ENGINE.md), [Campaign History](STRUCTURED_PERSISTENCE_ARCHITECTURE.md#campaign-history), and existing domain owners
-- **Extensions:** future retained-development, cross-embodiment Skill, long-horizon summary, context-assembly, memory, and Soul-bound companion rules may consume archive references without changing this ownership
+- **Extensions:** retained-development, cross-embodiment Skill, Skill consolidation, and future long-horizon summary, context-assembly, memory, and Soul-bound companion rules may consume archive references without changing this ownership
 - **Consumers:** players, GMs, migration, historical retrieval, validation, and external campaign implementations
 
 ## Akashic Archive Boundary
@@ -145,6 +145,8 @@ The archive preserves queryable per-Life references needed by future objectives 
 Development indexing may identify a Development track, embodiment interval, attained or peak expression, evidence window, and source record. It does not compute retained-development bonuses or transfer current capability.
 
 Skill indexing may identify Skill ID, embodiment, acquisition, meaningful peak, Evolution, merge, predecessor/successor relation, expression, and source records. It does not grant cross-embodiment transfer, perform a merge, broaden scope, or replace the Skill owner.
+
+Consolidation may supersede a current Skill label without erasing prior-Life evidence. Life records retain stable references to the identity effective at the time, while typed lineage allows retained-development and scope adjudication to reach the active consolidated identity and its predecessors.
 
 [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) consumes these references to construct source contributions, Embodiment Relevance assessments, Translation Bridges, and bounded Derived profiles. The Life Archive remains historical evidence and does not store the current effective bonus as archive truth.
 

@@ -12,6 +12,8 @@ A **Conceptual Skill** applies extensive foundational mastery and lived understa
 
 Understanding a concept, possessing access to act through it, holding authority over a target, and producing an effect are separate claims. No one of them automatically grants the others.
 
+The Skill's historical evidence, not the breadth of its label, establishes practical scope. Apply the [Historical Scope Model](SKILL_CONSOLIDATION_AND_SCOPE.md#historical-scope-model) when a claim relies on a broad, merged, ambiguous, or metaphorical reading.
+
 ## Conceptual Skills and the Shared Model
 
 Record every Conceptual Skill through the [Shared Skill Model](README.md#shared-skill-model):
@@ -305,6 +307,7 @@ When adjudicating a proposed Conceptual Skill or use:
 10. reject or narrow any wording that would grant undefined effects;
 11. record changed-world and reincarnation compatibility separately from Persistent Familiarity;
 12. communicate what the practitioner understands, attempts, risks, and observes without presenting the concept as omnipotence.
+13. classify disputed applications as Established, Reasonable Extension, Related but Distinct, or Unsupported through the Skill's recorded history rather than its name alone.
 
 ## Safeguards
 
@@ -333,6 +336,7 @@ This document does not define:
 
 - [Skill Engine Index](README.md)
 - [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)

@@ -576,6 +576,10 @@ Before activation confirm:
 
 This document defines campaign version identities, compatibility, the four-stage migration transaction, Migration Manifests, activation, interruption, rollback, repository upgrades, and storage conversion. It does not define storage syntax, populated records, ordinary Save Updates, the full Continuity Resolution procedure, validation algorithms, repository release versioning, or migration templates.
 
+## Skill Consolidation Adoption
+
+Existing campaigns adopting [Skill Consolidation](../skills/SKILL_CONSOLIDATION_AND_SCOPE.md) first inventory overlap candidates without changing them. Merge only evidence-supported redundancy, preserve stable predecessor and cross-Life references, reconcile shared Development once, leave ambiguous Skills separate, and validate every updated reference and scope boundary before activation.
+
 ## Related Documents
 
 - [Campaign Persistence Engine Index](README.md)

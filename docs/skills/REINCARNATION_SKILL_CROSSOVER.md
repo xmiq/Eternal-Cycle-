@@ -332,6 +332,7 @@ This document does not define:
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](../progression/STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md)
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Life Archive](../persistence/LIFE_ARCHIVE.md)
 - [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md)
 - [Development Safeguards](../progression/DEVELOPMENT_SAFEGUARDS.md)

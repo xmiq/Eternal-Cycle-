@@ -21,6 +21,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 ## Skill Engine
 
+- [Skill Consolidation and Historical Scope](skills/SKILL_CONSOLIDATION_AND_SCOPE.md) - evidence-based cleanup of redundant Skills, Development preservation, provenance, and bounded interpretation of broad or Conceptual applications.
 - [Skill Engine Index](skills/README.md) - shared Skill model, canonical Skill structures, reading order, and ownership boundaries.
 - [Human Skill Trees](skills/HUMAN_SKILL_TREES.md) - plural human learning routes shaped by culture, practice, embodiment, tools, professions, and institutions.
 - [Monster Skill Trees](skills/MONSTER_SKILL_TREES.md) - monster-native learning routes shaped by species embodiment, ecology, cognition, social transmission, and individual experience.

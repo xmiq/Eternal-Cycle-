@@ -8,7 +8,7 @@ This document integrates **FR-001 — Retained Development and Embodiment Releva
 
 - **Owner:** cross-Life contribution eligibility, Embodiment Relevance, bounded stacking, historical-territory limits, recalculation, and the shared attribute/Skill retained-development procedure
 - **Dependencies:** [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md), [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md), [Life Archive](../persistence/LIFE_ARCHIVE.md), and [Canonical Data Ownership](../persistence/CANONICAL_DATA_OWNERSHIP.md)
-- **Extensions:** future Skill consolidation and conceptual-scope rules may consume provenance without redefining this framework
+- **Extensions:** [Skill Consolidation and Historical Scope](../skills/SKILL_CONSOLIDATION_AND_SCOPE.md) consumes provenance without redefining this framework
 - **Consumers:** Development, Skills, Reincarnation, Species, Magic, persistence, GMs, and player-facing capability views
 
 ## Core Rule
@@ -368,6 +368,7 @@ Validation checks:
 - [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)
 - [Reincarnation Skill Crossover](../skills/REINCARNATION_SKILL_CROSSOVER.md)
+- [Skill Consolidation and Historical Scope](../skills/SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Level 0 Instinct](../skills/LEVEL_ZERO_INSTINCT.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Life Archive](../persistence/LIFE_ARCHIVE.md)

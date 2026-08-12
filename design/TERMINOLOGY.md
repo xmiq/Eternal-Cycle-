@@ -4647,3 +4647,23 @@ A historically developed Skill expression that connects an older embodiment rout
 ## Effective Retained Acceleration
 
 The bounded Derived redevelopment advantage calculated from qualifying Historical Contributions after Embodiment Relevance, Historical Territory, access, prerequisites, and saturation are applied.
+
+## Skill Consolidation
+
+Routine evidence-based supersession of substantially redundant Skill records under one coherent active Skill identity while preserving Development, predecessor lineage, scope evidence, and cross-Life provenance without creating free capability.
+
+## Established Application
+
+A proposed Skill use already demonstrated or mechanically equivalent to historically established use under sufficiently comparable conditions.
+
+## Reasonable Extension
+
+A proposed Skill use that follows naturally from established history but reaches new scope and therefore requires legitimate experimentation, training, Development, or Evolution before becoming established.
+
+## Related but Distinct Capability
+
+A proposed use sharing a theme with an existing Skill while depending on a materially different function, owner, mechanism, receiving route, or Development path.
+
+## Unsupported Interpretation
+
+A proposed Skill use justified primarily by a label, metaphor, or linguistic reading rather than historical capability and present enabling mechanics.

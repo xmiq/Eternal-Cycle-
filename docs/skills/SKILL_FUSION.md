@@ -279,6 +279,8 @@ When adjudicating a proposed Skill Fusion:
 
 ## Scope Boundaries
 
+Routine [Skill Consolidation](SKILL_CONSOLIDATION_AND_SCOPE.md) is not Skill Fusion. Consolidation removes redundant representations of one established capability; Fusion requires a genuinely new integrated competency with distinct utility across Component Skill boundaries.
+
 This document does not define:
 
 - active and passive Skill modes;
@@ -293,6 +295,7 @@ This document does not define:
 
 - [Skill Engine Index](README.md)
 - [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md)
+- [Skill Consolidation and Historical Scope](SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Human Skill Trees](HUMAN_SKILL_TREES.md)
 - [Monster Skill Trees](MONSTER_SKILL_TREES.md)

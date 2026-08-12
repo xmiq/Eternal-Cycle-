@@ -5053,3 +5053,15 @@ Each source contribution is strongest within comparable prior development and ta
 ## D-1263 — Retained Familiarity Is Not Autobiographical Memory
 
 Retained Development and Skill familiarity can operate without conscious recollection. They do not create Character Knowledge or implement FR-015 memory continuity.
+
+## D-1264 — Skill Consolidation Reuses Stable Lineage and Supersession
+
+Routine consolidation uses existing stable Skill identity, typed predecessor relations, historical events, versions, and supersession. It may create a new coherent identity or retain an already-correct identity that absorbs duplicate records; neither path deletes history or creates a second current owner.
+
+## D-1265 — Consolidated Development Reconciles Evidence Instead of Adding Labels
+
+The consolidated result preserves the strongest coherent combined competence and every legitimate distinct contribution while counting shared exposure, practice, and adaptation once. Predecessor levels or XP are never naively summed merely because several records existed.
+
+## D-1266 — Skill Applications Use Four History-Based Adjudication Categories
+
+Broad, merged, ambiguous, and Conceptual Skill claims are interpreted as Established Applications, Reasonable Extensions, Related but Distinct Capabilities, or Unsupported Interpretations. These are GM guidance categories rather than mandatory stored states or an exhaustive application catalog.

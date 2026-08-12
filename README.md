@@ -41,6 +41,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md`](docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) - bounded retained-development stacking and cross-embodiment Skill familiarity.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
+- [`docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md`](docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md) - routine redundant-Skill consolidation, lineage preservation, and history-based scope interpretation.
 - [`docs/monster-evolution/README.md`](docs/monster-evolution/README.md) - Monster Evolution reading order, adjudication sequence, ownership map, and safeguards.
 - [`docs/human/README.md`](docs/human/README.md) - Human Class and Profession philosophy, rules, reading order, and ownership boundaries.
 - [`docs/soul-weapons/README.md`](docs/soul-weapons/README.md) - complete Soul Weapon state model, reading order, claim resolution, system interfaces, and safeguards.

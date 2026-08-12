@@ -203,6 +203,37 @@ Complete only when the [Skill Fusion](../docs/skills/SKILL_FUSION.md) integratio
 
 Possessing the components does not automatically create the Fusion, and the Fusion does not erase component ownership by default.
 
+### Skill Consolidation Extension
+
+Complete when [Skill Consolidation](../docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md) establishes that several records substantially represent one capability.
+
+- **Consolidation event:** `<stable event or transaction reference>`
+- **Resulting active Skill:** `<stable Skill ID>`
+- **Predecessor Skills:** `<typed stable Skill references>`
+- **Identity disposition:** `<new coherent identity | established identity absorbs duplicates>`
+- **Capability-overlap evidence:** `<function, method, mechanism, application, Development, and embodiment evidence>`
+- **Development reconciliation:** `<shared evidence counted once, distinct evidence preserved, uncertainty>`
+- **Preserved scope:** `<coherent union of historically established applications>`
+- **Excluded scope:** `<linguistically related or mechanically distinct capabilities not granted>`
+- **Predecessor disposition:** `<superseded current record with retained historical provenance>`
+- **Cross-Life lineage:** `<Life, embodiment, expression, and Translation Bridge references>`
+- **Validation:** `<identity, lineage, duplicate-gain, scope, and reference checks>`
+
+Consolidation is not Fusion or Evolution. It creates no free Development and deletes no predecessor history.
+
+### Historical Scope Interpretation
+
+Use for broad, merged, ambiguous, or Conceptual Skill claims.
+
+- **Proposed application:** `<exact operation, target, route, scale, and context>`
+- **Classification:** `<established application | reasonable extension | related but distinct capability | unsupported interpretation>`
+- **Supporting history:** `<acquisition, practice, successes, relevant failures, predecessors, Evolution, embodiments, and translations>`
+- **Current enabling mechanics:** `<body, tool, Mana, access, authority, environment, or other owner references>`
+- **Further Development required:** `<experimentation, training, Evolution, separate capability, or none>`
+- **Known limits and uncertainty:** `<bounded evidence>`
+
+The Skill name is descriptive. It grants no application unsupported by history and present mechanics.
+
 ### Hidden Skill Extension
 
 Complete the factual record even when some audiences cannot see it. Apply the [Hidden Skills](../docs/skills/HIDDEN_SKILLS.md) visibility rules to each audience separately.
@@ -299,6 +330,7 @@ Campaign History records what occurred. The current Skill record states what is 
 - [Adaptive Skills](../docs/skills/ADAPTIVE_SKILLS.md)
 - [Skill Evolution](../docs/skills/SKILL_EVOLUTION.md)
 - [Skill Fusion](../docs/skills/SKILL_FUSION.md)
+- [Skill Consolidation and Historical Scope](../docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md)
 - [Hidden Skills](../docs/skills/HIDDEN_SKILLS.md)
 - [Conceptual Skills](../docs/skills/CONCEPTUAL_SKILLS.md)
 - [Reincarnation Skill Crossover](../docs/skills/REINCARNATION_SKILL_CROSSOVER.md)

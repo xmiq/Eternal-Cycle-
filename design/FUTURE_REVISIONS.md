@@ -82,32 +82,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the visibility model.
 - **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-006 - Adaptive Skill Consolidation and Merge Rules
-
-- **Status:** Roadmapped
-- **Issue:** Adaptive Skill adjudication may create either many narrow permanent Skills or incentives to seek injury, abuse, and artificial hardship as an optimal formation route.
-- **Affected systems:** Adaptive Skills, Capability Representation, Development, hardship, injury, and Skill safeguards.
-- **Gameplay impact:** Skill lists may become noisy, or harmful repetition may be treated as more efficient than meaningful practice and adaptation.
-- **Evidence needed:** Formation attempts across training, experimentation, environmental pressure, and harmful conditions, including rejected candidates and Representation Cleanup outcomes.
-- **Approved direction:** Adaptive Skills may emerge from meaningful activity, experimentation, training, environment, adversity, and adaptation. Substantially overlapping Skills merge regularly when continued play establishes one underlying capability, preserving accumulated development, history, and traceable predecessor provenance. Mechanical function, concept, applications, training method, underlying body or Mana capability, and meaningful gameplay distinctions govern consolidation. Repeated equivalent challenge normally deepens an existing Skill; materially distinct capabilities may still form. Injury and hardship farming cannot produce an unlimited cascade of narrow Skills.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not alter Skill mechanics.
-- **Authorized roadmap link:** [FR-006 — Adaptive Skill Consolidation and Merge Rules](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
-### FR-007 - Conceptual Skill Scope and Historical Interpretation
-
-- **Status:** Roadmapped
-- **Issue:** Conceptual Skills may prove too easy to claim, too difficult to recognize, or too abstract for consistent counterplay.
-- **Affected systems:** Conceptual Skills, mastery, evidence, information views, and consequence resolution.
-- **Gameplay impact:** Broad conceptual claims could overshadow ordinary expertise, while excessive opacity could make earned mastery unusable.
-- **Evidence needed:** Qualification and use cases from different domains, with provenance, limits, counters, failure, observer understanding, and rejected claims.
-- **Approved direction:** A Skill name describes but does not solely authorize capability. Broad, abstract, merged, ambiguous, or Conceptual Skills are interpreted through acquisition, development activity, prior successes and relevant failures, predecessor Skills, merges, Evolution, embodiment-specific expressions, conceptual extensions, and enabling mechanics. Adjudication distinguishes established applications, reasonable extensions requiring legitimate development, related but distinct capabilities, and unsupported linguistic readings. FR-006 consolidation must preserve meaningful scope boundaries and provenance rather than merge unrelated capability into a universal label; FR-001 and FR-005 preserve relevant cross-life and embodiment history without granting unsupported expression.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** Medium
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not modify Skill mechanics or persistence.
-- **Authorized roadmap link:** [FR-007 — Conceptual Skill Scope and Historical Interpretation](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-008 - Soul Weapon Rarity and Equipment Relevance
 
 - **Status:** Roadmapped
@@ -193,11 +167,39 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-002, FR-003, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001, FR-004, and FR-005 are closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-002, FR-003, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001, FR-004, FR-005, FR-006, and FR-007 are closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-006 - Adaptive Skill Consolidation and Merge Rules
+
+- **Status:** Closed
+- **Issue:** Adaptive Skill adjudication may create many narrow permanent Skills or incentives to seek harmful repetition as an optimal formation route.
+- **Affected systems:** Adaptive Skills, Capability Representation, Development, Skill lineage, persistence, and safeguards.
+- **Gameplay impact:** Unchecked proliferation obscures meaningful capability and can double-count Development.
+- **Evidence needed:** Formation and consolidation cases across training, experimentation, repeated exposure, distinct mechanisms, ambiguous overlap, and harmful repetition.
+- **Approved direction:** Allow justified emergence, then routinely consolidate substantially redundant records through capability evidence, stable lineage, overlap-safe Development reconciliation, and GM review while preserving meaningful distinctions.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the consolidation contract, Skill template extension, persistence and migration integration, canonical cases, decisions, terminology, and structural validation.
+- **Authorized roadmap link:** [FR-006 — Adaptive Skill Consolidation and Merge Rules](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Skill Consolidation and Historical Scope](../docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md), [Skill Template](../templates/SKILL_TEMPLATE.md), and [FR-006/FR-007 Audit](audits/FR_006_FR_007_SKILL_CONSOLIDATION_AUDIT.md)
+
+### FR-007 - Conceptual Skill Scope and Historical Interpretation
+
+- **Status:** Closed
+- **Issue:** Broad and Conceptual Skill labels may be interpreted as unrestricted capability or made too opaque for consistent use.
+- **Affected systems:** Conceptual Skills, Skill Evolution, consolidation, Development, retained provenance, GM adjudication, and player views.
+- **Gameplay impact:** Name-based powers can eclipse earned expertise, while unclear scope can make legitimate mastery unusable.
+- **Evidence needed:** Broad and Conceptual Skill claims with acquisition history, successful and failed applications, lineage, enabling mechanics, counters, and rejected linguistic interpretations.
+- **Approved direction:** Interpret capability through acquisition, Development, applications, failures, lineage, Evolution, embodiment expressions, cross-Life translation, and current enabling mechanics using four history-based application categories.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** Medium
+- **Status reason:** Implemented and validated through history-based scope rules, earned-extension guidance, Conceptual Skill integration, canonical cases, persistence, decisions, terminology, and structural validation.
+- **Authorized roadmap link:** [FR-007 — Conceptual Skill Scope and Historical Interpretation](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Skill Consolidation and Historical Scope](../docs/skills/SKILL_CONSOLIDATION_AND_SCOPE.md), [Conceptual Skills](../docs/skills/CONCEPTUAL_SKILLS.md), and [FR-006/FR-007 Audit](audits/FR_006_FR_007_SKILL_CONSOLIDATION_AUDIT.md)
 
 ### FR-001 - Retained Development and Embodiment Relevance
 
