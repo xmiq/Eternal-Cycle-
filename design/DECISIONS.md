@@ -4885,3 +4885,35 @@ During Phase 12, Future Revisions remains the permanent final objective. Only th
 ## D-1221 — Phase 12 Requires Explicit Release-Readiness Closure
 
 Validation success, an empty promoted-work queue, or agent judgement cannot complete Phase 12. Only an explicit project-maintainer release-readiness decision closes it. At that future boundary, Future Revisions moves from the final Phase 12 objective to Phase 13 — Future Revisions; that transition has not occurred.
+
+## D-1222 — Retained Development Is Life-Bounded and Capability-Relevant
+
+Qualifying previous lives may stack redevelopment acceleration only up to the extent each life developed the relevant attribute or Skill. Capability-specific Embodiment Relevance modifies acceleration; no universal species-pair relevance or final numeric percentage is established by this planning decision.
+
+## D-1223 — Cross-Embodiment Skill Unlock and Acceleration Are Independent
+
+Prior genuine learning may preserve eligibility to rediscover a Skill when current rules and embodiment permit expression even when retained-development acceleration is zero. Skill identity persists while expression adapts to current capabilities; no unlock supplies missing anatomy, Magic, equipment, senses, or mastery. Development remains associated with the life and embodiment that produced it, permitting later transfer bridges.
+
+## D-1224 — Completed Incarnations Receive Indexed Life Summaries
+
+The approved Life Archive direction uses player-visible Life Summaries linked to deeper canonical history through a Soul Overview, Life Summary, and Full Life Detail hierarchy. Player access to this index does not grant the current character perfect autobiographical recall.
+
+## D-1225 — Long-Horizon History Uses Canonical Compression
+
+Long-Horizon Summaries preserve meaningful established changes and references across extended periods without fabricating precise events to fill gaps. Detailed canonical records remain authoritative and are loaded when deeper historical context is needed.
+
+## D-1226 — Context Assembly Preserves Mandatory Continuity Discipline
+
+Future GM and AI context assembly minimizes context burden through relevance-filtered packets, stable IDs, source references, and drill-down paths derived from authoritative SQL state. Mandatory canonical reads, persistence, validation, save-before-delivery, and reload discipline remain; derived summaries and packets are non-authoritative and stale conflicts are repaired from Canon.
+
+## D-1227 — Mutable Canonical Facts Have One Logical Owner
+
+Every mutable canonical fact has one authoritative logical owner. The canonical character or equivalent Entity table anchors persistent player-relevant non-autonomous beings, while normalized domain tables own related facts. Summaries, indexes, and caches may repeat or reference information but cannot become competing owners.
+
+## D-1228 — Persistent Autonomous Entities Require a Separate Registry
+
+Persistent independently operating entities and systems require an Autonomous Registry distinct from the non-autonomous character identity anchor. The registry must preserve Entity, Controller, Perspective, autonomy, stable identity, model-versus-individual identity, memory continuity, and controlled identity-preserving migration across ownership boundaries.
+
+## D-1229 — Reincarnation Memory Fades and May Be Cue-Recovered
+
+Autobiographical memory may persist across reincarnations but fades naturally according to significance, reinforcement, elapsed time, and intervening lives; relevant cues may recover dormant memories. Skill-development familiarity and retained-development acceleration are distinct from declarative memory, and this direction does not authorize an exhaustive Knowledge Engine.

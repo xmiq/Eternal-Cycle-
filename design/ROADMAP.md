@@ -4,7 +4,7 @@
 
 **Current phase: Phase 12 — Gameplay Validation & Maintenance**
 
-**Current task: None — owner review of Future Revisions**
+**Current task: None — maintainer review of approved Phase 12 objectives before implementation planning**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
@@ -279,7 +279,7 @@ Phase 11 is complete only when every listed reusable template, operating procedu
 
 **Status: Active**
 
-Phase 12 contains all owner-authorized gameplay-validation and maintenance work following Phase 11. It has no predetermined number of objectives and remains active even when no implementation objective is currently promoted.
+Phase 12 contains all owner-authorized gameplay-validation and maintenance work following Phase 11. It has no predetermined number of objectives and remains active while approved objectives await planning, implementation, or validation.
 
 - [x] **AI Runtime Profile integration and validation** — Runtime model, capability limits, ChatGPT execution profile, SQLite and Google Drive adapters, navigation, and validation.
 - [x] **GM Living Codex foundation** — Internal Codex implementation Steps 1–11 covering authority, stable identity, species records, traits, Skills, Evolution graphs, variants, procedural use, player species, SQLite persistence, and verified deployment.
@@ -287,13 +287,26 @@ Phase 12 contains all owner-authorized gameplay-validation and maintenance work 
 - [x] **Living Codex consolidation and validation** — Cross-system links, indexes, ownership, terminology, persistence boundaries, and foundation audit.
 - [x] **Lineage, Hybridization, and Evolutionary Inheritance** — Internal Living Codex Step 13; lineage templates, inherited expression, Mana reconciliation, Level 0 Instinct, Ancestral Echoes, inheritance profiles, and stabilization.
 - [x] **Simulation Architecture and Perspective Model** — Three conceptual responsibility layers; Entity, Controller, Perspective, objective-state, knowledge, persistence, GM, AI, Reincarnation, and Living Codex boundaries.
+- [ ] **FR-001 — Retained Development and Embodiment Relevance** — Define how qualifying previous lives stack bounded redevelopment acceleration up to each life's attained extent, with capability-specific Embodiment Relevance and no universal percentage yet. Preserve current-life effort, embodiment limits, and non-exponential progression.
+- [ ] **FR-004 — Life Archive and Old-Soul Indexing** — Define permanent, player-visible Life Summaries and the `Soul Overview -> Life Summary -> Full Life Detail` retrieval hierarchy. Summaries index meaningful peaks, relationships, consequences, and historical references without implying current-character recall or replacing detailed Canon.
+- [ ] **FR-005 — Cross-Embodiment Skill Transfer** — Separate persistent Skill unlock eligibility from embodiment-dependent redevelopment acceleration. Preserve Skill identity while permitting current-body-compatible expression, physical possibility limits, and later-life transfer bridges tied to per-life embodiment and Skill-development history.
+- [ ] **FR-010 — Long-Horizon Simulation Summaries** — Define canonical compression for meaningful changes across months through Ages, with deeper historical retrieval where needed. Compression must preserve established causality and unknowns rather than fabricate exhaustive history.
+- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading** — Define a storage-aware Context Assembly Layer that derives compact, relevance-filtered context packets, stable IDs, source references, and drill-down paths from authoritative state. Mandatory reads, save-before-delivery, validation, and reload discipline remain intact; derived context is never authoritative.
+- [ ] **FR-012 — Canonical SQL Ownership and Anti-Duplication** — Define one authoritative logical owner for every mutable canonical fact. Persistent player-relevant non-autonomous beings use the canonical character or equivalent Entity identity anchor, domain tables own related facts, summaries remain references or caches, and boundary-crossing identity migrations must not create duplicates.
+- [ ] **FR-014 — Autonomous Registry** — Define a separate registry for persistent independently operating entities and systems, including stable identity, model-versus-individual distinction, Controller, autonomy, grouping, condition, assignment, capabilities, networks, maintenance, lineage, memory continuity, and personhood. No campaign entities are migrated by this planning objective.
+- [ ] **FR-015 — Memory Continuity, Fading, and Recall** — Define significance-sensitive autobiographical memory across reincarnations, natural fading, cue-triggered recall, and player/character/GM information boundaries. Keep developmental familiarity under FR-001 and FR-005 distinct from declarative memory; do not re-roadmap the completed Entity, Controller, Perspective architecture or assume an exhaustive Knowledge Engine.
 - [∞] **Future Revisions** — Permanent owner-mediated rolling final objective during Phase 12. Stable `FR-###` identifiers are backlog and provenance IDs, not phases. Gameplay and development agents cannot promote candidates. An explicitly owner-approved implementation objective is inserted immediately before this item, while unrelated candidates remain untouched.
 
 ### Current Position
 
-- **Current promoted implementation objective:** None.
-- **Next action:** Project maintainer reviews [Future Revisions](FUTURE_REVISIONS.md) and decides whether to promote another Phase 12 objective.
-- **Not promoted:** Autonomous Registry, the detailed Knowledge System, and every other unresolved candidate.
+- **Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, FR-012, FR-014, and the refined remaining scope of FR-015.
+- **Selected implementation objective:** None. Roadmap order records the approved set, not a mandatory execution order.
+- **Next action:** Project maintainer reviews the approved objectives and their dependencies before authorizing an individual implementation plan or execution task.
+- **Not promoted:** FR-002, FR-003, FR-006, FR-007, FR-008, FR-009, and every other unresolved candidate not explicitly authorized by the project maintainer.
+
+### Approved Objective Relationships
+
+The approved objectives form one related maintenance program. FR-012 establishes trustworthy logical ownership; FR-004 and FR-010 index incarnations and historical periods; FR-014 covers autonomous persistent state; FR-011 assembles targeted context from authoritative sources; FR-001 and FR-005 consume per-life Development, embodiment, and Skill history; and FR-015 governs character memory and recall without converting indexes into perfect recollection. These relationships inform later dependency planning but are not gameplay rules or a mandated execution order.
 
 ### Completion Authority
 

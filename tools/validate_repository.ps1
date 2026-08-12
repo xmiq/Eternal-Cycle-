@@ -251,7 +251,8 @@ foreach ($status in $roadmapStatuses) {
 $finalRepositoryState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
 if ($finalRepositoryState) {
     $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
-    if ($unfinished.Count -gt 0) {
+    $phase12Active = $phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -eq 'Phase 12 — Gameplay Validation & Maintenance'
+    if ($unfinished.Count -gt 0 -and -not $phase12Active) {
         Add-ValidationError "Feature-complete roadmap contains $($unfinished.Count) unfinished checklist item(s)."
     }
     if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Phase 12 — Gameplay Validation & Maintenance') {
@@ -268,7 +269,16 @@ elseif ($taskMatches.Count -eq 1) {
 foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
-    '**Current promoted implementation objective:** None.',
+    '**Selected implementation objective:** None.',
+    '**Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, FR-012, FR-014, and the refined remaining scope of FR-015.',
+    '- [ ] **FR-001 — Retained Development and Embodiment Relevance**',
+    '- [ ] **FR-004 — Life Archive and Old-Soul Indexing**',
+    '- [ ] **FR-005 — Cross-Embodiment Skill Transfer**',
+    '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
+    '- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading**',
+    '- [ ] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
+    '- [ ] **FR-014 — Autonomous Registry**',
+    '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
     '- [∞] **Future Revisions**',
     'Phase 12 does not complete because current objectives pass validation',
     'Phase 13 — Future Revisions'
