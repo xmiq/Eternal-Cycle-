@@ -27,6 +27,8 @@ Preparation establishes causes, pressures, and likely responses. It does not res
 
 ## Authority
 
+Consult the [GM Living Codex](../gm-living-codex/README.md) before duplicating reusable species or Evolution design. A Codex entry is reusable design, not campaign presence, current state, or player knowledge, and it never outranks the specialist rule that governs it.
+
 Playable rules and accepted design decisions govern the GM. Canonical Foundations constrain missing implementation. A campaign-local Provisional Rule may fill only a narrow gap under the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md). Narrative judgment supplies fitting detail but cannot invent or override mechanics.
 
 When canonical sources genuinely conflict, identify and isolate the claim rather than choosing a silent winner. The conflict must be resolved through repository governance.

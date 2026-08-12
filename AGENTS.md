@@ -6,6 +6,8 @@ This repository contains only the canonical rules, systems, templates, design do
 
 Do not add campaign saves, current characters, current world state, inventories, active quests, story summaries, or playthrough-specific history.
 
+Do not add populated GM Living Codex databases, Codex backups, deployment manifests, private locators, or rendered populated entries. The repository may contain only the Codex's reusable design, logical schema, procedures, validators, and blank templates.
+
 ## Required Workflow
 
 Before making changes:

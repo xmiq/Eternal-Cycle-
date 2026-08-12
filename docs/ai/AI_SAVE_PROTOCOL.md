@@ -145,6 +145,7 @@ The package remains a proposal. Dependent play pauses until activation is confir
 
 ## Related Documents
 
+- [Living Codex Persistence Model](../gm-living-codex/PERSISTENCE_MODEL.md) - separate reusable-design transactions, validation, deployment, and backup; never fold these writes into campaign state.
 - [AI Play Protocol](AI_PLAY_PROTOCOL.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Persistence Validation Report Template](../../templates/VALIDATION_REPORT_TEMPLATE.md)

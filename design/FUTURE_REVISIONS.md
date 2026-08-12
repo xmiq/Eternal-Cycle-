@@ -179,16 +179,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Suggested future phase:** Persistence template usability review.
 - **Priority:** High
 
-### FR-013 - Lineage and Evolutionary Inheritance
-
-- **Status:** Candidate
-- **Issue:** Reproductive Compatibility now establishes a bounded initiation, viability, and fertility scaffold, but Eternal Cycle does not yet define the complete reusable rules that determine resulting lineage and inherited Evolution expression.
-- **Affected systems:** GM Living Codex, Species Registry, Reproductive Compatibility, Species Development, Monster Evolution, Hybridization, Skills, Magic, Souls, World Engine populations, and Campaign Persistence.
-- **Gameplay impact:** Ad hoc lineage rulings could blur species identity, grant inherited mastery, copy the strongest source traits, contradict Evolution ownership, or make descendants inconsistent between campaigns.
-- **Evidence needed:** Gameplay cases involving mixed lineage, pure-line throwbacks, Mana equalization, inherited Evolution expression, born-evolved offspring, locally defined Level 0 Instinctive Skills, ancestral hereditary echoes distinct from Soul Echoes, and inheritance distributions, including failed and ambiguous outcomes.
-- **Suggested future phase:** Lineage, inheritance, and descendant-expression design.
-- **Priority:** High
-
 ### FR-014 - Autonomous Registry
 
 - **Status:** Candidate
@@ -213,7 +203,17 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-013 is approved in principle as **GM Living Codex Step 13 — Lineage, Hybridization, and Evolutionary Inheritance** in the long-term gameplay-validation maintenance sequence. Implementation remains pending until the current Living Codex integration checkpoint is complete.
+### FR-013 - Lineage and Evolutionary Inheritance
+
+- **Status:** Roadmapped
+- **Issue:** Reproductive Compatibility now establishes a bounded initiation, viability, and fertility scaffold, but Eternal Cycle does not yet define the complete reusable rules that determine resulting lineage and inherited Evolution expression.
+- **Affected systems:** GM Living Codex, Species Registry, Reproductive Compatibility, Species Development, Monster Evolution, Hybridization, Skills, Magic, Souls, World Engine populations, and Campaign Persistence.
+- **Gameplay impact:** Ad hoc lineage rulings could blur species identity, grant inherited mastery, copy the strongest source traits, contradict Evolution ownership, or make descendants inconsistent between campaigns.
+- **Evidence needed:** Gameplay cases involving mixed lineage, pure-line throwbacks, Mana equalization, inherited Evolution expression, born-evolved offspring, locally defined Level 0 Instinctive Skills, ancestral hereditary echoes distinct from Soul Echoes, and inheritance distributions, including failed and ambiguous outcomes.
+- **Suggested future phase:** Lineage, inheritance, and descendant-expression design.
+- **Priority:** High
+- **Status reason:** The project owner approved this work as GM Living Codex Step 13 after the Steps 1-12 consolidation checkpoint.
+- **Authorized roadmap link:** [Gameplay-Validation Maintenance Sequence](ROADMAP.md#gameplay-validation-maintenance-sequence)
 
 The Autonomous Registry and dedicated Knowledge System remain Future Revision candidates and are not authorized for implementation.
 

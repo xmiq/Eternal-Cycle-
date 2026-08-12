@@ -324,6 +324,8 @@ The [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) owns relationshi
 
 ## Species and Forms
 
+When a campaign adopts reusable design, the state record may reference its Codex Stable ID and Codex Version plus any explicit Campaign Divergence. That reference does not import the Codex database into Campaign State, and a later Codex revision does not silently change the adopted campaign form.
+
 Species state separates:
 
 - Species Reference;

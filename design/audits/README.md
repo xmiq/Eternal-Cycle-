@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [Living Codex Steps 1-12 Consolidation Audit](LIVING_CODEX_STEPS_1_12_AUDIT.md) - implementation ownership, authority, persistence, Step 12 invariants, Step 13 boundary, and integration readiness.
 - [Cross-Reference and Ownership Audit](CROSS_REFERENCE_AND_OWNERSHIP_AUDIT.md) - document ownership, dependencies, extensions, consumers, and registry coverage.
 - [Rule Consistency Audit](RULE_CONSISTENCY_AUDIT.md) - completed-system invariants, stale handoffs, authority boundaries, and documentation drift.
 - [Terminology Audit](TERMINOLOGY_AUDIT.md) - canonical vocabulary, neighboring concepts, deprecated labels, and documentation spelling.

@@ -2,6 +2,8 @@
 
 ## Authority and Material
 
+The populated GM Living Codex is external. Repository documentation may define its reusable-design authority, logical SQLite schema, adapter procedures, validation rules, and blank templates, but `eternal_cycle_living_codex.sqlite`, its backups, migration manifests, deployment configuration, private locators, credentials, and rendered populated entries do not belong here. The Living Codex is cross-campaign design authority, not Repository Canon and not Campaign State.
+
 - Files under `docs/` contain playable canonical rules unless explicitly labelled otherwise.
 - `design/DECISIONS.md` contains authoritative design governance and records accepted project decisions.
 - `design/TERMINOLOGY.md` defines canonical vocabulary.

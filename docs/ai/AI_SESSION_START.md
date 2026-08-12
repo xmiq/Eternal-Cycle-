@@ -19,6 +19,7 @@ Before this procedure begins, the operator needs authorized access to:
 
 - the rules repository or an identified Repository Version;
 - the external Campaign Record's Save Index;
+- the configured Codex Version and deployment identity when the campaign adopts a [GM Living Codex](../gm-living-codex/README.md);
 - the participant-facing channel and its visibility boundary;
 - any open Current Session or handoff state.
 

@@ -279,6 +279,7 @@ $futurePath = Join-Path $rootPath 'design/FUTURE_REVISIONS.md'
 $future = Get-Content -Raw -LiteralPath $futurePath
 $openRegister = [regex]::Match($future, '(?ms)^## Open Register\s*(?<body>.*?)(?=^## Roadmapped)')
 $futureEntries = @()
+$roadmappedEntries = @()
 if (-not $openRegister.Success) {
     Add-ValidationError "Future Revisions lacks an Open Register section."
 }
@@ -287,10 +288,6 @@ else {
         $openRegister.Groups['body'].Value,
         '(?ms)^### (?<id>FR-[0-9]{3}) - .+?(?=^### FR-[0-9]{3} - |\z)'
     ))
-    $futureIds = @($futureEntries | ForEach-Object { $_.Groups['id'].Value })
-    foreach ($duplicate in $futureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
-        Add-ValidationError "Duplicate Future Revision ID: $($duplicate.Name)"
-    }
     $requiredFutureFields = @(
         'Status',
         'Issue',
@@ -308,6 +305,91 @@ else {
             }
         }
     }
+}
+
+$roadmappedRegister = [regex]::Match($future, '(?ms)^## Roadmapped\s*(?<body>.*?)(?=^## Closed)')
+if (-not $roadmappedRegister.Success) {
+    Add-ValidationError "Future Revisions lacks a Roadmapped section."
+}
+else {
+    $roadmappedEntries = @([regex]::Matches(
+        $roadmappedRegister.Groups['body'].Value,
+        '(?ms)^### (?<id>FR-[0-9]{3}) - .+?(?=^### FR-[0-9]{3} - |\z)'
+    ))
+    foreach ($entry in $roadmappedEntries) {
+        foreach ($field in @('Status', 'Issue', 'Affected systems', 'Gameplay impact', 'Evidence needed', 'Suggested future phase', 'Priority', 'Status reason', 'Authorized roadmap link')) {
+            $escapedField = [regex]::Escape($field)
+            if ($entry.Value -notmatch "(?m)^- \*\*$escapedField`:\*\* .+") {
+                Add-ValidationError "$($entry.Groups['id'].Value) lacks required roadmapped field: $field"
+            }
+        }
+        if ($entry.Value -notmatch '(?m)^- \*\*Status:\*\* Roadmapped$') {
+            Add-ValidationError "$($entry.Groups['id'].Value) in Roadmapped does not have Roadmapped status."
+        }
+    }
+}
+
+$allFutureIds = @($futureEntries + $roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
+foreach ($duplicate in $allFutureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
+    Add-ValidationError "Duplicate Future Revision ID across lifecycle sections: $($duplicate.Name)"
+}
+
+$codexRequired = @(
+    'docs/gm-living-codex/README.md',
+    'docs/gm-living-codex/GM_LIVING_CODEX.md',
+    'docs/gm-living-codex/SPECIES_REGISTRY.md',
+    'docs/gm-living-codex/PERSISTENCE_MODEL.md',
+    'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md',
+    'templates/LIVING_CODEX_SPECIES_TEMPLATE.md'
+)
+foreach ($relative in $codexRequired) {
+    if (-not (Test-Path -LiteralPath (Join-Path $rootPath $relative))) {
+        Add-ValidationError "Missing Living Codex foundation file: $relative"
+    }
+}
+
+$codexPlanPath = Join-Path $rootPath 'docs/gm-living-codex/GM_LIVING_CODEX.md'
+if (Test-Path -LiteralPath $codexPlanPath) {
+    $codexPlan = Get-Content -Raw -LiteralPath $codexPlanPath
+    foreach ($step in 1..12) {
+        if ($codexPlan -notmatch "(?m)^### Step $step (?:-|—) ") {
+            Add-ValidationError "Living Codex implementation plan lacks Step $step."
+        }
+    }
+}
+
+$codexPersistencePath = Join-Path $rootPath 'docs/gm-living-codex/PERSISTENCE_MODEL.md'
+if (Test-Path -LiteralPath $codexPersistencePath) {
+    $codexPersistence = Get-Content -Raw -LiteralPath $codexPersistencePath
+    foreach ($requiredText in @('eternal_cycle_living_codex.sqlite', 'separate from every campaign database', 'reopen the candidate read-only', 'replace the canonical Google Drive file')) {
+        if ($codexPersistence -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Living Codex persistence model lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
+if (Test-Path -LiteralPath $compatibilityPath) {
+    $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
+    foreach ($requiredText in @(
+        'An absent relationship row means **Not Yet Defined**.',
+        'natural_compatibility_percent > 0',
+        'natural_compatibility_percent <= 100',
+        'assisted_compatibility_percent > 0',
+        'offspring_viability_percent > 0',
+        'offspring_fertility_percent > 0',
+        'UNIQUE (source_species_id, partner_species_id)'
+    )) {
+        if ($compatibility -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Reproductive Compatibility lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$committedDatabaseArtifacts = @(Get-ChildItem -LiteralPath $rootPath -Recurse -File |
+    Where-Object { $_.FullName -notlike '*\.git\*' -and $_.Extension -in @('.sqlite', '.sqlite3', '.db') })
+foreach ($artifact in $committedDatabaseArtifacts) {
+    Add-ValidationError "Populated database artifact is forbidden in the rules repository: $(Get-RepositoryPath $artifact.FullName)"
 }
 
 $forbiddenDirectories = @('campaign', 'campaigns', 'saves', 'world-state', 'player-data')
@@ -333,7 +415,8 @@ Write-Output "Templates indexed: $($templateFiles.Count)"
 Write-Output "Agent roles indexed: $($agentFiles.Count)"
 Write-Output "Canonical terms checked: $($termHeadings.Count)"
 Write-Output "Roadmap tasks checked: $($roadmapStatuses.Count)"
-Write-Output "Future Revision entries checked: $($futureEntries.Count)"
+Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmappedEntries.Count)"
+Write-Output 'Living Codex foundation: Steps 1-12 invariants checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

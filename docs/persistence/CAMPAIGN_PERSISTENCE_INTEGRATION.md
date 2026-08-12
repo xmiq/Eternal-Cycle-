@@ -225,6 +225,8 @@ Persistence cannot create a Skill from repeated text, copy both source and fused
 
 ## Monster Evolution Interface
 
+Campaign records may reference a configured [Living Codex](../gm-living-codex/README.md) stable ID, Codex Version, and explicit Campaign Divergence. They do not copy reusable authority into campaign persistence or let Codex revisions silently mutate Campaign Canon. Living Codex migrations and campaign Save Transactions remain separate dependency-closed operations even when they use the same SQLite or Google Drive adapters.
+
 [Monster Evolution](../monster-evolution/README.md) owns species identity, ecological and evolutionary pressures, stages, branches, hidden conditions, mutations, adaptation, hybridization, apex outcomes, extinction, replacement, and Soul interactions.
 
 Persistence records current Species References, forms, lineages, populations, local observations, evidence, transition events, ecological dependencies, hidden-condition information boundaries, and extinction or replacement history.

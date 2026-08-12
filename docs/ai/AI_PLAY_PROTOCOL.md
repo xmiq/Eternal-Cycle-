@@ -148,6 +148,7 @@ When a participant pauses, rewinds, corrects, or changes presentation preference
 
 ## Related Documents
 
+- [GM Living Codex](../gm-living-codex/README.md) - consult before creating reusable species, variants, or Evolution structures; adoption remains campaign-specific.
 - [AI Session Start](AI_SESSION_START.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)

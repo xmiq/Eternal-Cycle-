@@ -62,6 +62,10 @@ An established campaign fact can describe what happened without creating a new u
 
 ## Campaign State
 
+### Reusable Design Authority
+
+The separately deployed [GM Living Codex](../gm-living-codex/README.md) sits below Eternal Cycle rules and above campaign adoption for reusable species, variants, and Evolution designs. It is not campaign state. The GM consults it before duplicating reusable design, while Campaign Configuration and Campaign Canon determine whether an entry exists, differs, or is known in one campaign. Codex revisions and campaign saves use separate transactions and never overwrite one another silently.
+
 [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) is the canonical owner of the structured state graph, current State Claims, required Read Sets, Pending Session changes, numerical provenance, unknown handling, and Snapshots summarized here.
 
 **Campaign state** is the changing play-specific content held by an external Campaign Record. The repository defines how such information is interpreted; it never stores the live information itself. Conversation context may supplement this record and may not silently override it.

@@ -15,6 +15,9 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 
 ## Before Session
 
+- [ ] If configured, verify the adopted Codex Version separately from Repository and Campaign versions.
+- [ ] Treat Codex entries as reusable design, not campaign presence or player knowledge.
+
 - [ ] Exact Repository Version, Campaign Version, and active Save Point are known.
 - [ ] Rules Profile and Campaign Canon are loaded.
 - [ ] Save Index and Current Session are loaded.
@@ -49,6 +52,9 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] The player retains the next deliberate choice.
 
 ## After a Completed Gameplay Interaction
+
+- [ ] Keep GM Living Codex migrations separate from campaign Save Transactions.
+- [ ] When narration depends on a new Codex revision, require its full save and read-back before campaign adoption.
 
 - [ ] The semantic interaction boundary is complete.
 - [ ] Save capability is declared as writer, proposal only, read only, or unavailable.

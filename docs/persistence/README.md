@@ -25,6 +25,8 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Foundational Boundary
 
+The [GM Living Codex](../gm-living-codex/README.md) is an adjacent, separately persisted reusable-design authority. A campaign may reference an adopted Codex Version, stable entry ID, and explicit divergence, but Codex records never become Campaign State and campaign facts never rewrite the Codex automatically.
+
 - The **World Engine** simulates reality.
 - The **Campaign Persistence Engine** remembers established reality.
 - The **GM Toolkit** reads and updates that memory while applying canonical rules.

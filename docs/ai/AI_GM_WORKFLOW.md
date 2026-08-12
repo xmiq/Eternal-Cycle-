@@ -33,7 +33,7 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 
 ### 1. Establish the operating authority
 
-1. Identify the exact Repository Version and Campaign Version.
+1. Identify the exact Repository Version and Campaign Version, plus the configured Codex Version when the campaign uses the GM Living Codex.
 2. Load the Campaign Canon or Rules Profile.
 3. Confirm the active Save Point, Current Session state, open migrations, validation warnings, and unresolved conflicts.
 4. Confirm which participant or interface may authorize play, rulings, record access, saves, and corrections.
@@ -84,6 +84,8 @@ Preparing text does not determine when it may be delivered. The selected AI Exec
 At the semantic boundary of every completed Gameplay Interaction, follow [AI Save Protocol](AI_SAVE_PROTOCOL.md). Determine the Affected Set, stage one owner-routed Session Delta, append the required Session, Timeline, and Campaign History records, validate the candidate, and activate atomically when authorized.
 
 Do not continue dependent adjudication while the change exists only in narration, conversation context, or uncommitted model memory.
+
+A proposed reusable Codex addition is not part of the campaign Save Transaction. Persist it through the [Living Codex full-save protocol](../gm-living-codex/PERSISTENCE_MODEL.md#full-save-protocol) only when GM-approved. If durable narration depends on the new Codex revision, validate and deploy that revision before the campaign transaction that adopts it; otherwise record a campaign-local divergence and defer Codex promotion.
 
 ### 9. Re-enter or hand off
 

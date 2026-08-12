@@ -45,6 +45,7 @@ These documents sequence existing owners. They do not replace them.
 | Question | Canonical owner |
 | --- | --- |
 | What rules and mechanics exist? | the applicable gameplay document under `docs/` together with accepted governance |
+| What reusable GM-approved species or Evolution design exists? | the separately deployed [GM Living Codex](../gm-living-codex/README.md) |
 | What duties and limits apply to the GM? | [GM rules](../gm/README.md) |
 | What is currently true in one campaign? | the external Campaign Record under the [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) |
 | Which information may reach which observer? | [Truth Layers](../persistence/TRUTH_LAYERS.md) |
@@ -59,6 +60,7 @@ An AI-generated summary, cached context, retrieval result, prediction, or narrat
 An AI GM must:
 
 - search the repository before inventing a material rule;
+- consult the configured Living Codex before creating a materially reusable species, variant, or Evolution design, without treating that design as campaign fact;
 - load the Save Index and the material Read Set before adjudication;
 - distinguish Repository Canon, Campaign Canon, established state, history, knowledge, Research, theories, rumours, Secrets, and Meta;
 - preserve player ownership of deliberate player-character intent;
@@ -78,4 +80,5 @@ These are canonical operating procedures, but they grant no gameplay effect. Fol
 - [Documentation Map](../README.md)
 - [GM Rules Index](../gm/README.md)
 - [Campaign Persistence Engine Index](../persistence/README.md)
+- [GM Living Codex Index](../gm-living-codex/README.md)
 - [Template Index](../../templates/README.md)

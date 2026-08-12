@@ -144,6 +144,10 @@ When narration conflicts with persistence, stop relying on the conflicting wordi
 
 ## Rules Authority and Persistence Authority
 
+### Living Codex Boundary
+
+The [GM Living Codex](../gm-living-codex/README.md) is not another campaign Truth Layer and does not enter the campaign-fact hierarchy. It supplies reusable design below Repository Canon. Once a campaign adopts an entry, Campaign Configuration records the selected Codex Version and Campaign Canon owns presence and divergences. A later Codex revision does not silently migrate or overwrite that campaign.
+
 The two authority models answer different questions.
 
 | Question | Owner |
