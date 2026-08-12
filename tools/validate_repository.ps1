@@ -270,14 +270,14 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, FR-014, and the refined remaining scope of FR-015.',
+    '**Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, and the refined remaining scope of FR-015.',
     '- [ ] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [ ] **FR-004 — Life Archive and Old-Soul Indexing**',
     '- [ ] **FR-005 — Cross-Embodiment Skill Transfer**',
     '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
     '- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
-    '- [ ] **FR-014 — Autonomous Registry**',
+    '- [x] **FR-014 — Autonomous Registry**',
     '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
     '- [∞] **Future Revisions**',
     'Phase 12 does not complete because current objectives pass validation',
@@ -499,7 +499,7 @@ else {
         'One mutable canonical fact has exactly one authoritative logical owner.',
         'Non-Autonomous Entity Identity Anchor',
         'The player is external to the fiction',
-        'Persistent independently operating entities and systems belong to the future FR-014 Autonomous Registry.',
+        'Persistent independently operating entities and systems belong to the [Autonomous Registry](AUTONOMOUS_REGISTRY.md).',
         'Current Location Invariant',
         'Relationship Invariant',
         'Species and Individual Boundary',
@@ -510,6 +510,33 @@ else {
     )) {
         if ($canonicalOwnership -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Canonical Data Ownership lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$autonomousRegistryPath = Join-Path $rootPath 'docs/persistence/AUTONOMOUS_REGISTRY.md'
+if (-not (Test-Path -LiteralPath $autonomousRegistryPath)) {
+    Add-ValidationError 'Missing Autonomous Registry contract.'
+}
+else {
+    $autonomousRegistry = Get-Content -Raw -LiteralPath $autonomousRegistryPath
+    foreach ($requiredText in @(
+        'One continuing subject has one authoritative identity anchor.',
+        'An **Autonomous Model**',
+        'An **Autonomous Individual**',
+        'Directed',
+        'Independent Agent',
+        'Creator, Controller, and assignment issuer are separate relations.',
+        'Backup-Restored',
+        'each continuing descendant receives a distinct Autonomous ID;',
+        'An Individual has conceptual quantity one.',
+        'Last Confirmed State and Uncertainty',
+        'This subsystem does not implement FR-015 reincarnation memory.',
+        'This reusable repository performs no populated campaign migration.',
+        'FR-011 Compatibility'
+    )) {
+        if ($autonomousRegistry -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Autonomous Registry lacks required invariant: $requiredText"
         }
     }
 }
@@ -565,6 +592,7 @@ Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmap
 Write-Output 'Living Codex foundation: Steps 1-13 invariants checked'
 Write-Output 'Simulation Architecture: three layers and identity/knowledge boundaries checked'
 Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundaries checked'
+Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

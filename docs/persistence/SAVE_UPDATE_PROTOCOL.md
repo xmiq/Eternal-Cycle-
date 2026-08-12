@@ -349,6 +349,12 @@ Record:
 
 Proximity, repeated dialogue, gifts, danger, or elapsed time grants no automatic trust or affection. Record the participants' interpretations and actual causal event.
 
+### Autonomous Registry
+
+When an interaction involves an autonomous subject, determine whether Registry-owned identity, autonomy, Controller assignment, operational assignment, model or upgrade lineage, memory continuity, network membership, independence or personhood claim, or last-confirmed state changed. Route placement, condition, capabilities, Inventory, Relationships, Infrastructure, Projects, and history to their own authoritative domains.
+
+Preserve unknown current state separately from the last Confirmed Report. Individual quantity remains one; bounded Group quantity changes require numerical traces, and promotion to individual identity updates the Group and new Individual in one Affected Set. Significant creation, restoration, reconstruction, fork, upgrade, Controller, and independence events append to Timeline or Campaign History as appropriate.
+
 ### Knowledge and Secrets
 
 For every information effect, record:

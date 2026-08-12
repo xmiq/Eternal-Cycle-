@@ -4567,3 +4567,35 @@ Stored Derived Data retained for efficient retrieval with source identity, sourc
 ## Historical Snapshot
 
 A provenance-bearing record of what was established at a specific past event, interval, transaction, or version. It is authoritative about that historical claim but does not own mutable current state.
+
+## Autonomous Registry
+
+The Campaign Persistence domain that owns stable identity and autonomy-specific state for persistent independently operating entities and systems while referencing other authoritative domains for capabilities, resources, Relationships, Infrastructure, placement, and history.
+
+## Autonomous ID
+
+The permanent campaign identity of one Autonomous Individual or bounded Autonomous Group. It survives ordinary reassignment, movement, repair, upgrades, Controller changes, shutdown, and network changes.
+
+## Autonomous Model
+
+A reusable construction, summoning, animation, body, or operating design referenced by Autonomous Individuals or Groups. It is not itself an individual identity.
+
+## Autonomous Individual
+
+One persistent autonomous Entity with its own Autonomous ID and conceptual quantity one.
+
+## Autonomous Group
+
+A bounded aggregate of homogeneous autonomous units used while member-level continuity is immaterial. A distinct member is promoted to an Autonomous Individual through a traceable transaction.
+
+## Autonomy Classification
+
+A qualitative scoped description of operating independence from Directed through Independent Agent. It does not by itself establish sapience, personhood, morality, legal status, or Soul possession.
+
+## Autonomous Memory Continuity
+
+A provenance-bearing claim describing whether one autonomous Entity's operational memory is continuous, restored, partial, fragmented, reset, copied, forked, or unknown across repair, replacement, copying, or reconstruction. It is distinct from reincarnation memory.
+
+## Confirmed Report
+
+A sourced historical observation of bounded autonomous facts with observation time, report time, and uncertainty. It does not automatically establish current state after contact is lost.

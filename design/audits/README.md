@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-014 Autonomous Registry Implementation Audit](FR_014_AUTONOMOUS_REGISTRY_AUDIT.md) - autonomous identity, Models, Groups, Controllers, memory and upgrade lineage, networks, uncertainty, migration, templates, and validation.
 - [FR-012 Canonical SQL Ownership Implementation Audit](FR_012_CANONICAL_SQL_OWNERSHIP_AUDIT.md) - mutable-fact ownership, persistent Entity identity anchors, domain normalization, derived and historical classifications, schema impact, and future-objective boundaries.
 - [Simulation Architecture Integration Audit](SIMULATION_ARCHITECTURE_AUDIT.md) - three-layer ownership, Entity/Controller/Perspective separation, truth filtering, persistence extension points, and deferred Knowledge/Autonomous Registry scope.
 - [Living Codex Steps 1-12 Consolidation Audit](LIVING_CODEX_STEPS_1_12_AUDIT.md) - implementation ownership, authority, persistence, Step 12 invariants, Step 13 boundary, and integration readiness.

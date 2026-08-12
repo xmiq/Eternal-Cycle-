@@ -42,6 +42,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Souls and Incarnations | [Soul Continuity Record](SOUL_CONTINUITY_TEMPLATE.md), [Soul Avatar Profile](SOUL_AVATAR_TEMPLATE.md), [Soul Weapon Record](SOUL_WEAPON_TEMPLATE.md) | one Soul, distinct lives, protected structures, current access, Avatars, and Weapon Soul relationships |
 | Companions | [Character Record](CHARACTER_TEMPLATE.md), [Relationship Record](RELATIONSHIP_TEMPLATE.md) | autonomous person plus campaign role and relationships; companionship is not ownership |
 | Actors | [Character Record](CHARACTER_TEMPLATE.md) | NPC and other agentive-person records use the same identity, embodiment, agency, knowledge, and capability boundaries |
+| Autonomous Registry | [Autonomous Registry Record](AUTONOMOUS_REGISTRY_TEMPLATE.md) | persistent autonomous Individuals and bounded Groups, Models, Controllers, autonomy, reconstruction, lineage, networks, assignment, uncertainty, and last-confirmed state |
 | Relationships | [Relationship Record](RELATIONSHIP_TEMPLATE.md) | identity, meetings, dimensions, commitments, shared work, change, death, and Reincarnation |
 | Species | [Species Reference](SPECIES_TEMPLATE.md), [Evolution Tree](EVOLUTION_TREE_TEMPLATE.md) | observed Species, forms, populations, lineages, routes, local names, and uncertainty |
 | World | [World-State Record](WORLD_STATE_TEMPLATE.md) | top-level graph and typed specialist references |
@@ -66,6 +67,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | --- | --- |
 | Generic canonical system proposal | [System Template](SYSTEM_TEMPLATE.md) |
 | Current person or actor | [Character Record Template](CHARACTER_TEMPLATE.md) |
+| Persistent autonomous individual or bounded group | [Autonomous Registry Record Template](AUTONOMOUS_REGISTRY_TEMPLATE.md) |
 | Capability assessment | [Development Profile Template](DEVELOPMENT_PROFILE_TEMPLATE.md) |
 | Bounded learned capability | [Skill Record Template](SKILL_TEMPLATE.md) |
 | Human social framework | [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) |

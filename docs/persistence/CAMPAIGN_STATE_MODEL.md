@@ -105,6 +105,7 @@ The [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md
 | Persistent Soul identity and incarnation links | Souls and Incarnations |
 | Recurring accompanying actors and party role | Companions |
 | NPC and other actor continuity | Actors |
+| Persistent autonomous identity, autonomy, Controllers, model and memory lineage, assignments, networks, and last-confirmed state | Autonomous Registry |
 | Trust, hostility, promises, debts, bonds, dependencies, shared history | Relationships |
 | Species references, forms, populations, known routes, local uncertainty | Species |
 | World domains, Ages, regions, pressures, active processes | World |
@@ -146,6 +147,7 @@ For every material interaction:
 | Bodily capability or harm | body condition, Species, Development, Skills, active effects, equipment, environment |
 | Soul access or Reincarnation | Soul and Incarnation records, Final Death or Interlife state, relevant Soul systems, Timeline, world candidate context |
 | Another person or companion | Actor or Companion, Relationships, Observer View, location, current activity, commitments |
+| Autonomous entity or system | Autonomous Registry, Model reference, Controller assignments, authoritative placement and condition, current assignment, last Confirmed Report, and only relevant Relationship, Network, capability, resource, maintenance, Infrastructure, Perspective, Knowledge, or Timeline records |
 | Social response | Relationships, actor Knowledge, relevant faction or institution, authority, reputation, Soul Titles where perceivable |
 | Monster form or behavior | Species, form, ecology, Evolution history, Development, Skills, Knowledge, location |
 | Item use or transfer | Inventory and Custody, item or Weapon Soul identity, condition, access, ownership or claim, location |

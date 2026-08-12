@@ -184,20 +184,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
 - **Authorized roadmap link:** [FR-011 — GM/AI Context Assembly and Continuity Loading](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-014 - Autonomous Registry
-
-- **Status:** Roadmapped
-- **Issue:** Independently operating campaign entities and systems may be scattered across infrastructure, inventory, relationships, world state, and ad hoc records, making identity, assignment, memory continuity, network state, maintenance, and autonomous action difficult to preserve consistently.
-- **Affected systems:** Campaign Persistence Engine, GM Toolkit, World Engine, AI Save Protocol, SQLite persistence, Google Drive persistence, relationships, infrastructure, summons, familiars, undead, constructs, remote bodies, and autonomous infrastructure.
-- **Gameplay impact:** Autonomous units may be forgotten, duplicated, treated as models rather than persistent identities, lose assignments or network relationships, or be rebuilt without a clear distinction between restoration and replacement.
-- **Evidence needed:** Owner-mediated gameplay evidence involving independently acting units or systems whose identities, groups, models, memory continuity, condition, assignments, networks, maintenance needs, upgrade lineage, or personhood state cannot be represented cleanly in the current structured save.
-- **Approved direction:** Define a separate registry for persistent independently operating entities and systems, preserving stable identity, model-versus-individual distinction, Controller, autonomy, groups, condition, location, assignment, capabilities, networks, resource and maintenance needs, creation and upgrade lineage, memory continuity, personhood, reporting, and provenance.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; no campaign entities are migrated by this planning update.
-- **Authorized roadmap link:** [FR-014 — Autonomous Registry](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-- **Architecture dependency:** Any future registry must preserve the Entity, Controller, Perspective, autonomy, stable-identity, and knowledge boundaries in the [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md).
-
 ### FR-015 - Memory Continuity, Fading, and Recall
 
 - **Status:** Roadmapped
@@ -217,11 +203,26 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-004, FR-005, FR-010, FR-011, FR-014, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-004, FR-005, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
 
 FR-002, FR-003, FR-006, FR-007, FR-008, and FR-009 remain unpromoted candidates. A detailed Knowledge System beyond FR-015's approved memory scope also remains unpromoted.
 
 ## Closed
+
+### FR-014 - Autonomous Registry
+
+- **Status:** Closed
+- **Issue:** Independently operating campaign entities and systems could be scattered across Infrastructure, Inventory, Relationships, world state, and ad hoc records, obscuring identity, assignment, memory continuity, networks, maintenance, and autonomous action.
+- **Affected systems:** Campaign Persistence Engine, GM Toolkit, World Engine, AI Save Protocol, SQLite persistence, Relationships, Infrastructure, summons, familiars, undead, constructs, remote bodies, and autonomous Infrastructure.
+- **Gameplay impact:** Autonomous units could be forgotten, duplicated, treated as Models rather than identities, lose assignments or network relations, or be reconstructed without distinguishing restoration from replacement.
+- **Evidence needed:** Owner-mediated gameplay evidence involving autonomous identities, Groups, Models, memory continuity, condition, assignments, networks, maintenance, upgrades, or personhood state.
+- **Approved direction:** Define a separate registry preserving stable identity, Model-versus-Individual distinction, Controller, autonomy, Groups, references to condition and location, assignments, capabilities, networks, requirements, creation and upgrade lineage, memory continuity, personhood claims, confirmed reporting, and provenance.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the canonical Registry contract, blank template, persistence Read and Affected Set integration, migration-audit procedure, terminology, decisions, and structural validation. No campaign entities were migrated.
+- **Authorized roadmap link:** [FR-014 — Autonomous Registry](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Autonomous Registry](../docs/persistence/AUTONOMOUS_REGISTRY.md), [Autonomous Registry Template](../templates/AUTONOMOUS_REGISTRY_TEMPLATE.md), and [FR-014 Implementation Audit](audits/FR_014_AUTONOMOUS_REGISTRY_AUDIT.md)
+- **Architecture dependency:** [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 
 ### FR-012 - Canonical SQL Ownership and Anti-Duplication
 

@@ -289,6 +289,12 @@ It preserves stable identity, Person Basis, current embodiment, Observer View re
 
 Actors, Companions, and Player State do not independently own duplicate identities. Persistent non-autonomous beings share the Entity identity anchor defined by [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md). Persistent autonomous entities and systems remain reserved for FR-014 rather than being forced into Actors.
 
+## Autonomous Registry
+
+The [Autonomous Registry](AUTONOMOUS_REGISTRY.md) owns persistent autonomous identity and autonomy-specific state for independently operating entities and systems. It distinguishes Model from Individual, supports bounded Groups, preserves Controller separation, reconstruction and memory lineage, networks, assignments, and last-confirmed uncertainty, and references specialist owners for all other mutable facts.
+
+An autonomous subject cannot simultaneously hold a second ordinary Entity identity anchor. Infrastructure that is autonomous keeps Infrastructure state under Infrastructure and references one Autonomous ID for autonomy-specific identity and control.
+
 ## Relationships
 
 Relationships owns durable intersubjective and organizational relationship records, including their participants, history references, present dimensions, commitments, conflicts, and unresolved issues.

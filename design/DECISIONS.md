@@ -4921,3 +4921,27 @@ Autobiographical memory may persist across reincarnations but fades naturally ac
 ## D-1230 — Repeated Data Must Declare a Non-Competing Classification
 
 Information repeated outside its Authoritative Record Owner is a stable Reference, Derived value, Cache, or Historical Snapshot. Derived and cached data identify sources and freshness; Historical Snapshots identify their past scope. None may silently become a competing owner of mutable current state.
+
+## D-1231 — Autonomous Model and Individual Identity Are Distinct
+
+An Autonomous Model is a reusable design; an Autonomous Individual is one persistent Entity. Shared design, components, creator, or copied memory does not establish shared identity. Restoration retains identity only through established continuity, while reconstruction as a new subject receives a new Autonomous ID.
+
+## D-1232 — Autonomous Memory and Fork Lineage Are Explicit
+
+Autonomous memory continuity records source, coverage, gaps, copying, restoration, fragmentation, reset, and divergence where relevant. Simultaneous copies or forks receive distinct identities and preserve common ancestry; memory continuity informs but does not solely define personhood.
+
+## D-1233 — Autonomy Control Independence and Personhood Are Separate
+
+Operational autonomy, Controller assignment, independence, sapience, and personhood are related but distinct claims. Creator is not automatically Controller, Controller change does not replace Entity identity, and high autonomy does not prove personhood.
+
+## D-1234 — Autonomous Groups Promote Individuals Without Duplication
+
+Homogeneous autonomous units may use bounded Group records while individual continuity is immaterial. A member that becomes distinct receives a stable Autonomous ID linked to its source Group and promotion event, and the Group quantity changes once in the same transaction.
+
+## D-1235 — Autonomous Uncertainty Preserves Last Confirmed State
+
+The last Confirmed Report is historical evidence, not guaranteed current state. Missing contact does not establish destruction, success, condition, location, loyalty, or Controller status; unknown present claims remain unknown until Canon establishes them.
+
+## D-1236 — Autonomous Infrastructure Uses Cross-Domain Ownership
+
+Infrastructure owns physical and operational infrastructure state. The Autonomous Registry owns autonomous identity, autonomy, Controller, memory, and lineage claims for autonomous Infrastructure. Stable references connect them without duplicating mutable facts.

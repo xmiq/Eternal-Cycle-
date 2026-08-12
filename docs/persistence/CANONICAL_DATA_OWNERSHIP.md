@@ -47,7 +47,7 @@ The player is external to the fiction and is not a character row merely because 
 
 ### Autonomous Reservation
 
-Persistent independently operating entities and systems belong to the future FR-014 Autonomous Registry. FR-012 reserves that ownership domain but does not define its schema or create its records.
+Persistent independently operating entities and systems belong to the [Autonomous Registry](AUTONOMOUS_REGISTRY.md). FR-012 reserves that ownership domain, and FR-014 defines its storage-neutral contract without creating populated campaign records.
 
 An ordinary Entity record may reference an autonomous subject when interaction requires it, but cannot become a second authoritative identity. If an Entity crosses the autonomous boundary, a controlled migration or reclassification preserves its stable identity and retires the former category assignment. A category change must never leave two canonical identities for one continuing Entity.
 
@@ -77,7 +77,7 @@ An ordinary Entity record may reference an autonomous subject when interaction r
 | Current world truth and campaign facts | owning Campaign State domain under Campaign Canon | Knowledge, Research, Secrets, narration | Canon is claim-specific, not one duplicate world-fact blob. |
 | Character Knowledge and belief | Knowledge records scoped to the knowing Entity | Perspective-filtered interfaces, Research, narration | Does not rewrite world truth. |
 | GM Secrets and protected preparation | Secrets with references to factual owners and access rules | authorized GM views only | A secret is not a second world truth. |
-| Persistent autonomous entity or system state | reserved FR-014 Autonomous Registry | Entities, Controllers, locations, networks, views | Not implemented by FR-012. |
+| Persistent autonomous entity or system state | Autonomous Registry | Entities, Controllers, locations, networks, views | FR-014 owns autonomy-specific identity and state without duplicating specialist domains. |
 | Scene packets, dashboards, summaries, indexes, and retrieval aids | no canonical owner; they are Derived or Cache records | GM and player interfaces | Source IDs, source version, freshness, and audience are required. |
 
 ## Reference Rules
@@ -182,7 +182,7 @@ Conflicting ownership is a validation failure. Validation reports the owners and
 - **FR-004:** Life Summaries will index and historically summarize owner records; they cannot become current-state owners.
 - **FR-010:** Long-Horizon Summaries will preserve compressed established history and references; they cannot fabricate or override detailed Canon.
 - **FR-011:** Context Assembly can follow stable IDs, owner declarations, and typed reference paths, while every context packet remains Derived or Cache data.
-- **FR-014:** the Autonomous Registry receives a reserved, non-overlapping owner domain and must preserve identity across category changes.
+- **FR-014:** the [Autonomous Registry](AUTONOMOUS_REGISTRY.md) occupies the reserved, non-overlapping owner domain and preserves identity across category changes.
 
 No mechanics or schemas for those objectives are implemented here.
 
@@ -196,7 +196,7 @@ No mechanics or schemas for those objectives are implemented here.
 - Never maintain independent current-location truths in both subject and place records.
 - Never let a summary, index, cache, view, transcript, or narration overwrite its source.
 - Never erase legitimate Historical Snapshots as duplication.
-- Never force autonomous subjects into ordinary character ownership before FR-014 defines their domain.
+- Never force autonomous subjects into ordinary character ownership or duplicate their Registry identity.
 - Never perform campaign migration inside this repository.
 
 ## Related Documents

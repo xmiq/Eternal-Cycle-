@@ -528,6 +528,26 @@ Detect:
 - Infrastructure functioning without required people, knowledge, resources, maintenance, location, or source;
 - destroyed or inaccessible infrastructure still granting capability.
 
+## Autonomous Registry Validation
+
+Detect:
+
+- duplicate Autonomous IDs or one continuing subject active under both ordinary Entity and Autonomous Registry ownership;
+- Model, Individual, and Group identity collapsed or unresolved;
+- creator silently treated as current Controller;
+- unresolved Controller, placement, assignment, Model, lineage, Network, Infrastructure, Relationship, capability, requirement, or event references;
+- Individual quantity other than one;
+- Group quantity changes without traces or promoted Individuals still counted anonymously;
+- restoration reusing identity without continuity evidence or reconstruction silently inheriting identity;
+- copies or forks sharing one current identity or lacking source and divergence provenance;
+- memory-continuity claims without source, coverage, gap, or uncertainty;
+- network membership treated as automatic shared control, Perspective, knowledge, or memory;
+- last-confirmed state silently treated as verified current state;
+- unknown autonomous state converted into destruction, completion, location, condition, loyalty, or control without Canon;
+- autonomous Infrastructure duplicating Infrastructure-owned physical or operational state.
+
+Report ambiguous identity, continuity, and category conflicts for owner review. Validation never repairs, merges, forks, promotes, destroys, or reclassifies autonomous subjects automatically.
+
 ## Projects and Mysteries Validation
 
 Verify:
