@@ -217,11 +217,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Implementation reference:** [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - **Authorized roadmap link:** [FR-015 — Memory Continuity, Fading, and Recall](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
+### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
+
+- **Status:** Roadmapped
+- **Issue:** A companion may be Soul-bound without canonical rules distinguishing persistent fate, eventual reunion, current-incarnation identity, recognition, memory, and current Relationship state across asynchronous deaths and radically different lives.
+- **Affected systems:** Souls, Reincarnation, Final Death, Interlife, Soul Resonance, companions, Relationships, Campaign Persistence, Timeline, Campaign History, FR-002, FR-004, FR-009, FR-012, and FR-015.
+- **Gameplay impact:** Without a bounded model, a bond may be forgotten across lives, mistaken for mind control or inherited romance, used as an unrestricted destination selector, duplicated per incarnation, or burden the GM with a prewritten destiny route.
+- **Evidence needed:** Cross-life companion cases involving asynchronous lifespans, delayed reunion, different worlds or species, uncertain recognition, changed social roles, conflict, multiple independent bonds, and routes that remain unresolved until later play.
+- **Approved direction:** Soul binding establishes a persistent fate relation between distinct Souls. Fate guarantees eventual reunion, but the GM controls timing, route, circumstances, and Reincarnation adjudication under existing Canon. Reunion may be delayed and does not guarantee recognition or autobiographical memory. Current incarnations remain distinct people; current Relationships are not inherited and no affection, obedience, trust, loyalty, attraction, or agreement is forced. The meaningful long-term arc trends net positive without requiring comfort or conflict-free lives. The base bond grants no automatic telepathy, tracking, shared death, resurrection, Soul Space transfer, communication, or other unrelated power. Each bond is independent; multiple bonds do not imply bonds among every participant. Persistence places bond identity at the Soul/fate level, current Relationship state with Relationships, incarnation identity with Entities, manifestations with the future Life Archive, and significant events with Timeline and Campaign History. An unknown reunion route remains unresolved rather than fabricated.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update creates no mechanics, schema, migration, or campaign state.
+- **Authorized roadmap link:** [FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Architecture dependencies:** FR-002 candidate adjudication, FR-004 Life Archive indexing, FR-009 world-access discretion, FR-012 canonical ownership, and FR-015 memory continuity.
+
 ## Roadmapped
 
-FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
 
-All currently known FR-001 through FR-015 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
 

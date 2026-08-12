@@ -4977,3 +4977,27 @@ Knowledge of a world, contact or a World-Gate Channel, a valid travel route, and
 ## D-1244 — Reincarnation Wishes Inform but Do Not Command Adjudication
 
 Player wishes about world, environment, species, embodiment, proximity, or kind of life are meaningful input to Reincarnation adjudication. They do not guarantee an outcome. The GM determines valid destination possibilities under existing Reincarnation constraints, Soul and world state, elapsed Interlife time, cosmology, embodiment routes, and relevant established player action.
+
+## D-1245 — Soul-Bound Companions Retain Distinct Souls and Incarnations
+
+A Soul-bound companion bond is a persistent metaphysical fate relation between distinct Souls. It does not merge identity. Each Soul continues through independent embodiments, deaths, lives, development, and current-incarnation agency.
+
+## D-1246 — Soul-Bound Fate Guarantees Reunion While the GM Owns the Journey
+
+Fate guarantees that Soul-bound companions eventually reunite, but it does not determine an immediate meeting, destination, distance, timer, teleport, or spawn arrangement. The GM establishes timing, route, circumstances, and Reincarnation adjudication through existing Canon and world causality. The exact route may remain unresolved until play requires it.
+
+## D-1247 — Reunion Recognition Memory and Relationship Are Separate
+
+Reunion does not guarantee recognition, and recognition does not grant autobiographical memory. FR-015 owns memory continuity. Current incarnations are distinct people whose Relationships develop through current-life events; a prior bond does not force affection, obedience, trust, loyalty, attraction, social role, or agreement.
+
+## D-1248 — Soul-Bound Fate Is Net Positive Without Requiring Comfort
+
+Across its meaningful long-term arc, a Soul-bound relationship produces a net-positive consequence for its participating Souls. Individual meetings and lives may involve rivalry, hostility, pain, separation, sacrifice, difficult truths, or opposition. Net positive is a qualitative GM principle, not a score and not a guarantee that every interaction feels beneficial.
+
+## D-1249 — Soul Binding Grants No Unrelated Capability Package
+
+The base fate bond grants no automatic telepathy, tracking, communication, shared death, resurrection, Soul Space transfer, or knowledge of another participant's condition. Multiple bonds are independently established and do not imply bonds among other participants.
+
+## D-1250 — Soul Bond and Current Relationship Have Separate Owners
+
+The persistent bond belongs to the Soul/fate domain. Current interpersonal state belongs to Relationships; current identity and embodiment belong to the Entity and incarnation owners; life-specific manifestations belong to the future Life Archive; and significant meetings, separations, recognition, and changes belong to Timeline and Campaign History. These records reference one bond identity rather than recreating it per life.

@@ -270,7 +270,7 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, and the refined remaining scope of FR-015.',
+    '**Approved pending objectives:** FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
     '- [ ] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [ ] **FR-002 — Reincarnation Candidate Selection**',
     '- [ ] **FR-003 — Soul Depth Information Visibility**',
@@ -285,6 +285,7 @@ foreach ($requiredText in @(
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
     '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
+    '- [ ] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**',
     '- [∞] **Future Revisions**',
     'Phase 12 does not complete because current objectives pass validation',
     'Phase 13 — Future Revisions'
