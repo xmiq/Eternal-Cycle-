@@ -66,12 +66,14 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Authorized GM interfaces:** `<scope and visibility>`
 - **Participant interfaces:** `<player-facing views and permissions>`
 - **Derived View registry:** `<non-authoritative outputs and freshness>`
+- **Ownership map reference:** `<canonical ownership contract and implementation mapping>`
 - **Branch or concurrency state:** `<authorized branches and merge requirements>`
 - **Storage integrity metadata:** `<hashes, manifests, or implementation-specific checks>`
 
 ## Validation Notes
 
 - [ ] Every registered module has one authoritative owner and a resolvable locator.
+- [ ] Every mutable fact family maps to one logical owner; references, caches, summaries, and Historical Snapshots are classified separately.
 - [ ] Versions are explicit and not collapsed into one number.
 - [ ] The active Repository Version matches Campaign Canon or has a pending migration.
 - [ ] No module contents are duplicated into the index.

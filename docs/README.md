@@ -161,6 +161,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Campaign Persistence Philosophy](persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) - persistence as causal memory, its relationship to the World Engine and GM Toolkit, storage neutrality, and foundational safeguards.
 - [Persistence Authority](persistence/PERSISTENCE_AUTHORITY.md) - the authority chain from Repository Canon through Current Narration, including conflict routing and explicit correction.
 - [Structured Persistence Architecture](persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral modules, common record contracts, stable identities, typed references, ownership, and dependency closure.
+- [Canonical Data Ownership](persistence/CANONICAL_DATA_OWNERSHIP.md) - one authoritative logical owner per mutable campaign fact, persistent Entity identity anchors, normalized domain ownership, reference and historical classifications, and the reserved autonomous boundary.
 - [Truth Layers](persistence/TRUTH_LAYERS.md) - ownership, visibility, updates, promotion, and migration for facts, knowledge, research, theories, rumours, secrets, and Meta.
 - [Persistence Levels](persistence/PERSISTENCE_LEVELS.md) - Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes with deletion, promotion, archival, and migration safeguards.
 - [Campaign State Model](persistence/CAMPAIGN_STATE_MODEL.md) - authoritative state graph, State Claims, required Read Sets, Session Deltas, numerical provenance, unknowns, and Snapshots.

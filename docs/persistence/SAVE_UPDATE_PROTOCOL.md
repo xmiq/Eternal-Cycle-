@@ -107,6 +107,8 @@ If a precondition fails, preserve the interaction as Pending Session material an
 
 The **Affected Set** is the smallest dependency-complete set of campaign claims and records that the interaction creates, changes, closes, supersedes, or materially references.
 
+Every proposed mutable fact is routed through [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md) before entering the Write Set. Writes to Derived Views, caches, summaries, or non-owning modules are rejected; the owner changes once, after which affected views are invalidated or regenerated.
+
 Build it in two passes.
 
 ### Direct Effects

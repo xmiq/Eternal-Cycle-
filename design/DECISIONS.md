@@ -4917,3 +4917,7 @@ Persistent independently operating entities and systems require an Autonomous Re
 ## D-1229 — Reincarnation Memory Fades and May Be Cue-Recovered
 
 Autobiographical memory may persist across reincarnations but fades naturally according to significance, reinforcement, elapsed time, and intervening lives; relevant cues may recover dormant memories. Skill-development familiarity and retained-development acceleration are distinct from declarative memory, and this direction does not authorize an exhaustive Knowledge Engine.
+
+## D-1230 — Repeated Data Must Declare a Non-Competing Classification
+
+Information repeated outside its Authoritative Record Owner is a stable Reference, Derived value, Cache, or Historical Snapshot. Derived and cached data identify sources and freshness; Historical Snapshots identify their past scope. None may silently become a competing owner of mutable current state.

@@ -11,6 +11,7 @@ A populated Location belongs in an external Campaign Record. This blank template
 - **Dependencies:** place identity, boundaries, access, environment, occupants, claims, infrastructure, Timeline, and evidence
 - **Extensions:** Settlements, Dungeons, World Gate endpoints, Infrastructure, Factions, ecology, and Research
 - **Consumers:** travel, encounters, world simulation, Inventory, Projects, Relationships, Timeline, Save Updates, and validation
+- **Placement ownership:** the campaign schema designates one authoritative current-placement relation; occupant lists here are Derived unless that relation is explicitly owned here
 - **Repository boundary:** no named current place, resident, route, claim, resource, hazard, or condition belongs here
 
 ## Usage Guidance
@@ -66,6 +67,7 @@ A populated Location belongs in an external Campaign Record. This blank template
 - [ ] Control, ownership, claim, authority, access, and knowledge remain separate.
 - [ ] Occupants remain distinct persons or populations.
 - [ ] Historical change is appended rather than resetting place identity without cause.
+- [ ] Occupant indexes agree with authoritative subject-placement relations and do not become competing current-location owners.
 - [ ] Every specialist condition links to its owner.
 
 ## Cross-References

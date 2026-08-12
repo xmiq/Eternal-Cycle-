@@ -8,6 +8,7 @@ A populated Relationship Record belongs outside the repository. This blank templ
 
 - **Template owner:** Relationships in the [Structured Persistence Architecture](../docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - **Primary semantic owner:** [Relationship Memory Engine](../docs/persistence/RELATIONSHIP_MEMORY_ENGINE.md)
+- **Ownership classification:** Authoritative for current Relationship identity, dimensions, commitments, and trajectory; participant sheets and summaries hold references or Derived Views only
 - **Dependencies:** stable participant identities, Timeline events, observer perspectives, commitments, communication, and evidence
 - **Extensions:** family, organizations, Soul Constellations, Weapon Soul bonds, employment, alliances, rivalry, and shared work
 - **Consumers:** Character and NPC records, Companions, Factions, Soul systems, Projects, Knowledge, continuity resolution, and validation
@@ -87,6 +88,7 @@ Record each direction or shared dimension separately.
 - [ ] Death or Reincarnation does not silently reset or restore the relationship.
 - [ ] Player and NPC agency remain intact; the record predicts no mandatory choice.
 - [ ] Duplicate relationships are merged only through authorized identity repair.
+- [ ] No participant, scene, faction, or summary record independently owns current trust, hostility, recognition, debt, or commitment values.
 
 ## Cross-References
 

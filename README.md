@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Feature Complete — Gameplay Validation Ongoing.** The active top-level roadmap stage is **Phase 12 — Gameplay Validation & Maintenance**. It has no currently promoted implementation objective; Future Revisions remains its owner-mediated rolling final item. This is not a Version 1.0, release-candidate, stable, or production-ready declaration.
+**Feature Complete — Gameplay Validation Ongoing.** The active top-level roadmap stage is **Phase 12 — Gameplay Validation & Maintenance**. It contains owner-approved pending objectives but no currently selected implementation objective; Future Revisions remains its owner-mediated rolling final item. This is not a Version 1.0, release-candidate, stable, or production-ready declaration.
 
 ## Core Pillars
 
@@ -80,6 +80,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md`](docs/persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) - persistence as causal memory rather than a storage format or variable snapshot.
 - [`docs/persistence/PERSISTENCE_AUTHORITY.md`](docs/persistence/PERSISTENCE_AUTHORITY.md) - campaign-fact authority from Repository Canon through Current Narration.
 - [`docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral campaign modules, record ownership, identity, references, and dependency closure.
+- [`docs/persistence/CANONICAL_DATA_OWNERSHIP.md`](docs/persistence/CANONICAL_DATA_OWNERSHIP.md) - authoritative ownership map for mutable campaign facts, identity anchors, normalized references, historical snapshots, and derived data.
 - [`docs/persistence/TRUTH_LAYERS.md`](docs/persistence/TRUTH_LAYERS.md) - canonical separation of facts, history, character knowledge, research, theories, rumours, secrets, and Meta.
 - [`docs/persistence/PERSISTENCE_LEVELS.md`](docs/persistence/PERSISTENCE_LEVELS.md) - canonical lifetimes for Repository, Soul, Historical, Campaign, Session, and Ephemeral records.
 - [`docs/persistence/CAMPAIGN_STATE_MODEL.md`](docs/persistence/CAMPAIGN_STATE_MODEL.md) - authoritative campaign state graph, claim provenance, read discipline, deltas, unknowns, and snapshots.

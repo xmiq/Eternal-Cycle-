@@ -373,6 +373,8 @@ Verify:
 - no storage timestamp, filename, branch, or application status decides canon;
 - governance decisions and playable rules do not conflict silently.
 
+Also verify the invariants in [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md): one Entity identity anchor per persistent non-autonomous subject, one owner for each current-placement claim, current Relationship dimensions only under Relationships, individual-to-Species references without copied reusable definitions, and no active identity duplicated across ordinary Entity ownership and the reserved autonomous domain. Stored Derived records expose source identity, source version, freshness, scope, and audience.
+
 An unresolved conflict between repository governance and playable rules is a repository-validation failure. An unresolved conflict between repository rules and a campaign claim routes through compatibility, Continuity Resolution, or Migration.
 
 ## State and Version Checks

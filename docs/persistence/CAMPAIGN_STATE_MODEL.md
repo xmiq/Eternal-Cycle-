@@ -10,6 +10,8 @@ It defines a logical model, not a save-file format or populated campaign.
 
 The structured Campaign State Graph is the authoritative representation of established campaign state.
 
+Each mutable claim in that graph resolves to exactly one logical owner under [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md). Graph connectivity does not authorize duplicate current-state values in multiple modules.
+
 Conversation context, narration, transcripts, summaries, model memory, and participant recollection may supplement it as evidence or navigation. They may never silently override it.
 
 Before adjudicating a material action, the GM reads the Save Index and the smallest complete set of relevant Player, Relationship, Species, Location, Project, Research, Timeline, and other owning records needed for the claim.

@@ -184,19 +184,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
 - **Authorized roadmap link:** [FR-011 — GM/AI Context Assembly and Continuity Loading](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-012 - Canonical SQL Ownership and Anti-Duplication
-
-- **Status:** Roadmapped
-- **Issue:** Broad template coverage may cause overlapping records, unclear write ownership, or excessive maintenance when instantiated in real campaigns.
-- **Affected systems:** Templates, structured persistence architecture, Save Update Protocol, validation, and campaign operations.
-- **Gameplay impact:** Users may duplicate facts, update the wrong record, or omit persistence because the record set is too costly to maintain.
-- **Evidence needed:** Storage-neutral campaign implementations using the full and reduced template sets, tracking duplicate claims, broken references, update time, unused fields, and validation findings.
-- **Approved direction:** Give every mutable canonical fact one authoritative logical owner. The canonical `characters` table or repository-equivalent Entity table anchors persistent player-relevant non-autonomous beings; normalized domain tables own related facts; summaries and context packets only reference, cache, or index them. FR-014 owns persistent autonomous entities, with controlled identity-preserving migration required across that boundary.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
-- **Authorized roadmap link:** [FR-012 — Canonical SQL Ownership and Anti-Duplication](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-014 - Autonomous Registry
 
 - **Status:** Roadmapped
@@ -230,11 +217,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-004, FR-005, FR-010, FR-011, FR-012, FR-014, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-004, FR-005, FR-010, FR-011, FR-014, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
 
 FR-002, FR-003, FR-006, FR-007, FR-008, and FR-009 remain unpromoted candidates. A detailed Knowledge System beyond FR-015's approved memory scope also remains unpromoted.
 
 ## Closed
+
+### FR-012 - Canonical SQL Ownership and Anti-Duplication
+
+- **Status:** Closed
+- **Issue:** Broad template coverage could cause overlapping records, unclear write ownership, or excessive maintenance when instantiated in real campaigns.
+- **Affected systems:** Templates, Structured Persistence Architecture, Save Update Protocol, validation, and campaign operations.
+- **Gameplay impact:** Users could duplicate facts, update the wrong record, or omit persistence because ownership was unclear.
+- **Evidence needed:** Storage-neutral campaign implementations using the full and reduced template sets, tracking duplicate claims, broken references, update time, unused fields, and validation findings.
+- **Approved direction:** Give every mutable canonical fact one authoritative logical owner. One Entity identity anchor represents each persistent player-relevant non-autonomous being; normalized domain owners hold related facts; summaries and context packets only reference, derive, cache, index, or preserve history. FR-014 owns persistent autonomous entities, with identity-preserving migration required across that boundary.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the canonical ownership map, persistence integrations, focused template clarifications, and structural repository validation.
+- **Authorized roadmap link:** [FR-012 — Canonical SQL Ownership and Anti-Duplication](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Canonical Data Ownership](../docs/persistence/CANONICAL_DATA_OWNERSHIP.md) and [FR-012 Implementation Audit](audits/FR_012_CANONICAL_SQL_OWNERSHIP_AUDIT.md)
 
 ### FR-013 - Lineage and Evolutionary Inheritance
 

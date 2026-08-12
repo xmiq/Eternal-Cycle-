@@ -7,13 +7,15 @@ The template is a logical contract. A campaign may divide it among files, databa
 ## Document Control
 
 - **Template owner:** [Campaign Persistence Engine](../docs/persistence/README.md)
-- **Primary record modules:** Player State for a player-controlled character; Actors for another character; Souls and Incarnations for Soul continuity
+- **Primary record modules:** one persistent Entity identity anchor exposed through Player State for a player-controlled character or Actors/Companions for another character; Souls and Incarnations for Soul continuity
 - **Canonical mechanical owners:** the specialist systems linked under [Canonical Dependencies](#canonical-dependencies)
 - **Extensions:** Species, Skills, Human frameworks, Soul systems, Soul Weapons, Magic, Relationships, Inventory, Research, Projects, Timeline, and World records
 - **Consumers:** session preparation, adjudication, continuity review, Save Updates, migrations, validation, and authorized derived views
 - **Repository boundary:** this blank contract belongs in the repository; every populated instance remains campaign-external
 
 This template owns no mechanic. It indexes established claims and routes each one to its actual owner.
+
+It is a composite record view, not permission to copy mutable domain state. Attributes, Skills, placement, Relationships, Inventory, conditions, and other independently changing facts remain authoritative under their owners in [Canonical Data Ownership](../docs/persistence/CANONICAL_DATA_OWNERSHIP.md).
 
 ## Usage Guidance
 
@@ -134,7 +136,7 @@ Current anatomy and condition never prove a learned Skill, retained mastery, soc
 
 ### Required
 
-- **Current Location ID:** `<stable Location reference or explicit unknown>`
+- **Current Location ID:** `<stable reference from the authoritative placement relation, or explicit unknown; this view is non-authoritative>`
 - **Position precision:** `<exact | bounded | approximate | relative | disputed | unknown>`
 - **Current chronological reference:** `<Timeline Event, interval, or Save Point>`
 - **Immediate access constraints:** `<routes, permissions, barriers, custody, environment, or none>`

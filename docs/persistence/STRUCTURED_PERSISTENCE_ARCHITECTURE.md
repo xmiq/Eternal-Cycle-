@@ -127,6 +127,8 @@ Examples:
 
 When two modules need the same fact, one owns it and the other stores a typed reference or Derived View.
 
+The complete fact-family map, persistent Entity identity anchor, current-location invariant, and autonomous-domain reservation are defined in [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md). Player State, Companions, and Actors are role-facing modules over one persistent non-autonomous Entity identity when they concern the same being; they must not mint parallel identities.
+
 ## Typed References
 
 A reference states why two records are related.
@@ -285,6 +287,8 @@ Actors owns current campaign records for NPCs and other agentive beings not repr
 
 It preserves stable identity, Person Basis, current embodiment, Observer View references, motives, commitments, activity, location, capability references, and Continuity Core without scripting future choices. [NPC Generation](../gm/NPC_GENERATOR.md) remains the procedure owner for generated NPC Profiles.
 
+Actors, Companions, and Player State do not independently own duplicate identities. Persistent non-autonomous beings share the Entity identity anchor defined by [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md). Persistent autonomous entities and systems remain reserved for FR-014 rather than being forced into Actors.
+
 ## Relationships
 
 Relationships owns durable intersubjective and organizational relationship records, including their participants, history references, present dimensions, commitments, conflicts, and unresolved issues.
@@ -315,6 +319,8 @@ The [World Engine](../world-engine/README.md) remains the simulation owner.
 ## Locations
 
 Locations owns stable place identities and current place-specific conditions, access routes, boundaries, occupants, claims, environment, hazards, infrastructure, and historical references.
+
+An occupant list is a Derived View when current placement is owned by subject-placement relations. A concrete schema may instead make a normalized placement relation part of Locations, but it must then be the sole owner of that current-placement claim. Independent current-location values in both subject and place records are forbidden.
 
 A place can persist through renaming, damage, abandonment, reconstruction, occupation, magical change, or disputed ownership without treating every continuity claim as automatic.
 

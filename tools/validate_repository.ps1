@@ -270,13 +270,13 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, FR-012, FR-014, and the refined remaining scope of FR-015.',
+    '**Approved pending objectives:** FR-001, FR-004, FR-005, FR-010, FR-011, FR-014, and the refined remaining scope of FR-015.',
     '- [ ] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [ ] **FR-004 — Life Archive and Old-Soul Indexing**',
     '- [ ] **FR-005 — Cross-Embodiment Skill Transfer**',
     '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
     '- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading**',
-    '- [ ] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
+    '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [ ] **FR-014 — Autonomous Registry**',
     '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
     '- [∞] **Future Revisions**',
@@ -489,6 +489,31 @@ else {
     }
 }
 
+$canonicalOwnershipPath = Join-Path $rootPath 'docs/persistence/CANONICAL_DATA_OWNERSHIP.md'
+if (-not (Test-Path -LiteralPath $canonicalOwnershipPath)) {
+    Add-ValidationError 'Missing Canonical Data Ownership contract.'
+}
+else {
+    $canonicalOwnership = Get-Content -Raw -LiteralPath $canonicalOwnershipPath
+    foreach ($requiredText in @(
+        'One mutable canonical fact has exactly one authoritative logical owner.',
+        'Non-Autonomous Entity Identity Anchor',
+        'The player is external to the fiction',
+        'Persistent independently operating entities and systems belong to the future FR-014 Autonomous Registry.',
+        'Current Location Invariant',
+        'Relationship Invariant',
+        'Species and Individual Boundary',
+        'Historical and Derived Repetition',
+        'This repository currently defines no executable campaign schema or populated save.',
+        'FR-011:',
+        'FR-014:'
+    )) {
+        if ($canonicalOwnership -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Canonical Data Ownership lacks required invariant: $requiredText"
+        }
+    }
+}
+
 $compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
 if (Test-Path -LiteralPath $compatibilityPath) {
     $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
@@ -539,6 +564,7 @@ Write-Output "Roadmap tasks checked: $($roadmapStatuses.Count)"
 Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmappedEntries.Count + $closedEntries.Count)"
 Write-Output 'Living Codex foundation: Steps 1-13 invariants checked'
 Write-Output 'Simulation Architecture: three layers and identity/knowledge boundaries checked'
+Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundaries checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

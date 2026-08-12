@@ -4543,3 +4543,27 @@ A stable backlog and provenance identifier in `FR-###` form. Its number does not
 ## Internal Subsystem Step
 
 An optional ordering label within a subsystem design, such as the GM Living Codex implementation plan. It may preserve technical or historical sequence but does not compete with the Project Phase roadmap.
+
+## Canonical Data Ownership
+
+The persistence invariant that every mutable canonical campaign fact has exactly one Authoritative Record Owner while every other representation is a Reference, Derived value, Cache, or Historical Snapshot.
+
+## Entity Identity Anchor
+
+The single stable campaign identity for one persistent non-autonomous in-world being whose individual continuity matters. Player State, Companion, and Actor roles may reference this anchor without creating parallel identities; Player and Controller remain separate.
+
+## Reference
+
+A stable typed relation to an authoritative record that does not copy or own the target's mutable state.
+
+## Derived Data
+
+Information calculated or assembled from authoritative records for presentation, retrieval, or analysis. It remains traceable to and repairable from its sources and cannot be edited as current Canon.
+
+## Cache
+
+Stored Derived Data retained for efficient retrieval with source identity, source version, freshness, scope, and audience metadata. A stale Cache is invalidated or rebuilt rather than used to overwrite its sources.
+
+## Historical Snapshot
+
+A provenance-bearing record of what was established at a specific past event, interval, transaction, or version. It is authoritative about that historical claim but does not own mutable current state.
