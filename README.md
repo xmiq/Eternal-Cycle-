@@ -15,6 +15,10 @@ This repository is the canonical home of the game's rules and design framework. 
 
 It does **not** contain campaign saves, active characters, live world state, inventories, quests, or playthrough history.
 
+## Project Status
+
+**Feature Complete — Gameplay Validation Ongoing.** The active top-level roadmap stage is **Phase 12 — Gameplay Validation & Maintenance**. It has no currently promoted implementation objective; Future Revisions remains its owner-mediated rolling final item. This is not a Version 1.0, release-candidate, stable, or production-ready declaration.
+
 ## Core Pillars
 
 1. **Death changes the character without erasing the journey.** Bodies and worldly assets are temporary; soul development persists.

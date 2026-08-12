@@ -4,7 +4,7 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 
 ## Reading Order
 
-1. [Development Roadmap](ROADMAP.md) - current phase, exact task, status rules, dependencies, and completion criteria.
+1. [Development Roadmap](ROADMAP.md) - the single top-level Project Phase sequence, current Phase 12 position, promoted objectives, status rules, dependencies, and completion authority.
 2. [Design Decisions](DECISIONS.md) - authoritative accepted design governance.
 3. [Canonical Terminology](TERMINOLOGY.md) - preferred rules vocabulary and definitions.
 4. [Repository Conventions](REPOSITORY_CONVENTIONS.md) - authority, ownership, structure, linking, and change discipline.

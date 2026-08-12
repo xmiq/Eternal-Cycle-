@@ -244,18 +244,18 @@ if ($taskMatches.Count -ne 1) {
     Add-ValidationError "Roadmap must contain exactly one Current task declaration."
 }
 foreach ($status in $roadmapStatuses) {
-    if (' ', 'x', '~', '!' -notcontains $status.Groups[1].Value) {
+    if (' ', 'x', '~', '!', '∞' -notcontains $status.Groups[1].Value) {
         Add-ValidationError "Invalid roadmap status token: [$($status.Groups[1].Value)]"
     }
 }
 $finalRepositoryState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
 if ($finalRepositoryState) {
-    $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -ne 'x' })
+    $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
     if ($unfinished.Count -gt 0) {
         Add-ValidationError "Feature-complete roadmap contains $($unfinished.Count) unfinished checklist item(s)."
     }
-    if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Long-term gameplay validation') {
-        Add-ValidationError "Feature-complete roadmap must identify Long-term gameplay validation as the current phase."
+    if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Phase 12 — Gameplay Validation & Maintenance') {
+        Add-ValidationError "Feature-complete roadmap must identify Phase 12 — Gameplay Validation & Maintenance as the current phase."
     }
 }
 elseif ($taskMatches.Count -eq 1) {
@@ -263,6 +263,29 @@ elseif ($taskMatches.Count -eq 1) {
     if ($roadmap -notmatch "(?m)^- \[[ ~!]\] $task$") {
         Add-ValidationError "Current roadmap task is not an open, partial, or blocked checklist item."
     }
+}
+
+foreach ($requiredText in @(
+    '## Phase 12 — Gameplay Validation & Maintenance',
+    '**Status: Active**',
+    '**Current promoted implementation objective:** None.',
+    '- [∞] **Future Revisions**',
+    'Phase 12 does not complete because current objectives pass validation',
+    'Phase 13 — Future Revisions'
+)) {
+    if ($roadmap -notmatch [regex]::Escape($requiredText)) {
+        Add-ValidationError "Roadmap lacks required Phase 12 governance: $requiredText"
+    }
+}
+if ($roadmap -match '(?m)^## Phase 13') {
+    Add-ValidationError 'Phase 13 must not begin before explicit maintainer release-readiness authorization.'
+}
+$phase12Section = [regex]::Match($roadmap, '(?ms)^## Phase 12 — Gameplay Validation & Maintenance\s*(?<body>.*)\z')
+if (-not $phase12Section.Success) {
+    Add-ValidationError 'Phase 12 must be the final top-level phase in the current roadmap.'
+}
+elseif ($phase12Section.Groups['body'].Value -notmatch '(?s)- \[∞\] \*\*Future Revisions\*\*.*\z') {
+    Add-ValidationError 'Future Revisions must remain the final rolling Phase 12 objective.'
 }
 
 $unresolvedPath = Join-Path $rootPath 'design/UNRESOLVED_QUESTIONS.md'

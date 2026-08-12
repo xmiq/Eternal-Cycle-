@@ -1,6 +1,6 @@
 # Future Revisions
 
-This register records evidence-driven issues that may require design work after Phase 11. It is non-canonical design tracking: an entry does not change a playable rule, authorize implementation, reopen a completed phase, or establish a roadmap task.
+This register records evidence-driven issues considered during Phase 12 — Gameplay Validation & Maintenance and later development. It is the permanent rolling final Phase 12 objective, but it remains non-canonical design tracking: an entry does not change a playable rule, authorize implementation, reopen a completed phase, or establish a roadmap objective.
 
 ## Authority and Ownership
 
@@ -17,7 +17,7 @@ Use this file for a suspected usability, balance, coherence, or maintainability 
 
 Gameplay does not write to this register directly. A gameplay GM may surface an observation or preserve campaign-local evidence, but only the project owner may mediate that material into a Future Revision entry, change its priority or status, merge or remove it, or authorize promotion into roadmap work. Development agents must not infer authorization from gameplay text alone.
 
-Use [Unresolved Questions](UNRESOLVED_QUESTIONS.md) when an unanswered question blocks or materially shapes current roadmap work. Use [Developer Notes](DEVELOPER_NOTES.md) for exploratory alternatives, observations, and workshop material that have not qualified for this register. Use the [Roadmap](ROADMAP.md) only after the project owner authorizes implementation.
+Use [Unresolved Questions](UNRESOLVED_QUESTIONS.md) when an unanswered question blocks or materially shapes current roadmap work. Use [Developer Notes](DEVELOPER_NOTES.md) for exploratory alternatives, observations, and workshop material that have not qualified for this register. Use [Phase 12 in the Roadmap](ROADMAP.md#phase-12--gameplay-validation--maintenance) only after the project owner authorizes implementation. An approved objective is inserted immediately before Future Revisions; its `FR-###` identifier remains stable provenance and never becomes a phase number.
 
 An entry must not:
 
@@ -223,7 +223,7 @@ The Autonomous Registry and dedicated Knowledge System remain Future Revision ca
 - **Suggested future phase:** Lineage, inheritance, and descendant-expression design.
 - **Priority:** High
 - **Status reason:** Implemented and validated as GM Living Codex Step 13.
-- **Authorized roadmap link:** [Gameplay-Validation Maintenance Sequence](ROADMAP.md#gameplay-validation-maintenance-sequence)
+- **Authorized roadmap link:** [Phase 12 — Gameplay Validation & Maintenance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 - **Closure references:** [Lineage and Evolutionary Inheritance](../docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md), [Level 0 Instinct](../docs/skills/LEVEL_ZERO_INSTINCT.md), and [Living Codex Persistence Model](../docs/gm-living-codex/PERSISTENCE_MODEL.md)
 
 ## Blank Entry Contract

@@ -37,6 +37,8 @@ Open design questions belong in `design/UNRESOLVED_QUESTIONS.md` rather than bei
 
 Evidence-backed post-roadmap concerns belong in `design/FUTURE_REVISIONS.md`. Registering a concern does not change canon, resolve an open question, reopen a completed phase, or authorize implementation.
 
+Phase 12 — Gameplay Validation & Maintenance is the active top-level phase after Phase 11. Owner-approved work is listed as a Phase 12 Objective immediately before the permanent Future Revisions item. Internal subsystem steps and `FR-###` identifiers preserve local ordering or provenance only; they are not Project Phases.
+
 ## Internal Links
 
 Use relative Markdown links. Do not duplicate another system's full rules merely to avoid linking.

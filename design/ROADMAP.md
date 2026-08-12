@@ -2,13 +2,13 @@
 
 ## Current Target
 
-**Current phase: Long-term gameplay validation**
+**Current phase: Phase 12 — Gameplay Validation & Maintenance**
 
-**Current task: None — awaiting owner-authorized promotion from Future Revisions**
+**Current task: None — owner review of Future Revisions**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
-Phases 0 through 11 remain complete and reviewed. The project owner has authorized a bounded gameplay-validation maintenance sequence. This work may add or refine reusable architecture when explicitly mediated and approved by the project owner, without reopening a numbered phase, silently changing completed mechanics, adding campaign data, or making a release declaration.
+Phases 0 through 11 remain complete and reviewed. Phase 12 is the single active top-level project phase for gameplay validation and owner-authorized maintenance before release readiness.
 
 Gameplay itself does not write roadmap tasks or Future Revisions. Gameplay may expose needs, contradictions, or opportunities, but the project owner remains the mediator who decides what becomes repository work, what enters Future Revisions, and what remains campaign-specific.
 
@@ -17,42 +17,6 @@ This state does not declare Version 1.0, Release Candidate, Stable, Production R
 The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
 The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
-
-## Gameplay Validation Maintenance
-
-### AI Runtime Profile Integration
-
-- **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
-- **Status:** Complete.
-- **Completed:** Added the implementation-neutral AI Runtime Model; documented AI capabilities and limitations; integrated the ChatGPT GM execution profile; integrated the SQLite and Google Drive persistence adapters under canonical names; completed navigation, integration, repository-boundary, naming, and validation audits.
-- **Current:** None.
-- **Remaining:** None.
-- **Boundary:** Operational AI documentation only. No campaign data, fictional mechanic, numbered phase, release declaration, or completed-phase redesign is authorized.
-
-### GM Living Codex Integration
-
-- **Authorization:** Explicit project-owner maintenance request based on gameplay validation.
-- **Status:** Complete.
-- **Completed:** Defined Steps 1-12 and their consolidation audit; implemented Step 13 Lineage, Hybridization, and Evolutionary Inheritance with normalized persistence, Level 0 Instinct, Mana equalization, Evolutionary Attenuation, and cross-system integration.
-- **Current:** None.
-- **Remaining:** No approved Living Codex task remains before later owner-authorized maintenance.
-- **Boundary:** Cross-campaign reusable GM design only. No campaign state, populated Codex database, numbered development phase, completed-mechanic redesign, or release declaration is authorized.
-
-### Gameplay-Validation Maintenance Sequence
-
-This sequence is the owner-approved execution order after the current Codex checkpoint. It is maintenance work under long-term gameplay validation, not a new numbered phase. New owner-approved work is inserted immediately before **Future Revisions**, which always remains the final rolling step.
-
-1. [x] **AI Runtime Profile integration** — Runtime model, capability limits, ChatGPT execution profile, SQLite adapter, Google Drive adapter, navigation, and validation.
-2. [x] **GM Living Codex Steps 1–11** — Philosophy and authority; stable identity and indexing; species core records; traits; species and Evolution Skills; Evolution graphs; variants and divergences; procedural-generation integration; player-species integration; SQLite persistence; Google Drive deployment and full-save protocol.
-3. [x] **GM Living Codex Step 12 — Reproductive Compatibility** — Sparse directional many-to-many compatibility; undefined-by-default pairings; nonzero established probabilities; Magic-assisted possibility; separate natural compatibility, assisted compatibility, offspring viability, and offspring fertility; evolution/variant separation; normalized persistence.
-4. [x] **Complete Living Codex cross-system integration, navigation, and validation** — Finish repository links, indexes, ownership maps, terminology, persistence cross-references, and validation for the implemented Living Codex foundation. Do not expand the system while closing this step.
-5. [x] **GM Living Codex Step 13 — Lineage, Hybridization, and Evolutionary Inheritance** — Define Lineage Templates, mixed lineage, pure-line throwbacks, Mana reconciliation and equalization, Species Expression, Evolution Expression, born-evolved offspring, Level 0 as instinct within the existing Skill system, ancestral hereditary echoes distinct from Soul Echoes, inheritance distributions, advanced-evolution attenuation, and artificial stabilization of advanced inherited forms. Compatibility determines whether formation succeeds; Step 13 determines what developmental architecture results. Campaign-specific examples and personal facts remain outside reusable canon.
-6. [x] **Simulation Architecture and Perspective Model** — Promote the three-layer architecture into reusable repository architecture: Layer 1 Immutable Rules, Layer 2 GM Simulation Engine, and Layer 3 Player RPG Interface. Separate entities from controllers and perspectives; preserve objective state independently from viewpoint; define controller reassignment without identity reset; and align the model with the World Engine, Campaign Persistence Engine, GM Toolkit, and AI Runtime. Campaign-specific examples from gameplay are excluded.
-7. [∞] **Future Revisions** — Permanent owner-mediated final step. Gameplay may surface observations but cannot add, promote, reprioritize, or implement Future Revision entries. Only the project owner may mediate gameplay findings into the register. When the owner approves an entry for implementation, insert a new numbered maintenance step immediately before Future Revisions and push this final step later. Future Revisions is intentionally never completed.
-
-### Approved Near-Term Boundary
-
-Steps 4 through 6 are complete. No further implementation task is currently authorized. Autonomous Registry, the detailed Knowledge System, and other candidates remain in Future Revisions until explicitly promoted by the project owner.
 
 ## Status Legend
 
@@ -310,3 +274,33 @@ Phase 10 is complete only when continuity, authority, truth layers, persistence 
 ### Exit Criteria
 
 Phase 11 is complete only when every listed reusable template, operating procedure, governance record, standardization task, and validation task is complete, reviewed, linked, terminology-consistent, free of campaign data, and compatible with the completed canonical systems; all major document families have clear owners, dependencies, extensions, and consumers; repository-wide consistency, terminology, links, navigation, ownership, balance risks, and gameplay-validation readiness have been audited; no unresolved blocking question remains; and the repository is marked **Feature Complete — Gameplay Validation Ongoing** without making a release claim.
+
+## Phase 12 — Gameplay Validation & Maintenance
+
+**Status: Active**
+
+Phase 12 contains all owner-authorized gameplay-validation and maintenance work following Phase 11. It has no predetermined number of objectives and remains active even when no implementation objective is currently promoted.
+
+- [x] **AI Runtime Profile integration and validation** — Runtime model, capability limits, ChatGPT execution profile, SQLite and Google Drive adapters, navigation, and validation.
+- [x] **GM Living Codex foundation** — Internal Codex implementation Steps 1–11 covering authority, stable identity, species records, traits, Skills, Evolution graphs, variants, procedural use, player species, SQLite persistence, and verified deployment.
+- [x] **Reproductive Compatibility** — Internal Living Codex Step 12; sparse directional compatibility, nonzero established probabilities, assistance methods, viability, fertility, and normalized persistence.
+- [x] **Living Codex consolidation and validation** — Cross-system links, indexes, ownership, terminology, persistence boundaries, and foundation audit.
+- [x] **Lineage, Hybridization, and Evolutionary Inheritance** — Internal Living Codex Step 13; lineage templates, inherited expression, Mana reconciliation, Level 0 Instinct, Ancestral Echoes, inheritance profiles, and stabilization.
+- [x] **Simulation Architecture and Perspective Model** — Three conceptual responsibility layers; Entity, Controller, Perspective, objective-state, knowledge, persistence, GM, AI, Reincarnation, and Living Codex boundaries.
+- [∞] **Future Revisions** — Permanent owner-mediated rolling final objective during Phase 12. Stable `FR-###` identifiers are backlog and provenance IDs, not phases. Gameplay and development agents cannot promote candidates. An explicitly owner-approved implementation objective is inserted immediately before this item, while unrelated candidates remain untouched.
+
+### Current Position
+
+- **Current promoted implementation objective:** None.
+- **Next action:** Project maintainer reviews [Future Revisions](FUTURE_REVISIONS.md) and decides whether to promote another Phase 12 objective.
+- **Not promoted:** Autonomous Registry, the detailed Knowledge System, and every other unresolved candidate.
+
+### Completion Authority
+
+Phase 12 does not complete because current objectives pass validation or because no candidate is promoted. It closes only when the project maintainer explicitly declares the project sufficiently ready for release.
+
+At that future boundary, and not before, the rolling backlog moves to a new **Phase 13 — Future Revisions** with `[∞]` active status. Later owner-authorized bodies of work may receive later phase numbers. This transition is documented here but has not occurred.
+
+### Phase 12 Boundary
+
+Phase 12 maintenance may clarify, validate, repair, or extend reusable project material only through explicit owner authorization. It does not permit gameplay to write the roadmap, Codex to promote a candidate, completed phases to reopen silently, campaign data to enter the repository, or any release status to be inferred.

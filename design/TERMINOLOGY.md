@@ -4523,3 +4523,23 @@ The GM Simulation Engine's responsibility for objective campaign state and causa
 ## Persistent Entity Identity
 
 A stable subsystem-appropriate identifier used when an Entity's continuity must survive ordinary changes, including Controller reassignment.
+
+## Project Phase
+
+A top-level chronological development stage in the one authoritative project roadmap. Subsystem implementation steps and Future Revision IDs are not Project Phases.
+
+## Phase 12
+
+The active Gameplay Validation & Maintenance Project Phase following completion of Phases 0–11. It remains active until an explicit project-maintainer release-readiness decision.
+
+## Phase 12 Objective
+
+An owner-authorized body of gameplay-validation or maintenance work listed within Phase 12 before its rolling Future Revisions item.
+
+## Future Revision ID
+
+A stable backlog and provenance identifier in `FR-###` form. Its number does not assign a Project Phase or implementation order.
+
+## Internal Subsystem Step
+
+An optional ordering label within a subsystem design, such as the GM Living Codex implementation plan. It may preserve technical or historical sequence but does not compete with the Project Phase roadmap.

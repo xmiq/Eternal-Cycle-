@@ -4873,3 +4873,15 @@ Provisional Campaign Rules remain explicit, identifiable, campaign-scoped, and r
 ## D-1218 — Persistent Identity Is Proportional to Continuity Need
 
 Entities whose continuity matters use stable identity that survives ordinary state and Controller changes. Groups and aggregates may remain aggregate, and transient objects need no universal permanent ID.
+
+## D-1219 — One Top-Level Project Phase Sequence Governs the Roadmap
+
+Eternal Cycle uses one authoritative top-level sequence from Phase 0 onward. All gameplay-validation and maintenance work following Phase 11 belongs to Phase 12 — Gameplay Validation & Maintenance. Living Codex implementation steps and stable Future Revision IDs are not project phases.
+
+## D-1220 — Future Revisions Is the Rolling Final Phase 12 Objective
+
+During Phase 12, Future Revisions remains the permanent final objective. Only the project maintainer may promote a candidate; an approved implementation objective is inserted immediately before Future Revisions without renumbering its `FR-###` provenance or changing unrelated candidates.
+
+## D-1221 — Phase 12 Requires Explicit Release-Readiness Closure
+
+Validation success, an empty promoted-work queue, or agent judgement cannot complete Phase 12. Only an explicit project-maintainer release-readiness decision closes it. At that future boundary, Future Revisions moves from the final Phase 12 objective to Phase 13 — Future Revisions; that transition has not occurred.

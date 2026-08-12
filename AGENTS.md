@@ -42,8 +42,11 @@ After making changes:
 - `[~]` — Intentionally started and substantially implemented.
 - `[x]` — Complete, reviewed, linked, and internally consistent.
 - `[!]` — Blocked by an unresolved design decision.
+- `[∞]` — Permanent owner-mediated rolling objective; never completed by an agent.
 
 A passing mention, dependency, constraint, placeholder, or reference in another file does not make a task `[~]`. Never mark a task complete merely because a file exists.
+
+During Phase 12 — Gameplay Validation & Maintenance, agents work only on an explicitly promoted Phase 12 Objective. Future Revisions remains the final rolling objective and cannot be promoted, reordered, or completed without project-owner authorization.
 
 ## Scope Discipline
 
