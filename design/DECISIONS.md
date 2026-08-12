@@ -5065,3 +5065,7 @@ The consolidated result preserves the strongest coherent combined competence and
 ## D-1266 — Skill Applications Use Four History-Based Adjudication Categories
 
 Broad, merged, ambiguous, and Conceptual Skill claims are interpreted as Established Applications, Reasonable Extensions, Related but Distinct Capabilities, or Unsupported Interpretations. These are GM guidance categories rather than mandatory stored states or an exhaustive application catalog.
+
+## D-1267 — State-Changing Gameplay Turns Require Automatic Validated Persistence
+
+During normal gameplay, the runtime automatically applies the existing Read Set, Affected Set, Save Point, Save Update Protocol, validation, and read-back requirements without waiting for a player-issued save command. A gameplay turn that changes canonical persistent state is not complete until the required write succeeds and validates. Conversation context cannot substitute for authoritative reads or writes; failed reads or saves are surfaced rather than silently treated as successful. FR-011 must preserve historically successful canonical reading while correcting unreliable automatic persistence through the existing architecture rather than a competing save system.

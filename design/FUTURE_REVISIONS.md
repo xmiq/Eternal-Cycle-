@@ -69,18 +69,23 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
 - **Authorized roadmap link:** [FR-010 — Long-Horizon Simulation Summaries](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-011 - GM/AI Context Assembly and Continuity Loading
+### FR-011 - GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence
 
 - **Status:** Roadmapped
-- **Issue:** Authority checks, Read Sets, specialist handoffs, validation, and save procedures may consume more time than the play they protect.
+- **Issue:** Canonical-state reads have generally worked during gameplay, but automatic saving has been unreliable and has often required an explicit player request. Read reliability and write reliability are separate concerns: future context assembly must preserve successful relevant reads while making persistence automatic and verifiable.
 - **Affected systems:** GM Toolkit, AI operating procedures, Campaign Persistence Engine, templates, and repository navigation.
-- **Gameplay impact:** Correct operation may be abandoned, inconsistently applied, or become inaccessible to smaller campaigns and human GMs.
-- **Evidence needed:** Session-start, adjudication, save, correction, migration, and handoff timing from human and AI-assisted play at several campaign sizes, including skipped steps and resulting defects.
-- **Approved direction:** Preserve mandatory canonical reads, persistence, validation, and save-before-delivery while deriving compact Current Scene Context and wider summary/index packets from authoritative SQL through SQLite-appropriate views, parameterized queries, application functions, or derived caches. Packets carry only relevant facts, stable IDs, source references, and drill-down paths; they never own Canon.
+- **Gameplay impact:** Unsaved narration may appear canonical until a later reload loses it, forcing manual save commands and breaking continuity even when state loading otherwise works.
+- **Evidence needed:** Session-start, adjudication, save, correction, migration, and handoff timing from human and AI-assisted play at several campaign sizes, including automatic read, automatic save, Relationship changes, multi-domain writes, no-change turns, failed writes, stale conversation conflicts, and next-turn reload.
+- **Approved direction:** Preserve and verify mandatory relevant canonical reads while deriving compact Current Scene Context and wider summary/index packets from authoritative SQL through SQLite-appropriate views, parameterized queries, application functions, or derived caches. Conversation context is a convenience layer and never proves that required Canon was loaded. After resolution, determine the Affected Set automatically; if it is nonempty, update each authoritative owner once, append Timeline and Campaign History where required, update existing indexes or summaries under their own rules, commit, validate, and perform critical read-back before closing the turn. A genuinely empty Affected Set requires no write but must be determined rather than assumed. Packets and running summaries carry only relevant facts, stable IDs, source references, and drill-down paths; they never own Canon.
+- **Turn invariant:** A gameplay turn that changes canonical persistent state is not complete until the required persistence write has succeeded and been validated. Saving is automatic during normal gameplay, not optional housekeeping or a player command.
+- **Turn lifecycle:** `Player Action -> Turn Open -> Assemble Required Context -> Read Required Canonical State -> Read Complete -> Adjudicate / Simulate -> Narrative Resolution -> Determine Affected Set -> Persist Required Changes -> Validate / Verify -> Turn Closed`. Exact runtime implementation may differ, but the invariant remains.
+- **Failure behavior:** Narratively resolved and Canonically committed are distinct states. A failed required read cannot be replaced silently by conversation memory. A failed write preserves retry information, must be surfaced, must not be claimed as saved, and must not permit dependent play to proceed as though commitment succeeded. Future implementation should be retry-safe and idempotent where practical.
+- **Integration boundary:** Extend the existing Save Point, Save Update Protocol, Read Set, Affected Set, FR-012 ownership, migration/versioning, Timeline, Campaign History, validation, and save-before-delivery architecture rather than replacing it. FR-010 summaries are optional sources when relevant; GM access does not grant Character Knowledge under FR-015; future FR-016 records enter a Read Set only when relevant.
+- **Acceptance criteria:** Test authoritative Skill/current-state reads before resolution; automatic persistence without a player saying `save`; automatic Relationship persistence; one turn updating Character state, Inventory, Location, and Timeline exactly once; no unnecessary mutation for a verified empty Affected Set; explicit failed-write handling; canonical state defeating contradictory conversation context; and retrieval on Turn N+1 of changes saved on Turn N. During ordinary gameplay, the player can play continuously without issuing a manual save command while every canonical persistent change commits and later reloads correctly.
 - **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
-- **Authorized roadmap link:** [FR-011 — GM/AI Context Assembly and Continuity Loading](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Status reason:** Explicitly promoted and subsequently amended by the project maintainer for later Phase 12 implementation; this planning amendment adds no runtime, schema, migration, or campaign change.
+- **Authorized roadmap link:** [FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-015 - Memory Continuity, Fading, and Recall
 

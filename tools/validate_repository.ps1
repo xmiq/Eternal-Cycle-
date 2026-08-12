@@ -281,7 +281,7 @@ foreach ($requiredText in @(
     '- [x] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
     '- [x] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
     '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
-    '- [ ] **FR-011 — GM/AI Context Assembly and Continuity Loading**',
+    '- [ ] **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
     '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
@@ -395,6 +395,19 @@ else {
 $allFutureIds = @($futureEntries + $roadmappedEntries + $closedEntries | ForEach-Object { $_.Groups['id'].Value })
 foreach ($duplicate in $allFutureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
     Add-ValidationError "Duplicate Future Revision ID across lifecycle sections: $($duplicate.Name)"
+}
+
+foreach ($requiredText in @(
+    '### FR-011 - GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence',
+    'A gameplay turn that changes canonical persistent state is not complete until the required persistence write has succeeded and been validated.',
+    'Saving is automatic during normal gameplay, not optional housekeeping or a player command.',
+    'Conversation context is a convenience layer and never proves that required Canon was loaded.',
+    'During ordinary gameplay, the player can play continuously without issuing a manual save command while every canonical persistent change commits and later reloads correctly.',
+    '**Status:** Roadmapped'
+)) {
+    if ($future -notmatch [regex]::Escape($requiredText)) {
+        Add-ValidationError "FR-011 planning amendment lacks required invariant: $requiredText"
+    }
 }
 
 $codexRequired = @(
