@@ -135,35 +135,44 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not alter Skill mechanics.
 - **Authorized roadmap link:** [FR-006 — Adaptive Skill Consolidation and Merge Rules](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-007 - Conceptual Skill Rarity and Legibility
+### FR-007 - Conceptual Skill Scope and Historical Interpretation
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Conceptual Skills may prove too easy to claim, too difficult to recognize, or too abstract for consistent counterplay.
 - **Affected systems:** Conceptual Skills, mastery, evidence, information views, and consequence resolution.
 - **Gameplay impact:** Broad conceptual claims could overshadow ordinary expertise, while excessive opacity could make earned mastery unusable.
 - **Evidence needed:** Qualification and use cases from different domains, with provenance, limits, counters, failure, observer understanding, and rejected claims.
-- **Suggested future phase:** Advanced Skill validation review.
+- **Approved direction:** A Skill name describes but does not solely authorize capability. Broad, abstract, merged, ambiguous, or Conceptual Skills are interpreted through acquisition, development activity, prior successes and relevant failures, predecessor Skills, merges, Evolution, embodiment-specific expressions, conceptual extensions, and enabling mechanics. Adjudication distinguishes established applications, reasonable extensions requiring legitimate development, related but distinct capabilities, and unsupported linguistic readings. FR-006 consolidation must preserve meaningful scope boundaries and provenance rather than merge unrelated capability into a universal label; FR-001 and FR-005 preserve relevant cross-life and embodiment history without granting unsupported expression.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** Medium
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not modify Skill mechanics or persistence.
+- **Authorized roadmap link:** [FR-007 — Conceptual Skill Scope and Historical Interpretation](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-008 - Soul Weapons and Ordinary Equipment Relevance
+### FR-008 - Soul Weapon Rarity and Equipment Relevance
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Soul Weapon partnership may unintentionally make ordinary tools, replacement equipment, crafting, logistics, and non-partner combat paths feel secondary.
 - **Affected systems:** Soul Weapons, equipment, Professions, Skills, embodiment, Magic, and resource logistics.
 - **Gameplay impact:** A major optional relationship could become functionally mandatory or narrow equipment choices over long play.
 - **Evidence needed:** Campaign comparisons with no Soul Weapon, an inaccessible or unsuitable Soul Weapon, unconventional partners, and ordinary equipment specialists.
-- **Suggested future phase:** Soul Weapon option and equipment ecology review.
+- **Approved direction:** Soul Weapons may become substantially superior to ordinary weapons. Their exceptional rarity, Soul binding, individual ownership, limited transferability, and personal development prevent them from replacing the normal equipment economy or military baseline. Present capability depends on established growth: a new or poorly developed Soul Weapon does not automatically outperform every mundane, crafted, magical, enchanted, technological, or otherwise exceptional ordinary weapon. Preserve existing constraints and do not impose artificial parity or a universal balance formula.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** Medium
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 clarification; this planning update does not change Soul Weapon or equipment mechanics.
+- **Authorized roadmap link:** [FR-008 — Soul Weapon Rarity and Equipment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-009 - World-Gate Channel and Destination Usability
+### FR-009 - World Contact, Travel, and Reincarnation Discretion
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Separate World-Gate Channels and cross-domain candidate reach may be difficult to adjudicate without either excessive bookkeeping or treating every contacted destination as selectable.
 - **Affected systems:** World Gates, world-contact events, Reincarnation, Soul Avatars, information views, and GM procedures.
 - **Gameplay impact:** Contact may become mechanically blurry, administratively heavy, or an unrestricted travel and reincarnation menu.
 - **Evidence needed:** Contact events with asymmetric channels, closures, stranded actors, incompatible routes, and candidate searches that include and exclude contacted domains for established reasons.
-- **Suggested future phase:** World-contact usability review.
+- **Approved direction:** World knowledge, world contact or channel, a valid travel route, and current Reincarnation possibility are distinct. None automatically grants the others or creates an unrestricted destination menu, and prior contact need not remain permanently reachable outside existing Gate, channel, cosmological, temporal, Age, ability, infrastructure, and world-state requirements. Player Reincarnation wishes are meaningful input, not commands. Under FR-002, the GM considers those wishes alongside Soul state, world state, elapsed Interlife time, cosmology, embodiment routes, and existing rules, and retains final destination adjudication. Player action may legitimately change future possibilities through established mechanics without guaranteeing selection.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** Medium
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 clarification; this planning update does not change World-Gate, travel, or Reincarnation mechanics.
+- **Authorized roadmap link:** [FR-009 — World Contact, Travel, and Reincarnation Discretion](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-010 - Long-Horizon Simulation Summaries
 
@@ -210,9 +219,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
 
-FR-007, FR-008, and FR-009 remain unpromoted candidates. A detailed Knowledge System beyond FR-015's approved memory scope also remains unpromoted.
+All currently known FR-001 through FR-015 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
 

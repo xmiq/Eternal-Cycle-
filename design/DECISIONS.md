@@ -4957,3 +4957,23 @@ Legitimately established Soul properties, capabilities, Echoes, Resonance struct
 ## D-1239 — Adaptive Skill Consolidation Preserves Development and Provenance
 
 Adaptive Skills may form through meaningful adaptation without being suppressed merely to shorten Skill lists. Substantially overlapping Skills merge when continued play establishes one underlying capability, preserving accumulated development, history, and predecessor provenance. Mechanically meaningful distinctions remain separate; repeated equivalent challenges normally deepen an existing Skill; and injury or hardship farming cannot generate unlimited narrow Skills.
+
+## D-1240 — Skill History Governs Broad and Conceptual Scope
+
+A Skill's name describes but does not solely authorize its mechanical scope. Acquisition, development, prior applications and relevant failures, predecessors, merges, Evolution, embodiment-specific expression, conceptual extensions, and enabling mechanics provide authoritative interpretive context. A clever linguistic reading cannot create an unsupported power; legitimate new applications require established capability or further in-world development.
+
+## D-1241 — Skill Consolidation Preserves Meaningful Scope Boundaries
+
+Skill merging consolidates substantially redundant capability without erasing mechanically meaningful distinctions or producing a universal label whose name claims unrelated functions. The resulting Skill retains predecessor provenance and historically supported scope.
+
+## D-1242 — Soul Weapons May Exceed Ordinary Equipment Without Replacing Its Baseline
+
+Soul Weapons may substantially outperform ordinary weapons. Their rarity, Soul binding, individual ownership, limited transferability, and personal development prevent rare exceptional owners from redefining the normal equipment economy or military baseline. Capability follows actual growth; Soul Weapon status alone does not make a newly manifested or poorly developed partner superior to every exceptional ordinary item.
+
+## D-1243 — World Contact Travel and Reincarnation Access Remain Distinct
+
+Knowledge of a world, contact or a World-Gate Channel, a valid travel route, and current Reincarnation possibility are separate claims. None automatically grants the others, and prior contact does not create permanent access or an unrestricted destination menu.
+
+## D-1244 — Reincarnation Wishes Inform but Do Not Command Adjudication
+
+Player wishes about world, environment, species, embodiment, proximity, or kind of life are meaningful input to Reincarnation adjudication. They do not guarantee an outcome. The GM determines valid destination possibilities under existing Reincarnation constraints, Soul and world state, elapsed Interlife time, cosmology, embodiment routes, and relevant established player action.
