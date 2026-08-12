@@ -263,6 +263,12 @@ It may own or index:
 
 The [Soul Engine](../soul/README.md) remains the mechanical owner. This module records established campaign results and never treats all persistence as current access.
 
+## Life Archive
+
+The [Life Archive](LIFE_ARCHIVE.md) owns stable Life IDs, active/completed archive status, the Soul Overview index, finalized Life Summaries, historical-reference sets, and Life Over derivation. It references Souls, Incarnations, Final Death, Timeline, Campaign History, Relationships, Development, Skills, Species, and other owners rather than copying their mutable state.
+
+The active Life points to current owners and is not finalized. A completed Life may preserve historical peaks and milestones. Player visibility of a summary does not create Character Knowledge.
+
 ## Companions
 
 Companions owns the campaign role and continuity view for recurring allied, dependent, bonded, travelling, summoned, created, or otherwise accompanying persons and agents.

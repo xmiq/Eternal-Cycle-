@@ -4599,3 +4599,27 @@ A provenance-bearing claim describing whether one autonomous Entity's operationa
 ## Confirmed Report
 
 A sourced historical observation of bounded autonomous facts with observation time, report time, and uncertainty. It does not automatically establish current state after contact is lost.
+
+## Life Archive
+
+The campaign-persistence structure that assigns stable Life identities, indexes a Soul's active and completed incarnations, and links finalized Life Summaries to deeper historical records. It is distinct from the metaphysical Akashic Archive.
+
+## Life ID
+
+An immutable stable identifier for one incarnation of one Soul. It is distinct from the incarnation's name, aliases, and display ordinal.
+
+## Soul Overview
+
+The compact, pageable index of a Soul's Life records. It identifies Lives and summary references without duplicating their full history.
+
+## Life Summary
+
+A concise permanent Historical Snapshot and index finalized for one completed incarnation. It references meaningful peaks, relationships, consequences, and deeper owners without becoming current-state authority.
+
+## Life Over Presentation
+
+A non-authoritative player-facing view derived from one finalized Life Summary. Player access to it does not establish current-character memory.
+
+## Full Life Detail
+
+The source-owned Timeline, Campaign History, Relationship, Development, Skill, Species, Soul Weapon, and other records reached through a Life Summary's stable references; not one duplicate monolithic record.

@@ -20,6 +20,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 - [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) - reusable species-route structure governed by Monster Evolution.
 - [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
 - [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) - one continuing Soul, distinct Incarnations, Reincarnation stages, persistent structures, access, and embodiment.
+- [Life Archive Template](LIFE_ARCHIVE_TEMPLATE.md) - Soul Overview indexing, stable Life identities, finalized historical summaries, Life Over presentation, and provenance.
 - [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) - Weapon Soul personhood, vessel continuity, bond and consent, forms, capabilities, Echoes, compatibility, manifestation, Legacy status, and passage.
 - [Magic Record Template](MAGIC_RECORD_TEMPLATE.md) - Mana, Affinity, Spell, Ritual, Enchantment, Alchemy, Divine, Forbidden, and world-interaction records.
 - [Faction Profile Template](FACTION_TEMPLATE.md) - scoped coordination, participation, information, decision routes, capacity, cohesion, action, relationships, and versioned continuity.

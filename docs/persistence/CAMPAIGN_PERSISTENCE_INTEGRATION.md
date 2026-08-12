@@ -158,6 +158,8 @@ The event does not grant one module authority over the others. The Save Transact
 
 ## Soul Engine Interface
 
+The [Life Archive](LIFE_ARCHIVE.md) indexes each Soul's active and completed Incarnations through stable Life IDs. Finalized Life Summaries reference established Soul, Development, Skill, Relationship, embodiment, Final Death, and historical outcomes without owning those facts. The Archive is player-visible out-of-character history, not current-character memory, and remains distinct from the metaphysical [Akashic Archive](../soul/AKASHIC_ARCHIVE.md).
+
 The [Soul Engine](../soul/README.md) owns Soul identity, Reincarnation, Soul Depth, Soul Resonance, Soul Echoes, Soul Space, Soul Constellations, Soul Titles, Retained Instincts, Soul Avatars, Akashic Archive interactions, Soul harm, and their persistence eligibility.
 
 Campaign persistence records:

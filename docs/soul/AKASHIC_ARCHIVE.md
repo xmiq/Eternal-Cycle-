@@ -332,6 +332,8 @@ A World Spirit offers Record Reading of a poisoned river's origin in exchange fo
 
 ## Related Documents
 
+- [Life Archive and Old-Soul Indexing](../persistence/LIFE_ARCHIVE.md) - campaign historical indexing that may reference Archive evidence without becoming the Akashic Archive.
+
 - [Soul Rules Index](README.md)
 - [Soul Engine Overview](SOUL_ENGINE_OVERVIEW.md)
 - [Soul Fundamentals](SOUL_FUNDAMENTALS.md)

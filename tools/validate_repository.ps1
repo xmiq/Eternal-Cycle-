@@ -270,11 +270,11 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
+    '**Approved pending objectives:** FR-001, FR-002, FR-003, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
     '- [ ] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [ ] **FR-002 — Reincarnation Candidate Selection**',
     '- [ ] **FR-003 — Soul Depth Information Visibility**',
-    '- [ ] **FR-004 — Life Archive and Old-Soul Indexing**',
+    '- [x] **FR-004 — Life Archive and Old-Soul Indexing**',
     '- [ ] **FR-005 — Cross-Embodiment Skill Transfer**',
     '- [ ] **FR-006 — Adaptive Skill Consolidation and Merge Rules**',
     '- [ ] **FR-007 — Conceptual Skill Scope and Historical Interpretation**',
@@ -548,6 +548,36 @@ else {
     }
 }
 
+$lifeArchivePath = Join-Path $rootPath 'docs/persistence/LIFE_ARCHIVE.md'
+if (-not (Test-Path -LiteralPath $lifeArchivePath)) {
+    Add-ValidationError 'Missing Life Archive contract.'
+}
+else {
+    $lifeArchive = Get-Content -Raw -LiteralPath $lifeArchivePath
+    foreach ($requiredText in @(
+        'Soul Overview',
+        'Life Summary',
+        'Full Life Detail',
+        'The Life Archive is not the [Akashic Archive]',
+        'Player-visible archive information is not Character Knowledge.',
+        'An active Life record',
+        'A completed Life record',
+        'CREATE TABLE lives',
+        'CREATE TABLE life_summaries',
+        'CREATE TABLE life_archive_references',
+        'FR-001:',
+        'FR-005/FR-006/FR-007:',
+        'FR-010:',
+        'FR-011:',
+        'FR-015:',
+        'FR-016:'
+    )) {
+        if ($lifeArchive -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Life Archive lacks required invariant: $requiredText"
+        }
+    }
+}
+
 $compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
 if (Test-Path -LiteralPath $compatibilityPath) {
     $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
@@ -600,6 +630,7 @@ Write-Output 'Living Codex foundation: Steps 1-13 invariants checked'
 Write-Output 'Simulation Architecture: three layers and identity/knowledge boundaries checked'
 Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundaries checked'
 Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
+Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

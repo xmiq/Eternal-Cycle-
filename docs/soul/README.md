@@ -17,6 +17,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 - [Soul Titles](SOUL_TITLES.md) - persistent expressions of identity and contextual recognition.
 - [Retained Instincts](RETAINED_INSTINCTS.md) - body-shaped patterns of attention and response carried between lives.
 - [Akashic Archive](AKASHIC_ARCHIVE.md) - source-bound world records, targeted access, and historical interpretation.
+- [Life Archive and Old-Soul Indexing](../persistence/LIFE_ARCHIVE.md) - campaign-persistence indexing for incarnations, distinct from metaphysical Archive access.
 - [Soul Avatars](SOUL_AVATARS.md) - exceptional whole-soul synthesis led by the current incarnation.
 - [World Gate Soul Interactions](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md) - bounded cross-domain Reincarnation reach, Gate-related Avatar Triggers, provenance, and continuity safeguards.
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md) - ownership and resolution rules for combined soul effects.

@@ -96,19 +96,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the visibility model.
 - **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-004 - Life Archive and Old-Soul Indexing
-
-- **Status:** Roadmapped
-- **Issue:** Accumulated Soul systems, histories, retained routes, and cross-life relationships may create excessive choice and record-management burden in very old campaigns.
-- **Affected systems:** Soul Engine, Campaign Persistence Engine, Reincarnation generation, templates, and GM Toolkit.
-- **Gameplay impact:** Important identity and continuity may become difficult to retrieve, while minor options crowd out present-life priorities.
-- **Evidence needed:** Long-horizon campaign tests or representative stress tests measuring preparation time, retrieval failures, option overload, and which summaries preserve meaningful distinctions.
-- **Approved direction:** Create a structured Life Archive with a player-visible Life Summary for each completed incarnation and a `Soul Overview -> Life Summary -> Full Life Detail` retrieval hierarchy. Summaries index major peaks, relationships, discoveries, projects, failures, consequences, and retained-development provenance without implying current-character recall or duplicating every detail.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
-- **Authorized roadmap link:** [FR-004 — Life Archive and Old-Soul Indexing](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-005 - Cross-Embodiment Skill Transfer
 
 - **Status:** Roadmapped
@@ -233,11 +220,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-002, FR-003, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-004 is closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-004 - Life Archive and Old-Soul Indexing
+
+- **Status:** Closed
+- **Issue:** Accumulated Soul systems, histories, retained routes, and cross-life relationships may create excessive choice and record-management burden in very old campaigns.
+- **Affected systems:** Soul Engine, Campaign Persistence Engine, Reincarnation generation, templates, GM Toolkit, Development, Skills, Relationships, Timeline, and Campaign History.
+- **Gameplay impact:** Important identity and continuity may become difficult to retrieve, while minor options crowd out present-life priorities.
+- **Evidence needed:** Long-horizon campaign tests or representative stress tests measuring preparation time, retrieval failures, option overload, and which summaries preserve meaningful distinctions.
+- **Approved direction:** Create a structured Life Archive with a player-visible Life Summary for each completed incarnation and a `Soul Overview -> Life Summary -> Full Life Detail` retrieval hierarchy. Summaries index major peaks, relationships, discoveries, projects, failures, consequences, and retained-development provenance without implying current-character recall or duplicating every detail.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the canonical Life Archive contract, normalized logical SQLite guidance, blank template, persistence integrations, migration and validation procedures, terminology, decisions, and structural repository validation. No populated campaign was migrated.
+- **Authorized roadmap link:** [FR-004 — Life Archive and Old-Soul Indexing](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Life Archive and Old-Soul Indexing](../docs/persistence/LIFE_ARCHIVE.md), [Life Archive Template](../templates/LIFE_ARCHIVE_TEMPLATE.md), and [FR-004 Implementation Audit](audits/FR_004_LIFE_ARCHIVE_AUDIT.md)
 
 ### FR-014 - Autonomous Registry
 

@@ -524,6 +524,11 @@ Audit preserves the destruction claim at its supported authority and marks detai
 
 ## Validation Checklist
 
+### Life Archive Adoption
+
+When an existing campaign adopts the [Life Archive](LIFE_ARCHIVE.md), Backup precedes a read-only audit of Souls, Incarnations, Timeline, Campaign History, and available source material. Merge assigns stable Life IDs without merging by name, preserves unknown ordinals and missing facts, creates summaries only from established Canon, links deeper owners, and records source provenance. Validation checks identity, chronology, active/completed state, reference integrity, visibility, and Akashic Archive separation before activation.
+
+
 Before activation confirm:
 
 - [ ] a verified Backup exists and predates edits;

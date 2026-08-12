@@ -461,6 +461,8 @@ This document defines the state graph, claim contract, status model, Read Sets, 
 
 ## Related Documents
 
+- [Life Archive and Old-Soul Indexing](LIFE_ARCHIVE.md)
+
 - [Campaign Persistence Engine Index](README.md)
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)
 - [Persistence Authority](PERSISTENCE_AUTHORITY.md)

@@ -5001,3 +5001,27 @@ The base fate bond grants no automatic telepathy, tracking, communication, share
 ## D-1250 — Soul Bond and Current Relationship Have Separate Owners
 
 The persistent bond belongs to the Soul/fate domain. Current interpersonal state belongs to Relationships; current identity and embodiment belong to the Entity and incarnation owners; life-specific manifestations belong to the future Life Archive; and significant meetings, separations, recognition, and changes belong to Timeline and Campaign History. These records reference one bond identity rather than recreating it per life.
+
+## D-1251 — Every Indexed Incarnation Has Stable Life Identity
+
+Each indexed incarnation has one immutable Life ID linked to one Soul and one Incarnation. Names, aliases, and incarnation ordinals are descriptive or classificatory and may change without replacing Life identity.
+
+## D-1252 — Completed Lives Receive Concise Permanent Summaries
+
+Each completed incarnation receives one finalized Life Summary and a Soul Overview entry. Retrieval proceeds from Soul Overview to Life Summary to source-owned Full Life Detail so old Souls remain practical without duplicating complete history.
+
+## D-1253 — Life Archive Visibility Does Not Grant Character Memory
+
+The player and GM may inspect authorized Life Archive history out of character. That visibility does not create Character Knowledge, autobiographical recall, Skill access, or present capability for the current incarnation.
+
+## D-1254 — Life Summaries Are Historical Indexes Not Current-State Owners
+
+Life Summaries preserve historical peaks, milestones, consequences, and references. Current Relationships, Skills, Development, placement, embodiment, and other mutable facts remain with their domain owners under FR-012.
+
+## D-1255 — Life Archive and Akashic Archive Remain Distinct
+
+The Life Archive is campaign persistence assembled from established records. The Akashic Archive remains a metaphysical, source-bound and access-gated structure of traces and records. Either may reference evidence from the other without sharing identity or authority.
+
+## D-1256 — Missing Life History Remains Unknown
+
+Life Archive migration and finalization preserve Unknown, Estimated, and Requires Source Recovery states. Recovered evidence may create a traceable revision, but missing details and ambiguous historical identity are not fabricated or auto-repaired.

@@ -633,6 +633,11 @@ Repeatedly renewing a warning without new evidence or repair creates a Continuit
 
 ## Validation Procedure
 
+### Life Archive Profile
+
+Life Archive validation checks unique Life IDs, one Life per Incarnation, valid Soul references, coherent known ordinals, no more than one active Life per Soul, no finalized summary for an active Life, valid completion basis, resolvable typed historical references, preserved unknowns, source provenance, and non-competing Historical Snapshot ownership. It also checks that player-visible summaries have not become Character Knowledge and that the Life Archive has not been conflated with the metaphysical Akashic Archive. Ambiguous recovered identities are findings, never auto-repaired facts.
+
+
 1. **Identify trigger.** Save, Migration, Continuity Case, load, recovery, or periodic audit.
 2. **Freeze the baseline.** Record exact versions, scope, and integrity.
 3. **Select profile.** Include every required check and declare exclusions.

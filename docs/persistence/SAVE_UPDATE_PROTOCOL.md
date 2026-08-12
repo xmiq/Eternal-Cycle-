@@ -614,3 +614,6 @@ This document defines ordinary post-interaction save transactions, Affected Sets
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+### Life Archive Updates
+
+Ordinary interactions do not rewrite finalized Life Summaries. Include the [Life Archive](LIFE_ARCHIVE.md) in the Affected Set when establishing an active Life index, finalizing a completed Life, recovering historical incarnation evidence, or correcting an archive reference. Life completion atomically closes the active Life, creates or revises its summary, updates the Soul Overview, and validates deeper references without transferring current state into the archive.

@@ -59,6 +59,7 @@ An ordinary Entity record may reference an autonomous subject when interaction r
 | Persistent non-autonomous character or creature identity | Entity identity anchor exposed through Player State, Companions, or Actors | Relationships, Skills, locations, factions, Timeline, views | One being has one anchor; roles are not duplicate identities. |
 | Player control and decision scope | Controller or Player State control relation | character views, session interface | Player is not the Entity. |
 | Soul and Incarnation continuity | Souls and Incarnations | Entity anchor, Relationships, Timeline, Soul views | A new body or life does not overwrite an older Incarnation. |
+| Stable Life identity and finalized per-incarnation historical summary | Life Archive | Soul Overview, Life Over view, future context and summary systems | Life Summary is a Historical Snapshot and index, not current-state authority. |
 | Current embodiment, species, form, and lineage expression | Current Incarnation or embodiment relation | Entity view, capability views, Species references | References reusable definitions; does not own species design. |
 | Current attributes and Development | relevant Development records | character sheets, summaries, adjudication packets | No copied mutable totals in identity rows. |
 | Current Skills and their state | Skill records and Development interfaces | character sheets, species routes, class views | Species or class access does not own individual Skill state. |
@@ -179,7 +180,7 @@ Conflicting ownership is a validation failure. Validation reports the owners and
 
 ## Compatibility with Approved Phase 12 Work
 
-- **FR-004:** Life Summaries will index and historically summarize owner records; they cannot become current-state owners.
+- **FR-004:** [Life Summaries](LIFE_ARCHIVE.md) index and historically summarize owner records; they do not become current-state owners.
 - **FR-010:** Long-Horizon Summaries will preserve compressed established history and references; they cannot fabricate or override detailed Canon.
 - **FR-011:** Context Assembly can follow stable IDs, owner declarations, and typed reference paths, while every context packet remains Derived or Cache data.
 - **FR-014:** the [Autonomous Registry](AUTONOMOUS_REGISTRY.md) occupies the reserved, non-overlapping owner domain and preserves identity across category changes.

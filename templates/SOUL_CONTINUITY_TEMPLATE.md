@@ -28,6 +28,7 @@ A populated record belongs in an external Campaign Record. This blank template c
 - **Continuing Soul ID:** `<stable Soul ID>`
 - **Current Incarnation ID:** `<one active Incarnation ID or explicit Interlife state>`
 - **Incarnation index:** `<ordered Incarnation IDs and effective intervals>`
+- **Life Archive:** `<Soul Overview and stable Life ID references; do not duplicate finalized summaries here>`
 - **Current Soul Integrity:** `<state, evidence, and owner reference>`
 - **Persistence authority:** `<authority and Truth Layer>`
 - **Repository and Campaign versions:** `<references>`
@@ -108,6 +109,7 @@ Create one typed reference per established structure.
 
 ## Cross-References
 
+- [Life Archive Template](LIFE_ARCHIVE_TEMPLATE.md)
 - [Soul Engine Overview](../docs/soul/SOUL_ENGINE_OVERVIEW.md)
 - [Soul System Interactions](../docs/soul/SOUL_SYSTEM_INTERACTIONS.md)
 - [Campaign State Model](../docs/persistence/CAMPAIGN_STATE_MODEL.md)

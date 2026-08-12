@@ -81,6 +81,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/PERSISTENCE_AUTHORITY.md`](docs/persistence/PERSISTENCE_AUTHORITY.md) - campaign-fact authority from Repository Canon through Current Narration.
 - [`docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/STRUCTURED_PERSISTENCE_ARCHITECTURE.md) - storage-neutral campaign modules, record ownership, identity, references, and dependency closure.
 - [`docs/persistence/CANONICAL_DATA_OWNERSHIP.md`](docs/persistence/CANONICAL_DATA_OWNERSHIP.md) - authoritative ownership map for mutable campaign facts, identity anchors, normalized references, historical snapshots, and derived data.
+- [`docs/persistence/LIFE_ARCHIVE.md`](docs/persistence/LIFE_ARCHIVE.md) - stable Life identities, player-visible Life Summaries, and scalable old-Soul historical retrieval.
 - [`docs/persistence/AUTONOMOUS_REGISTRY.md`](docs/persistence/AUTONOMOUS_REGISTRY.md) - persistent autonomous identity, models, Controllers, groups, reconstruction, memory lineage, networks, uncertainty, migration, and validation.
 - [`docs/persistence/TRUTH_LAYERS.md`](docs/persistence/TRUTH_LAYERS.md) - canonical separation of facts, history, character knowledge, research, theories, rumours, secrets, and Meta.
 - [`docs/persistence/PERSISTENCE_LEVELS.md`](docs/persistence/PERSISTENCE_LEVELS.md) - canonical lifetimes for Repository, Soul, Historical, Campaign, Session, and Ephemeral records.
