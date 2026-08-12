@@ -5025,3 +5025,31 @@ The Life Archive is campaign persistence assembled from established records. The
 ## D-1256 — Missing Life History Remains Unknown
 
 Life Archive migration and finalization preserve Unknown, Estimated, and Requires Source Recovery states. Recovered evidence may create a traceable revision, but missing details and ambiguous historical identity are not fabricated or auto-repaired.
+
+## D-1257 — Reincarnation Preserves Familiarity Rather Than Finished Power
+
+Past Development can accelerate legitimate redevelopment but does not restore current attributes, Skill levels, anatomy, access, reliability, or authority. Current embodiment and current-life effort remain necessary.
+
+## D-1258 — Retained Contributions Stack Through Bounded Saturation
+
+Every qualifying source Life may contribute. Contributions add before saturation, overlapping histories have diminishing marginal effect, and retained acceleration cannot become automatic redevelopment. Canon defines no universal percentage or cap.
+
+## D-1259 — Embodiment Relevance Is Capability-Specific
+
+Transfer strength follows the actual anatomy, control, senses, cognition, scale, material, Mana architecture, tools, environment, and expression relevant to one capability. Species names do not determine compatibility, zero boost is valid, and Unknown relevance is not zero.
+
+## D-1260 — Skill Familiarity and Development Boost Are Separate
+
+Prior Skill history may preserve Familiarity Unlock even when the current embodiment receives no Development Boost. Familiarity does not create current use, Level 0 Instinct, or a prerequisite exemption.
+
+## D-1261 — Translation Bridges Preserve Stable Skill Identity
+
+A legitimately developed cross-embodiment expression may become relevant evidence for a later embodiment. The stable Skill identity and full expression lineage persist while body-specific applications remain bounded by historically established function.
+
+## D-1262 — Retained Acceleration Applies Within Historical Territory
+
+Each source contribution is strongest within comparable prior development and tapers beyond its demonstrated relevant extent. Development beyond all comparable prior mastery is new current-life Development.
+
+## D-1263 — Retained Familiarity Is Not Autobiographical Memory
+
+Retained Development and Skill familiarity can operate without conscious recollection. They do not create Character Knowledge or implement FR-015 memory continuity.

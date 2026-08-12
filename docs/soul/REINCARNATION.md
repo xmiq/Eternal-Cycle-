@@ -295,6 +295,7 @@ A seasonal World Gate allows a monster population to establish a viable settleme
 - [Soul Constellations](SOUL_CONSTELLATIONS.md)
 - [Soul Titles](SOUL_TITLES.md)
 - [Retained Instincts](RETAINED_INSTINCTS.md)
+- [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md)
 - [Akashic Archive](AKASHIC_ARCHIVE.md)
 - [Soul Avatars](SOUL_AVATARS.md)
 - [Soul System Interactions](SOUL_SYSTEM_INTERACTIONS.md)

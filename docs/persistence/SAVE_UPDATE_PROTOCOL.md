@@ -598,6 +598,8 @@ This document defines ordinary post-interaction save transactions, Affected Sets
 
 ## Related Documents
 
+- [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) defines when a new Life contribution or embodiment change requires source-ledger and derived-profile recalculation. Retained effective profiles are derived state and must not overwrite their authoritative Life Archive, Development, Skill, or embodiment sources.
+
 - [Campaign Persistence Engine Index](README.md)
 - [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Persistence Levels](PERSISTENCE_LEVELS.md)

@@ -194,6 +194,8 @@ A former companion may recognize the new incarnation only through an established
 
 ## Development System Interface
 
+[Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) consumes Life Archive references and source-owned Development or Skill history. Soul continuity owns retained potential, current owners retain current capability, and effective acceleration profiles remain Derived/Cache records with provenance and recalculation boundaries.
+
 The [Development System](../progression/README.md) owns multidimensional growth and the distinctions among Persistent Potential, Current Access, Embodied Expression, Practised Reliability, Contextual Effectiveness, and World Recognition.
 
 Persistence records established Development Profiles, training and experiential evidence, plateaus, regression, injury, rust, suppression, retained Stat XP, current embodiment, and owner-supported numerical changes.

@@ -17,6 +17,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 ## Development System
 
 - [Progression Rules Index](progression/README.md) - multidimensional Development, embodiment, retained progression, contextual capability, and exploit safeguards.
+- [Retained Cross-Life Development](progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) - per-Life contributions, Embodiment Relevance, bounded stacking, Skill familiarity, and translation chains.
 
 ## Skill Engine
 

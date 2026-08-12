@@ -637,6 +637,10 @@ Repeatedly renewing a warning without new evidence or repair creates a Continuit
 
 Life Archive validation checks unique Life IDs, one Life per Incarnation, valid Soul references, coherent known ordinals, no more than one active Life per Soul, no finalized summary for an active Life, valid completion basis, resolvable typed historical references, preserved unknowns, source provenance, and non-competing Historical Snapshot ownership. It also checks that player-visible summaries have not become Character Knowledge and that the Life Archive has not been conflated with the metaphysical Akashic Archive. Ambiguous recovered identities are findings, never auto-repaired facts.
 
+### Retained Cross-Life Development Profile
+
+Validate source Life/Soul consistency, capability and embodiment references, meaningful historical evidence, Familiarity Unlock versus Development Boost, Zero versus Unknown relevance, additive bounded stacking, Historical Territory tapering, prerequisites, assessment provenance, supersession, and Derived-profile freshness. Current attributes and Skill levels must not be copied from historical peaks; recalculation must not mutate source history; retained familiarity must not create Character Knowledge.
+
 
 1. **Identify trigger.** Save, Migration, Continuity Case, load, recovery, or periodic audit.
 2. **Freeze the baseline.** Record exact versions, scope, and integrity.

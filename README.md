@@ -39,6 +39,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md`](docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - three-layer rules, simulation, and player-interface architecture with Entity, Controller, Perspective, and knowledge boundaries.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
+- [`docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md`](docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) - bounded retained-development stacking and cross-embodiment Skill familiarity.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.
 - [`docs/monster-evolution/README.md`](docs/monster-evolution/README.md) - Monster Evolution reading order, adjudication sequence, ownership map, and safeguards.
 - [`docs/human/README.md`](docs/human/README.md) - Human Class and Profession philosophy, rules, reading order, and ownership boundaries.

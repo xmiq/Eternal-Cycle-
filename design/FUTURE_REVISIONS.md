@@ -56,20 +56,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Open Register
 
-### FR-001 - Retained Development and Embodiment Relevance
-
-- **Status:** Roadmapped
-- **Issue:** Define bounded retained-development acceleration from qualifying previous lives without making current embodiment or current-life effort irrelevant.
-- **Affected systems:** Development System, retained Stat XP, Reincarnation, embodiment, training, and capability assessment.
-- **Gameplay impact:** Poor calibration could make reincarnation feel unrewarding or turn later lives into automatic rebuilds.
-- **Evidence needed:** Comparative records of early-, middle-, and old-soul redevelopment across suitable and unsuitable bodies, including practice time, plateaus, access limits, and contextual effectiveness.
-- **Approved direction:** Each previous life may contribute a stacking percentage XP bonus while rebuilding an attribute or Skill only up to the extent developed in that life. Embodiment Relevance modifies acceleration per capability using anatomy, control, senses, scale, material, Mana architecture, Soul/body interface, and cognition where relevant. Final percentages and calculations remain undefined.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the mechanic.
-- **Authorized roadmap link:** [FR-001 — Retained Development and Embodiment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-- **Related open question:** [Retained Stat XP acceleration](UNRESOLVED_QUESTIONS.md#non-blocking).
-
 ### FR-002 - Reincarnation Candidate Selection
 
 - **Status:** Roadmapped
@@ -95,19 +81,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Priority:** Medium
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the visibility model.
 - **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
-### FR-005 - Cross-Embodiment Skill Transfer
-
-- **Status:** Roadmapped
-- **Issue:** Reincarnation crossover and Direct Transfer may be misapplied in ways that erase human-versus-monster receiving routes or appear to grant instant mastery.
-- **Affected systems:** Skill crossover, human Skills, monster Skills, Retained Instincts, species development, embodiment, and Reincarnation.
-- **Gameplay impact:** Miscalibration could make species and present bodies cosmetic or make retained history feel unusably constrained.
-- **Evidence needed:** Cross-species recovery cases documenting receiving routes, translation costs, practice, failed expressions, and whether players and GMs preserve tree distinctions consistently.
-- **Approved direction:** Separate prior-life Skill unlock eligibility from embodiment-dependent XP acceleration. Preserve Skill identity, adapt expression to current capabilities, retain physical and magical possibility limits, and associate development with the life and embodiment that produced it so later incarnations may become transfer bridges.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation in coordination with FR-001.
-- **Authorized roadmap link:** [FR-005 — Cross-Embodiment Skill Transfer](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-006 - Adaptive Skill Consolidation and Merge Rules
 
@@ -220,11 +193,39 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-002, FR-003, FR-005, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-004 is closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-002, FR-003, FR-006, FR-007, FR-008, FR-009, FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001, FR-004, and FR-005 are closed below. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-001 - Retained Development and Embodiment Relevance
+
+- **Status:** Closed
+- **Issue:** Define bounded retained-development acceleration from qualifying previous lives without making current embodiment or current-life effort irrelevant.
+- **Affected systems:** Development System, retained Stat XP, Reincarnation, embodiment, training, Skills, Life Archive, and capability assessment.
+- **Gameplay impact:** Poor calibration could make reincarnation feel unrewarding or turn later lives into automatic rebuilds.
+- **Evidence needed:** Comparative records of early-, middle-, and old-soul redevelopment across suitable and unsuitable bodies, including practice time, plateaus, access limits, and contextual effectiveness.
+- **Approved direction:** Each meaningful previous Life may contribute while rebuilding a capability within its demonstrated territory. Embodiment Relevance modifies contribution per capability, and bounded additive saturation prevents runaway accumulation without making old-Soul history cosmetic.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the retained cross-Life contract, bounded stacking model, persistence guidance, template, integrations, decisions, and structural validation.
+- **Authorized roadmap link:** [FR-001 — Retained Development and Embodiment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Retained Cross-Life Development](../docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md), [Retained Development Template](../templates/RETAINED_CROSS_LIFE_DEVELOPMENT_TEMPLATE.md), and [FR-001/FR-005 Audit](audits/FR_001_FR_005_RETAINED_DEVELOPMENT_AUDIT.md)
+
+### FR-005 - Cross-Embodiment Skill Transfer
+
+- **Status:** Closed
+- **Issue:** Reincarnation crossover and Direct Transfer may be misapplied in ways that erase human-versus-monster receiving routes or appear to grant instant mastery.
+- **Affected systems:** Skill crossover, human Skills, monster Skills, Retained Instincts, species development, embodiment, Reincarnation, and Life Archive.
+- **Gameplay impact:** Miscalibration could make species and present bodies cosmetic or make retained history unusably constrained.
+- **Evidence needed:** Cross-species recovery cases documenting receiving routes, translation costs, practice, failed expressions, and preservation of tree distinctions.
+- **Approved direction:** Separate Familiarity Unlock from embodiment-dependent Development Boost, preserve stable Skill identity and expression lineage, retain hard prerequisites, and permit developed translated expressions to become later-Life bridges.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated with zero-boost familiarity, translation chains, Mana limits, Level 0 boundaries, provenance, persistence, and worked cases.
+- **Authorized roadmap link:** [FR-005 — Cross-Embodiment Skill Transfer](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Retained Cross-Life Development](../docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md), [Reincarnation Skill Crossover](../docs/skills/REINCARNATION_SKILL_CROSSOVER.md), and [FR-001/FR-005 Audit](audits/FR_001_FR_005_RETAINED_DEVELOPMENT_AUDIT.md)
 
 ### FR-004 - Life Archive and Old-Soul Indexing
 

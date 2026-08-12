@@ -10,6 +10,8 @@ It completes the bounded crossover framework established by [Reincarnation](../s
 
 **Skill Crossover** is a present-life learning process in which legitimate retained history helps an incarnation recover, translate, or reconstruct a bounded capability through a valid current route.
 
+[Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) owns contribution stacking, Embodiment Relevance, Historical Territory, and the separation between Familiarity Unlock and Development Boost across multiple Lives. This document owns the resulting Skill Receiving Route and crossover expression.
+
 Reincarnation preserves the source history. It does not perform the crossover. Every usable result must pass through Current Access, a receiving tree, compatible means, present experimentation, and Practised Reliability.
 
 ## Shared Skill Model
@@ -91,6 +93,8 @@ The retained Skill history exists, but no valid present Receiving Route currentl
 
 Latent Familiarity grants no present capability. A wingless body may retain aerial Skill XP while having no means to fly.
 
+Latent or accessible familiarity may therefore coexist with a zero Development Boost. Zero means no current route can reuse practical calibration; it does not erase Skill identity or history. Unknown relevance remains distinct from zero.
+
 ### Inaccessible Familiarity
 
 A potentially valid Receiving Route exists, but Current Access is blocked by memory conditions, Soul Strain, missing interpretation, suppression, an unrecognized Skill Imprint, or another established access barrier.
@@ -153,6 +157,10 @@ Different retained systems contribute only their own functions:
 
 - **Skill XP and Skill Imprints** preserve source structure and learning familiarity.
 - **Retained Instincts** may orient attention or response but do not supply a complete technique.
+
+Query the full Life Archive expression lineage rather than comparing only the original embodiment with the present one. A legitimate translated expression may serve as a later Translation Bridge. Keep one stable Skill identity where bounded function remains continuous, record embodiment-specific expressions, and preserve predecessor or future merge provenance.
+
+Familiarity Unlock never bypasses anatomy, Mana, senses, tools, tree access, Class, Evolution, environment, or another hard requirement. It does not automatically create Level 0 Instinct; Level 0 requires its own canonical provenance and receiving route.
 - **Soul Echoes** may explain source context, diagnose old habits, or teach from one life's perspective.
 - **Soul Resonance** may make a real Link easier to access or interpret without creating compatibility.
 - **Soul Depth** may support integration of conflicting histories without granting the result.
@@ -240,6 +248,12 @@ A ritualist recalls every word and diagram while lacking the current world's Cha
 
 ## Worked Examples
 
+### Slime Movement Through Human and Elf Bodies
+
+A Slime Life develops Slime Movement through deformation and sliding. A later Human retains Familiarity Unlock but has no physiological boost. After developing applicable Mana capability and practising tendril vaulting and low-friction movement, the Human establishes a translated expression under the same Skill identity.
+
+A later Elf can draw meaningful acceleration from the Human Translation Bridge because its body and magical route are more relevant than the original Slime mechanism. The Skill does not become universally applicable, and neither later Life receives the Slime's anatomy or former Skill level.
+
 ### Human Swordsmanship Informing Claw Combat
 
 A reincarnated feline monster retains sword Skill XP. Human grip, guards, and blade alignment are incompatible. Distance judgment, initiative control, feint structure, and recovery planning support Principle Transfer. Through current claw conditioning and live practice, the monster develops a claw-fighting Skill owned by the monster tree. It does not receive a second copy of sword mastery.
@@ -317,6 +331,8 @@ This document does not define:
 - [Skill Development](../progression/SKILL_DEVELOPMENT.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Stat XP and Retained Development](../progression/STAT_XP_AND_RETAINED_DEVELOPMENT.md)
+- [Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md)
+- [Life Archive](../persistence/LIFE_ARCHIVE.md)
 - [Development Interactions](../progression/DEVELOPMENT_INTERACTIONS.md)
 - [Development Safeguards](../progression/DEVELOPMENT_SAFEGUARDS.md)
 - [Reincarnation](../soul/REINCARNATION.md)

@@ -227,6 +227,10 @@ Magical-channel familiarity from one Age may offer error recognition or regulati
 
 ## Reincarnation and Rebuilding
 
+[Retained Cross-Life Development](RETAINED_CROSS_LIFE_DEVELOPMENT.md) owns aggregation across multiple source Lives, Embodiment Relevance, Historical Territory, bounded stacking, and recalculation. This document continues to own Stat XP Domain formation, compatibility, Transfer Loss, and the bodily meaning of redevelopment.
+
+Every meaningful source Life may contribute; retained history is not limited to the immediately preceding Life. Contributions add before saturation, overlap has diminishing marginal effect, and each source tapers beyond its relevant demonstrated territory. A prior numerical attribute peak is historical evidence, never a restored current value.
+
 At Final Death:
 
 - the body's current statistics, Trained Capacity, condition, organs, and species traits end with that incarnation;
@@ -387,6 +391,9 @@ This document does not define:
 Later mechanics may add local measurements only when they preserve domain specificity, current embodiment, present effort, compatibility, diminishing returns, and non-recursive persistence.
 
 ## Related Documents
+
+- [Retained Cross-Life Development](RETAINED_CROSS_LIFE_DEVELOPMENT.md)
+- [Life Archive](../persistence/LIFE_ARCHIVE.md)
 
 - [Progression Rules Index](README.md)
 - [Development System](DEVELOPMENT_SYSTEM.md)

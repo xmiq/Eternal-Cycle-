@@ -46,6 +46,8 @@ A Level 0 Instinct needs explicit provenance, such as:
 
 Similarity, desire, exposure, ancestry alone, or a parent's mastery cannot create Level 0.
 
+Prior-life [Familiarity Unlock](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md#familiarity-unlock) is not automatically Level 0. If no explicit Level 0 provenance and valid receiving route exist, historical familiarity remains in retained Skill provenance rather than becoming an inactive Skill seed.
+
 ## Development
 
 Level 0 may make initial learning more efficient because the individual has a valid receiving route and useful feedback. Advancement still requires meaningful current-life use, instruction, experimentation, adaptation, and demonstrated reliability under [Skill Development](../progression/SKILL_DEVELOPMENT.md).

@@ -14,11 +14,11 @@ No blocking questions are currently recorded.
 
 Questions that may remain open while current work continues.
 
-- How quickly should retained Stat XP accelerate redevelopment without making new bodies irrelevant?
-
 ## Resolved
 
 Resolved questions should be moved here temporarily and their accepted outcomes recorded in `design/DECISIONS.md`.
+
+- Retained Stat XP and Skill history now aggregate through bounded additive saturation, capability-specific Embodiment Relevance, and Historical Territory. Campaigns may configure local numeric caps, while canon requires meaningful current effort and no universal percentage. Accepted outcomes are recorded in D-1257 through D-1263.
 
 - Runaway weak-Skill collection is prevented by Capability Representation, the full-Skill qualification test, one-owner resolution, nonduplicating Reincarnation, and Representation Cleanup. Accepted outcomes are recorded in D-261 through D-269.
 - Hidden Evolution Conditions are kept fair through prior Condition Provenance, a required factual world-truth record, proportionate Route Clues, several valid inquiry paths where circumstances permit, explicit information layers, non-counter requirements, and agency before irreversible commitment. Accepted outcomes are recorded in D-286.

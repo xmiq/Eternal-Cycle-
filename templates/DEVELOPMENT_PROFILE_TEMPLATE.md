@@ -67,6 +67,8 @@ A populated profile belongs in an external Campaign Record. This blank template 
 - **Relearning support:** `<acceleration that remains bounded by current effort>`
 - **Current rebuild evidence:** `<training, adaptation, and reliability>`
 - **Recursive-gain check:** `<confirmation that retained progression is not re-awarded for itself>`
+- **Cross-Life profile:** `<Retained Cross-Life Development record reference>`
+- **Historical Territory:** `<applicable prior extent and taper boundary>`
 
 ## Optional Fields
 

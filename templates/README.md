@@ -13,6 +13,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 - [System Template](SYSTEM_TEMPLATE.md) - structure for proposing or documenting a reusable canonical system without bypassing repository governance.
 - [Character Record Template](CHARACTER_TEMPLATE.md) - current character identity, embodiment, capability references, agency, continuity, and persistence boundaries.
 - [Development Profile Template](DEVELOPMENT_PROFILE_TEMPLATE.md) - six-layer, objective-specific capability assessment across distinct Development Tracks.
+- [Retained Cross-Life Development Template](RETAINED_CROSS_LIFE_DEVELOPMENT_TEMPLATE.md) - source Lives, relevance, familiarity, bounded effective profiles, recalculation, and provenance.
 - [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) - Classes, Professions, traditions, schools, Institutions, Social Position, Class Change, and constraints.
 - [Species Reference Template](SPECIES_TEMPLATE.md) - ordinary species or form range, embodiment, lifecycle, traits, ecology, variation, and specialist interfaces.
 - [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) - Codex stable identity, inclusion, governance, characteristic capability routes, Evolution graph references, variants, procedural reuse, and validation.

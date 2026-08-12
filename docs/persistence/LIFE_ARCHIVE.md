@@ -146,6 +146,8 @@ Development indexing may identify a Development track, embodiment interval, atta
 
 Skill indexing may identify Skill ID, embodiment, acquisition, meaningful peak, Evolution, merge, predecessor/successor relation, expression, and source records. It does not grant cross-embodiment transfer, perform a merge, broaden scope, or replace the Skill owner.
 
+[Retained Cross-Life Development](../progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) consumes these references to construct source contributions, Embodiment Relevance assessments, Translation Bridges, and bounded Derived profiles. The Life Archive remains historical evidence and does not store the current effective bonus as archive truth.
+
 ## Embodiment History
 
 A Life may reference multiple significant forms. Form intervals distinguish starting form, major Evolution, transformation, principal form, and final form. Temporary conditions are not separate Lives and need not be indexed unless historically defining.

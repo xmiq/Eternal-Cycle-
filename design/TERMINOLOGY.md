@@ -4623,3 +4623,27 @@ A non-authoritative player-facing view derived from one finalized Life Summary. 
 ## Full Life Detail
 
 The source-owned Timeline, Campaign History, Relationship, Development, Skill, Species, Soul Weapon, and other records reached through a Life Summary's stable references; not one duplicate monolithic record.
+
+## Historical Contribution
+
+One source Life's evidence-bearing contribution toward redevelopment of one bounded capability, including source embodiment, demonstrated extent, relevance, and provenance.
+
+## Embodiment Relevance
+
+A capability-specific assessment of how much historical Development can inform a current embodiment and Receiving Route. It is not a universal Species-pair percentage.
+
+## Historical Territory
+
+The extent and conditions of capability demonstrated in prior Lives within which retained redevelopment support may apply.
+
+## Familiarity Unlock
+
+Prior experience with a Skill identity or bounded principle that can support rediscovery when a valid Receiving Route exists, without granting current use or bypassing prerequisites.
+
+## Translation Bridge
+
+A historically developed Skill expression that connects an older embodiment route to a later one while preserving stable Skill identity and provenance.
+
+## Effective Retained Acceleration
+
+The bounded Derived redevelopment advantage calculated from qualifying Historical Contributions after Embodiment Relevance, Historical Territory, access, prerequisites, and saturation are applied.

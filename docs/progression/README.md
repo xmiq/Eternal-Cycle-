@@ -14,9 +14,10 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 6. [Social and Leadership Development](SOCIAL_AND_LEADERSHIP_DEVELOPMENT.md) - defines communication, cultural calibration, relationships, reputation, authority, legitimacy, coordination, governance, and social agency safeguards.
 7. [Species Development](SPECIES_DEVELOPMENT.md) - defines current-form traits, maturation, lifecycle, body-changing routes, ecology, distinct human and monster progression, and bounded reincarnational crossover without implementing evolution trees.
 8. [Stat XP and Retained Development](STAT_XP_AND_RETAINED_DEVELOPMENT.md) - defines domain-specific soul-carried familiarity, Compatibility Profiles, Transfer Loss, latent access, bounded relearning acceleration, and anti-farming rules.
-9. [Development Interactions](DEVELOPMENT_INTERACTIONS.md) - defines effect ownership, synergy, dependencies, incompatibility, substitution, compensation, bottlenecks, external support, and group capability without merging Tracks.
-10. [Capability Assessment](CAPABILITY_ASSESSMENT.md) - provides scoped qualitative profiles, evidence states, uncertainty, observer perspectives, comparative findings, and purpose-bound institutional measures.
-11. [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md) - consolidates legitimate-growth tests, anti-exploit rules, causal failure states, proportional consequences, and protections for experimentation and agency.
+9. [Retained Cross-Life Development](RETAINED_CROSS_LIFE_DEVELOPMENT.md) - defines per-Life contributions, Embodiment Relevance, bounded stacking, Historical Territory, Skill familiarity versus boost, translation chains, and recalculation.
+10. [Development Interactions](DEVELOPMENT_INTERACTIONS.md) - defines effect ownership, synergy, dependencies, incompatibility, substitution, compensation, bottlenecks, external support, and group capability without merging Tracks.
+11. [Capability Assessment](CAPABILITY_ASSESSMENT.md) - provides scoped qualitative profiles, evidence states, uncertainty, observer perspectives, comparative findings, and purpose-bound institutional measures.
+12. [Development Safeguards](DEVELOPMENT_SAFEGUARDS.md) - consolidates legitimate-growth tests, anti-exploit rules, causal failure states, proportional consequences, and protections for experimentation and agency.
 
 ## Soul Engine Dependencies
 
