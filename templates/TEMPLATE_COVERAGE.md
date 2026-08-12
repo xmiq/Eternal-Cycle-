@@ -71,6 +71,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Human social framework | [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) |
 | Species and form range | [Species Reference Template](SPECIES_TEMPLATE.md) |
 | Cross-campaign reusable species design | [Living Codex Species Entry Template](LIVING_CODEX_SPECIES_TEMPLATE.md) |
+| Cross-campaign lineage and inheritance design | [Living Codex Inheritance Profile Template](LIVING_CODEX_INHERITANCE_PROFILE_TEMPLATE.md) |
 | Monster Evolution routes | [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) |
 | Soul continuity | [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) |
 | Soul Avatar | [Soul Avatar Profile Template](SOUL_AVATAR_TEMPLATE.md) |
@@ -88,7 +89,7 @@ Coverage does not require one file per canonical document. A record-family templ
 
 | Reusable asset family | Template coverage | Boundary |
 | --- | --- | --- |
-| GM Living Codex Species Registry | [Living Codex Species Entry](LIVING_CODEX_SPECIES_TEMPLATE.md), [Species Reference](SPECIES_TEMPLATE.md), [Evolution Tree](EVOLUTION_TREE_TEMPLATE.md) | separately deployed reusable design; never a current campaign species, population, or character record |
+| GM Living Codex Species Registry and inheritance | [Living Codex Species Entry](LIVING_CODEX_SPECIES_TEMPLATE.md), [Living Codex Inheritance Profile](LIVING_CODEX_INHERITANCE_PROFILE_TEMPLATE.md), [Species Reference](SPECIES_TEMPLATE.md), [Evolution Tree](EVOLUTION_TREE_TEMPLATE.md) | separately deployed reusable design; never a current campaign species, genealogy, population, or character record |
 
 ## Template Selection Rules
 

@@ -326,6 +326,8 @@ The [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) owns relationshi
 
 When a campaign adopts reusable design, the state record may reference its Codex Stable ID and Codex Version plus any explicit Campaign Divergence. That reference does not import the Codex database into Campaign State, and a later Codex revision does not silently change the adopted campaign form.
 
+Actual individuals store their Carried Lineages, Expressed Lineages, Species Expression, Evolution Expression, Evolutionary Potential, inherited Level 0 Instincts, Ancestral Echo manifestations, contributors, genealogy, and outcome provenance in campaign state. Reusable Lineage Templates and Inheritance Profiles remain in the separate Living Codex.
+
 Species state separates:
 
 - Species Reference;

@@ -280,6 +280,7 @@ $future = Get-Content -Raw -LiteralPath $futurePath
 $openRegister = [regex]::Match($future, '(?ms)^## Open Register\s*(?<body>.*?)(?=^## Roadmapped)')
 $futureEntries = @()
 $roadmappedEntries = @()
+$closedEntries = @()
 if (-not $openRegister.Success) {
     Add-ValidationError "Future Revisions lacks an Open Register section."
 }
@@ -329,7 +330,29 @@ else {
     }
 }
 
-$allFutureIds = @($futureEntries + $roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
+$closedRegister = [regex]::Match($future, '(?ms)^## Closed\s*(?<body>.*?)(?=^## Blank Entry Contract)')
+if (-not $closedRegister.Success) {
+    Add-ValidationError "Future Revisions lacks a Closed section."
+}
+else {
+    $closedEntries = @([regex]::Matches(
+        $closedRegister.Groups['body'].Value,
+        '(?ms)^### (?<id>FR-[0-9]{3}) - .+?(?=^### FR-[0-9]{3} - |\z)'
+    ))
+    foreach ($entry in $closedEntries) {
+        foreach ($field in @('Status', 'Issue', 'Affected systems', 'Gameplay impact', 'Evidence needed', 'Suggested future phase', 'Priority', 'Status reason', 'Authorized roadmap link', 'Closure references')) {
+            $escapedField = [regex]::Escape($field)
+            if ($entry.Value -notmatch "(?m)^- \*\*$escapedField`:\*\* .+") {
+                Add-ValidationError "$($entry.Groups['id'].Value) lacks required closed field: $field"
+            }
+        }
+        if ($entry.Value -notmatch '(?m)^- \*\*Status:\*\* Closed$') {
+            Add-ValidationError "$($entry.Groups['id'].Value) in Closed does not have Closed status."
+        }
+    }
+}
+
+$allFutureIds = @($futureEntries + $roadmappedEntries + $closedEntries | ForEach-Object { $_.Groups['id'].Value })
 foreach ($duplicate in $allFutureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
     Add-ValidationError "Duplicate Future Revision ID across lifecycle sections: $($duplicate.Name)"
 }
@@ -340,7 +363,10 @@ $codexRequired = @(
     'docs/gm-living-codex/SPECIES_REGISTRY.md',
     'docs/gm-living-codex/PERSISTENCE_MODEL.md',
     'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md',
-    'templates/LIVING_CODEX_SPECIES_TEMPLATE.md'
+    'docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md',
+    'docs/skills/LEVEL_ZERO_INSTINCT.md',
+    'templates/LIVING_CODEX_SPECIES_TEMPLATE.md',
+    'templates/LIVING_CODEX_INHERITANCE_PROFILE_TEMPLATE.md'
 )
 foreach ($relative in $codexRequired) {
     if (-not (Test-Path -LiteralPath (Join-Path $rootPath $relative))) {
@@ -351,7 +377,7 @@ foreach ($relative in $codexRequired) {
 $codexPlanPath = Join-Path $rootPath 'docs/gm-living-codex/GM_LIVING_CODEX.md'
 if (Test-Path -LiteralPath $codexPlanPath) {
     $codexPlan = Get-Content -Raw -LiteralPath $codexPlanPath
-    foreach ($step in 1..12) {
+    foreach ($step in 1..13) {
         if ($codexPlan -notmatch "(?m)^### Step $step (?:-|—) ") {
             Add-ValidationError "Living Codex implementation plan lacks Step $step."
         }
@@ -361,9 +387,48 @@ if (Test-Path -LiteralPath $codexPlanPath) {
 $codexPersistencePath = Join-Path $rootPath 'docs/gm-living-codex/PERSISTENCE_MODEL.md'
 if (Test-Path -LiteralPath $codexPersistencePath) {
     $codexPersistence = Get-Content -Raw -LiteralPath $codexPersistencePath
-    foreach ($requiredText in @('eternal_cycle_living_codex.sqlite', 'separate from every campaign database', 'reopen the candidate read-only', 'replace the canonical Google Drive file')) {
+    foreach ($requiredText in @(
+        'eternal_cycle_living_codex.sqlite',
+        'separate from every campaign database',
+        'reopen the candidate read-only',
+        'replace the canonical Google Drive file',
+        'lineage_templates',
+        'inheritance_profile_sources',
+        'inheritance_outcomes',
+        'inherited_instincts',
+        'ancestral_echo_definitions',
+        'profile_status <> ''complete''',
+        'outcome_weight >= 0'
+    )) {
         if ($codexPersistence -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Living Codex persistence model lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$lineagePath = Join-Path $rootPath 'docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md'
+if (Test-Path -LiteralPath $lineagePath) {
+    $lineage = Get-Content -Raw -LiteralPath $lineagePath
+    foreach ($requiredText in @(
+        'Compatibility percentages never become inheritance weights.',
+        'An absent profile means **Not Yet Defined**.',
+        'There is no universal halving rule.',
+        'A **Born-Evolved** individual',
+        'An **Ancestral Echo**',
+        'campaign Save Transaction'
+    )) {
+        if ($lineage -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Lineage and Evolutionary Inheritance lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$levelZeroPath = Join-Path $rootPath 'docs/skills/LEVEL_ZERO_INSTINCT.md'
+if (Test-Path -LiteralPath $levelZeroPath) {
+    $levelZero = Get-Content -Raw -LiteralPath $levelZeroPath
+    foreach ($requiredText in @('existing Skill system', 'not reached ordinary Level 1 capability', 'No separate Skill Seed subsystem.', 'does not grant')) {
+        if ($levelZero -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Level 0 Instinct lacks required invariant: $requiredText"
         }
     }
 }
@@ -415,8 +480,8 @@ Write-Output "Templates indexed: $($templateFiles.Count)"
 Write-Output "Agent roles indexed: $($agentFiles.Count)"
 Write-Output "Canonical terms checked: $($termHeadings.Count)"
 Write-Output "Roadmap tasks checked: $($roadmapStatuses.Count)"
-Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmappedEntries.Count)"
-Write-Output 'Living Codex foundation: Steps 1-12 invariants checked'
+Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmappedEntries.Count + $closedEntries.Count)"
+Write-Output 'Living Codex foundation: Steps 1-13 invariants checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

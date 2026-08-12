@@ -4,14 +4,14 @@
 
 This document defines Step 12 of the [GM Living Codex implementation plan](GM_LIVING_CODEX.md#step-12---reproductive-compatibility): the initial reusable data model and operating rules for **Reproductive Compatibility** between species.
 
-It defines only whether a directionally identified species pairing can begin an offspring-forming or equivalent renewal process under stated conditions, and what limited outcome probabilities have actually been established. It does not define the later lineage, inheritance, gestation, development, family, or social systems that may follow.
+It defines only whether a directionally identified species pairing can begin an offspring-forming or equivalent renewal process under stated conditions, and what limited outcome probabilities have actually been established. It does not define lineage outcomes, gestation, broader development procedures, family, or social systems that may follow.
 
 ## Document Control
 
 - **Owner:** reusable directional Reproductive Compatibility records, assistance-method records, established viability and fertility claims, and their Living Codex persistence contract
 - **Primary authorities:** [GM Living Codex Design](GM_LIVING_CODEX.md), [Species Registry](SPECIES_REGISTRY.md), and [Living Codex Persistence Model](PERSISTENCE_MODEL.md)
 - **Dependencies:** stable species identity, actual species renewal architecture, Magic, Souls, Monster Evolution, and GM design review
-- **Extensions:** a later lineage and inheritance module may consume successful-formation results without changing this scaffold's meaning
+- **Extensions:** [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) consumes successful-formation results without changing this scaffold's meaning
 - **Consumers:** GM species design, ecosystem and population simulation, campaign configuration, Hybridization adjudication, AI GM operations, and Codex validation
 - **Repository boundary:** no actual pairing, individual, result, campaign divergence, current population, or private deployment value belongs in this repository
 
@@ -235,7 +235,7 @@ A successful reproductive initiation may produce:
 - an offspring belonging to one established species;
 - a later-defined mixed lineage;
 - a Hybrid Form requiring its own full profile;
-- another outcome owned by the later lineage module.
+- another outcome owned by [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md).
 
 Step 12 does not choose among these possibilities merely from the source and partner IDs. A high initiation probability cannot replace whole-form integration, Hybrid Stability, inheritance, or Species Potential adjudication.
 
@@ -501,9 +501,9 @@ Generated Codex views expose established relationships only.
 
 A readable view identifies its Codex Version and does not expose protected GM information automatically. Backend values become player-visible only through an established information route.
 
-## Future Lineage and Inheritance Interface
+## Lineage and Inheritance Interface
 
-Reproductive Compatibility determines whether reproduction or equivalent formation can successfully begin. The later lineage and inheritance module determines what lineage and Evolution expression may result afterward.
+Reproductive Compatibility determines whether reproduction or equivalent formation can successfully begin. [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) determines what lineage and Evolution expression may result afterward.
 
 Step 12 reserves interfaces for future consideration of:
 
@@ -517,7 +517,7 @@ Step 12 reserves interfaces for future consideration of:
 - ancestral hereditary echoes distinct from Soul Echoes;
 - inheritance distributions.
 
-None of those systems is implemented here. Step 12 does not define courtship, attraction, consent procedure, pregnancy, gestation, incubation, birth, heredity, hybrid development, family structures, reproductive anatomy, or cultural marriage systems.
+None of those systems is implemented here. Step 12 does not define courtship, attraction, consent procedure, pregnancy, gestation, incubation, birth, heredity, hybrid development, family structures, reproductive anatomy, or cultural marriage systems. Step 13 implements only the linked lineage and inherited-development layer, not those broader procedures.
 
 ## Safeguards
 
@@ -543,6 +543,7 @@ None of those systems is implemented here. Step 12 does not define courtship, at
 - [GM Living Codex Design](GM_LIVING_CODEX.md)
 - [Species Registry](SPECIES_REGISTRY.md)
 - [Living Codex Persistence Model](PERSISTENCE_MODEL.md)
+- [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md)
 - [Hybridization](../monster-evolution/HYBRIDIZATION.md)
 - [Species Development](../progression/SPECIES_DEVELOPMENT.md)
 - [Magic](../magic/README.md)

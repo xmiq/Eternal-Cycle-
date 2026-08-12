@@ -106,6 +106,13 @@ Do not store a player's private plan as Character Knowledge, world truth, or an 
 
 - **Species record:** `<Species Record ID>`
 - **Current form or stage:** `<form reference and owning route>`
+- **Carried Lineages:** `<Lineage Template references, campaign divergences, or unknown>`
+- **Expressed Lineages:** `<currently expressed template references and scope>`
+- **Species Expression:** `<current species-level architecture and provenance>`
+- **Evolution Expression:** `<current Evolved Form architecture or none>`
+- **Evolutionary Potential:** `<available branch references without implying readiness>`
+- **Inherited Level 0 Instincts:** `<Skill references and profile provenance or none>`
+- **Ancestral Echo manifestations:** `<campaign facts and source definition references or none>`
 - **Life-cycle position:** `<supported description or unknown>`
 - **Body Compatibility summary:** `<scope-specific finding or linked profile>`
 - **Current condition:** `<stable condition reference plus active injuries, fatigue, impairment, recovery, or suppression>`
@@ -358,6 +365,7 @@ Do not rewrite unrelated character sections merely to make the record appear fre
 - [Campaign Persistence Integration](../docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
 - [Development System](../docs/progression/README.md)
 - [Skill Engine](../docs/skills/README.md)
+- [Lineage and Evolutionary Inheritance](../docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md)
 - [Soul Engine](../docs/soul/README.md)
 - [Monster Evolution](../docs/monster-evolution/README.md)
 - [Human Classes and Professions](../docs/human/README.md)

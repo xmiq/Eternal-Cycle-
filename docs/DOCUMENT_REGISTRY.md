@@ -110,6 +110,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Hidden Skills](skills/HIDDEN_SKILLS.md) | Observer-relative Skill concealment and fair discovery | Consumed by information and uncertainty procedures. |
 | [Conceptual Skills](skills/CONCEPTUAL_SKILLS.md) | Bounded Skills operating through principles, relations, meanings, or concepts | Consumed by advanced capability adjudication. |
 | [Skill Engine Safeguards](skills/SKILL_ENGINE_SAFEGUARDS.md) | Capability qualification, one-owner representation, proliferation limits, and cleanup | Required by every Skill extension and record. |
+| [Level 0 Instinct](skills/LEVEL_ZERO_INSTINCT.md) | Instinctive Skill access represented within existing Skill tracking | Consumed by species, Evolution, and lineage outcomes without granting mastery. |
 
 ## Monster Evolution
 
@@ -272,6 +273,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Living Codex Species Registry](gm-living-codex/SPECIES_REGISTRY.md) | Stable species identity, reusable record contracts, capability classification, Evolution graphs, variants, procedural metadata, and player-species integration | Consumes specialist mechanics and supplies reusable designs without storing individuals or live world state. |
 | [Living Codex Persistence Model](gm-living-codex/PERSISTENCE_MODEL.md) | Separate Codex SQLite authority, normalized schema, stable references, revisions, migrations, validation, Google Drive deployment, backups, and full-save completion | Reuses adapter procedures while remaining distinct from Campaign Persistence and every populated campaign database. |
 | [Reproductive Compatibility](gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) | Sparse directional species relationships, scoped nonzero probabilities, assistance methods, viability and fertility claims, schema constraints, and operating procedure | Supplies reusable design inputs without defining individuals, complete reproduction, inheritance, Hybrid Forms, or population outcomes. |
+| [Lineage, Hybridization, and Evolutionary Inheritance](gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) | Reusable Lineage Templates, Inheritance Profiles, Species and Evolution Expression, Mana equalization, inherited instinct, and stabilization | Consumes successful formation and supplies reusable outcomes without storing genealogy or individual lineage state. |
 
 ## Campaign Persistence Engine
 

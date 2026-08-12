@@ -267,6 +267,8 @@ Hybridization never promises the best version of every source trait. It may inhe
 
 Hybrid Inheritance follows the actual origin process. An individual artificial or magical hybrid is not heritable unless its route can produce successor bodies. A stable inherited hybrid can vary among successors. No universal percentage determines trait transfer. Reproductive Compatibility percentages govern initiation, viability, or fertility only in their recorded scope; they are not inheritance distributions.
 
+Reusable inherited outcomes follow [Lineage and Evolutionary Inheritance](../gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md). That system may select Carried Lineages, Species Expression, Evolution Expression, Level 0 Instincts, and Ancestral Echoes after successful formation; this document still owns whole-form integration, Trait Conflict, Integration Bridges, Hybrid Stability, and whether a result is a coherent Hybrid Form.
+
 Skills, Profession Development, cultural knowledge, reputation, Soul Titles, memories, and relationships are not inherited Species Traits.
 
 ## Progression-Tree Ownership

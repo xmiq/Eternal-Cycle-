@@ -8,7 +8,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 The files in this directory are the canonical Skill Engine. Read the Development foundations first, then the ten Skill documents in the order below. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) appears last because it consolidates the completed engine, but its ownership and representation rules apply throughout.
 
-When two documents describe one event, assign each exact effect to one Owning System. A supporting rule may change access, cost, reliability, scale, timing, or Contextual Effectiveness without taking ownership of the effect it supports.
+When two documents describe one event, assign each exact effect to one Owning System. A supporting rule may change access, cost, reliability, scale, timing, or Contextual Effectiveness without taking ownership of the effect it supports. [Level 0 Instinct](LEVEL_ZERO_INSTINCT.md) is the narrow representation rule for species-, Evolution-, or lineage-granted instinctive Skill access.
 
 ## Shared Skill Model
 
@@ -50,6 +50,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 8. [Hidden Skills](HIDDEN_SKILLS.md) - observer-relative hiddenness, factual provenance, fair evidence, discovery, misclassification, and concealment.
 9. [Conceptual Skills](CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through deeply integrated principles, relationships, meanings, and metaphysical concepts.
 10. [Skill Engine Safeguards](SKILL_ENGINE_SAFEGUARDS.md) - unified Capability Representation, Ownership Tests, anti-proliferation rules, cleanup procedures, and the new-Skill checklist.
+11. [Level 0 Instinct](LEVEL_ZERO_INSTINCT.md) - instinct represented in existing Skill tracking without Level 1 capability, inherited mastery, or a parallel Skill Seed system.
 
 ## Document Responsibilities
 
@@ -65,6 +66,7 @@ These dimensions form a qualitative record, not a score. High Persistent Familia
 | **Hidden Skills** | Visibility, factual provenance, fair clues, discovery, and concealment | retroactive convenience powers, prerequisite bypass, possession, or arbitrary GM reversal |
 | **Conceptual Skills** | bounded learned interpretation and application of a Conceptual Domain | automatic authority, unrestricted reality control, universal magic, or metaphor as effect |
 | **Skill Engine Safeguards** | representation, ownership tests, anti-proliferation, and record cleanup | new species, Professions, spells, Soul powers, equipment powers, or numerical Skill formulas |
+| **Level 0 Instinct** | bounded instinctive Skill access and its transition into ordinary learning | inherited mastery, universal effects, anatomy, Skill Seeds, or lineage outcomes |
 
 ## Ownership Procedure
 

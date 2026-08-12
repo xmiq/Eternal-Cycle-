@@ -129,6 +129,18 @@ Expose only directional relationships already present in the validated Living Co
 - **Campaign divergence boundary:** `<base remains unchanged; campaign differences stay external>`
 - **Individual-state boundary:** `<species values establish no attraction, consent, willingness, health, or personal fertility>`
 
+## Lineage and Inheritance References
+
+- **Primary Lineage Template IDs:** `<stable external references>`
+- **Related template IDs:** `<parent, sibling, derived, replacement, or none>`
+- **Default Inheritance Profile IDs:** `<stable external references or Not Yet Defined>`
+- **Evolutionary Potential references:** `<branch references or unknown>`
+- **Characteristic Level 0 Instinct references:** `<Skill references or none>`
+- **Ancestral Echo definition references:** `<stable references or none>`
+- **Lineage Stabilization references:** `<method references or none>`
+
+Use the [Living Codex Inheritance Profile Template](LIVING_CODEX_INHERITANCE_PROFILE_TEMPLATE.md) for outcome distributions. Do not place individual genealogy or actual descendant results here.
+
 ## Procedural Generation
 
 - **Search tags:** `<habitat, ecology, body, senses, cognition, society, Magic, route, and theme tags>`
@@ -157,6 +169,8 @@ Expose only directional relationships already present in the validated Living Co
 - [ ] Species Reference and Evolution records use their existing templates and owners.
 - [ ] Traits, instincts, Skills, Development, Magic, Souls, and Evolution remain distinct.
 - [ ] Characteristic Skills are access routes rather than mandatory packages or inherited mastery.
+- [ ] Lineage references do not imply expression, inheritance, or a complete outcome distribution.
+- [ ] Level 0 references represent instinct rather than Level 1 capability or Skill Seeds.
 - [ ] Evolution graph supports contextual branches without becoming deterministic, exhaustive, or ranked.
 - [ ] Variants remain distinct from individual variation and campaign divergence.
 - [ ] Only established directional Reproductive Compatibility rows appear; unknown values remain unknown and no reverse row is inferred.
@@ -170,6 +184,7 @@ Expose only directional relationships already present in the validated Living Co
 - [GM Living Codex](../docs/gm-living-codex/GM_LIVING_CODEX.md)
 - [Species Registry](../docs/gm-living-codex/SPECIES_REGISTRY.md)
 - [Reproductive Compatibility](../docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md)
+- [Lineage and Evolutionary Inheritance](../docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md)
 - [Species Development](../docs/progression/SPECIES_DEVELOPMENT.md)
 - [Monster Evolution](../docs/monster-evolution/README.md)
 - [Monster Skill Trees](../docs/skills/MONSTER_SKILL_TREES.md)

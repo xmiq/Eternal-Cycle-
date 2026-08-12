@@ -392,6 +392,8 @@ A [Magical School](../human/MAGICAL_SCHOOLS.md) may model Mana accurately, parti
 
 [Monster Skill Trees](../skills/MONSTER_SKILL_TREES.md) own learned monster-native methods. [Monster Evolution](../monster-evolution/README.md) owns whole-form reorganization and magical anatomy. Mana ecology may create pressure, opportunity, or route relevance without awarding a Skill or Evolution.
 
+During inherited development, [Mana Reconciliation and Mana Equalization](../gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md#mana-reconciliation) may coordinate competing Lineage Templates and favor a viable energetic equilibrium. This is a lineage-specific developmental use of established Mana sources and architecture, not a universal conversion formula, free power, or automatic inheritance of advanced forms.
+
 ## Nonmagical Capability and Counterplay
 
 Mana does not make magic universally superior.

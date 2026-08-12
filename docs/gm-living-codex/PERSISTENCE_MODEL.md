@@ -122,6 +122,89 @@ An implementation may refine column names, use integer surrogate keys, or add su
 
 These tables are governed by [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). An absent directional pair is Not Yet Defined, and no schema routine may expand the sparse relation into a completed matrix.
 
+### Lineage and Inheritance Tables
+
+| Table | Responsibility |
+| --- | --- |
+| `lineage_templates` | Stable reusable developmental architectures, Mana architecture, Soul-body interface, design basis, and revision reference. |
+| `species_lineage_templates` | Typed many-to-many relations among species, variants, forms, and their carried or normally expressed templates. |
+| `lineage_relationships` | Parent, sibling, derived, merged, split, deprecated, and replacement relations among stable templates. |
+| `inheritance_profiles` | Sparse profile identity, status, direction policy, condition set, completeness, and normalized weight total. |
+| `inheritance_profile_sources` | Ordered one-to-many contribution records, avoiding a hardcoded two-parent schema. |
+| `inheritance_outcomes` | Stable outcome identity, weight, Species Expression, status, dependencies, and condition scope. |
+| `inheritance_outcome_lineages` | Carried, expressed, and dominant template roles for each outcome. |
+| `inheritance_outcome_evolutions` | Evolution Expression and Evolutionary Potential references for each outcome. |
+| `inherited_instincts` | Skill references granted at Level 0 by a specific outcome. |
+| `ancestral_echo_definitions` | Reusable hereditary-pattern definitions distinct from Soul Echo records. |
+| `inheritance_conditions` | Environmental, developmental, Mana, material, authority, and other normalized requirements. |
+| `inheritance_assistance_methods` | Lineage Stabilization methods, mechanisms, risks, limits, and affected outcomes. |
+| `inheritance_revisions` | Append-preserving profile and outcome revision evidence. |
+
+These tables are governed by [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md). An absent profile is Not Yet Defined. A complete profile validates active weights against one declared normalized total; a partial profile remains unsampleable as complete. Compatibility percentages never populate outcome weights.
+
+Representative structural constraints are equivalent to:
+
+```sql
+CREATE TABLE lineage_templates (
+    lineage_template_id TEXT PRIMARY KEY,
+    codex_entry_id TEXT NOT NULL,
+    developmental_architecture TEXT NOT NULL,
+    mana_architecture TEXT NOT NULL,
+    soul_body_interface TEXT,
+    design_basis TEXT NOT NULL,
+    current_revision_id TEXT NOT NULL,
+    FOREIGN KEY (codex_entry_id) REFERENCES codex_entries(entry_id),
+    FOREIGN KEY (current_revision_id) REFERENCES entry_revisions(revision_id)
+);
+
+CREATE TABLE inheritance_profiles (
+    inheritance_profile_id TEXT PRIMARY KEY,
+    profile_status TEXT NOT NULL
+        CHECK (profile_status IN ('complete', 'partial', 'qualitative')),
+    normalized_weight_total REAL
+        CHECK (normalized_weight_total > 0),
+    condition_set_id TEXT,
+    design_basis TEXT NOT NULL,
+    current_revision_id TEXT NOT NULL,
+    CHECK (
+        profile_status <> 'complete'
+        OR normalized_weight_total IS NOT NULL
+    ),
+    FOREIGN KEY (current_revision_id) REFERENCES entry_revisions(revision_id)
+);
+
+CREATE TABLE inheritance_profile_sources (
+    inheritance_profile_id TEXT NOT NULL,
+    source_position INTEGER NOT NULL CHECK (source_position >= 1),
+    lineage_template_id TEXT NOT NULL,
+    species_id TEXT,
+    evolution_node_id TEXT,
+    source_role TEXT,
+    PRIMARY KEY (inheritance_profile_id, source_position),
+    FOREIGN KEY (inheritance_profile_id)
+        REFERENCES inheritance_profiles(inheritance_profile_id),
+    FOREIGN KEY (lineage_template_id)
+        REFERENCES lineage_templates(lineage_template_id),
+    FOREIGN KEY (species_id) REFERENCES species(species_id),
+    FOREIGN KEY (evolution_node_id) REFERENCES evolution_nodes(evolution_node_id)
+);
+
+CREATE TABLE inheritance_outcomes (
+    inheritance_outcome_id TEXT PRIMARY KEY,
+    inheritance_profile_id TEXT NOT NULL,
+    outcome_weight REAL CHECK (outcome_weight >= 0),
+    species_expression_id TEXT,
+    evolution_expression_id TEXT,
+    outcome_basis TEXT NOT NULL,
+    FOREIGN KEY (inheritance_profile_id)
+        REFERENCES inheritance_profiles(inheritance_profile_id),
+    FOREIGN KEY (species_expression_id) REFERENCES species(species_id),
+    FOREIGN KEY (evolution_expression_id) REFERENCES evolution_nodes(evolution_node_id)
+);
+```
+
+The physical schema additionally normalizes outcome-lineage roles, Evolutionary Potential, Level 0 Instincts, Ancestral Echoes, conditions, assistance methods, and revisions through the tables above. SQLite triggers or application validation must reject activation of a `complete` profile unless its active outcome weights share the declared condition set and sum exactly to `normalized_weight_total`. A missing row remains undefined; zero-weight outcomes may remain documented alternatives but are not active possibilities in that distribution.
+
 ### Governance Tables
 
 | Table | Required purpose |
@@ -280,6 +363,11 @@ At minimum, validation confirms:
 - `PRAGMA integrity_check` returns `ok`;
 - `PRAGMA foreign_key_check` returns no rows;
 - every Codex Stable ID is valid, unique, and unreused;
+- every Lineage Template and Inheritance Profile stable ID is valid, unique, and traceable;
+- every profile source, outcome, lineage, Evolution, Skill, Ancestral Echo, condition, and assistance reference resolves;
+- complete inheritance distributions use one condition set and sum to their declared normalized total;
+- partial or unknown inheritance profiles cannot be activated as complete distributions;
+- Level 0 instinct records reference existing Skills and never carry XP or mastery;
 - aliases cannot create an unresolved identity collision;
 - preferred names and aliases resolve through stable identity;
 - merge, split, deprecation, and replacement relations are traceable;

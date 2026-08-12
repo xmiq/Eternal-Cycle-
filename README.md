@@ -52,6 +52,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/GM_RESPONSIBILITIES.md`](docs/gm/GM_RESPONSIBILITIES.md) - bounded GM duties, ownership handoffs, delegation, records, and human/AI parity.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
 - [`docs/gm-living-codex/README.md`](docs/gm-living-codex/README.md) - cross-campaign GM-approved reusable design assets, authority boundaries, consultation rules, and implementation plan.
+- [`docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md`](docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) - lineage templates, inherited expression, Mana equalization, Level 0 Instincts, and stabilization.
 - [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
 - [`docs/ai/AI_RUNTIME_MODEL.md`](docs/ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, transaction flow, adapter composition, failure boundaries, and extension rules.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.

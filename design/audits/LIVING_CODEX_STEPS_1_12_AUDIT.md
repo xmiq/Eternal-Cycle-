@@ -66,7 +66,7 @@ Reproductive Compatibility
   -> later lineage and Evolutionary inheritance adjudication
 ```
 
-The current Skill wording permits a future local Level 0 label for instinctive access without creating a separate Skill Seed subsystem or inherited mastery. The foundation does not contradict the approved future direction for Mana reconciliation, Mana equalization, advanced-form attenuation, or bounded artificial stabilization. Those claims remain unimplemented until Step 13.
+At the time of this audit, the Skill wording permitted a future local Level 0 label for instinctive access without creating a separate Skill Seed subsystem or inherited mastery. The foundation did not contradict the then-approved direction for Mana reconciliation, Mana equalization, advanced-form attenuation, or bounded artificial stabilization. Those claims were subsequently implemented in Step 13.
 
 ## Repairs Made
 
@@ -78,7 +78,7 @@ The current Skill wording permits a future local Level 0 label for instinctive a
 
 ## Next Authorized Work
 
-The next authorized but unstarted maintenance task is **GM Living Codex Step 13 - Lineage, Hybridization, and Evolutionary Inheritance**. This audit implements none of its mechanics.
+At the time of this audit, the next authorized task was **GM Living Codex Step 13 - Lineage, Hybridization, and Evolutionary Inheritance**. Step 13 was subsequently implemented under the roadmap; this Steps 1-12 audit remains a point-in-time foundation record.
 
 ## Related Documents
 

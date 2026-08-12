@@ -4786,6 +4786,54 @@ Species-level Reproductive Compatibility establishes no individual's attraction,
 
 A compatibility change is one dependency-closed Codex migration containing pair, assistance, condition, result, revision, index, and validation records as applicable. It follows SQLite transaction, read-only reopen, canonical Google Drive replacement, verified current and dated backups, remote read-back, and exact-comparison requirements; partial local persistence cannot activate it.
 
-## D-1197 — Complete Lineage and Inheritance Rules Remain Future Work
+## D-1197 — Reproductive Compatibility Does Not Own Inheritance
 
-Reproductive Compatibility determines whether formation can begin and may record viability or fertility. It does not determine resulting lineage, mixed or pure-line expression, inherited Evolution, born-evolved forms, Instinctive Skills, hereditary echoes, or inheritance distributions; those require a separately authorized later module.
+Reproductive Compatibility determines whether formation can begin and may record viability or fertility. It does not determine resulting lineage, mixed or pure-line expression, inherited Evolution, Born-Evolved forms, Instinctive Skills, hereditary echoes, or inheritance distributions; those belong to the separately authorized lineage and inheritance module.
+
+## D-1198 — Formation and Inheritance Are Separate Stages
+
+Reproductive Compatibility resolves successful formation and its scoped viability or fertility claims. Lineage and Evolutionary Inheritance resolves developmental outcomes only after formation succeeds. Compatibility percentages never become inheritance weights.
+
+## D-1199 — Lineage Uses Reusable Developmental Templates
+
+A Lineage Template records inherited biological, magical, developmental, and metaphysical architecture rather than ancestry fractions alone. An individual may carry several templates, express only some, and visually resemble one source without revealing complete lineage composition.
+
+## D-1200 — Species Expression Does Not Erase Carried Lineage
+
+Species Expression records current species-level developmental architecture. Dominant Expression, Mixed Lineage, and Pure-Line Throwbacks are valid profile outcomes; none silently deletes other Carried Lineages or guarantees later transmission.
+
+## D-1201 — Mana Reconciles and Equalizes Inherited Architecture
+
+Mana may reconcile competing developmental structures and tends toward a viable developmental equilibrium. Advanced Evolved Forms generally require denser or more demanding architecture, so natural full-form inheritance generally attenuates toward earlier or more stable forms without following a universal halving formula.
+
+## D-1202 — Inheritance Profiles Are Sparse and Multi-Source
+
+An Inheritance Profile is defined only when needed and may use an ordered set of one or more contributing sources. An absent profile is Not Yet Defined. A complete distribution uses one condition set and coherent normalized weights; partial or unknown profiles cannot be sampled as complete.
+
+## D-1203 — Contributor Power Does Not Guarantee Advanced Expression
+
+Every materially contributing lineage and form state may affect inheritance. Advanced contributors may raise advanced-expression likelihood but never guarantee it, even when every contributor currently expresses an advanced form.
+
+## D-1204 — Born-Evolved Inherits Architecture Rather Than Accomplishment
+
+A Born-Evolved individual may begin with an Evolved Form's architecture, access, dependencies, vulnerabilities, and potential. They do not inherit memories, XP, mastery, learned techniques, achievements, Soul Titles, Soul Echoes, Soul Weapon relationships, or another individual's history.
+
+## D-1205 — Level 0 Is Instinct Within the Skill System
+
+Level 0 records real instinctive Skill affinity or pattern familiarity inside the existing Skill record. It grants only explicitly bounded instinctive effects, not normal Level 1 capability, XP, mastery, memory, or a separate Skill Seed object; advancement updates the same Skill through current-life Development.
+
+## D-1206 — Evolution-Linked Instinct Does Not Grant the Evolved Form
+
+An inheritance outcome may grant Level 0 access to an Evolution Skill without granting its ancestral Evolved Form. Current embodiment and the Skill's own Level 0 definition bound expression, and no missing anatomy or mature capability is implied.
+
+## D-1207 — Ancestral Echoes Are Not Soul Echoes
+
+An Ancestral Echo is hereditary lineage residue that may influence instinct, affinity, development, imagery, Mana response, or Evolution tendency. It is not consciousness, an Echo Core, reincarnation memory, testimony, objective history, independent agency, or another soul's transferable experience.
+
+## D-1208 — Stabilization Changes Profiles Without Replacing Baselines
+
+Lineage Stabilization may increase defined advanced-expression outcomes through valid Magic, environment, technology, institutions, symbiosis, or other support. It preserves sources, requirements, risks, and natural baselines; ancient lineages may maintain advanced forms without making those forms naturally ubiquitous.
+
+## D-1209 — Reusable and Individual Lineage Records Have Separate Owners
+
+Reusable Lineage Templates, Inheritance Profiles, Ancestral Echo definitions, and stabilization methods belong to the GM Living Codex. Actual contributors, genealogy, Carried and Expressed Lineages, individual instincts, Soul state, descendants, and resolved outcomes belong to campaign state.

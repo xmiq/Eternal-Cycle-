@@ -30,6 +30,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Hidden Skills](skills/HIDDEN_SKILLS.md) - observer-relative concealment, fair discovery, factual provenance, and agency safeguards for unknown competencies.
 - [Conceptual Skills](skills/CONCEPTUAL_SKILLS.md) - bounded advanced competencies operating through principles, relationships, meanings, and metaphysical concepts.
 - [Skill Engine Safeguards](skills/SKILL_ENGINE_SAFEGUARDS.md) - unified capability classification, effect ownership, anti-proliferation rules, and representation cleanup.
+- [Level 0 Instinct](skills/LEVEL_ZERO_INSTINCT.md) - instinct represented inside existing Skill tracking without normal Level 1 capability or inherited mastery.
 
 ## Monster Evolution
 
@@ -137,6 +138,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Living Codex Species Registry](gm-living-codex/SPECIES_REGISTRY.md) - stable species identity, complete reusable records, trait and Skill ownership, Evolution graphs, variants, procedural reuse, and player-species integration.
 - [Living Codex Persistence Model](gm-living-codex/PERSISTENCE_MODEL.md) - independent SQLite authority, normalized schema, revisions, migrations, validation, Google Drive deployment, backup, and full-save protocol.
 - [Reproductive Compatibility](gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) - sparse directional compatibility, nonzero probabilities, normalized assistance and result records, species and individual boundaries, and full-save operation.
+- [Lineage, Hybridization, and Evolutionary Inheritance](gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) - reusable Lineage Templates, inheritance profiles, expression, Mana equalization, attenuation, inherited instinct, and campaign boundaries.
 
 ## AI Game Master Operations
 

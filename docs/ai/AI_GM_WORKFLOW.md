@@ -87,6 +87,8 @@ Do not continue dependent adjudication while the change exists only in narration
 
 A proposed reusable Codex addition is not part of the campaign Save Transaction. Persist it through the [Living Codex full-save protocol](../gm-living-codex/PERSISTENCE_MODEL.md#full-save-protocol) only when GM-approved. If durable narration depends on the new Codex revision, validate and deploy that revision before the campaign transaction that adopts it; otherwise record a campaign-local divergence and defer Codex promotion.
 
+For inherited outcomes, resolve [Reproductive Compatibility](../gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) first and [Lineage and Evolutionary Inheritance](../gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) only after successful formation. Never infer a missing profile, expose protected weights automatically, or place an individual's genealogy in the reusable Codex.
+
 ### 9. Re-enter or hand off
 
 After activation:

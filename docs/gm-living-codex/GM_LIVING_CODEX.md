@@ -159,7 +159,7 @@ A reusable divergence may later be proposed as a Codex variant or distinct speci
 
 This plan is the authoritative order for implementing the Living Codex architecture. It is a maintenance plan, not a numbered development phase and not a claim that a populated deployment exists in this repository.
 
-Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Steps 10 and 11 are defined in the [Living Codex Persistence Model](PERSISTENCE_MODEL.md). Step 12 is defined in [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md) without changing this order.
+Steps 2 through 9 are defined in the [Species Registry](SPECIES_REGISTRY.md). Steps 10 and 11 are defined in the [Living Codex Persistence Model](PERSISTENCE_MODEL.md). Step 12 is defined in [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). Step 13 is defined in [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md).
 
 ### Step 1 - Codex Philosophy and Authority
 
@@ -207,7 +207,11 @@ Define the canonical copy, current backup, dated snapshots, manifests, remote re
 
 ### Step 12 - Reproductive Compatibility
 
-Define sparse directional species relationships, nonzero scoped probabilities, assistance methods, viability and fertility separation, Evolution and variant boundaries, and the full-save procedure under [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). This step is only the compatibility scaffold; it does not define courtship, pregnancy, heredity, hybrid development, family structures, or the later lineage and inheritance system.
+Define sparse directional species relationships, nonzero scoped probabilities, assistance methods, viability and fertility separation, Evolution and variant boundaries, and the full-save procedure under [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md). This step is only the compatibility scaffold; it does not itself define courtship, pregnancy, heredity, hybrid development, family structures, or lineage outcomes.
+
+### Step 13 - Lineage, Hybridization, and Evolutionary Inheritance
+
+Define reusable Lineage Templates, Carried and Expressed Lineages, Species and Evolution Expression, sparse multi-source Inheritance Profiles, Mana reconciliation and equalization, Evolutionary Attenuation, Born-Evolved outcomes, Level 0 Instinct, Ancestral Echoes, and Lineage Stabilization while keeping actual genealogy and individuals in campaign state.
 
 ## Implementation and Deployment Boundary
 

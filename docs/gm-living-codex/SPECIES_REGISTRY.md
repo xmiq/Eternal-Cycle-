@@ -134,7 +134,7 @@ Anatomy creates access. It does not grant Skill mastery, perfect control, extra 
 - care, environmental, resource, social, magical, or infrastructure requirements;
 - mortality and ordinary failure routes.
 
-Detailed reproductive systems and inheritance outcomes remain outside this Registry design. [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md) adds only a sparse directional initiation, viability, and fertility scaffold, and the future lineage module owns resulting lineage and inherited expression. Compatibility rows remain separate relations rather than embedded assumptions in every species record.
+Detailed reproductive procedures remain outside this Registry design. [Reproductive Compatibility](REPRODUCTIVE_COMPATIBILITY.md) owns sparse directional initiation, viability, and fertility, while [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) owns resulting reusable Lineage Templates, profiles, expression, and inherited instincts. Both remain normalized relations rather than embedded assumptions in every species record.
 
 ### Habitat Ecology and Diet
 
@@ -352,7 +352,7 @@ A campaign's Cave Gatherers adapt to a local crystal fault and gain a bounded ro
 
 ## Scope Boundaries
 
-This document defines reusable species records and their interfaces. It does not define a species catalog, populate a Living Codex, establish a campaign species, assign current populations, implement storage, define Reproductive Compatibility, or define later lineage and inheritance rules.
+This document defines reusable species records and their interfaces. It does not define a species catalog, populate a Living Codex, establish a campaign species, assign current populations, implement storage, define Reproductive Compatibility, or duplicate lineage and inheritance rules.
 
 ## Related Documents
 
@@ -372,3 +372,5 @@ This document defines reusable species records and their interfaces. It does not
 - [Species Reference Template](../../templates/SPECIES_TEMPLATE.md)
 - [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md)
 - [Living Codex Species Entry Template](../../templates/LIVING_CODEX_SPECIES_TEMPLATE.md)
+- [Lineage and Evolutionary Inheritance](LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md)
+- [Living Codex Inheritance Profile Template](../../templates/LIVING_CODEX_INHERITANCE_PROFILE_TEMPLATE.md)

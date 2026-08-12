@@ -4403,3 +4403,75 @@ A controlled category identifying the kind of targeted or environmental mediatio
 ## Reproductive Distance
 
 The qualitative collection of biological, anatomical, developmental, magical, elemental, evolutionary, environmental, renewal, and Soul-level differences relevant to one directional reproductive claim. It guides adjudication but is not a universal equation or score.
+
+## Lineage Template
+
+A stable reusable Living Codex record of inherited biological, magical, developmental, and metaphysical architecture. It is not an ancestry percentage, soul, character sheet, or mastery package.
+
+## Carried Lineage
+
+A Lineage Template hereditarily present in an individual whether or not it materially organizes the current form. Carrying does not guarantee expression, visibility, transmission, or Evolution access.
+
+## Expressed Lineage
+
+A Carried Lineage that materially contributes to the individual's current developmental architecture.
+
+## Dominant Expression
+
+A Species Expression in which one Lineage Template overwhelmingly organizes the current form without proving pure ancestry or erasing other Carried Lineages.
+
+## Species Expression
+
+The species-level body and developmental architecture currently expressed by an individual as the outcome of valid origin, lineage, Mana, environment, and developmental conditions.
+
+## Mixed Lineage
+
+A coherent developmental architecture that carries and materially expresses more than one Lineage Template without stacking complete source bodies or capabilities.
+
+## Pure-Line Throwback
+
+Overwhelming current expression of a Carried Lineage that remained hereditarily present through one or more generations of weaker or mixed expression.
+
+## Evolution Expression
+
+The Evolved Form architecture currently embodied by an individual. It is distinct from Evolutionary Potential.
+
+## Evolutionary Potential
+
+The Evolution branches causally available to a lineage or individual under their own requirements. Potential is neither present expression, readiness, qualification, nor destiny.
+
+## Born-Evolved
+
+An individual who begins life expressing an architecture normally reached later through an Evolution Route, inheriting structure and potential but not memories, XP, mastery, or personal accomplishments.
+
+## Level 0 Instinct
+
+A Skill tracked at Level 0 as real instinctive affinity or pattern familiarity without normal Level 1 capability. Its bounded effects are Skill-specific, and it is not a Skill Seed or inherited mastery.
+
+## Evolution-Linked Skill
+
+An Evolution Skill referenced by an inherited outcome, potentially available at Level 0 without granting the ancestral Evolved Form or mature Skill capability.
+
+## Ancestral Echo
+
+A hereditary lineage pattern that may influence instinct, affinity, behavior, imagery, body development, Mana response, Skill acquisition, or Evolution tendency. It is not a Soul Echo, consciousness, reincarnation memory, or objective ancestral record.
+
+## Inheritance Profile
+
+A sparse reusable Living Codex model of possible developmental outcomes for an ordered set of contributing lineage or form states under defined conditions after successful formation.
+
+## Mana Reconciliation
+
+The lineage-development process by which valid Mana sources patch, translate, coordinate, or stabilize competing biological, magical, developmental, elemental, or Soul-body architectures.
+
+## Mana Equalization
+
+The tendency of inherited architectures to settle toward a viable developmental Mana equilibrium, often favoring less demanding stable forms without imposing one universal formula.
+
+## Evolutionary Attenuation
+
+The lineage-specific reduction in natural full-form expression as inherited Evolution architecture becomes more demanding. It preserves advanced possibility without making advanced forms automatically common.
+
+## Lineage Stabilization
+
+Deliberate environmental, magical, technological, institutional, symbiotic, divine, or other support that increases reliability of a defined inherited architecture while preserving sources, requirements, risks, and the natural baseline.

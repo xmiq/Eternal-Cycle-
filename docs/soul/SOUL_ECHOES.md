@@ -52,6 +52,8 @@ Echo formation grants no death bonus, skill increase, Soul Depth, or special aut
 
 ## What an Echo Preserves
 
+An [Ancestral Echo](../gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md#ancestral-echoes) is hereditary lineage residue, not a Soul Echo. It carries no completed incarnation, Echo Core, consciousness, independent agency, reincarnation memory, or claim to objective ancestral history.
+
 An Echo Core may preserve:
 
 - first-person memories available to the source incarnation;
