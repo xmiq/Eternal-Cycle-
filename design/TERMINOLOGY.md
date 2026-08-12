@@ -4475,3 +4475,51 @@ The lineage-specific reduction in natural full-form expression as inherited Evol
 ## Lineage Stabilization
 
 Deliberate environmental, magical, technological, institutional, symbiotic, divine, or other support that increases reliability of a defined inherited architecture while preserving sources, requirements, risks, and the natural baseline.
+
+## Immutable Rules
+
+Layer 1 of the conceptual architecture: Repository Canon that defines mechanical possibility, resolution, and constraints independently of any observer's knowledge.
+
+## GM Simulation Engine
+
+Layer 2 of the conceptual architecture: the responsibility layer that applies Immutable Rules to objective campaign state, autonomous processes, consequences, and continuity.
+
+## Player RPG Interface
+
+Layer 3 of the conceptual architecture: narration, choices, sensory information, discoverable facts, and uncertainty filtered for an active Perspective.
+
+## Entity
+
+A persistent in-world thing represented independently where continuity matters. Entity identity is distinct from current Controller, Perspective, body, name, assignment, and location.
+
+## Controller
+
+The actor or authority currently permitted to make a defined scope of decisions for an Entity. Control does not itself transfer identity or erase autonomy.
+
+## Perspective
+
+The sensory and informational viewpoint through which an event is perceived or presented. It need not equal physical location, current body, or Controller.
+
+## Objective State
+
+The established campaign reality owned by the GM Simulation Engine and preserved through the Campaign Persistence Engine, independent of any Entity's belief or the latest narration.
+
+## Entity Knowledge
+
+Information, belief, memory, suspicion, theory, inference, or misinformation attributable to a particular knowing Entity rather than to the world globally.
+
+## Perspective Filtering
+
+The procedure that converts objective resolution into a justified player-facing representation by applying sensory access, Entity Knowledge, uncertainty, and protected-information boundaries.
+
+## Provisional Campaign Rule
+
+A narrow, explicit, identifiable, campaign-scoped ruling used under the Alpha Playtest Rules. It does not become Repository Canon, Living Codex canon, or a Future Revision through use.
+
+## Simulation Authority
+
+The GM Simulation Engine's responsibility for objective campaign state and causal change, subordinate to Immutable Rules and distinct from presentation authority.
+
+## Persistent Entity Identity
+
+A stable subsystem-appropriate identifier used when an Entity's continuity must survive ordinary changes, including Controller reassignment.

@@ -481,6 +481,12 @@ A character dashboard displays body condition, accessible Skills, carried items,
 - Populated modules, saves, backups, and migrations remain outside this repository.
 - [Blank templates](../../templates/README.md) derive from this architecture rather than silently changing it.
 
+## Simulation Identity Extension Points
+
+The campaign graph must have conceptual homes for objective Entity state, stable persistent identity, scoped Controller relationships, active Perspective when continuity depends on it, Entity Knowledge, and GM Secrets. These concerns remain distinct even when one storage record references several of them.
+
+Current modules and typed references can represent this separation without a mandatory schema migration. A future Knowledge System or Autonomous Registry may normalize additional records, but it may not collapse Entity, Controller, Perspective, or truth-layer ownership. Groups and populations may remain aggregates until individual continuity matters.
+
 ## Scope Boundaries
 
 This document defines logical organization and record interfaces. It delegates these semantics to their dedicated owners:
@@ -511,3 +517,4 @@ This document defines logical organization and record interfaces. It delegates t
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

@@ -180,6 +180,12 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 - Operational success never substitutes for semantic validation.
 - No private locator, credential, access token, or populated campaign fact belongs in this document.
 
+## Simulation Architecture Interface
+
+The [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) governs the AI GM's conceptual flow. The runtime receives a declared action through the Player RPG Interface, resolves it against relevant Immutable Rules, updates objective state through the GM Simulation Engine, and filters the result through the active Perspective before delivery. The AI runtime operates these responsibilities but owns none of their truth.
+
+Entity, Controller, and Perspective must remain separate in loaded state and generated narration. Model memory cannot supply an Entity's knowledge, infer a Controller assignment, or expose GM Secrets merely because those facts occur in context.
+
 ## Related Documents
 
 - [AI Operating Procedures Index](README.md)
@@ -194,3 +200,4 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 - [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

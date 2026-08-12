@@ -136,6 +136,8 @@ The package remains a proposal. Dependent play pauses until activation is confir
 
 ## Safeguards
 
+- Saving objective Entity state, Controller assignments, Perspectives, and Entity Knowledge must preserve their separate owners under the [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md).
+
 - Saving never creates a mechanic or repairs a rule gap.
 - Conversation context never silently overrides structured state.
 - Unrelated records remain untouched.

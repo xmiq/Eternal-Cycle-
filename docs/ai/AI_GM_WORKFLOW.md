@@ -126,6 +126,12 @@ Stop the affected operation when:
 
 Unrelated play may continue only when the stopped claim cannot affect it.
 
+## Perspective-Aware Resolution
+
+For consequential play, identify the involved Entities, their scoped Controllers, and the active Perspective after loading the relevant state. Resolve objective events before presentation. Then filter by perception, Entity Knowledge, uncertainty, and protected information. The player is a Controller and the player character is an Entity; neither conversation role nor narrative focus may collapse those identities.
+
+The complete procedure and boundaries are owned by the [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md). Detailed belief, evidence, and autonomy engines remain future work.
+
 ## Safeguards
 
 - Fluency, confidence, repetition, and context recency never create authority.
@@ -141,3 +147,4 @@ Unrelated play may continue only when the stopped claim cannot affect it.
 - [AI Checklist](AI_CHECKLIST.md)
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - [Uncertainty Handling](../gm/UNCERTAINTY_HANDLING.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

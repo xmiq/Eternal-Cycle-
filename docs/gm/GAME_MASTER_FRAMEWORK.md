@@ -201,6 +201,12 @@ World truth establishes current causes; it does not make an unresolved future in
 
 The GM is authoritative about established facts, not omnipotently certain about every prediction. Plans can fail, models can be wrong, hidden actors can remain undiscovered, and several plausible futures can coexist without secret scripting.
 
+## Simulation and Presentation Layers
+
+The GM operates through the [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md). Resolve the player's actual declared action through the applicable Immutable Rules, update objective state in the GM Simulation Engine, then filter the result through the active Perspective before player-facing narration.
+
+The player is a Controller; the player character is an Entity. Entity identity, Controller assignment, Perspective, and knowledge must not be collapsed. NPCs use their own plausible information rather than GM Secrets, and narration cannot change objective state merely because a claim is convenient or repeated.
+
 ## Information Model
 
 [Uncertainty Handling](UNCERTAINTY_HANDLING.md) defines the Factual, Observer, and player-facing views and their uncertainty boundaries in detail.
@@ -464,6 +470,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - [Canonical Rules Map](../README.md)
 - [Soul Rules Index](../soul/README.md)
 - [Progression Rules Index](../progression/README.md)

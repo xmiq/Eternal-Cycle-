@@ -8,6 +8,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 - [Core Rules Index](core/README.md) - system-wide design constraints, reading order, and specialist-owner boundary.
 - [Design Philosophy](core/DESIGN_PHILOSOPHY.md) - Rule Zero, earned progression, fair mystery, meaningful death, and emergent consequences.
+- [Simulation Architecture and Perspective Model](core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - Immutable Rules, GM Simulation Engine, Player RPG Interface, Entity, Controller, Perspective, and truth boundaries.
 
 ## Soul Engine
 

@@ -38,6 +38,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | --- | --- | --- |
 | [Core Rules Index](core/README.md) | Core-family reading order and specialist-owner routing | Creates no independent mechanical claim. |
 | [Design Philosophy](core/DESIGN_PHILOSOPHY.md) | Rule Zero, earned progression, meaningful consequence, fair mystery, and system-wide design constraints | Direct foundation for all families. |
+| [Simulation Architecture and Perspective Model](core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) | Three-layer responsibility architecture; Entity, Controller, Perspective, objective-state, and knowledge boundaries | Connects specialist rules, campaign simulation, persistence, GM operation, and player-facing presentation without replacing them. |
 
 ## Soul Engine
 

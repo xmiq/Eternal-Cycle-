@@ -189,17 +189,21 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Suggested future phase:** Campaign Persistence Engine extension — Autonomous Registry.
 - **Priority:** High
 - **Status reason:** Owner identified the need through gameplay but has not yet promoted it into implementation work.
+- **Architecture dependency:** Any future registry must preserve the Entity, Controller, Perspective, autonomy, stable-identity, and knowledge boundaries in the [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md).
 
 ### FR-015 - Entity Knowledge, Controller, and Perspective Separation
 
 - **Status:** Candidate
-- **Issue:** The current engine separates truth layers but may need a more explicit reusable model for entity-specific knowledge, controller assignment, and active perspectives so objective state is not conflated with who controls, observes, remembers, or believes it.
+- **Issue:** The architecture now separates objective state, Entity, Controller, Perspective, and Entity Knowledge. A later Knowledge System may still be needed for detailed entity-specific belief, evidence, confidence, testimony, contradiction, propagation, information sharing, inference, and memory behavior.
 - **Affected systems:** Simulation architecture, Campaign Persistence Engine, GM Toolkit, AI Runtime, relationships, uncertainty handling, player interface, remote bodies, possession, delegated control, and possible future multi-perspective play.
 - **Gameplay impact:** Knowledge may leak between actors, controller changes may accidentally reset identity, companions may be treated as extensions of the player, and future remote-body or delegated-control mechanics may require ad hoc schema changes.
 - **Evidence needed:** Owner-mediated gameplay cases involving contradictory beliefs, controller changes, remote or delegated bodies, independent companions, hidden information, or multiple valid perspectives on the same objective state.
-- **Suggested future phase:** Knowledge and perspective-model review after the core Simulation Architecture step.
+- **Suggested future phase:** Entity-relative Knowledge System review.
 - **Priority:** High
-- **Status reason:** The architectural need is plausible and partially overlaps the approved Simulation Architecture step, but a dedicated Knowledge System is not yet authorized.
+- **Status reason:** The architectural portion was implemented by the owner-authorized Simulation Architecture and Perspective Model maintenance step. Detailed Knowledge System records and behavior remain unpromoted future scope.
+- **Implemented architecture:** Entity/Controller/Perspective separation, objective-truth boundary, Entity-relative Knowledge principle, Perspective Filtering, and persistence extension points.
+- **Remaining future scope:** per-Entity belief records, confidence and evidence structures, testimony, misinformation propagation, contradiction resolution, information sharing, memory degradation, and inference systems.
+- **Implementation reference:** [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 
 ## Roadmapped
 

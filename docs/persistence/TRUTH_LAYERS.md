@@ -384,6 +384,12 @@ The raw discussion never becomes in-world dialogue or Character Knowledge.
 - Correcting truth does not erase the history of belief, deception, or consequence.
 - No populated truth-layer record belongs in this repository.
 
+## Architectural Application
+
+The [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) applies these layers across all Entities, not only the player character. Objective state belongs to the GM Simulation Engine. Character Knowledge is Entity-relative. GM Secrets protect information but do not create a second objective truth. The Player RPG Interface receives only Perspective-appropriate information.
+
+Observation, belief, suspicion, theory, inference, and misinformation may disagree between Entities without changing Canon. Detailed per-Entity evidence and confidence structures remain a future Knowledge System concern.
+
 ## Scope Boundaries
 
 This document does not define persistence lifetimes, complete Campaign State fields, the Research lifecycle in full, relationship memory, chronology structures, secret-storage technology, migration stages, save-update transactions, or validation algorithms.
@@ -402,3 +408,4 @@ This document does not define persistence lifetimes, complete Campaign State fie
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

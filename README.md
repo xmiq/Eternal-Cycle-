@@ -32,6 +32,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`templates/README.md`](templates/README.md) - reusable blank record contracts, ownership boundaries, validation guidance, and complete [system coverage map](templates/TEMPLATE_COVERAGE.md).
 - [`agents/README.md`](agents/README.md) - focused contributor roles subordinate to `AGENTS.md`.
 - [`docs/core/README.md`](docs/core/README.md) - system-wide design constraints and Core reading order.
+- [`docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md`](docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - three-layer rules, simulation, and player-interface architecture with Entity, Controller, Perspective, and knowledge boundaries.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.

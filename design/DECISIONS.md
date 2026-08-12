@@ -4837,3 +4837,39 @@ Lineage Stabilization may increase defined advanced-expression outcomes through 
 ## D-1209 — Reusable and Individual Lineage Records Have Separate Owners
 
 Reusable Lineage Templates, Inheritance Profiles, Ancestral Echo definitions, and stabilization methods belong to the GM Living Codex. Actual contributors, genealogy, Carried and Expressed Lineages, individual instincts, Soul state, descendants, and resolved outcomes belong to campaign state.
+
+## D-1210 — Eternal Cycle Uses Three Conceptual Responsibility Layers
+
+Immutable Rules define mechanical possibility and resolution, the GM Simulation Engine owns objective campaign state and change, and the Player RPG Interface presents Perspective-appropriate information. These layers are conceptual responsibilities and do not require matching physical directories or software modules.
+
+## D-1211 — Presentation Cannot Rewrite Objective Truth
+
+Player-facing narration, belief, theory, inference, or uncertainty cannot silently become Canon. GM Secrets do not automatically become Character Knowledge, and conversation context cannot outrank structured campaign state.
+
+## D-1212 — Entity, Controller, and Perspective Are Distinct
+
+An Entity is a persistent in-world thing, a Controller is scoped decision authority, and a Perspective is a sensory and informational viewpoint. Controller reassignment does not reset Entity identity, and Perspective need not equal physical body, location, or Controller.
+
+## D-1213 — The Player Is a Controller, Not the Character Entity
+
+The player is external to the fiction while a player character is an in-world Entity. Reincarnation therefore preserves the established distinctions among Controller continuity, Soul identity, incarnated Entity identity, and body identity.
+
+## D-1214 — Knowledge Is Entity-Relative
+
+Knowledge, observation, belief, suspicion, theory, inference, and misinformation belong to a knowing Entity or Perspective. Objective truth remains separate. Detailed evidence, confidence, testimony, propagation, and inference records remain future Knowledge System scope.
+
+## D-1215 — Simulation Continues Independently of Observation
+
+The GM Simulation Engine may advance established actors and processes off-screen when rules and causes support the change. Player absence does not freeze the world, and objective state cannot be altered solely for narrative convenience.
+
+## D-1216 — Autonomy and Control Are Separate Boundaries
+
+An Entity may retain independent decision scope while subject to a Controller. The architecture defines this distinction but does not create autonomy levels or implement the Autonomous Registry.
+
+## D-1217 — Provisional Campaign Rules Do Not Enter Repository Canon Automatically
+
+Provisional Campaign Rules remain explicit, identifiable, campaign-scoped, and reviewable. Gameplay GMs cannot directly modify Future Revisions; the project maintainer mediates evidence into owner-authorized repository work.
+
+## D-1218 — Persistent Identity Is Proportional to Continuity Need
+
+Entities whose continuity matters use stable identity that survives ordinary state and Controller changes. Groups and aggregates may remain aggregate, and transient objects need no universal permanent ID.

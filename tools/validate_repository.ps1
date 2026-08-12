@@ -433,6 +433,29 @@ if (Test-Path -LiteralPath $levelZeroPath) {
     }
 }
 
+$simulationArchitecturePath = Join-Path $rootPath 'docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md'
+if (-not (Test-Path -LiteralPath $simulationArchitecturePath)) {
+    Add-ValidationError 'Missing Simulation Architecture and Perspective Model.'
+}
+else {
+    $simulationArchitecture = Get-Content -Raw -LiteralPath $simulationArchitecturePath
+    foreach ($requiredText in @(
+        'Layer 1 - Immutable Rules',
+        'Layer 2 - GM Simulation Engine',
+        'Layer 3 - Player RPG Interface',
+        'Entity, Controller, and Perspective',
+        'The player is an external Controller.',
+        'Knowledge and belief belong to a knowing Entity or Perspective',
+        'does not define autonomy levels or implement the proposed Autonomous Registry',
+        'does not implement those records, values, or inference mechanics',
+        'Player-facing narration cannot overwrite objective state.'
+    )) {
+        if ($simulationArchitecture -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Simulation Architecture lacks required invariant: $requiredText"
+        }
+    }
+}
+
 $compatibilityPath = Join-Path $rootPath 'docs/gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md'
 if (Test-Path -LiteralPath $compatibilityPath) {
     $compatibility = Get-Content -Raw -LiteralPath $compatibilityPath
@@ -482,6 +505,7 @@ Write-Output "Canonical terms checked: $($termHeadings.Count)"
 Write-Output "Roadmap tasks checked: $($roadmapStatuses.Count)"
 Write-Output "Future Revision entries checked: $($futureEntries.Count + $roadmappedEntries.Count + $closedEntries.Count)"
 Write-Output 'Living Codex foundation: Steps 1-13 invariants checked'
+Write-Output 'Simulation Architecture: three layers and identity/knowledge boundaries checked'
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'

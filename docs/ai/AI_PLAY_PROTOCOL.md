@@ -1,5 +1,7 @@
 # AI Play Protocol
 
+Player-facing play follows the [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md): resolve objective state first, then present only what the active Perspective can perceive or know. A player's statement, theory, or narration request cannot silently establish world truth, and GM Secrets cannot enter character-facing output without a valid disclosure route.
+
 ## Purpose
 
 This procedure governs one AI-operated play loop from player input to an established, narratable result and persistence handoff. It sequences existing GM responsibilities and mechanics; it creates no universal roll, difficulty scale, outcome table, or narrative style.

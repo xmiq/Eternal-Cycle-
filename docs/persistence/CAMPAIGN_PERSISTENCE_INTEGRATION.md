@@ -325,6 +325,8 @@ The Toolkit may provide procedures, generators, prompts, and views. Generated pr
 
 ## Information and Visibility Integration
 
+The [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) supplies the responsibility boundary: persistence remembers Layer 2 objective state and Entity-relative views, while Layer 3 presentation consumes only Perspective-appropriate information. A delivered narration is not a competing state owner.
+
 Every factual change and every information change are evaluated separately.
 
 An event can exist in world truth while:

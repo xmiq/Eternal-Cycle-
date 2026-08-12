@@ -231,6 +231,7 @@ The canonical design requires one separate Living Codex SQLite database and a ve
 - Personal Skills, Development, Souls, relationships, and history never become species defaults without explicit reusable adoption.
 - The Codex never stores live campaign state or deployment secrets.
 - The implementation plan creates no new numbered roadmap phase or release status.
+- A reusable Codex design is not a campaign Entity, Controller, Perspective, or fact merely because the Simulation Engine consults it.
 
 ## Related Documents
 
@@ -249,3 +250,4 @@ The canonical design requires one separate Living Codex SQLite database and a ve
 - [Campaign Persistence Engine](../persistence/README.md)
 - [AI Game Master Operations](../ai/README.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

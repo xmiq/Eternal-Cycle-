@@ -7,6 +7,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 ## Reading Order
 
 1. [Design Philosophy](DESIGN_PHILOSOPHY.md) - Rule Zero, earned progression, fair mystery, meaningful death, emergent consequence, and cross-system design constraints.
+2. [Simulation Architecture and Perspective Model](SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - conceptual separation of Immutable Rules, objective simulation, player-facing presentation, Entity, Controller, Perspective, and truth boundaries.
 
 ## Boundary
 

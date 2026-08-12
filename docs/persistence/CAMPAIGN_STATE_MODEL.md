@@ -445,6 +445,12 @@ The event need not appear in the player's immediate narration to be Campaign Can
 - State records do not grant mechanics, agency, Knowledge, progression, or success.
 - No populated Campaign State Graph, Snapshot, or Session Delta belongs in this repository.
 
+## Entity, Control, and View State
+
+Where continuity requires them, the graph records an Entity's stable identity separately from current Controller assignment and active Perspective. Controller reassignment does not replace the Entity record. A Perspective reference does not imply physical co-location, control, or global knowledge. Reincarnation links Soul continuity to successive embodiments without overwriting prior-life entities or bodies.
+
+Read Sets include relevant Entity, Controller, Perspective, and knowledge records when they materially affect adjudication. Conversation context may supplement retrieval but cannot silently change any of them.
+
 ## Scope Boundaries
 
 This document defines the state graph, claim contract, status model, Read Sets, numerical provenance, unknown handling, transitions, deltas, and snapshots. It does not fully define Relationship memory, Research progression, chronology, migration, continuity repair, save integration, validation algorithms, or templates.
@@ -466,3 +472,4 @@ This document defines the state graph, claim contract, status model, Read Sets, 
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

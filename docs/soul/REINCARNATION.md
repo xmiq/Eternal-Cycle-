@@ -307,3 +307,4 @@ A seasonal World Gate allows a monster population to establish a viable settleme
 - [World Gates and World-Contact Events](../world-engine/GATES_AND_WORLD_CONTACT.md)
 - [World Gate Interactions with Reincarnation and Soul Avatars](../world-engine/WORLD_GATE_SOUL_INTERACTIONS.md)
 - [Reincarnation Generation](../gm/REINCARNATION_GENERATION.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

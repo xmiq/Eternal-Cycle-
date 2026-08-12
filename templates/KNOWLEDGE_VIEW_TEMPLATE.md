@@ -23,6 +23,9 @@ A populated Knowledge View belongs outside the repository. This blank template c
 
 ## Required Fields
 
+- **Knowing Entity ID:** `<stable Entity reference; not the Controller unless independently the knower>`
+- **Perspective ID:** `<viewpoint used for this observation or unknown>`
+
 - **Knowledge View ID:** `<stable ID>`
 - **Observer ID:** `<person, Faction, Institution, Population, or authorized audience>`
 - **Subject or claim ID:** `<authoritative fact, event, person, place, question, or rumour reference>`
@@ -57,6 +60,7 @@ Meta information must never enter Campaign Canon. GM Secrets are protected views
 
 ## Optional Fields
 
+- **Controller reference:** `<only when control affected acquisition or disclosure>`
 - **Rumour chain:** `<speaker, audience, transformations, and confidence>`
 - **Player Theory:** `<player-authored interpretation, evidence, and status>`
 - **Memory condition:** `<clarity, distortion, suppression, or source-owned effect>`

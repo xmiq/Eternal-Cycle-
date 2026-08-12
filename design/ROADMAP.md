@@ -4,7 +4,7 @@
 
 **Current phase: Long-term gameplay validation**
 
-**Current task: Gameplay-validation maintenance — Simulation Architecture and Perspective Model**
+**Current task: None — awaiting owner-authorized promotion from Future Revisions**
 
 **Repository Status: Feature Complete — Gameplay Validation Ongoing**
 
@@ -47,12 +47,12 @@ This sequence is the owner-approved execution order after the current Codex chec
 3. [x] **GM Living Codex Step 12 — Reproductive Compatibility** — Sparse directional many-to-many compatibility; undefined-by-default pairings; nonzero established probabilities; Magic-assisted possibility; separate natural compatibility, assisted compatibility, offspring viability, and offspring fertility; evolution/variant separation; normalized persistence.
 4. [x] **Complete Living Codex cross-system integration, navigation, and validation** — Finish repository links, indexes, ownership maps, terminology, persistence cross-references, and validation for the implemented Living Codex foundation. Do not expand the system while closing this step.
 5. [x] **GM Living Codex Step 13 — Lineage, Hybridization, and Evolutionary Inheritance** — Define Lineage Templates, mixed lineage, pure-line throwbacks, Mana reconciliation and equalization, Species Expression, Evolution Expression, born-evolved offspring, Level 0 as instinct within the existing Skill system, ancestral hereditary echoes distinct from Soul Echoes, inheritance distributions, advanced-evolution attenuation, and artificial stabilization of advanced inherited forms. Compatibility determines whether formation succeeds; Step 13 determines what developmental architecture results. Campaign-specific examples and personal facts remain outside reusable canon.
-6. [ ] **Simulation Architecture and Perspective Model** — Promote the three-layer architecture into reusable repository architecture: Layer 1 Immutable Rules, Layer 2 GM Simulation Engine, and Layer 3 Player RPG Interface. Separate entities from controllers and perspectives; preserve objective state independently from viewpoint; define controller reassignment without identity reset; and align the model with the World Engine, Campaign Persistence Engine, GM Toolkit, and AI Runtime. Campaign-specific examples from gameplay are excluded.
+6. [x] **Simulation Architecture and Perspective Model** — Promote the three-layer architecture into reusable repository architecture: Layer 1 Immutable Rules, Layer 2 GM Simulation Engine, and Layer 3 Player RPG Interface. Separate entities from controllers and perspectives; preserve objective state independently from viewpoint; define controller reassignment without identity reset; and align the model with the World Engine, Campaign Persistence Engine, GM Toolkit, and AI Runtime. Campaign-specific examples from gameplay are excluded.
 7. [∞] **Future Revisions** — Permanent owner-mediated final step. Gameplay may surface observations but cannot add, promote, reprioritize, or implement Future Revision entries. Only the project owner may mediate gameplay findings into the register. When the owner approves an entry for implementation, insert a new numbered maintenance step immediately before Future Revisions and push this final step later. Future Revisions is intentionally never completed.
 
 ### Approved Near-Term Boundary
 
-Steps 4 and 5 are complete. The next authorized implementation is Step 6, Simulation Architecture and Perspective Model. Autonomous Registry and other unrelated systems remain in Future Revisions until explicitly promoted by the project owner.
+Steps 4 through 6 are complete. No further implementation task is currently authorized. Autonomous Registry, the detailed Knowledge System, and other candidates remain in Future Revisions until explicitly promoted by the project owner.
 
 ## Status Legend
 

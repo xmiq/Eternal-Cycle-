@@ -47,6 +47,10 @@ A chain is not destiny. Counterforces, adaptation, intervention, and chance may 
 
 Scope, elapsed interval, and resolution are chosen independently. Use the coarsest resolution that preserves every material choice, dependency, exception, and uncertainty. The engine should produce playable consequences, not unnecessary bookkeeping.
 
+## Architectural Role
+
+The World Engine supplies the causal rules used by Layer 2 of the [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md). It evolves objective state independently of player observation. Player-facing narration belongs to Layer 3 and cannot revise world truth, freeze off-screen processes, or reveal hidden state without a valid Perspective and information route.
+
 ## Magic Interface
 
 [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) defines how an established magical cause enters this framework through direct effects, footprint, distribution, responses, delays, feedback, persistence, and recovery. World Engine domains and Simulation Abstraction resolve the resulting world-side changes without taking ownership of Magic.
@@ -74,3 +78,4 @@ Scope, elapsed interval, and resolution are chosen independently. Use the coarse
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Roadmap](../../design/ROADMAP.md)
+- [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

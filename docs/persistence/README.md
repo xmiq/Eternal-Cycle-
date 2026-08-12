@@ -25,6 +25,8 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Foundational Boundary
 
+The [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) defines how the state remembered here belongs to objective simulation while player-facing views remain Perspective-filtered. Entity identity, Controller assignment, Perspective, Character Knowledge, and GM Secrets remain separate claims.
+
 The [GM Living Codex](../gm-living-codex/README.md) is an adjacent, separately persisted reusable-design authority. A campaign may reference an adopted Codex Version, stable entry ID, and explicit divergence, but Codex records never become Campaign State and campaign facts never rewrite the Codex automatically.
 
 - The **World Engine** simulates reality.
