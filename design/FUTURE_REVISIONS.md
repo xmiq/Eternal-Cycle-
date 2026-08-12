@@ -70,27 +70,31 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Authorized roadmap link:** [FR-001 — Retained Development and Embodiment Relevance](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 - **Related open question:** [Retained Stat XP acceleration](UNRESOLVED_QUESTIONS.md#non-blocking).
 
-### FR-002 - Reincarnation Candidate Weighting and Meaningful Death
+### FR-002 - Reincarnation Candidate Selection
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Repeated species choices and the circumstances of Final Death may need bounded influence on candidate formation, but any influence could become a deterministic route or farmable bonus.
 - **Affected systems:** Reincarnation, candidate generation, Final Death, Soul identity, and GM procedures.
 - **Gameplay impact:** An unclear relationship may weaken continuity between lives; an overstrong relationship may reward engineered death or collapse meaningful choice.
 - **Evidence needed:** Candidate-generation outcomes across repeated species families and varied death circumstances, including player expectations, attempted exploitation, and world-basis constraints.
-- **Suggested future phase:** Reincarnation candidate calibration.
+- **Approved direction:** Candidate selection remains primarily GM adjudication within existing Reincarnation constraints. Any valid Interlife duration and any valid location, world, Age, or circumstance remain possible. Previous incarnations and species, Final Death, Soul state, elapsed Interlife time, world state, embodiment routes, cosmology, Age, consequences, and campaign themes may inform judgement but never form a mandatory deterministic weighting formula or guarantee. Every candidate still satisfies existing validity, embodiment, world-state, Soul-compatibility, and exceptional-unlock rules. Selection cannot become arbitrary reward or punishment or a farmable engineered-death route.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** Medium
-- **Related open questions:** [Species-family weighting and Final Death influence](UNRESOLVED_QUESTIONS.md#non-blocking).
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 rule and GM-procedure clarification; this planning update does not implement candidate selection.
+- **Authorized roadmap link:** [FR-002 — Reincarnation Candidate Selection](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-003 - Soul Depth Information Visibility
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Depth Horizons may be too opaque to support informed play or too explicit to preserve discovery and in-world interpretation.
 - **Affected systems:** Soul Depth, Soul Resonance, information views, uncertainty handling, and campaign presentation.
 - **Gameplay impact:** The wrong disclosure pattern could produce arbitrary-feeling access changes or turn qualitative Soul growth into a visible progression ladder.
 - **Evidence needed:** Playtests using direct disclosure, in-world signs, and tone-dependent disclosure, measuring comprehension, mystery, planning, and metagaming pressure.
-- **Suggested future phase:** Soul information and presentation review.
+- **Approved direction:** Use hybrid visibility. Legitimately established Soul properties, persistent capabilities, Echoes, Resonance structures, Soul Depth phenomena, and discovered thresholds or conditions may be explicit. Unknown deeper structures remain hidden or appear through existing sensations, Resonance, Reincarnation changes, Soul Space behavior, Research, abilities, rituals, artifacts, or qualified observers. Exact information requires a valid revealing mechanic; Soul Depth and its Horizons remain qualitative rather than a universal progression meter.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** Medium
-- **Related open question:** [Depth Horizon visibility](UNRESOLVED_QUESTIONS.md#non-blocking).
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not implement the visibility model.
+- **Authorized roadmap link:** [FR-003 — Soul Depth Information Visibility](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-004 - Life Archive and Old-Soul Indexing
 
@@ -118,15 +122,18 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 - **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation in coordination with FR-001.
 - **Authorized roadmap link:** [FR-005 — Cross-Embodiment Skill Transfer](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
-### FR-006 - Adaptive Skill Granularity and Harmful Incentives
+### FR-006 - Adaptive Skill Consolidation and Merge Rules
 
-- **Status:** Candidate
+- **Status:** Roadmapped
 - **Issue:** Adaptive Skill adjudication may create either many narrow permanent Skills or incentives to seek injury, abuse, and artificial hardship as an optimal formation route.
 - **Affected systems:** Adaptive Skills, Capability Representation, Development, hardship, injury, and Skill safeguards.
 - **Gameplay impact:** Skill lists may become noisy, or harmful repetition may be treated as more efficient than meaningful practice and adaptation.
 - **Evidence needed:** Formation attempts across training, experimentation, environmental pressure, and harmful conditions, including rejected candidates and Representation Cleanup outcomes.
-- **Suggested future phase:** Adaptive Skill playability and safeguard review.
+- **Approved direction:** Adaptive Skills may emerge from meaningful activity, experimentation, training, environment, adversity, and adaptation. Substantially overlapping Skills merge regularly when continued play establishes one underlying capability, preserving accumulated development, history, and traceable predecessor provenance. Mechanical function, concept, applications, training method, underlying body or Mana capability, and meaningful gameplay distinctions govern consolidation. Repeated equivalent challenge normally deepens an existing Skill; materially distinct capabilities may still form. Injury and hardship farming cannot produce an unlimited cascade of narrow Skills.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** High
+- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update does not alter Skill mechanics.
+- **Authorized roadmap link:** [FR-006 — Adaptive Skill Consolidation and Merge Rules](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 
 ### FR-007 - Conceptual Skill Rarity and Legibility
 
@@ -203,9 +210,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-001, FR-004, FR-005, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
+FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-010, FR-011, and the refined remaining scope of FR-015 are roadmapped as pending Phase 12 objectives. Promotion authorizes future planning and implementation work only; this register change does not implement them or select an execution order.
 
-FR-002, FR-003, FR-006, FR-007, FR-008, and FR-009 remain unpromoted candidates. A detailed Knowledge System beyond FR-015's approved memory scope also remains unpromoted.
+FR-007, FR-008, and FR-009 remain unpromoted candidates. A detailed Knowledge System beyond FR-015's approved memory scope also remains unpromoted.
 
 ## Closed
 

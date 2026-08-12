@@ -4945,3 +4945,15 @@ The last Confirmed Report is historical evidence, not guaranteed current state. 
 ## D-1236 — Autonomous Infrastructure Uses Cross-Domain Ownership
 
 Infrastructure owns physical and operational infrastructure state. The Autonomous Registry owns autonomous identity, autonomy, Controller, memory, and lineage claims for autonomous Infrastructure. Stable references connect them without duplicating mutable facts.
+
+## D-1237 — Reincarnation Candidates Use Contextual GM Adjudication
+
+Reincarnation candidate selection remains primarily GM adjudication within existing Reincarnation constraints rather than a mandatory deterministic weighting formula. Prior lives and species, Final Death, Interlife duration, Soul and world state, embodiment routes, cosmology, Age, consequences, and campaign themes may inform judgement without guaranteeing candidates. Every candidate remains subject to existing validity and exceptional-unlock rules, and selection cannot become arbitrary reward or punishment or a farmable engineered-death route.
+
+## D-1238 — Soul Depth Uses Hybrid Information Visibility
+
+Legitimately established Soul properties, capabilities, Echoes, Resonance structures, Soul Depth phenomena, and discovered conditions may be communicated explicitly. Unknown deeper structures remain hidden or are conveyed through valid in-world signs and discovery mechanics. Soul Depth and Depth Horizons remain qualitative and never become an omniscient universal progression meter.
+
+## D-1239 — Adaptive Skill Consolidation Preserves Development and Provenance
+
+Adaptive Skills may form through meaningful adaptation without being suppressed merely to shorten Skill lists. Substantially overlapping Skills merge when continued play establishes one underlying capability, preserving accumulated development, history, and predecessor provenance. Mechanically meaningful distinctions remain separate; repeated equivalent challenges normally deepen an existing Skill; and injury or hardship farming cannot generate unlimited narrow Skills.
