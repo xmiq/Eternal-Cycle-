@@ -56,27 +56,27 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Open Register
 
-### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
-
-- **Status:** Roadmapped
-- **Issue:** A companion may be Soul-bound without canonical rules distinguishing persistent fate, eventual reunion, current-incarnation identity, recognition, memory, and current Relationship state across asynchronous deaths and radically different lives.
-- **Affected systems:** Souls, Reincarnation, Final Death, Interlife, Soul Resonance, companions, Relationships, Campaign Persistence, Timeline, Campaign History, FR-002, FR-004, FR-009, FR-012, and FR-015.
-- **Gameplay impact:** Without a bounded model, a bond may be forgotten across lives, mistaken for mind control or inherited romance, used as an unrestricted destination selector, duplicated per incarnation, or burden the GM with a prewritten destiny route.
-- **Evidence needed:** Cross-life companion cases involving asynchronous lifespans, delayed reunion, different worlds or species, uncertain recognition, changed social roles, conflict, multiple independent bonds, and routes that remain unresolved until later play.
-- **Approved direction:** Soul binding establishes a persistent fate relation between distinct Souls. Fate guarantees eventual reunion, but the GM controls timing, route, circumstances, and Reincarnation adjudication under existing Canon. Reunion may be delayed and does not guarantee recognition or autobiographical memory. Current incarnations remain distinct people; current Relationships are not inherited and no affection, obedience, trust, loyalty, attraction, or agreement is forced. The meaningful long-term arc trends net positive without requiring comfort or conflict-free lives. The base bond grants no automatic telepathy, tracking, shared death, resurrection, Soul Space transfer, communication, or other unrelated power. Each bond is independent; multiple bonds do not imply bonds among every participant. Persistence places bond identity at the Soul/fate level, current Relationship state with Relationships, incarnation identity with Entities, manifestations with the future Life Archive, and significant events with Timeline and Campaign History. An unknown reunion route remains unresolved rather than fabricated.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation; this planning update creates no mechanics, schema, migration, or campaign state.
-- **Authorized roadmap link:** [FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-- **Architecture dependencies:** FR-002 candidate adjudication, FR-004 Life Archive indexing, FR-009 world-access discretion, FR-012 canonical ownership, and FR-015 memory continuity.
-
 ## Roadmapped
 
-FR-016 is the only roadmapped pending Phase 12 objective. FR-001 through FR-012, FR-014, and FR-015 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+No Future Revision is currently roadmapped and pending. FR-001 through FR-016 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
+
+- **Status:** Closed
+- **Issue:** A companion may be Soul-bound without canonical rules distinguishing persistent fate, eventual reunion, current-incarnation identity, recognition, memory, and current Relationship state across asynchronous deaths and radically different lives.
+- **Affected systems:** Souls, Reincarnation, Final Death, Interlife, Soul Resonance, companions, Relationships, Campaign Persistence, Timeline, Campaign History, FR-002, FR-004, FR-009, FR-010, FR-011, FR-012, and FR-015.
+- **Gameplay impact:** Without a bounded model, a bond may be forgotten across Lives, mistaken for mind control or inherited romance, used as an unrestricted destination selector, duplicated per incarnation, or burden the GM with a prewritten destiny route.
+- **Evidence needed:** Cross-Life companion cases involving asynchronous lifespans, delayed reunion, different worlds or species, uncertain recognition, changed social roles, conflict, multiple independent bonds, and routes that remain unresolved until later play.
+- **Approved direction:** Soul binding establishes a persistent fate relation between distinct Souls. Fate guarantees eventual reunion, but timing, route, circumstances, Reincarnation adjudication, recognition, memory, and current Relationships remain with existing owners. The long arc creates net-positive opportunity without forced comfort, affection, obedience, or agreement.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented through the canonical Soul-Bound Companion contract, Convergence Intervals, reunion and route boundaries, blank template, ownership and persistence integrations, migration, validation, terminology, decisions, navigation, and structural regression checks.
+- **Authorized roadmap link:** [FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Soul-Bound Companion Fate and Reincarnation Continuity](../docs/soul/SOUL_BOUND_COMPANIONS.md), [Soul-Bound Companion Record Template](../templates/SOUL_BOUND_COMPANION_TEMPLATE.md), and [FR-016 Implementation Audit](audits/FR_016_SOUL_BOUND_COMPANION_AUDIT.md)
 
 ### FR-015 - Memory Continuity, Fading, and Recall
 

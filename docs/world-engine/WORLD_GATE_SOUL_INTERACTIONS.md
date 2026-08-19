@@ -173,6 +173,8 @@ A route may be supported by one or more established facts, such as:
 
 No one item guarantees a route. A death beyond a Gate supplies causal location, not automatic local acceptance. A deity's claim supplies a claim, not jurisdiction. A Constellation supplies relationship, not transport. A Gate Basis supplies only its stated functions.
 
+A [Soul-Bound Companion Bond](../soul/SOUL_BOUND_COMPANIONS.md) guarantees eventual reunion across sufficient continuation, but it still supplies neither transport nor candidate validity. When domains are disconnected, its Convergence Interval remains Obstructed until a world-owned route genuinely exists.
+
 ### Invalid Route Claims
 
 The following do not create a Cross-Domain Reincarnation Route by themselves:

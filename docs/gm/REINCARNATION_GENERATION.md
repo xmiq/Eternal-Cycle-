@@ -100,6 +100,8 @@ It is not every possible body in existence. Its boundary follows:
 
 The pool need not have a fixed size. Emergent mode may require one candidate. Constrained Choice requires enough meaningful alternatives for the promised choice. Directed mode may search narrowly around a valid request.
 
+An active [Soul-Bound Companion Bond](../soul/SOUL_BOUND_COMPANIONS.md) may inform contextual adjudication among candidates that already pass every applicable test. It cannot create an Embodiment Opportunity, make an invalid candidate eligible, require immediate proximity, bypass the Reincarnation Mode, or reveal protected route and timing information.
+
 ### Candidate Profile
 
 A **Candidate Profile** is the external record used to evaluate and, when appropriate, present one candidate. It separates established facts, player-facing facts, hidden facts, uncertainty, dependencies, and selection status.

@@ -623,3 +623,7 @@ This document defines ordinary post-interaction save transactions, Affected Sets
 ### Life Archive Updates
 
 Ordinary interactions do not rewrite finalized Life Summaries. Include the [Life Archive](LIFE_ARCHIVE.md) in the Affected Set when establishing an active Life index, finalizing a completed Life, recovering historical incarnation evidence, or correcting an archive reference. Life completion atomically closes the active Life, creates or revises its summary, updates the Soul Overview, and validates deeper references without transferring current state into the archive.
+
+### Soul-Bound Companion Updates
+
+Include the [Soul-Bound Companion](../soul/SOUL_BOUND_COMPANIONS.md) owner when formation, interference, separation, convergence state, or a Reunion Manifestation materially changes. Persist current Relationships, Memory or Knowledge, world routes, Timeline, Campaign History, and Life Archive references only through their own owners in the same Affected Set. A nearby encounter that changes none of these facts does not rewrite the bond.

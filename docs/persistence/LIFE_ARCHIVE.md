@@ -288,7 +288,7 @@ Validation reports ambiguity; it does not invent identity, chronology, or missin
 - **FR-010:** [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md) cross-reference Life IDs many-to-many while remaining separate Historical Period records; neither grants current-character memory.
 - **FR-011:** [Context Assembly](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) retrieves Overview, Summary, then relevant detail through stable Life IDs without loading every Life or granting current-character memory.
 - **FR-015:** [Memory Continuity](../soul/MEMORY_CONTINUITY.md) owns cross-incarnation autobiographical Memory identity and accessibility history, while Character Knowledge owns current conscious recall; archive visibility grants neither.
-- **FR-016:** owns persistent Soul bonds; the archive records only historical manifestations.
+- **FR-016:** [Soul-Bound Companion Fate](../soul/SOUL_BOUND_COMPANIONS.md) owns persistent Bond identity and current convergence obligations; the archive indexes only Life-specific historical manifestations and references.
 
 ## Safeguards
 

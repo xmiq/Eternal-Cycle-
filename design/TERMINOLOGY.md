@@ -4743,3 +4743,19 @@ A present sensory, emotional, relational, linguistic, spatial, magical, symbolic
 ## Memory Accessibility Condition
 
 A qualitative description of present access such as Accessible, Fading, Dormant, Cued, Fragmentary, Conflicted, Suppressed, or Integrated. It is neither objective historical truth nor a universal numeric memory score.
+
+## Soul-Bound Companion Bond
+
+A persistent pair-specific fate relation between exactly two distinct Souls whose active invariant guarantees eventual meaningful reunion while leaving route, timing, recognition, and current Relationship state to their established owners.
+
+## Convergence Interval
+
+The bounded span between material separation of two Soul-Bound Companions and their next meaningful Reunion Manifestation. Its qualitative state is not a countdown, encounter probability, or destination entitlement.
+
+## Reunion Manifestation
+
+The meaningful causal encounter that fulfills one Soul-Bound Companion Convergence Interval by bringing the current incarnations into one another's lives. It does not require recognition, affection, cooperation, or continued contact.
+
+## Pending Convergence
+
+An active, unfulfilled Soul-Bound Companion guarantee whose route or timing may remain Unknown. Pending status preserves eventual reunion without asserting that a currently invalid path exists.

@@ -5117,3 +5117,27 @@ Each incarnation remains a distinct current person. Recalled history cannot comp
 ## D-1279 — Memory Recovery Is Significance-Sensitive and Non-Farmable
 
 Meaning, reinforcement, relevant cues, embodiment, and interference inform access qualitatively. Repetition, suffering, trauma, death, disposable Lives, or cue spam do not guarantee formation or recovery, and missing detail remains unknown rather than fabricated.
+
+## D-1280 — Soul-Bound Companion Fate Guarantees Eventual Reunion
+
+An active pair-specific Soul-Bound Companion Bond guarantees that, given sufficient continuation of both Souls and valid cosmological circumstances, fate eventually produces a meaningful causal encounter. The guarantee is neither a probability nor a fixed timetable.
+
+## D-1281 — Fate Preserves Causality and Reincarnation Authority
+
+The bond constrains the long-term outcome without creating invalid candidates, worlds, births, travel routes, Gates, placement, premature death, or scripted intermediate actions. Reincarnation Mode, candidate validity, world state, and participant choices remain authoritative.
+
+## D-1282 — Reunion Does Not Restore Recognition or Relationship
+
+A Reunion Manifestation may be unrecognized, hostile, brief, or refused. Memory Continuity and Character Knowledge own recall and recognition; Relationships owns current trust, affection, commitments, and contact. No former role, consent, loyalty, romance, family status, or authority is inherited.
+
+## D-1283 — Soul-Bound Companion Bonds Are Independent and Non-Transitive
+
+Each Bond joins exactly two distinct Souls under one stable unordered pair identity. Multiple Bonds do not bind their other participants to one another, create a compulsory group, or allow one reunion to fulfill another pair's convergence obligation.
+
+## D-1284 — Convergence Uses Renewable Qualitative Intervals
+
+Material separation opens a Convergence Interval whose state may be Pending, Approaching, Fulfilled, Obstructed, Suspended, or Disputed. Fulfillment records one meaningful encounter; later separation may open another interval. The states are neither countdowns nor power ranks.
+
+## D-1285 — Soul-Bound Fate Creates Opportunity Rather Than Compulsion
+
+The long arc should create net-positive opportunity for both Souls without guaranteeing comfort, friendship, moral approval, immunity, or a chosen response. The bond grants no control, tracking, telepathy, shared death, resurrection, shared capability, or Soul Space access.

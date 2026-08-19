@@ -15,6 +15,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 - [Memory Continuity, Fading, and Recall](MEMORY_CONTINUITY.md) - significance-sensitive autobiographical continuity, ordinary forgetting, cues, fragments, and Character Knowledge boundaries.
 - [Soul Space](SOUL_SPACE.md) - the internal metaphysical interface to soul structures.
 - [Soul Constellations](SOUL_CONSTELLATIONS.md) - recurring relational patterns among distinct souls.
+- [Soul-Bound Companions](SOUL_BOUND_COMPANIONS.md) - pair-specific fate bonds that guarantee eventual causal reunion without controlling recognition or current Relationships.
 - [Soul Titles](SOUL_TITLES.md) - persistent expressions of identity and contextual recognition.
 - [Retained Instincts](RETAINED_INSTINCTS.md) - body-shaped patterns of attention and response carried between lives.
 - [Akashic Archive](AKASHIC_ARCHIVE.md) - source-bound world records, targeted access, and historical interpretation.

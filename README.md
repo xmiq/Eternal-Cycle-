@@ -39,6 +39,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md`](docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - three-layer rules, simulation, and player-interface architecture with Entity, Controller, Perspective, and knowledge boundaries.
 - [`docs/soul/README.md`](docs/soul/README.md) - Soul Engine rules and reading order.
 - [`docs/soul/MEMORY_CONTINUITY.md`](docs/soul/MEMORY_CONTINUITY.md) - cross-incarnation autobiographical continuity, fading, cues, fragments, and recall boundaries.
+- [`docs/soul/SOUL_BOUND_COMPANIONS.md`](docs/soul/SOUL_BOUND_COMPANIONS.md) - pair-specific fate bonds that guarantee eventual reunion while preserving causal routes, memory boundaries, and current-life agency.
 - [`docs/progression/README.md`](docs/progression/README.md) - Development and progression rules.
 - [`docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md`](docs/progression/RETAINED_CROSS_LIFE_DEVELOPMENT.md) - bounded retained-development stacking and cross-embodiment Skill familiarity.
 - [`docs/skills/README.md`](docs/skills/README.md) - Skill Engine rules and reading order.

@@ -324,6 +324,8 @@ Soul Constellation rules do not determine:
 
 A Constellation supplies relational history to other systems. It cannot assume powers those systems have not defined.
 
+[Soul-Bound Companion Fate](SOUL_BOUND_COMPANIONS.md) is a separate explicit pairwise bond whose active invariant guarantees eventual reunion. A Constellation does not gain that guarantee, and a Soul-Bound Companion Bond does not become a Constellation without the ordinary recurrence and reciprocal-transformation requirements.
+
 ## Assessment
 
 Soul Constellations have no universal bond score, rank, or moral alignment.

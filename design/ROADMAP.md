@@ -301,15 +301,15 @@ Phase 12 contains all owner-authorized gameplay-validation and maintenance work 
 - [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication** — Defined one authoritative logical owner for every mutable canonical fact; persistent non-autonomous Entity identity anchors; normalized domain, placement, Relationship, Species, and Living Codex boundaries; Reference, Derived, Cache, and Historical Snapshot classifications; identity-preserving category change; SQLite guidance; and validation safeguards without requiring a campaign migration.
 - [x] **FR-014 — Autonomous Registry** — Defined a separate authoritative domain for persistent autonomous Individuals and bounded Groups, including Models, scoped Controllers, autonomy, reconstruction, copies and forks, placement references, assignments, capability and requirement references, networks, creation and upgrade lineage, autonomous memory continuity, personhood boundaries, last-confirmed uncertainty, migration audit, and validation.
 - [x] **FR-015 — Memory Continuity, Fading, and Recall** — Defined stable autobiographical Memory identity, significance-sensitive persistence and fading, dormancy, bounded cue-triggered and fragmentary recall, incarnation-specific Character Knowledge manifestations, logical persistence, migration, and player/character/GM information boundaries without converting retained familiarity into recollection or implementing an exhaustive Knowledge Engine.
-- [ ] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity** — Define a persistent Soul-level fate bond between distinct Souls that guarantees eventual reunion while leaving timing, route, circumstances, Reincarnation adjudication, recognition, memory, and current-life Relationships to their established owners and GM judgement. Preserve independent lives, current-incarnation agency, net-positive long-term consequence, uncertainty, and nonduplicating persistence.
+- [x] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity** — Defined a pair-specific Soul-level fate bond with guaranteed eventual reunion, renewable Convergence Intervals, meaningful Reunion Manifestations, causal route and candidate constraints, asynchronous-Life handling, recognition and Relationship boundaries, independent agency, non-transitive multiple bonds, logical persistence, migration, and validation.
 - [∞] **Future Revisions** — Permanent owner-mediated rolling final objective during Phase 12. Stable `FR-###` identifiers are backlog and provenance IDs, not phases. Gameplay and development agents cannot promote candidates. An explicitly owner-approved implementation objective is inserted immediately before this item, while unrelated candidates remain untouched.
 
 ### Current Position
 
-- **Approved pending objective:** FR-016 only. FR-015 is complete and retains stable provenance above.
+- **Approved pending objectives:** None. All currently approved FR-001 through FR-016 objectives are complete where present.
 - **Selected implementation objective:** None. Roadmap order records the approved set, not a mandatory execution order.
-- **Next action:** Project maintainer reviews the approved objectives and their dependencies before authorizing an individual implementation plan or execution task.
-- **Not promoted:** No additional candidate beyond pending FR-016. Any future candidate still requires explicit project-maintainer authorization.
+- **Next action:** Continue gameplay validation and owner-mediated Future Revision review. No implementation objective is selected.
+- **Not promoted:** No remaining FR-001 through FR-016 candidate. Any future candidate still requires explicit project-maintainer authorization.
 
 ### Approved Objective Relationships
 

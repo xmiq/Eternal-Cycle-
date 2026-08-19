@@ -99,6 +99,8 @@ A valid candidate must satisfy all applicable constraints:
 
 Soul history may influence valid candidates through Soul Resonance, Soul Titles, [Retained Instincts](RETAINED_INSTINCTS.md), prior species mastery, Soul Constellations, World Reset effects, or other explicit rules.
 
+An active [Soul-Bound Companion Bond](SOUL_BOUND_COMPANIONS.md) is relevant long-term context, not candidate validity or destination authority. It may inform contextual adjudication among otherwise-valid candidates but cannot guarantee next-Life proximity, waive a route, override the Reincarnation Mode, or make an impossible embodiment available.
+
 #### Candidate Adjudication
 
 Candidate generation is contextual GM adjudication, not a mandatory deterministic weighting formula. The GM may consider prior incarnations and species, Final Death, Soul state, elapsed Interlife time, current world state, embodiment availability, cosmology, Age, established consequences, campaign themes, and other canonical inputs. Those considerations never waive candidate validity or guarantee a result.

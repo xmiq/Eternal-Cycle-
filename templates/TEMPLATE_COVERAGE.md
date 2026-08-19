@@ -40,7 +40,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Context Assembly | [Context Packet](CONTEXT_PACKET_TEMPLATE.md) | non-authoritative Current Scene, Running, and Session context; source navigation, freshness, read evidence, Affected Set result, and cache refresh |
 | Campaign Canon and Rules Profile | [Campaign Canon and Rules Profile](CAMPAIGN_CANON_TEMPLATE.md) | permitted premises, options, provisional rulings, retcons, conversions, and control agreements |
 | Player State | [Character Record](CHARACTER_TEMPLATE.md), [Development Profile](DEVELOPMENT_PROFILE_TEMPLATE.md) | agency, current actor, embodiment, condition, access, capability, Soul, resources, and objectives |
-| Souls and Incarnations | [Soul Continuity Record](SOUL_CONTINUITY_TEMPLATE.md), [Life Archive](LIFE_ARCHIVE_TEMPLATE.md), [Memory Continuity Record](MEMORY_CONTINUITY_TEMPLATE.md), [Soul Avatar Profile](SOUL_AVATAR_TEMPLATE.md), [Soul Weapon Record](SOUL_WEAPON_TEMPLATE.md) | one Soul, distinct lives, completed-life indexes, autobiographical continuity, incarnation-specific recall, protected structures, Avatars, and Weapon Soul relationships |
+| Souls and Incarnations | [Soul Continuity Record](SOUL_CONTINUITY_TEMPLATE.md), [Life Archive](LIFE_ARCHIVE_TEMPLATE.md), [Memory Continuity Record](MEMORY_CONTINUITY_TEMPLATE.md), [Soul-Bound Companion Record](SOUL_BOUND_COMPANION_TEMPLATE.md), [Soul Avatar Profile](SOUL_AVATAR_TEMPLATE.md), [Soul Weapon Record](SOUL_WEAPON_TEMPLATE.md) | one Soul, distinct lives, completed-life indexes, autobiographical continuity, incarnation-specific recall, pair-specific fate bonds, protected structures, Avatars, and Weapon Soul relationships |
 | Companions | [Character Record](CHARACTER_TEMPLATE.md), [Relationship Record](RELATIONSHIP_TEMPLATE.md) | autonomous person plus campaign role and relationships; companionship is not ownership |
 | Actors | [Character Record](CHARACTER_TEMPLATE.md) | NPC and other agentive-person records use the same identity, embodiment, agency, knowledge, and capability boundaries |
 | Autonomous Registry | [Autonomous Registry Record](AUTONOMOUS_REGISTRY_TEMPLATE.md) | persistent autonomous Individuals and bounded Groups, Models, Controllers, autonomy, reconstruction, lineage, networks, assignment, uncertainty, and last-confirmed state |
@@ -79,6 +79,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Monster Evolution routes | [Evolution Tree Template](EVOLUTION_TREE_TEMPLATE.md) |
 | Soul continuity | [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) |
 | Autobiographical memory continuity and recall | [Memory Continuity Record Template](MEMORY_CONTINUITY_TEMPLATE.md) |
+| Soul-Bound Companion fate and convergence | [Soul-Bound Companion Record Template](SOUL_BOUND_COMPANION_TEMPLATE.md) |
 | Soul Avatar | [Soul Avatar Profile Template](SOUL_AVATAR_TEMPLATE.md) |
 | Weapon Soul and Soul Weapon | [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) |
 | Magical Profile or Instance | [Magic Record Template](MAGIC_RECORD_TEMPLATE.md) |

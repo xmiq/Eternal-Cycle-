@@ -129,6 +129,8 @@ The summary never substitutes for steps 8 and 9. A completed long-horizon simula
 
 ## Reincarnation and Interlife
 
+An active [Soul-Bound Companion](../soul/SOUL_BOUND_COMPANIONS.md) Convergence Interval may be retained as a Continuity Hook when separation, obstruction, world contact, migration, or a Reunion Manifestation materially intersects the summarized period. The summary does not choose the route, set a deadline, grant recognition, or own the bond.
+
 When substantial time passes between Final Death and the next incarnation, resolve relevant world change before candidate placement whenever stale state could affect available embodiments, world conditions, or consequences.
 
 The summary may reference the preceding and succeeding Life IDs, but it does not select the candidate, grant memory, or alter Soul continuity. The new incarnation enters the updated world, not an assumed pre-gap snapshot.

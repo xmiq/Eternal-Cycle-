@@ -270,7 +270,7 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objective:** FR-016 only. FR-015 is complete and retains stable provenance above.',
+    '**Approved pending objectives:** None. All currently approved FR-001 through FR-016 objectives are complete where present.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [x] **FR-002 — Reincarnation Candidate Selection**',
     '- [x] **FR-003 — Soul Depth Information Visibility**',
@@ -285,7 +285,7 @@ foreach ($requiredText in @(
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
     '- [x] **FR-015 — Memory Continuity, Fading, and Recall**',
-    '- [ ] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**',
+    '- [x] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**',
     '- [∞] **Future Revisions**',
     'Phase 12 does not complete because current objectives pass validation',
     'Phase 13 — Future Revisions'
@@ -676,7 +676,7 @@ else {
         'A cue creates an opportunity, not a guaranteed retrieval command.',
         'Retained Development and Skill crossover',
         'Current conscious recall belongs to the receiving incarnation''s Knowledge view',
-        'no FR-016 bond mechanics have been implemented'
+        'it guarantees only eventual reunion'
     )) {
         if ($memoryContinuity -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Memory Continuity lacks required invariant: $requiredText"
@@ -702,6 +702,61 @@ else {
     )) {
         if ($memoryTemplate -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Memory Continuity template lacks required field or boundary: $requiredText"
+        }
+    }
+}
+
+$soulBoundCompanionPath = Join-Path $rootPath 'docs/soul/SOUL_BOUND_COMPANIONS.md'
+if (-not (Test-Path -LiteralPath $soulBoundCompanionPath)) {
+    Add-ValidationError 'Missing FR-016 Soul-Bound Companion contract.'
+}
+else {
+    $soulBoundCompanion = Get-Content -Raw -LiteralPath $soulBoundCompanionPath
+    foreach ($requiredText in @(
+        'Fate eventually draws the bound Souls back into one another''s lives.',
+        'The guarantee is stronger than probability.',
+        'Eventual does not mean immediate.',
+        'Convergence Interval',
+        'Reunion Manifestation',
+        'Fate Constrains the Outcome, Not Every Step',
+        'It cannot make an invalid body',
+        'World Knowledge, World Contact, Travel Routes, and Reincarnation Possibility remain separate',
+        'One Soul''s Final Death does not kill, recall, or reincarnate the other.',
+        'The bond alone grants no:',
+        'owns present trust',
+        'net-positive opportunity',
+        'Every bond remains pair-specific:',
+        'The systems may coexist, but neither implies the other:',
+        'one stable bond record for the unordered pair of Soul IDs',
+        'This repository contains no populated campaign schema',
+        'Do not reduce eventual reunion to probability',
+        'The GM must neither force every nearby opportunity nor defer reunion indefinitely without genuine obstruction.'
+    )) {
+        if ($soulBoundCompanion -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Soul-Bound Companion contract lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$soulBoundCompanionTemplatePath = Join-Path $rootPath 'templates/SOUL_BOUND_COMPANION_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $soulBoundCompanionTemplatePath)) {
+    Add-ValidationError 'Missing blank Soul-Bound Companion template.'
+}
+else {
+    $soulBoundCompanionTemplate = Get-Content -Raw -LiteralPath $soulBoundCompanionTemplatePath
+    foreach ($requiredText in @(
+        'Bond ID:',
+        'Soul A ID:',
+        'Soul B ID:',
+        'Pair-order rule:',
+        'Current Convergence Interval',
+        'Reunion Manifestation',
+        'Exactly two distinct valid Soul IDs participate.',
+        'Current Relationship state is referenced rather than copied.',
+        'no campaign Souls, companions, encounters, or routes'
+    )) {
+        if ($soulBoundCompanionTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Soul-Bound Companion template lacks required field or boundary: $requiredText"
         }
     }
 }
@@ -913,6 +968,7 @@ Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundarie
 Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
 Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
+Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: turn gates, relevance, caches, automatic persistence, reload, and runtime boundary checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'

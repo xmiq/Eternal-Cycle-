@@ -117,6 +117,7 @@ The [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md
 | Questions, methods, evidence, theories, confidence | Research |
 | Observer-specific facts, beliefs, current conscious recall, rumours, unknowns | Knowledge |
 | Cross-incarnation autobiographical Memory identity, associations, reinforcement, and accessibility history | Memory Continuity, with current recall manifested through Knowledge |
+| Pair-specific Soul-Bound Companion identity and current Convergence Interval | Soul/fate bond domain, with current Relationships and routes retained by their owners |
 | Protected information and disclosure metadata | Secrets |
 | Active undertakings, methods, resources, milestones, interruptions | Projects |
 | Chronological placement and parallel time | Timeline |

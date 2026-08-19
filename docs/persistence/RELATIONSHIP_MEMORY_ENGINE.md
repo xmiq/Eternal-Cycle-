@@ -284,6 +284,8 @@ Family may create rights, duties, recognition, inheritance, stigma, affection, c
 
 Family does not force love, trust, obedience, forgiveness, ownership, memory, or recognition across Reincarnation.
 
+A [Soul-Bound Companion Bond](../soul/SOUL_BOUND_COMPANIONS.md) may guarantee that two Souls eventually meet again, but it does not restore any Relationship dimension or compel continued contact. Relationships owns what the current incarnations become to one another after reunion.
+
 ## Organizations
 
 Relationships with factions and institutions distinguish member, office holder, employee, representative, patron, client, ally, dependent, subject, audience, creditor, debtor, coerced participant, and former participant.

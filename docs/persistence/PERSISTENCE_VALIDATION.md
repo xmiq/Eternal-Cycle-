@@ -206,6 +206,7 @@ Required focus includes:
 - progression and numerical provenance;
 - Knowledge and Secret boundary review;
 - Memory Continuity identity, source-Life, cue, accessibility, and incarnation-specific Character Knowledge separation;
+- Soul-Bound Companion pair identity, convergence obligation, meaningful-reunion evidence, route ownership, and current Relationship separation;
 - Research theory and confirmation consistency;
 - version ancestry and migration history;
 - Continuity Drift;

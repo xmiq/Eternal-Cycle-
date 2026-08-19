@@ -151,7 +151,7 @@ No memory automatically grants omniscience about everyone involved. A remembered
 - **Timeline and Campaign History:** own what occurred. Memory preserves a subject's autobiographical access to it.
 - **Long-Horizon Summaries:** aid historical retrieval but remain non-authoritative for recall and do not bypass Knowledge filtering.
 - **Context Assembly:** reads relevant memory and Knowledge records when recall could matter, but GM access stays backstage and perspective-filtered.
-- **Future Soul-bound companion continuity:** a persistent bond may later create relevant cues, but no bond by itself guarantees recognition, memory, trust, or a current Relationship.
+- **[Soul-bound companion continuity](SOUL_BOUND_COMPANIONS.md):** the persistent bond may create relevant cues, but it guarantees only eventual reunion, not recognition, memory, trust, or a current Relationship.
 
 ## Logical Persistence Contract
 

@@ -315,7 +315,7 @@ When relevant, select Autonomous ID, Model reference, Controller, autonomy, plac
 
 ### FR-015 and FR-016 Boundaries
 
-GM Context is not Character Memory. FR-011 does not implement memory continuity, fading, or recall. It may later retrieve relevant Soul-bound fate records, but it does not create or adjudicate those bonds.
+GM Context is not Character Memory. FR-011 does not implement memory continuity, fading, or recall. It retrieves [Soul-Bound Companion](../soul/SOUL_BOUND_COMPANIONS.md) records only when identity, Reincarnation, encounter causality, separation, recognition, or historical callbacks make them relevant; retrieval neither creates a bond nor reveals protected identity, route, or timing to a character.
 
 ## Existing Campaign Adoption
 
