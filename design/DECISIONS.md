@@ -5069,3 +5069,15 @@ Broad, merged, ambiguous, and Conceptual Skill claims are interpreted as Establi
 ## D-1267 — State-Changing Gameplay Turns Require Automatic Validated Persistence
 
 During normal gameplay, the runtime automatically applies the existing Read Set, Affected Set, Save Point, Save Update Protocol, validation, and read-back requirements without waiting for a player-issued save command. A gameplay turn that changes canonical persistent state is not complete until the required write succeeds and validates. Conversation context cannot substitute for authoritative reads or writes; failed reads or saves are surfaced rather than silently treated as successful. FR-011 must preserve historically successful canonical reading while correcting unreliable automatic persistence through the existing architecture rather than a competing save system.
+
+## D-1268 — Long-Horizon History Uses Causal Canonical Compression
+
+Long-Horizon Summaries preserve meaningful established change, causal chains, uncertainty, continuity hooks, stable references, and provenance across bounded historical intervals. Elapsed time does not authorize fabricated events or exhaustive retroactive simulation.
+
+## D-1269 — Historical Summaries Do Not Own Current State or Character Memory
+
+Specialist domains retain mutable current facts, Timeline and Campaign History retain significant events, Life Summaries retain per-incarnation history, and Long-Horizon Summaries retain period compression. Filtered Historical Transitions do not grant Character Knowledge, expose GM Secrets, or implement FR-015.
+
+## D-1270 — Time Skips Resolve Meaningful Processes Before Summarization
+
+Long Time Skips, Interlife gaps, Age transitions, and World Resets resolve material active processes at the minimum sufficient detail, update authoritative owners, append significant chronology, preserve autonomous last-confirmed uncertainty, and only then generate a Long-Horizon Summary. World Resets change current state without erasing prior historical Canon.

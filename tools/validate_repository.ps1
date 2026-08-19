@@ -270,7 +270,7 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-010, FR-011, the refined remaining scope of FR-015, and FR-016.',
+    '**Approved pending objectives:** FR-011, the refined remaining scope of FR-015, and FR-016.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [x] **FR-002 — Reincarnation Candidate Selection**',
     '- [x] **FR-003 — Soul Depth Information Visibility**',
@@ -280,7 +280,7 @@ foreach ($requiredText in @(
     '- [x] **FR-007 — Conceptual Skill Scope and Historical Interpretation**',
     '- [x] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
     '- [x] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
-    '- [ ] **FR-010 — Long-Horizon Simulation Summaries**',
+    '- [x] **FR-010 — Long-Horizon Simulation Summaries**',
     '- [ ] **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
@@ -587,6 +587,56 @@ else {
     )) {
         if ($lifeArchive -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Life Archive lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$longHorizonPath = Join-Path $rootPath 'docs/persistence/LONG_HORIZON_SUMMARIES.md'
+if (-not (Test-Path -LiteralPath $longHorizonPath)) {
+    Add-ValidationError 'Missing Long-Horizon Simulation Summary contract.'
+}
+else {
+    $longHorizon = Get-Content -Raw -LiteralPath $longHorizonPath
+    foreach ($requiredText in @(
+        'Every summary has one stable **Historical Period ID**',
+        'Important causal chains survive compression',
+        'Elapsed time is not evidence.',
+        '## Continuity Hooks',
+        '## Time Skip Procedure',
+        '## Reincarnation and Interlife',
+        'An Age transition or World Reset does not erase prior Canon.',
+        'A [Life Summary](LIFE_ARCHIVE.md#life-summary) and a Long-Horizon Summary remain distinct',
+        '## Retrieval and Relevant History Index',
+        'CREATE TABLE historical_periods',
+        'CHECK (parent_period_id <> child_period_id)',
+        'This repository migrates no populated campaign.',
+        '### Lost Autonomous Unit',
+        '### Filtered Transition',
+        'FR-011 Context Assembly'
+    )) {
+        if ($longHorizon -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Long-Horizon Summaries lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$longHorizonTemplatePath = Join-Path $rootPath 'templates/LONG_HORIZON_SUMMARY_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $longHorizonTemplatePath)) {
+    Add-ValidationError 'Missing Long-Horizon Summary template.'
+}
+else {
+    $longHorizonTemplate = Get-Content -Raw -LiteralPath $longHorizonTemplatePath
+    foreach ($requiredText in @(
+        '**Historical Period ID:**',
+        '## Causal Links',
+        '## Surviving Continuities',
+        '## Unresolved Threads and Unknowns',
+        '## Derived Historical Transition',
+        'Nested period references are acyclic.',
+        'Player-facing content exposes no GM Secret'
+    )) {
+        if ($longHorizonTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Long-Horizon Summary template lacks required invariant: $requiredText"
         }
     }
 }

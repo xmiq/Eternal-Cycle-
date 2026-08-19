@@ -125,7 +125,7 @@ Anti-duplication does not erase valid history.
 - A migration manifest may record source and target values.
 - An audit may preserve the defect it observed.
 - A future Life Summary may index one completed Incarnation.
-- A future Long-Horizon Summary may compress established changes across an interval.
+- A [Long-Horizon Summary](LONG_HORIZON_SUMMARIES.md) may compress established changes across an interval.
 
 Historical Snapshots retain time, source, authority, and supersession. Derived summaries retain source IDs, source version, freshness, scope, and audience. Neither accepts direct edits as a shortcut to changing current state.
 
@@ -183,7 +183,7 @@ Conflicting ownership is a validation failure. Validation reports the owners and
 ## Compatibility with Approved Phase 12 Work
 
 - **FR-004:** [Life Summaries](LIFE_ARCHIVE.md) index and historically summarize owner records; they do not become current-state owners.
-- **FR-010:** Long-Horizon Summaries will preserve compressed established history and references; they cannot fabricate or override detailed Canon.
+- **FR-010:** [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md) preserve compressed established history and references; they cannot fabricate or override detailed Canon.
 - **FR-011:** Context Assembly can follow stable IDs, owner declarations, and typed reference paths, while every context packet remains Derived or Cache data.
 - **FR-014:** the [Autonomous Registry](AUTONOMOUS_REGISTRY.md) occupies the reserved, non-overlapping owner domain and preserves identity across category changes.
 

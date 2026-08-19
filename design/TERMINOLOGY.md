@@ -4683,3 +4683,23 @@ A presently valid means of moving a living actor or other supported subject betw
 ## Reincarnation Possibility
 
 A world and embodiment opportunity that is currently eligible for consideration during valid Reincarnation adjudication. Eligibility does not guarantee selection.
+
+## Historical Period ID
+
+An immutable stable identifier for one bounded historical interval summarized by FR-010. Its title, scope label, temporal precision, and summary version may change without replacing identity.
+
+## Long-Horizon Summary
+
+A canonical Historical Snapshot and retrieval index that compresses meaningful established change across a bounded interval while preserving causality, uncertainty, provenance, and references without owning mutable current state.
+
+## Continuity Hook
+
+A stable historical reference identifying an Entity, place, institution, faction, artifact, Project, mystery, consequence, or other established element that remains materially relevant beyond a compressed period.
+
+## Historical Transition
+
+A Derived player-facing presentation of a Long-Horizon Summary filtered through Perspective, visibility, Character Knowledge, and GM Secret boundaries.
+
+## Relevant History Index
+
+A compact non-authoritative index of Historical Period IDs, bounds, scope, stable references, tags, major events, unresolved threads, versions, and provenance used to locate relevant Long-Horizon Summaries without loading all history.

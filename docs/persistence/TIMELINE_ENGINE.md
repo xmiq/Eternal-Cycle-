@@ -294,6 +294,8 @@ Synchronization reconciles timing; it does not grant actors information about br
 
 ## Time Skips
 
+Significant events resolved inside a compressed interval remain Timeline or Campaign History events under their ordinary rules. A [Long-Horizon Summary](LONG_HORIZON_SUMMARIES.md) may reference them and compress their material causal chain, but one period summary never replaces all event identities or requires insignificant changes to become events.
+
 The [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md) owns authorization, Standing Instructions, Simulation Passes, Interruption Triggers, Return Horizons, and the Causal Bridge.
 
 The Timeline Engine receives and preserves:

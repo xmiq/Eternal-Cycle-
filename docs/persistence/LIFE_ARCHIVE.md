@@ -285,7 +285,7 @@ Validation reports ambiguity; it does not invent identity, chronology, or missin
 
 - **FR-001:** consumes per-Life Development references; no acceleration rule is implemented here.
 - **FR-005/FR-006/FR-007:** consume Skill and embodiment history; no transfer, merge, or scope rule is implemented here.
-- **FR-010:** may reference Life IDs; Long-Horizon Summaries remain a separate period/world structure.
+- **FR-010:** [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md) cross-reference Life IDs many-to-many while remaining separate Historical Period records; neither grants current-character memory.
 - **FR-011:** may retrieve Overview, Summary, then detail; no context packet is implemented here.
 - **FR-015:** owns current-character autobiographical recall; archive visibility does not grant it.
 - **FR-016:** owns persistent Soul bonds; the archive records only historical manifestations.

@@ -411,6 +411,8 @@ Different participant perspectives are not defects merely because they disagree.
 
 ## Timeline Validation
 
+For [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md), also validate stable period identity, temporal ordering at claimed precision, scope and typed references, important established causal links, unknown preservation, acyclic nesting, player-view secrecy, current-state ownership, World Reset continuity, and revision provenance.
+
 Detect:
 
 - impossible before-and-after cycles;

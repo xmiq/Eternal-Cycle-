@@ -206,6 +206,8 @@ When literal expression is impossible, experience may remain dormant or contribu
 
 ## Time Skips, Ages, and World Resets
 
+When a substantial Interlife gap could materially change world conditions or available embodiments, resolve and persist relevant world change before candidate placement. Use [Long-Horizon Simulation Summaries](../persistence/LONG_HORIZON_SUMMARIES.md#reincarnation-and-interlife) to preserve the established interval without treating the summary as candidate selection, Soul memory, or current world state.
+
 Reincarnation may bridge any amount of time needed for a valid new life and a healthy long-term story. A long Interlife is a consequence, not a deletion of history.
 
 [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md) owns Age claims, world-scale transition causes, Reset mechanisms, footprints, survivorship, and World Revalidation. This document continues to own the soul's seven-step personal transition.

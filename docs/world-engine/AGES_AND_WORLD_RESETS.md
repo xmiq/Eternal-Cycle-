@@ -519,7 +519,7 @@ This document does not define:
 - a World Stability trigger, balance correction, or mandatory apocalypse;
 - World Gate causes, lifecycles, transit, or contact consequences owned by [World Gates and World-Contact Events](GATES_AND_WORLD_CONTACT.md);
 - Gate interaction with Reincarnation or Soul Avatars;
-- the long-horizon change-of-resolution procedure owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md);
+- the resolution policy owned by [Simulation Abstraction](SIMULATION_ABSTRACTION.md) and historical compression owned by [Long-Horizon Simulation Summaries](../persistence/LONG_HORIZON_SUMMARIES.md);
 - personal Reincarnation stages, Soul persistence, progression, Evolution, Soul Weapon, or Magic effects beyond their owner interfaces;
 - Age, catastrophe, Reset, setting, theme, or genre generators;
 - campaign events, named survivors, live world state, or playthrough history.

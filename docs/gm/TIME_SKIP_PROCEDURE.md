@@ -445,6 +445,8 @@ Use changed conditions rather than the original estimate. Do not extrapolate one
 
 ## Return Procedure
 
+For a skip large enough to require historical compression, complete the [Long-Horizon Simulation Summary](../persistence/LONG_HORIZON_SUMMARIES.md#time-skip-procedure) after specialist owners and significant chronology have been updated. The summary records meaningful established change, causal links, continuities, and unknowns; it never substitutes for current-state writes or Timeline and Campaign History events.
+
 ### Step 21: Establish the Return State
 
 Record the actual return moment and current facts relevant to renewed play.

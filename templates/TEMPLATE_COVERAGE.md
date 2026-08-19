@@ -54,6 +54,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Inventory and Custody | [Inventory and Custody](INVENTORY_CUSTODY_TEMPLATE.md) | item identity, quantity, condition, location, custody, claims, provenance, and transfer |
 | Timeline | [Timeline Event](TIMELINE_EVENT_TEMPLATE.md) | five chronologies, precision, temporal relations, parallel events, and corrections |
 | Campaign History | [Campaign History Entry](CAMPAIGN_HISTORY_TEMPLATE.md) | append-only established events, outcomes, sources, consequences, and authorized correction |
+| Long-Horizon History | [Long-Horizon Summary](LONG_HORIZON_SUMMARY_TEMPLATE.md) | stable period scope, causal compression, continuity hooks, unknowns, historical references, revisions, and filtered transitions |
 | Projects | [Project Record](PROJECT_TEMPLATE.md) | undertakings, authority, methods, dependencies, milestones, risks, outputs, and consequences |
 | Mysteries | [Mystery Record](MYSTERY_TEMPLATE.md) | unresolved questions, hidden-truth status, clues, branches, actors, stakes, and resolution conditions |
 | Knowledge | [Knowledge View](KNOWLEDGE_VIEW_TEMPLATE.md) | observer-specific access, memory, belief, interpretation, confidence, and correction |

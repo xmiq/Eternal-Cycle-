@@ -34,6 +34,8 @@ Use the [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md) to identify and 
 
 Use the [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md) to authorize and conduct narrative compression across elapsed campaign time. Simulation Abstraction and each specialist system retain ownership of every process and transition advanced during the interval.
 
+Use [Long-Horizon Simulation Summaries](../persistence/LONG_HORIZON_SUMMARIES.md) after material long-interval resolution to preserve causal historical compression, continuities, unknowns, and retrieval references. The summary does not own current world conditions.
+
 Use the [Age Transition Procedure](../gm/AGE_TRANSITION_PROCEDURE.md) to test whether established historical change supports a successor Age Claim, preserve scoped or disputed boundaries, coordinate targeted World Revalidation, and return the result to play. Ages and World Resets retains ownership of every Age and Reset rule.
 
 Each document owns only its stated domain or cross-system handoff. Read them together as needed; no mention, summary, or aggregate resolution silently replaces a specialist owner.

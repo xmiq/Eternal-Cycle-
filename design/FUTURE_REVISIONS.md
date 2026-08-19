@@ -56,19 +56,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Open Register
 
-### FR-010 - Long-Horizon Simulation Summaries
-
-- **Status:** Roadmapped
-- **Issue:** Regional and epochal simulation may still demand too much bookkeeping or may compress away player agency, causal thresholds, and material exceptions.
-- **Affected systems:** Simulation Abstraction, Time Skips, Age transitions, World Engine, Campaign Persistence Engine, and GM Toolkit.
-- **Gameplay impact:** Long campaigns may become impractical to run or may produce unsupported historical summaries.
-- **Evidence needed:** Multi-decade and century-scale tests recording preparation time, Review Point effectiveness, missed dependencies, later corrections, and player decisions preserved or lost.
-- **Approved direction:** Represent meaningful established change across long periods with canonical compressed summaries, preserve unknowns, and use a summary-to-index-to-record retrieval path when historical material becomes relevant.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** Explicitly promoted by the project maintainer for later Phase 12 implementation.
-- **Authorized roadmap link:** [FR-010 — Long-Horizon Simulation Summaries](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-011 - GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence
 
 - **Status:** Roadmapped
@@ -120,11 +107,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-010, FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001 through FR-009, FR-012, and FR-014 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-011, the refined remaining scope of FR-015, and FR-016 are roadmapped as pending Phase 12 objectives. FR-001 through FR-010, FR-012, and FR-014 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-010 - Long-Horizon Simulation Summaries
+
+- **Status:** Closed
+- **Issue:** Regional and epochal simulation risked excessive bookkeeping or compression that erased causality, agency, uncertainty, and material exceptions.
+- **Affected systems:** Simulation Abstraction, Time Skips, Age transitions, World Engine, Campaign Persistence Engine, Life Archive, Reincarnation, Autonomous Registry, and GM/AI procedures.
+- **Gameplay impact:** Long campaigns could become impractical, lose prior-Life consequences, or produce unsupported historical completion.
+- **Evidence needed:** Multi-year through Age-scale cases covering peaceful intervals, causal conflict, Reincarnation gaps, sparse sources, autonomous uncertainty, long-lived Entities, World Resets, and protected player presentation.
+- **Approved direction:** Use stable, scoped, queryable Long-Horizon Summaries derived from established owner records; preserve material causal chains, unknowns, continuity hooks, provenance, and drill-down references without duplicating current state or Life Summaries.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented and validated through the canonical period-summary contract, blank template, logical SQLite guidance, Time Skip and Reincarnation integration, migration and validation rules, terminology, decisions, navigation, and structural validation.
+- **Authorized roadmap link:** [FR-010 — Long-Horizon Simulation Summaries](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Long-Horizon Simulation Summaries](../docs/persistence/LONG_HORIZON_SUMMARIES.md), [Long-Horizon Summary Template](../templates/LONG_HORIZON_SUMMARY_TEMPLATE.md), and [FR-010 Implementation Audit](audits/FR_010_LONG_HORIZON_SUMMARIES_AUDIT.md)
 
 ### FR-002 - Reincarnation Candidate Selection
 

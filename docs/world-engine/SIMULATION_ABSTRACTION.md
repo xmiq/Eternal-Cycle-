@@ -703,6 +703,8 @@ This document does not define:
 
 ## Related Documents
 
+- [Long-Horizon Simulation Summaries](../persistence/LONG_HORIZON_SUMMARIES.md) - preserves established outputs of long-horizon passes as causal, queryable Historical Records without owning current world state.
+
 - [World Engine Index](README.md)
 - [World Engine Overview](WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](WORLD_STATE_VARIABLES.md)

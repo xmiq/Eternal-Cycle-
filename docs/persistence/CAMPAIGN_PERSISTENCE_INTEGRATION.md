@@ -278,6 +278,8 @@ Hidden magical facts belong to factual owners and protected views. Research reco
 
 ## World Engine Interface
 
+Long-horizon World Engine resolution writes current results to specialist owners and significant events to Timeline or Campaign History before producing a [Long-Horizon Summary](LONG_HORIZON_SUMMARIES.md). The summary owns historical compression and retrieval references only; it does not become a second current-state owner.
+
 The [World Engine](../world-engine/README.md) owns autonomous world simulation, Causal Event Chains, populations, resources, economies, ecology, factions, war, disease, advancement, Dungeons, World Stability, Ages, World Resets, World Gates, and Simulation Abstraction.
 
 The World Engine simulates reality. Persistence remembers reality.

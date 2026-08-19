@@ -51,6 +51,8 @@ Retrieved text is not automatically current or authoritative. Check owner, versi
 
 Apply already-caused off-screen activity, elapsed time, Pending Consequences, and Review Points through their canonical owners. Use the World Engine's selected Simulation Frame. Do not invent a predetermined future, freeze absent actors, or resolve beyond the next material agency or uncertainty boundary.
 
+For a substantial Time Skip, Interlife gap, Age transition, or World Reset, follow [Long-Horizon Simulation Summaries](../persistence/LONG_HORIZON_SUMMARIES.md): resolve meaningful processes, persist current owners and significant events, preserve Unknowns, create the compact period summary, validate, then derive any player-facing Historical Transition. Do not load or generate unrelated history merely for completeness.
+
 ### 4. Present the perceivable situation
 
 Present only information available through the current character's valid observer view. Distinguish direct perception, remembered information, inference, uncertainty, and deliberate in-world deception. Provide enough context for meaningful choice without exposing GM Secrets or turning possible actions into a mandatory menu.

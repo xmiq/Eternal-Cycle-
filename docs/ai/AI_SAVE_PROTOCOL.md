@@ -63,6 +63,8 @@ Check as applicable:
 
 Do not rewrite unrelated records for formatting, synchronization, or apparent completeness.
 
+A completed long-horizon simulation includes changed specialist owners, required chronology, and its [Long-Horizon Summary](../persistence/LONG_HORIZON_SUMMARIES.md) in one dependency-complete Affected Set. The summary does not replace those owner writes. This follows current Save Update rules and does not implement FR-011 enforcement.
+
 ### 5. Build the Session Delta
 
 For each operation, record the exact prior claim or explicit unknown, justified change, resulting claim, owner, source, time, visibility, and dependencies. Preserve numerical provenance through the owning mechanic. Never infer missing numbers, round for convenience, rebalance silently, or award progression from bookkeeping.
