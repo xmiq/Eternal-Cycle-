@@ -43,6 +43,8 @@ The [GM Living Codex](../gm-living-codex/README.md) is an adjacent, separately p
 
 The Campaign Persistence Engine remains storage-neutral. The [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) defines how an AI GM, execution profile, Persistence Adapters, Campaign Configuration, Canonical Campaign State, and repository rules relate without changing persistence semantics.
 
+[Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) consumes this engine's Read Set, ownership, Save Update, validation, and adapter contracts to define one valid Gameplay Turn. It introduces no competing campaign owner or storage technology.
+
 Runtime-specific [execution profiles and adapters](../ai/README.md#runtime-specific-profiles) are replaceable implementations:
 
 - an execution profile may order loading, adjudication, persistence, validation, and delivery but cannot define mechanics;

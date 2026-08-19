@@ -125,6 +125,8 @@ The validator never combines files from different Campaign Versions merely becau
 
 ## Validation Profiles
 
+FR-011 turn validation additionally confirms that required owner reads preceded resolution, the Affected Set was explicitly determined, every non-empty set used one owner-routed transaction, the resulting Save Point activated only after required verification, stale Context Packets were invalidated, and relevant Turn N state can be retrieved on Turn N+1. Repository structural validation checks this contract; runtime hosts must execute these cases against configured campaign persistence.
+
 ### Save Activation Profile
 
 Checks one Save Transaction's complete candidate dependency closure before activation.

@@ -41,6 +41,8 @@ These classifications combine; none substitutes for another.
 
 ## Canonical Persistence Operating Cycle
 
+For AI-assisted play, [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) binds this cycle into one Gameplay Turn: relevance-filtered canonical reads precede resolution, every resolved interaction receives an Affected Set determination, non-empty changes save automatically, and turn closure follows validation and required read-back. Derived context remains non-authoritative.
+
 ### 1. Select the Active Authority
 
 Read the Save Index and identify:

@@ -4,6 +4,8 @@
 
 This procedure explains how an AI operator invokes and reports the canonical [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md). The persistence document remains the mechanical and procedural owner. This file adds no save format, database design, automatic merge rule, or permission to alter campaign state.
 
+Under [FR-011](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), this procedure is invoked automatically after every resolved Gameplay Interaction. The player does not need to request saving. A non-empty Affected Set must commit, validate, and satisfy configured read-back requirements before the turn closes or its durable result is finally delivered.
+
 ## Document Control
 
 - **Owner:** this document owns the AI-facing save-operation sequence and write-capability disclosure
@@ -25,6 +27,8 @@ Before saving, the AI operator determines which mode applies:
 | **Unavailable** | the Campaign Record or save interface cannot be reached | preserve the interaction boundary externally if authorized, mark Save Recovery Required, and stop dependent play |
 
 A generated file, message, or summary is not an activated Save Point unless the authorized persistence interface confirms it.
+
+Under FR-011, `Proposal only`, `Read only`, and `Unavailable` cannot close a state-changing Gameplay Turn as committed. They preserve the bounded result or recovery evidence and surface the capability failure; ordinary dependent play resumes only from the last validated Save Point or after an authorized writer completes and verifies the transaction.
 
 ## Save Operation
 

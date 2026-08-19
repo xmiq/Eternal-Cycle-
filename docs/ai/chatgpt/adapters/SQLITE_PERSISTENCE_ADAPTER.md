@@ -137,6 +137,8 @@ File size, row count, or successful commit alone is insufficient.
 
 ## Read-Only Reopen
 
+For FR-011, read-only reopen verifies critical expected owner changes and the resulting Campaign Version or Save Point before turn closure. Context Caches are refreshed only from this verified state. The adapter does not decide relevance or adjudication.
+
 Post-write validation uses a newly opened read-only connection against the closed candidate, not the write connection's in-memory view.
 
 The read-only reopen must not:

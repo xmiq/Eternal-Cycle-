@@ -37,6 +37,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | Logical module | Template coverage | Notes |
 | --- | --- | --- |
 | Save Index and Protocol | [Save Index](SAVE_INDEX_TEMPLATE.md) | module registry, versions, Save Points, load state, validation, migration, and recovery |
+| Context Assembly | [Context Packet](CONTEXT_PACKET_TEMPLATE.md) | non-authoritative Current Scene, Running, and Session context; source navigation, freshness, read evidence, Affected Set result, and cache refresh |
 | Campaign Canon and Rules Profile | [Campaign Canon and Rules Profile](CAMPAIGN_CANON_TEMPLATE.md) | permitted premises, options, provisional rulings, retcons, conversions, and control agreements |
 | Player State | [Character Record](CHARACTER_TEMPLATE.md), [Development Profile](DEVELOPMENT_PROFILE_TEMPLATE.md) | agency, current actor, embodiment, condition, access, capability, Soul, resources, and objectives |
 | Souls and Incarnations | [Soul Continuity Record](SOUL_CONTINUITY_TEMPLATE.md), [Life Archive](LIFE_ARCHIVE_TEMPLATE.md), [Soul Avatar Profile](SOUL_AVATAR_TEMPLATE.md), [Soul Weapon Record](SOUL_WEAPON_TEMPLATE.md) | one Soul, distinct lives, completed-life indexes, protected structures, current access, Avatars, and Weapon Soul relationships |

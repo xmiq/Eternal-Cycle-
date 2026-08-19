@@ -185,7 +185,7 @@ It preserves uncertainty and disclosure boundaries, omits raw database plumbing,
 
 Implementations should support pagination and filters over Life ID, ordinal, status, Species/Form, world, Contact Domain, Age, temporal bounds, tags, major Skill, Relationship participant, major event, unresolved legacy, and future Soul-bond reference. Search results return compact index rows before summaries and deeper records.
 
-This is archive retrieval, not FR-011 Context Assembly. Future context packets may consume these indexes but remain Derived.
+This is archive retrieval, not FR-011 Context Assembly. Context Packets may consume these indexes but remain Derived.
 
 ## Logical SQLite Contract
 
@@ -286,7 +286,7 @@ Validation reports ambiguity; it does not invent identity, chronology, or missin
 - **FR-001:** consumes per-Life Development references; no acceleration rule is implemented here.
 - **FR-005/FR-006/FR-007:** consume Skill and embodiment history; no transfer, merge, or scope rule is implemented here.
 - **FR-010:** [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md) cross-reference Life IDs many-to-many while remaining separate Historical Period records; neither grants current-character memory.
-- **FR-011:** may retrieve Overview, Summary, then detail; no context packet is implemented here.
+- **FR-011:** [Context Assembly](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) retrieves Overview, Summary, then relevant detail through stable Life IDs without loading every Life or granting current-character memory.
 - **FR-015:** owns current-character autobiographical recall; archive visibility does not grant it.
 - **FR-016:** owns persistent Soul bonds; the archive records only historical manifestations.
 

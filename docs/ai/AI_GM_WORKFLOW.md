@@ -9,7 +9,7 @@ This procedure sequences an AI Game Master's work from initialization through ha
 - **Owner:** this document owns AI operating sequence and readiness transitions
 - **Primary authorities:** [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) and [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
 - **Dependencies:** repository and Campaign versions, Save Index, Current Session, Read Sets, specialist owners, Save Updates, and validation
-- **Extensions:** [Session Start](AI_SESSION_START.md), [Play Protocol](AI_PLAY_PROTOCOL.md), [Save Protocol](AI_SAVE_PROTOCOL.md), and interface-specific implementations
+- **Extensions:** [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), [Session Start](AI_SESSION_START.md), [Play Protocol](AI_PLAY_PROTOCOL.md), [Save Protocol](AI_SAVE_PROTOCOL.md), and interface-specific implementations
 - **Consumers:** AI GMs, supervising human GMs, orchestration tools, and handoff processes
 - **Repository boundary:** the procedure stores no campaign state, prompt, transcript, credentials, model memory, or implementation configuration
 
@@ -43,7 +43,7 @@ If versions or authority are materially unknown, stop at the appropriate non-rea
 
 ### 2. Build the working context
 
-Follow [AI Session Start](AI_SESSION_START.md). Load the Save Index and Current Session first, then build the smallest complete Read Set for the current situation. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
+Follow [AI Session Start](AI_SESSION_START.md) and the [FR-011 Context Assembly contract](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). Load the Save Index and Current Session first, verify any cached summaries against the active Save Point, then build the smallest complete Read Set and Current Scene Context for the situation. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
 
 Retrieved text is not automatically current or authoritative. Check owner, version, effective time, Truth Layer, visibility, source, status, and supersession before use.
 
@@ -81,9 +81,9 @@ Clearly separate an attempted action from an achieved effect. Do not disguise an
 
 Preparing text does not determine when it may be delivered. The selected AI Execution Profile owns presentation ordering and may require validated persistence before delivery.
 
-### 8. Persist before dependent play or a stricter delivery gate
+### 8. Persist before turn closure and delivery
 
-At the semantic boundary of every completed Gameplay Interaction, follow [AI Save Protocol](AI_SAVE_PROTOCOL.md). Determine the Affected Set, stage one owner-routed Session Delta, append the required Session, Timeline, and Campaign History records, validate the candidate, and activate atomically when authorized.
+At the semantic boundary of every Gameplay Interaction, explicitly determine the Affected Set and follow [AI Save Protocol](AI_SAVE_PROTOCOL.md). A non-empty Affected Set automatically stages one owner-routed Session Delta, appends required Session, Timeline, and Campaign History records, validates the candidate, performs required read-back, and activates atomically. A state-changing Gameplay Turn is not closed or finally delivered before this succeeds. A verified empty Affected Set closes without mutation.
 
 Do not continue dependent adjudication while the change exists only in narration, conversation context, or uncommitted model memory.
 
@@ -96,7 +96,7 @@ For inherited outcomes, resolve [Reproductive Compatibility](../gm-living-codex/
 After activation:
 
 1. refresh the Save Index and active Campaign Version;
-2. discard stale derived context;
+2. discard or regenerate stale Current Scene, Running, and Session context from committed state;
 3. carry forward unresolved player intent, Pending Consequences, Review Points, and declared limitations;
 4. continue at the next interaction or produce a bounded handoff view.
 

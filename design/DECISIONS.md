@@ -5081,3 +5081,19 @@ Specialist domains retain mutable current facts, Timeline and Campaign History r
 ## D-1270 — Time Skips Resolve Meaningful Processes Before Summarization
 
 Long Time Skips, Interlife gaps, Age transitions, and World Resets resolve material active processes at the minimum sufficient detail, update authoritative owners, append significant chronology, preserve autonomous last-confirmed uncertainty, and only then generate a Long-Horizon Summary. World Resets change current state without erasing prior historical Canon.
+
+## D-1271 — Gameplay Turn Closure Requires Canonical Read and Persistence Gates
+
+A material Gameplay Turn reaches resolution only after its relevant canonical Read Set is complete. Every resolved turn receives an explicit Affected Set determination, and a non-empty set invokes automatic owner-routed persistence without a player command. The turn closes and its durable player-facing result is delivered only after required commit, validation, read-back, and Save Point activation succeed.
+
+## D-1272 — Context Assembly Is Relevant, Navigable, and Non-Authoritative
+
+Current Scene Context, Recent Running Summaries, and Session Summaries carry only materially relevant facts, stable IDs, owner domains, source revisions, and drill-down paths. They are Derived Data or Caches; authoritative owner records defeat stale packet content, and conversation context remains a convenience layer only.
+
+## D-1273 — Later Turns and Fresh Sessions Rebuild from Persistence
+
+When relevant, Turn N+1 must retrieve Turn N's committed result from the active persisted Save Point. New chats, model resets, truncation, and handoffs rebuild working context from Campaign Configuration, Save Index, verified summaries, and owner records rather than depending on prior conversation memory.
+
+## D-1274 — FR-011 Runtime Conformance Belongs to the Host
+
+The rules repository enforces FR-011 through canonical contracts, execution-profile obligations, adapter procedures, blank templates, and structural regression validation. Because it contains no universal executable campaign host or populated save, each runtime implementation must execute the acceptance cases against its configured persistence chain and must not claim successful I/O merely because repository documents validate.

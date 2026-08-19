@@ -8,6 +8,8 @@ The protocol preserves causality by recording what changed, why it changed, who 
 
 ## Core Rule
 
+During ordinary gameplay, [FR-011](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) invokes this protocol automatically after resolution. A player command is not required. Every interaction receives an explicit Affected Set determination; a state-changing turn remains open until the transaction succeeds, validates, and satisfies configured read-back requirements.
+
 After every completed gameplay interaction:
 
 1. determine the affected persistence sections;
@@ -421,6 +423,8 @@ It includes:
 Pending is not predetermined. A witness intending to report a crime creates an information pressure, not guaranteed arrest.
 
 ## No-Op Interactions
+
+FR-011 requires the runtime to determine `Affected Set = empty` explicitly before using this path. Apparent triviality or failure does not prove no change: time, resources, Knowledge, Relationships, injuries, and process progress still require inspection.
 
 A **No-Op Update** occurs when the protocol determines that a completed interaction produced no persistent campaign-state change.
 

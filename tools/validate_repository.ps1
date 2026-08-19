@@ -270,7 +270,7 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** FR-011, the refined remaining scope of FR-015, and FR-016.',
+    '**Approved pending objectives:** the refined remaining scope of FR-015 and FR-016.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [x] **FR-002 — Reincarnation Candidate Selection**',
     '- [x] **FR-003 — Soul Depth Information Visibility**',
@@ -281,7 +281,7 @@ foreach ($requiredText in @(
     '- [x] **FR-008 — Soul Weapon Rarity and Equipment Relevance**',
     '- [x] **FR-009 — World Contact, Travel, and Reincarnation Discretion**',
     '- [x] **FR-010 — Long-Horizon Simulation Summaries**',
-    '- [ ] **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence**',
+    '- [x] **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
     '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
@@ -399,14 +399,77 @@ foreach ($duplicate in $allFutureIds | Group-Object | Where-Object { $_.Count -g
 
 foreach ($requiredText in @(
     '### FR-011 - GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence',
-    'A gameplay turn that changes canonical persistent state is not complete until the required persistence write has succeeded and been validated.',
-    'Saving is automatic during normal gameplay, not optional housekeeping or a player command.',
-    'Conversation context is a convenience layer and never proves that required Canon was loaded.',
-    'During ordinary gameplay, the player can play continuously without issuing a manual save command while every canonical persistent change commits and later reloads correctly.',
-    '**Status:** Roadmapped'
+    '**Status:** Closed',
+    '**Closure references:** [Context Assembly and Gameplay Turn Persistence]'
 )) {
     if ($future -notmatch [regex]::Escape($requiredText)) {
-        Add-ValidationError "FR-011 planning amendment lacks required invariant: $requiredText"
+        Add-ValidationError "FR-011 closure lacks required invariant: $requiredText"
+    }
+}
+
+$contextAssemblyPath = Join-Path $rootPath 'docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md'
+if (-not (Test-Path -LiteralPath $contextAssemblyPath)) {
+    Add-ValidationError 'Missing FR-011 Context Assembly and Gameplay Turn Persistence contract.'
+}
+else {
+    $contextAssembly = Get-Content -Raw -LiteralPath $contextAssemblyPath
+    foreach ($requiredText in @(
+        'Conversation context is a convenience layer only; it is not Canon.',
+        'TURN_OPEN',
+        'READ_COMPLETE',
+        'AFFECTED_SET_DETERMINED',
+        'SAVE_COMPLETE',
+        '## Context Assembly Layer',
+        '## Current Scene Context',
+        '## Hierarchical Context',
+        '## Mandatory Read Gate',
+        '## Automatic Persistence Gate',
+        'Affected Set = empty',
+        '## Failure and Retry',
+        '## Next-Turn Verification',
+        '## Session Start and Context Reset',
+        '## Existing Campaign Adoption',
+        'This repository performs no migration of a populated campaign.',
+        '## Runtime Boundary',
+        'host tests exercise Regression Cases A through L',
+        '### A. Skill Read',
+        '### B. Automatic Character Save',
+        '### C. Relationship Save',
+        '### D. Multiple-Domain Transaction',
+        '### E. Autonomous Entity',
+        '### F. No-Change Turn',
+        '### G. Failed Write',
+        '### H. Contradictory Conversation',
+        '### I. Next-Turn Reload',
+        '### J. Stale Running Summary',
+        '### K. Deep Historical Query',
+        '### L. Context Reset'
+    )) {
+        if ($contextAssembly -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "FR-011 Context Assembly lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$contextPacketTemplatePath = Join-Path $rootPath 'templates/CONTEXT_PACKET_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $contextPacketTemplatePath)) {
+    Add-ValidationError 'Missing Context Packet template.'
+}
+else {
+    $contextPacketTemplate = Get-Content -Raw -LiteralPath $contextPacketTemplatePath
+    foreach ($requiredText in @(
+        '**Parent Campaign Version:**',
+        '**Parent Save Point ID:**',
+        '## Relevant Canonical Facts',
+        '## Read Set Evidence',
+        '## Affected Set Result',
+        '## Cache Refresh',
+        'Facts copied here are Derived.',
+        'Non-empty changes committed and validated before turn closure.'
+    )) {
+        if ($contextPacketTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Context Packet template lacks required invariant: $requiredText"
+        }
     }
 }
 
@@ -797,6 +860,7 @@ Write-Output 'Simulation Architecture: three layers and identity/knowledge bound
 Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundaries checked'
 Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
+Write-Output 'FR-011 Context Assembly: turn gates, relevance, caches, automatic persistence, reload, and runtime boundary checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
 Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visibility, Soul Weapon baseline, and world-access distinctions checked'

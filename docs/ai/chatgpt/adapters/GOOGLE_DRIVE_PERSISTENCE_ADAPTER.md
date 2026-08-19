@@ -95,6 +95,8 @@ Drive does not repair or reinterpret candidate contents.
 
 ## Canonical Replacement Procedure
 
+When Campaign Configuration makes Google Drive part of the authoritative adapter chain, an FR-011 state-changing turn remains unclosed until required remote replacement and read-back succeed. A local SQLite commit alone does not satisfy that configured boundary.
+
 Before upload, recheck that the remote canonical identity and parent evidence still match what was fetched.
 
 Then:

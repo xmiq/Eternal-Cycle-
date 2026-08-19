@@ -34,7 +34,7 @@ No executable campaign schema or populated save exists in this repository, so no
 - **FR-001:** per-Life Development references are queryable; acceleration remains unimplemented.
 - **FR-005/006/007:** embodiment and Skill history are queryable; transfer, merge, and conceptual-scope mechanics remain unimplemented.
 - **FR-010:** period/world summaries may reference Life IDs but remain separate.
-- **FR-011:** future context assembly can drill from Overview to Summary to detail.
+- **FR-011:** completed Context Assembly can drill from Overview to Summary to relevant detail.
 - **FR-015:** player archive access remains separate from autobiographical memory.
 - **FR-016:** historical manifestations can be indexed without owning Soul bonds.
 

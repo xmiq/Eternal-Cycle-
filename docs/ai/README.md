@@ -19,12 +19,13 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 1. [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - rules, objective simulation, player-facing presentation, Entity, Controller, Perspective, and knowledge boundaries.
 2. [AI Runtime Model](AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, boot and action flows, adapter composition, and extension rules.
-3. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
-4. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
-5. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
-6. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
-7. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
-8. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
+3. [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, summary hierarchy, automatic Affected Set persistence, turn closure, failure/retry, and next-turn reload.
+4. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
+5. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
+6. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
+7. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
+8. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
+9. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
 ## Runtime-Specific Profiles
 

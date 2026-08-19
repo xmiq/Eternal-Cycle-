@@ -12,7 +12,7 @@ It can represent servitors, golems, familiars, undead, summons, drones, artifici
 - **Primary authorities:** [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md), [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md), and [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - **Dependencies:** stable Entity identity, Typed References, Locations, Relationships, Infrastructure, Inventory, Projects, Timeline, uncertainty, Save Updates, and validation
 - **Extensions:** concrete schemas may normalize additional autonomous types or mechanics without creating competing ownership
-- **Consumers:** GMs, AI runtimes, campaign schemas, migrations, world simulation, Relationships, Projects, Infrastructure, future context assembly, and validation tools
+- **Consumers:** GMs, AI runtimes, campaign schemas, migrations, world simulation, Relationships, Projects, Infrastructure, Context Assembly, and validation tools
 - **Repository boundary:** populated autonomous entries, models, networks, assignments, controllers, reports, campaign migration results, and current state remain outside this repository
 
 ## Core Ownership Boundary
@@ -272,7 +272,9 @@ Ambiguous identity conflicts are reported for owner review. Validators do not me
 
 ## FR-011 Compatibility
 
-Future Context Assembly can retrieve Autonomous IDs, Model IDs, Controllers, placements, assignments, condition references, last-confirmed state, Relationship IDs, Network IDs, and authoritative source paths. Any generated context packet remains Derived or Cache data under FR-012. FR-014 does not implement that packet or its selection logic.
+[Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) selects only relevant Autonomous IDs, Models, Controllers, autonomy, placement, assignments, condition, last Confirmed Reports, networks, resources, and maintenance dependencies. Automatic turn persistence routes changes back to this owner and its referenced specialist owners without loading every autonomous unit.
+
+Context Assembly retrieves Autonomous IDs, Model IDs, Controllers, placements, assignments, condition references, last-confirmed state, Relationship IDs, Network IDs, and authoritative source paths only when relevant. Every generated Context Packet remains Derived or Cache data under FR-012; this registry retains autonomous-state ownership.
 
 ## Safeguards
 

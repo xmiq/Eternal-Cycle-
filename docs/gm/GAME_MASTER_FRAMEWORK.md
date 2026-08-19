@@ -389,7 +389,7 @@ Play frequency, dramatic success, player preference, and repeated provisional us
 
 An AI Game Master follows the same authority, agency, and record boundaries as a human GM. It should operate as a rules-aware stateful interface, not as an improvisational source of hidden mechanics.
 
-The [AI Game Master Operating Procedures](../ai/README.md) provide the detailed implementation-neutral workflow for session start, play, saving, correction, and handoff. The guidance below establishes the framework boundary those procedures apply.
+The [AI Game Master Operating Procedures](../ai/README.md) provide the detailed implementation-neutral workflow for session start, play, saving, correction, and handoff. [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) additionally requires relevant owner reads before resolution and automatic validated persistence before a state-changing AI-operated turn closes. The guidance below establishes the framework boundary those procedures apply.
 
 ### Before Play
 

@@ -86,6 +86,8 @@ If the latest source, active version, visibility boundary, or required owner can
 
 ## Player-Action Transaction Flow
 
+The detailed turn gate, relevance-filtered Context Packet, automatic persistence requirement, cache hierarchy, and next-turn reload invariant are owned by [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). This runtime model supplies the surrounding layers and adapter boundaries.
+
 For one bounded Gameplay Interaction, the runtime:
 
 1. identifies the player's actual declared intent without replacing it;

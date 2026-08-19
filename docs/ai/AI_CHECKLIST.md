@@ -24,6 +24,8 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] Open migrations, recoveries, conflicts, and validation warnings are known.
 - [ ] Authorized audience and Truth Layer visibility are established.
 - [ ] The initial Read Set includes the current situation's material owners and Typed References.
+- [ ] Current Scene Context records the active Save Point, stable owner IDs, relevance reasons, freshness, and deep-read paths.
+- [ ] Persisted Running or Session Summaries were verified and stale Caches were regenerated.
 - [ ] Stale, missing, disputed, estimated, and protected information is labelled honestly.
 - [ ] The working session view is sourced, bounded, and treated as non-authoritative.
 - [ ] Readiness is declared as Ready, Ready with declared limits, or blocked.
@@ -34,6 +36,7 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] Intended effect, method, target, timing, and material limits are clear enough.
 - [ ] The AI has not selected deliberate player-character intent.
 - [ ] The exact claim and narrowest canonical owner are identified.
+- [ ] Required canonical reads reached `READ_COMPLETE`; conversation context was not accepted as proof of loading.
 - [ ] Required campaign records and prior Session Deltas are current.
 - [ ] World truth, actor knowledge, character knowledge, player knowledge, Research, theories, rumours, Secrets, and unknowns remain separate.
 - [ ] Rule status is Canonical, Foundation, Provisional, or Unsupported.
@@ -57,6 +60,7 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] When narration depends on a new Codex revision, require its full save and read-back before campaign adoption.
 
 - [ ] The semantic interaction boundary is complete.
+- [ ] The Affected Set was explicitly determined, including an explicit empty result where applicable.
 - [ ] Save capability is declared as writer, proposal only, read only, or unavailable.
 - [ ] Active parent Campaign Version was re-read.
 - [ ] One Transaction ID identifies the entire update.
@@ -67,12 +71,15 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] Projects, Research, Mysteries, Relationships, Knowledge, and Pending Consequences are updated only where affected.
 - [ ] The candidate was validated read-only before activation.
 - [ ] Activation was atomic and confirmed by read-back, or the prior Save Point remains active.
+- [ ] A non-empty Affected Set persisted automatically without waiting for a player save command.
+- [ ] The turn remains open until required persistence and validation succeed.
 - [ ] The reported save status matches what actually occurred.
 
 ## Before Continuing Dependent Play
 
 - [ ] The changed state is activated rather than present only in narration or memory.
 - [ ] Save Index and active Campaign Version were refreshed.
+- [ ] Relevant prior-turn changes were re-read from the activated Save Point rather than conversation memory.
 - [ ] Stale derived context was discarded or refreshed.
 - [ ] Open warnings, Review Points, Pending Consequences, and unresolved intent remain visible to the operator.
 
@@ -105,3 +112,4 @@ Stop the affected operation when a material owner, source, version, authority, v
 - [AI Session Start](AI_SESSION_START.md)
 - [AI Play Protocol](AI_PLAY_PROTOCOL.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
+- [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)

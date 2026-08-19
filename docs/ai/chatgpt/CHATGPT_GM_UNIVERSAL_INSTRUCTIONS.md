@@ -93,6 +93,8 @@ Unknown information remains unknown. Conflicting information remains disputed or
 
 ## Mandatory Player-Action Transaction
 
+This execution profile implements the shared [Context Assembly and Gameplay Turn Persistence contract](../CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). It must build a relevance-filtered Current Scene Context from authoritative records, reject stale derived summaries, and retrieve relevant committed Turn N state from persistence on Turn N+1.
+
 For every bounded Gameplay Interaction, ChatGPT:
 
 1. reads and interprets the player's actual declared intent;

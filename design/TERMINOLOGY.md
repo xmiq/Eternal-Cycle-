@@ -4703,3 +4703,27 @@ A Derived player-facing presentation of a Long-Horizon Summary filtered through 
 ## Relevant History Index
 
 A compact non-authoritative index of Historical Period IDs, bounds, scope, stable references, tags, major events, unresolved threads, versions, and provenance used to locate relevant Long-Horizon Summaries without loading all history.
+
+## Gameplay Turn
+
+One bounded player-action interaction from intent through required canonical reads, objective resolution, Affected Set determination, automatic persistence where needed, validation, and closure. A state-changing Gameplay Turn is incomplete until its canonical transaction succeeds.
+
+## Context Assembly Layer
+
+The persistence-backed runtime procedure that selects a dependency-complete relevant Read Set and builds a compact Context Packet from authoritative records using stable IDs, owner references, and drill-down paths.
+
+## Context Packet
+
+A Derived or Cache working view carrying relevant canonical facts, source navigation, visibility, freshness, and interaction metadata for GM operation. It owns no mutable campaign fact.
+
+## Current Scene Context
+
+The smallest Context Packet for one active interaction, containing only the relevant Perspective, Entity, Location, intent, actors, conditions, dependencies, recent changes, and source references needed for faithful resolution.
+
+## Recent Running Summary
+
+A short-lived Cache of immediate committed continuity, active intent, recent changes, unresolved action, and owner references. It is invalidated or regenerated after relevant Canon changes.
+
+## Session Summary
+
+A Derived short-term index of major session events, discoveries, changes, and unresolved threads with stable references to authoritative records. It is not Campaign History and owns no current state.

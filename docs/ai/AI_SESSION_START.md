@@ -66,7 +66,7 @@ Read unresolved player intent, prior Session Deltas, open adjudications, pending
 
 A transcript or recent message may help locate the boundary, but it does not silently override the Save Index or Campaign State Graph.
 
-### 5. Build the initial Read Set
+### 5. Build the initial Read Set and Context Packet
 
 Always read:
 
@@ -84,7 +84,7 @@ Then load as relevant:
 - Projects, Research, Mysteries, and Knowledge Views;
 - Timeline, Campaign History, Pending Consequences, and Review Points.
 
-Follow Typed References until additional records cannot materially change the next claim, consequence, uncertainty, disclosure, or choice. Loading everything is not a substitute for identifying relevance.
+Follow Typed References until additional records cannot materially change the next claim, consequence, uncertainty, disclosure, or choice. Loading everything is not a substitute for identifying relevance. Build the initial Current Scene Context under [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), preserving stable owner IDs and deep-read paths internally.
 
 ### 6. Reconcile freshness and status
 
@@ -98,7 +98,7 @@ Resolve only already-caused elapsed-time effects needed to reach the session bou
 
 ### 8. Build the working session view
 
-Create an Ephemeral or Derived View containing only what the operator needs:
+Verify any persisted Running or Session Summary against the active Campaign Version, Save Point, source revisions, and visibility scope. Discard or regenerate stale Caches. Create an Ephemeral or Derived View containing only what the operator needs:
 
 - active versions and Save Point;
 - current time, place, and embodiment;
@@ -138,6 +138,7 @@ For a new AI implementation taking over an existing campaign, treat platform mem
 ## Related Documents
 
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
+- [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)

@@ -147,6 +147,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 - [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, persistence adapters, scope, and authority boundaries.
 - [AI Runtime Model](ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, campaign boot and action flows, adapter composition, failure boundaries, and extension rules.
+- [Context Assembly and Gameplay Turn Persistence](ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, derived summary hierarchy, automatic persistence, failure/retry, and next-turn verification.
 - [AI Capabilities and Limitations](ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical discipline, and failure handling.
 - [AI GM Workflow](ai/AI_GM_WORKFLOW.md) - end-to-end authority, loading, adjudication, narration, persistence, recovery, and handoff cycle.
 - [AI Session Start](ai/AI_SESSION_START.md) - version, Save Index, visibility, Read Set, freshness, readiness, and resume checks before play.

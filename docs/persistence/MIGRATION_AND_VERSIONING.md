@@ -576,6 +576,8 @@ Before activation confirm:
 
 Existing long campaigns may add [Long-Horizon Summaries](LONG_HORIZON_SUMMARIES.md#migration-and-source-recovery) only through Backup, Audit, Merge, Validation, and activation. Migration identifies meaningful periods from established Timeline, Campaign History, Life Archive, and owner records; it preserves unknown gaps and never manufactures an eventful past.
 
+Existing campaigns adopt [FR-011 Context Assembly](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md#existing-campaign-adoption) without rewriting valid Canon: back up and validate the owner graph, preserve working read queries, configure or regenerate Derived caches, enable automatic turn transactions, test read/write/rollback/reload through a harmless external fixture, and retain setup provenance.
+
 This document defines campaign version identities, compatibility, the four-stage migration transaction, Migration Manifests, activation, interruption, rollback, repository upgrades, and storage conversion. It does not define storage syntax, populated records, ordinary Save Updates, the full Continuity Resolution procedure, validation algorithms, repository release versioning, or migration templates.
 
 ## Skill Consolidation Adoption

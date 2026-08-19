@@ -187,6 +187,8 @@ The [GM Living Codex](../gm-living-codex/GM_LIVING_CODEX.md) stores reusable app
 
 ## GM and AI Operating Procedure
 
+[FR-011 Context Assembly](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) provides the GM Simulation Engine with relevant objective records before resolution and filters final presentation only after required persistence. GM access through a Context Packet does not become Entity Knowledge, and conversation context cannot overwrite Objective State.
+
 For a consequential interaction:
 
 1. Load relevant canonical campaign state.

@@ -125,7 +125,7 @@ For a long interval:
 12. validate the complete Affected Set and activate the Save Point;
 13. derive a filtered Historical Transition when appropriate.
 
-The summary never substitutes for steps 8 and 9. A completed long-horizon simulation is a major persistent change and follows existing save rules; FR-011's future automatic enforcement is not implemented here.
+The summary never substitutes for steps 8 and 9. A completed long-horizon simulation is a major persistent change and follows existing save rules; automatic turn enforcement is owned by [FR-011](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md).
 
 ## Reincarnation and Interlife
 
@@ -185,7 +185,7 @@ Search summary indexes before loading full text. Implementations should support 
 
 A compact **Relevant History Index** exposes Historical Period ID, bounds, scope, key stable references, tags, major events, unresolved threads, status, version, and provenance. It is an index, not FR-011 Context Assembly and not current Canon.
 
-FR-011 may later retrieve only relevant periods through these IDs and drill-down paths. Ordinary scenes do not require loading unrelated century summaries.
+FR-011 [Context Assembly](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) retrieves only relevant periods through these IDs and drill-down paths. Ordinary scenes do not require loading unrelated century summaries.
 
 ## Summary Nesting and Freshness
 

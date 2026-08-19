@@ -128,6 +128,8 @@ A quest is not a separate universal mechanic. A request, commitment, objective, 
 
 ## Required Read Discipline
 
+The [FR-011 Context Assembly Layer](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) operationalizes this existing discipline through relevance selection, stable source navigation, freshness metadata, and a mandatory pre-resolution read gate. It does not replace or weaken the owner map below.
+
 The GM must establish a **Read Set** before materially adjudicating or updating campaign state.
 
 ### Always Read

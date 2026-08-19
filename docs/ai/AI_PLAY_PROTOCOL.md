@@ -17,6 +17,8 @@ This procedure governs one AI-operated play loop from player input to an establi
 
 ## Interaction Loop
 
+Every interaction follows the [FR-011 Gameplay Turn state machine](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md#gameplay-turn-state-machine). Required owner reads precede resolution. After resolution, the Affected Set is determined explicitly; non-empty changes persist and validate automatically before final player-facing delivery, while a verified empty set closes without mutation.
+
 ### 1. Classify the input
 
 Determine whether the input is:
