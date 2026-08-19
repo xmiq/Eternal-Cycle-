@@ -4727,3 +4727,19 @@ A short-lived Cache of immediate committed continuity, active intent, recent cha
 ## Session Summary
 
 A Derived short-term index of major session events, discoveries, changes, and unresolved threads with stable references to authoritative records. It is not Campaign History and owns no current state.
+
+## Autobiographical Memory Record
+
+A stable Soul-linked record identifying a bounded remembered experience or coherent cluster from one source Life, including provenance, significance, associations, reinforcement, and cross-incarnation accessibility history without copying source facts as a competing authority.
+
+## Recall Manifestation
+
+The bounded representation of an Autobiographical Memory Record consciously available to one receiving incarnation through Character Knowledge, with form, scope, confidence, source, time, and known limitations.
+
+## Memory Cue
+
+A present sensory, emotional, relational, linguistic, spatial, magical, symbolic, procedural, or Soul-resonant condition with an established association to an Autobiographical Memory Record. A cue permits adjudication; it does not guarantee recall.
+
+## Memory Accessibility Condition
+
+A qualitative description of present access such as Accessible, Fading, Dormant, Cued, Fragmentary, Conflicted, Suppressed, or Integrated. It is neither objective historical truth nor a universal numeric memory score.

@@ -105,6 +105,7 @@ Include a record when it can materially affect the present claim through:
 - invoked Skill, Development, equipment, magic, species, form, or Soul rule;
 - relevant recent event or explicit historical callback;
 - required visibility, Character Knowledge, or GM Secret boundary.
+- relevant [Memory Continuity](../soul/MEMORY_CONTINUITY.md) records when autobiographical recall or a possible cue can materially affect resolution.
 
 Do not load every row connected by several references merely because it exists. Stop dependency expansion when further records cannot materially change the action or its presentation. Context correctness outranks marginal brevity.
 
@@ -138,6 +139,8 @@ Life ID -> Long-Horizon Historical Period ID -> source event IDs
 ```
 
 Each hop identifies its authoritative domain. A reference path grants neither visibility nor Character Knowledge.
+
+Loading a Memory Record, Life Summary, or complete historical source for GM adjudication does not grant recall. Player-facing assembly includes only the bounded Recall Manifestation available through the current incarnation's Character Knowledge.
 
 ## Hierarchical Context
 

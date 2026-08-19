@@ -12,6 +12,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 - [Soul Depth](SOUL_DEPTH.md) - qualitative capacity to integrate lives and complexity, with hybrid visibility for established and unknown properties.
 - [Soul Resonance](SOUL_RESONANCE.md) - target-specific alignment, access, and Dissonance.
 - [Soul Echoes](SOUL_ECHOES.md) - bounded perspectives preserved from completed incarnations.
+- [Memory Continuity, Fading, and Recall](MEMORY_CONTINUITY.md) - significance-sensitive autobiographical continuity, ordinary forgetting, cues, fragments, and Character Knowledge boundaries.
 - [Soul Space](SOUL_SPACE.md) - the internal metaphysical interface to soul structures.
 - [Soul Constellations](SOUL_CONSTELLATIONS.md) - recurring relational patterns among distinct souls.
 - [Soul Titles](SOUL_TITLES.md) - persistent expressions of identity and contextual recognition.

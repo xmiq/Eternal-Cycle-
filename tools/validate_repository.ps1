@@ -270,7 +270,7 @@ foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
     '**Status: Active**',
     '**Selected implementation objective:** None.',
-    '**Approved pending objectives:** the refined remaining scope of FR-015 and FR-016.',
+    '**Approved pending objective:** FR-016 only. FR-015 is complete and retains stable provenance above.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [x] **FR-002 — Reincarnation Candidate Selection**',
     '- [x] **FR-003 — Soul Depth Information Visibility**',
@@ -284,7 +284,7 @@ foreach ($requiredText in @(
     '- [x] **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence**',
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
-    '- [ ] **FR-015 — Memory Continuity, Fading, and Recall**',
+    '- [x] **FR-015 — Memory Continuity, Fading, and Recall**',
     '- [ ] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**',
     '- [∞] **Future Revisions**',
     'Phase 12 does not complete because current objectives pass validation',
@@ -654,6 +654,58 @@ else {
     }
 }
 
+$memoryContinuityPath = Join-Path $rootPath 'docs/soul/MEMORY_CONTINUITY.md'
+if (-not (Test-Path -LiteralPath $memoryContinuityPath)) {
+    Add-ValidationError 'Missing FR-015 Memory Continuity contract.'
+}
+else {
+    $memoryContinuity = Get-Content -Raw -LiteralPath $memoryContinuityPath
+    foreach ($requiredText in @(
+        'Continuity does not mean perfect memory.',
+        'GM Canon',
+        'Player historical access',
+        'Current Character recall',
+        'Autobiographical Memory Record',
+        'Recall Manifestation',
+        'Accessible',
+        'Fading',
+        'Dormant',
+        'Cued',
+        'Fragmentary',
+        'Memory Cue',
+        'A cue creates an opportunity, not a guaranteed retrieval command.',
+        'Retained Development and Skill crossover',
+        'Current conscious recall belongs to the receiving incarnation''s Knowledge view',
+        'no FR-016 bond mechanics have been implemented'
+    )) {
+        if ($memoryContinuity -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Memory Continuity lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$memoryTemplatePath = Join-Path $rootPath 'templates/MEMORY_CONTINUITY_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $memoryTemplatePath)) {
+    Add-ValidationError 'Missing blank Memory Continuity template.'
+}
+else {
+    $memoryTemplate = Get-Content -Raw -LiteralPath $memoryTemplatePath
+    foreach ($requiredText in @(
+        'Memory ID:',
+        'Soul ID:',
+        'Source Life ID:',
+        'Cue Associations',
+        'Recall Manifestation',
+        'Character Knowledge reference:',
+        'Player or GM access has not been treated as character recall.',
+        'no campaign memories, characters, or history'
+    )) {
+        if ($memoryTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Memory Continuity template lacks required field or boundary: $requiredText"
+        }
+    }
+}
+
 $longHorizonPath = Join-Path $rootPath 'docs/persistence/LONG_HORIZON_SUMMARIES.md'
 if (-not (Test-Path -LiteralPath $longHorizonPath)) {
     Add-ValidationError 'Missing Long-Horizon Simulation Summary contract.'
@@ -860,6 +912,7 @@ Write-Output 'Simulation Architecture: three layers and identity/knowledge bound
 Write-Output 'Canonical Data Ownership: owner map and anti-duplication boundaries checked'
 Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertainty, and migration boundaries checked'
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
+Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: turn gates, relevance, caches, automatic persistence, reload, and runtime boundary checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'

@@ -56,23 +56,6 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Open Register
 
-### FR-015 - Memory Continuity, Fading, and Recall
-
-- **Status:** Roadmapped
-- **Issue:** Define natural autobiographical memory continuity across reincarnations without treating structured history or player access as perfect character recall.
-- **Affected systems:** Simulation architecture, Campaign Persistence Engine, GM Toolkit, AI Runtime, relationships, uncertainty handling, player interface, remote bodies, possession, delegated control, and possible future multi-perspective play.
-- **Gameplay impact:** Knowledge may leak between actors, controller changes may accidentally reset identity, companions may be treated as extensions of the player, and future remote-body or delegated-control mechanics may require ad hoc schema changes.
-- **Evidence needed:** Owner-mediated gameplay cases involving contradictory beliefs, controller changes, remote or delegated bodies, independent companions, hidden information, or multiple valid perspectives on the same objective state.
-- **Approved direction:** Memory persistence depends on significance and reinforcement, may fade within and across lives, and may return through relevant cues. Player-visible Life Archive access remains separate from Character Knowledge. Skill familiarity and retained-development acceleration remain distinct under FR-001 and FR-005. Do not re-roadmap the completed Entity/Controller/Perspective architecture or assume exhaustive belief and evidence simulation.
-- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
-- **Priority:** High
-- **Status reason:** The architectural portion was previously completed; the project maintainer has promoted only the refined Memory Continuity, Fading, and Recall scope for later Phase 12 implementation.
-- **Implemented architecture:** Entity/Controller/Perspective separation, objective-truth boundary, Entity-relative Knowledge principle, Perspective Filtering, and persistence extension points.
-- **Approved remaining scope:** autobiographical memory continuity, significance-sensitive fading, cue-triggered recall, and its boundaries with the Life Archive and retained Skill familiarity.
-- **Still unpromoted:** detailed per-Entity belief, confidence, evidence, testimony, misinformation propagation, contradiction resolution, information-sharing, and inference systems.
-- **Implementation reference:** [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
-- **Authorized roadmap link:** [FR-015 — Memory Continuity, Fading, and Recall](ROADMAP.md#phase-12--gameplay-validation--maintenance)
-
 ### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
 
 - **Status:** Roadmapped
@@ -89,11 +72,26 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-The refined remaining scope of FR-015 and FR-016 are roadmapped as pending Phase 12 objectives. FR-001 through FR-012 and FR-014 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-016 is the only roadmapped pending Phase 12 objective. FR-001 through FR-012, FR-014, and FR-015 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
 All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-015 - Memory Continuity, Fading, and Recall
+
+- **Status:** Closed
+- **Issue:** Define natural autobiographical memory continuity across reincarnations without treating structured history, player access, or GM context as perfect character recall.
+- **Affected systems:** Souls, Reincarnation, Life Archive, Character Knowledge, Context Assembly, Relationships, Timeline, retained development, Skills, and persistence validation.
+- **Gameplay impact:** Without an owner and procedure, reincarnation could alternate arbitrarily between perfect memory and total amnesia, leak player knowledge, or turn Skill familiarity into recollection.
+- **Evidence needed:** Cross-Life cases involving meaningful fading, sensory and relational cues, fragmentary or conflicted recall, radical embodiment changes, Life Archive access, retained Skill familiarity, and current-life identity.
+- **Approved direction:** Memory persistence depends on significance and reinforcement, may fade within and across Lives, and may return through relevant cues. Player-visible Life Archive access remains separate from Character Knowledge. Skill familiarity and retained-development acceleration remain distinct under FR-001 and FR-005.
+- **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
+- **Priority:** High
+- **Status reason:** Implemented through the canonical Memory Continuity contract, blank template, ownership map, recall procedure, migration and validation guidance, system integrations, terminology, decisions, navigation, and structural regression validation.
+- **Still unpromoted:** a detailed per-Entity belief, confidence, evidence, testimony, misinformation propagation, contradiction-resolution, information-sharing, or inference engine.
+- **Authorized roadmap link:** [FR-015 — Memory Continuity, Fading, and Recall](ROADMAP.md#phase-12--gameplay-validation--maintenance)
+- **Closure references:** [Memory Continuity, Fading, and Recall](../docs/soul/MEMORY_CONTINUITY.md), [Memory Continuity Record Template](../templates/MEMORY_CONTINUITY_TEMPLATE.md), and [FR-015 Implementation Audit](audits/FR_015_MEMORY_CONTINUITY_AUDIT.md)
 
 ### FR-011 - GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence
 

@@ -5097,3 +5097,23 @@ When relevant, Turn N+1 must retrieve Turn N's committed result from the active 
 ## D-1274 — FR-011 Runtime Conformance Belongs to the Host
 
 The rules repository enforces FR-011 through canonical contracts, execution-profile obligations, adapter procedures, blank templates, and structural regression validation. Because it contains no universal executable campaign host or populated save, each runtime implementation must execute the acceptance cases against its configured persistence chain and must not claim successful I/O merely because repository documents validate.
+
+## D-1275 — Soul Continuity Preserves Imperfect Autobiographical Memory
+
+The same Soul continues across incarnations, but autobiographical memory may remain Accessible, fade, become Dormant, return through meaningful cues, or appear only as bounded fragments. Reincarnation grants neither perfect recall nor total amnesia by default.
+
+## D-1276 — Current Recall Belongs to Incarnation-Specific Character Knowledge
+
+Memory Continuity owns stable autobiographical Memory identity, source-Life references, associations, reinforcement, and accessibility history. Character Knowledge owns what one receiving incarnation currently recalls or believes. Historical sources remain with Timeline, Campaign History, Relationships, Life Archive, and other specialist owners.
+
+## D-1277 — Historical Access Does Not Grant Recall
+
+GM Canon access, player-visible Life Archive access, summaries, transcripts, model memory, and Context Assembly reads do not create current-character recall. A recall change requires a valid route, bounded manifestation, provenance, and persistence through the Knowledge owner.
+
+## D-1278 — Memory Does Not Replace Present Identity or Capability
+
+Each incarnation remains a distinct current person. Recalled history cannot compel identity, loyalty, affection, relationship restoration, or action, and it does not grant current Skills, attributes, anatomy, authority, or retained-development effects.
+
+## D-1279 — Memory Recovery Is Significance-Sensitive and Non-Farmable
+
+Meaning, reinforcement, relevant cues, embodiment, and interference inform access qualitatively. Repetition, suffering, trauma, death, disposable Lives, or cue spam do not guarantee formation or recovery, and missing detail remains unknown rather than fabricated.

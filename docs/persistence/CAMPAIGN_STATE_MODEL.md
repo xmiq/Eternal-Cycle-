@@ -115,7 +115,8 @@ The [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md
 | Maintained systems, dependencies, condition, access, function | Infrastructure |
 | Possessions, custody, quantity, condition, location, claims, provenance | Inventory and Custody |
 | Questions, methods, evidence, theories, confidence | Research |
-| Observer-specific facts, beliefs, memories, rumours, unknowns | Knowledge |
+| Observer-specific facts, beliefs, current conscious recall, rumours, unknowns | Knowledge |
+| Cross-incarnation autobiographical Memory identity, associations, reinforcement, and accessibility history | Memory Continuity, with current recall manifested through Knowledge |
 | Protected information and disclosure metadata | Secrets |
 | Active undertakings, methods, resources, milestones, interruptions | Projects |
 | Chronological placement and parallel time | Timeline |

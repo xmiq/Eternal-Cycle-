@@ -146,7 +146,7 @@ Memory is divided by function:
 - **Body memory:** Biological reflexes and species instincts come from the new body unless retained-instinct rules provide an additional influence.
 - **Sealed memory:** Soul Strain, Soul Wounds, insufficient access, or an explicit effect may temporarily block recall.
 
-Total recall is not the default. The exact starting access is governed by Soul Resonance, Soul Depth, Soul Echoes, [Retained Instincts](RETAINED_INSTINCTS.md), and the condition of the new incarnation. Memory limits must create discovery and identity development rather than erase earned progression arbitrarily.
+Total recall is not the default. [Memory Continuity, Fading, and Recall](MEMORY_CONTINUITY.md) governs significance-sensitive autobiographical persistence, dormancy, cues, fragments, and current Character Knowledge. Soul Resonance, Soul Depth, Soul Echoes, [Retained Instincts](RETAINED_INSTINCTS.md), interference, and the condition of the new incarnation may provide bounded access conditions without making the Life Archive into memory. Memory limits must create discovery and identity development rather than erase earned progression arbitrarily.
 
 ## Reset and Persistence Rules
 

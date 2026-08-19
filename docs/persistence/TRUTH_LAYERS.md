@@ -138,6 +138,8 @@ The controlling player ordinarily receives what the character can consciously ac
 
 Character Knowledge changes only through valid perception, communication, instruction, record access, memory recovery, Soul-system access, evidence-based inference, deception, or an owned loss route.
 
+[Memory Continuity](../soul/MEMORY_CONTINUITY.md) owns cross-incarnation autobiographical Memory identity and access history. This layer owns only the Recall Manifestation that a particular incarnation can consciously access; GM or player access to the underlying history does not create that manifestation.
+
 The record distinguishes fact, belief, confidence, source, interpretation, and memory access. Learning a statement does not make it true.
 
 ### Migration Rules

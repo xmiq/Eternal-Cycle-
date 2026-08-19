@@ -205,6 +205,7 @@ Required focus includes:
 - long-term chronology and relationship coherence;
 - progression and numerical provenance;
 - Knowledge and Secret boundary review;
+- Memory Continuity identity, source-Life, cue, accessibility, and incarnation-specific Character Knowledge separation;
 - Research theory and confirmation consistency;
 - version ancestry and migration history;
 - Continuity Drift;

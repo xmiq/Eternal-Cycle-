@@ -22,6 +22,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 - [Skill Record Template](SKILL_TEMPLATE.md) - bounded learned capability, requirements, development evidence, six-layer expression, specialist extensions, and persistence.
 - [Soul Continuity Record Template](SOUL_CONTINUITY_TEMPLATE.md) - one continuing Soul, distinct Incarnations, Reincarnation stages, persistent structures, access, and embodiment.
 - [Life Archive Template](LIFE_ARCHIVE_TEMPLATE.md) - Soul Overview indexing, stable Life identities, finalized historical summaries, Life Over presentation, and provenance.
+- [Memory Continuity Record Template](MEMORY_CONTINUITY_TEMPLATE.md) - autobiographical Memory identity, source references, significance, fading, cue associations, and incarnation-specific recall manifestations.
 - [Long-Horizon Summary Template](LONG_HORIZON_SUMMARY_TEMPLATE.md) - stable period scope, causal compression, continuity hooks, historical references, unknowns, revisions, and filtered Historical Transition presentation.
 - [Context Packet Template](CONTEXT_PACKET_TEMPLATE.md) - Current Scene, Running, and Session derived context with stable owner references, freshness, Read Set evidence, Affected Set outcome, and protected diagnostics.
 - [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) - Weapon Soul personhood, vessel continuity, bond and consent, forms, capabilities, Echoes, compatibility, manifestation, Legacy status, and passage.
