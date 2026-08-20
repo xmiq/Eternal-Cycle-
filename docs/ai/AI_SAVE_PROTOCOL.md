@@ -30,6 +30,19 @@ A generated file, message, or summary is not an activated Save Point unless the 
 
 Under FR-011, `Proposal only`, `Read only`, and `Unavailable` cannot close a state-changing Gameplay Turn as committed. They preserve the bounded result or recovery evidence and surface the capability failure; ordinary dependent play resumes only from the last validated Save Point or after an authorized writer completes and verifies the transaction.
 
+## Persistence Target Readiness
+
+Before state-changing play or save execution:
+
+1. read Campaign Configuration and the Save Index;
+2. determine whether canonical authority is local or cloud;
+3. resolve exact target identity and complete Adapter Chain;
+4. fetch the configured remote canonical artifact where required;
+5. verify campaign identity, Campaign Version, Save Point, concurrency evidence, and open Transaction state;
+6. classify any Local Working Copy as canonical, candidate, cache, or stale according to configuration.
+
+Do not declare the campaign database missing from one failed local-path lookup. Do not create a blank replacement while a configured remote authority may exist.
+
 ## Save Operation
 
 ### 1. Confirm the semantic boundary
@@ -106,7 +119,7 @@ Validation is read-only. Repairs create a new candidate through the proper owner
 
 Before activation, compare the candidate's parent version with the active Campaign Version. If unchanged and validation permits activation, activate the complete candidate atomically and update the Save Index. Then read the active Save Index and changed records back to confirm success.
 
-If the parent changed, validation failed, activation was interrupted, or read-back cannot confirm success, keep the prior Save Point authoritative and enter Save Recovery Required.
+If the configured authority is cloud, local candidate validation does not activate the Save Point. Activation follows required remote replacement, synchronization, refetch, comparison, semantic verification, and required backup verification. If the parent changed, expected state remained unchanged, validation failed, activation was interrupted, or configured-authority read-back cannot confirm success, keep the prior Save Point authoritative and enter Save Recovery Required.
 
 ### 10. Report the outcome
 
@@ -120,9 +133,36 @@ Report only what is operationally true:
 
 Do not say `saved`, `updated`, or `committed` when only narration or a proposed delta exists.
 
+Map the verified outcome to the player-visible marker:
+
+- `💾` only when local is configured canonical authority and commit, validation, expected-change proof, and read-back pass;
+- `☁️💾` only when cloud is configured canonical authority and synchronization plus required remote verification pass;
+- `⏳` while required stages remain incomplete;
+- `⚠️` when a required write, synchronization, validation, expected-change check, or read-back fails.
+
+Local success in a cloud-authoritative chain is `⏳`, not `💾`. An upload attempt without verified read-back is never `☁️💾`.
+
+## Manual Commands
+
+### `save`
+
+Use the current pending Affected Set and Transaction ID. Execute the same owner-routed transaction without replaying adjudication. If no change is pending, verify the active configured authority and return its current marker and version; do not create a gameplay event or gratuitous Campaign Version.
+
+### `save status`
+
+Report the current marker, Campaign Version, Save Point where authorized, configured canonical authority, local/cloud synchronization state, pending Affected Set or Transaction, last successful local commit, last successful cloud verification where applicable, and a brief sanitized failure reason. Do not disclose private locators, credentials, or GM Secrets.
+
+### `retry save`
+
+Resume the existing Transaction from its earliest incomplete stage after inspecting actual state. Reuse idempotency keys and verify already-applied owner operations. If local changes are valid and only cloud synchronization failed, retry only the cloud and downstream verification stages.
+
+Manual commands do not repeat narration, time, costs, Development, Inventory, Timeline, Campaign History, Relationship, Research, Project, Infrastructure, or Autonomous Registry effects.
+
 ## Concurrency and Retry
 
 Never use last-writer-wins. If the active Campaign Version changed, classify the candidate as duplicate, independent, sequential, or conflicting under the Save Update Protocol. Create a valid descendant, use Continuity Resolution, or migrate as required.
+
+Before reporting success for a non-empty Affected Set, prove the expected canonical change through owner values and sufficient version, revision, chronology, Save Index, hash, or exact-comparison evidence. An unchanged canonical target where change was expected is a failed transaction even if a tool returned success.
 
 On retry, reload parent and candidate, preserve the Transaction ID, resume from the last confirmed step, and ensure no event, cost, item, progression change, Relationship change, or history append is duplicated.
 

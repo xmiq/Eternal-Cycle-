@@ -43,6 +43,8 @@ These classifications combine; none substitutes for another.
 
 For AI-assisted play, [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) binds this cycle into one Gameplay Turn: relevance-filtered canonical reads precede resolution, every resolved interaction receives an Affected Set determination, non-empty changes save automatically, and turn closure follows validation and required read-back. Derived context remains non-authoritative.
 
+The active Save Index and Campaign Configuration identify whether local storage or a remote deployment is canonical. That target must be resolved before state-changing play. A local commit proves completion only for a local-authoritative campaign; when cloud storage is canonical, remote synchronization and read-back verification are part of the same completion gate. Player-visible `💾`, `☁️💾`, `⏳`, and `⚠️` markers report the resulting state and never replace the underlying evidence.
+
 ### 1. Select the Active Authority
 
 Read the Save Index and identify:

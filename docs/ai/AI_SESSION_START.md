@@ -36,6 +36,7 @@ Read the Save Index and confirm:
 - active Rules Profile;
 - last confirmed Save Point;
 - Current Session status;
+- configured canonical authority, exact target identity, Adapter Chain, and local/cloud synchronization state;
 - latest validation outcome and warnings;
 - open migration, recovery, or continuity cases.
 
@@ -52,6 +53,8 @@ A player-facing channel must not receive GM Secrets, other characters' private K
 Do not begin ordinary play when:
 
 - the Save Index marks load as blocked or unknown;
+- the configured canonical target cannot be uniquely resolved, fetched where required, or verified;
+- a prior save remains pending or failed without an authorized recovery boundary;
 - a required migration is incomplete;
 - a blocking validation finding is open;
 - an interrupted transaction lacks a safe recovery position;

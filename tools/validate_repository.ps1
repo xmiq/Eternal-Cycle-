@@ -418,7 +418,9 @@ else {
         'TURN_OPEN',
         'READ_COMPLETE',
         'AFFECTED_SET_DETERMINED',
-        'SAVE_COMPLETE',
+        'PERSISTENCE_TARGET_READY',
+        'CANONICAL_AUTHORITY_VERIFIED',
+        'DERIVED_CONTEXT_REFRESHED',
         '## Context Assembly Layer',
         '## Current Scene Context',
         '## Hierarchical Context',
@@ -431,7 +433,7 @@ else {
         '## Existing Campaign Adoption',
         'This repository performs no migration of a populated campaign.',
         '## Runtime Boundary',
-        'host tests exercise Regression Cases A through L',
+        'host tests exercise Regression Cases A through U',
         '### A. Skill Read',
         '### B. Automatic Character Save',
         '### C. Relationship Save',
@@ -443,11 +445,33 @@ else {
         '### I. Next-Turn Reload',
         '### J. Stale Running Summary',
         '### K. Deep Historical Query',
-        '### L. Context Reset'
+        '### L. Context Reset',
+        '### M. Multi-Domain Automatic Save',
+        '### N. Canonical Target Discovery',
+        '### O. Local-Only Completion',
+        '### P. Cloud-Authoritative Completion',
+        '### Q. Cloud Pending and Failure',
+        '### R. False Cloud Success Prevention',
+        '### S. Manual Save and Status',
+        '### T. Idempotent Retry',
+        '### U. Unchanged Canonical Save'
     )) {
         if ($contextAssembly -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "FR-011 Context Assembly lacks required invariant: $requiredText"
         }
+    }
+}
+
+$fr011HarnessPath = Join-Path $rootPath 'tools/test_fr011_persistence_gate.ps1'
+if (-not (Test-Path -LiteralPath $fr011HarnessPath)) {
+    Add-ValidationError 'Missing FR-011 persistence-gate regression harness.'
+}
+else {
+    try {
+        & $fr011HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-011 persistence-gate regression harness failed.'
     }
 }
 
@@ -969,7 +993,7 @@ Write-Output 'Autonomous Registry: identity, autonomy, memory, group, uncertaint
 Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, and retrieval boundaries checked'
 Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
-Write-Output 'FR-011 Context Assembly: turn gates, relevance, caches, automatic persistence, reload, and runtime boundary checked'
+Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
 Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visibility, Soul Weapon baseline, and world-access distinctions checked'

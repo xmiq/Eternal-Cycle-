@@ -19,6 +19,8 @@ This procedure governs one AI-operated play loop from player input to an establi
 
 Every interaction follows the [FR-011 Gameplay Turn state machine](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md#gameplay-turn-state-machine). Required owner reads precede resolution. After resolution, the Affected Set is determined explicitly; non-empty changes persist and validate automatically before final player-facing delivery, while a verified empty set closes without mutation.
 
+State-changing play additionally requires a resolved canonical persistence target. A pending or failed save blocks another state-changing interaction until normal persistence, `save`, or `retry save` reaches verified authority or recovery stops play. Ordinary delivered gameplay ends with the truthful marker defined by FR-011.
+
 ### 1. Classify the input
 
 Determine whether the input is:
@@ -28,6 +30,7 @@ Determine whether the input is:
 - an out-of-character rules or continuity question;
 - a Meta instruction about presentation or campaign operation;
 - a proposed retcon, correction, save, or pause;
+- `save status` or `retry save` as an operational persistence command rather than a repeated in-world action;
 - ambiguous across more than one category.
 
 Meta and player knowledge do not enter Character Knowledge merely because they appear in the same interface. A request to inspect rules does not advance in-world time unless a valid campaign action also occurs.

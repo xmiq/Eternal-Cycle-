@@ -103,7 +103,7 @@ All currently known FR-001 through FR-016 entries are explicitly Roadmapped or C
 - **Approved direction:** Preserve owner-routed Read Sets, assemble compact relevance-filtered Context Packets from authoritative persistence, determine every Affected Set explicitly, persist non-empty sets automatically, validate and read back before turn closure, and rebuild later context from committed state.
 - **Suggested future phase:** Phase 12 — Gameplay Validation & Maintenance.
 - **Priority:** High
-- **Status reason:** Implemented through the canonical turn-state and Context Assembly contract, blank packet template, AI and persistence integrations, runtime-host acceptance boundary, migration guidance, terminology, decisions, and structural regression validation.
+- **Status reason:** Implemented and regression repaired through the canonical completion-gate and Context Assembly contract, configured target resolution, truthful local/cloud status markers, idempotent manual recovery commands, unchanged-save detection, adapter obligations, blank templates, an executable state-machine harness, and an explicit runtime-host boundary.
 - **Authorized roadmap link:** [FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence](ROADMAP.md#phase-12--gameplay-validation--maintenance)
 - **Closure references:** [Context Assembly and Gameplay Turn Persistence](../docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), [Context Packet Template](../templates/CONTEXT_PACKET_TEMPLATE.md), and [FR-011 Implementation Audit](audits/FR_011_CONTEXT_AND_PERSISTENCE_AUDIT.md)
 

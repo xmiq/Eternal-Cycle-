@@ -21,6 +21,8 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] Exact Repository Version, Campaign Version, and active Save Point are known.
 - [ ] Rules Profile and Campaign Canon are loaded.
 - [ ] Save Index and Current Session are loaded.
+- [ ] Configured local or cloud canonical authority, exact target, Adapter Chain, and synchronization state are resolved.
+- [ ] A missing Local Working Copy was not mistaken for a missing remote canonical save.
 - [ ] Open migrations, recoveries, conflicts, and validation warnings are known.
 - [ ] Authorized audience and Truth Layer visibility are established.
 - [ ] The initial Read Set includes the current situation's material owners and Typed References.
@@ -74,12 +76,16 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] A non-empty Affected Set persisted automatically without waiting for a player save command.
 - [ ] The turn remains open until required persistence and validation succeed.
 - [ ] The reported save status matches what actually occurred.
+- [ ] Expected canonical owner changes and version evidence prove a non-empty Affected Set was written.
+- [ ] Derived context was refreshed only after configured-authority validation and read-back.
+- [ ] The final marker is `💾`, `☁️💾`, `⏳`, or `⚠️` according to actual evidence.
 
 ## Before Continuing Dependent Play
 
 - [ ] The changed state is activated rather than present only in narration or memory.
 - [ ] Save Index and active Campaign Version were refreshed.
 - [ ] Relevant prior-turn changes were re-read from the activated Save Point rather than conversation memory.
+- [ ] No `⏳` or unresolved `⚠️` state remains before another state-changing turn.
 - [ ] Stale derived context was discarded or refreshed.
 - [ ] Open warnings, Review Points, Pending Consequences, and unresolved intent remain visible to the operator.
 

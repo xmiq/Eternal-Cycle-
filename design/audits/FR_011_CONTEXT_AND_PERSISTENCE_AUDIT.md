@@ -2,7 +2,38 @@
 
 ## Scope
 
-This audit records implementation of **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence** only. FR-015 memory continuity and FR-016 Soul-bound fate remain pending.
+This audit records implementation and the gameplay-validation regression repair of **FR-011 — GM/AI Context Assembly, Mandatory Read Discipline, and Gameplay Turn Persistence** only. FR-015 memory continuity and FR-016 Soul-bound fate are complete under their own owners and are not changed here.
+
+## Observed Regression
+
+A live runtime preserved canonical read discipline and narrated coherent multi-domain changes, yet returned ordinary completed gameplay responses without executing the required persistence transaction. The canonical SQLite save therefore remained at its prior version while conversation text described newer Canon.
+
+## Root Cause
+
+The original contract stated that persistence preceded turn closure, but its execution boundary used a coarse `SAVE_COMPLETE` concept without requiring an evidence-bearing configured-authority state. It did not distinguish local completion from cloud-authoritative completion, expose a truthful player status, or make unchanged canonical state an explicit hard failure. A host could therefore treat narrative resolution as response completion while leaving the save obligation implicit.
+
+## Completion-Gate Repair
+
+The repaired state machine resolves the configured persistence target before state-changing play, completes required reads, resolves the interaction, determines an explicit Affected Set, writes each canonical owner once, validates and reads back the expected change, verifies the configured local or cloud authority, and only then refreshes Derived context and reaches `TURN_COMPLETE`. A non-empty Affected Set makes this sequence mandatory.
+
+The exact target comes from Campaign Configuration and the Save Index. A missing expected Local Working Copy does not authorize a missing-database report or a blank replacement when configured remote canonical storage may exist.
+
+## Player-Visible Status and Commands
+
+- `💾` means the configured local canonical target committed and validated.
+- `☁️💾` means the configured cloud canonical target synchronized and passed required remote verification.
+- `⏳` means required persistence remains pending and blocks later state-changing play.
+- `⚠️` means write, synchronization, expected-change, or validation failure.
+
+The `save`, `save status`, and `retry save` commands use the same transaction state. Retry resumes the incomplete stage when possible and cannot replay narrative resolution or duplicate owner writes, costs, progression, items, Relationship updates, or chronology.
+
+## Unchanged-Save Detection
+
+When the Affected Set is non-empty, validation requires minimum sufficient evidence such as a version or revision increment, changed expected rows, chronology append, file/hash change, or manifest update. If expected canonical state remains unchanged, validation fails, ordinary turn completion is prohibited, and the status is `⚠️`.
+
+## Regression Results
+
+The executable implementation-neutral harness covers multi-domain automatic saving, next-turn canonical reload, remote target discovery from a missing local copy, local-only completion, verified cloud completion, pending cloud state, cloud failure, false cloud-success prevention, unchanged-save rejection, manual saving, status inspection, and idempotent cloud retry. Full repository validation executes this harness.
 
 ## Existing Read Behaviour Audited
 
@@ -40,7 +71,7 @@ The canonical contract defines cases for Skill reads, automatic character and Re
 
 ## Runtime Boundary
 
-The repository has no universal executable campaign host or populated SQLite save. Its enforceable outputs are canonical procedures, execution-profile obligations, adapter contracts, blank templates, and structural validation. Actual I/O conformance must be tested by each runtime host against its configured campaign persistence chain; the repository does not claim those external transactions were executed.
+The repository has no universal executable campaign host or populated SQLite save. Its enforceable outputs are canonical procedures, execution-profile obligations, adapter contracts, blank templates, structural validation, and the implementation-neutral state-machine harness. The host remains responsible for invoking actual connectors and file writes and for supplying adapter evidence. No host may emit `💾` or `☁️💾` without that evidence, and actual I/O conformance must still be tested against the configured campaign persistence chain.
 
 ## Unresolved Issues
 

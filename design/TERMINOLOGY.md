@@ -4759,3 +4759,15 @@ The meaningful causal encounter that fulfills one Soul-Bound Companion Convergen
 ## Pending Convergence
 
 An active, unfulfilled Soul-Bound Companion guarantee whose route or timing may remain Unknown. Pending status preserves eventual reunion without asserting that a currently invalid path exists.
+
+## Persistence Target Ready
+
+The runtime state in which Campaign Configuration and the Save Index have identified, located, fetched where necessary, and sufficiently verified the exact configured canonical persistence target for state-changing play.
+
+## Persistence Status Marker
+
+A compact player-visible report derived from actual persistence evidence: `💾` for committed and validated local canonical state, `☁️💾` for synchronized and verified cloud canonical state, `⏳` for incomplete required persistence, or `⚠️` for persistence, synchronization, expected-change, or validation failure.
+
+## Unchanged-Save Failure
+
+A hard validation failure in which a non-empty Affected Set established durable Canon but the expected configured canonical evidence did not change. It prohibits ordinary Gameplay Turn completion.

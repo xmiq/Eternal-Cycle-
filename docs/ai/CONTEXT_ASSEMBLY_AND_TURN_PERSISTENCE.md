@@ -34,6 +34,9 @@ Repository validation proves that the required contract and integration points e
 10. Turn N+1 reads the committed Turn N state when relevant.
 11. Successful persistence plumbing remains backstage during ordinary Gameplay Context.
 12. The AI GM operates through rules and campaign state; it does not own either.
+13. The configured canonical persistence target is resolved and verified before state-changing play.
+14. Player-visible persistence status is derived from adapter evidence, never intent or prepared narration.
+15. Derived context refresh follows canonical validation and read-back; it never promotes unsaved narration.
 
 ## Gameplay Turn State Machine
 
@@ -41,15 +44,19 @@ The canonical state sequence is:
 
 ```text
 TURN_OPEN
+    -> PERSISTENCE_TARGET_REQUIRED
+    -> PERSISTENCE_TARGET_READY
     -> CONTEXT_REQUIRED
     -> READ_REQUIRED
     -> READ_COMPLETE
     -> RESOLUTION_COMPLETE
     -> AFFECTED_SET_DETERMINED
     -> SAVE_REQUIRED       [when Affected Set is non-empty]
-    -> SAVE_COMPLETE
-    -> VALIDATED
-    -> TURN_CLOSED
+    -> CANONICAL_WRITE_COMPLETE
+    -> VALIDATION_COMPLETE
+    -> CANONICAL_AUTHORITY_VERIFIED
+    -> DERIVED_CONTEXT_REFRESHED
+    -> TURN_COMPLETE
 ```
 
 A verified empty Affected Set proceeds from `AFFECTED_SET_DETERMINED` to `VALIDATED` without a write. This is a determined no-op, not an assumption.
@@ -67,7 +74,24 @@ Player Action
     -> Deliver the Final Player-Facing Result
 ```
 
-Prepared narration may exist before persistence, but it is not a delivered durable consequence. A strict execution profile uses `read -> resolve -> persist -> validate -> deliver`. No background promise or later-save claim satisfies this gate.
+Prepared narration may exist before persistence, but it is not a delivered durable consequence. A strict execution profile uses `resolve target -> read -> resolve -> persist -> validate -> verify configured authority -> refresh derived context -> deliver`. No background promise, asynchronous stage, decorative status, or later-save claim satisfies this gate.
+
+`TURN_COMPLETE` is invalid when a non-empty Affected Set lacks canonical write, required validation, configured-authority read-back, or expected-change evidence. Ordinary final gameplay output corresponds only to `TURN_COMPLETE`.
+
+## Persistence Target Resolution Gate
+
+Before state-changing play, the runtime reads Campaign Configuration and the Save Index to identify:
+
+- campaign and canonical artifact identity;
+- configured canonical authority: local or cloud;
+- complete Adapter Chain and required backup policy;
+- active Campaign Version, Save Point, and concurrency evidence;
+- unresolved transaction or synchronization state;
+- local working-copy role and freshness.
+
+The runtime enters `PERSISTENCE_TARGET_READY` only after the configured target is located, fetched where required, and verified against campaign identity and version evidence. A missing assumed local path is not proof that the campaign database is missing. When configuration identifies remote authority, the runtime must search or fetch that exact configured target before reporting absence.
+
+Never create a blank replacement database while a configured canonical save may exist remotely. Ambiguous identity, failed lookup, inaccessible authority, or unresolved prior persistence blocks state-changing play and produces a truthful pending or failure state.
 
 ## Context Assembly Layer
 
@@ -217,7 +241,10 @@ After resolution, determine every persistent owner changed or materially created
 - Relationships and Character Knowledge;
 - Research, Projects, Infrastructure, and Mysteries;
 - Autonomous Registry assignment, condition, Controller, network, or last-confirmed state;
+- network, communication, delegation, and assignment state;
+- equipment and other durable resources;
 - Species, Evolution, Soul, and world state;
+- Location and other durable exploration or discovery state;
 - Timeline, Session Log, and Campaign History.
 
 Movement, time, expenditure, failed attempts, discoveries, meaningful observations, and social reactions may change state. Do not infer an empty Affected Set from a quiet narration.
@@ -231,15 +258,90 @@ For a non-empty Affected Set:
 3. build the dependency-complete Affected Set and Session Delta;
 4. stage each update once through its Authoritative Record Owner;
 5. append Session Log, Timeline, and Campaign History only under their existing rules;
-6. update applicable indexes and Derived summaries after owner updates;
-7. commit atomically through the configured adapter chain;
-8. run required validation;
-9. perform critical read-back and version verification;
-10. activate the new Save Point;
-11. regenerate or invalidate affected context caches;
-12. close the turn and deliver the final player-facing result.
+6. commit owner writes atomically through the configured adapter chain;
+7. run implementation and semantic validation;
+8. perform critical read-back, expected-versus-actual comparison, and version verification;
+9. verify the configured canonical authority, including required cloud synchronization and read-back;
+10. activate the new Save Point only at the configured authority boundary;
+11. regenerate or invalidate Running Summary, Session Summary, and Current Scene Context from verified Canon;
+12. enter `TURN_COMPLETE` and deliver the final player-facing result with the evidence-derived status marker.
 
 The player issues no save command. Local SQLite success alone is insufficient when campaign configuration requires remote deployment and read-back through the Google Drive adapter.
+
+## Player-Visible Persistence Status
+
+Every ordinary Gameplay Context response ends with exactly one compact marker describing actual persistence state:
+
+| Marker | Canonical meaning |
+| --- | --- |
+| **💾** | The configured **local** canonical target committed, validated, and passed required read-back. |
+| **☁️💾** | The configured **cloud** canonical target synchronized and passed required remote read-back and verification. |
+| **⏳** | Required persistence remains incomplete or a recoverable transaction is genuinely pending. |
+| **⚠️** | A required write, synchronization, expected-change check, validation, or read-back failed. |
+
+The marker is evidence, not decoration. Prepared narration, an updated summary, a local candidate, an upload attempt, a requested synchronization, or intent to save cannot produce `💾` or `☁️💾`.
+
+For a cloud-authoritative campaign, local SQLite success leaves status `⏳` until configured remote deployment, read-back, semantic verification, and any required backup verification complete. A cloud failure changes status to `⚠️` while preserving the validated local candidate for idempotent synchronization retry.
+
+A verified empty Affected Set may display the marker for the already-verified configured canonical authority; it does not create a new save. Successful operation remains unobtrusive: show only the marker unless the player requests status, Development Context is active, or failure requires a concise technical explanation.
+
+No subsequent state-changing Gameplay Turn may proceed while status is `⏳` or unresolved `⚠️`. Resolve it to `💾` or `☁️💾`, recover the last validated authority, or explicitly stop dependent play.
+
+## Manual Persistence Commands
+
+Manual commands are an override and recovery interface. Automatic persistence remains mandatory.
+
+### `save`
+
+Determine any pending Affected Set and run the normal canonical transaction immediately. Reuse Interaction and Transaction identity; do not replay resolution or duplicate costs, chronology, Development, Inventory, Relationships, or other effects. If nothing is pending, verify the current configured canonical target and report its evidence-derived marker without inventing a save event.
+
+### `save status`
+
+Return only authorized operational facts:
+
+- current marker;
+- canonical Campaign Version and Save Point where available;
+- configured canonical authority and Adapter Chain role;
+- local-versus-cloud synchronization state;
+- whether an Affected Set or transaction remains pending;
+- last successful local commit evidence;
+- last successful canonical cloud synchronization and verification evidence where configured;
+- brief sanitized failure reason when status is `⚠️`.
+
+Do not expose credentials, private locators, GM Secrets, or unrelated campaign data.
+
+### `retry save`
+
+Resume the unresolved transaction from the earliest incomplete persistence stage. Inspect what already committed before writing. When local SQLite is valid and only cloud synchronization failed, retry cloud deployment and verification without reapplying gameplay changes. The command cannot replay narration, consume resources again, duplicate events, or create a second Save Point for the same transaction.
+
+## Canonical Change Proof and Unchanged-Save Detector
+
+For a non-empty Affected Set, completion evidence uses the minimum sufficient combination required by the active persistence profile, such as:
+
+- Campaign Version or record revision increment;
+- expected owner rows changed exactly as staged;
+- required Timeline or Campaign History append;
+- active Save Index and Save Point update;
+- canonical artifact hash or exact-byte change where expected;
+- remote identity, synchronization, and read-back evidence.
+
+If expected persistent Canon was established but the configured canonical state remains unchanged, validation fails. The runtime prohibits `TURN_COMPLETE`, preserves retry evidence, and reports `⚠️`. A successful adapter call with absent expected state is not success.
+
+## Canon Before Derived Context
+
+The required ordering is:
+
+```text
+canonical owner writes
+    -> configured-authority validation and read-back
+    -> Running Summary update
+    -> Session Summary update
+    -> Current Scene Context refresh
+    -> persistence marker
+    -> TURN_COMPLETE
+```
+
+If persistence fails, derived summaries retain or rebuild from the last validated Save Point. They must not present prepared narration as canonical state.
 
 ## No-Change Turns
 
@@ -431,6 +533,42 @@ Immediate context omits old history. A question about a former companion follows
 
 A fresh runtime receives no old transcript. It loads the Save Index, verifies summaries, builds the relevant Read Set, and resumes from persisted state.
 
+### M. Multi-Domain Automatic Save
+
+One interaction changes Infrastructure, Research, equipment, network communication, an Autonomous Registry assignment, exploration Knowledge, Timeline, and Campaign History. The runtime reads the relevant owners, persists one dependency-complete Affected Set without a `save` command, proves the version and expected owner changes, reloads them next turn, and ends the delivered response with `💾` or `☁️💾` according to configured authority. Narration-only change fails this case.
+
+### N. Canonical Target Discovery
+
+The first assumed local path is absent while Campaign Configuration identifies a remote canonical database. The runtime resolves exact remote identity, fetches it, verifies campaign and version, creates only a Local Working Copy, and writes through the configured chain. It neither reports a false missing database nor creates a blank replacement.
+
+### O. Local-Only Completion
+
+A local-authoritative SQLite campaign commits, validates, reopens read-only, proves expected changes, activates its Save Point, and displays `💾`.
+
+### P. Cloud-Authoritative Completion
+
+SQLite candidate validation succeeds, Google Drive replaces the exact canonical file, remote read-back and required comparison succeed, configured backup verification succeeds, and the response displays `☁️💾`.
+
+### Q. Cloud Pending and Failure
+
+When local validation succeeds but required cloud work is incomplete, status is `⏳` and another state-changing turn is blocked. When synchronization or verification fails, status becomes `⚠️`; the validated local candidate remains available for retry but is not the active cloud authority.
+
+### R. False Cloud Success Prevention
+
+An upload request returns but remote read-back never verifies the candidate. The runtime cannot display `☁️💾`, cannot close the state-changing turn, and retains failure evidence.
+
+### S. Manual Save and Status
+
+`save` executes a pending transaction once without replaying the interaction. `save status` reports marker, version, configured authority, local/cloud state, pending state, and last verified boundaries without exposing protected data.
+
+### T. Idempotent Retry
+
+Cloud synchronization fails after a validated local commit. `retry save` resumes at remote deployment using the same Transaction ID, does not rerun owner writes, and reaches `☁️💾` only after remote verification.
+
+### U. Unchanged Canonical Save
+
+A non-empty Affected Set is narrated, but expected canonical owner rows, chronology, Campaign Version, and artifact evidence remain unchanged. Validation reports failure, status becomes `⚠️`, and `TURN_COMPLETE` is prohibited.
+
 ## Acceptance Criteria
 
 FR-011 conformance requires all of the following:
@@ -445,7 +583,15 @@ FR-011 conformance requires all of the following:
 - packets expose relevant stable IDs, owners, and drill-down references internally;
 - selection remains relevance-filtered;
 - fresh sessions rebuild context from persistence;
-- host tests exercise Regression Cases A through L against the configured persistence chain.
+- the configured canonical target is resolved before state-changing play and is never guessed from one local path;
+- a non-empty Affected Set proves expected canonical change before completion;
+- local-authoritative success displays `💾` only after local validation and read-back;
+- cloud-authoritative success displays `☁️💾` only after required synchronization and remote verification;
+- `⏳` and unresolved `⚠️` block subsequent state-changing play;
+- manual `save`, `save status`, and `retry save` preserve idempotency;
+- Derived context refresh follows canonical verification;
+- host tests exercise Regression Cases A through U against the configured persistence chain;
+- the repository regression harness passes its mock-adapter state-machine cases.
 
 ## Safeguards
 

@@ -56,6 +56,8 @@ Before dependent gameplay or a write:
 
 Conversation attachments and earlier downloads are caches until freshness is re-established.
 
+Absence at an assumed local path is not evidence that no campaign database exists. When an outer adapter is configured, invoke its exact-identity fetch procedure before declaring the target unavailable. Never initialize a blank database as fallback while remote canonical lookup is unresolved.
+
 ## Pre-Action Read
 
 Load the campaign records required by the action's canonical Read Set, including as relevant:
@@ -135,6 +137,8 @@ The candidate passes only when:
 
 File size, row count, or successful commit alone is insufficient.
 
+If the Affected Set is non-empty and all expected authoritative values, version evidence, chronology, and canonical bytes remain unchanged where change is required, validation fails. The adapter must return failure evidence rather than `SAVE_COMPLETE`.
+
 ## Read-Only Reopen
 
 For FR-011, read-only reopen verifies critical expected owner changes and the resulting Campaign Version or Save Point before turn closure. Context Caches are refreshed only from this verified state. The adapter does not decide relevance or adjudication.
@@ -179,6 +183,8 @@ If open, transaction, commit, integrity, semantic, expected-versus-actual, or re
 - report the exact failed boundary without inventing a recovery result.
 
 If downstream deployment or read-back fails, the SQLite candidate remains a validated candidate but not an activated canonical Save Point.
+
+For a local-authoritative campaign, complete SQLite validation and read-only reopen may support marker `💾`. For a cloud-authoritative chain, the same candidate supports only `⏳` until the outer adapter verifies canonical synchronization; downstream failure supports `⚠️`. The SQLite adapter never emits `☁️💾`.
 
 ## Adapter Composition
 

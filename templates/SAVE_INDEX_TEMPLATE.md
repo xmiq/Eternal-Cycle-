@@ -32,6 +32,12 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Persistence Model Version:** `<logical schema version>`
 - **Storage Format Version:** `<implementation version or not applicable>`
 - **Last confirmed Save Point:** `<stable ID and effective time>`
+- **Configured canonical authority:** `<local | cloud and adapter-chain reference>`
+- **Resolved canonical target:** `<verified locator reference or unresolved>`
+- **Local persistence state:** `<current | ahead of cloud | pending | failed | not applicable>`
+- **Cloud persistence state:** `<current and verified | pending | failed | not configured>`
+- **Last successful local commit:** `<version and time or unavailable>`
+- **Last successful cloud verification:** `<version and time or unavailable>`
 - **Current Session state:** `<none | open | interrupted | pending integration>`
 - **Latest Validation Run:** `<ID, outcome, and warnings>`
 - **Latest Migration:** `<ID or none>`
@@ -55,6 +61,8 @@ A populated Save Index belongs outside the repository. This blank template creat
 
 - **Pending Session Delta:** `<ID or none>`
 - **Open Save Transaction:** `<ID or none>`
+- **Pending Affected Set:** `<owner-domain references or none>`
+- **Persistence status:** `<local validated | cloud validated | pending | failed>`
 - **Unresolved conflicts:** `<IDs, owners, and severity>`
 - **Record Gaps:** `<IDs and required source recovery>`
 - **Pending migrations:** `<IDs and activation state>`
@@ -79,6 +87,8 @@ A populated Save Index belongs outside the repository. This blank template creat
 - [ ] No module contents are duplicated into the index.
 - [ ] Visibility metadata leaks no protected Secret.
 - [ ] Open transactions, deltas, migrations, conflicts, gaps, and warnings are represented honestly.
+- [ ] The configured canonical authority is explicit, its exact target is resolved before state-changing play, and no missing Local Working Copy is mistaken for a missing remote canonical save.
+- [ ] Local and cloud completion states reflect actual commit and verification evidence; a cloud-authoritative save is not current merely because the local transaction committed.
 - [ ] The stated load status matches the latest validation outcome.
 
 ## Cross-References

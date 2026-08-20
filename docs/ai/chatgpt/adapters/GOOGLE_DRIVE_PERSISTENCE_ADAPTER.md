@@ -81,6 +81,8 @@ Before dependent gameplay or a write:
 
 If the configured file cannot be found uniquely and safely, stop. Do not choose the most recent similar filename.
 
+A missing Local Working Copy does not bypass this procedure and does not authorize creation of a blank canonical database. Report the canonical target missing only after the configured exact-identity lookup or authorized recovery search fails.
+
 ## Candidate Input
 
 Google Drive receives candidate bytes only after the selected logical-store adapter has:
@@ -125,6 +127,8 @@ A successful upload response is insufficient. The adapter must retrieve the dest
 - active Save Index and Campaign Version.
 
 Matching size alone is insufficient. Matching bytes do not replace semantic validation.
+
+Only successful required remote read-back and comparison may support `☁️💾`. Upload attempted, upload accepted, synchronization requested, local candidate present, and metadata-only ambiguity cannot.
 
 ## Backup Propagation
 
@@ -207,6 +211,8 @@ If replacement fails:
 - preserve the previous remote canonical file where possible;
 - inspect actual remote state before retry;
 - keep dependent durable narration blocked.
+- preserve any validated local candidate for idempotent cloud retry without rerunning gameplay writes;
+- report `⚠️`, not local success, when Google Drive is canonical authority.
 
 ### Canonical read-back failure
 
@@ -216,6 +222,7 @@ If replacement appears successful but canonical read-back cannot verify it:
 - stop dependent play;
 - inspect exact remote identity and bytes;
 - recover idempotently from the existing Transaction ID.
+- never display `☁️💾` without successful verification.
 
 ### Backup failure
 

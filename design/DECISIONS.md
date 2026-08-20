@@ -5141,3 +5141,23 @@ Material separation opens a Convergence Interval whose state may be Pending, App
 ## D-1285 — Soul-Bound Fate Creates Opportunity Rather Than Compulsion
 
 The long arc should create net-positive opportunity for both Souls without guaranteeing comfort, friendship, moral approval, immunity, or a chosen response. The bond grants no control, tracking, telepathy, shared death, resurrection, shared capability, or Soul Space access.
+
+## D-1286 — Configured Persistence Authority Gates Gameplay Completion
+
+Automatic canonical persistence remains mandatory. Before state-changing play, the runtime resolves the exact canonical target from Campaign Configuration and the Save Index. A non-empty Affected Set cannot reach ordinary player-facing completion until owner writes, required validation and read-back, and verification of the configured local or cloud authority succeed.
+
+## D-1287 — Persistence Markers Report Evidence, Not Intent
+
+`💾` means the configured local canonical target committed and validated. `☁️💾` means the configured cloud canonical target synchronized and passed required verification. `⏳` means required persistence remains incomplete, and `⚠️` means persistence, synchronization, expected-change, or validation failure. A write attempt, planned save, local-only commit under cloud authority, or Derived summary update cannot justify a success marker.
+
+## D-1288 — Pending or Failed Persistence Blocks Later State Change
+
+A later state-changing Gameplay Turn cannot proceed while required persistence remains pending or has an unresolved failure. Successful persistence stays unobtrusive; implementation details remain backstage unless requested, debugging is authorized, or a failure must be surfaced.
+
+## D-1289 — Manual Persistence Commands Are Idempotent Overrides
+
+`save`, `save status`, and `retry save` remain available for control and recovery while automatic saving remains normal. They reuse the existing interaction and transaction identity, never replay narrative resolution, and never duplicate chronology, costs, Development, items, Relationship updates, or other canonical effects. Retry resumes from the incomplete persistence stage when possible.
+
+## D-1290 — Unchanged Expected Canon Is a Persistence Failure
+
+When an Affected Set is non-empty, successful completion requires minimum sufficient proof that expected canonical state changed. An unchanged version, expected record set, revision, chronology, hash, or equivalent configured evidence causes validation failure and prohibits `TURN_COMPLETE`.

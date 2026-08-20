@@ -50,10 +50,12 @@ Before continuing an existing campaign:
 2. identify the selected Repository Version, Rules Profile, provisional rules, campaign rulings, execution profile, and Adapter Chain;
 3. fetch the latest identified canonical source through the configured adapters;
 4. load the Save Index, active Campaign Version, Current Session, open recovery state, and applicable validation result;
-5. validate enough of the source to establish a safe readiness state;
-6. load applicable Repository Canon and the material campaign Read Set;
-7. establish the current scene, active entities, projects, resources, relationships, information boundaries, and hidden processes from authorized records;
-8. only then resolve dependent gameplay actions.
+5. resolve the exact configured canonical persistence authority and Adapter Chain, fetching and verifying a remote canonical save when configured rather than assuming a missing local path means no database;
+6. do not permit state-changing Gameplay Context until the persistence target is ready and prior pending or failed persistence is resolved.
+7. validate enough of the source to establish a safe readiness state;
+8. load applicable Repository Canon and the material campaign Read Set;
+9. establish the current scene, active entities, projects, resources, relationships, information boundaries, and hidden processes from authorized records;
+10. only then resolve dependent gameplay actions.
 
 Chat history, summaries, transcripts, and model memory are not substitutes for Canonical Campaign State.
 
@@ -133,6 +135,12 @@ If persistence or required validation fails:
 - do not invent a substitute save or quietly downgrade the requirement.
 
 Validation is read-only. A passing validation does not require another campaign mutation unless Campaign Configuration explicitly requires an operational record outside the validated state.
+
+Ordinary Gameplay Context ends with one truthful compact marker: `💾` for a committed and validated local canonical target, `☁️💾` for a synchronized and verified cloud canonical target, `⏳` for genuinely incomplete persistence, or `⚠️` for a write, synchronization, validation, expected-change, or read-back failure. Never infer a marker from intent, narration, a local candidate, an upload attempt, or a Derived summary.
+
+When cloud is configured as canonical authority, local SQLite success is not turn completion. Preserve the local candidate, show `⏳` while cloud work is incomplete or `⚠️` after failure, and block further state-changing play until canonical cloud verification succeeds or recovery establishes another authorized boundary.
+
+Recognize `save`, `save status`, and `retry save` as operational commands under the [AI Save Protocol](../AI_SAVE_PROTOCOL.md). They never replay the gameplay action or duplicate effects.
 
 ## Action Fidelity
 
@@ -220,6 +228,8 @@ A Gameplay Context response should normally contain:
 4. a meaningful boundary for the next action.
 
 Do not append repository commentary, schemas, migration plans, adapter logs, or implementation retrospectives during Gameplay Context. Provide a concise operational notice only when a failure or required player decision blocks valid play.
+
+End ordinary Gameplay Context with the evidence-derived persistence marker. On success, the marker alone is sufficient. `save status`, Development Context, and failures may expose sanitized operational detail appropriate to their scope.
 
 Never claim a fetch, save, backup, validation, upload, correction, or recovery succeeded unless it was actually performed and verified.
 

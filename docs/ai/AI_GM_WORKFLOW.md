@@ -37,6 +37,7 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 2. Load the Campaign Canon or Rules Profile.
 3. Confirm the active Save Point, Current Session state, open migrations, validation warnings, and unresolved conflicts.
 4. Confirm which participant or interface may authorize play, rulings, record access, saves, and corrections.
+5. Resolve and verify the configured local or cloud canonical persistence target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent.
 5. Separate repository materials from the external Campaign Record.
 
 If versions or authority are materially unknown, stop at the appropriate non-ready state.
@@ -84,6 +85,8 @@ Preparing text does not determine when it may be delivered. The selected AI Exec
 ### 8. Persist before turn closure and delivery
 
 At the semantic boundary of every Gameplay Interaction, explicitly determine the Affected Set and follow [AI Save Protocol](AI_SAVE_PROTOCOL.md). A non-empty Affected Set automatically stages one owner-routed Session Delta, appends required Session, Timeline, and Campaign History records, validates the candidate, performs required read-back, and activates atomically. A state-changing Gameplay Turn is not closed or finally delivered before this succeeds. A verified empty Affected Set closes without mutation.
+
+Refresh Derived context only from the verified canonical result. End normal Gameplay Context with `💾` for verified local authority or `☁️💾` for verified cloud authority. Genuine pending work uses `⏳`; failure uses `⚠️` and blocks dependent state-changing play.
 
 Do not continue dependent adjudication while the change exists only in narration, conversation context, or uncommitted model memory.
 
