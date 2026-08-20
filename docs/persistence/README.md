@@ -16,17 +16,18 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
    [Memory Continuity, Fading, and Recall](../soul/MEMORY_CONTINUITY.md) separately governs autobiographical persistence and incarnation-specific conscious access.
 6. [Long-Horizon Simulation Summaries](LONG_HORIZON_SUMMARIES.md) defines stable Historical Period identity, causal compression, continuity hooks, historical retrieval, Time Skip and Interlife integration, filtered transition views, and non-owning current-state boundaries.
 7. [Autonomous Registry](AUTONOMOUS_REGISTRY.md) defines persistent autonomous identity, models, Controller assignments, autonomy, groups, reconstruction, memory continuity, networks, last-confirmed state, migration, and validation.
-8. [Truth Layers](TRUTH_LAYERS.md) separates Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta with explicit ownership, visibility, update, promotion, and migration rules.
-9. [Persistence Levels](PERSISTENCE_LEVELS.md) defines Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes, ownership, deletion, migration, promotion, and archival boundaries.
-10. [Campaign State Model](CAMPAIGN_STATE_MODEL.md) defines the authoritative current-state graph, claim contract, required Read Sets, Session Deltas, numerical provenance, unknown handling, and Snapshot boundaries.
-11. [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) defines persistent participant identities, first and latest meetings, important encounters, directional dimensions, trust trajectories, commitments, recognition, and causal relationship change.
-12. [Research Engine](RESEARCH_ENGINE.md) defines iterative Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with qualitative confidence, competing theories, loss, disproof, and Rediscovery.
-13. [Timeline Engine](TIMELINE_ENGINE.md) defines stable events, temporal coordinates and precision, World and Campaign History, Session Logs, Personal and Soul chronologies, parallel ordering, Time Skips, Age boundaries, and source-preserving correction.
-14. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) defines Repository, Campaign, persistence-model, and storage versions plus the mandatory Backup, Audit, Merge, and Validation transaction, Migration Manifest, activation, interruption, rollback, and storage conversion.
-15. [Continuity Resolution](CONTINUITY_RESOLUTION.md) defines narrow conflict containment, authority-ordered diagnosis, narration, save, uncertainty, retcon, and deception classifications, reliance review, source-preserving correction, and validated resumption.
-16. [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines the owner-routed, idempotent transaction after every completed gameplay interaction, including Affected Sets, Session Deltas, log and history appends, special record handling, atomic activation, interruption, and concurrency.
-17. [Persistence Validation](PERSISTENCE_VALIDATION.md) defines immutable validation baselines, trigger-specific profiles, severity and outcomes, evidence-bearing findings, continuity defect detection, protected reporting, and owner-routed repair.
-18. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
+8. [Visual Identity](VISUAL_IDENTITY.md) defines sparse established appearance facts, subject and Model ownership, historical recovery, reincarnation boundaries, and explicit Canon adoption without duplicating current equipment or conditions.
+9. [Truth Layers](TRUTH_LAYERS.md) separates Repository Canon, Campaign Canon, Historical Record, Character Knowledge, Research, Player Theories, Rumours, GM Secrets, and Meta with explicit ownership, visibility, update, promotion, and migration rules.
+10. [Persistence Levels](PERSISTENCE_LEVELS.md) defines Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes, ownership, deletion, migration, promotion, and archival boundaries.
+11. [Campaign State Model](CAMPAIGN_STATE_MODEL.md) defines the authoritative current-state graph, claim contract, required Read Sets, Session Deltas, numerical provenance, unknown handling, and Snapshot boundaries.
+12. [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md) defines persistent participant identities, first and latest meetings, important encounters, directional dimensions, trust trajectories, commitments, recognition, and causal relationship change.
+13. [Research Engine](RESEARCH_ENGINE.md) defines iterative Observation, Hypothesis, Experiment, Evidence, Theory, and Confirmed Knowledge with qualitative confidence, competing theories, loss, disproof, and Rediscovery.
+14. [Timeline Engine](TIMELINE_ENGINE.md) defines stable events, temporal coordinates and precision, World and Campaign History, Session Logs, Personal and Soul chronologies, parallel ordering, Time Skips, Age boundaries, and source-preserving correction.
+15. [Migration and Versioning](MIGRATION_AND_VERSIONING.md) defines Repository, Campaign, persistence-model, and storage versions plus the mandatory Backup, Audit, Merge, and Validation transaction, Migration Manifest, activation, interruption, rollback, and storage conversion.
+16. [Continuity Resolution](CONTINUITY_RESOLUTION.md) defines narrow conflict containment, authority-ordered diagnosis, narration, save, uncertainty, retcon, and deception classifications, reliance review, source-preserving correction, and validated resumption.
+17. [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines the owner-routed, idempotent transaction after every completed gameplay interaction, including Affected Sets, Session Deltas, log and history appends, special record handling, atomic activation, interruption, and concurrency.
+18. [Persistence Validation](PERSISTENCE_VALIDATION.md) defines immutable validation baselines, trigger-specific profiles, severity and outcomes, evidence-bearing findings, continuity defect detection, protected reporting, and owner-routed repair.
+19. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
 
 ## Foundational Boundary
 
@@ -45,6 +46,8 @@ The [GM Living Codex](../gm-living-codex/README.md) is an adjacent, separately p
 The Campaign Persistence Engine remains storage-neutral. The [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) defines how an AI GM, execution profile, Persistence Adapters, Campaign Configuration, Canonical Campaign State, and repository rules relate without changing persistence semantics.
 
 [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) consumes this engine's Read Set, ownership, Save Update, validation, and adapter contracts to define one valid Gameplay Turn. It introduces no competing campaign owner or storage technology.
+
+[Canonical Visual Context](../ai/CANONICAL_VISUAL_CONTEXT.md) is a purpose-specific Derived projection for image and representation handoffs. It reads Visual Identity and other current owners without becoming a new source of campaign truth.
 
 Runtime-specific [execution profiles and adapters](../ai/README.md#runtime-specific-profiles) are replaceable implementations:
 

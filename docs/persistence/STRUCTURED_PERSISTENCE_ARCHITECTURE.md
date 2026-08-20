@@ -50,7 +50,7 @@ The Campaign Record has four logical architectural layers.
 | Layer | Purpose | Examples |
 | --- | --- | --- |
 | **Control** | Identifies the campaign, active rules, modules, versions, saves, validations, and migrations | Save Index and Protocol, Campaign Canon, Validation, Migration History |
-| **Entity and state** | Preserves stable subjects and their current campaign conditions | Player State, Souls and Incarnations, Companions, Actors, Relationships, Species, Inventory |
+| **Entity and state** | Preserves stable subjects and their current campaign conditions | Player State, Souls and Incarnations, Companions, Actors, Autonomous Registry, Visual Identity, Relationships, Species, Inventory |
 | **World and activity** | Preserves current environments, organizations, systems, projects, and unresolved processes | World, Locations, Factions, Magic, Infrastructure, Projects |
 | **Knowledge and history** | Preserves chronology, evidence, beliefs, research, mysteries, secrets, and historical consequences | Timeline, Campaign History, Knowledge, Research, Mysteries, Secrets |
 
@@ -299,6 +299,12 @@ Actors, Companions, and Player State do not independently own duplicate identiti
 
 The [Autonomous Registry](AUTONOMOUS_REGISTRY.md) owns persistent autonomous identity and autonomy-specific state for independently operating entities and systems. It distinguishes Model from Individual, supports bounded Groups, preserves Controller separation, reconstruction and memory lineage, networks, assignments, and last-confirmed uncertainty, and references specialist owners for all other mutable facts.
 
+## Visual Identity
+
+[Visual Identity](VISUAL_IDENTITY.md) optionally owns sparse subject-specific persistent visual traits with stable subject references, provenance, effective intervals, and uncertainty. It may scope a record to a body, Incarnation, Entity, Autonomous Individual, or Model as appropriate.
+
+It does not duplicate Species/form architecture, Model design, current equipment, current condition, temporary effects, Location state, or generated-image choices. Current Appearance and Canonical Visual Context are Derived Views assembled from those owners.
+
 An autonomous subject cannot simultaneously hold a second ordinary Entity identity anchor. Infrastructure that is autonomous keeps Infrastructure state under Infrastructure and references one Autonomous ID for autonomy-specific identity and control.
 
 ## Relationships
@@ -484,6 +490,10 @@ Two records called Mira appear after a transcript import. Their names are not en
 
 A character dashboard displays body condition, accessible Skills, carried items, relationships, and known research. It is a Derived View assembled from several owners. Editing the dashboard cannot silently change those records; an authorized update routes each change to its owner.
 
+### A Canonical Image Handoff
+
+An image request for a recurring character follows the body or Incarnation, Species/form, Visual Identity, equipment, condition, and Location references needed for the requested Perspective. The resulting Canonical Visual Context is Derived. Incidental eye colour rendered by the tool does not become a campaign fact.
+
 ## Safeguards
 
 - Logical modules are canonical; storage products are not.
@@ -526,6 +536,7 @@ This document defines logical organization and record interfaces. It delegates t
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)
 - [Persistence Authority](PERSISTENCE_AUTHORITY.md)
 - [Truth Layers](TRUTH_LAYERS.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 - [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Game Master Responsibilities](../gm/GM_RESPONSIBILITIES.md)

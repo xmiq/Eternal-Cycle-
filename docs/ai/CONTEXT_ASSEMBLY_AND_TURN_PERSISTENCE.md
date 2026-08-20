@@ -10,8 +10,8 @@ The player does not issue a manual save command during ordinary play. A state-ch
 
 - **Owner:** Gameplay Turn state, Context Packet structure, relevance selection, derived context hierarchy, mandatory read gate, automatic persistence gate, and next-turn verification
 - **Dependencies:** [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md), [Canonical Data Ownership](../persistence/CANONICAL_DATA_OWNERSHIP.md), [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md), [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md), [AI Runtime Model](AI_RUNTIME_MODEL.md), and configured Persistence Adapters
-- **Extensions:** runtime hosts may implement parameterized queries, views, application query functions, and disposable caches without changing authority
-- **Consumers:** AI execution profiles, human-supervised runtime tools, session boot, play, save, recovery, debugging, and handoff procedures
+- **Extensions:** runtime hosts may implement parameterized queries, views, application query functions, disposable caches, and purpose-specific [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) packets without changing authority
+- **Consumers:** AI execution profiles, human-supervised runtime tools, session boot, play, representation handoffs, save, recovery, debugging, and handoff procedures
 - **Repository boundary:** this contract contains no campaign state, populated packet, executable campaign schema, credential, private locator, or provider-specific configuration
 
 ## Runtime Boundary
@@ -37,6 +37,7 @@ Repository validation proves that the required contract and integration points e
 13. The configured canonical persistence target is resolved and verified before state-changing play.
 14. Player-visible persistence status is derived from adapter evidence, never intent or prepared narration.
 15. Derived context refresh follows canonical validation and read-back; it never promotes unsaved narration.
+16. A canonical representation request receives a purpose-specific, visibility-filtered Canonical Visual Context before depiction; conversation context is not visual authority.
 
 ## Gameplay Turn State Machine
 
@@ -130,6 +131,7 @@ Include a record when it can materially affect the present claim through:
 - relevant recent event or explicit historical callback;
 - required visibility, Character Knowledge, or GM Secret boundary.
 - relevant [Memory Continuity](../soul/MEMORY_CONTINUITY.md) records when autobiographical recall or a possible cue can materially affect resolution.
+- relevant [Visual Identity](../persistence/VISUAL_IDENTITY.md), Species or form, Model, equipment, condition, Location, and environment records when canonical depiction is requested.
 
 Do not load every row connected by several references merely because it exists. Stop dependency expansion when further records cannot materially change the action or its presentation. Context correctness outranks marginal brevity.
 
@@ -165,6 +167,12 @@ Life ID -> Long-Horizon Historical Period ID -> source event IDs
 Each hop identifies its authoritative domain. A reference path grants neither visibility nor Character Knowledge.
 
 Loading a Memory Record, Life Summary, or complete historical source for GM adjudication does not grant recall. Player-facing assembly includes only the bounded Recall Manifestation available through the current incarnation's Character Knowledge.
+
+## Purpose-Specific Visual Context
+
+When the requested output depicts canonical campaign content, assemble a [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) rather than handing the image or rendering tool an unsourced prose recollection. The packet is a Derived projection over the smallest complete visual Read Set. It records stable subject IDs, established visual facts, current-form and Model references, present equipment and conditions, environmental facts, observer visibility, secret exclusions, genuine unknowns, and permitted non-canonical rendering freedom.
+
+The packet owns no appearance fact. Current Appearance is assembled from authoritative owners at request time. Missing visual traits remain unspecified, and a generated choice does not become Canon merely because it appears in an image. Ordinary image generation has an empty Affected Set. Only an explicit authorized adoption, correction, or other durable campaign change enters the normal owner-routed Save Transaction.
 
 ## Hierarchical Context
 
@@ -246,6 +254,7 @@ After resolution, determine every persistent owner changed or materially created
 - Species, Evolution, Soul, and world state;
 - Location and other durable exploration or discovery state;
 - Timeline, Session Log, and Campaign History.
+- explicit adoption, correction, or removal of a canonical Visual Identity trait.
 
 Movement, time, expenditure, failed attempts, discoveries, meaningful observations, and social reactions may change state. Do not infer an empty Affected Set from a quiet narration.
 
@@ -347,6 +356,8 @@ If persistence fails, derived summaries retain or rebuild from the last validate
 
 A no-change turn records an explicit `Affected Set = empty` result in ephemeral or transactional provenance as appropriate. It performs no canonical mutation and creates no Timeline event for database plumbing. A failed action is not automatically a no-op if it consumed time or resources, caused harm, changed a Relationship, established Knowledge, or advanced a process.
 
+Canonical image generation is normally a no-change operation: assembling and rendering a Canonical Visual Context does not mutate campaign state. Its response may report the already-verified persistence marker for the configured authority, but it must not imply that rendering itself created a save. If the player explicitly adopts a rendered trait, that later adoption is a state-changing interaction with a non-empty Affected Set.
+
 ## Failure and Retry
 
 ### Read Failure
@@ -418,6 +429,10 @@ When relevant, select Autonomous ID, Model reference, Controller, autonomy, plac
 ### FR-015 and FR-016 Boundaries
 
 GM Context is not Character Memory. FR-011 does not implement memory continuity, fading, or recall. It retrieves [Soul-Bound Companion](../soul/SOUL_BOUND_COMPANIONS.md) records only when identity, Reincarnation, encounter causality, separation, recognition, or historical callbacks make them relevant; retrieval neither creates a bond nor reveals protected identity, route, or timing to a character.
+
+### Canonical Visual Context
+
+[Visual Identity](../persistence/VISUAL_IDENTITY.md) owns sparse established appearance facts. [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) assembles those facts with current Species or form, Model, Inventory, condition, Location, environment, Perspective, and visibility records for one representation request. It is Derived Data, is invalidated by relevant source changes, and never becomes another appearance owner.
 
 ## Existing Campaign Adoption
 
@@ -609,6 +624,8 @@ FR-011 conformance requires all of the following:
 ## Related Documents
 
 - [AI Runtime Model](AI_RUNTIME_MODEL.md)
+- [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
+- [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [AI Game Master Workflow](AI_GM_WORKFLOW.md)
 - [AI Session Start](AI_SESSION_START.md)
 - [AI Play Protocol](AI_PLAY_PROTOCOL.md)

@@ -47,6 +47,7 @@ A populated Location belongs in an external Campaign Record. This blank template
 - **Ownership and claims:** `<legal, customary, sacred, political, or disputed claims>`
 - **Authority and jurisdiction:** `<recognized decisions by audience>`
 - **Knowledge views:** `<who knows, believes, or cannot access what>`
+- **Established visual descriptors:** `<sparse Location-owned facts relevant to representation, or none established>`
 - **Pending Consequences and Review Points:** `<references>`
 
 ## Optional Fields
@@ -58,6 +59,7 @@ A populated Location belongs in an external Campaign Record. This blank template
 - **Projects and Research:** `<current undertaking and discovery references>`
 - **Relationships to other places:** `<route, dependency, rivalry, migration, trade, or ecological relation>`
 - **Maps and Derived Views:** `<source and freshness; never the authoritative place itself>`
+- **Visual references:** `<canonical source or approved campaign artifact references; rendered choices are not authority by themselves>`
 
 ## Validation Notes
 
@@ -69,6 +71,7 @@ A populated Location belongs in an external Campaign Record. This blank template
 - [ ] Historical change is appended rather than resetting place identity without cause.
 - [ ] Occupant indexes agree with authoritative subject-placement relations and do not become competing current-location owners.
 - [ ] Every specialist condition links to its owner.
+- [ ] Visual descriptors contain established place facts only and do not identify hidden structures or features beyond the authorized Knowledge View.
 
 ## Cross-References
 
@@ -77,3 +80,4 @@ A populated Location belongs in an external Campaign Record. This blank template
 - [Settlement Record Template](SETTLEMENT_TEMPLATE.md)
 - [Dungeon Profile Template](DUNGEON_TEMPLATE.md)
 - [World-Contact and Gate Event Record Template](GATE_EVENT_TEMPLATE.md)
+- [Canonical Visual Context](../docs/ai/CANONICAL_VISUAL_CONTEXT.md)

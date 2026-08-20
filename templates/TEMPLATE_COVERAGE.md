@@ -38,6 +38,7 @@ Coverage does not require one file per canonical document. A record-family templ
 | --- | --- | --- |
 | Save Index and Protocol | [Save Index](SAVE_INDEX_TEMPLATE.md) | module registry, versions, Save Points, load state, validation, migration, and recovery |
 | Context Assembly | [Context Packet](CONTEXT_PACKET_TEMPLATE.md) | non-authoritative Current Scene, Running, and Session context; source navigation, freshness, read evidence, Affected Set result, and cache refresh |
+| Visual Identity and representation | [Visual Identity](VISUAL_IDENTITY_TEMPLATE.md), [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT_TEMPLATE.md) | sparse established appearance ownership plus purpose-specific Derived representation handoff; unspecified rendering detail remains non-canonical |
 | Campaign Canon and Rules Profile | [Campaign Canon and Rules Profile](CAMPAIGN_CANON_TEMPLATE.md) | permitted premises, options, provisional rulings, retcons, conversions, and control agreements |
 | Player State | [Character Record](CHARACTER_TEMPLATE.md), [Development Profile](DEVELOPMENT_PROFILE_TEMPLATE.md) | agency, current actor, embodiment, condition, access, capability, Soul, resources, and objectives |
 | Souls and Incarnations | [Soul Continuity Record](SOUL_CONTINUITY_TEMPLATE.md), [Life Archive](LIFE_ARCHIVE_TEMPLATE.md), [Memory Continuity Record](MEMORY_CONTINUITY_TEMPLATE.md), [Soul-Bound Companion Record](SOUL_BOUND_COMPANION_TEMPLATE.md), [Soul Avatar Profile](SOUL_AVATAR_TEMPLATE.md), [Soul Weapon Record](SOUL_WEAPON_TEMPLATE.md) | one Soul, distinct lives, completed-life indexes, autobiographical continuity, incarnation-specific recall, pair-specific fate bonds, protected structures, Avatars, and Weapon Soul relationships |
@@ -69,6 +70,8 @@ Coverage does not require one file per canonical document. A record-family templ
 | --- | --- |
 | Generic canonical system proposal | [System Template](SYSTEM_TEMPLATE.md) |
 | Current person or actor | [Character Record Template](CHARACTER_TEMPLATE.md) |
+| Sparse canonical appearance | [Visual Identity Template](VISUAL_IDENTITY_TEMPLATE.md) |
+| Canonical image or representation handoff | [Canonical Visual Context Template](CANONICAL_VISUAL_CONTEXT_TEMPLATE.md) |
 | Persistent autonomous individual or bounded group | [Autonomous Registry Record Template](AUTONOMOUS_REGISTRY_TEMPLATE.md) |
 | Capability assessment | [Development Profile Template](DEVELOPMENT_PROFILE_TEMPLATE.md) |
 | Bounded learned capability | [Skill Record Template](SKILL_TEMPLATE.md) |

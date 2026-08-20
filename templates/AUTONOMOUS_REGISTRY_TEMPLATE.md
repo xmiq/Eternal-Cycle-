@@ -24,6 +24,10 @@ Use this storage-neutral blank contract for one persistent autonomous Individual
 - **Model ID:** `<stable reference or unknown>`
 - **Model revision used:** `<reference and effective event>`
 - **Model owner:** `<Project, Infrastructure, Magic, Species, campaign design, or other authoritative source>`
+- **Model Visual Identity reference:** `<shared established appearance owned by the Model, or none established>`
+- **Individual Visual Identity reference:** `<sparse divergence owned by this Individual or Group, or none established>`
+
+Model appearance and individual appearance are separate. A shared chassis, summoned pattern, or design family may supply Model traits; damage, markings, alterations, and identity-bearing differences belong to the continuing Individual when established.
 
 ## Origin and Lineage
 
@@ -94,6 +98,7 @@ Omit this section for an Individual except to reference a source Group promotion
 
 - [ ] Autonomous ID is unique and not duplicated under ordinary Entity ownership.
 - [ ] Model and Individual or Group identity are distinct.
+- [ ] Model and Individual Visual Identity references are not collapsed or copied into competing current-state fields.
 - [ ] Individual quantity is one.
 - [ ] Creator and Controller are separate references.
 - [ ] Controller scopes and authority sources resolve.
@@ -111,3 +116,4 @@ Omit this section for an Individual except to reference a source Group promotion
 - [Simulation Architecture and Perspective Model](../docs/core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - [Save Update Protocol](../docs/persistence/SAVE_UPDATE_PROTOCOL.md)
 - [Persistence Validation](../docs/persistence/PERSISTENCE_VALIDATION.md)
+- [Visual Identity](../docs/persistence/VISUAL_IDENTITY.md)

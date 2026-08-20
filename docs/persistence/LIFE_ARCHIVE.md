@@ -90,6 +90,7 @@ A **Life Summary** is a concise permanent historical snapshot finalized for a co
 - unresolved legacy, mysteries, promises, enemies, projects, artifacts, and consequences;
 - lasting Soul consequences established by source owners;
 - historical manifestations of a future Soul-bound companion relation;
+- historically identifying Visual Identity or approved-reference links where useful;
 - provenance and references to Full Life Detail.
 
 Optional fields remain absent or explicitly unknown. The summary is not a save dump.
@@ -132,6 +133,7 @@ Life Archive repetition is legitimate only as a Historical Snapshot, derived pre
 | Current Skill/Development | Skill and Development records | Per-life peak, milestone, and source reference |
 | Current location | placement owner | Location at a historical event |
 | Current embodiment | active Incarnation/embodiment owner | Form interval or transition history |
+| Current Visual Identity | Visual Identity scoped to the relevant body, Incarnation, Entity, Individual, or Model | Historically identifying trait or approved-reference link only |
 | Current Soul Weapon state | Soul Weapon record | Meaningful historical milestone |
 | Final Death | death event and Timeline/History | Resolved reference and concise account |
 | Soul bond | future Soul/fate owner | Life-specific manifestation only |
@@ -155,6 +157,8 @@ Consolidation may supersede a current Skill label without erasing prior-Life evi
 A Life may reference multiple significant forms. Form intervals distinguish starting form, major Evolution, transformation, principal form, and final form. Temporary conditions are not separate Lives and need not be indexed unless historically defining.
 
 Species references point to campaign Species or configured Living Codex identities. A Life record never becomes the reusable Species definition.
+
+Former physical appearance remains historical to that Life. A later Incarnation does not inherit it merely because the Soul continues. Visual references may aid retrieval without granting recall or becoming the current body's Visual Identity.
 
 ## Relationships and Soul-Bound Manifestations
 
@@ -307,6 +311,7 @@ Validation reports ambiguity; it does not invent identity, chronology, or missin
 
 - [Campaign Persistence Engine Index](README.md)
 - [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 - [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md)
 - [Migration and Versioning](MIGRATION_AND_VERSIONING.md)

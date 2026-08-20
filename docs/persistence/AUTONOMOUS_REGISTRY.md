@@ -44,6 +44,7 @@ An **Autonomous Model** is a reusable construction, summoning, animation, body, 
 - An individual may receive upgrades or replacement bodies without changing identity when continuity is established.
 - Two individuals built from one model remain distinct.
 - Model capability is availability or design intent, not proof of one individual's current access, condition, equipment, or mastery.
+- Shared persistent model morphology may reference a Model Visual Identity; individual distinctions reference an Individual Visual Identity. Neither is copied into the other.
 
 Models may reside in campaign design, Projects, Infrastructure, Magic, Species, or an adopted reusable authority as appropriate. The Registry owns only the model reference and individual-specific lineage facts.
 
@@ -55,6 +56,7 @@ A storage implementation may choose table names and keys consistent with its exi
 |---|---|
 | **Autonomous Identity** | Permanent Autonomous ID, identity kind, individual or group status, display designation references, continuity core, lifecycle status, provenance, and record version. |
 | **Model Reference** | Stable Model ID, revision used, adoption time, and source owner. |
+| **Visual Identity Reference** | Typed reference to shared Model Visual Identity and, where needed, separate Individual Visual Identity; neither duplicates condition or equipment. |
 | **Controller Assignment** | Controller ID, scope, authority source, start and end, priority or conflict rules, limits, and provenance. Creator is a separate origin reference. |
 | **Autonomy Profile** | Current autonomy classification, supported operating scope, restrictions, evidence, effective time, and uncertainty. |
 | **Placement Reference** | Typed reference to the one authoritative current-placement relation and its precision. Distributed systems link explicit component placements. |
@@ -207,6 +209,7 @@ Silence does not establish destruction, mission completion, loyalty, location, c
 For an interaction involving an autonomous subject, load the smallest dependency-complete set that can change adjudication, consequences, uncertainty, or player choice. It commonly includes:
 
 - Autonomous Identity, Model reference, Autonomy Profile, Controller assignments, and last Confirmed Report;
+- Model and Individual Visual Identity references when a visual representation or identification claim requires them;
 - authoritative placement and condition references;
 - current assignment or Project;
 - relevant capability, resource, maintenance, and network references;
@@ -254,6 +257,7 @@ Where the storage implementation exposes sufficient structure, validate:
 
 - Autonomous IDs and active identity anchors are unique;
 - Model and Individual identities are distinct and references resolve;
+- Model and Individual Visual Identity references resolve without copying shared morphology or current condition;
 - creator and current Controller are separate claims;
 - Controller scope and authority sources resolve;
 - placement, assignment, capability, requirement, network, Infrastructure, Relationship, and event references resolve;
@@ -276,6 +280,8 @@ Ambiguous identity conflicts are reported for owner review. Validators do not me
 
 Context Assembly retrieves Autonomous IDs, Model IDs, Controllers, placements, assignments, condition references, last-confirmed state, Relationship IDs, Network IDs, and authoritative source paths only when relevant. Every generated Context Packet remains Derived or Cache data under FR-012; this registry retains autonomous-state ownership.
 
+For visual representation, [Canonical Visual Context](../ai/CANONICAL_VISUAL_CONTEXT.md) combines relevant Model Visual Identity, Individual Visual Identity, equipment, condition, and placement references. Designation changes do not create new visual or autonomous identities, and generated details do not update the Registry.
+
 ## Safeguards
 
 - One autonomous subject has one authoritative identity anchor.
@@ -294,6 +300,7 @@ Context Assembly retrieves Autonomous IDs, Model IDs, Controllers, placements, a
 
 - [Campaign Persistence Engine](README.md)
 - [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 - [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Campaign State Model](CAMPAIGN_STATE_MODEL.md)
 - [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md)

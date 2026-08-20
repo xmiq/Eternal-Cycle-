@@ -56,6 +56,17 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] No unsupported mechanic, arbitrary hostility, plot immunity, or automatic recognition was added.
 - [ ] The player retains the next deliberate choice.
 
+## Before Canonical Visual Representation
+
+- [ ] The request's time, subjects, stable IDs, audience, and active Perspective are known.
+- [ ] A [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) was assembled from authoritative persistence rather than conversation memory.
+- [ ] Sparse Visual Identity, current Species or form, Model, equipment, condition, Location, and environment sources were read where material.
+- [ ] Individual traits and Model traits remain separate.
+- [ ] GM Secrets, hidden identities, undiscovered functions, and observer-inaccessible facts are excluded.
+- [ ] Unknown objects remain unidentified; unspecified details are not filled as Canon.
+- [ ] Rendering freedom is labelled non-canonical, and the generated image is not treated as evidence.
+- [ ] The Affected Set is explicitly empty unless an authorized visual trait adoption or other durable change occurs.
+
 ## After a Completed Gameplay Interaction
 
 - [ ] Keep GM Living Codex migrations separate from campaign Save Transactions.
@@ -119,3 +130,4 @@ Stop the affected operation when a material owner, source, version, authority, v
 - [AI Play Protocol](AI_PLAY_PROTOCOL.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
 - [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
+- [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)

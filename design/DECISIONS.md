@@ -5161,3 +5161,23 @@ A later state-changing Gameplay Turn cannot proceed while required persistence r
 ## D-1290 — Unchanged Expected Canon Is a Persistence Failure
 
 When an Affected Set is non-empty, successful completion requires minimum sufficient proof that expected canonical state changed. An unchanged version, expected record set, revision, chronology, hash, or equivalent configured evidence causes validation failure and prohibits `TURN_COMPLETE`.
+
+## D-1291 — Visual Identity Is Sparse, Optional, and Owner-Bounded
+
+Visual Identity records only established identity-bearing appearance facts for a stable body, Incarnation, Entity, autonomous Individual, or Model. An absent trait remains unspecified rather than defaulting to a likely value. Species, form, equipment, condition, and Location retain their own facts and are referenced rather than copied.
+
+## D-1292 — Current Appearance and Canonical Visual Context Are Derived
+
+Current Appearance is assembled for a requested time from Visual Identity plus current Species or form, Model, equipment, condition, Location, and environment owners. Canonical Visual Context is a purpose-specific, Perspective-filtered Derived projection for representation tools. Neither is an authoritative owner of mutable appearance state.
+
+## D-1293 — Rendering Choices Do Not Become Canon Automatically
+
+A generated image, prompt completion, composition choice, lighting choice, pose, or unspecified cosmetic detail is presentation rather than evidence. It enters Canon only through an explicit authorized adoption or correction routed to the proper owner and completed through the normal FR-011 persistence transaction.
+
+## D-1294 — Canonical Depiction Requires Authoritative Visual Reads
+
+Before depicting canonical campaign content, a GM or runtime reads the smallest complete visual Read Set from canonical persistence, applies Perspective, Character Knowledge, and GM Secret boundaries, preserves unknown objects as unidentified, and records unspecified detail as non-canonical rendering freedom. Conversation memory is not sufficient authority.
+
+## D-1295 — Visual Continuity Follows Embodiment and Model Identity
+
+Reincarnation does not carry former bodily appearance into a new body by default. Former visual facts remain historical and may be recovered through targeted provenance-bearing source review. Shared Model traits and Individual visual divergences remain separate so repeated designs do not erase continuing identity.

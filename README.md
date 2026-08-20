@@ -65,6 +65,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
 - [`docs/ai/AI_RUNTIME_MODEL.md`](docs/ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, transaction flow, adapter composition, failure boundaries, and extension rules.
 - [`docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md`](docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - FR-011 relevance-filtered canonical context, mandatory reads, automatic validated persistence, turn closure, and reset-resilient reload.
+- [`docs/ai/CANONICAL_VISUAL_CONTEXT.md`](docs/ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical image context, observer filtering, Current Appearance assembly, and non-canonical rendering boundaries.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
 - [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.
 - [`docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md`](docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - SQLite transaction, integrity, stale-write, rollback, and read-only validation procedures.
@@ -88,6 +89,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/CANONICAL_DATA_OWNERSHIP.md`](docs/persistence/CANONICAL_DATA_OWNERSHIP.md) - authoritative ownership map for mutable campaign facts, identity anchors, normalized references, historical snapshots, and derived data.
 - [`docs/persistence/LIFE_ARCHIVE.md`](docs/persistence/LIFE_ARCHIVE.md) - stable Life identities, player-visible Life Summaries, and scalable old-Soul historical retrieval.
 - [`docs/persistence/AUTONOMOUS_REGISTRY.md`](docs/persistence/AUTONOMOUS_REGISTRY.md) - persistent autonomous identity, models, Controllers, groups, reconstruction, memory lineage, networks, uncertainty, migration, and validation.
+- [`docs/persistence/VISUAL_IDENTITY.md`](docs/persistence/VISUAL_IDENTITY.md) - sparse canonical appearance traits, Model and Individual separation, historical recovery, and explicit adoption rules.
 - [`docs/persistence/TRUTH_LAYERS.md`](docs/persistence/TRUTH_LAYERS.md) - canonical separation of facts, history, character knowledge, research, theories, rumours, secrets, and Meta.
 - [`docs/persistence/PERSISTENCE_LEVELS.md`](docs/persistence/PERSISTENCE_LEVELS.md) - canonical lifetimes for Repository, Soul, Historical, Campaign, Session, and Ephemeral records.
 - [`docs/persistence/CAMPAIGN_STATE_MODEL.md`](docs/persistence/CAMPAIGN_STATE_MODEL.md) - authoritative campaign state graph, claim provenance, read discipline, deltas, unknowns, and snapshots.

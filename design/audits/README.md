@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [Canonical Visual Identity and Image-Generation Context Audit](VISUAL_IDENTITY_MAINTENANCE_AUDIT.md) - sparse visual ownership, derived Current Appearance, historical recovery, representation-tool context, information filtering, image adoption, and validation boundaries.
 - [FR-006 and FR-007 Skill Consolidation Implementation Audit](FR_006_FR_007_SKILL_CONSOLIDATION_AUDIT.md) - routine consolidation, Fusion/Evolution boundaries, Development reconciliation, provenance, conceptual scope, migration, and validation.
 - [FR-002, FR-003, FR-008, and FR-009 Clarification Audit](FR_002_FR_003_FR_008_FR_009_CLARIFICATION_AUDIT.md) - contextual Reincarnation candidates, hybrid Soul Depth visibility, exceptional Soul Weapon capability, world-access distinctions, persistence impact, and validation.
 - [FR-001 and FR-005 Retained Development Implementation Audit](FR_001_FR_005_RETAINED_DEVELOPMENT_AUDIT.md) - bounded stacking, embodiment relevance, Skill familiarity and translation, persistence, migration, and future compatibility.

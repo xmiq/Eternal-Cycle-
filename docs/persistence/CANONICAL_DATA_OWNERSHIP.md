@@ -63,6 +63,7 @@ An ordinary Entity record may reference an autonomous subject when interaction r
 | Cross-incarnation autobiographical Memory identity and accessibility history | Memory Continuity | Character Knowledge, Life Archive, Soul views, Context Assembly | Current conscious recall belongs to the receiving incarnation's Knowledge record; source facts remain with their owners. |
 | Soul-Bound Companion Bond identity, pair membership, formation provenance, and current convergence obligation | Soul/fate bond domain | Reincarnation, World Engine, Life Archive, Relationships, Timeline, Context Assembly | Current Relationships, recognition, routes, embodiments, and encounter events remain with their specialist owners. |
 | Current embodiment, species, form, and lineage expression | Current Incarnation or embodiment relation | Entity view, capability views, Species references | References reusable definitions; does not own species design. |
+| Subject-specific persistent visual traits | [Visual Identity](VISUAL_IDENTITY.md) scoped to the valid body, Incarnation, Entity, Autonomous Individual, or Model | character views, autonomous views, visual context, historical indexes | Sparse traits only; Species/form, Model, equipment, condition, Location, and rendering choices remain with their owners. |
 | Current attributes and Development | relevant Development records | character sheets, summaries, adjudication packets | No copied mutable totals in identity rows. |
 | Retained cross-Life source history | Soul continuity plus source Development/Skill records | Life Archive indexes, relevance assessments | Historical evidence is not current capability. |
 | Effective retained acceleration | Derived retained-development profile | player view, adjudication packet | Recalculable Cache/Derived state; never owns source history or current values. |
@@ -84,6 +85,7 @@ An ordinary Entity record may reference an autonomous subject when interaction r
 | GM Secrets and protected preparation | Secrets with references to factual owners and access rules | authorized GM views only | A secret is not a second world truth. |
 | Persistent autonomous entity or system state | Autonomous Registry | Entities, Controllers, locations, networks, views | FR-014 owns autonomy-specific identity and state without duplicating specialist domains. |
 | Scene packets, dashboards, summaries, indexes, and retrieval aids | no canonical owner; they are Derived or Cache records | GM and player interfaces | Source IDs, source version, freshness, and audience are required. |
+| Canonical Visual Context and representation-tool prompts | no canonical owner; they are Derived Context Packets | image generation and other authorized visual representation tools | Perspective-filtered assembly never promotes rendering choices into Canon. |
 
 ## Reference Rules
 
@@ -98,6 +100,8 @@ Entity identity
 ```
 
 A reference stores the target ID, relation type, scope, and provenance needed for integrity. It does not copy mutable names, descriptions, relationship values, coordinates, species traits, or current conditions as authoritative fields.
+
+Visual representations follow the same rule. A Current Appearance projection references Species/form, Model, Visual Identity, equipment, condition, Location, and environment owners. It does not copy those facts into one competing appearance record.
 
 Human-readable labels may accompany references for diagnostics or display only when explicitly Derived or cached. A label mismatch never changes target identity.
 
@@ -168,12 +172,14 @@ Persistence validation checks, where the implementation exposes enough structure
 
 - every mutable canonical fact resolves to one declared owner;
 - every persistent non-autonomous subject resolves to one Entity identity anchor;
+- every Visual Identity resolves to one valid scoped subject, and Model and Individual visual ownership remain distinct;
 - Player, Controller, Entity, and Perspective remain distinct;
 - foreign keys and typed references resolve;
 - duplicate persistent identities are reported for owner review, never merged automatically;
 - current placement has no incompatible simultaneous authoritative claims;
 - Relationship participants exist and current dimensions occur only under Relationships;
 - individual Species and form references resolve without copying reusable definitions;
+- Visual Identity contains no copied current equipment, temporary condition, complete Species/form definition, or automatically adopted generated-image detail;
 - Derived and cache records identify source IDs, source version, freshness, scope, and audience;
 - Historical Snapshots identify their time and do not govern current state;
 - a subject is not active simultaneously under ordinary Entity ownership and the reserved autonomous domain;
@@ -210,6 +216,7 @@ No mechanics or schemas for those objectives are implemented here.
 - [Persistence Authority](PERSISTENCE_AUTHORITY.md)
 - [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md)
 - [Campaign State Model](CAMPAIGN_STATE_MODEL.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 - [Truth Layers](TRUTH_LAYERS.md)
 - [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md)
 - [Timeline Engine](TIMELINE_ENGINE.md)

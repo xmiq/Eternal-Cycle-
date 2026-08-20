@@ -497,6 +497,119 @@ else {
     }
 }
 
+$visualIdentityPath = Join-Path $rootPath 'docs/persistence/VISUAL_IDENTITY.md'
+if (-not (Test-Path -LiteralPath $visualIdentityPath)) {
+    Add-ValidationError 'Missing Visual Identity contract.'
+}
+else {
+    $visualIdentity = Get-Content -Raw -LiteralPath $visualIdentityPath
+    foreach ($requiredText in @(
+        'Visual Identity is optional and sparse.',
+        'Unspecified visual detail is not Canon.',
+        '## Visual Identity and Current Appearance',
+        '## Model and Individual Boundary',
+        '## Historical Visual Recovery',
+        '## Generated Images and Canon Adoption',
+        'Generating an image is normally a read-only representation task.',
+        'Do not store absent traits as defaults.',
+        'Reincarnation creates a new embodiment',
+        'CREATE TABLE visual_identities',
+        'CREATE TABLE visual_identity_traits',
+        'Never create a populated Visual Identity in this repository.'
+    )) {
+        if ($visualIdentity -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Visual Identity lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$visualContextPath = Join-Path $rootPath 'docs/ai/CANONICAL_VISUAL_CONTEXT.md'
+if (-not (Test-Path -LiteralPath $visualContextPath)) {
+    Add-ValidationError 'Missing Canonical Visual Context contract.'
+}
+else {
+    $visualContext = Get-Content -Raw -LiteralPath $visualContextPath
+    foreach ($requiredText in @(
+        'Conversation context alone is insufficient',
+        '## Canonical Facts and Rendering Choices',
+        '## Historical Lookup Fallback',
+        '## Perspective, Secrets, and Unknowns',
+        '## Current Appearance Assembly',
+        '## Model and Individual Assembly',
+        '## Image Generation Is Normally Read-Only',
+        '## Explicit Canon Adoption',
+        'Affected Set = empty',
+        '### A. Established Recurring Character',
+        '### B. Unknown Eye Colour',
+        '### C. Current Equipment',
+        '### D. Servitor Model',
+        '### E. Evolution',
+        '### F. Reincarnation',
+        '### G. Unknown Structure',
+        '### H. GM Secret',
+        '### I. Conversation Conflict',
+        '### J. Approved Image Trait',
+        '### K. Unapproved Image',
+        '## Runtime Boundary'
+    )) {
+        if ($visualContext -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Canonical Visual Context lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$visualIdentityTemplatePath = Join-Path $rootPath 'templates/VISUAL_IDENTITY_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $visualIdentityTemplatePath)) {
+    Add-ValidationError 'Missing Visual Identity template.'
+}
+else {
+    $visualIdentityTemplate = Get-Content -Raw -LiteralPath $visualIdentityTemplatePath
+    foreach ($requiredText in @(
+        '**Visual Identity ID:**',
+        '**Subject ID:**',
+        '## Established Trait Entry',
+        'Do not create an entry for an Unspecified trait.',
+        '## Historical Recovery',
+        '## Explicit Canon Adoption',
+        'Generated-image details are absent unless explicitly adopted.'
+    )) {
+        if ($visualIdentityTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Visual Identity template lacks required invariant: $requiredText"
+        }
+    }
+}
+
+$visualContextTemplatePath = Join-Path $rootPath 'templates/CANONICAL_VISUAL_CONTEXT_TEMPLATE.md'
+if (-not (Test-Path -LiteralPath $visualContextTemplatePath)) {
+    Add-ValidationError 'Missing Canonical Visual Context template.'
+}
+else {
+    $visualContextTemplate = Get-Content -Raw -LiteralPath $visualContextTemplatePath
+    foreach ($requiredText in @(
+        '## Established Visible Facts',
+        '## Explicitly Unspecified',
+        'Unspecified detail is not Canon.',
+        '## GM-Secret Exclusions',
+        '## Rendering Freedom',
+        'Unknown objects remain unidentified.',
+        'Affected Set = empty',
+        '**Incidental details persisted:** `No`'
+    )) {
+        if ($visualContextTemplate -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Canonical Visual Context template lacks required invariant: $requiredText"
+        }
+    }
+}
+
+foreach ($requiredText in @(
+    '[x] **Canonical Visual Identity and Image-Generation Context**',
+    '[∞] **Future Revisions**'
+)) {
+    if ($roadmap -notmatch [regex]::Escape($requiredText)) {
+        Add-ValidationError "Visual Identity maintenance roadmap state lacks required invariant: $requiredText"
+    }
+}
+
 $codexRequired = @(
     'docs/gm-living-codex/README.md',
     'docs/gm-living-codex/GM_LIVING_CODEX.md',
@@ -994,6 +1107,7 @@ Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, 
 Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
+Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
 Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visibility, Soul Weapon baseline, and world-access distinctions checked'

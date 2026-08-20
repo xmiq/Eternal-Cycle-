@@ -129,8 +129,10 @@ Do not store a player's private plan as Character Knowledge, world truth, or an 
 - **Evolution Route state:** `<route reference, current readiness evidence, commitments, or none>`
 - **Temporary transformation or external body support:** `<source, duration, interruption, maintenance, and expiry>`
 - **Medical, magical, or Soul-related constraints:** `<specialist record references>`
+- **Visual Identity record:** `<sparse body- or Incarnation-scoped identity reference, or none established>`
 
 Current anatomy and condition never prove a learned Skill, retained mastery, social authority, or future Evolution.
+Visual Identity records only established identity-bearing appearance traits. Current equipment, injuries, environmental effects, and Species defaults remain with their specialist owners and are assembled into Current Appearance when needed.
 
 ## Position and Immediate Context
 
@@ -349,6 +351,7 @@ Do not rewrite unrelated character sections merely to make the record appear fre
 - [ ] Every material number has a mechanically justified source and Numerical Change Trace.
 - [ ] Relationships, recognition, promises, debts, and known identities have not silently reset.
 - [ ] Current location, chronology, condition, custody, and Pending Consequences agree with their authoritative records.
+- [ ] Visual Identity is sparse, body-appropriate, and does not duplicate Species, equipment, condition, or Location state.
 - [ ] No lower-authority narration silently overwrites Campaign State or history.
 - [ ] The candidate passes the required [Persistence Validation](../docs/persistence/PERSISTENCE_VALIDATION.md) profile before activation.
 
@@ -365,6 +368,7 @@ Do not rewrite unrelated character sections merely to make the record appear fre
 - [Save Update Protocol](../docs/persistence/SAVE_UPDATE_PROTOCOL.md)
 - [Persistence Validation](../docs/persistence/PERSISTENCE_VALIDATION.md)
 - [Campaign Persistence Integration](../docs/persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
+- [Visual Identity](../docs/persistence/VISUAL_IDENTITY.md)
 - [Development System](../docs/progression/README.md)
 - [Skill Engine](../docs/skills/README.md)
 - [Lineage and Evolutionary Inheritance](../docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md)

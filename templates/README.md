@@ -12,6 +12,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 
 - [System Template](SYSTEM_TEMPLATE.md) - structure for proposing or documenting a reusable canonical system without bypassing repository governance.
 - [Character Record Template](CHARACTER_TEMPLATE.md) - current character identity, embodiment, capability references, agency, continuity, and persistence boundaries.
+- [Visual Identity Template](VISUAL_IDENTITY_TEMPLATE.md) - sparse established appearance facts with subject scope, provenance, visibility, historical recovery, and adoption controls.
 - [Development Profile Template](DEVELOPMENT_PROFILE_TEMPLATE.md) - six-layer, objective-specific capability assessment across distinct Development Tracks.
 - [Retained Cross-Life Development Template](RETAINED_CROSS_LIFE_DEVELOPMENT_TEMPLATE.md) - source Lives, relevance, familiarity, bounded effective profiles, recalculation, and provenance.
 - [Human Framework Profile Template](HUMAN_FRAMEWORK_TEMPLATE.md) - Classes, Professions, traditions, schools, Institutions, Social Position, Class Change, and constraints.
@@ -26,6 +27,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 - [Soul-Bound Companion Record Template](SOUL_BOUND_COMPANION_TEMPLATE.md) - pair-specific Bond identity, Convergence Intervals, historical reunion manifestations, obstacles, ownership references, and validation.
 - [Long-Horizon Summary Template](LONG_HORIZON_SUMMARY_TEMPLATE.md) - stable period scope, causal compression, continuity hooks, historical references, unknowns, revisions, and filtered Historical Transition presentation.
 - [Context Packet Template](CONTEXT_PACKET_TEMPLATE.md) - Current Scene, Running, and Session derived context with stable owner references, freshness, Read Set evidence, Affected Set outcome, and protected diagnostics.
+- [Canonical Visual Context Template](CANONICAL_VISUAL_CONTEXT_TEMPLATE.md) - purpose-specific read-only representation handoff with canonical facts, unknowns, secret exclusions, and non-canonical rendering freedom.
 - [Soul Weapon Record Template](SOUL_WEAPON_TEMPLATE.md) - Weapon Soul personhood, vessel continuity, bond and consent, forms, capabilities, Echoes, compatibility, manifestation, Legacy status, and passage.
 - [Magic Record Template](MAGIC_RECORD_TEMPLATE.md) - Mana, Affinity, Spell, Ritual, Enchantment, Alchemy, Divine, Forbidden, and world-interaction records.
 - [Faction Profile Template](FACTION_TEMPLATE.md) - scoped coordination, participation, information, decision routes, capacity, cohesion, action, relationships, and versioned continuity.

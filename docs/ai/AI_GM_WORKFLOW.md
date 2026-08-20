@@ -8,8 +8,8 @@ This procedure sequences an AI Game Master's work from initialization through ha
 
 - **Owner:** this document owns AI operating sequence and readiness transitions
 - **Primary authorities:** [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) and [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
-- **Dependencies:** repository and Campaign versions, Save Index, Current Session, Read Sets, specialist owners, Save Updates, and validation
-- **Extensions:** [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), [Session Start](AI_SESSION_START.md), [Play Protocol](AI_PLAY_PROTOCOL.md), [Save Protocol](AI_SAVE_PROTOCOL.md), and interface-specific implementations
+- **Dependencies:** repository and Campaign versions, Save Index, Current Session, Read Sets, specialist owners, Save Updates, validation, and purpose-specific representation context when canonical content is depicted
+- **Extensions:** [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md), [Session Start](AI_SESSION_START.md), [Play Protocol](AI_PLAY_PROTOCOL.md), [Save Protocol](AI_SAVE_PROTOCOL.md), and interface-specific implementations
 - **Consumers:** AI GMs, supervising human GMs, orchestration tools, and handoff processes
 - **Repository boundary:** the procedure stores no campaign state, prompt, transcript, credentials, model memory, or implementation configuration
 
@@ -38,7 +38,7 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 3. Confirm the active Save Point, Current Session state, open migrations, validation warnings, and unresolved conflicts.
 4. Confirm which participant or interface may authorize play, rulings, record access, saves, and corrections.
 5. Resolve and verify the configured local or cloud canonical persistence target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent.
-5. Separate repository materials from the external Campaign Record.
+6. Separate repository materials from the external Campaign Record.
 
 If versions or authority are materially unknown, stop at the appropriate non-ready state.
 
@@ -81,6 +81,12 @@ Prepared narration renders the established situation and outcome from the approp
 Clearly separate an attempted action from an achieved effect. Do not disguise an estimate as certainty or an unresolved question as a secret answer.
 
 Preparing text does not determine when it may be delivered. The selected AI Execution Profile owns presentation ordering and may require validated persistence before delivery.
+
+### Representation tool handoff
+
+Before depicting canonical campaign content with an image generator or other representation tool, follow [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md). Read the authoritative visual owners, assemble Current Appearance for the requested time and Perspective, exclude protected facts, preserve unknown objects as unidentified, and identify every unspecified detail that the renderer may choose without creating Canon.
+
+The generated image is a presentation artifact, not evidence or campaign state. Rendering normally produces an empty Affected Set. Persist a visual trait only when an authorized participant explicitly adopts or corrects it through the normal Visual Identity owner and FR-011 Save Transaction.
 
 ### 8. Persist before turn closure and delivery
 
@@ -150,6 +156,8 @@ The complete procedure and boundaries are owned by the [Simulation Architecture 
 
 - [AI Operating Procedures Index](README.md)
 - [AI Checklist](AI_CHECKLIST.md)
+- [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
+- [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - [Uncertainty Handling](../gm/UNCERTAINTY_HANDLING.md)
 - [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)

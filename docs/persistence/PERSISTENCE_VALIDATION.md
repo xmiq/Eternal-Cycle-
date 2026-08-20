@@ -554,6 +554,26 @@ Detect:
 
 Report ambiguous identity, continuity, and category conflicts for owner review. Validation never repairs, merges, forks, promotes, destroys, or reclassifies autonomous subjects automatically.
 
+## Visual Identity and Representation Validation
+
+Detect:
+
+- a Visual Identity whose body, Incarnation, Entity, Autonomous Individual, or Model reference does not resolve;
+- duplicate active Visual Identity ownership for one subject and scope;
+- Model morphology copied into every Individual as competing authority;
+- complete Species/form, equipment, condition, or Location state copied into Visual Identity;
+- current equipment or temporary injury presented as permanent identity without an established transition;
+- overlapping incompatible current traits silently merged;
+- recovered historical traits without source provenance or valid effective intervals;
+- Unspecified fields filled from genre expectation, schema defaults, prior narration, or generated images;
+- generated-image details persisted without explicit authorized Canon adoption;
+- former bodily appearance copied across Reincarnation without an established mechanic;
+- Canonical Visual Context lacking current source versions, Perspective filtering, or GM Secret exclusions;
+- an Unknown visible object identified more specifically than Canon permits;
+- image generation mutating Campaign State when no explicit canonical change occurred.
+
+Validation reports unsupported visual completion and leakage; it never invents a preferred appearance or repairs the image itself.
+
 ## Projects and Mysteries Validation
 
 Verify:
@@ -762,6 +782,7 @@ This document defines campaign persistence validation profiles, baselines, sever
 - [Truth Layers](TRUTH_LAYERS.md)
 - [Persistence Levels](PERSISTENCE_LEVELS.md)
 - [Campaign State Model](CAMPAIGN_STATE_MODEL.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 - [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md)
 - [Research Engine](RESEARCH_ENGINE.md)
 - [Timeline Engine](TIMELINE_ENGINE.md)

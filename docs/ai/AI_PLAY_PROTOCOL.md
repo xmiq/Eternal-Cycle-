@@ -27,6 +27,7 @@ Determine whether the input is:
 
 - deliberate in-world character intent;
 - a request for perception, recollection, or explanation;
+- a request to depict canonical campaign content or generate a visual representation;
 - an out-of-character rules or continuity question;
 - a Meta instruction about presentation or campaign operation;
 - a proposed retcon, correction, save, or pause;
@@ -34,6 +35,8 @@ Determine whether the input is:
 - ambiguous across more than one category.
 
 Meta and player knowledge do not enter Character Knowledge merely because they appear in the same interface. A request to inspect rules does not advance in-world time unless a valid campaign action also occurs.
+
+A representation request is normally read-only. Assemble a [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) before depiction and determine an explicitly empty Affected Set unless the request also authorizes a durable change. A rendered detail does not become Canon through appearance alone.
 
 ### 2. Frame intent without taking it
 
@@ -158,5 +161,7 @@ When a participant pauses, rewinds, corrects, or changes presentation preference
 - [GM Living Codex](../gm-living-codex/README.md) - consult before creating reusable species, variants, or Evolution structures; adoption remains campaign-specific.
 - [AI Session Start](AI_SESSION_START.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
+- [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
+- [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [GM Principles](../gm/GM_PRINCIPLES.md)

@@ -112,12 +112,15 @@ An AI must not invent missing:
 - ages, dates, or chronology;
 - abilities, Skills, Development, spells, or numerical state;
 - species traits, bodies, forms, or evolution history;
+- visual identity traits, colours, markings, proportions, model features, clothing details, or historical appearance;
 - relationships, promises, recognition, or family;
 - locations, routes, maps, resources, or infrastructure;
 - titles, offices, inventories, ownership, or custody;
 - motives, secrets, research conclusions, or historical events.
 
 Use the supported labels `Unknown`, `Not Yet Verified`, `Estimated`, `Requires Source Recovery`, `Disputed`, `Player Theory`, or the correct Truth Layer. Schema completeness and narrative smoothness create no exception.
+
+Image and representation tools amplify this risk because they must render pixels even where Canon is silent. Before depicting canonical content, the runtime builds a [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md), preserves material unknowns, and labels ordinary composition, lighting, pose, and unspecified cosmetic choices as non-canonical rendering freedom. The resulting image is not a recovered source and cannot establish appearance by itself.
 
 ## Recency Bias
 
@@ -136,6 +139,7 @@ Before presenting, summarizing, logging, or validating, the runtime must:
 - separate each observer's Knowledge;
 - redact protected diagnostics and secrets;
 - prevent hidden facts from leaking through options, tone, corrections, or generated views.
+- prevent visual prompts and generated images from leaking GM Secrets, hidden identities, undiscovered equipment functions, concealed anatomy, or unperceived structure classifications.
 
 A leak is an Operational Failure and a persistence defect where campaign records or views were affected.
 

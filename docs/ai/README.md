@@ -20,12 +20,13 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 1. [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - rules, objective simulation, player-facing presentation, Entity, Controller, Perspective, and knowledge boundaries.
 2. [AI Runtime Model](AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, boot and action flows, adapter composition, and extension rules.
 3. [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, summary hierarchy, automatic Affected Set persistence, turn closure, failure/retry, and next-turn reload.
-4. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
-5. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
-6. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
-7. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
-8. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
-9. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
+4. [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical reads, observer filtering, Current Appearance assembly, representation-tool handoff, and non-canonical rendering freedom.
+5. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
+6. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
+7. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
+8. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
+9. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
+10. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
 ## Runtime-Specific Profiles
 
@@ -52,6 +53,7 @@ These documents sequence existing owners. They do not replace them.
 | What is currently true in one campaign? | the external Campaign Record under the [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) |
 | Which information may reach which observer? | [Truth Layers](../persistence/TRUTH_LAYERS.md) |
 | How is an interaction persisted? | [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md) |
+| How is canonical visual content assembled for depiction? | [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md), reading [Visual Identity](../persistence/VISUAL_IDENTITY.md) and current specialist owners |
 | How are contradictions repaired? | [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md) |
 | How are temporary rulings handled? | [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) |
 
@@ -70,6 +72,7 @@ An AI GM must:
 - identify uncertainty, missing sources, conflicts, and Provisional Rules explicitly;
 - maintain causal continuity across scenes, sessions, deaths, Reincarnations, Time Skips, Ages, and World Resets;
 - complete the canonical Save Update process after each completed Gameplay Interaction;
+- assemble a visibility-filtered Canonical Visual Context before depicting canonical content and treat rendering choices as non-canonical;
 - state honestly when it cannot read, write, validate, or activate campaign state;
 - leave the last valid Save Point authoritative after interruption or failure.
 

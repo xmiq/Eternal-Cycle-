@@ -163,6 +163,7 @@ For every material interaction:
 | Faction or institution | faction Version, participants, information routes, interests, capacity, Relationships, current actions |
 | World change | World, affected domain records, Causal Event Chains, Simulation Frame, Pending Consequences, Timeline |
 | Historical claim | Timeline, Campaign History, sources, corrections, observer records, current dependents |
+| Canonical visual depiction | relevant Entity/body or Autonomous identity, current Species/form, Model, Visual Identity, equipment, condition, Location/environment, Perspective, Character Knowledge, and protected Secret filters |
 | Numerical change | prior value, owning mechanic, source event, delta, costs, constraints, validation history |
 
 ### Dependency Closure
@@ -349,6 +350,12 @@ Species state separates:
 
 A known species label does not grant complete anatomy, Skill Trees, routes, or weaknesses. The GM reads the individual and species records appropriate to the current claim.
 
+## Visual Identity and Representation
+
+An optional [Visual Identity](VISUAL_IDENTITY.md) records only established persistent subject-specific traits. It is not a complete body, Species, Model, equipment, condition, or Location description.
+
+When a tool must depict campaign state, the GM assembles [Canonical Visual Context](../ai/CANONICAL_VISUAL_CONTEXT.md) from current owners and filters it through the requested Perspective. The projection is Derived and cannot become authoritative merely because it produced an image. Unspecified visual detail remains unspecified.
+
 ## Projects and Infrastructure
 
 Projects and infrastructure retain:
@@ -466,6 +473,7 @@ This document defines the state graph, claim contract, status model, Read Sets, 
 ## Related Documents
 
 - [Life Archive and Old-Soul Indexing](LIFE_ARCHIVE.md)
+- [Visual Identity](VISUAL_IDENTITY.md)
 
 - [Campaign Persistence Engine Index](README.md)
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)

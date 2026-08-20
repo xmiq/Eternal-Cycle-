@@ -148,6 +148,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, persistence adapters, scope, and authority boundaries.
 - [AI Runtime Model](ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, campaign boot and action flows, adapter composition, failure boundaries, and extension rules.
 - [Context Assembly and Gameplay Turn Persistence](ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, derived summary hierarchy, automatic persistence, failure/retry, and next-turn verification.
+- [Canonical Visual Context](ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific representation context, Current Appearance assembly, observer filtering, unknown preservation, and image-tool handoff boundaries.
 - [AI Capabilities and Limitations](ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical discipline, and failure handling.
 - [AI GM Workflow](ai/AI_GM_WORKFLOW.md) - end-to-end authority, loading, adjudication, narration, persistence, recovery, and handoff cycle.
 - [AI Session Start](ai/AI_SESSION_START.md) - version, Save Index, visibility, Read Set, freshness, readiness, and resume checks before play.
@@ -170,6 +171,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Soul-Bound Companion Fate and Reincarnation Continuity](soul/SOUL_BOUND_COMPANIONS.md) - pair-specific Soul-level fate bonds, pending convergence, eventual reunion, route constraints, agency, and persistence.
 - [Long-Horizon Simulation Summaries](persistence/LONG_HORIZON_SUMMARIES.md) - stable Historical Period identities, causal historical compression, continuity hooks, Time Skip and Interlife integration, retrieval indexes, and filtered transition views.
 - [Autonomous Registry](persistence/AUTONOMOUS_REGISTRY.md) - persistent autonomous identity, model and individual separation, Controller assignments, autonomy, groups, reconstruction, memory lineage, networks, assignments, last-confirmed uncertainty, migration, and validation.
+- [Visual Identity](persistence/VISUAL_IDENTITY.md) - sparse established appearance ownership, Model and Individual separation, historical recovery, Reincarnation boundaries, and explicit Canon adoption.
 - [Truth Layers](persistence/TRUTH_LAYERS.md) - ownership, visibility, updates, promotion, and migration for facts, knowledge, research, theories, rumours, secrets, and Meta.
 - [Persistence Levels](persistence/PERSISTENCE_LEVELS.md) - Repository, Soul, Historical, Campaign, Session, and Ephemeral lifetimes with deletion, promotion, archival, and migration safeguards.
 - [Campaign State Model](persistence/CAMPAIGN_STATE_MODEL.md) - authoritative state graph, State Claims, required Read Sets, Session Deltas, numerical provenance, unknowns, and Snapshots.

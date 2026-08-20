@@ -157,6 +157,20 @@ Examples:
 
 Before introducing a new Skill, theory, companion, location, species, technology, relationship, or capability, check whether an existing canonical entity already covers it. New campaign content must extend established state through a valid owner rather than recreate or overwrite it.
 
+## Canonical Visual Representation
+
+Before using an image-generation or other visual-representation tool to depict canonical campaign content, ChatGPT must assemble the purpose-specific [Canonical Visual Context](../CANONICAL_VISUAL_CONTEXT.md) from current campaign persistence. Conversation history, model memory, a prior generated image, or likely genre detail is insufficient.
+
+The visual packet must:
+
+- identify the requested time, subject, stable IDs, and active Perspective;
+- combine sparse Visual Identity with current Species or form, Model, equipment, condition, Location, and environment owners;
+- include only information permitted to the requested audience;
+- preserve unidentified objects and hidden facts without naming or visually revealing them;
+- mark unspecified cosmetic and compositional choices as non-canonical rendering freedom.
+
+Image generation is normally read-only and has an empty Affected Set. A generated detail does not become Canon automatically. If the player or GM explicitly adopts a visual trait, ChatGPT must route that change to the [Visual Identity](../../persistence/VISUAL_IDENTITY.md) owner and complete the normal FR-011 persistence gate before claiming it as durable.
+
 ## Independent World Simulation
 
 The world does not wait for the player.

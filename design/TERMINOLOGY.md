@@ -4771,3 +4771,27 @@ A compact player-visible report derived from actual persistence evidence: `💾`
 ## Unchanged-Save Failure
 
 A hard validation failure in which a non-empty Affected Set established durable Canon but the expected configured canonical evidence did not change. It prohibits ordinary Gameplay Turn completion.
+
+## Visual Identity
+
+The sparse optional set of established identity-bearing appearance facts owned for one stable body, Incarnation, Entity, autonomous Individual, or Model. Unrecorded traits are unspecified, not inferred defaults.
+
+## Current Appearance
+
+A time-bounded Derived view assembled from Visual Identity and the current Species or form, Model, equipment, condition, Location, and environment owners. It is not a second mutable appearance record.
+
+## Canonical Visual Context
+
+A purpose-specific, Perspective-filtered Derived projection that supplies established visual facts, stable references, unknowns, protected exclusions, and rendering boundaries to an image or representation tool.
+
+## Canonical Visual Fact
+
+An appearance-relevant fact established by an authoritative campaign owner with provenance, effective scope, and permitted visibility.
+
+## Non-Canonical Rendering Choice
+
+A presentational choice required to render an image where Canon is silent, such as ordinary composition, lighting, pose, or an unspecified cosmetic detail. It does not become Canon through repetition or depiction.
+
+## Visual Canon Adoption
+
+An explicit authorized decision to establish a rendered or proposed visual trait through its proper owner and the normal validated Save Transaction. Generation alone is not adoption.
