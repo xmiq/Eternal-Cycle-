@@ -1,6 +1,6 @@
 # Future Revisions
 
-This register records evidence-driven issues considered during Phase 12 — Gameplay Validation & Maintenance and later development. It is the permanent rolling final Phase 12 objective, but it remains non-canonical design tracking: an entry does not change a playable rule, authorize implementation, reopen a completed phase, or establish a roadmap objective.
+This register records evidence-driven issues considered during Phase 12 — Gameplay Validation & Maintenance and post-release development. It is the permanent rolling objective of Phase 13 — Future Revisions, but it remains non-canonical design tracking: an entry does not change a playable rule, authorize implementation, reopen a completed phase, or establish a roadmap objective.
 
 ## Authority and Ownership
 
@@ -17,7 +17,7 @@ Use this file for a suspected usability, balance, coherence, or maintainability 
 
 Gameplay does not write to this register directly. A gameplay GM may surface an observation or preserve campaign-local evidence, but only the project owner may mediate that material into a Future Revision entry, change its priority or status, merge or remove it, or authorize promotion into roadmap work. Development agents must not infer authorization from gameplay text alone.
 
-Use [Unresolved Questions](UNRESOLVED_QUESTIONS.md) when an unanswered question blocks or materially shapes current roadmap work. Use [Developer Notes](DEVELOPER_NOTES.md) for exploratory alternatives, observations, and workshop material that have not qualified for this register. Use [Phase 12 in the Roadmap](ROADMAP.md#phase-12--gameplay-validation--maintenance) only after the project owner authorizes implementation. An approved objective is inserted immediately before Future Revisions; its `FR-###` identifier remains stable provenance and never becomes a phase number.
+Use [Unresolved Questions](UNRESOLVED_QUESTIONS.md) when an unanswered question blocks or materially shapes current roadmap work. Use [Developer Notes](DEVELOPER_NOTES.md) for exploratory alternatives, observations, and workshop material that have not qualified for this register. Use [Phase 13 in the Roadmap](ROADMAP.md#phase-13--future-revisions) only after the project owner authorizes implementation. An approved objective is recorded without replacing the rolling Future Revisions item; its `FR-###` identifier remains stable provenance and never becomes a phase number.
 
 An entry must not:
 

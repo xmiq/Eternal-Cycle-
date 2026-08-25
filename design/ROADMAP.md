@@ -2,17 +2,17 @@
 
 ## Current Target
 
-**Current phase: Phase 12 — Gameplay Validation & Maintenance**
+**Current phase: Phase 13 — Future Revisions**
 
-**Current task: None — maintainer review of approved Phase 12 objectives before implementation planning**
+**Current task: Future Revisions — owner-mediated rolling objective**
 
-**Repository Status: Feature Complete — Gameplay Validation Ongoing**
+**Repository Status: Eternal Cycle v1.0.0 — Released**
 
-Phases 0 through 11 remain complete and reviewed. Phase 12 is the single active top-level project phase for gameplay validation and owner-authorized maintenance before release readiness.
+Phases 0 through 12 are complete and reviewed. Phase 13 is the active owner-mediated stage for post-release evidence, review, and explicitly authorized evolution.
 
 Gameplay itself does not write roadmap tasks or Future Revisions. Gameplay may expose needs, contradictions, or opportunities, but the project owner remains the mediator who decides what becomes repository work, what enters Future Revisions, and what remains campaign-specific.
 
-This state does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
+The project maintainer approved **Eternal Cycle v1.0.0 — Release 1** on 2026-08-25 after the release gate passed. Campaign saves, playtest records, live world state, and gameplay history remain outside this repository.
 
 The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
@@ -277,9 +277,9 @@ Phase 11 is complete only when every listed reusable template, operating procedu
 
 ## Phase 12 — Gameplay Validation & Maintenance
 
-**Status: Active**
+**Status: Complete**
 
-Phase 12 contains all owner-authorized gameplay-validation and maintenance work following Phase 11. It has no predetermined number of objectives and remains active while approved objectives await planning, implementation, or validation.
+Phase 12 contains all owner-authorized gameplay-validation and maintenance work following Phase 11. The maintainer closed it on 2026-08-25 after all approved objectives and maintenance passed the Release 1 validation gate.
 
 - [x] **AI Runtime Profile integration and validation** — Runtime model, capability limits, ChatGPT execution profile, SQLite and Google Drive adapters, navigation, and validation.
 - [x] **GM Living Codex foundation** — Internal Codex implementation Steps 1–11 covering authority, stable identity, species records, traits, Skills, Evolution graphs, variants, procedural use, player species, SQLite persistence, and verified deployment.
@@ -303,14 +303,15 @@ Phase 12 contains all owner-authorized gameplay-validation and maintenance work 
 - [x] **FR-015 — Memory Continuity, Fading, and Recall** — Defined stable autobiographical Memory identity, significance-sensitive persistence and fading, dormancy, bounded cue-triggered and fragmentary recall, incarnation-specific Character Knowledge manifestations, logical persistence, migration, and player/character/GM information boundaries without converting retained familiarity into recollection or implementing an exhaustive Knowledge Engine.
 - [x] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity** — Defined a pair-specific Soul-level fate bond with guaranteed eventual reunion, renewable Convergence Intervals, meaningful Reunion Manifestations, causal route and candidate constraints, asynchronous-Life handling, recognition and Relationship boundaries, independent agency, non-transitive multiple bonds, logical persistence, migration, and validation.
 - [x] **Canonical Visual Identity and Image-Generation Context** — Defined sparse optional Visual Identity, Current Appearance assembly, Model and Individual boundaries, targeted historical visual recovery, perspective-filtered Canonical Visual Context, read-only image handoff, explicit visual Canon adoption, templates, navigation, and structural regression validation.
-- [∞] **Future Revisions** — Permanent owner-mediated rolling final objective during Phase 12. Stable `FR-###` identifiers are backlog and provenance IDs, not phases. Gameplay and development agents cannot promote candidates. An explicitly owner-approved implementation objective is inserted immediately before this item, while unrelated candidates remain untouched.
+- [x] **Future Revisions transition** — The Phase 12 `[∞]` Future Revisions objective and its stable `FR-###` provenance moved intact to Phase 13 at Release 1; no identifier was renumbered and no candidate was promoted by the transition.
 
 ### Current Position
 
 - **Approved pending objectives:** None. All currently approved FR-001 through FR-016 objectives are complete where present.
 - **Selected implementation objective:** None. Roadmap order records the approved set, not a mandatory execution order.
-- **Release readiness:** Pending gameplay validation.
-- **Next action:** Continue gameplay validation and owner-mediated Future Revision review. No implementation objective is selected.
+- **Release readiness:** Approved after final validation on 2026-08-25.
+- **Release:** Eternal Cycle v1.0.0 — Release 1.
+- **Next action:** Continue owner-mediated Future Revision intake under Phase 13. No implementation objective is selected.
 - **Not promoted:** No remaining FR-001 through FR-016 candidate. Any future candidate still requires explicit project-maintainer authorization.
 
 ### Approved Objective Relationships
@@ -319,10 +320,28 @@ The approved objectives form one related maintenance program. FR-012 establishes
 
 ### Completion Authority
 
-Phase 12 does not complete because current objectives pass validation or because no candidate is promoted. It closes only when the project maintainer explicitly declares the project sufficiently ready for release.
+Phase 12 did not complete merely because individual objectives passed validation or because no candidate was promoted. It closed through the project maintainer's explicit release authorization and the successful final validation recorded in the [Release 1 Audit](audits/RELEASE_1_AUDIT.md).
 
-At that future boundary, and not before, the rolling backlog moves to a new **Phase 13 — Future Revisions** with `[∞]` active status. Later owner-authorized bodies of work may receive later phase numbers. This transition is documented here but has not occurred.
+At that boundary, the rolling backlog moved to **Phase 13 — Future Revisions** with `[∞]` active status. Later owner-authorized bodies of work may receive later phase numbers.
 
 ### Phase 12 Boundary
 
 Phase 12 maintenance may clarify, validate, repair, or extend reusable project material only through explicit owner authorization. It does not permit gameplay to write the roadmap, Codex to promote a candidate, completed phases to reopen silently, campaign data to enter the repository, or any release status to be inferred.
+
+## Phase 13 — Future Revisions
+
+**Status: Active**
+
+Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `FR-###` provenance and receives gameplay evidence without allowing gameplay, the Living Codex, an agent, or an empty queue to modify released rules automatically.
+
+- [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-016 without renumbering historical entries.
+
+### Current Position
+
+- **Approved pending objectives:** None.
+- **Selected implementation objective:** None.
+- **Next action:** Continue evidence gathering and maintainer review through the [Future Revisions register](FUTURE_REVISIONS.md).
+
+### Governance
+
+Gameplay exposes an issue, the maintainer reviews it, qualifying evidence may become a Future Revision candidate, and implementation begins only after explicit maintainer authorization. Gameplay cannot directly modify reusable rules, and the Living Codex cannot independently promote a revision.

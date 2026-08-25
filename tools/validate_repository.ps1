@@ -248,8 +248,21 @@ foreach ($status in $roadmapStatuses) {
         Add-ValidationError "Invalid roadmap status token: [$($status.Groups[1].Value)]"
     }
 }
-$finalRepositoryState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
-if ($finalRepositoryState) {
+$featureCompleteState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
+$releasedState = $roadmap -match '(?m)^\*\*Repository Status: Eternal Cycle v1\.0\.0 — Released\*\*$'
+if ($releasedState) {
+    $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
+    if ($unfinished.Count -gt 0) {
+        Add-ValidationError "Released roadmap contains $($unfinished.Count) unfinished checklist item(s)."
+    }
+    if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Phase 13 — Future Revisions') {
+        Add-ValidationError 'Released roadmap must identify Phase 13 — Future Revisions as the current phase.'
+    }
+    if ($taskMatches.Count -eq 1 -and $taskMatches[0].Groups[1].Value -ne 'Future Revisions — owner-mediated rolling objective') {
+        Add-ValidationError 'Released roadmap must identify the owner-mediated Future Revisions objective as the current task.'
+    }
+}
+elseif ($featureCompleteState) {
     $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
     $phase12Active = $phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -eq 'Phase 12 — Gameplay Validation & Maintenance'
     if ($unfinished.Count -gt 0 -and -not $phase12Active) {
@@ -268,8 +281,6 @@ elseif ($taskMatches.Count -eq 1) {
 
 foreach ($requiredText in @(
     '## Phase 12 — Gameplay Validation & Maintenance',
-    '**Status: Active**',
-    '**Selected implementation objective:** None.',
     '**Approved pending objectives:** None. All currently approved FR-001 through FR-016 objectives are complete where present.',
     '- [x] **FR-001 — Retained Development and Embodiment Relevance**',
     '- [x] **FR-002 — Reincarnation Candidate Selection**',
@@ -285,24 +296,67 @@ foreach ($requiredText in @(
     '- [x] **FR-012 — Canonical SQL Ownership and Anti-Duplication**',
     '- [x] **FR-014 — Autonomous Registry**',
     '- [x] **FR-015 — Memory Continuity, Fading, and Recall**',
-    '- [x] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**',
-    '- [∞] **Future Revisions**',
-    'Phase 12 does not complete because current objectives pass validation',
-    'Phase 13 — Future Revisions'
+    '- [x] **FR-016 — Soul-Bound Companion Fate & Reincarnation Continuity**'
 )) {
     if ($roadmap -notmatch [regex]::Escape($requiredText)) {
         Add-ValidationError "Roadmap lacks required Phase 12 governance: $requiredText"
     }
 }
-if ($roadmap -match '(?m)^## Phase 13') {
-    Add-ValidationError 'Phase 13 must not begin before explicit maintainer release-readiness authorization.'
+if ($releasedState) {
+    foreach ($requiredText in @(
+        '**Status: Complete**',
+        '- [x] **Future Revisions transition**',
+        '**Release readiness:** Approved after final validation on 2026-08-25.',
+        '**Release:** Eternal Cycle v1.0.0 — Release 1.',
+        '## Phase 13 — Future Revisions',
+        '**Status: Active**',
+        '- [∞] **Future Revisions**',
+        '**Approved pending objectives:** None.',
+        '**Selected implementation objective:** None.'
+    )) {
+        if ($roadmap -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Released roadmap lacks required Phase 12/13 governance: $requiredText"
+        }
+    }
+    $phase12Section = [regex]::Match($roadmap, '(?ms)^## Phase 12 — Gameplay Validation & Maintenance\s*(?<body>.*?)(?=^## Phase 13 — Future Revisions)')
+    if (-not $phase12Section.Success -or $phase12Section.Groups['body'].Value -notmatch '\*\*Status: Complete\*\*') {
+        Add-ValidationError 'Released roadmap must retain Phase 12 as complete history.'
+    }
+    $phase13Section = [regex]::Match($roadmap, '(?ms)^## Phase 13 — Future Revisions\s*(?<body>.*)\z')
+    if (-not $phase13Section.Success) {
+        Add-ValidationError 'Phase 13 must be the final top-level phase after Release 1.'
+    }
+    elseif ($phase13Section.Groups['body'].Value -notmatch '(?s)- \[∞\] \*\*Future Revisions\*\*.*\z') {
+        Add-ValidationError 'Future Revisions must remain the final rolling Phase 13 objective.'
+    }
+
+    $versionPath = Join-Path $rootPath 'VERSION'
+    if (-not (Test-Path -LiteralPath $versionPath) -or (Get-Content -Raw -LiteralPath $versionPath).Trim() -ne '1.0.0') {
+        Add-ValidationError 'VERSION must contain exactly 1.0.0 for Release 1.'
+    }
+    foreach ($releaseFile in @('CHANGELOG.md', 'RELEASE_NOTES.md', 'RELEASE_MANIFEST.md', 'design/audits/RELEASE_1_AUDIT.md')) {
+        if (-not (Test-Path -LiteralPath (Join-Path $rootPath $releaseFile))) {
+            Add-ValidationError "Release 1 metadata file is missing: $releaseFile"
+        }
+    }
+    $rootReadme = Get-Content -Raw -LiteralPath (Join-Path $rootPath 'README.md')
+    foreach ($requiredText in @('Eternal Cycle v1.0.0 — Release 1', '**Status: Released**', 'Phase 13 — Future Revisions')) {
+        if ($rootReadme -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "Root README lacks Release 1 state: $requiredText"
+        }
+    }
 }
-$phase12Section = [regex]::Match($roadmap, '(?ms)^## Phase 12 — Gameplay Validation & Maintenance\s*(?<body>.*)\z')
-if (-not $phase12Section.Success) {
-    Add-ValidationError 'Phase 12 must be the final top-level phase in the current roadmap.'
-}
-elseif ($phase12Section.Groups['body'].Value -notmatch '(?s)- \[∞\] \*\*Future Revisions\*\*.*\z') {
-    Add-ValidationError 'Future Revisions must remain the final rolling Phase 12 objective.'
+else {
+    if ($roadmap -match '(?m)^## Phase 13') {
+        Add-ValidationError 'Phase 13 must not begin before explicit maintainer release-readiness authorization.'
+    }
+    $phase12Section = [regex]::Match($roadmap, '(?ms)^## Phase 12 — Gameplay Validation & Maintenance\s*(?<body>.*)\z')
+    if (-not $phase12Section.Success) {
+        Add-ValidationError 'Phase 12 must be the final top-level phase before release.'
+    }
+    elseif ($phase12Section.Groups['body'].Value -notmatch '(?s)- \[∞\] \*\*Future Revisions\*\*.*\z') {
+        Add-ValidationError 'Future Revisions must remain the final rolling Phase 12 objective before release.'
+    }
 }
 
 $unresolvedPath = Join-Path $rootPath 'design/UNRESOLVED_QUESTIONS.md'
@@ -1108,6 +1162,9 @@ Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledg
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
+if ($releasedState) {
+    Write-Output 'Release state: Eternal Cycle v1.0.0; Phase 12 complete; Phase 13 active'
+}
 Write-Output 'Retained Development: stacking, relevance, Skill transfer, territory, prerequisites, and memory boundaries checked'
 Write-Output 'Skill Consolidation: lineage, Development reconciliation, scope, cross-Life provenance, and canonical cases checked'
 Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visibility, Soul Weapon baseline, and world-access distinctions checked'

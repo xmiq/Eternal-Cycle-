@@ -5181,3 +5181,11 @@ Before depicting canonical campaign content, a GM or runtime reads the smallest 
 ## D-1295 — Visual Continuity Follows Embodiment and Model Identity
 
 Reincarnation does not carry former bodily appearance into a new body by default. Former visual facts remain historical and may be recovered through targeted provenance-bearing source review. Shared Model traits and Individual visual divergences remain separate so repeated designs do not erase continuing identity.
+
+## D-1296 — Release 1 Closes Phase 12 After Validation
+
+The project maintainer authorized the Release 1 gate and approved **Eternal Cycle v1.0.0 — Release 1** after final repository validation passed on 2026-08-25. Phase 12 — Gameplay Validation & Maintenance is complete; its historical objectives and stable Future Revision identifiers remain preserved. This decision supersedes the pre-release timing clause in D-1221 without changing that decision's maintainer-only completion rule.
+
+## D-1297 — Phase 13 Owns Post-Release Future Revisions
+
+Phase 13 — Future Revisions is the permanent owner-mediated rolling post-release phase. Gameplay may expose evidence, but only the project maintainer may admit, prioritize, promote, close, or authorize implementation of a Future Revision. Existing `FR-###` identifiers retain their provenance, and new entries continue without renumbering history.

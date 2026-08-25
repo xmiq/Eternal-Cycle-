@@ -22,7 +22,7 @@ Before making changes:
 8. Inspect the relevant existing documents.
 9. Work only on the named current task unless the project owner explicitly changes it.
 
-When the roadmap reports **Feature Complete — Gameplay Validation Ongoing** and names no active development task, do not infer implementation work from playtest feedback. Record qualifying evidence in `design/FUTURE_REVISIONS.md` and wait for an owner-authorized roadmap before changing completed mechanics.
+When the roadmap identifies **Phase 13 — Future Revisions** and names no promoted implementation objective, do not infer implementation work from playtest feedback. Record qualifying evidence in `design/FUTURE_REVISIONS.md` and wait for owner authorization before changing released mechanics.
 
 After making changes:
 
@@ -46,7 +46,7 @@ After making changes:
 
 A passing mention, dependency, constraint, placeholder, or reference in another file does not make a task `[~]`. Never mark a task complete merely because a file exists.
 
-During Phase 12 — Gameplay Validation & Maintenance, agents work only on an explicitly promoted Phase 12 Objective. Future Revisions remains the final rolling objective and cannot be promoted, reordered, or completed without project-owner authorization.
+During Phase 13 — Future Revisions, agents work only on an explicitly promoted objective. Future Revisions remains the permanent rolling objective and cannot be promoted, reordered, or completed without project-owner authorization.
 
 ## Scope Discipline
 

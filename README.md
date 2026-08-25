@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Feature Complete — Gameplay Validation Ongoing.** The active top-level roadmap stage is **Phase 12 — Gameplay Validation & Maintenance**. It contains owner-approved pending objectives but no currently selected implementation objective; Future Revisions remains its owner-mediated rolling final item. This is not a Version 1.0, release-candidate, stable, or production-ready declaration.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**; no implementation objective is currently selected.
 
 ## Core Pillars
 
@@ -30,6 +30,9 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Rules Map
 
+- [`RELEASE_NOTES.md`](RELEASE_NOTES.md) - Release 1 capabilities, compatibility guidance, and documented runtime boundary.
+- [`RELEASE_MANIFEST.md`](RELEASE_MANIFEST.md) - version, release identity, validation, roadmap state, and artifact metadata.
+- [`CHANGELOG.md`](CHANGELOG.md) - concise version history.
 - [`design/README.md`](design/README.md) - design-governance reading order, authority boundaries, and repository audit map.
 - [`docs/README.md`](docs/README.md) - complete map of canonical rules and section indexes.
 - [`docs/DOCUMENT_REGISTRY.md`](docs/DOCUMENT_REGISTRY.md) - claim owners, dependencies, extensions, and consumers for every canonical document family.
@@ -145,8 +148,8 @@ The validator checks local Markdown links and anchors, navigation and registry c
 
 ## Current Status
 
-**Repository Status: Feature Complete — Gameplay Validation Ongoing**
+**Eternal Cycle v1.0.0 — Release 1**
 
-The repository foundation and Phases 1 through 11 are complete and reviewed. There is no active development task. The [Repository Validation and Gameplay-Validation Readiness Report](design/audits/GAMEPLAY_VALIDATION_READINESS.md) records the completed checks and the handoff into long-term external playtesting.
+**Status: Released**
 
-Feature complete means the planned rules, procedures, templates, navigation, and validation framework exist. It does not declare Version 1.0, Release Candidate, Stable, Production Ready, or release readiness. Gameplay evidence may enter [Future Revisions](design/FUTURE_REVISIONS.md), but completed mechanics remain closed until the project owner authorizes a new roadmap.
+Phases 0 through 12 are complete and reviewed. The [Release 1 Audit](design/audits/RELEASE_1_AUDIT.md) records the final gate, and [Phase 13 — Future Revisions](design/ROADMAP.md#phase-13--future-revisions) is the active owner-mediated post-release stage. Gameplay evidence may enter the [Future Revisions register](design/FUTURE_REVISIONS.md), but released mechanics remain unchanged until the project owner authorizes implementation.
