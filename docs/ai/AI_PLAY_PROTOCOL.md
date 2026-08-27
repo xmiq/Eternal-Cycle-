@@ -78,7 +78,7 @@ Classify every material rule as:
 
 1. Canonical;
 2. Canonical Foundation;
-3. Provisional under the Alpha Playtest Rules;
+3. Provisional under [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md);
 4. Unsupported.
 
 Search the repository before proposing a Provisional Rule. Identify the owner when a material rule is applied. A campaign precedent, generated example, common genre convention, or repeated narration is not Repository Canon.

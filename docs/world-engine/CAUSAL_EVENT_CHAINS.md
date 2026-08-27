@@ -194,7 +194,7 @@ Resolve a branch only when it becomes material.
 3. Apply deterministic consequences only where the owning rules and established facts make them deterministic.
 4. Use ordinary GM judgment for uncertain but non-mechanical detail.
 5. Use a documented campaign method for meaningful uncertainty.
-6. Use a narrow [Provisional Rule](../gm/ALPHA_PLAYTEST_RULES.md#provisional) when a missing mechanic truly decides the result.
+6. Use a narrow [Provisional Rule](../gm/PROVISIONAL_RULINGS.md#provisional) when a missing mechanic truly decides the result.
 7. Record the resolved node and any still-Pending Consequences externally.
 
 Randomness can resolve uncertainty; it cannot supply missing causes, erase known constraints, or select a preferred plot.
@@ -348,7 +348,7 @@ This document does not define:
 - [Disease Evolution](DISEASE_EVOLUTION.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

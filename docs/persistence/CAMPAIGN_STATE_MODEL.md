@@ -409,7 +409,7 @@ Unaffected records remain unchanged. Changed storage scope does not imply change
 
 ## Provisional Rules
 
-Provisional Rules are Campaign Canon control records with explicit owner, scope, dependencies, status, expiry, and review under [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+Provisional Rules are Campaign Canon control records with explicit owner, scope, dependencies, status, expiry, and review under [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md).
 
 State produced by a valid Provisional Rule remains established campaign fact under the active rules profile. Later repository adoption requires migration; it does not quietly erase prior outcomes.
 

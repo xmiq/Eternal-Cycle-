@@ -796,4 +796,4 @@ The Ritual succeeds but floods farmland downstream. Emergency necessity does not
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
 - [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)

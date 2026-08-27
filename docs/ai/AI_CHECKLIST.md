@@ -15,6 +15,9 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 
 ## Before Session
 
+- [ ] Current Engine Status was read from current version, release, README, and roadmap metadata rather than inferred from historical terminology.
+- [ ] A new campaign defaults to Campaign Mode `NORMAL`; `VALIDATION` or `DEVELOPMENT` is present only through explicit selection.
+- [ ] First-Life Mode and use of a Provisional Rule are treated independently from Campaign Mode.
 - [ ] If configured, verify the adopted Codex Version separately from Repository and Campaign versions.
 - [ ] Treat Codex entries as reusable design, not campaign presence or player knowledge.
 

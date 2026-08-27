@@ -328,6 +328,6 @@ All currently known FR-001 through FR-017 entries are explicitly Roadmapped or C
 - [Developer Notes](DEVELOPER_NOTES.md)
 - [Unresolved Questions](UNRESOLVED_QUESTIONS.md)
 - [Repository Conventions](REPOSITORY_CONVENTIONS.md)
-- [Alpha Playtest Rules](../docs/gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../docs/gm/PROVISIONAL_RULINGS.md)
 - [Game Master Framework](../docs/gm/GAME_MASTER_FRAMEWORK.md)
 - [Campaign Persistence Engine](../docs/persistence/README.md)

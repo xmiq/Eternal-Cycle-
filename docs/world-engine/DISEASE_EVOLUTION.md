@@ -516,6 +516,6 @@ This Profile is external campaign state. The repository contains no completed Di
 - [Soul Engine Index](../soul/README.md)
 - [Unconventional Soul Weapons](../soul-weapons/UNCONVENTIONAL_SOUL_WEAPONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)

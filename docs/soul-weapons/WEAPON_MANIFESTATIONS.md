@@ -175,7 +175,7 @@ Valid provenance may include:
 - a Legacy context that provides a real anchor or source rather than fame alone;
 - several compatible sources whose separate costs and limits remain visible.
 
-The source must already exist or be established through its own rules. This document does not implement Magic, divine authority, enchantment, spirit binding, or world-contact mechanics. Until those systems are complete, their contribution remains canonical only where another existing rule already supports it; otherwise it requires a properly recorded Provisional Rule under the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+The source must already exist or be established through its own rules. This document does not implement Magic, divine authority, enchantment, spirit binding, or world-contact mechanics. Until those systems are complete, their contribution remains canonical only where another existing rule already supports it; otherwise it requires a properly recorded Provisional Rule under the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md).
 
 ### 3. Select One Mode and Form
 
@@ -500,7 +500,7 @@ When a Weapon Manifestation is attempted:
 9. identify interruption, termination, damage links, and recovery before resolving severe stakes;
 10. resolve world reactions and record the current Profile externally.
 
-If any required element is missing, narrow the expression, seek a valid support, treat an incomplete later-system contribution as Provisional under the Alpha Playtest Rules, or rule that manifestation is presently unavailable. Do not reward ambiguity with the broadest interpretation.
+If any required element is missing, narrow the expression, seek a valid support, treat an incomplete later-system contribution as Provisional under the Provisional Rulings, or rule that manifestation is presently unavailable. Do not reward ambiguity with the broadest interpretation.
 
 The GM may conceal unknown route conditions when fair mystery requires it, but observable evidence must remain consistent. The player should be able to investigate Anchors, compatibility, costs, disruptions, and source behavior through meaningful action.
 
@@ -588,5 +588,5 @@ Each Weapon Soul remains one person with its own consent, source, Anchor, and li
 - [Human Classes and Professions](../human/README.md)
 - [Monster Evolution](../monster-evolution/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

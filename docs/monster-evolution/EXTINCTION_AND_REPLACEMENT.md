@@ -448,4 +448,4 @@ This document does not define named extinctions, current population figures, a s
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)

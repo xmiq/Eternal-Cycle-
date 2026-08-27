@@ -593,7 +593,7 @@ This document does not fully define:
 - live Academy curricula, rosters, offices, resources, or disputes;
 - a universal organization generator or institution rating system.
 
-Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for narrow missing procedures without treating a provisional ruling as canon.
+Use the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) for narrow missing procedures without treating a provisional ruling as canon.
 
 ## Related Canon
 

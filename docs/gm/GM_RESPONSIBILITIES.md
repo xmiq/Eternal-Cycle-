@@ -12,7 +12,7 @@ A **Game Master** represents established world truth, applies canonical owners t
 
 A **GM Responsibility** is a bounded duty, not a source of mechanical authority. Performing a responsibility never permits the GM to waive a requirement, invent an exception, decide a player's deliberate intent, or substitute dramatic preference for causality.
 
-The GM may establish ordinary campaign facts that fit canon. The GM may not establish a fact whose existence would itself create or bypass a canonical mechanic unless the owning rule supports it or the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) permit a narrow, explicit Provisional Rule.
+The GM may establish ordinary campaign facts that fit canon. The GM may not establish a fact whose existence would itself create or bypass a canonical mechanic unless the owning rule supports it or the [Provisional Rulings](PROVISIONAL_RULINGS.md) permit a narrow, explicit Provisional Rule.
 
 ## Ownership
 
@@ -20,7 +20,7 @@ The GM may establish ordinary campaign facts that fit canon. The GM may not esta
 | --- | --- |
 | What the GM is responsible for maintaining | This document |
 | Campaign-wide operating sequence, records, rules hierarchy, and AI guidance | [Game Master Framework](GAME_MASTER_FRAMEWORK.md) |
-| Canonical versus Provisional status | [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) |
+| Canonical versus Provisional status | [Provisional Rulings](PROVISIONAL_RULINGS.md) |
 | Current world conditions and causal change | [World Engine](../world-engine/README.md) |
 | Resolution of specialist mechanics | The applicable Soul, Development, Skill, Monster Evolution, Human, Soul Weapon, Magic, or World Engine owner |
 | Current campaign facts and rulings | External Campaign Record |
@@ -447,7 +447,7 @@ The dedicated Phase 9 procedures and generators define their named operations wi
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Soul Rules Index](../soul/README.md)
 - [Development Rules Index](../progression/README.md)

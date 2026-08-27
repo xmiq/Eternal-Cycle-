@@ -23,10 +23,11 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 4. [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical reads, observer filtering, Current Appearance assembly, representation-tool handoff, and non-canonical rendering freedom.
 5. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
 6. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
-7. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
-8. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
-9. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
-10. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
+7. [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md) - current Engine Status, normal-default Campaign Mode, explicit testing modes, new-campaign creation, and resume compatibility.
+8. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
+9. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
+10. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
+11. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
 ## Runtime-Specific Profiles
 
@@ -52,12 +53,13 @@ These documents sequence existing owners. They do not replace them.
 | What rules and mechanics exist? | the applicable gameplay document under `docs/` together with accepted governance |
 | What reusable GM-approved species or Evolution design exists? | the separately deployed [GM Living Codex](../gm-living-codex/README.md) |
 | What duties and limits apply to the GM? | [GM rules](../gm/README.md) |
+| How does a new or resumed campaign establish lifecycle and mode? | [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md) |
 | What is currently true in one campaign? | the external Campaign Record under the [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) |
 | Which information may reach which observer? | [Truth Layers](../persistence/TRUTH_LAYERS.md) |
 | How is an interaction persisted? | [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md) |
 | How is canonical visual content assembled for depiction? | [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md), reading [Visual Identity](../persistence/VISUAL_IDENTITY.md) and current specialist owners |
 | How are contradictions repaired? | [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md) |
-| How are temporary rulings handled? | [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) |
+| How are temporary rulings handled without changing Campaign Mode? | [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) |
 
 An AI-generated summary, cached context, retrieval result, prediction, or narration has no authority merely because it is recent or fluent. It remains a view, proposal, or lower-authority record until the proper owner establishes or activates it.
 

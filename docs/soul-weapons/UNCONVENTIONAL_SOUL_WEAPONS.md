@@ -558,7 +558,7 @@ The source must define:
 - how containment, suppression, environment, and countermeasures work;
 - why ending one expression does or does not threaten the Weapon Soul.
 
-This document does not create magical matter or a free source for such vessels. Magical contributions must qualify under the relevant [Magic](../magic/README.md) owner; a genuinely missing narrow mechanic may be handled only as Provisional under the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+This document does not create magical matter or a free source for such vessels. Magical contributions must qualify under the relevant [Magic](../magic/README.md) owner; a genuinely missing narrow mechanic may be handled only as Provisional under the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md).
 
 ## Conceptual-Only Claims Do Not Qualify
 
@@ -884,5 +884,5 @@ This is one Mutable and Modular Vessel with Stable Multiplicity, not unlimited s
 - [Monster Evolution](../monster-evolution/README.md)
 - [Hybridization](../monster-evolution/HYBRIDIZATION.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)

@@ -527,7 +527,7 @@ This document does not define:
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)

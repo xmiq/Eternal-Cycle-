@@ -373,7 +373,7 @@ Elapsed time, a project label, or a planned milestone never proves completion.
 
 ## Rules Revisions Provisional Rules and Migration
 
-A [Provisional Rule](../gm/ALPHA_PLAYTEST_RULES.md) is recorded in the active campaign rules profile with scope, owner, dependencies, expiry, and review conditions. Its valid prior outcomes remain Campaign Canon unless explicitly converted or retconned.
+A [Provisional Rule](../gm/PROVISIONAL_RULINGS.md) is recorded in the active campaign rules profile with scope, owner, dependencies, expiry, and review conditions. Its valid prior outcomes remain Campaign Canon unless explicitly converted or retconned.
 
 When Repository Canon changes:
 

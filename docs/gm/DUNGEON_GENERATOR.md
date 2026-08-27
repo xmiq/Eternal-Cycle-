@@ -685,7 +685,7 @@ The World Engine provides every changing population, resource, ecological, econo
 
 Regions, inhabitants, processes, hazards, opportunities, claims, and Pending Consequences may become Encounter Sources when their routes intersect a player decision. Dungeon generation does not schedule or resolve those Encounters.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
 Use a narrow Provisional Rule only where a Canonical Foundation supports the missing claim. Do not use Dungeon generation to implement faction, world-event, Time Skip, Age-transition, or other major unfinished systems.
 

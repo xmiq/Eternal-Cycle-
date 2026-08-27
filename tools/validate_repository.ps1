@@ -542,6 +542,19 @@ else {
     }
 }
 
+$campaignModeHarnessPath = Join-Path $rootPath 'tools/test_release_neutral_campaign_modes.ps1'
+if (-not (Test-Path -LiteralPath $campaignModeHarnessPath)) {
+    Add-ValidationError 'Missing release-neutral campaign-mode regression harness.'
+}
+else {
+    try {
+        & $campaignModeHarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'Release-neutral campaign-mode regression harness failed.'
+    }
+}
+
 $contextPacketTemplatePath = Join-Path $rootPath 'templates/CONTEXT_PACKET_TEMPLATE.md'
 if (-not (Test-Path -LiteralPath $contextPacketTemplatePath)) {
     Add-ValidationError 'Missing Context Packet template.'
@@ -1175,6 +1188,7 @@ Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledg
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
 Write-Output 'FR-017 Portable Persistence: Direct/MCP modes, adapter classes, SQL Server service, receipts, and provenance checked'
+Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {
     Write-Output 'Release state: Eternal Cycle v1.0.0; Phase 12 complete; Phase 13 active'

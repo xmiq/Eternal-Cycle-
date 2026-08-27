@@ -63,6 +63,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/README.md`](docs/gm/README.md) - Game Master rules, operating framework, and reading order.
 - [`docs/gm/GM_RESPONSIBILITIES.md`](docs/gm/GM_RESPONSIBILITIES.md) - bounded GM duties, ownership handoffs, delegation, records, and human/AI parity.
 - [`docs/gm/GAME_MASTER_FRAMEWORK.md`](docs/gm/GAME_MASTER_FRAMEWORK.md) - campaign procedure, authority, continuity, information boundaries, external records, and AI GM guidance.
+- [`docs/gm/CAMPAIGN_BOOTSTRAP.md`](docs/gm/CAMPAIGN_BOOTSTRAP.md) - released-engine status, normal-default campaign creation, explicit testing modes, starting profiles, and resume compatibility.
 - [`docs/gm-living-codex/README.md`](docs/gm-living-codex/README.md) - cross-campaign GM-approved reusable design assets, authority boundaries, consultation rules, and implementation plan.
 - [`docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md`](docs/gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) - lineage templates, inherited expression, Mana equalization, Level 0 Instincts, and stabilization.
 - [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
@@ -85,7 +86,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/gm/WORLD_EVENT_GENERATOR.md`](docs/gm/WORLD_EVENT_GENERATOR.md) - causal event-basis validation, direct event boundaries, footprint, timing, uncertainty, handoffs, and external records.
 - [`docs/gm/TIME_SKIP_PROCEDURE.md`](docs/gm/TIME_SKIP_PROCEDURE.md) - player-authorized compression, Standing Instructions, Review Points, agency pauses, return states, and causal bridges.
 - [`docs/gm/AGE_TRANSITION_PROCEDURE.md`](docs/gm/AGE_TRANSITION_PROCEDURE.md) - evidence-backed Age classification, scoped boundaries, competing claims, targeted revalidation, and return to play.
-- [`docs/gm/ALPHA_PLAYTEST_RULES.md`](docs/gm/ALPHA_PLAYTEST_RULES.md) - safe alpha play with campaign-local provisional rulings.
+- [`docs/gm/PROVISIONAL_RULINGS.md`](docs/gm/PROVISIONAL_RULINGS.md) - release-neutral campaign-local adjudication for narrow gaps in current Canon.
 - [`docs/persistence/README.md`](docs/persistence/README.md) - Campaign Persistence Engine reading order, ownership boundary, and repository scope.
 - [`docs/persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md`](docs/persistence/CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) - persistence as causal memory rather than a storage format or variable snapshot.
 - [`docs/persistence/PERSISTENCE_AUTHORITY.md`](docs/persistence/PERSISTENCE_AUTHORITY.md) - campaign-fact authority from Repository Canon through Current Narration.

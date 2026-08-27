@@ -598,7 +598,7 @@ Existing campaigns adopting [Skill Consolidation](../skills/SKILL_CONSOLIDATION_
 - [Relationship Memory Engine](RELATIONSHIP_MEMORY_ENGINE.md)
 - [Research Engine](RESEARCH_ENGINE.md)
 - [Timeline Engine](TIMELINE_ENGINE.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)

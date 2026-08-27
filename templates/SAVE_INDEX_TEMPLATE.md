@@ -29,6 +29,7 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Campaign Version:** `<active version>`
 - **Repository Version:** `<exact rules revision>`
 - **Rules Profile:** `<Campaign Canon reference>`
+- **Campaign Mode reference:** `<Campaign Canon field and revision>`
 - **Persistence Model Version:** `<logical schema version>`
 - **Storage Format Version:** `<implementation version or not applicable>`
 - **Last confirmed Save Point:** `<stable ID and effective time>`
@@ -46,6 +47,8 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Latest Migration:** `<ID or none>`
 - **Available backup references:** `<IDs and locations>`
 - **Load status:** `<safe | safe with warnings | blocked | unknown>`
+
+The Campaign Mode reference is not a second owner. Campaign Canon owns the current value; the Save Index only provides a stable navigation path to it.
 
 ## Module Registry Entry
 
@@ -88,6 +91,7 @@ A populated Save Index belongs outside the repository. This blank template creat
 - [ ] Every mutable fact family maps to one logical owner; references, caches, summaries, and Historical Snapshots are classified separately.
 - [ ] Versions are explicit and not collapsed into one number.
 - [ ] The active Repository Version matches Campaign Canon or has a pending migration.
+- [ ] Campaign Mode resolves through the Campaign Canon reference; the Save Index does not own a duplicate value.
 - [ ] No module contents are duplicated into the index.
 - [ ] Visibility metadata leaks no protected Secret.
 - [ ] Open transactions, deltas, migrations, conflicts, gaps, and warnings are represented honestly.
@@ -102,6 +106,7 @@ A populated Save Index belongs outside the repository. This blank template creat
 - [Persistence Authority](../docs/persistence/PERSISTENCE_AUTHORITY.md)
 - [Campaign State Model](../docs/persistence/CAMPAIGN_STATE_MODEL.md)
 - [Campaign Canon Template](CAMPAIGN_CANON_TEMPLATE.md)
+- [Campaign Bootstrap](../docs/gm/CAMPAIGN_BOOTSTRAP.md)
 - [Migration Manifest Template](MIGRATION_MANIFEST_TEMPLATE.md)
 - [Validation Report Template](VALIDATION_REPORT_TEMPLATE.md)
 - [Persistence Configuration Template](PERSISTENCE_CONFIGURATION_TEMPLATE.md)

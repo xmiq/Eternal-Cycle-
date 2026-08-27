@@ -16,7 +16,7 @@ The project maintainer approved **Eternal Cycle v1.0.0 — Release 1** on 2026-0
 
 The reusable Gate-event template requested by the project owner is complete and remains part of Phase 11 template coverage.
 
-The owner-authorized alpha-playtest framework exception is complete. It added reusable GM guidance without changing the current phase, the current task, or any pre-existing roadmap status.
+The historical owner-authorized pre-release Alpha Playtest framework exception remains complete. It added reusable GM guidance without changing its contemporary phase or task; the historical name does not classify the current engine or any current campaign.
 
 ## Status Legend
 
@@ -335,13 +335,14 @@ Phase 12 maintenance may clarify, validate, repair, or extend reusable project m
 Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `FR-###` provenance and receives gameplay evidence without allowing gameplay, the Living Codex, an agent, or an empty queue to modify released rules automatically.
 
 - [x] **FR-017 — Portable Persistence Architecture and MCP Persistence Service** — Established first-class `DIRECT` and `MCP` modes; separated runtime-neutral Database Format and Storage Adapters from the ChatGPT profile; added SQLite, DuckDB, local-storage, and Google Drive Direct contracts; added semantic MCP receipt and hidden-backend rules; and implemented a Microsoft SQL Server-backed reference MCP service with staged candidate versions, idempotent commits, validation, activation read-back, and server-owned durability hooks.
+- [x] **Release-neutral Provisional Rulings and campaign status cleanup** — Replaced the live pre-release Alpha owner with Provisional Rulings, established `NORMAL` as the released new-campaign default, made testing modes explicit, preserved First-Life Mode independently, and added legacy-metadata and runtime-bootstrap protections without creating a new Future Revision.
 - [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-017 without renumbering historical entries.
 
 ### Current Position
 
 - **Approved pending objectives:** None.
 - **Selected implementation objective:** None.
-- **Latest completed objective:** FR-017 — Portable Persistence Architecture and MCP Persistence Service.
+- **Latest completed objective:** Release-neutral Provisional Rulings and campaign status cleanup.
 - **Next action:** Continue evidence gathering and maintainer review through the [Future Revisions register](FUTURE_REVISIONS.md); no later objective is selected automatically.
 
 ### Governance

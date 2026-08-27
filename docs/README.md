@@ -121,6 +121,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [GM Principles](gm/GM_PRINCIPLES.md) - system-first adjudication, fair uncertainty, meaningful death, and contextual capability judgments.
 - [Game Master Responsibilities](gm/GM_RESPONSIBILITIES.md) - bounded GM duties, authority limits, ownership handoffs, delegation, record discipline, and human/AI parity.
 - [Game Master Framework](gm/GAME_MASTER_FRAMEWORK.md) - operational responsibilities, authority, session lifecycle, world simulation, continuity, information views, external campaign records, and AI GM guidance.
+- [Campaign Bootstrap](gm/CAMPAIGN_BOOTSTRAP.md) - current engine-status lookup, `NORMAL` campaign default, explicit testing modes, starting-profile separation, persistence handoff, and resume compatibility.
 - [Consequence Resolution](gm/CONSEQUENCE_RESOLUTION.md) - immediate-outcome boundaries, causal consequence layers, proportionality, owner handoffs, persistence, and recording.
 - [Uncertainty Handling](gm/UNCERTAINTY_HANDLING.md) - truth and observer views, uncertainty sources, evidence, method selection, bounded randomization, deferral, fair secrecy, and correction.
 - [Reincarnation Generation](gm/REINCARNATION_GENERATION.md) - world-grounded incarnation candidates, eligibility passes, personhood, Reincarnation Modes, disclosure, selection handoff, and revalidation.
@@ -132,7 +133,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) - World-Event Basis, direct Event Boundaries, footprint, timing, information, uncertainty, consequence handoffs, and external records.
 - [Time Skip Procedure](gm/TIME_SKIP_PROCEDURE.md) - Skip Mandates, Standing Instructions, Return Horizons, Player Agency Checkpoints, causal Simulation Passes, and return bridges.
 - [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) - Transition Bases, Boundary Findings, scoped and disputed periodization, World Reset checkpoints, targeted revalidation, and return to play.
-- [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) - rule-status boundaries and provisional procedures for playing before every roadmap system is complete.
+- [Provisional Rulings](gm/PROVISIONAL_RULINGS.md) - release-neutral rule-status boundaries and campaign-local adjudication for a narrow gap in current Canon.
 
 ## GM Living Codex
 

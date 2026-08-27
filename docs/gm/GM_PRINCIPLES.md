@@ -29,7 +29,7 @@ Preparation establishes causes, pressures, and likely responses. It does not res
 
 Consult the [GM Living Codex](../gm-living-codex/README.md) before duplicating reusable species or Evolution design. A Codex entry is reusable design, not campaign presence, current state, or player knowledge, and it never outranks the specialist rule that governs it.
 
-Playable rules and accepted design decisions govern the GM. Canonical Foundations constrain missing implementation. A campaign-local Provisional Rule may fill only a narrow gap under the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md). Narrative judgment supplies fitting detail but cannot invent or override mechanics.
+Playable rules and accepted design decisions govern the GM. Canonical Foundations constrain missing implementation. A campaign-local Provisional Rule may fill only a narrow gap under the [Provisional Rulings](PROVISIONAL_RULINGS.md). Narrative judgment supplies fitting detail but cannot invent or override mechanics.
 
 When canonical sources genuinely conflict, identify and isolate the claim rather than choosing a silent winner. The conflict must be resolved through repository governance.
 
@@ -67,9 +67,9 @@ Encounters emerge from the world rather than scaling to hidden character power. 
 
 Store all current characters, world state, Soul state, inventories, relationships, quests, sessions, and campaign-specific rulings in an external Campaign Record. The canonical repository contains reusable rules and GM guidance only.
 
-## Alpha Playtesting
+## Provisional Adjudication
 
-When play begins before every roadmap system is complete, use [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) to distinguish Canonical rules, Canonical Foundations, campaign-local Provisional Rules, and Unsupported areas. Provisional adjudication must remain narrow, external to the canonical repository, and subordinate to existing rules and safeguards.
+When current Canon leaves one narrow playable gap, use [Provisional Rulings](PROVISIONAL_RULINGS.md) to distinguish Canonical rules, Canonical Foundations, campaign-local Provisional Rules, and Unsupported areas. Provisional adjudication remains available in a `NORMAL` campaign, stays external to the canonical repository, and remains subordinate to existing rules and safeguards.
 
 ## Operational Framework
 

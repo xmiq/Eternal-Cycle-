@@ -21,7 +21,7 @@ The GM may be authoritative about established world truth while remaining uncert
 | Capability and effect requirements | The applicable specialist owner |
 | Supported world branches and causal sufficiency | [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md) |
 | Immediate and downstream consequence handling | [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) |
-| Provisional design gaps | [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) |
+| Provisional design gaps | [Provisional Rulings](PROVISIONAL_RULINGS.md) |
 | Deliberate player-character intent | The player |
 | Participant permissions for secrecy, randomization, and correction | The affected participants through external campaign agreements |
 | Current uncertainty state and resolution evidence | External Campaign Record |
@@ -263,7 +263,7 @@ Do not disguise correction as a surprise revelation.
 
 ### Provisional Ruling
 
-Use a Provisional Rule only when the uncertainty is actually a narrow design gap and the Alpha Playtest Rules authorize one. The ruling defines campaign-local mechanics; it does not resolve unrelated world uncertainty or become canon through repetition.
+Use a Provisional Rule only when the uncertainty is actually a narrow design gap and the Provisional Rulings authorize one. The ruling defines campaign-local mechanics; it does not resolve unrelated world uncertainty or become canon through repetition.
 
 ## Uncertainty Procedure
 
@@ -604,7 +604,7 @@ This document does not define:
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)

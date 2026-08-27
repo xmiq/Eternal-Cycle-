@@ -692,7 +692,7 @@ Use [NPC Generation](NPC_GENERATOR.md) for leaders, representatives, members, di
 
 Faction policies, agents, operations, traces, obligations, opportunities, and consequences may become Encounter Sources only through actual routes and player decision relevance. Generation does not guarantee contact or conflict.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
 Use narrow Provisional Rules only where completed foundations support them. Do not use faction generation to implement world-event, Time Skip, Age-transition, war, disease, economic, or other major systems by implication.
 

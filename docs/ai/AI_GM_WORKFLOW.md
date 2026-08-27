@@ -31,6 +31,8 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 
 ## End-to-End Cycle
 
+For a new campaign, first follow [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md). A released Eternal Cycle campaign begins in `NORMAL` mode unless the participant explicitly selects `VALIDATION` or `DEVELOPMENT`; an existing campaign preserves the Campaign Mode recorded by Campaign Canon. Historical Alpha terminology is never sufficient to classify either one.
+
 ### 1. Establish the operating authority
 
 1. Identify the exact Repository Version and Campaign Version, plus the configured Codex Version when the campaign uses the GM Living Codex.
@@ -130,7 +132,7 @@ Stop the affected operation when:
 - two authoritative sources conflict;
 - protected information cannot be isolated from an unauthorized view;
 - intent remains materially ambiguous after a reasonable clarification attempt;
-- a Provisional Rule would exceed the Alpha Playtest Rules;
+- a Provisional Rule would exceed the limits in [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md);
 - a save candidate fails a blocking validation check;
 - a concurrent update changes the parent Campaign Version;
 - continuing would rely on a write that has not been confirmed.

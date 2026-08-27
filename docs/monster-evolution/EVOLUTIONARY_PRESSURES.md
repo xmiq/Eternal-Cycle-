@@ -385,5 +385,5 @@ The other Monster Evolution rules use pressure as causal context. They must not 
 - [Retained Instincts](../soul/RETAINED_INSTINCTS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [GM Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md)

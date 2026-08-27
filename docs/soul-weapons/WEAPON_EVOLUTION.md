@@ -565,7 +565,7 @@ Integrating material must address:
 
 Magic may reveal, enable, stabilize, alter, or threaten a route through a completed source. Ritual may coordinate participants and conditions. Neither can waive personhood, consent, route provenance, cost, or ownership.
 
-Until complete Magic rules exist, any campaign-specific magical transition method remains Provisional under the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+Until complete Magic rules exist, any campaign-specific magical transition method remains Provisional under the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md).
 
 ## System Interactions
 
@@ -756,5 +756,5 @@ This document defines Soul Weapon Evolution for standard established Soul Weapon
 - [Adaptive Skills](../skills/ADAPTIVE_SKILLS.md)
 - [Monster Evolution](../monster-evolution/README.md)
 - [Human Classes and Professions](../human/README.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)

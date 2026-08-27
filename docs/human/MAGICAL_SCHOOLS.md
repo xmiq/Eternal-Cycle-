@@ -576,7 +576,7 @@ This document does not define:
 - academy governance, funding, admission, property, and discipline defined in [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-[Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md), and [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) own their completed specialist claims. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) and [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md) own the remaining Human-framework subjects. Any ruling that requires a genuinely unfinished later owner must follow the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md).
+[Mana](../magic/MANA.md), [Magical Affinities](../magic/MAGICAL_AFFINITIES.md), [Spell Formation](../magic/SPELL_FORMATION.md), [Rituals](../magic/RITUALS.md), [Enchanting](../magic/ENCHANTING.md), [Alchemy](../magic/ALCHEMY.md), [Divine Magic](../magic/DIVINE_MAGIC.md), [Forbidden Magic](../magic/FORBIDDEN_MAGIC.md), and [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md) own their completed specialist claims. [Institutions and Academies](INSTITUTIONS_AND_ACADEMIES.md) and [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md) own the remaining Human-framework subjects. Any ruling that requires a genuinely unfinished later owner must follow the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md).
 
 ## Related Canon
 

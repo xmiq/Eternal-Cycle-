@@ -730,7 +730,7 @@ This document does not define:
 - [Soul Weapons](../soul-weapons/README.md)
 - [Magic](../magic/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [World-Event Generator](../gm/WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](../gm/TIME_SKIP_PROCEDURE.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)

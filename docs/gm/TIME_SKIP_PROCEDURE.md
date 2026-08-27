@@ -713,7 +713,7 @@ The Time Skip procedure selects pauses and presentation. It owns none of those t
 
 Use Consequence Resolution, Uncertainty Handling, Reincarnation Generation, World-Event Generation, and other completed generators only within their scopes. Encounter Generation applies when play returns to a material player decision.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
 Use a Provisional Rule only for one narrow missing mechanic supported by completed foundations. Use the [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) for historical classification, and do not use Time Skip to invent template semantics or populate unsupported state by implication.
 
@@ -835,7 +835,7 @@ This document does not define:
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
 - [Encounter Generator](ENCOUNTER_GENERATOR.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)

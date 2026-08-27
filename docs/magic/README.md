@@ -91,4 +91,4 @@ The repository stores no named current source, character Reserve, active spell, 
 
 These files contain playable canonical rules. Accepted governance remains in [Design Decisions](../../design/DECISIONS.md), and canonical vocabulary remains in [Terminology](../../design/TERMINOLOGY.md). Resolve any conflict across both authorities before treating a rule as complete.
 
-Use the [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) for campaign operation and the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) only when a genuinely unfinished later owner is required. A provisional ruling cannot overwrite this completed phase.
+Use the [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) for campaign operation and the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) only when a genuinely unfinished later owner is required. A provisional ruling cannot overwrite this completed phase.

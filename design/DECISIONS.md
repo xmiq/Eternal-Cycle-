@@ -5217,3 +5217,11 @@ DuckDB may serve as a Direct Database Format only through its approved adapter, 
 ## D-1304 — Persistence Mode Changes Are Migrations
 
 Changing between Direct formats or between `DIRECT` and `MCP` requires Backup, Audit, Merge, Validation, provenance, activation, and rollback under Migration and Versioning. Conversation context, summaries, and caches cannot become the migration source when structured Canon exists.
+
+## D-1305 — Released Campaigns Default to Normal Mode
+
+Current version, release, root-entry, and roadmap metadata determine Engine Status; historical Alpha terminology does not. A newly created released campaign defaults to Campaign Mode `NORMAL`, while `VALIDATION` and `DEVELOPMENT` require explicit selection. First-Life Mode and use of a Provisional Rule remain independent and do not reclassify the campaign.
+
+## D-1306 — Legacy Alpha Metadata Preserves Explicit Testing Intent
+
+Legacy campaign metadata that explicitly selected testing remains testing metadata during migration. A generic Alpha label that only reflected the engine's pre-release lifecycle is historical provenance rather than current Campaign Mode. Ambiguous metadata remains Unknown pending source recovery and is never silently reclassified.

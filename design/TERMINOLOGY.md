@@ -10,7 +10,7 @@ A contextual historical era whose materially influential arrangements remain coh
 
 ## Canonical
 
-A rule or accepted governance outcome that is complete and authoritative within its stated scope. It applies normally, cannot be silently overridden by playtest adjudication, and changes only through the repository's design process.
+A rule or accepted governance outcome that is complete and authoritative within its stated scope. It applies normally, cannot be silently overridden by Provisional adjudication, and changes only through the repository's design process.
 
 ## Canonical Foundation
 
@@ -18,15 +18,39 @@ An authoritative set of principles and boundaries for a system whose detailed im
 
 ## Provisional Rule
 
-A temporary, campaign-local ruling used to resolve a narrow gap in incomplete canon. It remains outside the canonical repository, respects Canonical rules and Foundations, states its scope and review condition, and does not become Canonical through use alone.
+A temporary, campaign-local ruling used to resolve a narrow gap in current Canon. It remains outside the canonical repository, respects Canonical rules and Foundations, states its scope and review condition, and does not become Canonical through use alone. Its use does not change Campaign Mode.
 
 ## Unsupported
 
-A rule area that lacks enough Canonical rules or Foundations for reliable adjudication without inventing a major system. Ordinary alpha play should avoid centering on it unless the project owner explicitly authorizes a clearly labelled external experiment.
+A rule area that lacks enough Canonical rules or Foundations for reliable adjudication without inventing a major system. Ordinary campaign play should avoid centering on it unless the project owner explicitly authorizes a clearly labelled external experiment.
 
 ## Campaign Record
 
 The external, play-specific record of characters, bodies, Soul state, inventory, relationships, world state, quests, timelines, sessions, Provisional Rules, and feedback. It may govern established campaign fiction but is not authoritative design canon and does not belong in this repository.
+
+## Engine Status
+
+The current lifecycle state of the Eternal Cycle rules repository, such as released or in development. Current version, release, root-entry, and roadmap metadata determine Engine Status; historical phase names, filenames, and audits do not.
+
+## Campaign Mode
+
+Campaign Canon metadata describing whether a campaign operates as `NORMAL`, `VALIDATION`, or `DEVELOPMENT`. A released new campaign defaults to `NORMAL`; the other modes require explicit selection. Campaign Mode is independent from Engine Status, First-Life Mode, and use of a Provisional Rule.
+
+## Normal Campaign
+
+A campaign whose Campaign Mode is `NORMAL`, the default under released Eternal Cycle rules. It may use Provisional Rules without becoming a testing campaign.
+
+## Validation Campaign
+
+An explicitly selected campaign whose Campaign Mode is `VALIDATION`, used for playtesting, regression checks, or structured evidence gathering without changing Repository Canon automatically.
+
+## Development Campaign
+
+An explicitly selected campaign whose Campaign Mode is `DEVELOPMENT`, used for authorized experimental procedures or unfinished external work without granting those procedures canonical authority.
+
+## First-Life Mode
+
+An optional Reincarnation setup profile in which the continuing Soul begins without completed prior Lives. It is a gameplay rule independent from Engine Status and Campaign Mode; a Normal Campaign may use it.
 
 ## Design Feedback
 
@@ -4540,10 +4564,6 @@ Information, belief, memory, suspicion, theory, inference, or misinformation att
 
 The procedure that converts objective resolution into a justified player-facing representation by applying sensory access, Entity Knowledge, uncertainty, and protected-information boundaries.
 
-## Provisional Campaign Rule
-
-A narrow, explicit, identifiable, campaign-scoped ruling used under the Alpha Playtest Rules. It does not become Repository Canon, Living Codex canon, or a Future Revision through use.
-
 ## Simulation Authority
 
 The GM Simulation Engine's responsibility for objective campaign state and causal change, subordinate to Immutable Rules and distinct from presentation authority.
@@ -4558,11 +4578,15 @@ A top-level chronological development stage in the one authoritative project roa
 
 ## Phase 12
 
-The active Gameplay Validation & Maintenance Project Phase following completion of Phases 0–11. It remains active until an explicit project-maintainer release-readiness decision.
+The completed Gameplay Validation & Maintenance Project Phase that followed Phases 0–11 and closed through the maintainer-authorized Release 1 gate.
 
 ## Phase 12 Objective
 
 An owner-authorized body of gameplay-validation or maintenance work listed within Phase 12 before its rolling Future Revisions item.
+
+## Phase 13
+
+The active owner-mediated post-release Future Revisions Project Phase. It accepts evidence and explicitly authorized maintenance without allowing gameplay or historical lifecycle wording to modify Canon automatically.
 
 ## Future Revision ID
 

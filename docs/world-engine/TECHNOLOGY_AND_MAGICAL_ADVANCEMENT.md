@@ -652,7 +652,7 @@ This document does not define:
 - [Magic](../magic/README.md)
 - [Magic and the World Engine](../magic/WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)

@@ -546,7 +546,7 @@ This document defines conflict detection, classification, containment, authority
 - [Timeline Engine](TIMELINE_ENGINE.md)
 - [Migration and Versioning](MIGRATION_AND_VERSIONING.md)
 - [Uncertainty Handling](../gm/UNCERTAINTY_HANDLING.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Reincarnation](../soul/REINCARNATION.md)
 - [Design Decisions](../../design/DECISIONS.md)

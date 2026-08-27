@@ -550,7 +550,7 @@ This document does not fully define:
 - class transformation defined in [Class Evolution](CLASS_EVOLUTION.md);
 - final limits defined in [Limits of Human Progression](LIMITS_OF_HUMAN_PROGRESSION.md).
 
-The linked Human rules and the World Engine own those subjects. Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for missing campaign procedures.
+The linked Human rules and the World Engine own those subjects. Use the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) for missing campaign procedures.
 
 ## Related Canon
 

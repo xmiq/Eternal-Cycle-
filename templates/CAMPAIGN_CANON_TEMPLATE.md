@@ -20,6 +20,7 @@ A populated Rules Profile belongs outside the repository. This blank template cr
 3. Label Provisional Rules explicitly and give each a review route.
 4. Record retcons and conversions through authorized procedures; never edit history silently.
 5. Keep Meta preferences from becoming in-world truth.
+6. Default a newly created released campaign to `NORMAL`; record `VALIDATION` or `DEVELOPMENT` only when explicitly selected.
 
 ## Required Fields
 
@@ -28,6 +29,8 @@ A populated Rules Profile belongs outside the repository. This blank template cr
 - **Continuity boundary:** `<included play continuity>`
 - **Active Repository Version:** `<exact revision>`
 - **Campaign Version:** `<active version>`
+- **Campaign Mode:** `<NORMAL | VALIDATION | DEVELOPMENT>`
+- **Mode authority:** `<default NORMAL | explicit selection and source>`
 - **Adopted premises:** `<campaign commitments permitted by canon>`
 - **Selected options:** `<rule, chosen option, scope, and source>`
 - **Authority and approvers:** `<who may establish or change Campaign Canon>`
@@ -77,7 +80,10 @@ A populated Rules Profile belongs outside the repository. This blank template cr
 - [ ] Repository Canon remains the higher authority.
 - [ ] No repository rule is copied or silently rewritten.
 - [ ] Campaign choices are permitted, scoped, versioned, and traceable.
+- [ ] Campaign Mode is present; new campaigns use `NORMAL` unless another supported mode was explicitly selected.
 - [ ] Provisional Rules are narrow, explicit, temporary, and reviewable.
+- [ ] A Provisional Rule does not change Campaign Mode.
+- [ ] First-Life Mode, when selected, is independent from Campaign Mode.
 - [ ] Retcons and conversions are authorized and migrated rather than silent.
 - [ ] Meta information does not enter Campaign Canon or world truth.
 - [ ] Consent agreements preserve agency and revocation where applicable.
@@ -87,5 +93,6 @@ A populated Rules Profile belongs outside the repository. This blank template cr
 - [Persistence Authority](../docs/persistence/PERSISTENCE_AUTHORITY.md)
 - [Truth Layers](../docs/persistence/TRUTH_LAYERS.md)
 - [Continuity Resolution](../docs/persistence/CONTINUITY_RESOLUTION.md)
-- [Alpha Playtest Rules](../docs/gm/ALPHA_PLAYTEST_RULES.md)
+- [Campaign Bootstrap](../docs/gm/CAMPAIGN_BOOTSTRAP.md)
+- [Provisional Rulings](../docs/gm/PROVISIONAL_RULINGS.md)
 - [Save Index Template](SAVE_INDEX_TEMPLATE.md)

@@ -645,4 +645,4 @@ This document does not define:
 - [Development Rules Index](../progression/README.md)
 - [Skill Engine Index](../skills/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)

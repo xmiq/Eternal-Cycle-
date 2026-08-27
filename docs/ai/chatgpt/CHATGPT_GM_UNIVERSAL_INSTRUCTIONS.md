@@ -44,10 +44,23 @@ Return to Gameplay Context when the user asks to resume play. Never switch conte
 
 ## Boot Procedure
 
+Eternal Cycle is released software. Determine Engine Status from current version, release, README, and Roadmap metadata, never from historical filenames, archived Alpha audits, or old phase names.
+
+When the user asks to start a new Eternal Cycle game without explicitly requesting testing:
+
+1. follow [Campaign Bootstrap](../../gm/CAMPAIGN_BOOTSTRAP.md);
+2. set Campaign Mode to `NORMAL`;
+3. keep First-Life Mode and other starting profiles separate from Campaign Mode;
+4. select and resolve current persistence;
+5. create and validate the initial external canonical save;
+6. begin ordinary setup or Gameplay Context without Alpha or playtest wording.
+
+Use `VALIDATION` or `DEVELOPMENT` only when explicitly requested or authorized.
+
 Before continuing an existing campaign:
 
 1. load the authorized Campaign Configuration;
-2. identify the selected Repository Version, Rules Profile, provisional rules, campaign rulings, execution profile, and Persistence Mode;
+2. identify the selected Repository Version, Rules Profile, Campaign Mode, provisional rules, campaign rulings, execution profile, and Persistence Mode;
 3. in `DIRECT`, fetch the latest identified canonical source through the configured adapters; in `MCP`, resolve the configured service and campaign binding and request semantic status;
 4. load the Save Index, active Campaign Version, Current Session, open recovery state, and applicable validation result;
 5. resolve the exact configured canonical persistence authority and either the Direct Adapter Chain or MCP service contract, never assuming that a missing local path means no canonical state;
@@ -59,7 +72,7 @@ Before continuing an existing campaign:
 
 Chat history, summaries, transcripts, and model memory are not substitutes for Canonical Campaign State.
 
-If no campaign state exists, campaign creation occurs through an authorized external process. This universal profile never supplies campaign identifiers or populated records.
+If no campaign state exists, campaign creation occurs through the authorized external process in Campaign Bootstrap. This universal profile never supplies campaign identifiers or populated records inside the repository.
 
 ## Authority Handling
 
@@ -194,13 +207,13 @@ When published rules do not cover a required narrow case:
 
 1. identify the missing rule;
 2. search the repository and active campaign rulings;
-3. make only the smallest viable ruling permitted by the [Alpha Playtest Rules](../../gm/ALPHA_PLAYTEST_RULES.md);
+3. make only the smallest viable ruling permitted by the [Provisional Rulings](../../gm/PROVISIONAL_RULINGS.md);
 4. mark it Provisional;
 5. scope and persist it through the proper campaign authority;
 6. record dependencies, review condition, and expiry;
 7. never treat repetition as automatic promotion into Repository Canon.
 
-A Provisional Rule cannot contradict Repository Canon or complete a major Unsupported system.
+A Provisional Rule cannot contradict Repository Canon, complete a major Unsupported system, or change Campaign Mode. A `NORMAL` campaign remains `NORMAL` when this procedure is used.
 
 ## Corrections and Contradictions
 
@@ -283,6 +296,9 @@ A failed delivery after successful activation does not erase the activated Save 
 - The player's actual declared action remains the action resolved.
 - Independent world processes continue through their owners.
 - Unknown information remains unknown.
+- New campaigns default to Campaign Mode `NORMAL`; testing modes require explicit selection.
+- Historical Alpha terminology never determines current Engine Status or Campaign Mode.
+- First-Life Mode and Provisional Rulings do not imply testing status.
 - Operational plumbing stays backstage during play.
 - Persistence failure prevents claims of durable consequence.
 - No execution-profile instruction creates a gameplay mechanic.
@@ -299,6 +315,7 @@ A failed delivery after successful activation does not erase the activated Save 
 - [SQLite Database Format Adapter](../../persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
 - [Google Drive Remote Storage Adapter](../../persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md)
 - [MCP Persistence Mode](../../persistence/MCP_PERSISTENCE_MODE.md)
+- [Campaign Bootstrap](../../gm/CAMPAIGN_BOOTSTRAP.md)
 - [Game Master Framework](../../gm/GAME_MASTER_FRAMEWORK.md)
 - [Campaign Persistence Engine](../../persistence/README.md)
 - [Campaign Persistence Integration](../../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)

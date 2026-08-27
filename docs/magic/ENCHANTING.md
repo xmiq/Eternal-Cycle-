@@ -807,4 +807,4 @@ It is self-regulating, not infinite. Weeks of clouded Mana weather deplete it, m
 - [Weapon Evolution](../soul-weapons/WEAPON_EVOLUTION.md)
 - [Magic and the World Engine](WORLD_ENGINE_INTERACTIONS.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)

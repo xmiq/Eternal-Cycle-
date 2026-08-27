@@ -221,7 +221,7 @@ When a class label matters, the GM should ask:
 5. **Who recognizes the claim, and why?** Recognition must have an audience, evidence, and possible error.
 6. **What consequence follows here?** Grant only the access, expectation, opportunity, obligation, or reaction established by current causality.
 
-If canon does not yet define a detailed class structure, use a [provisional ruling](../gm/ALPHA_PLAYTEST_RULES.md) rather than inventing a permanent class mechanic.
+If canon does not yet define a detailed class structure, use a [provisional ruling](../gm/PROVISIONAL_RULINGS.md) rather than inventing a permanent class mechanic.
 
 ## Worked Examples
 

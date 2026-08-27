@@ -295,7 +295,7 @@ Until complete Magic and World Engine rules exist, every magical ecological clai
 - relevant environmental dependencies;
 - effects of scarcity, excess, contamination, or interruption;
 - observable signs and uncertainty;
-- which parts remain Provisional during alpha play.
+- which parts remain Provisional during campaign play.
 
 Ecology cannot define an unrestricted spell, mana economy, divine authority, Soul effect, or universal magical law. A creature that feeds on mana does not own every spell stored in that mana, and a creature that consumes spiritual residue does not consume the associated soul by implication.
 
@@ -451,5 +451,5 @@ The other Monster Evolution rules may use these ecological foundations without t
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [GM Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md)

@@ -7,8 +7,8 @@ This procedure establishes a valid, bounded starting context before an AI GM pre
 ## Document Control
 
 - **Owner:** this document owns the AI session-start sequence
-- **Primary authorities:** [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md) and [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- **Dependencies:** Save Index, Campaign Canon, Current Session, active versions, visibility, relevant records, and latest validation
+- **Primary authorities:** [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md), [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md), and [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
+- **Dependencies:** current engine status, Campaign Mode, Save Index, Campaign Canon, Current Session, active versions, visibility, relevant records, and latest validation
 - **Extensions:** storage-specific loading, retrieval indexes, participant interfaces, and session handoff tools
 - **Consumers:** AI GM workflow, supervising GM, session interfaces, and load validation
 - **Repository boundary:** no populated session brief, participant identity, campaign title, current location, character state, or Secret belongs here
@@ -23,7 +23,9 @@ Before this procedure begins, the operator needs authorized access to:
 - the participant-facing channel and its visibility boundary;
 - any open Current Session or handoff state.
 
-If no campaign exists, campaign creation occurs through an external campaign process using the canonical templates. This procedure does not populate those templates inside the repository.
+If no campaign exists, follow [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md) through an external campaign process using the canonical templates. A released new campaign defaults to Campaign Mode `NORMAL` unless the user explicitly requests `VALIDATION` or `DEVELOPMENT`. This procedure does not populate those templates inside the repository.
+
+Historical Alpha wording, archived readiness audits, and old project phases do not establish current Engine Status or Campaign Mode.
 
 ## Start Procedure
 
@@ -32,6 +34,7 @@ If no campaign exists, campaign creation occurs through an external campaign pro
 Read the Save Index and confirm:
 
 - Campaign ID and continuity boundary;
+- Campaign Mode and its authoritative Rules Profile reference;
 - Repository Version, Campaign Version, Persistence Model Version, and Storage Format Version;
 - active Rules Profile;
 - last confirmed Save Point;
@@ -129,6 +132,8 @@ For a shared-GM or interrupted-session handoff, verify the handoff against the a
 
 For a new AI implementation taking over an existing campaign, treat platform memory as optional evidence. Load the Campaign Record through the same procedure used by any other GM.
 
+Do not reclassify a resumed campaign from historical repository wording. An existing `NORMAL` campaign remains `NORMAL` unless authoritative campaign governance records a mode change.
+
 ## Safeguards
 
 - No session starts from model memory alone.
@@ -137,10 +142,12 @@ For a new AI implementation taking over an existing campaign, treat platform mem
 - Retrieval scope does not alter visibility or authority.
 - Opening narration cannot repair a stale or contradictory save.
 - Session preparation cannot preselect player choices or encounter outcomes.
+- Provisional Rulings and First-Life Mode do not imply a testing campaign.
 
 ## Related Documents
 
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
+- [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md)
 - [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)

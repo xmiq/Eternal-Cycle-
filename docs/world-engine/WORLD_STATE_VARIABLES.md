@@ -273,7 +273,7 @@ When elapsed time, an action, or an external event may change world state:
 12. **Save externally.** Write current values, named facts, and pending consequences only to the Campaign Record.
 13. **Set the next review condition.** Name the elapsed interval, threshold, action, discovery, or disruption that warrants another update.
 
-If canon lacks a domain rule needed to determine the outcome, use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) narrowly. Do not invent a universal fallback model.
+If canon lacks a domain rule needed to determine the outcome, use the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) narrowly. Do not invent a universal fallback model.
 
 ## Derived Variables and Indices
 
@@ -423,7 +423,7 @@ Those subjects remain with their named owners or later roadmap tasks.
 - [Human Classes and Professions](../human/README.md)
 - [Soul Weapons](../soul-weapons/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Terminology](../../design/TERMINOLOGY.md)
 - [Roadmap](../../design/ROADMAP.md)

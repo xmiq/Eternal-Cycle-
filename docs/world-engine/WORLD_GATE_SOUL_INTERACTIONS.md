@@ -576,4 +576,4 @@ This document does not define:
 - [Monster Evolution](../monster-evolution/README.md)
 - [Magic](../magic/README.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)

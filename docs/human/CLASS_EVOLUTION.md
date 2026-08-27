@@ -501,7 +501,7 @@ This document does not fully define:
 - a universal historical taxonomy or formula for deciding Class identity;
 - live Class histories, branch rosters, disputes, or current recognition.
 
-Use the [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) for narrow missing procedures while preserving these ownership boundaries.
+Use the [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) for narrow missing procedures while preserving these ownership boundaries.
 
 ## Related Canon
 

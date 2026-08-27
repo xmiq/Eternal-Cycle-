@@ -165,7 +165,7 @@ Groups, populations, factions, and infrastructure may remain aggregates. They be
 
 ## Provisional Campaign Rules and Development
 
-A [Provisional Rule](../gm/ALPHA_PLAYTEST_RULES.md#provisional) is explicit, campaign-scoped, identifiable, reviewable, and stored with campaign state or metadata. It may resolve a narrow gap but does not become Immutable Rules, Living Codex canon, repository policy, or a Future Revision through use.
+A [Provisional Rule](../gm/PROVISIONAL_RULINGS.md#provisional) is explicit, campaign-scoped, identifiable, reviewable, and stored with campaign state or metadata. It may resolve a narrow gap but does not become Immutable Rules, Living Codex canon, repository policy, or a Future Revision through use.
 
 ```text
 Gameplay reveals an issue

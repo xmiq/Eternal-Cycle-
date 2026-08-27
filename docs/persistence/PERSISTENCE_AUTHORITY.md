@@ -342,7 +342,7 @@ Those procedures are owned by their dedicated documents; [blank templates](../..
 - [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
 - [Uncertainty Handling](../gm/UNCERTAINTY_HANDLING.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

@@ -451,7 +451,7 @@ Before approving or retaining an Evolution Claim:
 - **Different Owner:** the result belongs to Skill, Development, Mutation, Hybridization, magic, Soul, society, equipment, or world state.
 - **Consolidate:** an existing route or form already represents the result.
 - **Invalid Claim:** provenance, compatibility, transition, consequence, or agency fails and no narrower truthful result remains.
-- **Provisional Ruling:** canon is insufficient during alpha play; use [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md) without making the ruling permanent automatically.
+- **Provisional Ruling:** current Canon is insufficient for one narrow claim; use [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md) without making the ruling permanent or changing Campaign Mode automatically.
 
 ## Stress Tests
 
@@ -535,5 +535,5 @@ This document does not define species, branches, live forms, route availability,
 - [Soul Engine Safeguards](../soul/SOUL_ENGINE_SAFEGUARDS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md)
-- [Alpha Playtest Rules](../gm/ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Evolution Tree Template](../../templates/EVOLUTION_TREE_TEMPLATE.md)

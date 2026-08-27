@@ -619,9 +619,9 @@ Use:
 
 No generator may create historical significance simply because a transition would be interesting.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
-Where a narrow campaign-specific mechanic remains unresolved, use the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md). A blank record format does not make the Age classification provisional or authorize a missing mechanic.
+Where a narrow campaign-specific mechanic remains unresolved, use the [Provisional Rulings](PROVISIONAL_RULINGS.md). A blank record format does not make the Age classification provisional or authorize a missing mechanic.
 
 ## Uncertainty and Randomness
 
@@ -785,7 +785,7 @@ This document does not define:
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Reincarnation Generation](REINCARNATION_GENERATION.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Ages and World Resets](../world-engine/AGES_AND_WORLD_RESETS.md)
 - [World Engine Overview](../world-engine/WORLD_ENGINE_OVERVIEW.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)

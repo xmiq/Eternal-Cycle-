@@ -23,6 +23,8 @@ The Campaign Persistence Engine defines what campaign information must persist, 
 
 Conversation context, summaries, transcripts, caches, and model memory may help locate evidence. They never silently replace Canonical Campaign State.
 
+Current release/version metadata determines Engine Status. An AI runtime must not infer that Eternal Cycle or a campaign is Alpha, a playtest, or experimental from historical filenames, archived audits, legacy phase names, or the availability of Provisional Rulings.
+
 ## Runtime Layers
 
 The runtime has seven distinct layers.
@@ -71,12 +73,25 @@ Use the Campaign Persistence Authority Chain. A later message, newer cache, flue
 
 An operational result establishes only what it proves. A successful upload does not prove semantic validity; a valid local transaction does not prove remote deployment; a generated response does not prove persistence. Every stage must satisfy its own owner and required validation.
 
+## New-Campaign Bootstrap Flow
+
+When the user asks to start a new Eternal Cycle game and does not explicitly request testing, the runtime:
+
+1. reads the current `VERSION`, release metadata, root README status, and Roadmap;
+2. classifies the engine as Released under current repository metadata;
+3. selects Campaign Mode `NORMAL` under [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md);
+4. keeps First-Life Mode, Reincarnation setup, and other starting profiles independent from Campaign Mode;
+5. resolves Campaign Configuration and creates external canonical state through the configured persistence mode;
+6. validates the initial Save Point before entering state-changing Gameplay Context.
+
+`VALIDATION` and `DEVELOPMENT` require explicit campaign authority. A Provisional Rule never changes Campaign Mode.
+
 ## Existing-Campaign Boot Flow
 
 Before dependent play, an AI runtime:
 
 1. loads Campaign Configuration through an authorized channel;
-2. identifies the selected Repository Version, Rules Profile, AI Execution Profile, and Persistence Mode;
+2. identifies the selected Repository Version, Rules Profile, Campaign Mode, AI Execution Profile, and Persistence Mode;
 3. in `DIRECT`, resolves the complete adapter chain and asks the canonical Storage Adapter for the latest identified source;
 4. in `MCP`, resolves the configured service and campaign binding, then requests semantic status and canonical records without opening a database;
 5. reads the Save Index, active Campaign Version, Current Session, and open recovery, migration, continuity, or validation state;
@@ -190,6 +205,9 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 
 - The AI GM does not own the rules or campaign state.
 - Model memory and conversation context are non-authoritative.
+- Current release metadata outranks historical lifecycle wording during bootstrap.
+- A new campaign defaults to `NORMAL`; testing Campaign Modes require explicit selection.
+- Provisional Rulings and First-Life Mode do not change Campaign Mode.
 - Campaign Configuration selects implementations but does not become a fact owner.
 - Direct Adapters and MCP persistence services carry and verify state; they do not interpret mechanics.
 - Campaign Configuration selects exactly one Persistence Mode; a failure never authorizes silent fallback.

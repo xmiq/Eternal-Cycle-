@@ -242,7 +242,7 @@ If no player decision is due, continue world simulation or present ordinary desc
 
 ### 7. Canonical Support
 
-The intended play can be adjudicated through Canonical rules, a Canonical Foundation plus narrow [Provisional Ruling](ALPHA_PLAYTEST_RULES.md#provisional-ruling-procedure), or an explicitly approved experiment.
+The intended play can be adjudicated through Canonical rules, a Canonical Foundation plus narrow [Provisional Ruling](PROVISIONAL_RULINGS.md#provisional-ruling-procedure), or an explicitly approved experiment.
 
 An Encounter must not quietly require an unsupported major subsystem.
 
@@ -665,9 +665,9 @@ Magic uses established Mana relations, magical access, Skills, embodiment, sourc
 
 The World Engine supplies populations, resources, economies, ecology, faction action, conflict, disease, advancement, Dungeon activity, Stability, Ages, Gates, and causal persistence. The Encounter generator selects a decision-relevant intersection; it does not rewrite the underlying state.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
-When a narrow unresolved claim is supported by a Canonical Foundation, use the [Provisional Ruling Procedure](ALPHA_PLAYTEST_RULES.md#provisional-ruling-procedure). Label the ruling externally and do not let an Encounter quietly implement a later generator or major system.
+When a narrow unresolved claim is supported by a Canonical Foundation, use the [Provisional Ruling Procedure](PROVISIONAL_RULINGS.md#provisional-ruling-procedure). Label the ruling externally and do not let an Encounter quietly implement a later generator or major system.
 
 ## Worked Examples
 
@@ -777,7 +777,7 @@ This document does not define:
 - [Game Master Responsibilities](GM_RESPONSIBILITIES.md)
 - [Consequence Resolution](CONSEQUENCE_RESOLUTION.md)
 - [Uncertainty Handling](UNCERTAINTY_HANDLING.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
 - [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md)

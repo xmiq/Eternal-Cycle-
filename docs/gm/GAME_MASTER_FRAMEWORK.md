@@ -10,7 +10,7 @@ The framework applies to any campaign format, including solo play, group play, l
 
 The Game Master represents a persistent causal world, adjudicates player intent through Repository Canon, preserves established campaign truth, and presents meaningful uncertainty without deciding the player's deliberate choices.
 
-The GM may create people, places, situations, motives, sensory detail, and causal developments that fit established rules and campaign facts. The GM does not silently invent mechanics. When canon leaves a narrow playable gap, the GM uses the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md) and labels any Provisional Rule explicitly. When the gap would require a major unsupported system, the GM narrows, delays, or discusses the situation rather than disguising invention as canon.
+The GM may create people, places, situations, motives, sensory detail, and causal developments that fit established rules and campaign facts. The GM does not silently invent mechanics. When canon leaves a narrow playable gap, the GM uses the [Provisional Rulings](PROVISIONAL_RULINGS.md) and labels any Provisional Rule explicitly. When the gap would require a major unsupported system, the GM narrows, delays, or discusses the situation rather than disguising invention as canon.
 
 All changing campaign information belongs in an external [Campaign Record](../../design/TERMINOLOGY.md#campaign-record). No current character, live world state, inventory, quest, relationship, session history, or campaign-specific ruling belongs in this repository.
 
@@ -41,7 +41,7 @@ Use this order of authority for every material adjudication:
 
 1. **Repository Canon.** Playable rules under `docs/` and accepted governance in `design/DECISIONS.md` jointly govern their stated scopes. Neither silently overrides the other.
 2. **Canonical Foundations.** A completed foundation constrains play even when a later procedure, content set, generator, or subsystem remains unfinished.
-3. **Provisional Rules.** A narrow, explicit, campaign-local ruling may fill only a remaining gap under the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md).
+3. **Provisional Rules.** A narrow, explicit, campaign-local ruling may fill only a remaining gap under the [Provisional Rulings](PROVISIONAL_RULINGS.md).
 4. **Narrative judgment.** The GM may choose plausible description, pacing, sequencing, ordinary detail, and actor response within the first three layers. Narrative judgment cannot create a new mechanic or reverse an established rule.
 
 **Unsupported** is not a lower source of authority. It is a warning that the available canon cannot support reliable adjudication without inventing a major system. Ordinary play should avoid centering on such a claim unless the project owner authorizes a clearly labelled external experiment.
@@ -158,7 +158,7 @@ The repository remains unchanged by ordinary campaign play.
 
 ### 8. Extract Optional Playtest Feedback
 
-After the state is safely recorded, note reusable design observations separately. A campaign outcome, preference, or temporary ruling is not canon. Use the feedback flow defined below and in the [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md).
+After the state is safely recorded, note reusable design observations separately. A campaign outcome, preference, or temporary ruling is not canon. Use the feedback flow defined below and in the [Provisional Rulings](PROVISIONAL_RULINGS.md).
 
 ## World Simulation
 
@@ -327,7 +327,7 @@ Use a Provisional Rule only when:
 - the ruling can remain campaign-local and externally recorded;
 - its scope, dependencies, expiry, and review condition can be stated honestly.
 
-Follow the full [Provisional Ruling Procedure](ALPHA_PLAYTEST_RULES.md#provisional-ruling-procedure). Do not reproduce a parallel procedure in a campaign record or promote repeated use into canon. If the answer would require a broad tree, economy, cosmology, generator, or progression system, classify it as Unsupported and re-scope or seek explicit authorization.
+Follow the full [Provisional Ruling Procedure](PROVISIONAL_RULINGS.md#provisional-ruling-procedure). Do not reproduce a parallel procedure in a campaign record or promote repeated use into canon. If the answer would require a broad tree, economy, cosmology, generator, or progression system, classify it as Unsupported and re-scope or seek explicit authorization.
 
 ## Improvisation
 
@@ -438,7 +438,7 @@ It must never store that live state inside the canonical repository. If it canno
 
 When an AI GM detects a contradiction, it should identify the conflicting facts or rules, preserve unaffected play, and request or propose an explicit correction. It should not conceal the contradiction with new lore.
 
-When canon is insufficient, it should ask for clarification or propose the narrowest clearly labelled Provisional Rule permitted by the campaign's playtest authority. It must not create an unseen general mechanic, falsely describe an unsupported claim as canonical, or use uncertainty as permission to force a preferred narrative.
+When canon is insufficient, it should ask for clarification or propose the narrowest clearly labelled Provisional Rule permitted by campaign authority. It must not create an unseen general mechanic, falsely describe an unsupported claim as canonical, change Campaign Mode implicitly, or use uncertainty as permission to force a preferred narrative.
 
 ## Framework Safeguards
 
@@ -446,7 +446,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - GM authority over world truth does not grant authority over the player's deliberate choices.
 - Hidden information must have prior causal existence before materially changing an outcome.
 - A Campaign Record cannot amend Repository Canon.
-- Repository Canon cannot silently rewrite established campaign history; conversion follows the alpha continuity procedure where applicable.
+- Repository Canon cannot silently rewrite established campaign history; conversion follows the [Provisional Rulings](PROVISIONAL_RULINGS.md#continuity-when-canon-changes) procedure where applicable.
 - Narrative importance does not create immunity, guaranteed success, guaranteed failure, or universal recognition.
 - Simulation detail is a tool for continuity, not proof that the GM must model every event.
 - Improvisation cannot complete a later roadmap system or change its status.
@@ -468,7 +468,7 @@ When canon is insufficient, it should ask for clarification or propose the narro
 - [World-Event Generator](WORLD_EVENT_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [Design Philosophy](../core/DESIGN_PHILOSOPHY.md)
 - [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - [Canonical Rules Map](../README.md)

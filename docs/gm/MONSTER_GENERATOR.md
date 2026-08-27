@@ -695,7 +695,7 @@ Populations, ecology, resources, economies, factions, war, disease, advancement,
 
 A completed profile may become an Encounter Source when its route and current activity intersect a player decision. Generation does not make contact inevitable, require hostility, or determine the Encounter Frame.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
 If a narrow species or capability detail lacks complete implementation but has a Canonical Foundation, label the smallest necessary Provisional Rule externally. Do not use the Monster generator to establish a reusable species system, universal formula, or unsupported major mechanic.
 

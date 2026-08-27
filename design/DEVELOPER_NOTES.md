@@ -766,7 +766,7 @@ The roadmap now names **Define faction behaviour**. Do not begin it until the co
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/world-engine/README.md`
 - `docs/world-engine/WORLD_ENGINE_OVERVIEW.md`
 - `docs/world-engine/ECOLOGY_AND_MIGRATION.md` (new)
@@ -1251,7 +1251,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/CONSEQUENCE_RESOLUTION.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
 - `docs/gm/GM_RESPONSIBILITIES.md`
@@ -1334,7 +1334,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
 - `docs/gm/GM_RESPONSIBILITIES.md`
@@ -1420,7 +1420,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
 - `docs/gm/GM_RESPONSIBILITIES.md`
@@ -1509,7 +1509,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
 - `docs/gm/GM_RESPONSIBILITIES.md`
@@ -1597,7 +1597,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/DUNGEON_GENERATOR.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
@@ -1687,7 +1687,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/CONSEQUENCE_RESOLUTION.md`
 - `docs/gm/DUNGEON_GENERATOR.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
@@ -1786,7 +1786,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/CONSEQUENCE_RESOLUTION.md`
 - `docs/gm/ENCOUNTER_GENERATOR.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
@@ -1884,7 +1884,7 @@ The interrupted ecology-and-migration checkpoint was subsequently validated and 
 - `design/ROADMAP.md`
 - `design/TERMINOLOGY.md`
 - `docs/README.md`
-- `docs/gm/ALPHA_PLAYTEST_RULES.md`
+- `docs/gm/PROVISIONAL_RULINGS.md`
 - `docs/gm/CONSEQUENCE_RESOLUTION.md`
 - `docs/gm/GAME_MASTER_FRAMEWORK.md`
 - `docs/gm/GM_PRINCIPLES.md`
@@ -2910,3 +2910,26 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 ### Exact Resume Point
 
 After the FR-017 commit, return to owner-mediated Future Revision intake. Do not select or infer FR-018.
+
+## Phase 13 Maintenance Checkpoint — Release-Neutral Campaign Status
+
+### Completed Maintenance
+
+- Replaced the live Alpha Playtest owner with release-neutral Provisional Rulings.
+- Added Campaign Bootstrap with `NORMAL` as the released new-campaign default and explicit `VALIDATION` and `DEVELOPMENT` modes.
+- Preserved First-Life Mode independently from Campaign Mode.
+- Updated GM, AI, campaign-template, registry, terminology, decision, roadmap, changelog, and navigation surfaces.
+- Preserved historical Alpha and playtest evidence while removing stale operational authority.
+
+### Files and Validation
+
+- Added `docs/gm/CAMPAIGN_BOOTSTRAP.md`, `docs/gm/PROVISIONAL_RULINGS.md`, `design/audits/RELEASE_NEUTRAL_CAMPAIGN_STATUS_AUDIT.md`, and `tools/test_release_neutral_campaign_modes.ps1`.
+- Removed `docs/gm/ALPHA_PLAYTEST_RULES.md` after preserving its reusable provisional-adjudication and First-Life material in the new owner.
+- Focused campaign-mode regression harness: pass, 17 assertions.
+- Full repository validation: pass across 262 Markdown files, 6,882 relative links, 158 anchors, 174 indexed canonical documents, 43 templates, 1,211 terminology checks, 189 roadmap tasks, and 17 Future Revision entries.
+- No campaign data, schema migration, gameplay mechanic, release tag, version change, or `FR-018` was added.
+
+### Exact Resume Point
+
+1. Review the complete diff, commit the maintenance, and generate `Eternal Cycle.zip`.
+2. Return to owner-mediated Phase 13 Future Revision intake without selecting another objective.

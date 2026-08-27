@@ -250,6 +250,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [GM Principles](gm/GM_PRINCIPLES.md) | Shared adjudication posture, agency, fair uncertainty, causality, and contextual assessment | Required by every GM tool. |
 | [GM Responsibilities](gm/GM_RESPONSIBILITIES.md) | Bounded GM duties, delegation, ownership handoffs, and record discipline | Consumed by human and AI operators. |
 | [Game Master Framework](gm/GAME_MASTER_FRAMEWORK.md) | Session lifecycle, authority hierarchy, continuity, information model, improvisation, and records | Extended by focused GM procedures and AI operations. |
+| [Campaign Bootstrap](gm/CAMPAIGN_BOOTSTRAP.md) | Engine Status authority, normal-default Campaign Mode, explicit testing modes, creation, resume, and legacy metadata interpretation | Consumed by human and AI campaign-start procedures. |
 | [Consequence Resolution](gm/CONSEQUENCE_RESOLUTION.md) | Immediate outcome boundary, cost, affected subjects, response, and persistence handoff | Consumed after actions and world events. |
 | [Uncertainty Handling](gm/UNCERTAINTY_HANDLING.md) | Evidence, observer views, method selection, randomization, deferral, secrecy, and correction | Consumed whenever outcomes or information are uncertain. |
 | [Reincarnation Generation](gm/REINCARNATION_GENERATION.md) | Procedure for sourcing and presenting world-valid Reincarnation candidates | Consumes Reincarnation and world-state owners. |
@@ -261,7 +262,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [World-Event Generator](gm/WORLD_EVENT_GENERATOR.md) | Procedure for identifying and framing direct causal world events | Consumes Causal Event Chains and specialist owners. |
 | [Time Skip Procedure](gm/TIME_SKIP_PROCEDURE.md) | Player-authorized narrative compression, Standing Instructions, Review Points, and return state | Consumes Simulation Abstraction and persistence. |
 | [Age Transition Procedure](gm/AGE_TRANSITION_PROCEDURE.md) | Evidence-backed Age classification and transition return to play | Consumes Ages, chronology, and World Reset checkpoints. |
-| [Alpha Playtest Rules](gm/ALPHA_PLAYTEST_RULES.md) | Campaign-local provisional ruling status, testing, recording, and review | Extended by external playtest observations; cannot alter Repository Canon automatically. |
+| [Provisional Rulings](gm/PROVISIONAL_RULINGS.md) | Campaign-local narrow adjudication, recording, review, conversion, and Campaign Mode separation | Available in normal and explicit testing campaigns; cannot alter Repository Canon or Campaign Mode automatically. |
 
 ## GM Living Codex
 

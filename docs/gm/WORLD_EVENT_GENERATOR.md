@@ -385,7 +385,7 @@ Examples:
 - death and bodily harm use current embodiment and consequence rules;
 - Soul, Skill, Evolution, or Weapon changes return to those systems.
 
-If the required owner is incomplete, use the narrowest valid [Provisional Rule](ALPHA_PLAYTEST_RULES.md#provisional) or leave the claim unresolved.
+If the required owner is incomplete, use the narrowest valid [Provisional Rule](PROVISIONAL_RULINGS.md#provisional) or leave the claim unresolved.
 
 ### Step 9: Define the Direct Event Boundary
 
@@ -716,7 +716,7 @@ Monster, NPC, Dungeon, and Faction Profiles may supply actors, sites, relationsh
 
 An established World Event may later become an Encounter Source, require new NPC or Monster detail, revalidate a Dungeon or faction, or affect Reincarnation candidates through those generators' existing procedures.
 
-### Alpha Playtest Rules
+### Provisional Rulings
 
 Use Provisional Rules only for narrow unresolved mechanics supported by completed foundations. Event generation cannot use provisional authority to implement Time Skip, Age-transition, template semantics, or a missing specialist system wholesale.
 
@@ -842,7 +842,7 @@ This document does not define:
 - [Faction Generator](FACTION_GENERATOR.md)
 - [Time Skip Procedure](TIME_SKIP_PROCEDURE.md)
 - [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md)
-- [Alpha Playtest Rules](ALPHA_PLAYTEST_RULES.md)
+- [Provisional Rulings](PROVISIONAL_RULINGS.md)
 - [World Engine Index](../world-engine/README.md)
 - [World-State Variables](../world-engine/WORLD_STATE_VARIABLES.md)
 - [Causal Event Chains](../world-engine/CAUSAL_EVENT_CHAINS.md)
