@@ -12,7 +12,7 @@ During ordinary gameplay, [FR-011](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.m
 
 Before state-changing play, the runtime resolves the exact canonical persistence target through Campaign Configuration and the Save Index. A missing expected Local Working Copy does not prove that the campaign database is missing when a configured remote canonical source may exist. The runtime must fetch and verify that source or report a material lookup failure; it must never create a replacement blank database by assumption.
 
-For a non-empty Affected Set, ordinary player-facing completion occurs only after the configured canonical authority proves the write. Local-authoritative play requires a committed and validated local result. Cloud-authoritative play additionally requires successful remote synchronization and verification. Only then may Derived context refresh and the turn become complete.
+For a non-empty Affected Set, ordinary player-facing completion occurs only after the configured canonical authority proves the write. Direct local authority requires a committed and validated local result. Direct cloud authority additionally requires successful remote synchronization and verification. MCP authority requires a validated service Persistence Receipt. Only then may Derived context refresh and the turn become complete.
 
 After every completed gameplay interaction:
 

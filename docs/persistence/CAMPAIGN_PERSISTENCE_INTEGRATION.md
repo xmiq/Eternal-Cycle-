@@ -43,7 +43,7 @@ These classifications combine; none substitutes for another.
 
 For AI-assisted play, [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) binds this cycle into one Gameplay Turn: relevance-filtered canonical reads precede resolution, every resolved interaction receives an Affected Set determination, non-empty changes save automatically, and turn closure follows validation and required read-back. Derived context remains non-authoritative.
 
-The active Save Index and Campaign Configuration identify whether local storage or a remote deployment is canonical. That target must be resolved before state-changing play. A local commit proves completion only for a local-authoritative campaign; when cloud storage is canonical, remote synchronization and read-back verification are part of the same completion gate. Player-visible `💾`, `☁️💾`, `⏳`, and `⚠️` markers report the resulting state and never replace the underlying evidence.
+The active Save Index and Campaign Configuration identify `DIRECT` or `MCP` persistence and its canonical authority. That target must be resolved before state-changing play. A Direct local commit proves completion only for a local-authoritative campaign; Direct cloud authority additionally requires remote synchronization and read-back. MCP authority requires a validated service Persistence Receipt and exposes no client-classified local/cloud topology. Player-visible `💾`, `☁️💾`, `⏳`, and `⚠️` markers report the resulting state and never replace the underlying evidence.
 
 ### 1. Select the Active Authority
 
@@ -416,11 +416,11 @@ Operational ownership is divided as follows:
 | --- | --- |
 | Logical campaign meaning, authority, history, and validation requirements | Campaign Persistence Engine |
 | Runtime ordering and provider-specific operating constraints | selected AI Execution Profile |
-| Storage transaction, deployment, backup, and Read-Back Validation procedures | selected Persistence Adapter or Adapter Chain |
+| Persistence transaction, deployment, backup, and Read-Back Validation procedures | selected Direct Adapter Chain or MCP persistence service |
 | Deployment-specific profile, adapter selection, locators, versions, and active rulings | external Campaign Configuration |
 | Populated characters, discoveries, relationships, secrets, timelines, and world state | external Canonical Campaign State |
 
-An Adapter Chain may compose distinct responsibilities. For example, the [SQLite adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) may own database transactions and integrity while the [Google Drive adapter](../ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) owns canonical remote identity, deployment, backup, and remote read-back. Campaign Configuration selects and orders the chain; neither adapter adjudicates gameplay.
+A Direct Adapter Chain may compose distinct responsibilities. For example, the [SQLite Database Format Adapter](adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md) may own database transactions and integrity while the [Google Drive Remote Storage Adapter](adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md) owns canonical remote identity, deployment, backup, and remote read-back. Campaign Configuration selects `DIRECT` and orders the chain; neither adapter adjudicates gameplay. In `MCP` mode, the configured service owns its backend and returns semantic persistence evidence without exposing a client-side adapter chain.
 
 Save-Before-Delivery is an execution constraint of profiles that adopt it. It is not fictional physics, a new persistence authority, or a change to when an in-world event occurs. Validation remains read-only with respect to the state being evaluated.
 

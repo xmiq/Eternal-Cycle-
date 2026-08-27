@@ -10,7 +10,7 @@ They are universal operational requirements. They do not define Eternal Cycle me
 
 - **Owner:** this profile owns ChatGPT-specific context switching, boot, action, delivery, persistence, correction, and failure behavior
 - **Primary authorities:** [AI Runtime Model](../AI_RUNTIME_MODEL.md), [AI Capabilities and Limitations](../AI_CAPABILITIES_AND_LIMITATIONS.md), [AI GM Workflow](../AI_GM_WORKFLOW.md), and [Campaign Persistence Integration](../../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
-- **Dependencies:** external Campaign Configuration, selected Persistence Adapter or Adapter Chain, authorized Canonical Campaign State, and actual runtime capability
+- **Dependencies:** external Campaign Configuration, selected `DIRECT` or `MCP` Persistence Mode, authorized Canonical Campaign State, and actual runtime capability
 - **Extensions:** campaign-external configuration may select this profile and stricter policies without editing it
 - **Consumers:** ChatGPT campaign deployments, supervising GMs, campaign custodians, and persistence operators
 - **Repository boundary:** no campaign identifier, file locator, provider credential, connector reference, current state, transcript, or GM Secret belongs here
@@ -47,10 +47,10 @@ Return to Gameplay Context when the user asks to resume play. Never switch conte
 Before continuing an existing campaign:
 
 1. load the authorized Campaign Configuration;
-2. identify the selected Repository Version, Rules Profile, provisional rules, campaign rulings, execution profile, and Adapter Chain;
-3. fetch the latest identified canonical source through the configured adapters;
+2. identify the selected Repository Version, Rules Profile, provisional rules, campaign rulings, execution profile, and Persistence Mode;
+3. in `DIRECT`, fetch the latest identified canonical source through the configured adapters; in `MCP`, resolve the configured service and campaign binding and request semantic status;
 4. load the Save Index, active Campaign Version, Current Session, open recovery state, and applicable validation result;
-5. resolve the exact configured canonical persistence authority and Adapter Chain, fetching and verifying a remote canonical save when configured rather than assuming a missing local path means no database;
+5. resolve the exact configured canonical persistence authority and either the Direct Adapter Chain or MCP service contract, never assuming that a missing local path means no canonical state;
 6. do not permit state-changing Gameplay Context until the persistence target is ready and prior pending or failed persistence is resolved.
 7. validate enough of the source to establish a safe readiness state;
 8. load applicable Repository Canon and the material campaign Read Set;
@@ -109,7 +109,7 @@ For every bounded Gameplay Interaction, ChatGPT:
 8. resolves only the independent world responses already caused and able to occur;
 9. calculates the complete Affected Set and currently resolvable state changes;
 10. builds one owner-routed, idempotent Save Transaction;
-11. persists and activates the candidate through the configured Adapter Chain;
+11. persists and activates the candidate through the configured Direct Adapter Chain or MCP service;
 12. runs required read-only semantic, implementation, and Read-Back Validation;
 13. updates and verifies required backup state;
 14. refreshes the active Campaign Version and affected views;
@@ -136,9 +136,11 @@ If persistence or required validation fails:
 
 Validation is read-only. A passing validation does not require another campaign mutation unless Campaign Configuration explicitly requires an operational record outside the validated state.
 
-Ordinary Gameplay Context ends with one truthful compact marker: `💾` for a committed and validated local canonical target, `☁️💾` for a synchronized and verified cloud canonical target, `⏳` for genuinely incomplete persistence, or `⚠️` for a write, synchronization, validation, expected-change, or read-back failure. Never infer a marker from intent, narration, a local candidate, an upload attempt, or a Derived summary.
+Ordinary Gameplay Context ends with one truthful compact marker: `💾` for a committed and validated Direct local target or validated MCP Persistence Receipt, `☁️💾` for a synchronized and verified Direct cloud target, `⏳` for genuinely incomplete persistence, or `⚠️` for a write, synchronization, service, validation, expected-change, or read-back failure. Never infer a marker from intent, narration, a local candidate, an attempted tool call, an upload attempt, or a Derived summary.
 
 When cloud is configured as canonical authority, local SQLite success is not turn completion. Preserve the local candidate, show `⏳` while cloud work is incomplete or `⚠️` after failure, and block further state-changing play until canonical cloud verification succeeds or recovery establishes another authorized boundary.
+
+When MCP is configured, ChatGPT does not open or operate the campaign database. It uses the service's semantic reads and commits, shows `💾` only after a validated receipt, and keeps SQL Server topology, connection details, backup locations, and recovery machinery backstage. An MCP call that returned without a valid receipt is not a completed save.
 
 Recognize `save`, `save status`, and `retry save` as operational commands under the [AI Save Protocol](../AI_SAVE_PROTOCOL.md). They never replay the gameplay action or duplicate effects.
 
@@ -247,11 +249,11 @@ End ordinary Gameplay Context with the evidence-derived persistence marker. On s
 
 Never claim a fetch, save, backup, validation, upload, correction, or recovery succeeded unless it was actually performed and verified.
 
-## Persistence Adapter Boundary
+## Persistence Implementation Boundary
 
 This profile assumes no single storage product.
 
-The active Persistence Adapter or Adapter Chain defines how canonical state is fetched, transacted, deployed, read back, backed up, compared, and recovered. The Campaign Persistence Engine continues to define logical meaning, authority, record ownership, and validation semantics.
+The active Persistence Mode defines how canonical state is fetched, transacted, deployed, read back, backed up, compared, and recovered. In `DIRECT`, Database Format and Storage Adapters divide those duties. In `MCP`, the configured semantic service owns its backend and returns records, status, and validated Persistence Receipts. The Campaign Persistence Engine continues to define logical meaning, authority, record ownership, and validation semantics.
 
 Adapters do not adjudicate gameplay. ChatGPT does not bypass them by writing durable consequences into conversation context.
 
@@ -294,8 +296,9 @@ A failed delivery after successful activation does not erase the activated Save 
 - [AI GM Workflow](../AI_GM_WORKFLOW.md)
 - [AI Play Protocol](../AI_PLAY_PROTOCOL.md)
 - [AI Save Protocol](../AI_SAVE_PROTOCOL.md)
-- [SQLite Persistence Adapter](adapters/SQLITE_PERSISTENCE_ADAPTER.md)
-- [Google Drive Persistence Adapter](adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
+- [SQLite Database Format Adapter](../../persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
+- [Google Drive Remote Storage Adapter](../../persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md)
+- [MCP Persistence Mode](../../persistence/MCP_PERSISTENCE_MODE.md)
 - [Game Master Framework](../../gm/GAME_MASTER_FRAMEWORK.md)
 - [Campaign Persistence Engine](../../persistence/README.md)
 - [Campaign Persistence Integration](../../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)

@@ -32,8 +32,11 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Persistence Model Version:** `<logical schema version>`
 - **Storage Format Version:** `<implementation version or not applicable>`
 - **Last confirmed Save Point:** `<stable ID and effective time>`
-- **Configured canonical authority:** `<local | cloud and adapter-chain reference>`
-- **Resolved canonical target:** `<verified locator reference or unresolved>`
+- **Persistence Mode:** `<DIRECT | MCP>`
+- **Configured canonical authority:** `<Direct local | Direct cloud | MCP service>`
+- **Resolved canonical target:** `<verified Direct locator reference | MCP service/campaign binding | unresolved>`
+- **Direct Adapter Chain:** `<database-format and storage adapters | not applicable>`
+- **MCP service contract:** `<service identity and contract version | not applicable>`
 - **Local persistence state:** `<current | ahead of cloud | pending | failed | not applicable>`
 - **Cloud persistence state:** `<current and verified | pending | failed | not configured>`
 - **Last successful local commit:** `<version and time or unavailable>`
@@ -62,7 +65,8 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Pending Session Delta:** `<ID or none>`
 - **Open Save Transaction:** `<ID or none>`
 - **Pending Affected Set:** `<owner-domain references or none>`
-- **Persistence status:** `<local validated | cloud validated | pending | failed>`
+- **Persistence status:** `<Direct local validated | Direct cloud validated | MCP receipt validated | pending | failed>`
+- **Latest MCP Persistence Receipt:** `<receipt ID and Campaign Version | none | not applicable>`
 - **Unresolved conflicts:** `<IDs, owners, and severity>`
 - **Record Gaps:** `<IDs and required source recovery>`
 - **Pending migrations:** `<IDs and activation state>`
@@ -89,6 +93,8 @@ A populated Save Index belongs outside the repository. This blank template creat
 - [ ] Open transactions, deltas, migrations, conflicts, gaps, and warnings are represented honestly.
 - [ ] The configured canonical authority is explicit, its exact target is resolved before state-changing play, and no missing Local Working Copy is mistaken for a missing remote canonical save.
 - [ ] Local and cloud completion states reflect actual commit and verification evidence; a cloud-authoritative save is not current merely because the local transaction committed.
+- [ ] Exactly one Persistence Mode is active; inactive-mode fields are not used as fallback authority.
+- [ ] MCP completion has a validated service receipt and exposes no backend database or storage topology.
 - [ ] The stated load status matches the latest validation outcome.
 
 ## Cross-References
@@ -98,3 +104,4 @@ A populated Save Index belongs outside the repository. This blank template creat
 - [Campaign Canon Template](CAMPAIGN_CANON_TEMPLATE.md)
 - [Migration Manifest Template](MIGRATION_MANIFEST_TEMPLATE.md)
 - [Validation Report Template](VALIDATION_REPORT_TEMPLATE.md)
+- [Persistence Configuration Template](PERSISTENCE_CONFIGURATION_TEMPLATE.md)

@@ -551,6 +551,6 @@ None of those systems is implemented here. Step 12 does not define courtship, at
 - [World Engine Populations](../world-engine/POPULATIONS.md)
 - [Campaign Persistence Engine](../persistence/README.md)
 - [AI Save Protocol](../ai/AI_SAVE_PROTOCOL.md)
-- [SQLite Persistence Adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md)
-- [Google Drive Persistence Adapter](../ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
+- [SQLite Database Format Adapter](../persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
+- [Google Drive Remote Storage Adapter](../persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

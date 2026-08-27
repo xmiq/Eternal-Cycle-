@@ -5189,3 +5189,31 @@ The project maintainer authorized the Release 1 gate and approved **Eternal Cycl
 ## D-1297 — Phase 13 Owns Post-Release Future Revisions
 
 Phase 13 — Future Revisions is the permanent owner-mediated rolling post-release phase. Gameplay may expose evidence, but only the project maintainer may admit, prioritize, promote, close, or authorize implementation of a Future Revision. Existing `FR-###` identifiers retain their provenance, and new entries continue without renumbering history.
+
+## D-1298 — DIRECT and MCP Are First-Class Persistence Modes
+
+Campaign Configuration selects exactly one active Persistence Mode. `DIRECT` uses explicit Database Format and Storage Adapters; `MCP` uses a semantic Eternal Cycle persistence service. Both preserve the same Campaign Persistence authority, ownership, transaction, validation, and FR-011 completion semantics, and neither may silently fall back to the other.
+
+## D-1299 — Direct Persistence Separates Format from Placement
+
+A Database Format Adapter owns database syntax, transactions, integrity, concurrency, and format read-back. A Storage Adapter owns artifact identity, placement, synchronization, backup, and recovery. SQLite, DuckDB, local storage, and Google Drive are runtime-neutral implementations rather than parts of the ChatGPT execution profile.
+
+## D-1300 — MCP Persistence Hides and Owns Its Backend
+
+In MCP mode the client uses semantic campaign reads, status, complete commits, and idempotent retry. The Eternal Cycle MCP service owns Microsoft SQL Server transactions, deployment, durability, backup, recovery, and operational audit. The GM receives no arbitrary SQL authority, connection details, database paths, backup locators, or client-classified local/cloud topology.
+
+## D-1301 — MCP Completion Requires a Validated Persistence Receipt
+
+MCP transport success, staged state, or attempted persistence cannot close a state-changing turn. `💾` is permitted only when the configured service returns a validated Persistence Receipt for the expected Transaction ID and active Campaign Version. Pending and failed service work retain `⏳` and `⚠️` semantics under FR-011.
+
+## D-1302 — Persistence Retries Preserve Transaction Identity
+
+Direct and MCP retries reuse the original Transaction ID and idempotency key, inspect the last completed stage, and resume without replaying gameplay or duplicating owner mutations. A stale parent, request-hash mismatch, or changed idempotent payload is a conflict rather than permission to overwrite.
+
+## D-1303 — DuckDB Requires an Explicit Direct Adapter Boundary
+
+DuckDB may serve as a Direct Database Format only through its approved adapter, persistent mode, one coordinated writer process, optimistic-conflict handling, bounded transactions, and independent read-back. Analytical convenience, in-memory state, or a shared file does not waive campaign durability or concurrency requirements.
+
+## D-1304 — Persistence Mode Changes Are Migrations
+
+Changing between Direct formats or between `DIRECT` and `MCP` requires Backup, Audit, Merge, Validation, provenance, activation, and rollback under Migration and Versioning. Conversation context, summaries, and caches cannot become the migration source when structured Canon exists.

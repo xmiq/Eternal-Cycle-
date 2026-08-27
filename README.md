@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**; no implementation objective is currently selected.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 adds portable `DIRECT` and `MCP` persistence in post-v1 development without changing the historical v1.0.0 tag.
 
 ## Core Pillars
 
@@ -71,8 +71,9 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/ai/CANONICAL_VISUAL_CONTEXT.md`](docs/ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical image context, observer filtering, Current Appearance assembly, and non-canonical rendering boundaries.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
 - [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.
-- [`docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md`](docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - SQLite transaction, integrity, stale-write, rollback, and read-only validation procedures.
-- [`docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md`](docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - Google Drive identity, replacement, read-back, backup, concurrency, and security procedures.
+- [`docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - post-v1 `DIRECT` and `MCP` persistence architecture and shared completion contract.
+- [`docs/persistence/adapters/README.md`](docs/persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive Direct Adapter contracts.
+- [`services/eternal-cycle-mcp/README.md`](services/eternal-cycle-mcp/README.md) - executable Microsoft SQL Server-backed MCP persistence reference service.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.

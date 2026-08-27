@@ -1,21 +1,23 @@
-# SQLite Persistence Adapter
+# SQLite Database Format Adapter
 
 ## Purpose
 
-This Persistence Adapter defines how a ChatGPT runtime uses SQLite as a structured logical campaign store while preserving the storage-neutral [Campaign Persistence Engine](../../../persistence/README.md).
+This Database Format Adapter defines how DIRECT persistence may use SQLite as a structured logical campaign store while preserving the storage-neutral [Campaign Persistence Engine](../README.md).
 
 It contains no schema for a particular campaign, no populated state, and no deployment locator. SQLite implements storage behavior; it does not adjudicate gameplay or own campaign meaning.
 
 ## Document Control
 
-- **Owner:** this adapter owns SQLite open, transaction, integrity, expected-versus-actual, read-only reopen, staleness, rollback, and candidate-production behavior
-- **Primary authorities:** [AI Runtime Model](../../AI_RUNTIME_MODEL.md), [AI Save Protocol](../../AI_SAVE_PROTOCOL.md), [Save Update Protocol](../../../persistence/SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](../../../persistence/PERSISTENCE_VALIDATION.md)
+- **Owner:** this adapter owns SQLite open, transaction, integrity, expected-versus-actual, read-only reopen, staleness, rollback, and candidate-production behavior in DIRECT mode
+- **Primary authorities:** [AI Runtime Model](../../ai/AI_RUNTIME_MODEL.md), [AI Save Protocol](../../ai/AI_SAVE_PROTOCOL.md), [Save Update Protocol](../SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](../PERSISTENCE_VALIDATION.md)
 - **Dependencies:** external Campaign Configuration, one identified logical SQLite artifact, active parent Campaign Version, complete Affected Set, and authorized file access
 - **Extensions:** deployment adapters may fetch and publish validated SQLite bytes without taking over database integrity
-- **Consumers:** ChatGPT execution profile, Adapter Chains, campaign custodians, save operators, and recovery tools
+- **Consumers:** runtime-neutral Direct Adapter Chains, AI Execution Profiles, human operators, campaign custodians, and recovery tools
 - **Repository boundary:** no campaign identifier, database file, path, schema, credential, current value, or populated record belongs here
 
-## Adapter Role
+## Adapter Class and Role
+
+This is a **Database Format Adapter**, not a storage location and not an AI profile. It may be combined with a [Local Storage Adapter](LOCAL_STORAGE_ADAPTER.md) or a [Remote Storage Adapter](GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md). ChatGPT, Kimi, a human application, or another capable runtime may use the same contract.
 
 The SQLite adapter owns:
 
@@ -40,7 +42,7 @@ It does not own:
 
 Campaign Configuration identifies exactly one logical canonical SQLite artifact for the active campaign deployment.
 
-When another adapter provides remote storage, that outer adapter identifies and fetches the canonical remote artifact. The SQLite adapter receives the latest bytes and produces a validated candidate. A Local Working Copy is temporary and has no canonical authority until the complete Adapter Chain writes, activates, and verifies it.
+When another adapter provides remote storage, that outer adapter identifies and fetches the canonical remote artifact. The SQLite adapter receives the latest bytes and produces a validated candidate. A Local Working Copy is temporary and has no canonical authority until the complete Direct Adapter Chain writes, activates, and verifies it.
 
 The runtime must not select authority by filename similarity, local modification time, cache recency, or file size.
 
@@ -188,7 +190,7 @@ For a local-authoritative campaign, complete SQLite validation and read-only reo
 
 ## Adapter Composition
 
-A common Adapter Chain is:
+A common Direct Adapter Chain is:
 
 ```text
 SQLite logical store
@@ -207,7 +209,7 @@ Neither adapter may treat the other's successful operation as proof that its own
 
 ### Living Codex Specialization
 
-The same SQLite transaction boundary may carry a separately configured [GM Living Codex database](../../../gm-living-codex/PERSISTENCE_MODEL.md). In that chain, the adapter opens exactly one identified Codex artifact, enforces Codex foreign keys and constraints, applies the complete reusable-design affected set, validates the candidate read-only, and passes only validated bytes onward.
+The same SQLite transaction boundary may carry a separately configured [GM Living Codex database](../../gm-living-codex/PERSISTENCE_MODEL.md). In that chain, the adapter opens exactly one identified Codex artifact, enforces Codex foreign keys and constraints, applies the complete reusable-design affected set, validates the candidate read-only, and passes only validated bytes onward.
 
 The Living Codex database is not a campaign database. Codex Versions, revisions, migrations, validation runs, and stable species identities use their Codex owners rather than the Campaign Persistence Engine's Save Index, Campaign Version, Truth Layers, or campaign record owners. An implementation must choose the correct specialization explicitly and must never mix the two schemas or infer that a Codex entry is campaign truth.
 
@@ -232,13 +234,14 @@ Gameplay Context does not expose tables, columns, indexes, migration statements,
 
 ## Related Documents
 
-- [ChatGPT GM Universal Instructions](../CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md)
-- [Google Drive Persistence Adapter](GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
-- [GM Living Codex Persistence Model](../../../gm-living-codex/PERSISTENCE_MODEL.md)
-- [AI Runtime Model](../../AI_RUNTIME_MODEL.md)
-- [AI Capabilities and Limitations](../../AI_CAPABILITIES_AND_LIMITATIONS.md)
-- [AI Save Protocol](../../AI_SAVE_PROTOCOL.md)
-- [Campaign State Model](../../../persistence/CAMPAIGN_STATE_MODEL.md)
-- [Save Update Protocol](../../../persistence/SAVE_UPDATE_PROTOCOL.md)
-- [Persistence Validation](../../../persistence/PERSISTENCE_VALIDATION.md)
-- [Canonical Terminology](../../../../design/TERMINOLOGY.md)
+- [Portable Persistence Architecture](../PORTABLE_PERSISTENCE_ARCHITECTURE.md)
+- [Direct Persistence Mode](../DIRECT_PERSISTENCE_MODE.md)
+- [Google Drive Remote Storage Adapter](GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md)
+- [GM Living Codex Persistence Model](../../gm-living-codex/PERSISTENCE_MODEL.md)
+- [AI Runtime Model](../../ai/AI_RUNTIME_MODEL.md)
+- [AI Capabilities and Limitations](../../ai/AI_CAPABILITIES_AND_LIMITATIONS.md)
+- [AI Save Protocol](../../ai/AI_SAVE_PROTOCOL.md)
+- [Campaign State Model](../CAMPAIGN_STATE_MODEL.md)
+- [Save Update Protocol](../SAVE_UPDATE_PROTOCOL.md)
+- [Persistence Validation](../PERSISTENCE_VALIDATION.md)
+- [Canonical Terminology](../../../design/TERMINOLOGY.md)

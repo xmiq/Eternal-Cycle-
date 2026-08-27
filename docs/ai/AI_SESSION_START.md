@@ -36,7 +36,7 @@ Read the Save Index and confirm:
 - active Rules Profile;
 - last confirmed Save Point;
 - Current Session status;
-- configured canonical authority, exact target identity, Adapter Chain, and local/cloud synchronization state;
+- configured Persistence Mode, canonical authority, exact Direct target or MCP service binding, and current completion state;
 - latest validation outcome and warnings;
 - open migration, recovery, or continuity cases.
 

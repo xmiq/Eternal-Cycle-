@@ -4250,15 +4250,43 @@ A replaceable operational document defining how one identified AI runtime boots,
 
 ## Persistence Adapter
 
-An implementation-specific component that fetches, writes, validates, deploys, backs up, or recovers campaign storage while preserving the Campaign Persistence Engine's logical authority and never adjudicating gameplay.
+The general class of implementation-specific components used by `DIRECT` persistence. Canonical subtypes are Database Format Adapter and Storage Adapter. A Persistence Adapter preserves Campaign Persistence authority and never adjudicates gameplay. MCP persistence is a service boundary, not a client Persistence Adapter.
 
 ## Adapter Chain
 
-An ordered composition of Persistence Adapters with explicit responsibility for each storage, deployment, validation, backup, and recovery boundary.
+An ordered `DIRECT` composition of one Database Format Adapter and the Local or Remote Storage Adapters required by canonical authority, with explicit responsibility and evidence at each transaction, placement, validation, backup, and recovery boundary.
 
 ## Campaign Configuration
 
-The campaign-external deployment record selecting rules and campaign versions, active profiles and adapters, authorized locators, permissions, policies, and runtime metadata. It locates or selects authorities but does not own the campaign facts it references.
+The campaign-external deployment record selecting rules and campaign versions, active profiles, Persistence Mode, Direct Adapters or MCP service, authorized locators, permissions, policies, and runtime metadata. It locates or selects authorities but does not own the campaign facts it references.
+
+## Persistence Mode
+
+The campaign-configured implementation route for canonical persistence. Eternal Cycle supports `DIRECT`, where an authorized runtime operates Database Format and Storage Adapters, and `MCP`, where a semantic persistence service owns its hidden backend. Exactly one mode is active for one canonical campaign authority.
+
+## Direct Persistence
+
+A Persistence Mode in which an authorized runtime directly operates the configured Database Format Adapter and Local or Remote Storage Adapter Chain.
+
+## MCP Persistence
+
+A Persistence Mode in which an authorized runtime reads and writes canonical campaign state through an Eternal Cycle MCP persistence service without opening or operating the service's database or storage deployment.
+
+## Database Format Adapter
+
+A Direct Persistence Adapter that owns database-format connection, queries, transactions, constraints, integrity, concurrency, rollback, and format-specific read-back. It does not own artifact placement or gameplay adjudication.
+
+## Storage Adapter
+
+A Direct Persistence Adapter that owns exact artifact identity, placement, transport, synchronization, backup, read-back, and recovery. A Local Storage Adapter and Remote Storage Adapter are subtypes; neither interprets database meaning.
+
+## Persistence Receipt
+
+Immutable evidence returned by an MCP persistence service after the expected transaction has been validated, activated, and read back at the active Campaign Version. It proves service completion but does not become another owner of campaign facts.
+
+## Eternal Cycle MCP Persistence Service
+
+A semantic MCP service that owns canonical campaign database transactions, durability, backup, recovery, and operational validation behind a hidden backend. It exposes bounded campaign reads, status, commit, and retry rather than arbitrary SQL or storage topology.
 
 ## Canonical Campaign State
 
@@ -4766,7 +4794,7 @@ The runtime state in which Campaign Configuration and the Save Index have identi
 
 ## Persistence Status Marker
 
-A compact player-visible report derived from actual persistence evidence: `💾` for committed and validated local canonical state, `☁️💾` for synchronized and verified cloud canonical state, `⏳` for incomplete required persistence, or `⚠️` for persistence, synchronization, expected-change, or validation failure.
+A compact player-visible report derived from actual persistence evidence: `💾` for committed and validated Direct local state or a validated MCP Persistence Receipt, `☁️💾` for synchronized and verified Direct cloud state, `⏳` for incomplete required persistence, or `⚠️` for persistence, service, synchronization, expected-change, or validation failure. MCP mode never uses `☁️💾` because backend topology is hidden from the client.
 
 ## Unchanged-Save Failure
 

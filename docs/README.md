@@ -145,7 +145,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 ## AI Game Master Operations
 
-- [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, persistence adapters, scope, and authority boundaries.
+- [AI Operating Procedures Index](ai/README.md) - runtime architecture, shared procedures, execution profiles, portable persistence links, scope, and authority boundaries.
 - [AI Runtime Model](ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, campaign boot and action flows, adapter composition, failure boundaries, and extension rules.
 - [Context Assembly and Gameplay Turn Persistence](ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, derived summary hierarchy, automatic persistence, failure/retry, and next-turn verification.
 - [Canonical Visual Context](ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific representation context, Current Appearance assembly, observer filtering, unknown preservation, and image-tool handoff boundaries.
@@ -156,8 +156,8 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [AI Save Protocol](ai/AI_SAVE_PROTOCOL.md) - writer-capability disclosure and faithful operation of Affected Sets, Session Deltas, validation, activation, and recovery.
 - [AI Game Master Checklist](ai/AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, continuation, correction, and handoff.
 - [ChatGPT GM Universal Instructions](ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - runtime-specific Gameplay and Development Contexts, strict Save-Before-Delivery, action fidelity, correction, and failure behavior.
-- [SQLite Persistence Adapter](ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - local database transactions, integrity, stale-write protection, rollback, and read-only reopen validation.
-- [Google Drive Persistence Adapter](ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - remote identity, fetch-latest, canonical replacement, read-back, backup, concurrency, and security.
+- [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - `DIRECT` and `MCP` modes, shared invariants, configuration, evidence, failure, and migration boundaries.
+- [Direct Persistence Adapter Index](persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 
 ## Campaign Persistence Engine
 
@@ -182,6 +182,8 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) - authority-ordered diagnosis and correction of narration errors, stale saves, incomplete information, authorized retcons, and in-world deception.
 - [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) - post-interaction Affected Sets, owner-routed Session Deltas, history appends, atomic Save Points, idempotent retries, and recovery.
 - [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) - read-only validation baselines and profiles, evidence-bearing findings, defect detection, protected reports, severity, activation outcomes, and repair routing.
+- [Direct Persistence Mode](persistence/DIRECT_PERSISTENCE_MODE.md) - Database Format and Storage Adapter composition, capability gates, and direct-mode status evidence.
+- [MCP Persistence Mode](persistence/MCP_PERSISTENCE_MODE.md) - semantic persistence service, validated receipts, hidden SQL Server backend, durability, retry, and host boundary.
 - [Campaign Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, load-to-activation operating cycle, specialist handoffs, correction routes, and the blank-template boundary.
 
 ## Authority and Scope

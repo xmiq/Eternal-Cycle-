@@ -8,6 +8,10 @@ Thumbs.db
 .env
 .env.*
 *.log
+**/bin/
+**/obj/
+**/TestResults/
+*.user
 
 # Campaign data must not enter the rules repository
 campaign/

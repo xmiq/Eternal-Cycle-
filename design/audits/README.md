@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-017 Portable Persistence and MCP Service Audit](FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md) - Direct/MCP mode separation, adapter reclassification, SQL Server-backed semantic service, receipt gate, compatibility, tests, and host boundary.
 - [Release 1 Finalization Audit](RELEASE_1_AUDIT.md) - v1.0.0 release gate, Phase 12 closure, Phase 13 activation, repository validation, compatibility, artifact, and host boundary.
 - [Canonical Visual Identity and Image-Generation Context Audit](VISUAL_IDENTITY_MAINTENANCE_AUDIT.md) - sparse visual ownership, derived Current Appearance, historical recovery, representation-tool context, information filtering, image adoption, and validation boundaries.
 - [FR-006 and FR-007 Skill Consolidation Implementation Audit](FR_006_FR_007_SKILL_CONSOLIDATION_AUDIT.md) - routine consolidation, Fusion/Evolution boundaries, Development reconciliation, provenance, conceptual scope, migration, and validation.

@@ -9,7 +9,7 @@ The player does not issue a manual save command during ordinary play. A state-ch
 ## Document Control
 
 - **Owner:** Gameplay Turn state, Context Packet structure, relevance selection, derived context hierarchy, mandatory read gate, automatic persistence gate, and next-turn verification
-- **Dependencies:** [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md), [Canonical Data Ownership](../persistence/CANONICAL_DATA_OWNERSHIP.md), [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md), [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md), [AI Runtime Model](AI_RUNTIME_MODEL.md), and configured Persistence Adapters
+- **Dependencies:** [Campaign State Model](../persistence/CAMPAIGN_STATE_MODEL.md), [Canonical Data Ownership](../persistence/CANONICAL_DATA_OWNERSHIP.md), [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md), [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md), [AI Runtime Model](AI_RUNTIME_MODEL.md), and the configured Direct Adapters or MCP persistence service
 - **Extensions:** runtime hosts may implement parameterized queries, views, application query functions, disposable caches, and purpose-specific [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) packets without changing authority
 - **Consumers:** AI execution profiles, human-supervised runtime tools, session boot, play, representation handoffs, save, recovery, debugging, and handoff procedures
 - **Repository boundary:** this contract contains no campaign state, populated packet, executable campaign schema, credential, private locator, or provider-specific configuration
@@ -83,14 +83,14 @@ Prepared narration may exist before persistence, but it is not a delivered durab
 
 Before state-changing play, the runtime reads Campaign Configuration and the Save Index to identify:
 
-- campaign and canonical artifact identity;
-- configured canonical authority: local or cloud;
-- complete Adapter Chain and required backup policy;
+- campaign identity and Persistence Mode;
+- configured canonical authority: Direct local, Direct cloud, or MCP service;
+- complete Direct Adapter Chain or MCP service contract and required durability policy;
 - active Campaign Version, Save Point, and concurrency evidence;
 - unresolved transaction or synchronization state;
 - local working-copy role and freshness.
 
-The runtime enters `PERSISTENCE_TARGET_READY` only after the configured target is located, fetched where required, and verified against campaign identity and version evidence. A missing assumed local path is not proof that the campaign database is missing. When configuration identifies remote authority, the runtime must search or fetch that exact configured target before reporting absence.
+The runtime enters `PERSISTENCE_TARGET_READY` only after the configured target is located, fetched or contacted where required, and verified against campaign identity and version evidence. A missing assumed local path is not proof that the campaign database is missing. When configuration identifies Direct remote authority, the runtime must search or fetch that exact configured target before reporting absence. When configuration identifies MCP authority, the runtime resolves the service and campaign binding; it does not search for the service's backend database.
 
 Never create a blank replacement database while a configured canonical save may exist remotely. Ambiguous identity, failed lookup, inaccessible authority, or unresolved prior persistence blocks state-changing play and produces a truthful pending or failure state.
 
@@ -101,12 +101,12 @@ The **Context Assembly Layer** selects the smallest complete Read Set that can m
 ```text
 Canonical Persistence
     -> Relevance Selection
-    -> SQLite-Compatible Views, Parameterized Queries, or Application Query Functions
+    -> Direct Parameterized Queries or MCP Semantic Reads
     -> Context Packet
     -> GM Resolution
 ```
 
-SQLite stored procedures are not assumed. Implementations may use:
+Database stored procedures are not assumed. Implementations may use:
 
 - views over authoritative records;
 - parameterized owner queries;
@@ -267,15 +267,15 @@ For a non-empty Affected Set:
 3. build the dependency-complete Affected Set and Session Delta;
 4. stage each update once through its Authoritative Record Owner;
 5. append Session Log, Timeline, and Campaign History only under their existing rules;
-6. commit owner writes atomically through the configured adapter chain;
+6. commit owner writes atomically through the configured Direct Adapter Chain or MCP service;
 7. run implementation and semantic validation;
 8. perform critical read-back, expected-versus-actual comparison, and version verification;
-9. verify the configured canonical authority, including required cloud synchronization and read-back;
+9. verify the configured canonical authority, including Direct cloud synchronization or an MCP Persistence Receipt where required;
 10. activate the new Save Point only at the configured authority boundary;
 11. regenerate or invalidate Running Summary, Session Summary, and Current Scene Context from verified Canon;
 12. enter `TURN_COMPLETE` and deliver the final player-facing result with the evidence-derived status marker.
 
-The player issues no save command. Local SQLite success alone is insufficient when campaign configuration requires remote deployment and read-back through the Google Drive adapter.
+The player issues no save command. Direct local database success alone is insufficient when configuration requires remote deployment. MCP transport success alone is insufficient without a validated service receipt.
 
 ## Player-Visible Persistence Status
 
@@ -288,13 +288,15 @@ Every ordinary Gameplay Context response ends with exactly one compact marker de
 | **⏳** | Required persistence remains incomplete or a recoverable transaction is genuinely pending. |
 | **⚠️** | A required write, synchronization, expected-change check, validation, or read-back failed. |
 
+In MCP mode, `💾` means the configured service issued a validated Persistence Receipt for the expected transaction and active Campaign Version. MCP mode does not use `☁️💾`: remote/local backend topology is hidden behind the service and cannot be classified by the client.
+
 The marker is evidence, not decoration. Prepared narration, an updated summary, a local candidate, an upload attempt, a requested synchronization, or intent to save cannot produce `💾` or `☁️💾`.
 
 For a cloud-authoritative campaign, local SQLite success leaves status `⏳` until configured remote deployment, read-back, semantic verification, and any required backup verification complete. A cloud failure changes status to `⚠️` while preserving the validated local candidate for idempotent synchronization retry.
 
 A verified empty Affected Set may display the marker for the already-verified configured canonical authority; it does not create a new save. Successful operation remains unobtrusive: show only the marker unless the player requests status, Development Context is active, or failure requires a concise technical explanation.
 
-No subsequent state-changing Gameplay Turn may proceed while status is `⏳` or unresolved `⚠️`. Resolve it to `💾` or `☁️💾`, recover the last validated authority, or explicitly stop dependent play.
+No subsequent state-changing Gameplay Turn may proceed while status is `⏳` or unresolved `⚠️`. Resolve it to the saved marker valid for the configured mode, recover the last validated authority, or explicitly stop dependent play.
 
 ## Manual Persistence Commands
 
@@ -310,8 +312,8 @@ Return only authorized operational facts:
 
 - current marker;
 - canonical Campaign Version and Save Point where available;
-- configured canonical authority and Adapter Chain role;
-- local-versus-cloud synchronization state;
+- configured Persistence Mode and canonical authority;
+- Direct Adapter Chain and local-versus-cloud synchronization state, or MCP service contract and receipt state;
 - whether an Affected Set or transaction remains pending;
 - last successful local commit evidence;
 - last successful canonical cloud synchronization and verification evidence where configured;
@@ -321,7 +323,7 @@ Do not expose credentials, private locators, GM Secrets, or unrelated campaign d
 
 ### `retry save`
 
-Resume the unresolved transaction from the earliest incomplete persistence stage. Inspect what already committed before writing. When local SQLite is valid and only cloud synchronization failed, retry cloud deployment and verification without reapplying gameplay changes. The command cannot replay narration, consume resources again, duplicate events, or create a second Save Point for the same transaction.
+Resume the unresolved transaction from the earliest incomplete persistence stage. Inspect what already committed before writing. When a Direct local candidate is valid and only cloud synchronization failed, retry cloud deployment and verification without reapplying gameplay changes. In MCP mode, retry through the same service Transaction ID and idempotency key. The command cannot replay narration, consume resources again, duplicate events, or create a second Save Point for the same transaction.
 
 ## Canonical Change Proof and Unchanged-Save Detector
 
@@ -399,7 +401,7 @@ Failure to retrieve a supposedly saved change is a persistence or continuity def
 On new chat, model reset, transcript truncation, restored session, or GM handoff:
 
 1. load Campaign Configuration and the latest Save Index;
-2. identify the active adapter chain and canonical source;
+2. identify the active Persistence Mode and its Direct canonical source or MCP service binding;
 3. load any persisted Running or Session Summary only as a Cache;
 4. verify cache parent version, source revisions, visibility, and freshness;
 5. discard or regenerate stale packets;
@@ -463,9 +465,9 @@ An authorized Development Context may inspect:
 
 Debug output obeys visibility and GM Secret boundaries. Ordinary Gameplay Context omits successful plumbing unless the user asks or an Operational Failure requires action.
 
-## SQLite-Compatible Logical Guidance
+## Storage-Neutral Logical Guidance
 
-Implementations may persist packet metadata and transactional provenance using equivalent normalized structures:
+Direct formats or MCP services may persist packet metadata and transactional provenance using equivalent normalized structures:
 
 ```sql
 CREATE TABLE context_packets (
@@ -584,6 +586,18 @@ Cloud synchronization fails after a validated local commit. `retry save` resumes
 
 A non-empty Affected Set is narrated, but expected canonical owner rows, chronology, Campaign Version, and artifact evidence remain unchanged. Validation reports failure, status becomes `⚠️`, and `TURN_COMPLETE` is prohibited.
 
+### V. MCP Receipt Completion
+
+An MCP-authoritative campaign stages, validates, activates, and reads back a multi-domain transaction. The service returns a receipt naming the expected Transaction ID and Campaign Version. The runtime displays `💾`; it does not expose or classify the SQL Server deployment.
+
+### W. MCP Missing Receipt
+
+The MCP transport call returns but no validated receipt exists. The runtime displays `⏳` or `⚠️` according to service state, prohibits `TURN_COMPLETE`, and retries by the original Transaction ID without replaying gameplay.
+
+### X. Direct DuckDB Conflict
+
+A Direct DuckDB writer encounters an optimistic concurrency conflict. The candidate fails, the runtime reloads the active parent, and no last-writer-wins overwrite or false `💾` occurs.
+
 ## Acceptance Criteria
 
 FR-011 conformance requires all of the following:
@@ -602,10 +616,13 @@ FR-011 conformance requires all of the following:
 - a non-empty Affected Set proves expected canonical change before completion;
 - local-authoritative success displays `💾` only after local validation and read-back;
 - cloud-authoritative success displays `☁️💾` only after required synchronization and remote verification;
+- MCP-authoritative success displays `💾` only with a validated service receipt and never exposes backend topology;
+- Direct and MCP are selected explicitly and cannot silently fall back to each other;
 - `⏳` and unresolved `⚠️` block subsequent state-changing play;
 - manual `save`, `save status`, and `retry save` preserve idempotency;
 - Derived context refresh follows canonical verification;
-- host tests exercise Regression Cases A through U against the configured persistence chain;
+- host tests exercise Regression Cases A through U against the configured persistence mode;
+- mode-specific host tests also exercise Regression Cases V through X;
 - the repository regression harness passes its mock-adapter state-machine cases.
 
 ## Safeguards
@@ -624,6 +641,8 @@ FR-011 conformance requires all of the following:
 ## Related Documents
 
 - [AI Runtime Model](AI_RUNTIME_MODEL.md)
+- [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md)
+- [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md)
 - [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
 - [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [AI Game Master Workflow](AI_GM_WORKFLOW.md)

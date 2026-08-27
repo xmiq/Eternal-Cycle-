@@ -58,11 +58,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-No Future Revision is currently roadmapped and pending. FR-001 through FR-016 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+No Future Revision is currently roadmapped and pending. FR-001 through FR-017 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
-All currently known FR-001 through FR-016 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-017 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-017 - Portable Persistence Architecture and MCP Persistence Service
+
+- **Status:** Closed
+- **Issue:** Release 1 operational guidance coupled campaign persistence too closely to ChatGPT, SQLite, and Google Drive, limiting runtime portability and requiring an AI client to operate database and storage artifacts directly.
+- **Affected systems:** Campaign Persistence Engine, FR-011 Context Assembly and turn persistence, AI Runtime Model, ChatGPT execution profile, Save Index, Direct Adapters, migration, validation, and runtime hosting.
+- **Gameplay impact:** A capable alternate runtime could not select another approved direct format cleanly, while runtimes better suited to semantic MCP tools lacked a service-owned persistence route and evidence boundary.
+- **Evidence needed:** Cross-runtime configuration, direct SQLite and DuckDB cases, MCP semantic read/commit/retry cases, stale-parent and idempotency cases, receipt-gated completion, backend-detail isolation, and mode migration tests.
+- **Approved direction:** Define first-class `DIRECT` and `MCP` modes. Direct mode separates Database Format and Storage Adapters. MCP mode delegates Microsoft SQL Server transactions, validation, durability, backup, and recovery to an Eternal Cycle service and returns semantic records and validated Persistence Receipts without exposing backend topology to the GM.
+- **Suggested future phase:** Phase 13 — Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented through portable persistence contracts, runtime and FR-011 integration, renamed runtime-neutral adapters, DuckDB and local-storage contracts, blank configuration fields, a tested SQL Server-backed reference MCP service, governance, navigation, and repository validation.
+- **Authorized roadmap link:** [FR-017 — Portable Persistence Architecture and MCP Persistence Service](ROADMAP.md#phase-13--future-revisions)
+- **Closure references:** [Portable Persistence Architecture](../docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md), [MCP Persistence Mode](../docs/persistence/MCP_PERSISTENCE_MODE.md), [Reference MCP Service](../services/eternal-cycle-mcp/README.md), and [FR-017 Implementation Audit](audits/FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md)
 
 ### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
 

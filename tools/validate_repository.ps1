@@ -529,6 +529,19 @@ else {
     }
 }
 
+$fr017HarnessPath = Join-Path $rootPath 'tools/test_fr017_portable_persistence.ps1'
+if (-not (Test-Path -LiteralPath $fr017HarnessPath)) {
+    Add-ValidationError 'Missing FR-017 portable-persistence regression harness.'
+}
+else {
+    try {
+        & $fr017HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-017 portable-persistence regression harness failed.'
+    }
+}
+
 $contextPacketTemplatePath = Join-Path $rootPath 'templates/CONTEXT_PACKET_TEMPLATE.md'
 if (-not (Test-Path -LiteralPath $contextPacketTemplatePath)) {
     Add-ValidationError 'Missing Context Packet template.'
@@ -1161,6 +1174,7 @@ Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, 
 Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
+Write-Output 'FR-017 Portable Persistence: Direct/MCP modes, adapter classes, SQL Server service, receipts, and provenance checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {
     Write-Output 'Release state: Eternal Cycle v1.0.0; Phase 12 complete; Phase 13 active'

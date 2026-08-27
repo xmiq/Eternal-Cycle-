@@ -225,6 +225,7 @@ No mechanics or schemas for those objectives are implemented here.
 - [Migration and Versioning](MIGRATION_AND_VERSIONING.md)
 - [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - [GM Living Codex Persistence Model](../gm-living-codex/PERSISTENCE_MODEL.md)
-- [SQLite Persistence Adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md)
+- [SQLite Database Format Adapter](adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
+- [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

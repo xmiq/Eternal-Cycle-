@@ -1,6 +1,6 @@
 # AI Game Master Operating Procedures
 
-These documents define how an AI Game Master operates the completed Eternal Cycle rules, GM framework, and Campaign Persistence Engine. The family contains implementation-neutral architecture and procedures plus explicitly classified execution profiles and persistence adapters. None is an independent source of mechanics or campaign truth.
+These documents define how an AI Game Master operates the completed Eternal Cycle rules, GM framework, and Campaign Persistence Engine. The family contains implementation-neutral architecture and procedures plus explicitly classified execution profiles. Portable persistence modes and runtime-neutral adapters live with the Campaign Persistence Engine. None is an independent source of mechanics or campaign truth.
 
 A human GM may use the same procedures. Automation changes retrieval and execution methods; it does not change authority, responsibility, player agency, or the standard of evidence.
 
@@ -34,12 +34,14 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 Runtime-specific profiles are replaceable operational extensions. They do not redefine gameplay mechanics, Campaign Persistence semantics, or shared human and AI GM responsibilities.
 
-## Persistence Adapters
+## Persistence Architecture
 
-- [SQLite Persistence Adapter](chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) - bounded transactions, foreign-key enforcement, integrity checks, expected-versus-actual validation, stale-write protection, and read-only reopen.
-- [Google Drive Persistence Adapter](chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) - exact remote identity, fetch-latest, canonical replacement, remote read-back, backup propagation, and sharing protection.
+- [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - first-class `DIRECT` and `MCP` modes with one shared authority and completion contract.
+- [Direct Persistence Mode](../persistence/DIRECT_PERSISTENCE_MODE.md) - runtime-operated Database Format and Storage Adapter composition.
+- [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md) - semantic service operations, validated receipts, hidden backend, and service-owned durability.
+- [Direct Persistence Adapter Index](../persistence/adapters/README.md) - SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 
-Adapters use the `<TECHNOLOGY>_PERSISTENCE_ADAPTER.md` naming convention. They may compose into an Adapter Chain, but each retains explicit responsibility and none adjudicates gameplay.
+Direct adapters use the `<TECHNOLOGY>_<ADAPTER_CLASS>_ADAPTER.md` naming convention. MCP persistence uses a semantic service contract rather than a client Adapter Chain. Neither mode may adjudicate gameplay.
 
 ## Authority Boundary
 

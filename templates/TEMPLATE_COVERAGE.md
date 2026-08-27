@@ -36,7 +36,7 @@ Coverage does not require one file per canonical document. A record-family templ
 
 | Logical module | Template coverage | Notes |
 | --- | --- | --- |
-| Save Index and Protocol | [Save Index](SAVE_INDEX_TEMPLATE.md) | module registry, versions, Save Points, load state, validation, migration, and recovery |
+| Save Index and Protocol | [Save Index](SAVE_INDEX_TEMPLATE.md), [Persistence Configuration](PERSISTENCE_CONFIGURATION_TEMPLATE.md) | module registry, versions, portable mode selection, authority, Save Points, load state, validation, migration, and recovery |
 | Context Assembly | [Context Packet](CONTEXT_PACKET_TEMPLATE.md) | non-authoritative Current Scene, Running, and Session context; source navigation, freshness, read evidence, Affected Set result, and cache refresh |
 | Visual Identity and representation | [Visual Identity](VISUAL_IDENTITY_TEMPLATE.md), [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT_TEMPLATE.md) | sparse established appearance ownership plus purpose-specific Derived representation handoff; unspecified rendering detail remains non-canonical |
 | Campaign Canon and Rules Profile | [Campaign Canon and Rules Profile](CAMPAIGN_CANON_TEMPLATE.md) | permitted premises, options, provisional rulings, retcons, conversions, and control agreements |

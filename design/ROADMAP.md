@@ -334,13 +334,15 @@ Phase 12 maintenance may clarify, validate, repair, or extend reusable project m
 
 Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `FR-###` provenance and receives gameplay evidence without allowing gameplay, the Living Codex, an agent, or an empty queue to modify released rules automatically.
 
-- [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-016 without renumbering historical entries.
+- [x] **FR-017 — Portable Persistence Architecture and MCP Persistence Service** — Established first-class `DIRECT` and `MCP` modes; separated runtime-neutral Database Format and Storage Adapters from the ChatGPT profile; added SQLite, DuckDB, local-storage, and Google Drive Direct contracts; added semantic MCP receipt and hidden-backend rules; and implemented a Microsoft SQL Server-backed reference MCP service with staged candidate versions, idempotent commits, validation, activation read-back, and server-owned durability hooks.
+- [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-017 without renumbering historical entries.
 
 ### Current Position
 
 - **Approved pending objectives:** None.
 - **Selected implementation objective:** None.
-- **Next action:** Continue evidence gathering and maintainer review through the [Future Revisions register](FUTURE_REVISIONS.md).
+- **Latest completed objective:** FR-017 — Portable Persistence Architecture and MCP Persistence Service.
+- **Next action:** Continue evidence gathering and maintainer review through the [Future Revisions register](FUTURE_REVISIONS.md); no later objective is selected automatically.
 
 ### Governance
 

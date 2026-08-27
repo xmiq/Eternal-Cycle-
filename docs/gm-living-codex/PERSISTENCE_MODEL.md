@@ -476,8 +476,8 @@ SQLite Living Codex store
 
 In this chain:
 
-- the [SQLite Persistence Adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) owns local transaction and integrity behavior;
-- the [Google Drive Persistence Adapter](../ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) owns remote identity, replacement, read-back, and backup behavior;
+- the [SQLite Database Format Adapter](../persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md) owns local transaction and integrity behavior;
+- the [Google Drive Remote Storage Adapter](../persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md) owns remote identity, replacement, read-back, and backup behavior;
 - external Codex configuration owns actual locators, access, retention, and concurrency policy;
 - this document owns Living Codex logical structure and full-save completion.
 
@@ -520,7 +520,7 @@ Rendered views must not:
 - [Campaign Persistence Engine](../persistence/README.md)
 - [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md)
 - [AI Save Protocol](../ai/AI_SAVE_PROTOCOL.md)
-- [SQLite Persistence Adapter](../ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md)
-- [Google Drive Persistence Adapter](../ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
+- [SQLite Database Format Adapter](../persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
+- [Google Drive Remote Storage Adapter](../persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md)
 - [Repository Conventions](../../design/REPOSITORY_CONVENTIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

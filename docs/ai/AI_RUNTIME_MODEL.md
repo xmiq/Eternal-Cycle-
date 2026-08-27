@@ -11,7 +11,7 @@ The model is operational documentation. It does not define fictional mechanics, 
 - **Owner:** this document owns AI runtime layer boundaries, boot flow, transaction flow, composition rules, and extension rules
 - **Primary authorities:** [Game Master Responsibilities](../gm/GM_RESPONSIBILITIES.md), [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md), and [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - **Dependencies:** Repository Canon, Campaign Canon, Canonical Campaign State, active Campaign Configuration, AI capability disclosure, and applicable persistence validation
-- **Extensions:** AI Execution Profiles, Persistence Adapters, orchestration software, campaign interfaces, and deployment-specific configuration
+- **Extensions:** AI Execution Profiles, Direct Persistence Adapters, MCP persistence services, orchestration software, campaign interfaces, and deployment-specific configuration
 - **Consumers:** AI GMs, supervising human GMs, runtime implementers, campaign custodians, persistence operators, and validation tools
 - **Repository boundary:** no campaign identifier, save locator, credential, current character, live world state, transcript, or other populated campaign fact belongs here
 
@@ -19,7 +19,7 @@ The model is operational documentation. It does not define fictional mechanics, 
 
 The AI GM operates through Eternal Cycle rules and Canonical Campaign State. It does not own either one.
 
-The Campaign Persistence Engine defines what campaign information must persist, how authority and truth remain distinct, and what validation means. Persistence Adapters define how an implementation fetches, writes, verifies, backs up, and recovers that information. An adapter cannot outrank, reinterpret, or adjudicate the logical state it carries.
+The Campaign Persistence Engine defines what campaign information must persist, how authority and truth remain distinct, and what validation means. Campaign Configuration selects `DIRECT` or `MCP` persistence. Direct Adapters or an MCP persistence service define how the selected implementation fetches, writes, verifies, backs up, and recovers that information. No implementation component can outrank, reinterpret, or adjudicate the logical state it carries.
 
 Conversation context, summaries, transcripts, caches, and model memory may help locate evidence. They never silently replace Canonical Campaign State.
 
@@ -33,8 +33,8 @@ The runtime has seven distinct layers.
 | **2. Campaign Persistence Engine** | Define continuity, authority, truth layers, history, migration, versioning, validation, and save semantics | Require a particular database, cloud service, file format, or AI provider |
 | **3. AI Runtime Model** | Define how an AI operator, profiles, adapters, rules, and campaign state relate | Adjudicate a mechanic or become campaign authority |
 | **4. AI Execution Profile** | Define how one AI runtime boots, retrieves, adjudicates, presents, persists, validates, and fails | Redefine Eternal Cycle mechanics or embed campaign-specific configuration |
-| **5. Persistence Adapters** | Implement storage-specific fetch, transaction, deployment, read-back, backup, concurrency, and recovery behavior | Decide gameplay outcomes, promote theories into truth, or alter logical ownership |
-| **6. Campaign Configuration** | Select versions, profiles, adapters, locators, permissions, and runtime metadata for one deployment | Become a universal runtime document or silently own the campaign facts it references |
+| **5. Persistence Implementation** | In `DIRECT`, compose Database Format and Storage Adapters; in `MCP`, invoke a semantic persistence service that owns its backend | Decide gameplay outcomes, expose hidden backend authority as fiction, promote theories into truth, or alter logical ownership |
+| **6. Campaign Configuration** | Select versions, profile, Persistence Mode, adapters or MCP service, locators, permissions, and runtime metadata for one deployment | Become a universal runtime document or silently own the campaign facts it references |
 | **7. Campaign State** | Hold every populated campaign fact under the Campaign Persistence Engine | Enter the canonical rules repository except as blank reusable templates |
 
 These layers form a responsibility chain, not a descending authority ladder. Rules authority and campaign-fact authority remain the separate hierarchies defined by the [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md#rules-hierarchy) and [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md).
@@ -45,7 +45,9 @@ These layers form a responsibility chain, not a descending authority ladder. Rul
 Player
   -> AI Game Master
   -> selected AI Execution Profile
-  -> selected Persistence Adapter or Adapter Chain
+  -> selected Persistence Mode
+       -> DIRECT: Database Format and Storage Adapter Chain
+       -> MCP: semantic MCP persistence service
   -> Campaign Persistence Engine semantics
   -> Canonical Campaign State
 
@@ -74,9 +76,9 @@ An operational result establishes only what it proves. A successful upload does 
 Before dependent play, an AI runtime:
 
 1. loads Campaign Configuration through an authorized channel;
-2. identifies the selected Repository Version, Rules Profile, AI Execution Profile, and Adapter Chain;
-3. asks the outermost deployment adapter for the latest identified canonical source;
-4. passes the retrieved source through each adapter responsible for decoding or opening it;
+2. identifies the selected Repository Version, Rules Profile, AI Execution Profile, and Persistence Mode;
+3. in `DIRECT`, resolves the complete adapter chain and asks the canonical Storage Adapter for the latest identified source;
+4. in `MCP`, resolves the configured service and campaign binding, then requests semantic status and canonical records without opening a database;
 5. reads the Save Index, active Campaign Version, Current Session, and open recovery, migration, continuity, or validation state;
 6. validates enough of the source and required Read Set to establish an honest readiness state;
 7. loads only the material campaign dependency closure and applicable Repository Canon;
@@ -97,23 +99,27 @@ For one bounded Gameplay Interaction, the runtime:
 5. advances only causally due independent world responses;
 6. identifies the complete Affected Set and currently resolvable consequences;
 7. constructs one owner-routed, idempotent Save Transaction;
-8. invokes the logical-store adapter within its transaction and integrity boundaries;
-9. runs required read-only semantic and implementation validation;
-10. invokes any deployment and backup adapters in configured order;
-11. performs required Read-Back Validation at each authoritative boundary;
+8. in `DIRECT`, invokes the Database Format Adapter and configured Storage Adapters within their separate boundaries;
+9. in `MCP`, submits the complete transaction through the semantic service and preserves its stable transaction identity;
+10. runs or requests required semantic and implementation validation;
+11. requires direct adapter evidence or a validated MCP Persistence Receipt from the configured authority;
 12. refreshes the active Campaign Version and Derived Views;
 13. presents only an outcome consistent with the verified state and the selected execution profile.
 
 The core [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md) determines when a Gameplay Interaction must become durable before dependent adjudication. An AI Execution Profile may impose a stricter presentation gate, such as Save-Before-Delivery, without turning that constraint into fictional physics or a universal human-GM requirement.
 
-## Adapter Composition
+## Persistence Mode and Composition
 
-Multiple Persistence Adapters may form an ordered Adapter Chain. Each member must declare what it owns, what it receives, what it returns, and what evidence proves completion.
+The [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines two first-class modes. A campaign selects exactly one active mode.
+
+### DIRECT
+
+Multiple Direct Persistence Adapters may form an ordered Adapter Chain. Each member must declare its adapter class, what it owns, what it receives, what it returns, and what evidence proves completion.
 
 For example:
 
 ```text
-SQLite logical store
+SQLite Database Format Adapter
   -> remote canonical deployment
   -> remote backup snapshot
 ```
@@ -125,7 +131,13 @@ In that chain:
 - Campaign Configuration identifies the selected chain, ordering, locators, and required policies;
 - the Campaign Persistence Engine continues to own logical meaning, authority, and validation requirements.
 
-Composition never gives one adapter permission to skip another adapter's responsibility. A remote byte match cannot replace database semantic validation, and a valid database transaction cannot prove that remote canonical state was replaced.
+Composition never gives one adapter permission to skip another adapter's responsibility. A remote byte match cannot replace database semantic validation, and a valid database transaction cannot prove that remote canonical state was replaced. DuckDB or another approved format may replace SQLite only through its own complete Database Format Adapter.
+
+### MCP
+
+In MCP mode the runtime invokes one semantic persistence service. It does not compose client-side database or storage adapters around that service. The service owns its Microsoft SQL Server transaction, durability, backup, recovery, and deployment implementation. The runtime receives canonical records, semantic status, and validated Persistence Receipts without receiving connection strings, SQL, local/cloud topology, or backup locators.
+
+MCP mode uses `💾` for a validated service receipt, `⏳` for incomplete service work, and `⚠️` for service, transaction, durability, or validation failure. It does not use `☁️💾`, because backend topology is not client authority.
 
 ## Gameplay and Development Contexts
 
@@ -142,8 +154,9 @@ Failure is contained at the narrowest affected layer.
 - A rules gap follows Canonical, Foundation, Provisional, or Unsupported handling.
 - A campaign conflict follows Continuity Resolution.
 - A missing source follows source recovery and remains unknown meanwhile.
-- A failed local transaction rolls back and leaves the prior validated state authoritative.
-- A failed deployment or read-back leaves the candidate unverified and blocks dependent use.
+- A failed Direct database transaction rolls back and leaves the prior validated state authoritative.
+- A failed Direct deployment or read-back leaves the candidate unverified and blocks dependent use.
+- A failed MCP transaction or missing receipt leaves the turn pending or failed even if the transport call itself succeeded.
 - A failed backup follows the active execution profile and campaign policy without being reported as complete.
 - A failed presentation does not reverse an already validated Save Point; it creates a delivery or recovery concern.
 
@@ -160,14 +173,16 @@ A future AI Execution Profile must:
 5. keep Campaign Configuration and populated Campaign State external;
 6. link rather than duplicate gameplay mechanics.
 
-A future Persistence Adapter must:
+A future Database Format or Storage Adapter must:
 
-1. use the `<TECHNOLOGY>_PERSISTENCE_ADAPTER.md` naming convention;
-2. declare its exact responsibility in an Adapter Chain;
+1. use the `<TECHNOLOGY>_<ADAPTER_CLASS>_ADAPTER.md` naming convention;
+2. declare its exact adapter class and responsibility in a Direct Adapter Chain;
 3. preserve stable authority and identity;
 4. define freshness, concurrency, validation, read-back, and failure behavior;
 5. avoid campaign-specific identifiers and credentials;
 6. never adjudicate gameplay.
+
+A future MCP persistence implementation must preserve the semantic read, transaction, idempotency, validation, receipt, hidden-backend, and failure contracts in [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md). It may replace backend technology only through an owner-authorized revision and migration; backend choice never changes fictional canon.
 
 Replacing a profile or adapter changes runtime operation only. It does not alter fictional canon, campaign truth, or the Campaign Persistence Engine unless a separately authorized repository or campaign migration does so.
 
@@ -176,7 +191,8 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 - The AI GM does not own the rules or campaign state.
 - Model memory and conversation context are non-authoritative.
 - Campaign Configuration selects implementations but does not become a fact owner.
-- Persistence Adapters carry and verify state; they do not interpret mechanics.
+- Direct Adapters and MCP persistence services carry and verify state; they do not interpret mechanics.
+- Campaign Configuration selects exactly one Persistence Mode; a failure never authorizes silent fallback.
 - Adapter convenience never collapses Truth Layers, Persistence Levels, versions, or record owners.
 - A missing field remains missing rather than being filled for schema completeness.
 - Operational success never substitutes for semantic validation.
@@ -193,8 +209,10 @@ Entity, Controller, and Perspective must remain separate in loaded state and gen
 - [AI Operating Procedures Index](README.md)
 - [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md)
 - [ChatGPT GM Universal Instructions](chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md)
-- [SQLite Persistence Adapter](chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md)
-- [Google Drive Persistence Adapter](chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md)
+- [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md)
+- [Direct Persistence Mode](../persistence/DIRECT_PERSISTENCE_MODE.md)
+- [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md)
+- [Direct Persistence Adapter Index](../persistence/adapters/README.md)
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
 - [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)

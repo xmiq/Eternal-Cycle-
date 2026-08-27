@@ -1,21 +1,23 @@
-# Google Drive Persistence Adapter
+# Google Drive Remote Storage Adapter
 
 ## Purpose
 
-This Persistence Adapter defines how a ChatGPT runtime uses Google Drive for canonical campaign-file deployment and backup while preserving the storage-neutral [Campaign Persistence Engine](../../../persistence/README.md).
+This Remote Storage Adapter defines how DIRECT persistence may use Google Drive for canonical campaign-file deployment and backup while preserving the storage-neutral [Campaign Persistence Engine](../README.md).
 
 It contains no campaign-specific Drive identifier, URL, credential, or populated state. Google Drive implements remote identity and transport behavior; it does not adjudicate gameplay or own campaign meaning.
 
 ## Document Control
 
-- **Owner:** this adapter owns exact remote identity, fetch-latest, canonical replacement, remote read-back, backup propagation, folder hygiene, remote concurrency, and deployment recovery
-- **Primary authorities:** [AI Runtime Model](../../AI_RUNTIME_MODEL.md), [AI Save Protocol](../../AI_SAVE_PROTOCOL.md), [Save Update Protocol](../../../persistence/SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](../../../persistence/PERSISTENCE_VALIDATION.md)
+- **Owner:** this adapter owns exact remote identity, fetch-latest, canonical replacement, remote read-back, backup propagation, folder hygiene, remote concurrency, and deployment recovery in DIRECT mode
+- **Primary authorities:** [AI Runtime Model](../../ai/AI_RUNTIME_MODEL.md), [AI Save Protocol](../../ai/AI_SAVE_PROTOCOL.md), [Save Update Protocol](../SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](../PERSISTENCE_VALIDATION.md)
 - **Dependencies:** external Campaign Configuration, authorized Drive access, an identified canonical file, selected logical-store adapter, and backup policy
 - **Extensions:** logical-store adapters may produce validated candidate bytes for deployment without taking over remote identity
-- **Consumers:** ChatGPT execution profile, Adapter Chains, campaign custodians, save operators, and recovery tools
+- **Consumers:** runtime-neutral Direct Adapter Chains, AI Execution Profiles, human operators, campaign custodians, save operators, and recovery tools
 - **Repository boundary:** no campaign identifier, Drive file or folder identifier, URL, sharing principal, credential, token, current filename, or populated record belongs here
 
-## Adapter Role
+## Adapter Class and Role
+
+This is a **Remote Storage Adapter**, not a database format and not an AI profile. It transports and verifies a candidate produced by a Database Format Adapter. ChatGPT, Kimi, a human application, or another capable runtime may use the same contract when it can operate the configured Drive interface faithfully.
 
 The Google Drive adapter owns:
 
@@ -274,7 +276,7 @@ Google Drive may also deploy another supported logical format. Replacing the inn
 
 ### Living Codex Specialization
 
-Google Drive may deploy the separately configured [GM Living Codex SQLite database](../../../gm-living-codex/PERSISTENCE_MODEL.md). That deployment uses its own exact canonical identity, current verified backup, dated recovery snapshots, migration manifests, concurrency evidence, canonical read-back, and backup read-back. It remains separate from every campaign canonical file and backup area.
+Google Drive may deploy the separately configured [GM Living Codex SQLite database](../../gm-living-codex/PERSISTENCE_MODEL.md). That deployment uses its own exact canonical identity, current verified backup, dated recovery snapshots, migration manifests, concurrency evidence, canonical read-back, and backup read-back. It remains separate from every campaign canonical file and backup area.
 
 In this specialization, the Living Codex persistence model owns reusable-design meaning and full-save completion while Google Drive owns remote transport and identity. The adapter must not treat a Codex file as Campaign State, place campaign facts in it, or infer campaign adoption from successful deployment.
 
@@ -293,13 +295,14 @@ In this specialization, the Living Codex persistence model owns reusable-design 
 
 ## Related Documents
 
-- [ChatGPT GM Universal Instructions](../CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md)
-- [SQLite Persistence Adapter](SQLITE_PERSISTENCE_ADAPTER.md)
-- [GM Living Codex Persistence Model](../../../gm-living-codex/PERSISTENCE_MODEL.md)
-- [AI Runtime Model](../../AI_RUNTIME_MODEL.md)
-- [AI Capabilities and Limitations](../../AI_CAPABILITIES_AND_LIMITATIONS.md)
-- [AI Save Protocol](../../AI_SAVE_PROTOCOL.md)
-- [Campaign State Model](../../../persistence/CAMPAIGN_STATE_MODEL.md)
-- [Save Update Protocol](../../../persistence/SAVE_UPDATE_PROTOCOL.md)
-- [Persistence Validation](../../../persistence/PERSISTENCE_VALIDATION.md)
-- [Canonical Terminology](../../../../design/TERMINOLOGY.md)
+- [Portable Persistence Architecture](../PORTABLE_PERSISTENCE_ARCHITECTURE.md)
+- [Direct Persistence Mode](../DIRECT_PERSISTENCE_MODE.md)
+- [SQLite Database Format Adapter](SQLITE_DATABASE_FORMAT_ADAPTER.md)
+- [GM Living Codex Persistence Model](../../gm-living-codex/PERSISTENCE_MODEL.md)
+- [AI Runtime Model](../../ai/AI_RUNTIME_MODEL.md)
+- [AI Capabilities and Limitations](../../ai/AI_CAPABILITIES_AND_LIMITATIONS.md)
+- [AI Save Protocol](../../ai/AI_SAVE_PROTOCOL.md)
+- [Campaign State Model](../CAMPAIGN_STATE_MODEL.md)
+- [Save Update Protocol](../SAVE_UPDATE_PROTOCOL.md)
+- [Persistence Validation](../PERSISTENCE_VALIDATION.md)
+- [Canonical Terminology](../../../design/TERMINOLOGY.md)

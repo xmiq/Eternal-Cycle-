@@ -2877,3 +2877,36 @@ The project owner renamed the final planned development phase **Phase 11 — Tem
 1. No development or maintenance task is active.
 2. Gather external gameplay evidence and obtain explicit owner authorization before changing the roadmap or mechanics.
 3. Before distribution, verify `Eternal Cycle.zip` against `HEAD`; regenerate it after any future authorized commit.
+
+## Phase 13 Checkpoint — FR-017 Portable Persistence
+
+### Completed Objective
+
+- FR-017 — Portable Persistence Architecture and MCP Persistence Service.
+
+### Files and Implementation
+
+- Added canonical `DIRECT` and `MCP` persistence architecture and mode contracts.
+- Reclassified SQLite as a Database Format Adapter and Google Drive as a Remote Storage Adapter outside the ChatGPT profile.
+- Added DuckDB and Local Storage Direct Adapter contracts.
+- Added a blank portable Persistence Configuration template.
+- Added a .NET 10 MCP stdio service backed by Microsoft SQL Server, with staged candidate versions, stable references, idempotency, optimistic parent checks, validation, activation read-back, Persistence Receipts, and optional recovery-point gating.
+- Updated FR-011, AI runtime/profile, Save Index, persistence integration, navigation, terminology, decisions, roadmap, and Future Revision provenance.
+
+### Validation Status
+
+- MCP service build: pass with zero warnings.
+- MCP service tests: pass, 8 of 8.
+- FR-011 persistence-gate regression harness: pass, 13 assertions.
+- FR-017 portable-persistence harness: pass, 26 assertions.
+- Repository validation: pass across 260 Markdown files, 6,981 relative links, 157 anchors, 173 indexed canonical documents, 43 templates, 1,205 terminology checks, 188 roadmap tasks, and 17 Future Revision entries.
+- Blocking unresolved questions, orphaned Markdown documents, and forbidden campaign-data directories: zero.
+
+### Remaining Work
+
+1. Complete the final diff and staging review.
+2. Commit only FR-017.
+
+### Exact Resume Point
+
+After the FR-017 commit, return to owner-mediated Future Revision intake. Do not select or infer FR-018.

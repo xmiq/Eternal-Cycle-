@@ -2,6 +2,13 @@
 
 This file records released Eternal Cycle versions. Design provenance and task history remain in the [Development Roadmap](design/ROADMAP.md), [Design Decisions](design/DECISIONS.md), and repository audits.
 
+## Unreleased
+
+- Added FR-017 portable persistence with first-class `DIRECT` and `MCP` modes.
+- Separated runtime-neutral Database Format and Storage Adapters from the ChatGPT execution profile, including SQLite, DuckDB, local-storage, and Google Drive contracts.
+- Added a Microsoft SQL Server-backed Eternal Cycle MCP persistence reference service with semantic reads, staged candidate versions, idempotent commits, validation, activation read-back, and receipt-gated completion.
+- Preserved Eternal Cycle v1.0.0 and its `v1.0.0` tag as the historical Release 1 boundary.
+
 ## 1.0.0 - 2026-08-25
 
 **Eternal Cycle — Release 1**

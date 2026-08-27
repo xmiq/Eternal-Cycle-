@@ -43,6 +43,7 @@ Populate campaign instances only in an external Campaign Record. Reusable rules 
 ### Campaign Persistence Templates
 
 - [Save Index Template](SAVE_INDEX_TEMPLATE.md) - campaign control plane, versions, module registry, Save Points, load state, validation, migration, and recovery.
+- [Persistence Configuration Template](PERSISTENCE_CONFIGURATION_TEMPLATE.md) - blank `DIRECT` or `MCP` mode selection, adapter or service contract, authority, validation, and recovery policy.
 - [Campaign Canon and Rules Profile Template](CAMPAIGN_CANON_TEMPLATE.md) - permitted premises, options, Provisional Rules, retcons, conversions, consent, and version history.
 - [Autonomous Registry Record Template](AUTONOMOUS_REGISTRY_TEMPLATE.md) - persistent autonomous Individual or bounded Group identity, Model references, Controller assignments, autonomy, lineage, memory continuity, networks, assignment, and last-confirmed state.
 - [Relationship Record Template](RELATIONSHIP_TEMPLATE.md) - identity, meetings, dimensions, commitments, exchanges, shared work, unresolved issues, and change.

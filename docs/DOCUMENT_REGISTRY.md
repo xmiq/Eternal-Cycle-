@@ -284,7 +284,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 
 **Dependencies:** Repository Canon, World Engine outcomes, GM procedures, every specialist record owner, and accepted persistence decisions.
 
-**Extensions:** storage-specific implementations and populated campaign records may instantiate the logical architecture outside the repository.
+**Extensions:** Direct Adapters, MCP persistence services, and populated campaign records may instantiate the logical architecture outside the repository.
 
 **Consumers:** GMs, AI operators, campaign custodians, migration tools, validation tools, templates, and continuity resolution.
 
@@ -309,13 +309,21 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) | Conflict containment, classification, authority resolution, correction, and resumption | Consumed when narration and persistence disagree. |
 | [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) | Affected Set, Session Delta, owner-routed Write Set, validation, and atomic Save Point | Consumed after completed Gameplay Interactions. |
 | [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) | Read-only baselines, profiles, findings, severity, outcomes, and repair routing | Consumed by saves, loads, migrations, corrections, and audits. |
+| [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) | First-class `DIRECT` and `MCP` modes, shared persistence contract, configuration, evidence, failure, and mode migration | Consumed by Campaign Configuration, runtime profiles, Save Indexes, migration, and validation. |
+| [Direct Persistence Mode](persistence/DIRECT_PERSISTENCE_MODE.md) | Database Format and Storage Adapter classes, composition, capability gate, transaction evidence, and status | Consumed by runtimes that directly operate approved persistence technology. |
+| [MCP Persistence Mode](persistence/MCP_PERSISTENCE_MODE.md) | Semantic service interface, Persistence Receipts, hidden backend, SQL Server reference boundary, durability, and recovery | Consumed by MCP-capable runtimes without granting database authority. |
+| [Direct Persistence Adapter Index](persistence/adapters/README.md) | Direct adapter classification, reading order, and selection boundary | Routes current format and storage adapter contracts. |
+| [SQLite Database Format Adapter](persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md) | SQLite transaction, integrity, expected-state, read-only reopen, staleness, rollback, and candidate production | Implements a Direct logical store without adjudicating or owning campaign meaning. |
+| [DuckDB Database Format Adapter](persistence/adapters/DUCKDB_DATABASE_FORMAT_ADAPTER.md) | Persistent DuckDB transactions, single-writer-process boundary, optimistic conflicts, checkpoints, constraints, and read-back | Implements an optional Direct logical store under explicit deployment limits. |
+| [Local Storage Adapter](persistence/adapters/LOCAL_STORAGE_ADAPTER.md) | Exact local artifact identity, locks, atomic activation, read-back, backup, and recovery | Places a Direct database artifact without interpreting it. |
+| [Google Drive Remote Storage Adapter](persistence/adapters/GOOGLE_DRIVE_REMOTE_STORAGE_ADAPTER.md) | Remote identity, fetch, replacement, read-back, backup, concurrency, folder hygiene, and deployment recovery | Deploys and verifies Direct canonical bytes without adjudicating or owning campaign meaning. |
 | [Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) | Completed-system ownership map and load-to-activation operating cycle | Consumed by GM, AI, template, and implementation workflows. |
 
 ## AI Game Master Operations
 
 **Dependencies:** Game Master Toolkit, Campaign Persistence Engine, Repository Canon, information permissions, and relevant specialist owners.
 
-**Extensions:** implementation-specific adapters may execute these procedures but may not change their authority or claim broader capability than available.
+**Extensions:** implementation-specific Direct Adapters or MCP services may execute these procedures but may not change their authority or claim broader capability than available.
 
 **Consumers:** implementation-neutral AI GMs, supervisors, campaign custodians, and human handoff operators.
 
@@ -327,8 +335,6 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Canonical Visual Context](ai/CANONICAL_VISUAL_CONTEXT.md) | Purpose-specific visual Read Set, Current Appearance assembly, observer filtering, secret exclusions, unknown preservation, tool handoff, and rendering boundaries | Consumes Visual Identity and current specialist owners as a Derived projection; owns no appearance fact and normally creates no Affected Set. |
 | [AI Capabilities and Limitations](ai/AI_CAPABILITIES_AND_LIMITATIONS.md) | Cross-runtime capability disclosure, limitation handling, and failure safeguards | Prevents memory, fluency, cache, tool access, or generated completeness from becoming authority. |
 | [ChatGPT GM Universal Instructions](ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) | ChatGPT-specific context, boot, action, delivery, persistence, correction, and failure behavior | Applies strict Save-Before-Delivery without changing fictional rules or shared GM authority. |
-| [SQLite Persistence Adapter](ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md) | SQLite transaction, integrity, expected-state, read-only reopen, staleness, rollback, and candidate production | Implements a logical structured store without adjudicating or owning campaign meaning. |
-| [Google Drive Persistence Adapter](ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md) | Remote identity, fetch, replacement, read-back, backup, concurrency, folder hygiene, and deployment recovery | Deploys and verifies canonical bytes without adjudicating or owning campaign meaning. |
 | [AI GM Workflow](ai/AI_GM_WORKFLOW.md) | End-to-end load, adjudicate, narrate, persist, recover, and handoff sequence | Consumed as the main AI operating loop. |
 | [AI Session Start](ai/AI_SESSION_START.md) | Version, Save Index, visibility, Read Set, freshness, readiness, and resume checks | Required before AI-facilitated play. |
 | [AI Play Protocol](ai/AI_PLAY_PROTOCOL.md) | Intent classification, owner retrieval, information separation, resolution, narration, and closure | Consumed for each Gameplay Interaction. |

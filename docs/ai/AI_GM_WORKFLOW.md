@@ -37,7 +37,7 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 2. Load the Campaign Canon or Rules Profile.
 3. Confirm the active Save Point, Current Session state, open migrations, validation warnings, and unresolved conflicts.
 4. Confirm which participant or interface may authorize play, rulings, record access, saves, and corrections.
-5. Resolve and verify the configured local or cloud canonical persistence target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent.
+5. Resolve the configured `DIRECT` or `MCP` persistence target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent or an MCP backend is not locally visible.
 6. Separate repository materials from the external Campaign Record.
 
 If versions or authority are materially unknown, stop at the appropriate non-ready state.
@@ -104,7 +104,7 @@ For inherited outcomes, resolve [Reproductive Compatibility](../gm-living-codex/
 
 After activation:
 
-1. refresh the Save Index and active Campaign Version;
+1. refresh the Save Index, selected Persistence Mode, and active Campaign Version;
 2. discard or regenerate stale Current Scene, Running, and Session context from committed state;
 3. carry forward unresolved player intent, Pending Consequences, Review Points, and declared limitations;
 4. continue at the next interaction or produce a bounded handoff view.
