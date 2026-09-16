@@ -44,6 +44,7 @@ $publication = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Ma
 $sourceProvider = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/GitRuleSourceProvider.cs"
 $publishedStore = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/SqlServerPublishedRuleStore.cs"
 $diagnostics = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/ServiceDiagnostics.cs"
+$readiness = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/ManagedReadiness.cs"
 $domainSchema = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Schema/002_rule_domain.sql"
 $referenceReadme = Read-RepoFile "$referenceRoot/README.md"
 $publicationTests = Read-RepoFile "$referenceRoot/tests/EternalCycle.Persistence.Mcp.Tests/ManagedRulePublicationTests.cs"
@@ -85,7 +86,7 @@ Assert-Requirement 24 ($publishedStore -match 'MERGE \{\{schema\}\}\.active_rule
 Assert-Requirement 25 ($publication -match 'PublishedRuleContextProvider' -and $publicationTests -match 'RuntimeRetrievalUsesPublishedStoreWithoutCallingSourceProvider') 'Runtime retrieval uses published rules, not repository compilation.'
 Assert-Requirement 26 ($publication -match 'SourceIdentity' -and $sourceProvider -match 'commit SHA|sourceIdentity') 'Immutable source provenance is retained.'
 Assert-Requirement 27 ($routingTests -match 'WorldSpecificRetrievalExcludesOtherWorldAndStaysWithinEightK') 'World applicability excludes unrelated worlds.'
-Assert-Requirement 28 ($domainSchema -match 'rule_update_checks' -and $diagnostics -match 'GetLatestUpdateCheckAsync') 'Source freshness and update state are detectable.'
+Assert-Requirement 28 ($domainSchema -match 'rule_update_checks' -and $readiness -match 'rule_update_checks') 'Source freshness and update state are detectable through readiness-safe inspection.'
 
 # Source provider (29-33)
 Assert-Requirement 29 ($publicationTests -match 'UnchangedSourceDoesNotRepublish') 'Unchanged sources are not republished.'

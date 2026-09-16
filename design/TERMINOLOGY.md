@@ -4931,3 +4931,23 @@ A replaceable Derived index of provenance-bearing rule chunks and applicability 
 ## Rule Context
 
 A bounded Derived selection of the Runtime Rule Kernel and relevant Core, World/Ruleset, optional-module, Campaign Mode, operation, and topic rule chunks for one runtime operation. Campaign Canon is retrieved separately under the same Campaign ID.
+
+## Managed Readiness
+
+A structured report of service transport, persistence connection, campaign schema, Domain Namespace, Rule Source, publication, activation, requested campaign, and overall gameplay readiness. One healthy component never implies the others are ready.
+
+## Managed Readiness State
+
+The service-level outcome `READY`, `SETUP_REQUIRED`, `MIGRATION_REQUIRED`, `RULE_SOURCE_REQUIRED`, `RULE_PUBLICATION_REQUIRED`, `RULE_ACTIVATION_REQUIRED`, `CAMPAIGN_REQUIRED`, `DEGRADED`, or `ERROR`. It communicates an operational boundary and does not become campaign fiction.
+
+## Managed Bootstrap
+
+A separately authorized, permission-gated administrative operation that previews, applies, and validates only versioned implementation-owned structures or equivalent bounded setup changes. It exposes no arbitrary datastore command and is repeat-safe.
+
+## Official Rule Source
+
+The Eternal Cycle source identity published by authoritative distribution metadata. It is a selectable default, not an unavoidable provider, and every compiled publication still records an immutable source revision.
+
+## Campaign Directory
+
+A non-canonical operational index of stable Campaign IDs, meaningful display names, short descriptions, and trusted routing metadata used for start and resume selection. It contains no Campaign Canon and does not weaken campaign isolation.

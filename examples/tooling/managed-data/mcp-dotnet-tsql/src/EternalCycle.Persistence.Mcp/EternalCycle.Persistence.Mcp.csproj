@@ -19,6 +19,13 @@
     <None Include="Schema\001_initial.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\002_rule_domain.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\002_rule_domain.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\003_campaign_directory.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\003_campaign_directory.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\004_rule_source_configuration.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\004_rule_source_configuration.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\..\..\..\..\DISTRIBUTION.json"
+          Link="distribution-metadata.json"
+          CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

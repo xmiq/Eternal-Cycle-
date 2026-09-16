@@ -1,0 +1,75 @@
+# Running Eternal Cycle
+
+## Purpose
+
+This guide explains how a runtime discovers, selects, initializes, and reuses an Eternal Cycle persistence strategy without making any particular AI host, protocol, source forge, or datastore mandatory.
+
+## Document Control
+
+- **Owner:** runtime-neutral startup, capability discovery, setup handoff, and strategy reuse
+- **Dependencies:** [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md), [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Managed Data Service](MANAGED_DATA_SERVICE.md), and [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md)
+- **Extensions:** runtime profiles, Direct Adapter instructions, Managed service quick starts, and deployment-specific configuration
+- **Consumers:** players, human and AI GMs, runtime integrators, and administrators
+- **Repository boundary:** no endpoint, credential, populated Campaign ID, or live state belongs here
+
+## The Startup Rule
+
+Every environment follows:
+
+```text
+Enumerate -> Select -> Persist -> Reuse
+```
+
+1. **Enumerate** available persistence and rule-delivery capabilities.
+2. **Select** `DIRECT` or `MANAGED` using required capabilities and user consent.
+3. **Persist** the selected strategy, implementation identity, and non-secret campaign routing in Campaign Configuration.
+4. **Reuse** that selection on resume until an explicit validated migration changes it.
+
+SQL Server, MCP, GitHub, ChatGPT, Unsloth, SQLite, DuckDB, and Google Drive are implementations or hosts, not universal requirements.
+
+## Managed Startup
+
+A Managed client first asks the selected service for structured capabilities and readiness. A healthy transport or datastore connection alone does not mean gameplay is ready.
+
+The service may report:
+
+| State | Meaning | Normal response |
+| --- | --- | --- |
+| `READY` | Required schemas, source, active compatible Rule Release, and requested campaign are ready. | Start or resume play. |
+| `SETUP_REQUIRED` | EC-owned persistence or rule structures are missing. | Explain the bounded setup plan and request approval. |
+| `MIGRATION_REQUIRED` | Existing EC-owned structures require a supported upgrade or administrator review. | Stop state-changing play and migrate. |
+| `RULE_SOURCE_REQUIRED` | No Rule Source has been selected. | Offer the official source and compatible custom alternatives. |
+| `RULE_PUBLICATION_REQUIRED` | A source exists but no validated release is published. | Request approval for initial publication. |
+| `RULE_ACTIVATION_REQUIRED` | A release is published but not active. | Follow the configured activation policy. |
+| `CAMPAIGN_REQUIRED` | The requested campaign is absent. | Discover campaigns or offer authorized creation. |
+| `DEGRADED` | Gameplay can use the last active release, but a noncritical source/update facility is unavailable. | Continue with a clear diagnostic state. |
+| `ERROR` | A blocking connection, compatibility, or validation failure exists. | Stop dependent play and surface a sanitized remedy. |
+
+Administrative initialization is never inferred from connection success. The client previews the exact EC-owned scope, explains it in ordinary language, obtains explicit approval, and invokes a separately authorized setup capability. Repeated setup must be idempotent or safely report that no migration is needed.
+
+If no Rule Source is configured, the service may offer the official Eternal Cycle repository described by authoritative distribution metadata. A user may instead authorize another compatible source or an offline local checkout. The successful choice is persisted and reused. The service, not the AI GM, acquires and compiles that source.
+
+## Direct Startup
+
+A Direct runtime enumerates supported Database Format and Storage Adapters, selects a compatible Adapter Chain, validates authority and durability, writes the selection to Campaign Configuration, and reuses it on resume. Direct mode does not require a Managed service or MCP. Its runtime remains responsible for transaction, validation, read-back, and configured local or cloud completion evidence.
+
+## Starting and Resuming
+
+The normal player intents are:
+
+> Start a new Eternal Cycle game.
+
+> Continue my Eternal Cycle game.
+
+The runtime keeps source locators, schema names, Campaign IDs, migration files, and tool names backstage. With no campaigns, it offers authorized creation. With one suitable campaign, it resumes it without asking the player to type an internal ID. With several, it presents meaningful names and descriptions while retaining stable IDs for routing and isolation.
+
+## Capability Gaps
+
+When nothing is configured, an AI or human operator must inspect actual capabilities instead of guessing. Missing information remains missing. A runtime does not create a blank replacement save, invent a Rule Source, silently switch persistence strategies, or claim readiness from conversation memory.
+
+## Related Documents
+
+- [Player Start and Resume](../gm/PLAYER_START_AND_RESUME.md)
+- [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
+- [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md)
+- [AI Session Start](../ai/AI_SESSION_START.md)

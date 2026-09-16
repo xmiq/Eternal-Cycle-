@@ -5273,3 +5273,23 @@ Managed diagnostics may identify implementation, interface, strategy, storage-ad
 ## D-1318 — Support Routing Follows Distribution Provenance
 
 Official repository and issue-tracker destinations are maintained in release-neutral support metadata. An AI may classify and prepare a privacy-conscious report, but external submission remains optional and user-authorized. Forks and custom distributions do not imply support for their modifications by the official Eternal Cycle maintainer.
+
+## D-1319 — Managed Readiness Is Multidimensional and Semantic
+
+A responding transport or persistence connection does not establish gameplay readiness. Managed services report campaign schema, Domain Namespace, Rule Source, publication, activation, compatibility, campaign, and overall readiness separately. Expected setup and configuration conditions cross the client boundary as sanitized semantic states rather than generic tool exceptions.
+
+## D-1320 — Managed Bootstrap Is Explicit, Bounded, and Permission-Gated
+
+Missing implementation-owned infrastructure is a valid first-run state. Administrative bootstrap previews its scope, requires explicit user approval plus service-side enablement, applies only packaged versioned Eternal Cycle structures, validates the result, and is repeat-safe. Gameplay capability grants neither arbitrary SQL nor implicit schema or source administration.
+
+## D-1321 — Rule Source Selection Persists and Initial Publication Is Intentional
+
+When no Rule Source is selected, Managed readiness offers the official source from authoritative distribution metadata while permitting compatible custom or local sources. The selected provider, locator, ref, and manifest persist for reuse. An approved initial publication may run independently of the later update policy; explicit disabled/offline operation remains valid after initialization.
+
+## D-1322 — Campaign Discovery Keeps Stable IDs Backstage
+
+Campaign IDs remain stable isolation and routing identities. Start and resume interfaces use meaningful display names and descriptions: no campaign offers authorized creation, one appropriate campaign may resolve automatically, and several require a player choice. Campaign creation remains an explicit administrative/bootstrap action.
+
+## D-1323 — Managed Diagnostics Must Survive Degraded Infrastructure
+
+Diagnostics inspect readiness before depending on optional or uninitialized stores. They identify missing schemas, empty publication, absent or unavailable sources, inactive or incompatible releases, and missing campaigns without exposing credentials, locators, Campaign Canon, or GM Secrets. Optional file logging is conservative, sanitized, and independent of the MCP client.

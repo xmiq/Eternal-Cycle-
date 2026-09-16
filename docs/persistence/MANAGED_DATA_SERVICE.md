@@ -31,9 +31,13 @@ A compliant service can report:
 - persistence and rules-release status;
 - sanitized health and failure information.
 
+Readiness is multidimensional. It distinguishes transport, persistence connection, campaign schema, Domain Namespace, Rule Source, published release, active compatible release, requested campaign, and overall gameplay readiness. Expected first-run states are structured outcomes such as setup, migration, source, publication, activation, or campaign required; they are not generic exceptions.
+
 ### Campaign
 
 The service supports authorized provisioning, open/resume, canonical record or context reads, validation, migration, and stable Campaign ID routing. Provisioning remains an administrative/bootstrap operation and need not be exposed to gameplay clients.
+
+Campaign discovery preserves stable IDs without making players type them. Zero campaigns leads to authorized creation, one appropriate campaign may resolve automatically, and several campaigns are presented with meaningful names and descriptions.
 
 ### Turn persistence
 
@@ -46,6 +50,24 @@ The service identifies the active applicable Rule Release and returns a bounded,
 ### Administration
 
 Authorized administrative surfaces may provide source synchronization, compilation, candidate validation, publication, activation, migration, backup, recovery, and diagnostics. Ordinary gameplay capability does not imply administrative authority.
+
+First-run initialization is an expected administrative state. A compliant service previews the implementation-owned scope, requires explicit approval, applies only versioned service-owned migrations or equivalent bounded operations, validates the result, and is repeat-safe. It exposes no arbitrary datastore command. Rule Source selection and initial publication follow the same separate authorization boundary.
+
+## First-Run Flow
+
+```text
+inspect readiness
+  -> preview bounded service-owned setup
+  -> explicit approval
+  -> initialize and validate
+  -> select and persist Rule Source
+  -> acquire immutable source
+  -> compile, validate, publish, activate
+  -> verify READY
+  -> create or resume campaign
+```
+
+A service with an available database but missing rule infrastructure is not ready. A configured source with no publication is distinct from a published but inactive release. Source unavailability may be `DEGRADED` only when a compatible active release remains safe to use.
 
 ## Storage Neutrality
 
@@ -69,6 +91,7 @@ MCP is the supplied reference interface, not a universal requirement. A differen
 - Retry resumes stable transaction or publication identity and does not replay gameplay.
 - Loss of the selected service blocks dependent state-changing play; it does not authorize silent Direct fallback.
 - Sanitized diagnostics distinguish degraded update status from unavailable gameplay authority.
+- Expected setup failures retain semantic codes and actionable explanations through the interface boundary.
 
 ## Security
 
@@ -89,3 +112,4 @@ The repository includes an optional [.NET / MCP / T-SQL reference implementation
 - [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [Community Feedback and Diagnostics](../support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md)
+- [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md)

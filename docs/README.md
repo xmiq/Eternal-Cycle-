@@ -122,6 +122,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Game Master Responsibilities](gm/GM_RESPONSIBILITIES.md) - bounded GM duties, authority limits, ownership handoffs, delegation, record discipline, and human/AI parity.
 - [Game Master Framework](gm/GAME_MASTER_FRAMEWORK.md) - operational responsibilities, authority, session lifecycle, world simulation, continuity, information views, external campaign records, and AI GM guidance.
 - [Campaign Bootstrap](gm/CAMPAIGN_BOOTSTRAP.md) - current engine-status lookup, `NORMAL` campaign default, explicit testing modes, starting-profile separation, persistence handoff, and resume compatibility.
+- [Player Start and Resume](gm/PLAYER_START_AND_RESUME.md) - player-facing new-game and resume procedure with readiness, consent, campaign discovery, and infrastructure identifiers kept backstage.
 - [Consequence Resolution](gm/CONSEQUENCE_RESOLUTION.md) - immediate-outcome boundaries, causal consequence layers, proportionality, owner handoffs, persistence, and recording.
 - [Uncertainty Handling](gm/UNCERTAINTY_HANDLING.md) - truth and observer views, uncertainty sources, evidence, method selection, bounded randomization, deferral, fair secrecy, and correction.
 - [Reincarnation Generation](gm/REINCARNATION_GENERATION.md) - world-grounded incarnation candidates, eligibility passes, personhood, Reincarnation Modes, disclosure, selection handoff, and revalidation.
@@ -160,6 +161,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Persistence Strategy Selection](persistence/PERSISTENCE_STRATEGY_SELECTION.md) - capability enumeration, sticky selection, persisted reuse, and explicit migration.
 - [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - `DIRECT` and `MANAGED` strategies, shared invariants, configuration, evidence, failure, and migration boundaries.
 - [Managed Data Service](persistence/MANAGED_DATA_SERVICE.md) - implementation-neutral semantic service contract and capability families.
+- [Running Eternal Cycle](persistence/RUNNING_ETERNAL_CYCLE.md) - runtime-neutral Direct/Managed first-run, structured readiness, setup handoff, and start/resume flow.
 - [Logical Data Namespace](persistence/LOGICAL_DATA_NAMESPACE.md) - stable storage-neutral identity, isolation, versioning, and native mappings.
 - [Direct Persistence Adapter Index](persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 - [Support and Diagnostics Index](support/README.md) - release-neutral support navigation and privacy boundary.
@@ -197,6 +199,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) - read-only validation baselines and profiles, evidence-bearing findings, defect detection, protected reports, severity, activation outcomes, and repair routing.
 - [Direct Persistence Mode](persistence/DIRECT_PERSISTENCE_MODE.md) - Database Format and Storage Adapter composition, capability gates, and direct-mode status evidence.
 - [MCP Managed Service Interface](persistence/MCP_PERSISTENCE_MODE.md) - optional MCP interface, semantic operations, validated receipts, hidden backend, retry, and host boundary.
+- [Running Eternal Cycle](persistence/RUNNING_ETERNAL_CYCLE.md) - capability enumeration, structured first-run states, source selection, and player-facing campaign discovery.
 - [Campaign Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, load-to-activation operating cycle, specialist handoffs, correction routes, and the blank-template boundary.
 
 ## Authority and Scope

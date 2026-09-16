@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 and FR-018 established portable persistence and selective rule retrieval; FR-019 consolidates them into vendor-neutral `DIRECT` and `MANAGED` strategies, sticky **Enumerate -> Select -> Persist -> Reuse** configuration, Logical Data Namespaces, Managed rule publication, and optional .NET/MCP/T-SQL reference tooling. These are post-v1 developments and do not change the historical v1.0.0 tag.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 and FR-018 established portable persistence and selective rule retrieval; FR-019 consolidated them into vendor-neutral `DIRECT` and `MANAGED` strategies; FR-020 adds reference-service first-run readiness, gated bootstrap, durable Rule Source selection, and campaign discovery. These are post-v1 developments and do not change the historical v1.0.0 tag or declare v1.1.0 released.
 
 ## Core Pillars
 
@@ -76,8 +76,11 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/persistence/PERSISTENCE_STRATEGY_SELECTION.md`](docs/persistence/PERSISTENCE_STRATEGY_SELECTION.md) - capability enumeration, sticky selection, persistent configuration, and explicit migration.
 - [`docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - post-v1 `DIRECT` and `MANAGED` persistence architecture and shared completion contract.
 - [`docs/persistence/MANAGED_DATA_SERVICE.md`](docs/persistence/MANAGED_DATA_SERVICE.md) - storage- and interface-neutral Managed service contract.
+- [`docs/persistence/RUNNING_ETERNAL_CYCLE.md`](docs/persistence/RUNNING_ETERNAL_CYCLE.md) - runtime-neutral Direct/Managed first-run, readiness, start, and resume flow.
+- [`docs/gm/PLAYER_START_AND_RESUME.md`](docs/gm/PLAYER_START_AND_RESUME.md) - player-facing new-game and resume procedure with infrastructure kept backstage.
 - [`docs/persistence/adapters/README.md`](docs/persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive Direct Adapter contracts.
 - [`examples/tooling/managed-data/mcp-dotnet-tsql/README.md`](examples/tooling/managed-data/mcp-dotnet-tsql/README.md) - optional .NET/MCP/T-SQL Managed Data Service reference implementation.
+- [`examples/tooling/managed-data/mcp-dotnet-tsql/MCP_ONLY_ACCEPTANCE_TEST.md`](examples/tooling/managed-data/mcp-dotnet-tsql/MCP_ONLY_ACCEPTANCE_TEST.md) - real-infrastructure acceptance test with no repository or direct database access by the AI.
 - [`SUPPORT.md`](SUPPORT.md) - official support provenance and issue-report routing.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.

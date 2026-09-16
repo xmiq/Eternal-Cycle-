@@ -28,6 +28,7 @@ public sealed record SanitizedDiagnosticReport(
     string? CanonicalSourceIdentity,
     string RuleUpdateStatus,
     string? RuleUpdateDetail,
+    ManagedReadinessReport Readiness,
     string SanitizationStatement);
 
 public interface IServiceDiagnostics
@@ -41,7 +42,7 @@ public interface IServiceDiagnostics
 
 public sealed class ServiceDiagnostics(
     ICampaignSchemaResolver schemaResolver,
-    IPublishedRuleStore ruleStore) : IServiceDiagnostics
+    IManagedReadinessService readiness) : IServiceDiagnostics
 {
     public ManagedServiceCapabilities GetCapabilities() =>
         new(
@@ -55,7 +56,10 @@ public sealed class ServiceDiagnostics(
                 "turn.commit",
                 "turn.retry",
                 "rules.context",
-                "diagnostics.sanitized"
+                "diagnostics.sanitized",
+                "readiness.structured",
+                "setup.permission-gated",
+                "campaign.discovery"
             ],
             true);
 
@@ -64,8 +68,7 @@ public sealed class ServiceDiagnostics(
         CancellationToken cancellationToken)
     {
         var route = schemaResolver.Resolve(campaignId);
-        var release = await ruleStore.GetActiveAsync(route.RulesetId, cancellationToken);
-        var updateCheck = await ruleStore.GetLatestUpdateCheckAsync(route.RulesetId, cancellationToken);
+        var report = await readiness.GetReadinessAsync(campaignId, cancellationToken);
         var implementationVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "unknown";
         return new SanitizedDiagnosticReport(
             "1.0.0+post-release",
@@ -79,10 +82,11 @@ public sealed class ServiceDiagnostics(
             route.DataNamespaceId,
             route.RulesetId,
             route.RulesetVersion,
-            release?.RuleReleaseId,
-            release?.SourceIdentity,
-            updateCheck?.Outcome ?? (release is null ? "NoActiveValidatedRelease" : "ActiveValidatedRelease"),
-            updateCheck?.SanitizedDetail,
+            report.ActiveRuleReleaseId,
+            report.RuleSourceRevision,
+            report.State.ToString(),
+            report.ErrorCode,
+            report,
             "Credentials, connection strings, locators, Campaign Canon, GM Secrets, and private conversations are omitted.");
     }
 }

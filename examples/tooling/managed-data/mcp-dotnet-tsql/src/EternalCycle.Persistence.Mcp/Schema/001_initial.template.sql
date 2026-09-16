@@ -9,6 +9,8 @@ GO
 
 CREATE TABLE {{schema}}.campaigns (
     campaign_id nvarchar(128) NOT NULL,
+    display_name nvarchar(256) NULL,
+    description nvarchar(1000) NULL,
     repository_version nvarchar(64) NOT NULL,
     persistence_model_version nvarchar(64) NOT NULL,
     active_version bigint NOT NULL CONSTRAINT DF_ec_campaigns_active_version DEFAULT (0),

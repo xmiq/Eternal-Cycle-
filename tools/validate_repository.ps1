@@ -568,6 +568,19 @@ else {
     }
 }
 
+$fr020HarnessPath = Join-Path $rootPath 'tools/test_fr020_managed_first_run.ps1'
+if (-not (Test-Path -LiteralPath $fr020HarnessPath)) {
+    Add-ValidationError 'Missing FR-020 managed first-run regression harness.'
+}
+else {
+    try {
+        & $fr020HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-020 managed first-run regression harness failed.'
+    }
+}
+
 $campaignModeHarnessPath = Join-Path $rootPath 'tools/test_release_neutral_campaign_modes.ps1'
 if (-not (Test-Path -LiteralPath $campaignModeHarnessPath)) {
     Add-ValidationError 'Missing release-neutral campaign-mode regression harness.'
@@ -1216,6 +1229,7 @@ Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local
 Write-Output 'FR-017 Portable Persistence: historical Direct/MCP contracts, adapter classes, reference service, receipts, and provenance checked'
 Write-Output 'FR-018 Rule Compilation: source authority, 8K retrieval, world isolation, configurable schema routing, and migration scope checked'
 Write-Output 'FR-019 Managed Data Architecture: Direct/Managed strategy, namespaces, versioned publication, dependencies, diagnostics, and compatibility checked'
+Write-Output 'FR-020 Managed First-Run: readiness, gated bootstrap, source publication, campaign discovery, diagnostics, and RC boundary checked'
 Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {

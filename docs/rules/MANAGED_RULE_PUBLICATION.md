@@ -48,6 +48,8 @@ A Rule Source Provider identifies a configured authority, detects its current im
 
 For Git sources, the immutable commit SHA is the compiled-source identity. Branches, tags, or channels may discover candidates but never replace the recorded commit.
 
+A fresh Managed installation distinguishes **not yet configured** from an administrator's explicit disabled/offline update policy. When no source is selected, readiness reports `RULE_SOURCE_REQUIRED`. The service may offer an official source from authoritative distribution metadata, accept another compatible provider/source, persist the approved selection, and reuse it. A Git reference implementation may maintain a service-owned cache so an ordinary player does not need to clone a repository or configure a local `RepositoryRoot`; local checkout support remains valid for advanced, offline, and development use.
+
 ## Rule Release
 
 Each release records:
@@ -72,6 +74,8 @@ A deployment may select:
 - disabled/offline operation.
 
 Successful validation may activate automatically or await administrator approval. Scheduling is implementation-specific. Ordinary gameplay does not request update checks.
+
+An explicitly approved initial-publication operation may run once while normal future-update policy is `Disabled` or `Manual`. This does not silently enable updates. It moves a fresh service through source selected, candidate compiled, validated, published, activated according to policy, and readiness rechecked.
 
 If source access fails while a valid applicable release exists, gameplay may continue on that release and report update status as degraded. Integrity failure in the active release is a separate blocking condition.
 
@@ -107,3 +111,4 @@ Direct runtimes may use packaged compiled indexes, local indexes, repository-bac
 - [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md)
 - [Logical Data Namespace](../persistence/LOGICAL_DATA_NAMESPACE.md)
 - [Community Feedback and Diagnostics](../support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md)
+- [Running Eternal Cycle](../persistence/RUNNING_ETERNAL_CYCLE.md)

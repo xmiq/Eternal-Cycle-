@@ -8,6 +8,7 @@ This file records released Eternal Cycle versions. Design provenance and task hi
 - Separated runtime-neutral Database Format and Storage Adapters from the ChatGPT execution profile, including SQLite, DuckDB, local-storage, and Google Drive contracts.
 - Added FR-018 provenance-bearing, world-isolated, context-efficient rule retrieval and the 8K reference target.
 - Repositioned the .NET/MCP/T-SQL service as optional Managed reference tooling; added Logical Data Namespaces, `ec_domain` versioned rule publication, service-owned updates, explicit dependencies, immutable Git provenance, diagnostics, and support guidance.
+- Added FR-020 structured Managed readiness, permission-gated EC-owned first-run bootstrap, durable official/custom Rule Source selection, managed Git acquisition, intentional initial publication, campaign discovery, and MCP-only RC acceptance guidance.
 - Made released new campaigns default to `NORMAL`, replaced the live Alpha procedure with release-neutral Provisional Rulings, and preserved explicit validation and development modes.
 - Preserved Eternal Cycle v1.0.0 and its `v1.0.0` tag as the historical Release 1 boundary.
 

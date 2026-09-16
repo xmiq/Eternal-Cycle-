@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -21,7 +23,7 @@ public sealed class GitRuleSourceOptions
     public string GitExecutable { get; init; } = "git";
 }
 
-public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOptions> options) : IRuleSourceProvider
+public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
 {
     private static readonly JsonSerializerOptions ManifestJsonOptions = new()
     {
@@ -29,22 +31,62 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
         Converters = { new JsonStringEnumConverter() }
     };
 
-    private readonly GitRuleSourceOptions settings = options.Value.GitSource;
+    private readonly ManagedRuleServiceOptions ruleSettings;
+    private readonly GitRuleSourceOptions settings;
+    private readonly IRuleSourceConfigurationStore? configurations;
+    private readonly ManagedAdministrationOptions administration;
+
+    public GitRuleSourceProvider(IOptions<ManagedRuleServiceOptions> options)
+        : this(options, null, Options.Create(new ManagedAdministrationOptions()))
+    {
+    }
+
+    public GitRuleSourceProvider(
+        IOptions<ManagedRuleServiceOptions> options,
+        IRuleSourceConfigurationStore? configurations,
+        IOptions<ManagedAdministrationOptions> administrationOptions)
+    {
+        ruleSettings = options.Value;
+        settings = ruleSettings.GitSource;
+        this.configurations = configurations;
+        administration = administrationOptions.Value;
+    }
 
     public async Task<RuleSourceSnapshot> GetSnapshotAsync(CancellationToken cancellationToken)
     {
-        if (string.IsNullOrWhiteSpace(settings.RepositoryRoot))
+        var configuration = configurations is null
+            ? null
+            : await configurations.GetAsync(ruleSettings.RulesetId, cancellationToken);
+        var useAdvancedLocal = !string.IsNullOrWhiteSpace(settings.RepositoryRoot);
+        if (!useAdvancedLocal && configuration is null)
         {
-            throw new InvalidOperationException("Git rule source requires a trusted RepositoryRoot.");
+            throw new ManagedServiceException(
+                "RULE_SOURCE_NOT_CONFIGURED",
+                "No Rule Source is configured. Select the official source or an approved compatible source.");
         }
 
-        var repositoryRoot = Path.GetFullPath(settings.RepositoryRoot);
+        if (configuration is not null &&
+            !string.Equals(configuration.ProviderKind, "Git", StringComparison.OrdinalIgnoreCase))
+        {
+            throw new ManagedServiceException(
+                "RULE_SOURCE_PROVIDER_UNSUPPORTED",
+                "The selected Rule Source Provider is not supported by this reference implementation.");
+        }
+
+        var requestedRef = useAdvancedLocal ? settings.Ref : configuration!.RequestedRef;
+        var manifestSetting = useAdvancedLocal ? settings.ManifestPath : configuration!.ManifestPath;
+        var resolved = useAdvancedLocal
+            ? new ResolvedGitSource(Path.GetFullPath(settings.RepositoryRoot), false)
+            : await ResolveManagedRepositoryAsync(configuration!, cancellationToken);
+        var repositoryRoot = resolved.RepositoryRoot;
         if (!Directory.Exists(repositoryRoot))
         {
-            throw new DirectoryNotFoundException("The configured Git rule-source repository is unavailable.");
+            throw new ManagedServiceException(
+                "RULE_SOURCE_UNAVAILABLE",
+                "The configured Git Rule Source is unavailable; inspect authorized sanitized service logs.");
         }
 
-        if (settings.FetchBeforeCheck)
+        if (useAdvancedLocal && settings.FetchBeforeCheck)
         {
             _ = await RunGitAsync(
                 repositoryRoot,
@@ -54,14 +96,14 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
 
         var sourceIdentity = (await RunGitAsync(
             repositoryRoot,
-            ["rev-parse", $"{RequireValue(settings.Ref, nameof(settings.Ref))}^{{commit}}"],
+            ["rev-parse", $"{ResolveRef(requestedRef, resolved.ManagedRemote)}^{{commit}}"],
             cancellationToken)).Trim();
         if (!CommitSha().IsMatch(sourceIdentity))
         {
             throw new InvalidOperationException("Git source did not resolve to an immutable commit SHA.");
         }
 
-        var manifestPath = ValidateRepositoryPath(settings.ManifestPath);
+        var manifestPath = ValidateRepositoryPath(manifestSetting);
         var manifestJson = await ReadAtCommitAsync(
             repositoryRoot,
             sourceIdentity,
@@ -103,6 +145,70 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
             DateTimeOffset.UtcNow);
     }
 
+    private async Task<ResolvedGitSource> ResolveManagedRepositoryAsync(
+        RuleSourceConfiguration configuration,
+        CancellationToken cancellationToken)
+    {
+        if (Directory.Exists(configuration.SourceLocation))
+        {
+            return new ResolvedGitSource(Path.GetFullPath(configuration.SourceLocation), false);
+        }
+
+        if (!Uri.TryCreate(configuration.SourceLocation, UriKind.Absolute, out var sourceUri) ||
+            sourceUri.Scheme is not ("https" or "http" or "ssh" or "git" or "file"))
+        {
+            throw new ManagedServiceException(
+                "RULE_SOURCE_UNAVAILABLE",
+                "The configured Git Rule Source is unavailable or uses an unsupported locator.");
+        }
+
+        var cacheRoot = string.IsNullOrWhiteSpace(administration.ManagedRuleCacheDirectory)
+            ? Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "EternalCycle",
+                "rule-cache")
+            : Path.GetFullPath(administration.ManagedRuleCacheDirectory);
+        var cacheKey = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(configuration.SourceLocation)))[..24];
+        var repositoryRoot = Path.Combine(cacheRoot, cacheKey);
+        Directory.CreateDirectory(cacheRoot);
+        if (!Directory.Exists(Path.Combine(repositoryRoot, ".git")))
+        {
+            if (Directory.Exists(repositoryRoot))
+            {
+                throw new ManagedServiceException(
+                    "RULE_SOURCE_CACHE_INVALID",
+                    "The managed Rule Source cache exists but is not a valid Git checkout.");
+            }
+
+            await RunProcessAsync(
+                cacheRoot,
+                ["clone", "--no-checkout", configuration.SourceLocation, repositoryRoot],
+                cancellationToken);
+        }
+        else
+        {
+            await RunProcessAsync(repositoryRoot, ["fetch", "--prune", "origin"], cancellationToken);
+        }
+
+        return new ResolvedGitSource(repositoryRoot, true);
+    }
+
+    private static string ResolveRef(string requestedRef, bool managedRemote)
+    {
+        var value = RequireValue(requestedRef, nameof(requestedRef));
+        if (!managedRemote || CommitSha().IsMatch(value) || value.StartsWith("refs/tags/", StringComparison.Ordinal))
+        {
+            return value;
+        }
+
+        if (value.StartsWith("refs/heads/", StringComparison.Ordinal))
+        {
+            return $"refs/remotes/origin/{value[11..]}";
+        }
+
+        return value is "HEAD" ? "refs/remotes/origin/HEAD" : $"refs/remotes/origin/{value}";
+    }
+
     private async Task<string> ReadAtCommitAsync(
         string repositoryRoot,
         string sourceIdentity,
@@ -116,12 +222,18 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
     private async Task<string> RunGitAsync(
         string repositoryRoot,
         IReadOnlyList<string> arguments,
+        CancellationToken cancellationToken) =>
+        await RunProcessAsync(repositoryRoot, arguments, cancellationToken);
+
+    private async Task<string> RunProcessAsync(
+        string workingDirectory,
+        IReadOnlyList<string> arguments,
         CancellationToken cancellationToken)
     {
         var startInfo = new ProcessStartInfo
         {
             FileName = RequireValue(settings.GitExecutable, nameof(settings.GitExecutable)),
-            WorkingDirectory = repositoryRoot,
+            WorkingDirectory = workingDirectory,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
             UseShellExecute = false,
@@ -141,8 +253,9 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
         var error = await errorTask;
         if (process.ExitCode != 0)
         {
-            throw new InvalidOperationException(
-                $"Git rule-source operation failed with exit code {process.ExitCode}: {Sanitize(error)}");
+            throw new ManagedServiceException(
+                "RULE_SOURCE_UNAVAILABLE",
+                $"Git Rule Source operation failed with exit code {process.ExitCode}; inspect authorized sanitized service logs.");
         }
 
         return output;
@@ -171,12 +284,8 @@ public sealed partial class GitRuleSourceProvider(IOptions<ManagedRuleServiceOpt
         return value;
     }
 
-    private static string Sanitize(string value)
-    {
-        var singleLine = value.Replace('\r', ' ').Replace('\n', ' ').Trim();
-        return singleLine.Length <= 500 ? singleLine : singleLine[..500];
-    }
-
     [GeneratedRegex("^[0-9a-fA-F]{40,64}$", RegexOptions.CultureInvariant)]
     private static partial Regex CommitSha();
+
+    private sealed record ResolvedGitSource(string RepositoryRoot, bool ManagedRemote);
 }

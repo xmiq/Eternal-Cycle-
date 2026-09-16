@@ -24,6 +24,8 @@ Enumerate -> Select -> Persist -> Reuse
 3. **Persist:** record the selected strategy, contract version, canonical authority, and reconnect information in protected Campaign Configuration and reference it from the Save Index.
 4. **Reuse:** every later session loads that selection before considering environmental capabilities.
 
+The runtime-neutral first-run and resume procedure is summarized in [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md). A selected Managed transport that responds but reports missing schemas, source, publication, activation, or campaign remains selected but not gameplay-ready; the runtime follows its bounded setup handoff rather than silently switching to Direct persistence.
+
 Existing Campaign Configuration outranks a newly convenient adapter or service. A runtime must not re-run preference selection on every resume, silently switch from `DIRECT` to `MANAGED`, or create a parallel authority when the configured strategy is temporarily unavailable.
 
 ## Strategy Requirements

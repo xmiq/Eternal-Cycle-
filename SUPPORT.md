@@ -6,6 +6,7 @@
 - **Documentation entry point:** [README](README.md)
 - **Maintainer contact route:** GitHub issue tracker
 - **Distribution provenance:** official `xmiq/Eternal-Cycle-` history and tagged releases
+- **Machine-readable distribution identity:** [`DISTRIBUTION.json`](DISTRIBUTION.json)
 
 Prepare a sanitized report using [Community Feedback and Diagnostics](docs/support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md) before submission. Do not include credentials, private campaign data, GM Secrets, access tokens, or full conversations.
 

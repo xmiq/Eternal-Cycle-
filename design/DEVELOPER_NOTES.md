@@ -2981,3 +2981,14 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **Validation target:** .NET build/tests, FR-017, FR-018, FR-019, release-neutral, FR-011/8K, and repository-wide validation; deployed SQL Server, remote Git/GitHub, authentication, backup/recovery, long-running scheduling, and cross-client MCP remain external acceptance.
 - **Remaining work:** none inside FR-019 after validation and commit; real-infrastructure acceptance remains deployment work rather than a repository claim.
 - **Exact resume point:** consult `design/ROADMAP.md`; do not select a later Future Revision without maintainer authorization.
+
+## Phase 13 Checkpoint - FR-020 Managed First-Run Readiness and Bootstrap
+
+- **Completed objective:** FR-020 — Managed First-Run Readiness and Bootstrap.
+- **Evidence:** a real third-party stdio MCP and SQL Server run proved campaign persistence but returned opaque errors for diagnostics and rule context because the Rule Domain schema was absent.
+- **Created:** structured readiness, permission-gated administration, source configuration/cache integration, campaign discovery, sanitized file logging, additive migrations, distribution metadata, runtime-neutral and player guides, MCP-only acceptance plan, focused regressions, and implementation audit.
+- **Modified:** diagnostics and rule-context MCP surfaces, Git source provider, reference startup/DI, schema packaging, canonical Managed/source/startup documentation, indexes, terminology, decisions, roadmap, and Future Revision provenance.
+- **Validation:** .NET build and 50 tests pass; FR-011/017/018/019/020 and release-neutral harnesses pass; full repository validation passes after final integration.
+- **External boundary:** live SQL Server bootstrap, remote Git/GitHub acquisition, MCP-client semantic serialization, and a repository-blind 8K local-AI run remain real deployment acceptance.
+- **Current active task:** none; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
+- **Exact resume point:** run the documented MCP-only acceptance test in the target Unsloth/local-AI environment. Record qualifying evidence without changing `VERSION`, publishing v1.1.0, or selecting another objective automatically.

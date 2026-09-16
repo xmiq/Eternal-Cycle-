@@ -11,22 +11,23 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 3. [Game Master Responsibilities](GM_RESPONSIBILITIES.md) - bounded duties, ownership handoffs, operating discipline, delegation, records, and human/AI parity.
 4. [Game Master Framework](GAME_MASTER_FRAMEWORK.md) - authority, session procedure, continuity, world simulation, information boundaries, records, and AI GM guidance.
 5. [Campaign Bootstrap](CAMPAIGN_BOOTSTRAP.md) - released-engine status, `NORMAL` campaign default, explicit testing modes, starting-profile separation, new-campaign persistence, and resume compatibility.
-6. [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) - immediate-outcome closure, causal layers, proportionality, handoffs, persistence, and external recording.
-7. [Uncertainty Handling](UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
-8. [Reincarnation Generation](REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, contextual adjudication, eligibility, personhood, mode-specific presentation, selection handoff, and revalidation.
-9. [Encounter Generator](ENCOUNTER_GENERATOR.md) - causal source collection, eligibility, decision framing, non-scaling, agency routes, adjudication handoffs, and external records.
-10. [Monster Generator](MONSTER_GENERATOR.md) - world-valid species sketches, individual histories, sourced variation, embodiment, capability, information, placement, and external profiles.
-11. [NPC Generator](NPC_GENERATOR.md) - person-basis validation, proportional actor detail, bounded knowledge, independent decisions, relationships, continuity, and external profiles.
-12. [Dungeon Generator](DUNGEON_GENERATOR.md) - Dungeon Basis validation, causal Topology, actor-specific access, activity, inhabitants, resources, hazards, claims, and revalidation.
-13. [Faction Generator](FACTION_GENERATOR.md) - Faction Basis validation, participants, interests, information and decision routes, function-specific capacity, continuity, and revalidation.
-14. [World-Event Generator](WORLD_EVENT_GENERATOR.md) - causal Basis validation, direct Event Boundaries, footprint, timing, uncertainty, owner handoffs, and external records.
-15. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
-16. [Time Skip Procedure](TIME_SKIP_PROCEDURE.md) - player-authorized Skip Mandates, Standing Instructions, interruption, causal advancement, return states, and Causal Bridges.
-17. [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) - evidence-backed historical classification, scoped and disputed boundaries, World Reset checkpoints, targeted revalidation, and return to play.
-18. [Provisional Rulings](PROVISIONAL_RULINGS.md) - release-neutral campaign-local adjudication for narrow gaps in current Canon; use does not imply testing status.
-19. [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - the load, owner-resolution, Save Update, validation, activation, and presentation contract used by human and AI GMs.
-20. [AI Game Master Operating Procedures](../ai/README.md) - implementation-neutral workflow, session-start, play, save, and checklist procedures for automated operation of the same GM responsibilities.
-21. [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) - the implementation-neutral relationship among AI execution, Campaign Persistence, adapters, campaign state, and repository rules; runtime profiles remain replaceable extensions.
+6. [Player Start and Resume](PLAYER_START_AND_RESUME.md) - ordinary start/continue intent, consent-aware setup, campaign discovery, and backstage infrastructure identifiers.
+7. [Consequence Resolution](CONSEQUENCE_RESOLUTION.md) - immediate-outcome closure, causal layers, proportionality, handoffs, persistence, and external recording.
+8. [Uncertainty Handling](UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
+9. [Reincarnation Generation](REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, contextual adjudication, eligibility, personhood, mode-specific presentation, selection handoff, and revalidation.
+10. [Encounter Generator](ENCOUNTER_GENERATOR.md) - causal source collection, eligibility, decision framing, non-scaling, agency routes, adjudication handoffs, and external records.
+11. [Monster Generator](MONSTER_GENERATOR.md) - world-valid species sketches, individual histories, sourced variation, embodiment, capability, information, placement, and external profiles.
+12. [NPC Generator](NPC_GENERATOR.md) - person-basis validation, proportional actor detail, bounded knowledge, independent decisions, relationships, continuity, and external profiles.
+13. [Dungeon Generator](DUNGEON_GENERATOR.md) - Dungeon Basis validation, causal Topology, actor-specific access, activity, inhabitants, resources, hazards, claims, and revalidation.
+14. [Faction Generator](FACTION_GENERATOR.md) - Faction Basis validation, participants, interests, information and decision routes, function-specific capacity, continuity, and revalidation.
+15. [World-Event Generator](WORLD_EVENT_GENERATOR.md) - causal Basis validation, direct Event Boundaries, footprint, timing, uncertainty, owner handoffs, and external records.
+16. [Simulation Abstraction](../world-engine/SIMULATION_ABSTRACTION.md) - resolution choice, off-screen advancement, Time Skips, player-agency checkpoints, and long-horizon continuity.
+17. [Time Skip Procedure](TIME_SKIP_PROCEDURE.md) - player-authorized Skip Mandates, Standing Instructions, interruption, causal advancement, return states, and Causal Bridges.
+18. [Age Transition Procedure](AGE_TRANSITION_PROCEDURE.md) - evidence-backed historical classification, scoped and disputed boundaries, World Reset checkpoints, targeted revalidation, and return to play.
+19. [Provisional Rulings](PROVISIONAL_RULINGS.md) - release-neutral campaign-local adjudication for narrow gaps in current Canon; use does not imply testing status.
+20. [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - the load, owner-resolution, Save Update, validation, activation, and presentation contract used by human and AI GMs.
+21. [AI Game Master Operating Procedures](../ai/README.md) - implementation-neutral workflow, session-start, play, save, and checklist procedures for automated operation of the same GM responsibilities.
+22. [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) - the implementation-neutral relationship among AI execution, Campaign Persistence, adapters, campaign state, and repository rules; runtime profiles remain replaceable extensions.
 
 ## Cross-Campaign Reusable Design
 

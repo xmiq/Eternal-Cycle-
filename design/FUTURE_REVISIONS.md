@@ -58,11 +58,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-No Future Revision is currently roadmapped and pending. FR-001 through FR-019 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+No Future Revision is currently roadmapped and pending. FR-001 through FR-020 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
-All currently known FR-001 through FR-019 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-020 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-020 - Managed First-Run Readiness and Bootstrap
+
+- **Status:** Closed
+- **Issue:** A real third-party stdio MCP deployment proved campaign persistence interoperability but exposed opaque diagnostics and rule-context failures when the campaign schema existed and the Rule Domain schema did not. Ordinary setup also required manual migration and local-checkout knowledge.
+- **Affected systems:** Managed readiness, diagnostics, reference MCP tools, T-SQL migrations, Rule Source selection/acquisition, initial publication, campaign discovery, AI startup, documentation, logging, and deployment acceptance.
+- **Gameplay impact:** A local AI could spend substantial context reasoning around generic invocation errors, rely on repository file access instead of Managed rule delivery, or require a nontechnical player to understand schemas, migration files, Git, and Campaign IDs.
+- **Evidence needed:** clean and prior schema readiness, explicit approval, bounded/idempotent initialization, pre-schema and empty-store diagnostics, actionable no-release/source states, initial publication, active-release fallback, source override and reuse, campaign discovery, Direct/isolation/8K regressions, and a later real MCP-only run.
+- **Approved direction:** Preserve FR-017 through FR-019 architecture while adding structured first-run states, permission-gated EC-owned setup, authoritative official-source metadata, persisted source choice, managed cache, intentional initial publication, meaningful campaign discovery, and sanitized logging. Keep administration separate from gameplay.
+- **Suggested future phase:** Phase 13 — Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented in the optional .NET/MCP/T-SQL reference with additive migrations, readiness and semantic result contracts, gated setup tools, source/campaign workflows, unit and structural regressions, three-level documentation, and an explicit MCP-only deployment test. Real SQL Server and third-party-client rerun remains release-candidate acceptance rather than repository proof.
+- **Authorized roadmap link:** [FR-020 — Managed First-Run Readiness and Bootstrap](ROADMAP.md#phase-13--future-revisions)
+- **Closure references:** [Running Eternal Cycle](../docs/persistence/RUNNING_ETERNAL_CYCLE.md), [Reference Managed Service](../examples/tooling/managed-data/mcp-dotnet-tsql/README.md), [MCP-Only Acceptance Test](../examples/tooling/managed-data/mcp-dotnet-tsql/MCP_ONLY_ACCEPTANCE_TEST.md), and [FR-020 Audit](audits/FR_020_MANAGED_FIRST_RUN_BOOTSTRAP_AUDIT.md)
 
 ### FR-019 - Managed Data Architecture and Rule Publication
 

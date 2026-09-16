@@ -33,6 +33,8 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 
 For a new campaign, first follow [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md). A released Eternal Cycle campaign begins in `NORMAL` mode unless the participant explicitly selects `VALIDATION` or `DEVELOPMENT`; an existing campaign preserves the Campaign Mode recorded by Campaign Canon. Historical Alpha terminology is never sufficient to classify either one.
 
+When a player asks to start or continue and no runtime has been initialized, enumerate capabilities first. A Managed client reads structured readiness, presents meaningful campaign choices, and keeps identifiers backstage. Administrative schema, source, publication, or campaign-creation operations require explicit user approval and remain separate from ordinary gameplay. The AI never accepts a generic tool exception as evidence that a schema or source does not exist; it uses the service's semantic readiness result.
+
 ### 1. Establish the operating authority
 
 1. Identify the exact Repository Version and Campaign Version, plus the configured Codex Version when the campaign uses the GM Living Codex.

@@ -118,6 +118,10 @@ This view is navigation, not authority. It must carry freshness and source refer
 
 ### 9. Declare readiness
 
+For a Managed strategy, inspect structured service readiness before requesting rules or campaign state. Transport success alone is insufficient. Treat setup, migration, Rule Source, publication, activation, and campaign-required results as explicit operational states. Explain the bounded action in ordinary language, ask the user before any administrative change, and invoke only a separately authorized setup capability. Never substitute raw datastore commands, invent a source, or silently create a blank campaign.
+
+Use [Running Eternal Cycle](../persistence/RUNNING_ETERNAL_CYCLE.md) and [Player Start and Resume](../gm/PLAYER_START_AND_RESUME.md) for the user-facing flow. Once configured, reuse the persisted strategy and source selection rather than asking on every session.
+
 The operator may enter play only after it can state internally or to the supervising interface:
 
 - which versions and Save Point govern;

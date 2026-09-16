@@ -197,11 +197,23 @@ public sealed class ManagedRulePublicationTests
     [Fact]
     public async Task DiagnosticsAreSanitizedAndIdentifyReferenceImplementation()
     {
-        var store = new InMemoryRuleStore();
-        store.SeedActive(Release("active", CommitA, ValidIndex()));
+        var readiness = ManagedReadinessEvaluator.Evaluate(
+            new ManagedInfrastructureSnapshot(
+                ManagedComponentStatus.Ready,
+                ManagedComponentStatus.Ready,
+                ManagedComponentStatus.Ready,
+                ManagedComponentStatus.Ready,
+                1,
+                "active",
+                CommitA,
+                true,
+                ManagedComponentStatus.Ready,
+                "Activated",
+                false),
+            campaignRequested: true);
         var diagnostics = new ServiceDiagnostics(
             new ConfiguredCampaignSchemaResolver(Options.Create(new SqlServerPersistenceOptions())),
-            store);
+            new StaticReadinessService(readiness));
 
         var report = await diagnostics.GetReportAsync("campaign", CancellationToken.None);
         var serialized = System.Text.Json.JsonSerializer.Serialize(report);
@@ -209,10 +221,17 @@ public sealed class ManagedRulePublicationTests
         Assert.Contains("reference implementation", report.Implementation, StringComparison.OrdinalIgnoreCase);
         Assert.Equal("MANAGED", report.PersistenceStrategy);
         Assert.Equal(CommitA, report.CanonicalSourceIdentity);
-        Assert.Equal("ActiveValidatedRelease", report.RuleUpdateStatus);
+        Assert.Equal("Ready", report.RuleUpdateStatus);
         Assert.DoesNotContain("ConnectionString", serialized, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("Password", serialized, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("\"campaignCanon\"", serialized, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private sealed class StaticReadinessService(ManagedReadinessReport report) : IManagedReadinessService
+    {
+        public Task<ManagedReadinessReport> GetReadinessAsync(
+            string? campaignId,
+            CancellationToken cancellationToken) => Task.FromResult(report);
     }
 
     [Fact]

@@ -362,6 +362,7 @@ public sealed class PublishedRuleContextProvider(
 
 public sealed class ManagedRuleUpdateHostedService(
     ManagedRulePublicationCoordinator coordinator,
+    IManagedReadinessService readiness,
     IOptions<ManagedRuleServiceOptions> options,
     ILogger<ManagedRuleUpdateHostedService> logger) : BackgroundService
 {
@@ -391,10 +392,29 @@ public sealed class ManagedRuleUpdateHostedService(
 
     private async Task RunCheckAsync(CancellationToken cancellationToken)
     {
-        var result = await coordinator.CheckForUpdateAsync(cancellationToken);
-        logger.LogInformation(
-            "Managed rule update status {Status}; active release {ActiveReleaseId}.",
-            result.Status,
-            result.ActiveReleaseId);
+        try
+        {
+            var report = await readiness.GetReadinessAsync(null, cancellationToken);
+            if (report.State is not (
+                ManagedReadinessState.Ready or
+                ManagedReadinessState.Degraded or
+                ManagedReadinessState.RulePublicationRequired))
+            {
+                logger.LogInformation(
+                    "Managed rule update deferred while readiness state is {ReadinessState}.",
+                    report.State);
+                return;
+            }
+
+            var result = await coordinator.CheckForUpdateAsync(cancellationToken);
+            logger.LogInformation(
+                "Managed rule update status {Status}; active release {ActiveReleaseId}.",
+                result.Status,
+                result.ActiveReleaseId);
+        }
+        catch (Exception exception) when (exception is not OperationCanceledException)
+        {
+            logger.LogError(exception, "Managed rule update check failed; service readiness remains available.");
+        }
     }
 }
