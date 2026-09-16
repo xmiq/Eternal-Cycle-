@@ -555,6 +555,19 @@ else {
     }
 }
 
+$fr019HarnessPath = Join-Path $rootPath 'tools/test_fr019_managed_data_architecture.ps1'
+if (-not (Test-Path -LiteralPath $fr019HarnessPath)) {
+    Add-ValidationError 'Missing FR-019 managed-data architecture regression harness.'
+}
+else {
+    try {
+        & $fr019HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-019 managed-data architecture regression harness failed.'
+    }
+}
+
 $campaignModeHarnessPath = Join-Path $rootPath 'tools/test_release_neutral_campaign_modes.ps1'
 if (-not (Test-Path -LiteralPath $campaignModeHarnessPath)) {
     Add-ValidationError 'Missing release-neutral campaign-mode regression harness.'
@@ -1200,8 +1213,9 @@ Write-Output 'Life Archive: identity, summary, ownership, knowledge, migration, 
 Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledge, and persistence boundaries checked'
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
-Write-Output 'FR-017 Portable Persistence: Direct/MCP modes, adapter classes, SQL Server service, receipts, and provenance checked'
+Write-Output 'FR-017 Portable Persistence: historical Direct/MCP contracts, adapter classes, reference service, receipts, and provenance checked'
 Write-Output 'FR-018 Rule Compilation: source authority, 8K retrieval, world isolation, configurable schema routing, and migration scope checked'
+Write-Output 'FR-019 Managed Data Architecture: Direct/Managed strategy, namespaces, versioned publication, dependencies, diagnostics, and compatibility checked'
 Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {

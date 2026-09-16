@@ -6,8 +6,10 @@ namespace EternalCycle.Persistence.Mcp;
 public sealed record CampaignSchemaRoute(
     string CampaignId,
     string WorldModelId,
+    string DataNamespaceId,
     string SchemaName,
     string SchemaModelVersion,
+    string RulesetId,
     string RulesetVersion);
 
 public interface ICampaignSchemaResolver
@@ -19,18 +21,29 @@ public sealed class ConfiguredCampaignSchemaResolver : ICampaignSchemaResolver
 {
     private readonly SqlServerPersistenceOptions settings;
     private readonly IReadOnlyDictionary<string, string> campaignWorldModels;
+    private readonly IReadOnlyDictionary<string, string> worldDataNamespaces;
+    private readonly IReadOnlyDictionary<string, SqlDataNamespaceOptions> dataNamespaces;
     private readonly IReadOnlyDictionary<string, WorldSchemaOptions> worldSchemas;
 
     public ConfiguredCampaignSchemaResolver(IOptions<SqlServerPersistenceOptions> options)
     {
         settings = options.Value;
+        SqlServerSchemaIdentifier.Validate(settings.DomainSchema);
         SqlServerSchemaIdentifier.Validate(settings.DefaultSchema);
+        RequireValue(settings.DefaultDataNamespaceId, nameof(settings.DefaultDataNamespaceId));
         RequireValue(settings.DefaultWorldModelId, nameof(settings.DefaultWorldModelId));
+        RequireValue(settings.DefaultRulesetId, nameof(settings.DefaultRulesetId));
         RequireValue(settings.DefaultSchemaModelVersion, nameof(settings.DefaultSchemaModelVersion));
         RequireValue(settings.DefaultRulesetVersion, nameof(settings.DefaultRulesetVersion));
 
         campaignWorldModels = new Dictionary<string, string>(
             settings.CampaignWorldModels,
+            StringComparer.Ordinal);
+        worldDataNamespaces = new Dictionary<string, string>(
+            settings.WorldDataNamespaces,
+            StringComparer.Ordinal);
+        dataNamespaces = new Dictionary<string, SqlDataNamespaceOptions>(
+            settings.DataNamespaces,
             StringComparer.Ordinal);
         worldSchemas = new Dictionary<string, WorldSchemaOptions>(
             settings.WorldSchemas,
@@ -40,6 +53,22 @@ public sealed class ConfiguredCampaignSchemaResolver : ICampaignSchemaResolver
         {
             RequireValue(campaignId, "CampaignWorldModels campaign ID");
             RequireValue(worldModelId, $"CampaignWorldModels[{campaignId}]");
+        }
+
+        foreach (var (worldModelId, dataNamespaceId) in worldDataNamespaces)
+        {
+            RequireValue(worldModelId, "WorldDataNamespaces world-model ID");
+            RequireValue(dataNamespaceId, $"WorldDataNamespaces[{worldModelId}]");
+        }
+
+        foreach (var (dataNamespaceId, binding) in dataNamespaces)
+        {
+            RequireValue(dataNamespaceId, "DataNamespaces namespace ID");
+            ArgumentNullException.ThrowIfNull(binding);
+            SqlServerSchemaIdentifier.Validate(binding.SchemaName);
+            RequireValue(binding.SchemaModelVersion, $"DataNamespaces[{dataNamespaceId}].SchemaModelVersion");
+            RequireValue(binding.RulesetId, $"DataNamespaces[{dataNamespaceId}].RulesetId");
+            RequireValue(binding.RulesetVersion, $"DataNamespaces[{dataNamespaceId}].RulesetVersion");
         }
 
         foreach (var (worldModelId, binding) in worldSchemas)
@@ -60,27 +89,57 @@ public sealed class ConfiguredCampaignSchemaResolver : ICampaignSchemaResolver
             ? configuredWorld
             : settings.DefaultWorldModelId;
 
-        if (worldSchemas.TryGetValue(worldModelId, out var binding))
+        var hasConfiguredNamespace = worldDataNamespaces.TryGetValue(worldModelId, out var configuredNamespace);
+        var dataNamespaceId = hasConfiguredNamespace
+            ? configuredNamespace!
+            : settings.DefaultDataNamespaceId;
+
+        // Preserve the FR-018 world-to-schema configuration as a compatibility input.
+        if (!hasConfiguredNamespace && worldSchemas.TryGetValue(worldModelId, out var legacyBinding))
         {
             return new CampaignSchemaRoute(
                 campaignId,
                 worldModelId,
-                SqlServerSchemaIdentifier.Validate(binding.SchemaName),
-                binding.SchemaModelVersion,
-                binding.RulesetVersion);
+                worldModelId,
+                SqlServerSchemaIdentifier.Validate(legacyBinding.SchemaName),
+                legacyBinding.SchemaModelVersion,
+                settings.DefaultRulesetId,
+                legacyBinding.RulesetVersion);
         }
 
-        if (!string.Equals(worldModelId, settings.DefaultWorldModelId, StringComparison.Ordinal))
+        if (!hasConfiguredNamespace &&
+            !string.Equals(worldModelId, settings.DefaultWorldModelId, StringComparison.Ordinal))
         {
             throw new InvalidOperationException(
-                $"World model '{worldModelId}' has no trusted SQL schema binding.");
+                $"World model '{worldModelId}' has no trusted Logical Data Namespace mapping.");
+        }
+
+        if (dataNamespaces.TryGetValue(dataNamespaceId, out var namespaceBinding))
+        {
+            return new CampaignSchemaRoute(
+                campaignId,
+                worldModelId,
+                dataNamespaceId,
+                SqlServerSchemaIdentifier.Validate(namespaceBinding.SchemaName),
+                namespaceBinding.SchemaModelVersion,
+                namespaceBinding.RulesetId,
+                namespaceBinding.RulesetVersion);
+        }
+
+        if (!string.Equals(worldModelId, settings.DefaultWorldModelId, StringComparison.Ordinal) ||
+            !string.Equals(dataNamespaceId, settings.DefaultDataNamespaceId, StringComparison.Ordinal))
+        {
+            throw new InvalidOperationException(
+                $"World model '{worldModelId}' and Data Namespace '{dataNamespaceId}' have no trusted SQL mapping.");
         }
 
         return new CampaignSchemaRoute(
             campaignId,
             worldModelId,
+            dataNamespaceId,
             SqlServerSchemaIdentifier.Validate(settings.DefaultSchema),
             settings.DefaultSchemaModelVersion,
+            settings.DefaultRulesetId,
             settings.DefaultRulesetVersion);
     }
 
@@ -157,5 +216,13 @@ public static class SqlServerSchemaMigration
             SchemaNameToken,
             SqlServerSchemaIdentifier.Validate(route.SchemaName),
             StringComparison.Ordinal);
+    }
+
+    public static string RenderDomain(string template, string domainSchema)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(template);
+        var validated = SqlServerSchemaIdentifier.Validate(domainSchema);
+        var rendered = SqlServerSchemaIdentifier.Bind(template, validated);
+        return rendered.Replace(SchemaNameToken, validated, StringComparison.Ordinal);
     }
 }

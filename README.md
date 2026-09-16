@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 adds portable `DIRECT` and `MCP` persistence, and FR-018 adds source-provenanced rule compilation, 8K context-efficient retrieval, World/Ruleset isolation, and configurable SQL Server schema routing. Both are post-v1 development and do not change the historical v1.0.0 tag.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 and FR-018 established portable persistence and selective rule retrieval; FR-019 consolidates them into vendor-neutral `DIRECT` and `MANAGED` strategies, sticky **Enumerate -> Select -> Persist -> Reuse** configuration, Logical Data Namespaces, Managed rule publication, and optional .NET/MCP/T-SQL reference tooling. These are post-v1 developments and do not change the historical v1.0.0 tag.
 
 ## Core Pillars
 
@@ -73,9 +73,12 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/ai/CANONICAL_VISUAL_CONTEXT.md`](docs/ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical image context, observer filtering, Current Appearance assembly, and non-canonical rendering boundaries.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
 - [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.
-- [`docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - post-v1 `DIRECT` and `MCP` persistence architecture and shared completion contract.
+- [`docs/persistence/PERSISTENCE_STRATEGY_SELECTION.md`](docs/persistence/PERSISTENCE_STRATEGY_SELECTION.md) - capability enumeration, sticky selection, persistent configuration, and explicit migration.
+- [`docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md`](docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - post-v1 `DIRECT` and `MANAGED` persistence architecture and shared completion contract.
+- [`docs/persistence/MANAGED_DATA_SERVICE.md`](docs/persistence/MANAGED_DATA_SERVICE.md) - storage- and interface-neutral Managed service contract.
 - [`docs/persistence/adapters/README.md`](docs/persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive Direct Adapter contracts.
-- [`services/eternal-cycle-mcp/README.md`](services/eternal-cycle-mcp/README.md) - executable Microsoft SQL Server-backed MCP persistence reference service.
+- [`examples/tooling/managed-data/mcp-dotnet-tsql/README.md`](examples/tooling/managed-data/mcp-dotnet-tsql/README.md) - optional .NET/MCP/T-SQL Managed Data Service reference implementation.
+- [`SUPPORT.md`](SUPPORT.md) - official support provenance and issue-report routing.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.

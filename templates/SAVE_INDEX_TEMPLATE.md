@@ -33,11 +33,13 @@ A populated Save Index belongs outside the repository. This blank template creat
 - **Persistence Model Version:** `<logical schema version>`
 - **Storage Format Version:** `<implementation version or not applicable>`
 - **Last confirmed Save Point:** `<stable ID and effective time>`
-- **Persistence Mode:** `<DIRECT | MCP>`
-- **Configured canonical authority:** `<Direct local | Direct cloud | MCP service>`
-- **Resolved canonical target:** `<verified Direct locator reference | MCP service/campaign binding | unresolved>`
+- **Persistence Strategy:** `<DIRECT | MANAGED>`
+- **Strategy Configuration reference:** `<persisted selection and capability evidence>`
+- **Configured canonical authority:** `<Direct local | Direct cloud | Managed service>`
+- **Resolved canonical target:** `<verified Direct locator reference | Managed service/campaign binding | unresolved>`
 - **Direct Adapter Chain:** `<database-format and storage adapters | not applicable>`
-- **MCP service contract:** `<service identity and contract version | not applicable>`
+- **Managed service contract/interface:** `<service identity, contract version, and interface | not applicable>`
+- **Logical Data Namespace ID:** `<stable logical identity>`
 - **Local persistence state:** `<current | ahead of cloud | pending | failed | not applicable>`
 - **Cloud persistence state:** `<current and verified | pending | failed | not configured>`
 - **Last successful local commit:** `<version and time or unavailable>`
@@ -68,8 +70,8 @@ The Campaign Mode reference is not a second owner. Campaign Canon owns the curre
 - **Pending Session Delta:** `<ID or none>`
 - **Open Save Transaction:** `<ID or none>`
 - **Pending Affected Set:** `<owner-domain references or none>`
-- **Persistence status:** `<Direct local validated | Direct cloud validated | MCP receipt validated | pending | failed>`
-- **Latest MCP Persistence Receipt:** `<receipt ID and Campaign Version | none | not applicable>`
+- **Persistence status:** `<Direct local validated | Direct cloud validated | Managed receipt validated | pending | failed>`
+- **Latest Managed Persistence Receipt:** `<receipt ID and Campaign Version | none | not applicable>`
 - **Unresolved conflicts:** `<IDs, owners, and severity>`
 - **Record Gaps:** `<IDs and required source recovery>`
 - **Pending migrations:** `<IDs and activation state>`
@@ -97,8 +99,9 @@ The Campaign Mode reference is not a second owner. Campaign Canon owns the curre
 - [ ] Open transactions, deltas, migrations, conflicts, gaps, and warnings are represented honestly.
 - [ ] The configured canonical authority is explicit, its exact target is resolved before state-changing play, and no missing Local Working Copy is mistaken for a missing remote canonical save.
 - [ ] Local and cloud completion states reflect actual commit and verification evidence; a cloud-authoritative save is not current merely because the local transaction committed.
-- [ ] Exactly one Persistence Mode is active; inactive-mode fields are not used as fallback authority.
-- [ ] MCP completion has a validated service receipt and exposes no backend database or storage topology.
+- [ ] Exactly one persisted Persistence Strategy is active; inactive-strategy fields are not used as fallback authority.
+- [ ] Resume reuses the selected strategy unless an explicit validated migration changes it.
+- [ ] MANAGED completion has validated service evidence and exposes no backend database or storage topology.
 - [ ] The stated load status matches the latest validation outcome.
 
 ## Cross-References

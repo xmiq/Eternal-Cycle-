@@ -16,4 +16,4 @@ These documents implement `DIRECT` persistence. Database Format Adapters own dat
 
 Campaign Configuration selects one Database Format Adapter and the Storage Adapter chain required by the canonical authority. An adapter is not selected merely because a runtime exposes a similarly named tool.
 
-MCP persistence does not use these client-side adapters. See the [Portable Persistence Architecture](../PORTABLE_PERSISTENCE_ARCHITECTURE.md) and [MCP Persistence Mode](../MCP_PERSISTENCE_MODE.md).
+Managed persistence does not use these client-side adapters. See the [Portable Persistence Architecture](../PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Managed Data Service](../MANAGED_DATA_SERVICE.md), and [MCP Managed Service Interface](../MCP_PERSISTENCE_MODE.md).

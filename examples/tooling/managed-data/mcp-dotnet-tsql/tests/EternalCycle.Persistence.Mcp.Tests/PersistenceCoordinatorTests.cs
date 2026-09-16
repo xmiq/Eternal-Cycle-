@@ -115,7 +115,7 @@ public sealed class PersistenceCoordinatorTests
         var status = await coordinator.GetStatusAsync("campaign", CancellationToken.None);
         var serialized = System.Text.Json.JsonSerializer.Serialize(status);
 
-        Assert.Equal("MCP", status.Mode);
+        Assert.Equal("MANAGED", status.Mode);
         Assert.DoesNotContain("SqlServer", serialized, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("ConnectionString", serialized, StringComparison.OrdinalIgnoreCase);
     }
@@ -158,8 +158,8 @@ public sealed class PersistenceCoordinatorTests
         public Task<PersistenceStatus> GetStatusAsync(string campaignId, CancellationToken cancellationToken) =>
             Task.FromResult(new PersistenceStatus(
                 PersistenceMarkers.Saved,
-                "MCP",
-                "Eternal Cycle MCP Persistence Service",
+                "MANAGED",
+                "Eternal Cycle Managed Data Service",
                 campaignId,
                 1,
                 false,

@@ -157,14 +157,20 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [AI Save Protocol](ai/AI_SAVE_PROTOCOL.md) - writer-capability disclosure and faithful operation of Affected Sets, Session Deltas, validation, activation, and recovery.
 - [AI Game Master Checklist](ai/AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, continuation, correction, and handoff.
 - [ChatGPT GM Universal Instructions](ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - runtime-specific Gameplay and Development Contexts, strict Save-Before-Delivery, action fidelity, correction, and failure behavior.
-- [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - `DIRECT` and `MCP` modes, shared invariants, configuration, evidence, failure, and migration boundaries.
+- [Persistence Strategy Selection](persistence/PERSISTENCE_STRATEGY_SELECTION.md) - capability enumeration, sticky selection, persisted reuse, and explicit migration.
+- [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - `DIRECT` and `MANAGED` strategies, shared invariants, configuration, evidence, failure, and migration boundaries.
+- [Managed Data Service](persistence/MANAGED_DATA_SERVICE.md) - implementation-neutral semantic service contract and capability families.
+- [Logical Data Namespace](persistence/LOGICAL_DATA_NAMESPACE.md) - stable storage-neutral identity, isolation, versioning, and native mappings.
 - [Direct Persistence Adapter Index](persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
+- [Support and Diagnostics Index](support/README.md) - release-neutral support navigation and privacy boundary.
+- [Community Feedback and Diagnostics](support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md) - privacy-conscious classification, diagnostics, reporting, and support routing.
 
 ## Rule Compilation and Retrieval
 
 - [Rule Compilation Index](rules/README.md) - authority boundary, reading order, reference manifest, and runtime consumers.
 - [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) - compact mandatory authority, agency, world-simulation, read, ownership, and persistence invariants.
 - [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
+- [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) - service-owned source acquisition, versioned publication, activation, update policy, compatibility, and bounded Rule Packets.
 
 ## Campaign Persistence Engine
 
@@ -190,7 +196,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) - post-interaction Affected Sets, owner-routed Session Deltas, history appends, atomic Save Points, idempotent retries, and recovery.
 - [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) - read-only validation baselines and profiles, evidence-bearing findings, defect detection, protected reports, severity, activation outcomes, and repair routing.
 - [Direct Persistence Mode](persistence/DIRECT_PERSISTENCE_MODE.md) - Database Format and Storage Adapter composition, capability gates, and direct-mode status evidence.
-- [MCP Persistence Mode](persistence/MCP_PERSISTENCE_MODE.md) - semantic persistence service, validated receipts, hidden SQL Server backend, durability, retry, and host boundary.
+- [MCP Managed Service Interface](persistence/MCP_PERSISTENCE_MODE.md) - optional MCP interface, semantic operations, validated receipts, hidden backend, retry, and host boundary.
 - [Campaign Persistence Integration](persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md) - completed-system ownership, load-to-activation operating cycle, specialist handoffs, correction routes, and the blank-template boundary.
 
 ## Authority and Scope

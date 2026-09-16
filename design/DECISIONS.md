@@ -5245,3 +5245,31 @@ Only trusted deployment configuration may map a Campaign ID to a World Model and
 ## D-1311 — Compiled Rules and Campaign Facts Remain Separate Inputs
 
 The rule compiler owns no Campaign Canon. Context Assembly combines a provenance-bearing rule context with authoritative campaign reads only after both resolve to the same Campaign ID and applicable World/Ruleset. Compiling a rule index cannot create, migrate, or alter a campaign fact.
+
+## D-1312 — DIRECT and MANAGED Supersede the Universal DIRECT and MCP Split
+
+Eternal Cycle's universal persistence strategies are `DIRECT` and `MANAGED`. Campaign initialization follows **Enumerate -> Select -> Persist -> Reuse**: capability-based selection is persisted and reused until explicit validated migration. MCP is one optional Managed service interface. This corrects D-1298's use of MCP as a top-level universal mode while preserving legacy configuration compatibility.
+
+## D-1313 — Managed Services Replace Direct Canonical Save Machinery
+
+When `MANAGED` is selected, the Managed Data Service is canonical persistence authority and owns backend transactions, durability, backup, replication, recovery, and operational validation. The client does not create a competing canonical Direct save or cloud replica. Managed storage and service interfaces remain implementation-neutral; the supplied .NET/MCP/T-SQL service is optional reference tooling.
+
+## D-1314 — Logical Data Namespace Is the Universal Isolation Concept
+
+A Logical Data Namespace provides stable identity, discoverability, compatibility, isolation, versioning, routing, and migration independent of physical storage names. Native stores map it faithfully without imitating SQL. In the T-SQL reference, recommended `ec_` schemas map namespaces, `ec_domain` holds shared Derived service/rule publications, and world campaign Canon remains in configured world namespaces with Campaign ID isolation.
+
+## D-1315 — Managed Rule Publication Is Service-Owned and Versioned
+
+Canonical Markdown remains Rule Canon. In Managed mode the service, not the AI GM, acquires immutable sources, compiles explicit dependencies and selectors, validates candidates, publishes versioned Rule Releases, activates by policy, checks for updates, and assembles bounded Rule Packets. Failed candidates or source outages preserve the last valid active release where safe.
+
+## D-1316 — Rule Sources and Campaign Compatibility Are Explicit
+
+A Rule Source Provider records immutable provenance; Git-based sources use an exact commit SHA. Campaign Configuration identifies the applicable RuleSet/version or pin, and the service must reject silent incompatible adoption. Automatic source checks may run at startup or periodically without an AI request, while manual and disabled/offline policies remain valid.
+
+## D-1317 — Managed Diagnostics Are Structured and Sanitized
+
+Managed diagnostics may identify implementation, interface, strategy, storage-adapter family, World/Ruleset, Logical Data Namespace, active Rule Release, immutable source, and update state. They omit credentials, connection strings, private locators, Campaign Canon, GM Secrets, private conversations, and unnecessary player information. No runtime silently submits an external issue.
+
+## D-1318 — Support Routing Follows Distribution Provenance
+
+Official repository and issue-tracker destinations are maintained in release-neutral support metadata. An AI may classify and prepare a privacy-conscious report, but external submission remains optional and user-authorized. Forks and custom distributions do not imply support for their modifications by the official Eternal Cycle maintainer.

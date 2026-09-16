@@ -38,12 +38,15 @@ Runtime-specific profiles are replaceable operational extensions. They do not re
 
 ## Persistence Architecture
 
-- [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - first-class `DIRECT` and `MCP` modes with one shared authority and completion contract.
+- [Persistence Strategy Selection](../persistence/PERSISTENCE_STRATEGY_SELECTION.md) - capability enumeration, sticky selection, persistent configuration, and explicit migration.
+- [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - first-class `DIRECT` and `MANAGED` strategies with one shared authority and completion contract.
 - [Direct Persistence Mode](../persistence/DIRECT_PERSISTENCE_MODE.md) - runtime-operated Database Format and Storage Adapter composition.
-- [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md) - semantic service operations, validated receipts, hidden backend, and service-owned durability.
+- [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md) - storage- and interface-neutral semantic service operations, completion evidence, hidden backend, and service-owned durability.
+- [MCP Managed Service Interface](../persistence/MCP_PERSISTENCE_MODE.md) - MCP realization of the Managed contract.
+- [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md) - service-owned acquisition, compilation, validation, publication, activation, and bounded retrieval.
 - [Direct Persistence Adapter Index](../persistence/adapters/README.md) - SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 
-Direct adapters use the `<TECHNOLOGY>_<ADAPTER_CLASS>_ADAPTER.md` naming convention. MCP persistence uses a semantic service contract rather than a client Adapter Chain. Neither mode may adjudicate gameplay.
+Direct adapters use the `<TECHNOLOGY>_<ADAPTER_CLASS>_ADAPTER.md` naming convention. Managed persistence uses a semantic service contract rather than a client Adapter Chain. Neither strategy may adjudicate gameplay.
 
 ## Authority Boundary
 

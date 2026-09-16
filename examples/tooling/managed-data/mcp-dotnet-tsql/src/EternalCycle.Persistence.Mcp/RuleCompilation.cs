@@ -1,8 +1,5 @@
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
@@ -22,7 +19,8 @@ public sealed record RuleSourceMetadata(
     IReadOnlyList<string> Operations,
     IReadOnlyList<string> Topics,
     int Priority = 0,
-    bool AlwaysInclude = false);
+    bool AlwaysInclude = false,
+    IReadOnlyList<string>? Dependencies = null);
 
 public sealed record RuleSourceDocument(
     string RuleSourceId,
@@ -60,7 +58,9 @@ public sealed record RuleContextResult(
     string RepositoryVersion,
     int EstimatedTokens,
     int MaximumEstimatedTokens,
-    IReadOnlyList<CompiledRuleChunk> Chunks);
+    IReadOnlyList<CompiledRuleChunk> Chunks,
+    string? RuleReleaseId = null,
+    string? SourceIdentity = null);
 
 public sealed class RuleSourceManifest
 {
@@ -87,26 +87,11 @@ public sealed class RuleSourceManifestEntry
 
     public IList<string> Topics { get; init; } = [];
 
+    public IList<string> Dependencies { get; init; } = [];
+
     public int Priority { get; init; }
 
     public bool AlwaysInclude { get; init; }
-}
-
-public sealed class RuleRetrievalOptions
-{
-    public string RepositoryRoot { get; init; } = string.Empty;
-
-    public string ManifestPath { get; init; } = string.Empty;
-
-    public int MaximumEstimatedTokens { get; init; } = RuleCompiler.DefaultContextBudget;
-
-    public string DefaultCampaignMode { get; init; } = "NORMAL";
-
-    public IDictionary<string, string> CampaignModes { get; init; } =
-        new Dictionary<string, string>(StringComparer.Ordinal);
-
-    public IDictionary<string, string[]> CampaignOptionalModules { get; init; } =
-        new Dictionary<string, string[]>(StringComparer.Ordinal);
 }
 
 public interface IRuleContextProvider
@@ -114,138 +99,6 @@ public interface IRuleContextProvider
     Task<RuleContextResult> GetContextAsync(
         RuleContextRequest request,
         CancellationToken cancellationToken);
-}
-
-public sealed class RepositoryRuleContextProvider(
-    IOptions<RuleRetrievalOptions> options,
-    ICampaignSchemaResolver schemaResolver) : IRuleContextProvider
-{
-    private static readonly JsonSerializerOptions ManifestJsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-        Converters = { new JsonStringEnumConverter() }
-    };
-
-    private readonly RuleRetrievalOptions settings = options.Value;
-    private readonly SemaphoreSlim compilationLock = new(1, 1);
-    private CompiledRuleIndex? compiledIndex;
-
-    public async Task<RuleContextResult> GetContextAsync(
-        RuleContextRequest request,
-        CancellationToken cancellationToken)
-    {
-        ArgumentNullException.ThrowIfNull(request);
-        var route = schemaResolver.Resolve(request.CampaignId);
-        var index = await GetIndexAsync(cancellationToken);
-        var campaignMode = settings.CampaignModes.TryGetValue(request.CampaignId, out var configuredMode)
-            ? configuredMode
-            : settings.DefaultCampaignMode;
-        var optionalModules = settings.CampaignOptionalModules.TryGetValue(
-            request.CampaignId,
-            out var configuredModules)
-            ? configuredModules
-            : [];
-        var configuredMaximum = settings.MaximumEstimatedTokens is > 0 and <= RuleCompiler.DefaultContextBudget
-            ? settings.MaximumEstimatedTokens
-            : RuleCompiler.DefaultContextBudget;
-        var requestedMaximum = request.MaxEstimatedTokens > 0
-            ? Math.Min(request.MaxEstimatedTokens, configuredMaximum)
-            : configuredMaximum;
-
-        return RuleCompiler.Select(
-            index,
-            route,
-            request with
-            {
-                CampaignMode = campaignMode,
-                OptionalModules = optionalModules,
-                MaxEstimatedTokens = requestedMaximum
-            });
-    }
-
-    private async Task<CompiledRuleIndex> GetIndexAsync(CancellationToken cancellationToken)
-    {
-        if (compiledIndex is not null)
-        {
-            return compiledIndex;
-        }
-
-        await compilationLock.WaitAsync(cancellationToken);
-        try
-        {
-            if (compiledIndex is not null)
-            {
-                return compiledIndex;
-            }
-
-            if (string.IsNullOrWhiteSpace(settings.RepositoryRoot) ||
-                string.IsNullOrWhiteSpace(settings.ManifestPath))
-            {
-                throw new InvalidOperationException(
-                    "Rule retrieval requires trusted RepositoryRoot and ManifestPath configuration.");
-            }
-
-            var root = Path.GetFullPath(settings.RepositoryRoot);
-            var manifestPath = Path.IsPathRooted(settings.ManifestPath)
-                ? Path.GetFullPath(settings.ManifestPath)
-                : Path.GetFullPath(Path.Combine(root, settings.ManifestPath));
-            EnsureInsideRoot(root, manifestPath);
-
-            var manifestJson = await File.ReadAllTextAsync(manifestPath, cancellationToken);
-            var manifest = JsonSerializer.Deserialize<RuleSourceManifest>(manifestJson, ManifestJsonOptions)
-                ?? throw new InvalidOperationException("The configured rule-source manifest is unreadable.");
-            var documents = new List<RuleSourceDocument>(manifest.Sources.Count);
-
-            foreach (var source in manifest.Sources)
-            {
-                var sourcePath = Path.GetFullPath(Path.Combine(root, source.Path));
-                EnsureInsideRoot(root, sourcePath);
-                var content = await File.ReadAllTextAsync(sourcePath, cancellationToken);
-                documents.Add(new RuleSourceDocument(
-                    RequireIdentifier(source.RuleSourceId, nameof(source.RuleSourceId)),
-                    Path.GetRelativePath(root, sourcePath).Replace('\\', '/'),
-                    content,
-                    new RuleSourceMetadata(
-                        source.Layer,
-                        source.WorldModelIds.ToArray(),
-                        source.ModuleIds.ToArray(),
-                        source.CampaignModes.ToArray(),
-                        source.Operations.ToArray(),
-                        source.Topics.ToArray(),
-                        source.Priority,
-                        source.AlwaysInclude)));
-            }
-
-            compiledIndex = RuleCompiler.Compile(
-                RequireIdentifier(manifest.RepositoryVersion, nameof(manifest.RepositoryVersion)),
-                documents);
-            return compiledIndex;
-        }
-        finally
-        {
-            compilationLock.Release();
-        }
-    }
-
-    private static void EnsureInsideRoot(string root, string path)
-    {
-        var prefix = root.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar) +
-            Path.DirectorySeparatorChar;
-        if (!path.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
-        {
-            throw new InvalidOperationException("A rule-source manifest path escapes the configured repository root.");
-        }
-    }
-
-    private static string RequireIdentifier(string value, string name)
-    {
-        if (string.IsNullOrWhiteSpace(value) || value.Length > 128)
-        {
-            throw new ArgumentException("Rule identifiers and versions must contain 1 to 128 non-whitespace characters.", name);
-        }
-
-        return value;
-    }
 }
 
 public static class RuleCompiler
@@ -259,10 +112,11 @@ public static class RuleCompiler
         ArgumentException.ThrowIfNullOrWhiteSpace(repositoryVersion);
         ArgumentNullException.ThrowIfNull(documents);
 
+        var sourceDocuments = documents.ToArray();
         var chunks = new List<CompiledRuleChunk>();
         var sourceIds = new HashSet<string>(StringComparer.Ordinal);
         var chunkIds = new HashSet<string>(StringComparer.Ordinal);
-        foreach (var document in documents)
+        foreach (var document in sourceDocuments)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(document.RuleSourceId);
             ArgumentException.ThrowIfNullOrWhiteSpace(document.SourcePath);
@@ -305,7 +159,62 @@ public static class RuleCompiler
             }
         }
 
+        foreach (var document in sourceDocuments)
+        {
+            foreach (var dependency in document.Metadata.Dependencies ?? [])
+            {
+                if (string.Equals(dependency, document.RuleSourceId, StringComparison.Ordinal))
+                {
+                    throw new InvalidOperationException(
+                        $"Rule source '{document.RuleSourceId}' cannot depend on itself.");
+                }
+
+                if (!sourceIds.Contains(dependency))
+                {
+                    throw new InvalidOperationException(
+                        $"Rule source '{document.RuleSourceId}' depends on unknown source '{dependency}'.");
+                }
+            }
+        }
+
+        ValidateDependencyGraph(sourceDocuments);
+
         return new CompiledRuleIndex(repositoryVersion, DateTimeOffset.UtcNow, chunks);
+    }
+
+    private static void ValidateDependencyGraph(IReadOnlyList<RuleSourceDocument> documents)
+    {
+        var byId = documents.ToDictionary(document => document.RuleSourceId, StringComparer.Ordinal);
+        var states = new Dictionary<string, int>(StringComparer.Ordinal);
+
+        void Visit(string sourceId)
+        {
+            if (states.TryGetValue(sourceId, out var state))
+            {
+                if (state == 1)
+                {
+                    throw new InvalidOperationException($"Rule dependency cycle includes source '{sourceId}'.");
+                }
+
+                if (state == 2)
+                {
+                    return;
+                }
+            }
+
+            states[sourceId] = 1;
+            foreach (var dependency in byId[sourceId].Metadata.Dependencies ?? [])
+            {
+                Visit(dependency);
+            }
+
+            states[sourceId] = 2;
+        }
+
+        foreach (var sourceId in byId.Keys)
+        {
+            Visit(sourceId);
+        }
     }
 
     public static RuleContextResult Select(
@@ -332,6 +241,7 @@ public static class RuleCompiler
         var topics = Normalize(request.Topics);
         var modules = Normalize(request.OptionalModules ?? []);
         var selected = new List<CompiledRuleChunk>();
+        var selectedIds = new HashSet<string>(StringComparer.Ordinal);
         var used = 0;
 
         var eligible = index.Chunks
@@ -346,27 +256,29 @@ public static class RuleCompiler
             throw new InvalidOperationException("The compiled index has no applicable Runtime Rule Kernel.");
         }
 
-        foreach (var chunk in eligible.Where(IsMandatoryKernel))
+        foreach (var chunk in eligible)
         {
-            if (used + chunk.EstimatedTokens > request.MaxEstimatedTokens)
+            var closure = BuildDependencyClosure(index, chunk, route, request, modules)
+                .Where(candidate => !selectedIds.Contains(candidate.ChunkId))
+                .ToArray();
+            var closureTokens = closure.Sum(candidate => candidate.EstimatedTokens);
+            if (used + closureTokens > request.MaxEstimatedTokens)
             {
-                throw new InvalidOperationException(
-                    "The Runtime Rule Kernel exceeds the configured context budget and must be reduced before play.");
-            }
+                if (IsMandatoryKernel(chunk))
+                {
+                    throw new InvalidOperationException(
+                        "The mandatory Runtime Rule Kernel and its dependencies exceed the configured context budget.");
+                }
 
-            selected.Add(chunk);
-            used += chunk.EstimatedTokens;
-        }
-
-        foreach (var chunk in eligible.Where(chunk => !IsMandatoryKernel(chunk)))
-        {
-            if (used + chunk.EstimatedTokens > request.MaxEstimatedTokens)
-            {
                 continue;
             }
 
-            selected.Add(chunk);
-            used += chunk.EstimatedTokens;
+            foreach (var candidate in closure)
+            {
+                selected.Add(candidate);
+                selectedIds.Add(candidate.ChunkId);
+                used += candidate.EstimatedTokens;
+            }
         }
 
         return new RuleContextResult(
@@ -424,6 +336,81 @@ public static class RuleCompiler
         return metadata.Topics.Count == 0 ||
             metadata.Topics.Contains("*", StringComparer.OrdinalIgnoreCase) ||
             metadata.Topics.Any(topics.Contains);
+    }
+
+    private static IReadOnlyList<CompiledRuleChunk> BuildDependencyClosure(
+        CompiledRuleIndex index,
+        CompiledRuleChunk root,
+        CampaignSchemaRoute route,
+        RuleContextRequest request,
+        IReadOnlySet<string> modules)
+    {
+        var result = new List<CompiledRuleChunk>();
+        var visited = new HashSet<string>(StringComparer.Ordinal);
+        var visiting = new HashSet<string>(StringComparer.Ordinal);
+
+        void Visit(CompiledRuleChunk chunk)
+        {
+            if (visited.Contains(chunk.ChunkId))
+            {
+                return;
+            }
+
+            if (!visiting.Add(chunk.ChunkId))
+            {
+                throw new InvalidOperationException(
+                    $"Rule dependency cycle includes chunk '{chunk.ChunkId}'.");
+            }
+
+            foreach (var dependencySourceId in chunk.Metadata.Dependencies ?? [])
+            {
+                var dependencyChunks = index.Chunks
+                    .Where(candidate =>
+                        string.Equals(candidate.RuleSourceId, dependencySourceId, StringComparison.Ordinal) &&
+                        IsDependencyApplicable(candidate, route, request, modules))
+                    .OrderBy(candidate => candidate.ChunkId, StringComparer.Ordinal)
+                    .ToArray();
+                if (dependencyChunks.Length == 0)
+                {
+                    throw new InvalidOperationException(
+                        $"Rule dependency '{dependencySourceId}' is unavailable for campaign '{request.CampaignId}'.");
+                }
+
+                foreach (var dependencyChunk in dependencyChunks)
+                {
+                    Visit(dependencyChunk);
+                }
+            }
+
+            visiting.Remove(chunk.ChunkId);
+            visited.Add(chunk.ChunkId);
+            result.Add(chunk);
+        }
+
+        Visit(root);
+        return result;
+    }
+
+    private static bool IsDependencyApplicable(
+        CompiledRuleChunk chunk,
+        CampaignSchemaRoute route,
+        RuleContextRequest request,
+        IReadOnlySet<string> modules)
+    {
+        var metadata = chunk.Metadata;
+        if (metadata.Layer == RuleLayer.World && !Matches(metadata.WorldModelIds, route.WorldModelId))
+        {
+            return false;
+        }
+
+        if (metadata.Layer == RuleLayer.OptionalModule && !metadata.ModuleIds.Any(modules.Contains))
+        {
+            return false;
+        }
+
+        return Matches(metadata.WorldModelIds, route.WorldModelId) &&
+            Matches(metadata.CampaignModes, request.CampaignMode) &&
+            Matches(metadata.Operations, request.Operation);
     }
 
     private static bool Matches(IReadOnlyList<string> values, string value) =>

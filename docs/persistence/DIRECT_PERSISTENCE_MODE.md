@@ -116,6 +116,7 @@ The selected canonical authority determines completion. A local candidate in a r
 ## Related Documents
 
 - [Persistence Adapter Index](adapters/README.md)
-- [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md)
+- [Managed Data Service](MANAGED_DATA_SERVICE.md)
+- [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
 - [Campaign Configuration Template](../../templates/PERSISTENCE_CONFIGURATION_TEMPLATE.md)
 - [AI Capabilities and Limitations](../ai/AI_CAPABILITIES_AND_LIMITATIONS.md)

@@ -226,6 +226,7 @@ No mechanics or schemas for those objectives are implemented here.
 - [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md)
 - [GM Living Codex Persistence Model](../gm-living-codex/PERSISTENCE_MODEL.md)
 - [SQLite Database Format Adapter](adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md)
-- [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md)
+- [Managed Data Service](MANAGED_DATA_SERVICE.md)
+- [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
 - [Design Decisions](../../design/DECISIONS.md)
 - [Canonical Terminology](../../design/TERMINOLOGY.md)

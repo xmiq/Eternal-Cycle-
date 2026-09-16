@@ -8,7 +8,7 @@ It creates no campaign inside this repository. Populated configuration, Campaign
 
 ## Document Control
 
-- **Owner:** new-versus-resume classification, engine-status lookup, Campaign Mode default, starting-profile separation, and bootstrap handoff
+- **Owner:** new-versus-resume classification, engine-status lookup, Campaign Mode default, starting-profile separation, persistence-strategy selection, and bootstrap handoff
 - **Primary authorities:** current root [README](../../README.md), [Version](../../VERSION), [Roadmap](../../design/ROADMAP.md), [Provisional Rulings](PROVISIONAL_RULINGS.md), and [Campaign Persistence Integration](../persistence/CAMPAIGN_PERSISTENCE_INTEGRATION.md)
 - **Dependencies:** user intent, current Repository Version, external campaign authority, Campaign Configuration, Save Index, and persistence capability
 - **Extensions:** interfaces may collect character, world, consent, accessibility, or presentation choices without changing these lifecycle rules
@@ -64,7 +64,7 @@ When the user asks to start a new game without an explicit testing request:
 2. set Campaign Mode to `NORMAL`;
 3. confirm only the setup choices needed to create valid external campaign records;
 4. select a starting-life profile independently from Campaign Mode;
-5. select `DIRECT` or `MCP` persistence through current Campaign Configuration rules;
+5. enumerate available compliant persistence capabilities, select `DIRECT` or `MANAGED`, persist the selection, and bind its canonical authority under [Enumerate -> Select -> Persist -> Reuse](../persistence/PERSISTENCE_STRATEGY_SELECTION.md);
 6. create the external Campaign ID, Campaign Canon and Rules Profile, Save Index, required owner records, and initial Timeline boundary;
 7. validate the canonical persistence target and blank-to-initial-state transaction;
 8. enter play only after the initial canonical save is committed and validated;
@@ -107,12 +107,13 @@ If the missing area requires a broad new system, narrow or stop. Do not change t
 When resuming an existing campaign:
 
 1. resolve its stable identity and canonical persistence target;
-2. read its Campaign Mode from authoritative campaign metadata when present;
-3. preserve an explicitly selected testing mode;
-4. treat pre-release Alpha wording as historical when it merely described the engine lifecycle;
-5. classify ambiguous old metadata as `Unknown` or `Requires Source Recovery` rather than guessing;
-6. follow [AI Session Start](../ai/AI_SESSION_START.md) or the equivalent human-GM load procedure;
-7. never reclassify continuity from conversation wording alone.
+2. load and reuse its persisted Persistence Strategy before considering newly available adapters or services;
+3. read its Campaign Mode from authoritative campaign metadata when present;
+4. preserve an explicitly selected testing mode;
+5. treat pre-release Alpha wording as historical when it merely described the engine lifecycle;
+6. classify ambiguous old metadata as `Unknown` or `Requires Source Recovery` rather than guessing;
+7. follow [AI Session Start](../ai/AI_SESSION_START.md) or the equivalent human-GM load procedure;
+8. never reclassify continuity from conversation wording alone.
 
 An existing `NORMAL` campaign resumes as `NORMAL` unless authorized campaign governance changes it.
 
@@ -179,6 +180,7 @@ An existing `NORMAL` campaign is loaded by a new AI runtime. The runtime reads a
 - Provisional Rulings do not change Campaign Mode.
 - Persistence validation precedes successful new-campaign completion.
 - Existing continuity is loaded or migrated, never replaced by an assumed blank save.
+- Persistence Strategy is sticky after selection; unavailable authority creates recovery or migration work, not silent fallback.
 - Historical records remain historically accurate.
 - No populated campaign record enters this repository.
 
@@ -193,4 +195,5 @@ An existing `NORMAL` campaign is loaded by a new AI runtime. The runtime reads a
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Persistence Configuration Template](../../templates/PERSISTENCE_CONFIGURATION_TEMPLATE.md)
 - [Migration and Versioning](../persistence/MIGRATION_AND_VERSIONING.md)
+- [Persistence Strategy Selection](../persistence/PERSISTENCE_STRATEGY_SELECTION.md)
 - [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)

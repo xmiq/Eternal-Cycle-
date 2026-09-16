@@ -58,11 +58,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-No Future Revision is currently roadmapped and pending. FR-001 through FR-018 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+No Future Revision is currently roadmapped and pending. FR-001 through FR-019 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
-All currently known FR-001 through FR-018 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-019 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-019 - Managed Data Architecture and Rule Publication
+
+- **Status:** Closed
+- **Issue:** FR-017 and FR-018 coupled the universal architecture to MCP, Microsoft SQL Server, and runtime-side repository compilation more tightly than intended.
+- **Affected systems:** Campaign Persistence Engine, Campaign Configuration, AI Runtime Model, Context Assembly, rule compilation and retrieval, service interfaces, SQL routing, diagnostics, support, migration, and reference tooling.
+- **Gameplay impact:** Campaigns could silently conflate MCP with a persistence strategy, Managed authority with one vendor backend, physical schemas with logical world identity, or AI context assembly with rule compilation.
+- **Evidence needed:** sticky Direct/Managed selection, Managed authority separation, namespace and campaign isolation, T-SQL domain publication, versioned updates, dependency-complete 8K retrieval, immutable provenance, offline fallback, diagnostics redaction, support routing, and v1 Direct compatibility.
+- **Approved direction:** Define vendor-neutral `DIRECT` and `MANAGED` strategies through **Enumerate -> Select -> Persist -> Reuse**; make MCP one optional Managed interface; introduce Logical Data Namespaces; retain Markdown as Rule Canon; make the service own Managed rule publication; and reposition the .NET/MCP/T-SQL implementation as optional reference tooling.
+- **Suggested future phase:** Phase 13 — Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented through universal contracts, sticky configuration templates and bootstrap rules, Managed rule publication and update handling, dependency-complete Rule Packets, namespace-aware T-SQL reference tooling, diagnostics/support guidance, compatibility rules, regression coverage, and repository validation.
+- **Authorized roadmap link:** [FR-019 — Managed Data Architecture and Rule Publication](ROADMAP.md#phase-13--future-revisions)
+- **Closure references:** [Portable Persistence Architecture](../docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Managed Data Service](../docs/persistence/MANAGED_DATA_SERVICE.md), [Managed Rule Publication](../docs/rules/MANAGED_RULE_PUBLICATION.md), [Reference Managed Service](../examples/tooling/managed-data/mcp-dotnet-tsql/README.md), and [FR-019 Implementation Audit](audits/FR_019_MANAGED_DATA_ARCHITECTURE_AUDIT.md)
 
 ### FR-018 - Rule Compilation and Context-Efficient Retrieval
 
@@ -76,7 +90,7 @@ All currently known FR-001 through FR-018 entries are explicitly Roadmapped or C
 - **Priority:** High
 - **Status reason:** Implemented through canonical compilation/retrieval rules, a compact kernel and reference manifest, the MCP `ec_get_rule_context` tool, trusted schema routing and safe identifier binding, a schema-scoped migration template, 22 passing service tests, focused FR-017/FR-018 harnesses, governance, navigation, and repository validation.
 - **Authorized roadmap link:** [FR-018 — Rule Compilation and Context-Efficient Retrieval](ROADMAP.md#phase-13--future-revisions)
-- **Closure references:** [Rule Compilation and Context-Efficient Retrieval](../docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md), [Reference MCP Service](../services/eternal-cycle-mcp/README.md), and [FR-018 Implementation Audit](audits/FR_018_RULE_COMPILATION_AND_SCHEMA_ROUTING_AUDIT.md)
+- **Closure references:** [Rule Compilation and Context-Efficient Retrieval](../docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md), [Reference MCP Service](../examples/tooling/managed-data/mcp-dotnet-tsql/README.md), and [FR-018 Implementation Audit](audits/FR_018_RULE_COMPILATION_AND_SCHEMA_ROUTING_AUDIT.md)
 
 ### FR-017 - Portable Persistence Architecture and MCP Persistence Service
 
@@ -90,7 +104,7 @@ All currently known FR-001 through FR-018 entries are explicitly Roadmapped or C
 - **Priority:** High
 - **Status reason:** Implemented through portable persistence contracts, runtime and FR-011 integration, renamed runtime-neutral adapters, DuckDB and local-storage contracts, blank configuration fields, a tested SQL Server-backed reference MCP service, governance, navigation, and repository validation.
 - **Authorized roadmap link:** [FR-017 — Portable Persistence Architecture and MCP Persistence Service](ROADMAP.md#phase-13--future-revisions)
-- **Closure references:** [Portable Persistence Architecture](../docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md), [MCP Persistence Mode](../docs/persistence/MCP_PERSISTENCE_MODE.md), [Reference MCP Service](../services/eternal-cycle-mcp/README.md), and [FR-017 Implementation Audit](audits/FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md)
+- **Closure references:** [Portable Persistence Architecture](../docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md), [MCP Persistence Mode](../docs/persistence/MCP_PERSISTENCE_MODE.md), [Reference MCP Service](../examples/tooling/managed-data/mcp-dotnet-tsql/README.md), and [FR-017 Implementation Audit](audits/FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md)
 
 ### FR-016 - Soul-Bound Companion Fate & Reincarnation Continuity
 

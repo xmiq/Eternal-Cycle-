@@ -27,11 +27,12 @@ function Read-RepoFile {
 $rules = Read-RepoFile 'docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md'
 $kernel = Read-RepoFile 'docs/rules/RUNTIME_RULE_KERNEL.md'
 $manifest = Read-RepoFile 'docs/rules/rule-source-manifest.json'
-$routing = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/SqlServerSchemaRouting.cs'
-$contracts = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/Contracts.cs'
-$compiler = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/RuleCompilation.cs'
-$store = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/SqlServerCampaignPersistenceStore.cs'
-$tests = Read-RepoFile 'services/eternal-cycle-mcp/tests/EternalCycle.Persistence.Mcp.Tests/SchemaRoutingAndRuleCompilationTests.cs'
+$referenceRoot = 'examples/tooling/managed-data/mcp-dotnet-tsql'
+$routing = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/SqlServerSchemaRouting.cs"
+$contracts = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Contracts.cs"
+$compiler = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/RuleCompilation.cs"
+$store = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/SqlServerCampaignPersistenceStore.cs"
+$tests = Read-RepoFile "$referenceRoot/tests/EternalCycle.Persistence.Mcp.Tests/SchemaRoutingAndRuleCompilationTests.cs"
 $roadmap = Read-RepoFile 'design/ROADMAP.md'
 $future = Read-RepoFile 'design/FUTURE_REVISIONS.md'
 

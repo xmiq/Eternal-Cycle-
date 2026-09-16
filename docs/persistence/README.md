@@ -27,10 +27,13 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 16. [Continuity Resolution](CONTINUITY_RESOLUTION.md) defines narrow conflict containment, authority-ordered diagnosis, narration, save, uncertainty, retcon, and deception classifications, reliance review, source-preserving correction, and validated resumption.
 17. [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md) defines the owner-routed, idempotent transaction after every completed gameplay interaction, including Affected Sets, Session Deltas, log and history appends, special record handling, atomic activation, interruption, and concurrency.
 18. [Persistence Validation](PERSISTENCE_VALIDATION.md) defines immutable validation baselines, trigger-specific profiles, severity and outcomes, evidence-bearing findings, continuity defect detection, protected reporting, and owner-routed repair.
-19. [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines the first-class `DIRECT` and `MCP` modes, shared completion contract, configuration boundary, status evidence, and mode migration.
-20. [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md) defines runtime-operated Database Format and Storage Adapter composition, capability gates, and direct completion evidence.
-21. [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md) defines the semantic service boundary, Persistence Receipts, hidden backend, SQL Server reference implementation, and service-owned durability and recovery.
-22. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
+19. [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md) defines **Enumerate -> Select -> Persist -> Reuse**, capability gates, sticky resume, and explicit strategy migration.
+20. [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines the first-class `DIRECT` and `MANAGED` strategies, shared completion contract, configuration boundary, status evidence, and migration.
+21. [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md) defines runtime-operated Database Format and Storage Adapter composition, capability gates, and direct completion evidence.
+22. [Managed Data Service](MANAGED_DATA_SERVICE.md) defines the implementation-neutral semantic service contract, hidden backend, service-owned durability, and required capability families.
+23. [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md) defines MCP as one optional interface realization, including validated receipts and no raw datastore surface.
+24. [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md) defines stable storage-neutral isolation and native datastore mappings.
+25. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
 
 ## Foundational Boundary
 
@@ -46,7 +49,7 @@ The [GM Living Codex](../gm-living-codex/README.md) is an adjacent, separately p
 
 ## Runtime Implementation Boundary
 
-The Campaign Persistence Engine remains storage-neutral. The [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines `DIRECT` and `MCP` implementations, while the [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) defines how an AI GM, execution profile, selected mode, Campaign Configuration, Canonical Campaign State, and repository rules relate without changing persistence semantics.
+The Campaign Persistence Engine remains storage-neutral. The [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines `DIRECT` and `MANAGED` strategies, while the [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md) defines how an AI GM, execution profile, persisted selection, Campaign Configuration, Canonical Campaign State, and repository rules relate without changing persistence semantics.
 
 [Context Assembly and Gameplay Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) consumes this engine's Read Set, ownership, Save Update, validation, and adapter contracts to define one valid Gameplay Turn. It introduces no competing campaign owner or storage technology.
 
@@ -56,13 +59,13 @@ Runtime-specific [execution profiles](../ai/README.md#runtime-specific-profiles)
 
 - an execution profile may order loading, adjudication, persistence, validation, and delivery but cannot define mechanics;
 - a Direct Database Format or Storage Adapter may implement its bounded transaction, placement, backup, and Read-Back Validation role but cannot adjudicate gameplay;
-- an MCP persistence service may implement semantic persistence and hide its backend but cannot adjudicate gameplay or expose raw SQL to the GM;
-- external Campaign Configuration selects profile, Persistence Mode, and the Direct Adapter Chain or MCP service binding;
+- a Managed Data Service may implement semantic persistence and hide its backend but cannot adjudicate gameplay or expose raw datastore commands to the GM;
+- external Campaign Configuration persists the selected profile, Persistence Strategy, and Direct Adapter Chain or Managed service/interface binding;
 - campaign facts, discoveries, secrets, credentials, locators, and populated state remain outside universal repository documents.
 
 Save-Before-Delivery is an execution-profile constraint, not fictional physics. Read-only validation observes a candidate or activated state without mutating it.
 
-The [Direct Adapter Index](adapters/README.md) owns current SQLite, DuckDB, local-storage, and Google Drive adapter navigation. MCP clients use the separately documented service contract rather than wrapping the service in client-side storage adapters.
+The [Direct Adapter Index](adapters/README.md) owns current SQLite, DuckDB, local-storage, and Google Drive adapter navigation. Managed clients use the separately documented service contract rather than wrapping the service in client-side storage adapters.
 
 ## Authority and Scope
 

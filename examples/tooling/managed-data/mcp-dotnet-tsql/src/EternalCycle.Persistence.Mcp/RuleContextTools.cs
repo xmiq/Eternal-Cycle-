@@ -7,7 +7,7 @@ namespace EternalCycle.Persistence.Mcp;
 public sealed class RuleContextTools(IRuleContextProvider provider)
 {
     [McpServerTool(Name = "ec_get_rule_context", ReadOnly = true, Idempotent = true),
-     Description("Returns a provenance-bearing, world-isolated Eternal Cycle rule context within the configured normal-play budget.")]
+     Description("Returns an already-published, provenance-bearing, world-isolated Rule Packet within the configured normal-play budget.")]
     public Task<RuleContextResult> GetRuleContextAsync(
         [Description("Stable campaign identifier used to resolve the trusted world/ruleset binding.")] string campaignId,
         [Description("Current semantic operation, such as gameplay.resolve or persistence.commit.")] string operation,

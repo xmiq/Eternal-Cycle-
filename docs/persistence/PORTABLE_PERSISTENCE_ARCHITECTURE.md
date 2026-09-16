@@ -2,161 +2,107 @@
 
 ## Purpose
 
-This document defines the portable execution boundary for the storage-neutral [Campaign Persistence Engine](README.md). A campaign chooses one first-class **Persistence Mode**: `DIRECT` or `MCP`. Both modes preserve the same authority, ownership, versioning, migration, validation, and FR-011 turn-completion guarantees.
-
-The mode changes how an authorized runtime obtains persistence services. It does not change what campaign facts mean.
+This document defines the portable execution boundary for the storage-neutral [Campaign Persistence Engine](README.md). Eternal Cycle specifies semantic capabilities, authority, lifecycle, and evidence rather than one database, protocol, runtime, or hosting product.
 
 ## Document Control
 
-- **Owner:** persistence-mode selection, adapter-role separation, cross-mode invariants, and portability boundaries
-- **Primary authorities:** [Persistence Authority](PERSISTENCE_AUTHORITY.md), [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md), [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](PERSISTENCE_VALIDATION.md)
-- **Dependencies:** Campaign Configuration, Save Index, active Campaign Version, Affected Set, validation profile, and execution capability
-- **Extensions:** approved Database Format Adapters, Storage Adapters, MCP persistence services, deployment policies, and migration tooling
-- **Consumers:** human and AI GMs, AI Execution Profiles, campaign applications, persistence operators, and FR-011 Context Assembly
-- **Repository boundary:** no campaign locator, connection string, credential, populated database, active receipt, or deployment secret belongs here
+- **Owner:** persistence strategy boundary, shared invariants, selection, authority, evidence, and migration
+- **Primary authorities:** [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md), [Persistence Authority](PERSISTENCE_AUTHORITY.md), and [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md)
+- **Dependencies:** Campaign Configuration, Save Index, runtime capabilities, Logical Data Namespace, migration, and validation
+- **Extensions:** Direct adapters, Managed Data Services, service interfaces, storage implementations, and deployment policy
+- **Consumers:** bootstrap, session start, AI Execution Profiles, human GMs, migration, validation, and tooling
+- **Repository boundary:** no campaign binding, locator, credential, service endpoint, or populated state belongs here
 
-## Shared Logical Contract
+## Strategies
 
-Every mode must:
+A campaign selects exactly one canonical persistence strategy.
 
-1. resolve the configured canonical authority before state-changing play;
-2. read the active Campaign Version and required canonical Read Set;
-3. accept one stable Transaction ID, idempotency key, expected parent, and complete Affected Set;
-4. route each mutation to its Authoritative Record Owner;
-5. reject stale parents, duplicate identities, dangling references, and unproved change;
-6. stage or transact the complete change atomically;
-7. validate expected state and required references;
-8. activate one canonical descendant;
-9. read the activated result back;
-10. return evidence that truthfully determines `saved`, `pending`, or `failed` status.
+### DIRECT
 
-A mode cannot weaken [Save-Before-Delivery](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), replace Campaign Configuration, or move gameplay adjudication into a storage component.
+The authorized runtime directly operates a structured Database Format Adapter and any Local or Remote Storage Adapters required by the canonical authority. SQLite and DuckDB are supplied examples. Direct mode retains local/cloud evidence, read-back, backup, and synchronization semantics.
 
-## Mode 1: DIRECT
+See [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md).
 
-In `DIRECT` mode, the runtime operates an explicit adapter pipeline:
+### MANAGED
 
-```text
-Campaign Persistence Engine
-  -> Database Format Adapter
-  -> Local Storage Adapter and/or Remote Storage Adapter
-  -> validated canonical target
-```
+An authorized [Managed Data Service](MANAGED_DATA_SERVICE.md) is the canonical persistence authority. The runtime uses semantic service operations and receives validated evidence without operating the service's database, files, replication, backup, or recovery infrastructure.
 
-The Database Format Adapter owns database syntax, bounded transactions, integrity, and format-specific read-back. Storage Adapters own placement, identity, transport, synchronization, backup, and recovery for an artifact. A runtime may use SQLite, DuckDB, or a later approved format only when it can faithfully execute that format's adapter contract.
+MCP is the supplied reference interface, not a universal mode or requirement. Managed implementations may use another compliant service interface and relational, document, key/value, graph, indexed-file, or other structured storage.
 
-The [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md) defines composition and evidence requirements.
+When Managed is selected, Direct local/cloud save machinery is inactive. A local working artifact or service cache cannot become a competing canonical save.
 
-## Mode 2: MCP
+## Selection
 
-In `MCP` mode, the runtime does not operate a campaign database or storage artifact. It calls a configured semantic persistence service:
+Campaign initialization follows [Enumerate -> Select -> Persist -> Reuse](PERSISTENCE_STRATEGY_SELECTION.md). The runtime enumerates actually available compliant strategies, selects one under campaign authority, persists the choice and reconnect information, and reuses it on later sessions.
 
-```text
-GM or AI runtime
-  -> Eternal Cycle MCP persistence interface
-  -> service-owned transaction and validation
-  -> service-owned Microsoft SQL Server deployment
-  -> service-owned durability, backup, and recovery
-```
+Existing configuration always wins over new environmental preference. Strategy change is an explicit validated migration, never a fallback response.
 
-The service accepts canonical record addresses, reads, Affected Sets, mutations, references, and transaction identities. It does not expose arbitrary SQL and does not adjudicate gameplay. Backend locality, topology, connection details, backup targets, and recovery mechanisms remain backstage.
+## Shared Invariants
 
-The [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md) defines the service contract. The repository includes a reference [Eternal Cycle MCP service](../../services/eternal-cycle-mcp/README.md).
+Both strategies preserve:
 
-The reference SQL Server deployment distinguishes four identities:
+- one stable Campaign ID and one active canonical authority;
+- one authoritative logical owner per mutable fact;
+- exact Read and Affected Sets;
+- stable transaction and idempotency identity;
+- expected-parent or equivalent concurrency control;
+- validation before activation;
+- canonical read-back and evidence before turn completion;
+- retry without gameplay replay;
+- Truth Layer, visibility, and GM Secret protection;
+- storage-neutral migration and rollback provenance;
+- honest `💾`, `⏳`, and `⚠️` status.
 
-- **Campaign ID** identifies one campaign;
-- **World/Ruleset/Domain Model** identifies the common structural and rules model used by compatible campaigns;
-- **SQL Schema** is a validated persistence namespace that may host several compatible campaigns;
-- **SQL Database** hosts one or more schemas.
+Implementation convenience never weakens these invariants.
 
-`ec` is the standard default schema, not the definition of Eternal Cycle. Trusted configuration maps campaigns to World Models and World Models to compatible schemas. MCP callers never select a schema directly.
+## Logical Data Namespace
 
-## Campaign Configuration
+[Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md) is the universal storage boundary. An adapter maps it to the nearest faithful native concept. A namespace may host several compatible campaigns isolated by Campaign ID. World/Ruleset identity, namespace identity, physical schema, and database identity remain separate.
 
-Campaign Configuration selects exactly one mode and provides only the fields relevant to it.
+## Rule Delivery
 
-```text
-Persistence Mode: DIRECT | MCP
+Canonical Markdown remains reusable Rule Canon. Normal play consumes selective provenance-bearing rules rather than loading and reconstructing the repository.
 
-DIRECT:
-  Database Format Adapter
-  Local Storage Adapter or Remote Storage Adapter chain
-  exact canonical artifact identity
-  concurrency, backup, and verification policy
+- In `MANAGED`, the service owns source acquisition, compilation, validation, versioned publication, activation, update checking, indexing, dependency expansion, and bounded Rule Packet assembly.
+- In `DIRECT`, a packaged index, local compiler/index, repository-aware runtime, or another validated mechanism may provide selective rule delivery without requiring MCP.
 
-MCP:
-  service identity
-  campaign identity
-  authorized interface profile
-  service contract version
-  no client-side database or storage adapter chain
-```
+See [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md).
 
-Configuration values belong outside the universal repository. A runtime must not guess a mode from an available tool, filename, product name, or remembered prior session.
+## Completion Status
 
-## Evidence and Save Status
+- Direct local authority uses `💾` only after local commit and validation.
+- Direct cloud authority uses `☁️💾` only after required synchronization and remote verification.
+- Managed authority uses `💾` only after validated service completion evidence.
+- `⏳` means required work remains incomplete.
+- `⚠️` means persistence, synchronization, service, or validation failure.
 
-`DIRECT` mode derives status from the configured Adapter Chain:
+Managed clients do not classify hidden backend topology and therefore never display `☁️💾` for service internals.
 
-- `💾` means a local-authoritative target committed and validated;
-- `☁️💾` means a cloud-authoritative target synchronized and verified;
-- `⏳` means the configured chain remains incomplete;
-- `⚠️` means a required write, synchronization, or validation stage failed.
+## Compatibility
 
-`MCP` mode derives status only from service evidence:
-
-- `💾` means the service returned a validated Persistence Receipt for the active Campaign Version;
-- `⏳` means service-side staging, activation, durability, or verification remains incomplete;
-- `⚠️` means the service reported or exposed a transaction, validation, durability, or availability failure.
-
-MCP clients do not use `☁️💾`: server topology is intentionally hidden, and a local client has no authority to classify the service's backend as local or cloud. No mode may report success from intention, an attempted call, or an unverified response.
-
-## Mode Changes
-
-Changing mode is a controlled persistence migration, not an ordinary configuration edit.
-
-The migration must:
-
-1. preserve the source as a validated backup;
-2. record source mode, format, versions, and authority;
-3. audit every authoritative record and stable reference;
-4. import into the destination without changing campaign meaning;
-5. validate counts, identities, references, chronology, and expected hashes or equivalent evidence;
-6. activate the destination authority exactly once;
-7. retain migration provenance and an authorized rollback route;
-8. prevent concurrent writes to the retired source.
-
-Conversation memory, summaries, or rendered exports are not sufficient migration sources when canonical structured state exists.
-
-## Failure Boundaries
-
-- A Direct Adapter failure is reported at the responsible format or storage stage.
-- An MCP service failure is reported as a semantic persistence failure; backend implementation details remain hidden unless an authorized operator enters Development Context.
-- A runtime capability gap blocks state-changing play when the selected mode cannot be operated faithfully.
-- A failed mode does not authorize silently falling back to the other mode.
-- A pending or failed transaction is resumed by stable identity; gameplay effects are not replayed.
+- Existing v1 SQLite and Google Drive campaigns remain `DIRECT`.
+- Existing post-v1 configurations labelled `MCP` migrate non-destructively to `MANAGED` with MCP as their interface.
+- Existing SQL Server `ec` deployments remain valid physical mappings.
+- No campaign is silently converted, duplicated, or upgraded to an incompatible Rule Release.
 
 ## Safeguards
 
-- The Campaign Persistence Engine remains database- and transport-neutral.
-- `DIRECT` and `MCP` are mutually exclusive canonical modes for one active campaign authority.
-- Database Format Adapters and Storage Adapters never adjudicate gameplay.
-- The MCP service never grants raw SQL authority to a GM or player.
-- Configurable SQL schemas come only from trusted deployment configuration, use strict identifier validation and quoting, and never weaken parameterized Campaign ID isolation.
-- Schema migrations target one authorized World Model/schema binding and do not blindly modify unrelated schemas in the same database.
-- An MCP client never receives backend credentials, paths, database names, or backup locators through ordinary gameplay tools.
-- A Persistence Receipt proves service completion; it does not become a second owner of campaign facts.
-- Switching runtimes does not require switching modes when the new runtime supports the configured contract.
-- Switching modes requires migration and validation, never implicit cache promotion.
+- No silent strategy fallback or switching.
+- No simultaneous Direct and Managed canonical writers.
+- No raw SQL or datastore administration in the universal gameplay contract.
+- No vendor-specific term defines a universal authority.
+- No compiled representation becomes Rule Canon.
+- No service implementation adjudicates gameplay.
+- No migration targets unrelated Data Namespaces.
+- No populated campaign data enters this repository.
 
 ## Related Documents
 
+- [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md)
 - [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md)
-- [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md)
-- [Persistence Adapter Index](adapters/README.md)
-- [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md)
-- [Context Assembly and Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
-- [Rule Compilation and Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
+- [Managed Data Service](MANAGED_DATA_SERVICE.md)
+- [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
+- [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md)
+- [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [Migration and Versioning](MIGRATION_AND_VERSIONING.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)

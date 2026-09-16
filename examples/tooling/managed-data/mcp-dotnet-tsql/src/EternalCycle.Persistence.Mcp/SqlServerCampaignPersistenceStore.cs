@@ -62,8 +62,8 @@ public sealed class SqlServerCampaignPersistenceStore(
 
         return new PersistenceStatus(
             isFailed ? PersistenceMarkers.Failed : isPending ? PersistenceMarkers.Pending : PersistenceMarkers.Saved,
-            "MCP",
-            "Eternal Cycle MCP Persistence Service",
+            "MANAGED",
+            "Eternal Cycle Managed Data Service (.NET / MCP / T-SQL reference)",
             campaignId,
             version,
             isPending,

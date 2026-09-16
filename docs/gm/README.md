@@ -36,6 +36,6 @@ Use the [GM Living Codex](../gm-living-codex/README.md) before creating reusable
 
 The framework applies Repository Canon; it does not create an independent source of mechanics. Provisional rulings remain subordinate to Canonical rules and Foundations and are stored in an external Campaign Record.
 
-AI execution profiles and configured Direct or MCP persistence implementations carry out these responsibilities without gaining mechanical or campaign authority. The [AI operating index](../ai/README.md) classifies shared procedures and runtime-specific profiles while preserving human and AI GM parity.
+AI execution profiles and configured Direct or Managed persistence implementations carry out these responsibilities without gaining mechanical or campaign authority. MCP may provide one Managed interface; it is not a universal requirement. The [AI operating index](../ai/README.md) classifies shared procedures and runtime-specific profiles while preserving human and AI GM parity.
 
 Current characters, bodies, Soul state, inventories, relationships, settlements, factions, quests, timelines, sessions, and live world state do not belong in this repository.

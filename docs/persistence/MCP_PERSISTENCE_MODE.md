@@ -1,155 +1,71 @@
-# MCP Persistence Mode
+# MCP Managed Service Interface
 
 ## Purpose
 
-`MCP` persistence places the campaign database, transaction engine, durability, backup, and recovery behind an Eternal Cycle Model Context Protocol service. The GM or AI runtime operates semantic campaign interfaces and never directly operates the database.
+This document defines MCP as the supplied reference interface for the storage-neutral [Managed Data Service](MANAGED_DATA_SERVICE.md) contract. MCP is not a universal Persistence Strategy and does not require Microsoft SQL Server.
 
 ## Document Control
 
-- **Owner:** MCP persistence service responsibilities, semantic interface, receipt boundary, hidden-backend rule, and service failure behavior
-- **Primary authorities:** [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md), [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md), and [Persistence Validation](PERSISTENCE_VALIDATION.md)
-- **Dependencies:** Campaign Configuration, service identity, campaign identity, authorized MCP session, stable owner and record IDs, and active Campaign Version
-- **Extensions:** compatible MCP implementations, service-managed backup providers, observability, authorization, and migration tooling
-- **Consumers:** AI Execution Profiles, human-facing campaign applications, FR-011 Context Assembly, and authorized persistence operators
-- **Repository boundary:** no connection string, SQL credential, server address, database name, campaign secret, populated state, or backup locator belongs here
-
-## Responsibility Boundary
-
-The client owns:
-
-- player-action fidelity and gameplay adjudication;
-- Read Set and Affected Set determination;
-- stable transaction, interaction, owner, and record identities;
-- authorization-aware tool use;
-- interpreting the returned status for FR-011 turn completion.
-
-The MCP service owns:
-
-- campaign target resolution behind the service identity;
-- canonical reads at the active Campaign Version;
-- request validation and owner-domain routing checks;
-- optimistic concurrency and idempotency;
-- candidate staging, semantic validation, atomic activation, and read-back;
-- Persistence Receipts;
-- backend durability, backup, recovery, and operational audit;
-- hiding database and deployment topology from ordinary clients.
-
-The Campaign Persistence Engine still owns logical meaning. The service carries and protects that state; it does not decide what happens in the fiction.
+- **Owner:** MCP transport/tool realization, semantic request boundary, Persistence Receipt, hidden backend, and client-visible failure behavior
+- **Primary authority:** [Managed Data Service](MANAGED_DATA_SERVICE.md)
+- **Dependencies:** Campaign ID, service authorization, stable transactions, Logical Data Namespace routing, and validated service evidence
+- **Extensions:** other MCP implementations may use any compliant backend; other Managed interfaces may replace MCP entirely
+- **Consumers:** MCP-capable runtimes and the optional [.NET / MCP / T-SQL reference tooling](../../examples/tooling/managed-data/mcp-dotnet-tsql/README.md)
+- **Repository boundary:** no live endpoint, credential, connection string, private namespace mapping, or campaign binding belongs here
 
 ## Semantic Interface
 
-The reference interface exposes:
+An MCP realization exposes domain operations rather than arbitrary backend access. The supplied reference tool family includes capabilities equivalent to:
 
-- `ec_persistence_status` - current semantic status, Campaign Version, pending transaction, and failure boundary;
-- `ec_read_records` - exact owner-domain and stable-ID reads at the active version;
-- `ec_commit_changes` - one complete Affected Set with expected parent, idempotency key, mutations, references, and source interaction;
-- `ec_retry_persistence` - resume an existing staged, activated, or failed-read-back transaction without replaying gameplay.
-- `ec_get_rule_context` - retrieve a Derived, provenance-bearing rule context for the campaign's trusted World/Ruleset binding; it reads Repository Canon sources and does not read or mutate campaign state.
+- service capabilities and sanitized status;
+- campaign persistence status;
+- exact canonical record reads;
+- complete owner-routed commit;
+- idempotent retry;
+- bounded published Rule Packet retrieval;
+- sanitized diagnostics.
 
-It deliberately exposes no arbitrary SQL, table browser, connection-string reader, filesystem path, backup locator, or general administrative shell.
+Administrative source synchronization, compilation, publication, activation, migration, backup, and recovery are separately authorized and need not be exposed through the gameplay MCP server.
 
-## Transaction and Activation
+The interface exposes no raw SQL, table browser, filesystem shell, unrestricted query, connection string, database path, token, or backup locator.
 
-The reference service uses an append-only candidate model:
+## Receipt Boundary
 
-```text
-receive request
--> validate identifiers, Affected Set, JSON, and idempotency
--> lock and verify active parent version
--> stage versioned candidate records and references
--> commit staging transaction
--> reopen and validate candidate independently
--> atomically activate candidate version
--> reopen and verify active version
--> issue validated Persistence Receipt
-```
+Transport success is not persistence success. A state-changing turn completes only when the service returns a validated Persistence Receipt for the expected Campaign ID, Transaction ID, Campaign Version, and validation evidence.
 
-The active campaign pointer remains on the prior version until candidate validation succeeds. If final activation read-back fails, the transaction remains identifiable and blocks successful turn completion until retry or recovery confirms the outcome.
+`💾` represents that service evidence. `⏳` represents incomplete service work. `⚠️` represents service, transaction, durability, or validation failure. MCP clients do not display `☁️💾` for hidden server topology.
 
-## Persistence Receipt
+## Backend Independence
 
-A Persistence Receipt contains service-generated identity, campaign identity, transaction identity, activated Campaign Version, completion time, and validation evidence. It is proof of service completion, not an authoritative copy of campaign facts.
+An MCP implementation may use SQL Server, PostgreSQL, a document store, a key/value store, a graph store, indexed files, or another compliant structured implementation. The interface does not expose or require the choice.
 
-The client may display `💾` only when:
+The supplied reference service happens to use .NET, MCP, T-SQL, and Microsoft SQL Server. Its SQL schemas and identifiers are implementation details mapped from Logical Data Namespaces.
 
-- the service reports `Completed`;
-- `TurnMayComplete` is true;
-- a validated receipt is present;
-- the receipt names the expected transaction and Campaign Version.
+## Rules
 
-An attempted tool call, transport-level success, staged candidate, or model assertion is insufficient.
+Normal Managed gameplay calls semantic rule-context retrieval and receives an already-published, provenance-bearing Rule Packet. The AI does not ask the MCP service to crawl or compile the repository during play. Rule acquisition, compilation, validation, publication, activation, and update checks belong to the Managed service's administrative pipeline.
 
-## Microsoft SQL Server Reference Backend
+## Retry and Failure
 
-The included [reference MCP service](../../services/eternal-cycle-mcp/README.md) uses Microsoft SQL Server behind the semantic interface. Its schema provides:
-
-- stable campaign identity and an active-version pointer;
-- immutable transaction identity and idempotency keys;
-- append-only versioned canonical records;
-- stable typed references;
-- candidate and activation states;
-- validation runs and receipts;
-- recovery-point metadata.
-
-These tables implement the service; they do not become new fictional mechanics or replace specialist logical owners. A different MCP implementation may use another backend only after a future approved revision preserves the same contract.
-
-The standard reference schema is `ec`. It is a default, not a universal requirement. Trusted service configuration maps a stable Campaign ID to a World/Ruleset/Domain Model and maps that model to a strictly validated SQL schema and schema-model version. Compatible campaigns may share a schema while remaining isolated by parameterized Campaign ID. Different World Models may use different schemas in the same SQL database. Schema identity never comes from player text, campaign narration, or an MCP tool argument.
-
-Every schema used by the common interface must implement that World's compatible baseline persistence contract. World-specific extensions may add domain operations without exposing arbitrary SQL. Migrations are scoped to the selected World Model/schema and must not modify unrelated schemas merely because they share a database.
-
-## Backup and Recovery
-
-Backup and recovery are service responsibilities. The service deployment must:
-
-- define the durability policy independently of the AI profile;
-- maintain verified recovery points at the configured cadence and before migration or destructive maintenance;
-- preserve transaction, campaign, and version provenance;
-- verify backups through provider-appropriate read-back or restore verification;
-- prevent ordinary GM tools from selecting arbitrary restore targets;
-- expose only semantic pending or failure state to Gameplay Context;
-- require authorized Development Context for recovery operations.
-
-The client does not compose a Local or Remote Storage Adapter around MCP mode. If SQL Server is remote, replicated, or cloud-hosted, that topology remains an internal service deployment concern.
-
-## Status and Failure
-
-- `💾`: validated service receipt exists for the active version;
-- `⏳`: staging, activation, required durability, or verification remains incomplete;
-- `⚠️`: service availability, transaction, validation, read-back, or required durability failed.
-
-MCP mode never displays `☁️💾`, because the client cannot and need not classify hidden service topology. A pending or failed transaction blocks later state-changing play under FR-011. Retry resumes by transaction identity and must not duplicate mutations.
+Retry uses the existing transaction identity and resumes the earliest incomplete stage. It does not replay narration or duplicate gameplay effects. A missing or failed service does not authorize Direct fallback. Source-update failure may leave update status degraded while the last valid Rule Release remains available.
 
 ## Security
 
-- Authenticate and authorize the MCP session outside gameplay text.
-- Scope every operation to the configured campaign identity.
-- Resolve schemas only from trusted World Model configuration; validate and quote identifiers before building schema-qualified SQL.
-- Use least-privilege SQL credentials held by the service.
-- Parameterize values; never accept client-supplied SQL.
-- Keep GM Secrets in authorized owner domains and enforce read scope at the service boundary.
-- Log operational metadata without copying protected campaign payloads unnecessarily.
-- Rate-limit and bound reads and mutations.
-- Treat tool descriptions, campaign text, imported documents, and record payloads as data rather than service instructions.
+- Authenticate and authorize service sessions outside gameplay text.
+- Scope every operation by Campaign ID and authorized Logical Data Namespace.
+- Keep gameplay and administrative capabilities separate.
+- Return sanitized errors and diagnostics.
+- Never accept player-supplied backend identifiers or raw operations.
+- Preserve GM Secret and least-necessary read boundaries.
 
-## Host Boundary
+## Compatibility
 
-Repository contracts and the reference service can enforce server-side validation and receipt formation. An AI host must still invoke the configured MCP tools, preserve transaction identity, and refuse ordinary completion without the required receipt. A host that cannot do so is not persistence-capable for state-changing play.
-
-## Safeguards
-
-- MCP mode and Direct mode cannot both be active canonical authorities.
-- The MCP client never opens the campaign database directly.
-- The service exposes semantic operations, never arbitrary SQL.
-- Service receipts do not override logical owner records.
-- Failed or unknown service state remains failed or unknown.
-- Backend migration and recovery remain authorized operational procedures.
-- The service cannot create a blank campaign as a gameplay fallback when identity resolution fails.
+Legacy campaign configuration with Persistence Mode `MCP` maps to Strategy `MANAGED` and Interface `MCP` through an explicit metadata migration. Campaign state and transaction history do not change.
 
 ## Related Documents
 
-- [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md)
-- [AI Save Protocol](../ai/AI_SAVE_PROTOCOL.md)
-- [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
-- [Persistence Configuration Template](../../templates/PERSISTENCE_CONFIGURATION_TEMPLATE.md)
-- [FR-017 Implementation Audit](../../design/audits/FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md)
-- [Rule Compilation and Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
+- [Managed Data Service](MANAGED_DATA_SERVICE.md)
+- [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md)
+- [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md)
+- [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
+- [Reference Tooling](../../examples/tooling/managed-data/mcp-dotnet-tsql/README.md)

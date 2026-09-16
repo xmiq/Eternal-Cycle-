@@ -24,7 +24,7 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] Exact Repository Version, Campaign Version, and active Save Point are known.
 - [ ] Rules Profile and Campaign Canon are loaded.
 - [ ] Save Index and Current Session are loaded.
-- [ ] Persistence Mode, configured canonical authority, exact Direct target or MCP service binding, and completion state are resolved.
+- [ ] The persisted Persistence Strategy, configured canonical authority, exact Direct target or Managed service/interface binding, and completion state are resolved without silently reconsidering strategy.
 - [ ] A missing Local Working Copy was not mistaken for a missing remote canonical save.
 - [ ] Open migrations, recoveries, conflicts, and validation warnings are known.
 - [ ] Authorized audience and Truth Layer visibility are established.
@@ -92,7 +92,7 @@ This checklist is a compact execution aid for the canonical AI operating procedu
 - [ ] The reported save status matches what actually occurred.
 - [ ] Expected canonical owner changes and version evidence prove a non-empty Affected Set was written.
 - [ ] Derived context was refreshed only after configured-authority validation and read-back.
-- [ ] The final marker matches actual evidence: Direct local `💾`, Direct cloud `☁️💾`, MCP receipt `💾`, incomplete `⏳`, or failed `⚠️`.
+- [ ] The final marker matches actual evidence: Direct local `💾`, Direct cloud `☁️💾`, Managed completion evidence `💾`, incomplete `⏳`, or failed `⚠️`.
 
 ## Before Continuing Dependent Play
 

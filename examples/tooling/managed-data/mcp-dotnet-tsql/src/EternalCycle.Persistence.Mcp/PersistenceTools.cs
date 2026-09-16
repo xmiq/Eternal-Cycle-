@@ -7,7 +7,7 @@ namespace EternalCycle.Persistence.Mcp;
 public sealed class PersistenceTools(PersistenceCoordinator coordinator)
 {
     [McpServerTool(Name = "ec_persistence_status", ReadOnly = true, Idempotent = true),
-     Description("Returns evidence-based status for an Eternal Cycle campaign without exposing database topology or credentials.")]
+     Description("Returns evidence-based Managed persistence status without exposing storage topology or credentials.")]
     public Task<PersistenceStatus> GetStatusAsync(
         [Description("Stable campaign identifier from Campaign Configuration.")] string campaignId,
         CancellationToken cancellationToken) =>

@@ -12,6 +12,7 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         var route = Resolver(new SqlServerPersistenceOptions()).Resolve("campaign-a");
 
         Assert.Equal("ec", route.SchemaName);
+        Assert.Equal("eternal-cycle-mainworld", route.DataNamespaceId);
         Assert.Equal("eternal-cycle-standard", route.WorldModelId);
     }
 
@@ -24,6 +25,7 @@ public sealed class SchemaRoutingAndRuleCompilationTests
 
         Assert.Equal(provisionRoute, resumeRoute);
         Assert.Equal("fantasy_world", resumeRoute.SchemaName);
+        Assert.Equal("namespace-fantasy", resumeRoute.DataNamespaceId);
         Assert.Equal("world-fantasy", resumeRoute.WorldModelId);
     }
 
@@ -100,6 +102,41 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         Assert.NotEqual("ec", route.SchemaName);
     }
 
+    [Fact]
+    public void LogicalNamespaceIdentityIsIndependentOfPhysicalSchemaName()
+    {
+        var original = Resolver(ConfiguredOptions()).Resolve("campaign-d");
+        var remappedOptions = ConfiguredOptions();
+        remappedOptions.DataNamespaces["namespace-fantasy"] = new SqlDataNamespaceOptions
+        {
+            SchemaName = "ec_fantasyworld",
+            SchemaModelVersion = "3",
+            RulesetId = "ruleset-fantasy",
+            RulesetVersion = "fantasy-rules-4"
+        };
+        var remapped = Resolver(remappedOptions).Resolve("campaign-d");
+
+        Assert.Equal(original.DataNamespaceId, remapped.DataNamespaceId);
+        Assert.NotEqual(original.SchemaName, remapped.SchemaName);
+        Assert.Equal(original.WorldModelId, remapped.WorldModelId);
+    }
+
+    [Fact]
+    public void DomainRuleMigrationTargetsEcDomainIndependentlyOfWorldSchemas()
+    {
+        var templatePath = Path.Combine(
+            AppContext.BaseDirectory,
+            "Schema",
+            "002_rule_domain.template.sql");
+        var rendered = SqlServerSchemaMigration.RenderDomain(
+            File.ReadAllText(templatePath),
+            "ec_domain");
+
+        Assert.Contains("CREATE TABLE [ec_domain].rule_releases", rendered, StringComparison.Ordinal);
+        Assert.Contains("CREATE TABLE [ec_domain].rule_chunks", rendered, StringComparison.Ordinal);
+        Assert.DoesNotContain("fantasy_world", rendered, StringComparison.Ordinal);
+    }
+
     [Theory]
     [InlineData("ec]; DROP TABLE campaigns;--")]
     [InlineData("world.name")]
@@ -122,7 +159,14 @@ public sealed class SchemaRoutingAndRuleCompilationTests
             Document("unused-core", RuleLayer.Core, new string('U', 18_000), topics: ["trade"])
         };
         var index = RuleCompiler.Compile("post-v1", documents);
-        var route = new CampaignSchemaRoute("campaign-a", "world-a", "world_a", "3", "world-a-rules-2");
+        var route = new CampaignSchemaRoute(
+            "campaign-a",
+            "world-a",
+            "namespace-a",
+            "world_a",
+            "3",
+            "ruleset-a",
+            "world-a-rules-2");
         var request = new RuleContextRequest(
             "campaign-a",
             "gameplay.resolve",
@@ -175,7 +219,14 @@ public sealed class SchemaRoutingAndRuleCompilationTests
                     ["combat"]))
         };
         var index = RuleCompiler.Compile("post-v1", documents);
-        var route = new CampaignSchemaRoute("campaign-a", "world-a", "world_a", "3", "rules-2");
+        var route = new CampaignSchemaRoute(
+            "campaign-a",
+            "world-a",
+            "namespace-a",
+            "world_a",
+            "3",
+            "ruleset-a",
+            "rules-2");
         var request = new RuleContextRequest(
             "campaign-a",
             "gameplay.resolve",
@@ -197,7 +248,10 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         new()
         {
             DefaultSchema = "ec",
+            DomainSchema = "ec_domain",
+            DefaultDataNamespaceId = "eternal-cycle-mainworld",
             DefaultWorldModelId = "eternal-cycle-standard",
+            DefaultRulesetId = "eternal-cycle-core",
             DefaultSchemaModelVersion = "1",
             DefaultRulesetVersion = "1.0.0",
             CampaignWorldModels = new Dictionary<string, string>(StringComparer.Ordinal)
@@ -206,18 +260,25 @@ public sealed class SchemaRoutingAndRuleCompilationTests
                 ["campaign-e"] = "world-fantasy",
                 ["campaign-f"] = "world-scifi"
             },
-            WorldSchemas = new Dictionary<string, WorldSchemaOptions>(StringComparer.Ordinal)
+            WorldDataNamespaces = new Dictionary<string, string>(StringComparer.Ordinal)
             {
-                ["world-fantasy"] = new()
+                ["world-fantasy"] = "namespace-fantasy",
+                ["world-scifi"] = "namespace-scifi"
+            },
+            DataNamespaces = new Dictionary<string, SqlDataNamespaceOptions>(StringComparer.Ordinal)
+            {
+                ["namespace-fantasy"] = new()
                 {
                     SchemaName = "fantasy_world",
                     SchemaModelVersion = "2",
+                    RulesetId = "ruleset-fantasy",
                     RulesetVersion = "fantasy-rules-4"
                 },
-                ["world-scifi"] = new()
+                ["namespace-scifi"] = new()
                 {
                     SchemaName = "scifi_world",
                     SchemaModelVersion = "5",
+                    RulesetId = "ruleset-scifi",
                     RulesetVersion = "scifi-rules-7"
                 }
             }

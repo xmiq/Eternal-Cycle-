@@ -2970,3 +2970,14 @@ After the FR-017 commit, return to owner-mediated Future Revision intake. Do not
 ### Exact Resume Point
 
 After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intake. Do not select or infer FR-019.
+
+## Phase 13 Checkpoint - FR-019 Managed Data Architecture Consolidation
+
+- **Completed objective:** Consolidate FR-017 and FR-018 under storage- and interface-neutral `DIRECT` and `MANAGED` strategies.
+- **Current active task:** Phase 13 Future Revisions rolling objective; no implementation objective is selected after FR-019.
+- **Created:** persistence strategy, Managed service, Logical Data Namespace, Managed rule publication, support, FR-019 audit, regression harness, T-SQL domain publication, Git source provider, published-rule store, and diagnostics documentation/code.
+- **Modified:** bootstrap, AI runtime/save/context procedures, persistence/rule indexes and contracts, templates, governance, validation, and retained reference-service tests.
+- **Reference tooling:** relocated to `examples/tooling/managed-data/mcp-dotnet-tsql/` and explicitly classified as optional .NET/MCP/T-SQL tooling.
+- **Validation target:** .NET build/tests, FR-017, FR-018, FR-019, release-neutral, FR-011/8K, and repository-wide validation; deployed SQL Server, remote Git/GitHub, authentication, backup/recovery, long-running scheduling, and cross-client MCP remain external acceptance.
+- **Remaining work:** none inside FR-019 after validation and commit; real-infrastructure acceptance remains deployment work rather than a repository claim.
+- **Exact resume point:** consult `design/ROADMAP.md`; do not select a later Future Revision without maintainer authorization.

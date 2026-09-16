@@ -1,6 +1,6 @@
 # Persistence Configuration Template
 
-Use this blank template to select one portable campaign Persistence Mode without embedding deployment secrets in universal rules or AI profiles.
+Use this blank template to persist one portable campaign strategy after capability enumeration without embedding deployment secrets in universal rules or AI profiles.
 
 A populated configuration belongs outside the repository.
 
@@ -16,7 +16,9 @@ A populated configuration belongs outside the repository.
 
 - **Configuration ID:** `<stable external identity>`
 - **Campaign ID:** `<stable campaign identity>`
-- **Persistence Mode:** `<DIRECT | MCP>`
+- **Persistence Strategy:** `<DIRECT | MANAGED>`
+- **Strategy selected at:** `<time and authorized selection>`
+- **Selection capability evidence:** `<capability snapshot reference>`
 - **Repository Version:** `<rules revision>`
 - **Persistence Model Version:** `<logical model version>`
 - **Authorized runtime profile:** `<profile and version>`
@@ -35,28 +37,35 @@ A populated configuration belongs outside the repository.
 - **Required backup stages:** `<policy>`
 - **Required read-back evidence:** `<hash, exact comparison, semantic validation>`
 
-Leave this section not applicable in MCP mode.
+Leave this section not applicable in MANAGED.
 
-## MCP Fields
+## MANAGED Fields
 
-- **MCP service identity:** `<authorized service reference>`
-- **MCP service contract version:** `<version>`
-- **Authorized MCP interface profile:** `<tool and visibility scope>`
+- **Managed service identity:** `<authorized service reference>`
+- **Managed service contract version:** `<version>`
+- **Service interface:** `<MCP | other compliant interface>`
+- **Authorized interface profile:** `<operation and visibility scope>`
 - **Campaign binding:** `<secret-managed service mapping>`
+- **Logical Data Namespace ID:** `<stable logical namespace>`
+- **World/Ruleset/Domain Model:** `<stable model identity>`
+- **RuleSet and compatible version policy:** `<stable RuleSet, major/range policy, or exact policy>`
+- **Pinned Rule Release:** `<published release ID or not pinned>`
 - **Required Persistence Receipt fields:** `<receipt policy>`
 
 Do not include database format, server topology, connection string, local/cloud classification, or backup locator. The service owns those concerns.
 
 ## Validation Notes
 
-- [ ] Exactly one Persistence Mode is active.
+- [ ] Available compliant strategies were enumerated at initialization.
+- [ ] Exactly one Persistence Strategy is active and persisted.
+- [ ] Resume reuses the persisted strategy before considering environmental preference.
 - [ ] Fields for the inactive mode are absent or explicitly not applicable.
 - [ ] Canonical authority is explicit and not inferred from tool availability.
 - [ ] DIRECT configuration selects one Database Format Adapter and a complete Storage Adapter Chain.
-- [ ] MCP configuration selects one service contract and contains no backend details.
+- [ ] MANAGED configuration selects one service contract/interface and contains no backend details.
 - [ ] Credentials and locators are external protected references.
-- [ ] Mode change requires Migration and Versioning rather than silent configuration replacement.
-- [ ] Save status can be derived from actual adapter evidence or a validated MCP Persistence Receipt.
+- [ ] Strategy change requires Migration and Versioning rather than silent configuration replacement.
+- [ ] Save status can be derived from actual adapter evidence or validated Managed service completion evidence.
 
 ## Cross-References
 

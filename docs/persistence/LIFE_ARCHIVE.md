@@ -264,7 +264,7 @@ Ordinary turns update current owners, Timeline, and Campaign History as required
 - historical information is recovered or corrected;
 - an archive query or migration exposes a validation defect.
 
-All archive writes use a bounded Affected Set and the configured Persistence Mode. A Direct local database commit is not a completed remote Save Point when remote Storage Adapters are active, and an MCP call is not complete without the service's validated Persistence Receipt.
+All archive writes use a bounded Affected Set and the persisted Persistence Strategy. A Direct local database commit is not a completed remote Save Point when remote Storage Adapters are active, and a Managed interface call is not complete without validated service completion evidence.
 
 ## Validation
 

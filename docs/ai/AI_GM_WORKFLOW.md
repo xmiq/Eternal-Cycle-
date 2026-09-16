@@ -39,7 +39,7 @@ For a new campaign, first follow [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.m
 2. Load the Campaign Canon or Rules Profile.
 3. Confirm the active Save Point, Current Session state, open migrations, validation warnings, and unresolved conflicts.
 4. Confirm which participant or interface may authorize play, rulings, record access, saves, and corrections.
-5. Resolve the configured `DIRECT` or `MCP` persistence target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent or an MCP backend is not locally visible.
+5. Reuse the persisted `DIRECT` or `MANAGED` strategy and resolve its target before permitting state-changing play; do not create a blank save because an assumed Local Working Copy is absent or a Managed backend is not locally visible.
 6. Separate repository materials from the external Campaign Record.
 
 If versions or authority are materially unknown, stop at the appropriate non-ready state.
@@ -106,7 +106,7 @@ For inherited outcomes, resolve [Reproductive Compatibility](../gm-living-codex/
 
 After activation:
 
-1. refresh the Save Index, selected Persistence Mode, and active Campaign Version;
+1. refresh the Save Index, persisted Persistence Strategy, and active Campaign Version;
 2. discard or regenerate stale Current Scene, Running, and Session context from committed state;
 3. carry forward unresolved player intent, Pending Consequences, Review Points, and declared limitations;
 4. continue at the next interaction or produce a bounded handoff view.
@@ -116,7 +116,7 @@ A handoff identifies the active versions, Save Point, Current Session boundary, 
 ## Retrieval and Tool Discipline
 
 - Search indexes before broad corpus retrieval.
-- Verify compiled rule source paths, anchors, hashes, Repository Version, and World/Ruleset applicability before use.
+- Verify Rule Release, immutable source identity, source paths, anchors, hashes, Repository Version, explicit dependencies, and World/Ruleset applicability before use. In Managed mode, retrieve the published Rule Packet; the AI does not compile repository Markdown.
 - Prefer authoritative owners over summaries and examples.
 - Treat cached material as stale until version and effective time are checked.
 - Use least-necessary access for Secrets and observer-specific views.

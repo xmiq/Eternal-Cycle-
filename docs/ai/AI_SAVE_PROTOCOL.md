@@ -11,7 +11,7 @@ Under [FR-011](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), this procedure is invo
 - **Owner:** this document owns the AI-facing save-operation sequence and write-capability disclosure
 - **Primary authorities:** [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md), [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md), and [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - **Dependencies:** completed Gameplay Interaction, parent Campaign Version, Save Index, Affected Set, owner-routed Session Delta, validation, and activation authority
-- **Extensions:** Direct Adapters, MCP persistence services, transaction tools, diff views, approval interfaces, and recovery automation
+- **Extensions:** Direct Adapters, Managed Data Services and interfaces, transaction tools, diff views, approval interfaces, and recovery automation
 - **Consumers:** AI GM workflow, campaign storage interfaces, supervising GMs, validation tools, and handoff processes
 - **Repository boundary:** no Transaction, save candidate, campaign delta, backup, validation result, current value, or storage credential belongs here
 
@@ -35,13 +35,13 @@ Under FR-011, `Proposal only`, `Read only`, and `Unavailable` cannot close a sta
 Before state-changing play or save execution:
 
 1. read Campaign Configuration and the Save Index;
-2. determine whether Persistence Mode is `DIRECT` or `MCP`;
+2. load the persisted `DIRECT` or `MANAGED` strategy selected through **Enumerate -> Select -> Persist -> Reuse**;
 3. in `DIRECT`, resolve the exact target identity and complete Database Format and Storage Adapter Chain;
-4. in `MCP`, resolve the configured service identity, campaign binding, contract version, and semantic status;
+4. in `MANAGED`, resolve the configured service identity, interface, Logical Data Namespace, campaign binding, contract version, and semantic status;
 5. verify campaign identity, Campaign Version, Save Point, concurrency evidence, and open Transaction state;
 6. classify any Local Working Copy as canonical, candidate, cache, or stale according to configuration.
 
-Do not declare the campaign database missing from one failed local-path lookup. Do not create a blank replacement while a configured Direct remote authority or MCP campaign binding may exist. In MCP mode, the client does not search for, open, or classify a backend database.
+Do not declare the campaign database missing from one failed local-path lookup. Do not create a blank replacement while a configured Direct remote authority or Managed campaign binding may exist. In Managed mode, the client does not search for, open, or classify a backend datastore.
 
 ## Save Operation
 
@@ -98,7 +98,7 @@ These records are distinct. One append does not substitute for another.
 
 ### 7. Stage without activation
 
-Apply the Write Set to a candidate descended from the confirmed parent. In `DIRECT`, stage through the Database Format Adapter. In `MCP`, submit the semantic mutation request with the stable Transaction ID and idempotency key. Keep the parent Save Point active until the selected implementation validates and activates the candidate. Preserve all-or-nothing scope and do not expose partially integrated state as authoritative.
+Apply the Write Set to a candidate descended from the confirmed parent. In `DIRECT`, stage through the Database Format Adapter. In `MANAGED`, submit the semantic mutation request through the configured interface with the stable Transaction ID and idempotency key. Keep the parent Save Point active until the selected implementation validates and activates the candidate. Preserve all-or-nothing scope and do not expose partially integrated state as authoritative.
 
 ### 8. Validate the candidate
 
@@ -119,7 +119,7 @@ Validation is read-only. Repairs create a new candidate through the proper owner
 
 Before activation, compare the candidate's parent version with the active Campaign Version. If unchanged and validation permits activation, activate the complete candidate atomically and update the Save Index. Then read the active Save Index and changed records back to confirm success.
 
-If a Direct authority is cloud, local candidate validation does not activate the Save Point. Activation follows required remote replacement, synchronization, refetch, comparison, semantic verification, and required backup verification. In MCP mode, activation requires a validated Persistence Receipt from the configured service; transport success or a staged candidate is insufficient. If the parent changed, expected state remained unchanged, validation failed, activation was interrupted, or configured-authority read-back cannot confirm success, preserve the last confirmed boundary and enter Save Recovery Required.
+If a Direct authority is cloud, local candidate validation does not activate the Save Point. Activation follows required remote replacement, synchronization, refetch, comparison, semantic verification, and required backup verification. In Managed mode, activation requires validated completion evidence from the configured service; interface success or a staged candidate is insufficient. If the parent changed, expected state remained unchanged, validation failed, activation was interrupted, or configured-authority read-back cannot confirm success, preserve the last confirmed boundary and enter Save Recovery Required.
 
 ### 10. Report the outcome
 
@@ -137,11 +137,11 @@ Map the verified outcome to the player-visible marker:
 
 - `💾` only when local is configured canonical authority and commit, validation, expected-change proof, and read-back pass;
 - `☁️💾` only when cloud is configured canonical authority and synchronization plus required remote verification pass;
-- `💾` in MCP mode only when the configured service returns a validated Persistence Receipt for the expected transaction and active Campaign Version;
+- `💾` in Managed mode only when the configured service returns validated completion evidence for the expected transaction and active Campaign Version;
 - `⏳` while required stages remain incomplete;
 - `⚠️` when a required write, synchronization, validation, expected-change check, or read-back fails.
 
-Local success in a Direct cloud-authoritative chain is `⏳`, not `💾`. An upload attempt without verified read-back is never `☁️💾`. MCP mode never uses `☁️💾`; its backend topology is not client authority.
+Local success in a Direct cloud-authoritative chain is `⏳`, not `💾`. An upload attempt without verified read-back is never `☁️💾`. Managed mode never uses `☁️💾`; its backend topology is not client authority.
 
 ## Manual Commands
 
@@ -151,11 +151,11 @@ Use the current pending Affected Set and Transaction ID. Execute the same owner-
 
 ### `save status`
 
-Report the current marker, Persistence Mode, Campaign Version, Save Point where authorized, configured canonical authority, pending Affected Set or Transaction, and a brief sanitized failure reason. In Direct mode include relevant local/cloud synchronization and verification state. In MCP mode include the validated receipt or pending transaction identity allowed by policy, but no backend topology, database name, connection detail, or backup locator. Do not disclose private locators, credentials, or GM Secrets.
+Report the current marker, Persistence Strategy, Campaign Version, Save Point where authorized, configured canonical authority, pending Affected Set or Transaction, and a brief sanitized failure reason. In Direct mode include relevant local/cloud synchronization and verification state. In Managed mode include the validated completion evidence or pending transaction identity allowed by policy, but no backend topology, datastore name, connection detail, or backup locator. Do not disclose private locators, credentials, or GM Secrets.
 
 ### `retry save`
 
-Resume the existing Transaction from its earliest incomplete stage after inspecting actual state. Reuse idempotency keys and verify already-applied owner operations. If Direct local changes are valid and only cloud synchronization failed, retry only the cloud and downstream verification stages. In MCP mode, call the service retry operation with the same Transaction ID; never resubmit the gameplay action as a new transaction.
+Resume the existing Transaction from its earliest incomplete stage after inspecting actual state. Reuse idempotency keys and verify already-applied owner operations. If Direct local changes are valid and only cloud synchronization failed, retry only the cloud and downstream verification stages. In Managed mode, call the service retry operation through the configured interface with the same Transaction ID; never resubmit the gameplay action as a new transaction.
 
 Manual commands do not repeat narration, time, costs, Development, Inventory, Timeline, Campaign History, Relationship, Research, Project, Infrastructure, or Autonomous Registry effects.
 
@@ -201,4 +201,5 @@ The package remains a proposal. Dependent play pauses until activation is confir
 - [Persistence Validation Report Template](../../templates/VALIDATION_REPORT_TEMPLATE.md)
 - [Continuity Resolution](../persistence/CONTINUITY_RESOLUTION.md)
 - [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md)
-- [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md)
+- [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md)
+- [MCP Managed Service Interface](../persistence/MCP_PERSISTENCE_MODE.md)

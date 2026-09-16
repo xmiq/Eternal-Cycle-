@@ -1,5 +1,5 @@
 {
-  "repositoryVersion": "1.0.0+fr.018",
+  "repositoryVersion": "1.0.0+fr.019",
   "sources": [
     {
       "ruleSourceId": "runtime-kernel",
@@ -82,6 +82,7 @@
       "campaignModes": ["*"],
       "operations": ["context.assemble", "gameplay.resolve", "persistence.commit"],
       "topics": ["context", "persistence", "read-set", "affected-set"],
+      "dependencies": ["core-persistence-authority"],
       "priority": 300,
       "alwaysInclude": false
     },

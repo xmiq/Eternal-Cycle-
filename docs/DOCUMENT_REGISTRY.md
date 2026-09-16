@@ -287,19 +287,20 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 
 **Extensions:** approved world packages, optional modules, alternate derived indexes, and runtime tokenizers may implement this contract without taking rule authority.
 
-**Consumers:** human and AI GMs, Context Assembly, runtime profiles, and the Eternal Cycle MCP reference service.
+**Consumers:** human and AI GMs, Context Assembly, runtime profiles, Managed services, and optional reference tooling.
 
 | Document | Owner | Interface refinement |
 | --- | --- | --- |
 | [Rule Compilation Index](rules/README.md) | Family reading order, authority boundary, reference manifest, and runtime consumers | Routes compilation and retrieval claims while preserving Repository Canon authority. |
 | [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) | Compact mandatory authority, agency, world-simulation, ownership, read, and persistence invariants | Included in every normal compiled rule context; delegates specialist resolution to source rules. |
 | [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) | Source metadata, compilation, provenance, Core and World/Ruleset filtering, optional modules, budget, failure, and regression contract | Produces Derived rule contexts and hands Campaign Canon retrieval to FR-011 under the same Campaign ID. |
+| [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) | Rule Source Providers, candidate validation, versioned publication, activation, update policy, compatibility, and bounded Rule Packets | Governs Managed rule delivery while preserving Markdown as Rule Canon. |
 
 ## Campaign Persistence Engine
 
 **Dependencies:** Repository Canon, World Engine outcomes, GM procedures, every specialist record owner, and accepted persistence decisions.
 
-**Extensions:** Direct Adapters, MCP persistence services, and populated campaign records may instantiate the logical architecture outside the repository.
+**Extensions:** Direct Adapters, Managed Data Services and interfaces, and populated campaign records may instantiate the logical architecture outside the repository.
 
 **Consumers:** GMs, AI operators, campaign custodians, migration tools, validation tools, templates, and continuity resolution.
 
@@ -324,9 +325,12 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Continuity Resolution](persistence/CONTINUITY_RESOLUTION.md) | Conflict containment, classification, authority resolution, correction, and resumption | Consumed when narration and persistence disagree. |
 | [Save Update Protocol](persistence/SAVE_UPDATE_PROTOCOL.md) | Affected Set, Session Delta, owner-routed Write Set, validation, and atomic Save Point | Consumed after completed Gameplay Interactions. |
 | [Persistence Validation](persistence/PERSISTENCE_VALIDATION.md) | Read-only baselines, profiles, findings, severity, outcomes, and repair routing | Consumed by saves, loads, migrations, corrections, and audits. |
-| [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) | First-class `DIRECT` and `MCP` modes, shared persistence contract, configuration, evidence, failure, and mode migration | Consumed by Campaign Configuration, runtime profiles, Save Indexes, migration, and validation. |
+| [Persistence Strategy Selection](persistence/PERSISTENCE_STRATEGY_SELECTION.md) | Capability enumeration, sticky selection, persistent reuse, and explicit strategy migration | Consumed by bootstrap, resume, Campaign Configuration, and migration. |
+| [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) | First-class `DIRECT` and `MANAGED` strategies, shared persistence contract, configuration, evidence, failure, and migration | Consumed by Campaign Configuration, runtime profiles, Save Indexes, migration, and validation. |
 | [Direct Persistence Mode](persistence/DIRECT_PERSISTENCE_MODE.md) | Database Format and Storage Adapter classes, composition, capability gate, transaction evidence, and status | Consumed by runtimes that directly operate approved persistence technology. |
-| [MCP Persistence Mode](persistence/MCP_PERSISTENCE_MODE.md) | Semantic service interface, Persistence Receipts, hidden backend, SQL Server reference boundary, durability, and recovery | Consumed by MCP-capable runtimes without granting database authority. |
+| [Managed Data Service](persistence/MANAGED_DATA_SERVICE.md) | Storage- and interface-neutral semantic service contract, capability families, completion evidence, hidden backend, durability, and recovery | Consumed by runtimes using a Managed authority without gaining datastore access. |
+| [MCP Managed Service Interface](persistence/MCP_PERSISTENCE_MODE.md) | Optional MCP realization, semantic tools, Persistence Receipts, and hidden backend | Consumed by MCP-capable runtimes as one Managed interface. |
+| [Logical Data Namespace](persistence/LOGICAL_DATA_NAMESPACE.md) | Stable storage-neutral namespace identity, isolation, versioning, routing, and native datastore mapping | Consumed by Managed services, adapters, migrations, and campaign routing. |
 | [Direct Persistence Adapter Index](persistence/adapters/README.md) | Direct adapter classification, reading order, and selection boundary | Routes current format and storage adapter contracts. |
 | [SQLite Database Format Adapter](persistence/adapters/SQLITE_DATABASE_FORMAT_ADAPTER.md) | SQLite transaction, integrity, expected-state, read-only reopen, staleness, rollback, and candidate production | Implements a Direct logical store without adjudicating or owning campaign meaning. |
 | [DuckDB Database Format Adapter](persistence/adapters/DUCKDB_DATABASE_FORMAT_ADAPTER.md) | Persistent DuckDB transactions, single-writer-process boundary, optimistic conflicts, checkpoints, constraints, and read-back | Implements an optional Direct logical store under explicit deployment limits. |
@@ -338,7 +342,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 
 **Dependencies:** Game Master Toolkit, Campaign Persistence Engine, Repository Canon, information permissions, and relevant specialist owners.
 
-**Extensions:** implementation-specific Direct Adapters or MCP services may execute these procedures but may not change their authority or claim broader capability than available.
+**Extensions:** implementation-specific Direct Adapters or Managed services and interfaces may execute these procedures but may not change their authority or claim broader capability than available.
 
 **Consumers:** implementation-neutral AI GMs, supervisors, campaign custodians, and human handoff operators.
 
@@ -355,6 +359,13 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [AI Play Protocol](ai/AI_PLAY_PROTOCOL.md) | Intent classification, owner retrieval, information separation, resolution, narration, and closure | Consumed for each Gameplay Interaction. |
 | [AI Save Protocol](ai/AI_SAVE_PROTOCOL.md) | Writer-mode disclosure and faithful Save Update Protocol execution | Consumed after material interactions when persistence is available. |
 | [AI Checklist](ai/AI_CHECKLIST.md) | Compact verification gates for start, play, save, correction, continuation, and handoff | Consumed as an operational guard, not an authority substitute. |
+
+## Support and Diagnostics
+
+| Document | Owner | Interface refinement |
+| --- | --- | --- |
+| [Support Index](support/README.md) | Support-document navigation and privacy boundary | Routes contributors without becoming a defect tracker. |
+| [Community Feedback and Diagnostics](support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md) | Issue classification, sanitized diagnostics, reporting structure, provenance-aware routing, and feedback lifecycle | Helps prepare reports without submitting them silently or exposing Campaign Canon. |
 
 ## Interface Resolution
 

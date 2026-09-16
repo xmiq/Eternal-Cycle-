@@ -26,19 +26,24 @@ function Read-RepoFile {
 
 $portable = Read-RepoFile 'docs/persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md'
 $mcp = Read-RepoFile 'docs/persistence/MCP_PERSISTENCE_MODE.md'
+$managed = Read-RepoFile 'docs/persistence/MANAGED_DATA_SERVICE.md'
+$selection = Read-RepoFile 'docs/persistence/PERSISTENCE_STRATEGY_SELECTION.md'
 $direct = Read-RepoFile 'docs/persistence/DIRECT_PERSISTENCE_MODE.md'
-$schema = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/Schema/001_initial.sql'
-$tools = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/PersistenceTools.cs'
-$coordinator = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/PersistenceCoordinator.cs'
-$store = Read-RepoFile 'services/eternal-cycle-mcp/src/EternalCycle.Persistence.Mcp/SqlServerCampaignPersistenceStore.cs'
+$referenceRoot = 'examples/tooling/managed-data/mcp-dotnet-tsql'
+$schema = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Schema/001_initial.sql"
+$tools = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/PersistenceTools.cs"
+$coordinator = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/PersistenceCoordinator.cs"
+$store = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/SqlServerCampaignPersistenceStore.cs"
 $roadmap = Read-RepoFile 'design/ROADMAP.md'
 $future = Read-RepoFile 'design/FUTURE_REVISIONS.md'
 
-Assert-True ($portable -match 'first-class \*\*Persistence Mode\*\*: `DIRECT` or `MCP`|first-class \*\*Persistence Mode\*\*') 'Portable architecture defines first-class persistence modes.'
-Assert-True ($portable -match 'Changing mode is a controlled persistence migration') 'Mode changes require controlled migration.'
+Assert-True ($portable -match '`DIRECT`' -and $portable -match '`MANAGED`') 'Portable architecture defines Direct and Managed strategies.'
+Assert-True ($selection -match 'Enumerate.*Select.*Persist.*Reuse') 'Strategy selection follows Enumerate, Select, Persist, Reuse.'
+Assert-True ($portable -match 'Strategy change is an explicit validated migration') 'Strategy changes require controlled migration.'
 Assert-True ($direct -match 'Database Format Adapter' -and $direct -match 'Storage Adapter') 'Direct mode separates format and storage adapters.'
-Assert-True ($mcp -match 'validated Persistence Receipt' -and $mcp -match 'exposes no arbitrary SQL') 'MCP mode requires receipts and forbids arbitrary SQL.'
-Assert-True ($mcp -match 'MCP mode never displays `☁️💾`') 'MCP status hides backend topology.'
+Assert-True ($managed -match 'relational' -and $managed -match 'document' -and $managed -match 'indexed file') 'Managed contract remains storage-neutral.'
+Assert-True ($mcp -match 'validated Persistence Receipt' -and $mcp -match 'exposes no raw SQL') 'MCP mode requires receipts and forbids arbitrary SQL.'
+Assert-True ($mcp -match 'MCP clients do not display `☁️💾`') 'MCP status hides backend topology.'
 
 foreach ($required in @(
     'CREATE TABLE ec.campaigns',

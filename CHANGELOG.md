@@ -4,9 +4,10 @@ This file records released Eternal Cycle versions. Design provenance and task hi
 
 ## Unreleased
 
-- Added FR-017 portable persistence with first-class `DIRECT` and `MCP` modes.
+- Added FR-017 portable persistence, then consolidated its original `DIRECT`/`MCP` split through FR-019 into first-class `DIRECT` and `MANAGED` strategies with MCP as an optional Managed interface.
 - Separated runtime-neutral Database Format and Storage Adapters from the ChatGPT execution profile, including SQLite, DuckDB, local-storage, and Google Drive contracts.
-- Added a Microsoft SQL Server-backed Eternal Cycle MCP persistence reference service with semantic reads, staged candidate versions, idempotent commits, validation, activation read-back, and receipt-gated completion.
+- Added FR-018 provenance-bearing, world-isolated, context-efficient rule retrieval and the 8K reference target.
+- Repositioned the .NET/MCP/T-SQL service as optional Managed reference tooling; added Logical Data Namespaces, `ec_domain` versioned rule publication, service-owned updates, explicit dependencies, immutable Git provenance, diagnostics, and support guidance.
 - Made released new campaigns default to `NORMAL`, replaced the live Alpha procedure with release-neutral Provisional Rulings, and preserved explicit validation and development modes.
 - Preserved Eternal Cycle v1.0.0 and its `v1.0.0` tag as the historical Release 1 boundary.
 

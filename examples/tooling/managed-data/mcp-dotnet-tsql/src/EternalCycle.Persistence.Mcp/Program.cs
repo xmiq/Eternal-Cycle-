@@ -22,14 +22,19 @@ builder.Services
     .ValidateOnStart();
 
 builder.Services
-    .AddOptions<RuleRetrievalOptions>()
+    .AddOptions<ManagedRuleServiceOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Rules"));
 
 builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
-builder.Services.AddSingleton<IRuleContextProvider, RepositoryRuleContextProvider>();
+builder.Services.AddSingleton<IRuleSourceProvider, GitRuleSourceProvider>();
+builder.Services.AddSingleton<IPublishedRuleStore, SqlServerPublishedRuleStore>();
+builder.Services.AddSingleton<ManagedRulePublicationCoordinator>();
+builder.Services.AddHostedService<ManagedRuleUpdateHostedService>();
+builder.Services.AddSingleton<IRuleContextProvider, PublishedRuleContextProvider>();
 builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersistenceStore>();
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();
+builder.Services.AddSingleton<IServiceDiagnostics, ServiceDiagnostics>();
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()

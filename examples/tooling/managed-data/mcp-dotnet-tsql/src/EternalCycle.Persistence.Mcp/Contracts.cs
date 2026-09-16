@@ -86,9 +86,15 @@ public sealed class SqlServerPersistenceOptions
 
     public string? RecoveryPointDirectory { get; init; }
 
+    public string DomainSchema { get; init; } = "ec_domain";
+
     public string DefaultSchema { get; init; } = "ec";
 
+    public string DefaultDataNamespaceId { get; init; } = "eternal-cycle-mainworld";
+
     public string DefaultWorldModelId { get; init; } = "eternal-cycle-standard";
+
+    public string DefaultRulesetId { get; init; } = "eternal-cycle-core";
 
     public string DefaultSchemaModelVersion { get; init; } = "1";
 
@@ -97,8 +103,30 @@ public sealed class SqlServerPersistenceOptions
     public IDictionary<string, string> CampaignWorldModels { get; init; } =
         new Dictionary<string, string>(StringComparer.Ordinal);
 
+    public IDictionary<string, string> WorldDataNamespaces { get; init; } =
+        new Dictionary<string, string>(StringComparer.Ordinal);
+
+    public IDictionary<string, SqlDataNamespaceOptions> DataNamespaces { get; init; } =
+        new Dictionary<string, SqlDataNamespaceOptions>(StringComparer.Ordinal);
+
+    // Legacy FR-018 configuration. New deployments should use WorldDataNamespaces and DataNamespaces.
     public IDictionary<string, WorldSchemaOptions> WorldSchemas { get; init; } =
         new Dictionary<string, WorldSchemaOptions>(StringComparer.Ordinal);
+}
+
+public sealed class SqlDataNamespaceOptions
+{
+    [Required]
+    public string SchemaName { get; init; } = string.Empty;
+
+    [Required]
+    public string SchemaModelVersion { get; init; } = string.Empty;
+
+    [Required]
+    public string RulesetId { get; init; } = string.Empty;
+
+    [Required]
+    public string RulesetVersion { get; init; } = string.Empty;
 }
 
 public sealed class WorldSchemaOptions

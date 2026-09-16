@@ -34,7 +34,7 @@ The [DuckDB Database Format Adapter](../../docs/persistence/adapters/DUCKDB_DATA
 
 ## Reference MCP Service
 
-The executable [Eternal Cycle MCP Persistence Service](../../services/eternal-cycle-mcp/README.md) uses the official C# MCP SDK and Microsoft SQL client. It exposes bounded semantic tools for status, exact record reads, complete commit, and idempotent retry. It exposes no arbitrary SQL or backend locator.
+The executable [Eternal Cycle MCP Persistence Service](../../examples/tooling/managed-data/mcp-dotnet-tsql/README.md) uses the official C# MCP SDK and Microsoft SQL client. It exposes bounded semantic tools for status, exact record reads, complete commit, and idempotent retry. It exposes no arbitrary SQL or backend locator. FR-019 later reclassified this as one optional Managed Data Service reference implementation; the original FR-017 description is retained as historical audit context.
 
 The SQL Server model provides:
 

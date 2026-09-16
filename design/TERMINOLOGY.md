@@ -4274,7 +4274,7 @@ A replaceable operational document defining how one identified AI runtime boots,
 
 ## Persistence Adapter
 
-The general class of implementation-specific components used by `DIRECT` persistence. Canonical subtypes are Database Format Adapter and Storage Adapter. A Persistence Adapter preserves Campaign Persistence authority and never adjudicates gameplay. MCP persistence is a service boundary, not a client Persistence Adapter.
+The general class of implementation-specific components used by `DIRECT` persistence. Canonical subtypes are Database Format Adapter and Storage Adapter. A Persistence Adapter preserves Campaign Persistence authority and never adjudicates gameplay. Managed persistence is a service boundary, not a client Persistence Adapter.
 
 ## Adapter Chain
 
@@ -4282,19 +4282,47 @@ An ordered `DIRECT` composition of one Database Format Adapter and the Local or 
 
 ## Campaign Configuration
 
-The campaign-external deployment record selecting rules and campaign versions, active profiles, Persistence Mode, Direct Adapters or MCP service, authorized locators, permissions, policies, and runtime metadata. It locates or selects authorities but does not own the campaign facts it references.
+The campaign-external deployment record persisting rules and campaign versions, active profiles, Persistence Strategy, Direct Adapters or Managed service/interface, Logical Data Namespace, authorized locators, permissions, policies, and runtime metadata. It locates or selects authorities but does not own the campaign facts it references.
+
+## Persistence Strategy
+
+The campaign-configured route for canonical persistence. Eternal Cycle supports `DIRECT`, where an authorized runtime operates Database Format and Storage Adapters, and `MANAGED`, where a Managed Data Service owns its hidden backend. A strategy is chosen through **Enumerate -> Select -> Persist -> Reuse** and changes only through explicit validated migration.
 
 ## Persistence Mode
 
-The campaign-configured implementation route for canonical persistence. Eternal Cycle supports `DIRECT`, where an authorized runtime operates Database Format and Storage Adapters, and `MCP`, where a semantic persistence service owns its hidden backend. Exactly one mode is active for one canonical campaign authority.
+A legacy label retained for v1 and early post-v1 configuration compatibility. Current universal architecture uses **Persistence Strategy**. Legacy `MCP` mode migrates to `MANAGED` strategy with MCP as the selected interface without changing campaign facts.
 
 ## Direct Persistence
 
-A Persistence Mode in which an authorized runtime directly operates the configured Database Format Adapter and Local or Remote Storage Adapter Chain.
+A Persistence Strategy in which an authorized runtime directly operates the configured Database Format Adapter and Local or Remote Storage Adapter Chain.
+
+## Managed Persistence
+
+A Persistence Strategy in which a Managed Data Service is canonical persistence authority and the runtime uses a configured semantic interface without opening or operating the service backend.
 
 ## MCP Persistence
 
-A Persistence Mode in which an authorized runtime reads and writes canonical campaign state through an Eternal Cycle MCP persistence service without opening or operating the service's database or storage deployment.
+The legacy name for Managed Persistence using MCP as its service interface. MCP is a supported reference interface, not a universal strategy or storage requirement.
+
+## Managed Data Service
+
+A semantic persistence authority that owns backend transactions, validation, durability, backup, recovery, namespace routing, and completion evidence while exposing bounded campaign, rule, status, and administrative capabilities. It never adjudicates gameplay.
+
+## Managed Storage Adapter
+
+An implementation-internal adapter by which a Managed Data Service maps the universal service contract to a relational, document, key/value, graph, indexed-file, or other compliant structured store. It is not a client Direct Adapter and does not define universal architecture.
+
+## Logical Data Namespace
+
+A stable storage-neutral identity and isolation boundary for compatible Eternal Cycle information. A datastore maps it to a native schema, database, collection, partition, graph, directory, or equivalent without making the physical name a Campaign ID, World ID, or ruleset identity.
+
+## Domain Namespace
+
+The shared Logical Data Namespace for reusable managed-service material such as RuleSets, derived Rule Releases, indexes, dependencies, provenance, and routing metadata. In the T-SQL reference implementation it maps by default to `ec_domain` and contains no world campaign Canon.
+
+## World Data Namespace
+
+A Logical Data Namespace containing campaign Canon for one compatible world/domain model. Several campaigns may share it only with enforced Campaign ID isolation.
 
 ## Database Format Adapter
 
@@ -4306,11 +4334,35 @@ A Direct Persistence Adapter that owns exact artifact identity, placement, trans
 
 ## Persistence Receipt
 
-Immutable evidence returned by an MCP persistence service after the expected transaction has been validated, activated, and read back at the active Campaign Version. It proves service completion but does not become another owner of campaign facts.
+Immutable evidence returned by a Managed service interface after the expected transaction has been validated, activated, and read back at the active Campaign Version. It proves service completion but does not become another owner of campaign facts. The MCP reference interface calls this a Persistence Receipt.
 
 ## Eternal Cycle MCP Persistence Service
 
-A semantic MCP service that owns canonical campaign database transactions, durability, backup, recovery, and operational validation behind a hidden backend. It exposes bounded campaign reads, status, commit, and retry rather than arbitrary SQL or storage topology.
+The optional .NET/MCP/T-SQL reference implementation of the Managed Data Service Contract. It demonstrates semantic MCP operations and Microsoft SQL Server storage without making either technology mandatory.
+
+## Rule Source Provider
+
+A Managed-service component that identifies, checks, acquires, and verifies an authoritative rule-source snapshot while exposing immutable provenance. Git is one supported provider family; a Git publication records the exact commit SHA rather than only a mutable branch or tag.
+
+## RuleSet
+
+A stable identity for a coherent family of reusable rules that may have multiple versioned derived publications.
+
+## Rule Release
+
+A versioned Derived publication compiled from one immutable canonical source identity, with compiler version, validation state, publication state, activation state, provenance, and compatibility metadata. It never becomes Rule Canon.
+
+## Rule Packet
+
+The smallest sufficient dependency-complete selection of an active Rule Release for one operation, campaign mode, World/Ruleset, module set, and topic set. Normal reference retrieval targets at most 8,000 estimated rule tokens and cannot hide an uncounted repository prompt.
+
+## Rule Update Policy
+
+A Managed-service policy governing source checks, such as startup, periodic, manual, or disabled/offline operation. It does not permit a failed candidate to replace the active validated Rule Release.
+
+## Rule Activation Policy
+
+A Managed-service policy determining whether a validated published Rule Release activates automatically or requires authorized administration.
 
 ## Canonical Campaign State
 
