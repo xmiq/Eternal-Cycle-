@@ -59,8 +59,9 @@ foreach ($toolName in @('ec_persistence_status', 'ec_read_records', 'ec_commit_c
 }
 Assert-True ($tools -notmatch '(?i)connectionstring|SELECT\s|INSERT\s|UPDATE\s|DELETE\s') 'MCP tool surface exposes no SQL or connection string.'
 Assert-True ($coordinator -match 'validated receipt' -and $coordinator -match 'AffectedOwnerDomains must exactly match') 'Coordinator enforces receipt and Affected Set boundaries.'
-Assert-True ($store -match 'INNER JOIN ec\.save_transactions AS transactions' -and $store -match 'transactions\.status IN') 'Authoritative reads exclude unactivated or failed candidate transactions.'
+Assert-True ($store -match 'INNER JOIN \{\{schema\}\}\.save_transactions AS transactions' -and $store -match 'transactions\.status IN') 'Authoritative reads exclude unactivated or failed candidate transactions through schema-routed SQL.'
 Assert-True ($store -match 'ReadCandidateRecordAsync' -and $store -match 'transaction_id = @transaction_id') 'Candidate validation is scoped to the exact transaction identity.'
+Assert-True ($store -notmatch '(?m)\bec\.[A-Za-z_]') 'Application persistence SQL contains no mandatory ec schema qualifier.'
 
 Assert-True (-not (Test-Path -LiteralPath (Join-Path $root 'docs/ai/chatgpt/adapters/SQLITE_PERSISTENCE_ADAPTER.md'))) 'Obsolete ChatGPT SQLite adapter is absent.'
 Assert-True (-not (Test-Path -LiteralPath (Join-Path $root 'docs/ai/chatgpt/adapters/GOOGLE_DRIVE_PERSISTENCE_ADAPTER.md'))) 'Obsolete ChatGPT Google Drive adapter is absent.'

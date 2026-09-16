@@ -2933,3 +2933,40 @@ After the FR-017 commit, return to owner-mediated Future Revision intake. Do not
 
 1. Review the complete diff, commit the maintenance, and generate `Eternal Cycle.zip`.
 2. Return to owner-mediated Phase 13 Future Revision intake without selecting another objective.
+
+## Phase 13 Checkpoint — FR-018 Rule Compilation and Schema Routing
+
+### Completed Objective
+
+- FR-018 — Rule Compilation and Context-Efficient Retrieval.
+
+### Pre-existing Work Review
+
+- Initial uncommitted state contained only untracked `docs/rules/INDEX.md` and `docs/rules/persistence-rules.md`.
+- Their queryability goal was preserved through a repository-authoritative compiler/indexer.
+- Their SQL-authority inversion, hard-coded `EternalCycle.ec_domain.config` topology, and raw-query runtime interface were rejected and documented in the FR-018 audit.
+
+### Files and Implementation
+
+- Added canonical Rule Compilation family, Runtime Rule Kernel, reference manifest, and source-provenanced 8K retrieval contract.
+- Added MCP `ec_get_rule_context`, compiler/indexer, World/Ruleset filtering, optional module and Campaign Mode filtering, source hashes, and trusted-root enforcement.
+- Replaced hard-coded application `ec.` qualifiers with trusted campaign-to-world-to-schema routing, strict identifier validation and quoting, and schema-token binding.
+- Preserved `ec` as the default/reference deployment and added a custom-schema migration template.
+- Added A-H schema tests plus the I multi-world 8K retrieval regression.
+
+### Validation Status
+
+- MCP service build: pass with zero warnings.
+- MCP service tests: pass, 22 of 22.
+- FR-017 structural harness: pass, 27 assertions.
+- FR-018 structural harness: pass, 19 assertions.
+- Full repository validation: pass across 266 Markdown files, 6,930 relative links, 159 anchors, 177 indexed canonical documents, 43 templates, 1,219 terminology checks, 190 roadmap tasks, and 18 Future Revision entries.
+
+### Remaining Work
+
+1. Review the complete diff and repository boundary.
+2. Commit only FR-018 and regenerate `Eternal Cycle.zip`.
+
+### Exact Resume Point
+
+After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intake. Do not select or infer FR-019.

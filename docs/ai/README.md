@@ -19,15 +19,16 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 1. [Simulation Architecture and Perspective Model](../core/SIMULATION_ARCHITECTURE_AND_PERSPECTIVE.md) - rules, objective simulation, player-facing presentation, Entity, Controller, Perspective, and knowledge boundaries.
 2. [AI Runtime Model](AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, boot and action flows, adapter composition, and extension rules.
-3. [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, summary hierarchy, automatic Affected Set persistence, turn closure, failure/retry, and next-turn reload.
-4. [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical reads, observer filtering, Current Appearance assembly, representation-tool handoff, and non-canonical rendering freedom.
-5. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
-6. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
-7. [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md) - current Engine Status, normal-default Campaign Mode, explicit testing modes, new-campaign creation, and resume compatibility.
-8. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
-9. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
-10. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
-11. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
+3. [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md) - source-provenanced kernel, Core, World/Ruleset, module, operation, and topic retrieval within the normal 8K target.
+4. [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - relevance-filtered canonical reads, Current Scene Context, summary hierarchy, automatic Affected Set persistence, turn closure, failure/retry, and next-turn reload.
+5. [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical reads, observer filtering, Current Appearance assembly, representation-tool handoff, and non-canonical rendering freedom.
+6. [AI Capabilities and Limitations](AI_CAPABILITIES_AND_LIMITATIONS.md) - non-authoritative memory, finite context, tool and write limits, information protection, validation limits, and failure handling.
+7. [AI GM Workflow](AI_GM_WORKFLOW.md) - end-to-end operating cycle and stop conditions.
+8. [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md) - current Engine Status, normal-default Campaign Mode, explicit testing modes, new-campaign creation, and resume compatibility.
+9. [AI Session Start](AI_SESSION_START.md) - version, authority, state, visibility, and readiness checks before play.
+10. [AI Play Protocol](AI_PLAY_PROTOCOL.md) - intent, retrieval, adjudication, narration, consequence, and interaction-boundary procedure.
+11. [AI Save Protocol](AI_SAVE_PROTOCOL.md) - operational use of the canonical Save Update Protocol, including write limitations and recovery.
+12. [AI Checklist](AI_CHECKLIST.md) - compact gates for session start, adjudication, narration, saving, correction, and handoff.
 
 ## Runtime-Specific Profiles
 

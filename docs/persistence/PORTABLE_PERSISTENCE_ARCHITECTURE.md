@@ -63,6 +63,15 @@ The service accepts canonical record addresses, reads, Affected Sets, mutations,
 
 The [MCP Persistence Mode](MCP_PERSISTENCE_MODE.md) defines the service contract. The repository includes a reference [Eternal Cycle MCP service](../../services/eternal-cycle-mcp/README.md).
 
+The reference SQL Server deployment distinguishes four identities:
+
+- **Campaign ID** identifies one campaign;
+- **World/Ruleset/Domain Model** identifies the common structural and rules model used by compatible campaigns;
+- **SQL Schema** is a validated persistence namespace that may host several compatible campaigns;
+- **SQL Database** hosts one or more schemas.
+
+`ec` is the standard default schema, not the definition of Eternal Cycle. Trusted configuration maps campaigns to World Models and World Models to compatible schemas. MCP callers never select a schema directly.
+
 ## Campaign Configuration
 
 Campaign Configuration selects exactly one mode and provides only the fields relevant to it.
@@ -134,6 +143,8 @@ Conversation memory, summaries, or rendered exports are not sufficient migration
 - `DIRECT` and `MCP` are mutually exclusive canonical modes for one active campaign authority.
 - Database Format Adapters and Storage Adapters never adjudicate gameplay.
 - The MCP service never grants raw SQL authority to a GM or player.
+- Configurable SQL schemas come only from trusted deployment configuration, use strict identifier validation and quoting, and never weaken parameterized Campaign ID isolation.
+- Schema migrations target one authorized World Model/schema binding and do not blindly modify unrelated schemas in the same database.
 - An MCP client never receives backend credentials, paths, database names, or backup locators through ordinary gameplay tools.
 - A Persistence Receipt proves service completion; it does not become a second owner of campaign facts.
 - Switching runtimes does not require switching modes when the new runtime supports the configured contract.
@@ -146,5 +157,6 @@ Conversation memory, summaries, or rendered exports are not sufficient migration
 - [Persistence Adapter Index](adapters/README.md)
 - [AI Runtime Model](../ai/AI_RUNTIME_MODEL.md)
 - [Context Assembly and Turn Persistence](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
+- [Rule Compilation and Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
 - [Migration and Versioning](MIGRATION_AND_VERSIONING.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)

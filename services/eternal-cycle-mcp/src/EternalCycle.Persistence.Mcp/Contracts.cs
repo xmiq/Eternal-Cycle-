@@ -85,6 +85,32 @@ public sealed class SqlServerPersistenceOptions
     public bool RequireRecoveryPointForCompletion { get; init; }
 
     public string? RecoveryPointDirectory { get; init; }
+
+    public string DefaultSchema { get; init; } = "ec";
+
+    public string DefaultWorldModelId { get; init; } = "eternal-cycle-standard";
+
+    public string DefaultSchemaModelVersion { get; init; } = "1";
+
+    public string DefaultRulesetVersion { get; init; } = "1.0.0";
+
+    public IDictionary<string, string> CampaignWorldModels { get; init; } =
+        new Dictionary<string, string>(StringComparer.Ordinal);
+
+    public IDictionary<string, WorldSchemaOptions> WorldSchemas { get; init; } =
+        new Dictionary<string, WorldSchemaOptions>(StringComparer.Ordinal);
+}
+
+public sealed class WorldSchemaOptions
+{
+    [Required]
+    public string SchemaName { get; init; } = string.Empty;
+
+    [Required]
+    public string SchemaModelVersion { get; init; } = string.Empty;
+
+    [Required]
+    public string RulesetVersion { get; init; } = string.Empty;
 }
 
 public interface ICampaignPersistenceStore

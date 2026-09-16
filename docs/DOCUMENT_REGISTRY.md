@@ -281,6 +281,20 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | [Reproductive Compatibility](gm-living-codex/REPRODUCTIVE_COMPATIBILITY.md) | Sparse directional species relationships, scoped nonzero probabilities, assistance methods, viability and fertility claims, schema constraints, and operating procedure | Supplies reusable design inputs without defining individuals, complete reproduction, inheritance, Hybrid Forms, or population outcomes. |
 | [Lineage, Hybridization, and Evolutionary Inheritance](gm-living-codex/LINEAGE_AND_EVOLUTIONARY_INHERITANCE.md) | Reusable Lineage Templates, Inheritance Profiles, Species and Evolution Expression, Mana equalization, inherited instinct, and stabilization | Consumes successful formation and supplies reusable outcomes without storing genealogy or individual lineage state. |
 
+## Rule Compilation and Retrieval
+
+**Dependencies:** Repository Canon, Repository Version, Campaign Configuration, World/Ruleset identity, Campaign Mode, operation, topic, and optional-module selection.
+
+**Extensions:** approved world packages, optional modules, alternate derived indexes, and runtime tokenizers may implement this contract without taking rule authority.
+
+**Consumers:** human and AI GMs, Context Assembly, runtime profiles, and the Eternal Cycle MCP reference service.
+
+| Document | Owner | Interface refinement |
+| --- | --- | --- |
+| [Rule Compilation Index](rules/README.md) | Family reading order, authority boundary, reference manifest, and runtime consumers | Routes compilation and retrieval claims while preserving Repository Canon authority. |
+| [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) | Compact mandatory authority, agency, world-simulation, ownership, read, and persistence invariants | Included in every normal compiled rule context; delegates specialist resolution to source rules. |
+| [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) | Source metadata, compilation, provenance, Core and World/Ruleset filtering, optional modules, budget, failure, and regression contract | Produces Derived rule contexts and hands Campaign Canon retrieval to FR-011 under the same Campaign ID. |
+
 ## Campaign Persistence Engine
 
 **Dependencies:** Repository Canon, World Engine outcomes, GM procedures, every specialist record owner, and accepted persistence decisions.

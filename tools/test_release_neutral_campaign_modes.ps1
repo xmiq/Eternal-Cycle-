@@ -30,6 +30,7 @@ $runtime = Read-RepoFile 'docs/ai/AI_RUNTIME_MODEL.md'
 $chatgpt = Read-RepoFile 'docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md'
 $campaignTemplate = Read-RepoFile 'templates/CAMPAIGN_CANON_TEMPLATE.md'
 $roadmap = Read-RepoFile 'design/ROADMAP.md'
+$maintenanceAudit = Read-RepoFile 'design/audits/RELEASE_NEUTRAL_CAMPAIGN_STATUS_AUDIT.md'
 $readme = Read-RepoFile 'README.md'
 $version = (Read-RepoFile 'VERSION').Trim()
 
@@ -76,7 +77,7 @@ Assert-True ($staleMatches.Count -eq 0) 'Stale live Alpha operational phrases ar
 Assert-True ($version -eq '1.0.0' -and $readme -match 'Status: Released') 'Release 1 metadata remains unchanged.'
 Assert-True ($roadmap -match '\[x\] \*\*Release-neutral Provisional Rulings and campaign status cleanup\*\*') 'Roadmap records the maintenance item complete.'
 Assert-True ($roadmap -match '\[∞\] \*\*Future Revisions\*\*') 'Future Revisions remains the permanent final Phase 13 item.'
-Assert-True ($roadmap -notmatch 'FR-018') 'No FR-018 was created for this maintenance.'
+Assert-True ($maintenanceAudit -match 'no `FR-018` was created') 'The maintenance audit preserves that this historical cleanup did not itself create a Future Revision.'
 
 if ($failures.Count -gt 0) {
     Write-Output "Release-neutral campaign-mode harness: FAIL ($($failures.Count) failure(s))"

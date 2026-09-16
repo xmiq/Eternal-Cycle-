@@ -5225,3 +5225,23 @@ Current version, release, root-entry, and roadmap metadata determine Engine Stat
 ## D-1306 — Legacy Alpha Metadata Preserves Explicit Testing Intent
 
 Legacy campaign metadata that explicitly selected testing remains testing metadata during migration. A generic Alpha label that only reflected the engine's pre-release lifecycle is historical provenance rather than current Campaign Mode. Ambiguous metadata remains Unknown pending source recovery and is never silently reclassified.
+
+## D-1307 — Repository Canon Remains the Rule Authority
+
+Rule compilers, indexes, SQL tables, vector stores, caches, and Context Packets are Derived navigation or delivery artifacts. They retain source path, anchor, hash, and Repository Version provenance and never outrank or silently replace their canonical Markdown sources.
+
+## D-1308 — Rule Retrieval Is World-Isolated and Context-Bounded
+
+Normal retrieval begins with the Runtime Rule Kernel and adds only relevant Eternal Cycle Core, selected World/Ruleset, enabled optional-module, Campaign Mode, operation, and topic rules. The reference normal-play target is at most 8,000 estimated rule tokens. Campaign Canon is loaded separately under the same Campaign ID, and another world's rules or another campaign's facts cannot fill a gap.
+
+## D-1309 — Campaign, World Model, SQL Schema, and Database Are Distinct
+
+A Campaign ID identifies one campaign. A World/Ruleset/Domain Model identifies a compatible structural and rules model. A SQL Schema provides a persistence namespace that may host several compatible campaigns, and a SQL Database may host several schemas. The `ec` schema remains the standard default, not a universal definition or requirement.
+
+## D-1310 — Configurable Schemas Use Trusted Routing and Scoped Migration
+
+Only trusted deployment configuration may map a Campaign ID to a World Model and a World Model to a SQL Schema and model version. Schema identifiers are strictly validated and quoted; MCP callers never supply them. Campaign values remain parameterized and isolated by Campaign ID. Migrations target one authorized World Model/schema binding and do not blindly modify unrelated schemas.
+
+## D-1311 — Compiled Rules and Campaign Facts Remain Separate Inputs
+
+The rule compiler owns no Campaign Canon. Context Assembly combines a provenance-bearing rule context with authoritative campaign reads only after both resolve to the same Campaign ID and applicable World/Ruleset. Compiling a rule index cannot create, migrate, or alter a campaign fact.

@@ -160,6 +160,12 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Portable Persistence Architecture](persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - `DIRECT` and `MCP` modes, shared invariants, configuration, evidence, failure, and migration boundaries.
 - [Direct Persistence Adapter Index](persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 
+## Rule Compilation and Retrieval
+
+- [Rule Compilation Index](rules/README.md) - authority boundary, reading order, reference manifest, and runtime consumers.
+- [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) - compact mandatory authority, agency, world-simulation, read, ownership, and persistence invariants.
+- [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
+
 ## Campaign Persistence Engine
 
 - [Campaign Persistence Engine Index](persistence/README.md) - canonical reading order, ownership boundary, and repository scope for campaign continuity.

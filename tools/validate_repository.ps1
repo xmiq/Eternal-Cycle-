@@ -542,6 +542,19 @@ else {
     }
 }
 
+$fr018HarnessPath = Join-Path $rootPath 'tools/test_fr018_rule_compilation.ps1'
+if (-not (Test-Path -LiteralPath $fr018HarnessPath)) {
+    Add-ValidationError 'Missing FR-018 rule-compilation regression harness.'
+}
+else {
+    try {
+        & $fr018HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-018 rule-compilation regression harness failed.'
+    }
+}
+
 $campaignModeHarnessPath = Join-Path $rootPath 'tools/test_release_neutral_campaign_modes.ps1'
 if (-not (Test-Path -LiteralPath $campaignModeHarnessPath)) {
     Add-ValidationError 'Missing release-neutral campaign-mode regression harness.'
@@ -1188,6 +1201,7 @@ Write-Output 'FR-015 Memory Continuity: identity, fading, cues, recall, Knowledg
 Write-Output 'FR-016 Soul-Bound Companions: fate, convergence, causality, agency, and persistence boundaries checked'
 Write-Output 'FR-011 Context Assembly: target resolution, completion gate, local/cloud status, retries, reload, and runtime boundary checked'
 Write-Output 'FR-017 Portable Persistence: Direct/MCP modes, adapter classes, SQL Server service, receipts, and provenance checked'
+Write-Output 'FR-018 Rule Compilation: source authority, 8K retrieval, world isolation, configurable schema routing, and migration scope checked'
 Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {

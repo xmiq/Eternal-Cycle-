@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 adds portable `DIRECT` and `MCP` persistence in post-v1 development without changing the historical v1.0.0 tag.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 adds portable `DIRECT` and `MCP` persistence, and FR-018 adds source-provenanced rule compilation, 8K context-efficient retrieval, World/Ruleset isolation, and configurable SQL Server schema routing. Both are post-v1 development and do not change the historical v1.0.0 tag.
 
 ## Core Pillars
 
@@ -69,6 +69,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
 - [`docs/ai/AI_RUNTIME_MODEL.md`](docs/ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, transaction flow, adapter composition, failure boundaries, and extension rules.
 - [`docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md`](docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - FR-011 relevance-filtered canonical context, mandatory reads, automatic validated persistence, turn closure, and reset-resilient reload.
+- [`docs/rules/README.md`](docs/rules/README.md) - FR-018 rule compilation, source provenance, World/Ruleset isolation, and context-efficient retrieval map.
 - [`docs/ai/CANONICAL_VISUAL_CONTEXT.md`](docs/ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical image context, observer filtering, Current Appearance assembly, and non-canonical rendering boundaries.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
 - [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.

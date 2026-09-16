@@ -123,11 +123,14 @@ public sealed class PersistenceCoordinatorTests
     [Fact]
     public async Task ServerManagedScheduleCanSatisfyConfiguredDurabilityBoundary()
     {
-        var service = new SqlServerDurabilityService(Options.Create(new SqlServerPersistenceOptions
+        var persistenceOptions = new SqlServerPersistenceOptions
         {
             ConnectionString = "Server=(local);Database=example;Integrated Security=true;",
             RequireRecoveryPointForCompletion = false
-        }));
+        };
+        var service = new SqlServerDurabilityService(
+            Options.Create(persistenceOptions),
+            new ConfiguredCampaignSchemaResolver(Options.Create(persistenceOptions)));
 
         var evidence = await service.VerifyCompletionAsync("campaign", 2, CancellationToken.None);
 

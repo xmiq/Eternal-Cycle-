@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-018 Rule Compilation and Schema Routing Audit](FR_018_RULE_COMPILATION_AND_SCHEMA_ROUTING_AUDIT.md) - pre-existing local-AI change review, Repository Canon-preserving compiler/indexer, 8K world isolation, configurable SQL Server schemas, trusted routing, migration scope, and validation.
 - [Release-Neutral Campaign Status Maintenance Audit](RELEASE_NEUTRAL_CAMPAIGN_STATUS_AUDIT.md) - Provisional Rulings, normal-default campaign bootstrap, explicit testing modes, First-Life separation, historical preservation, and regression validation.
 - [FR-017 Portable Persistence and MCP Service Audit](FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md) - Direct/MCP mode separation, adapter reclassification, SQL Server-backed semantic service, receipt gate, compatibility, tests, and host boundary.
 - [Release 1 Finalization Audit](RELEASE_1_AUDIT.md) - v1.0.0 release gate, Phase 12 closure, Phase 13 activation, repository validation, compatibility, artifact, and host boundary.

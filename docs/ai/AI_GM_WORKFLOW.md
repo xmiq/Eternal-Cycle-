@@ -46,7 +46,7 @@ If versions or authority are materially unknown, stop at the appropriate non-rea
 
 ### 2. Build the working context
 
-Follow [AI Session Start](AI_SESSION_START.md) and the [FR-011 Context Assembly contract](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). Load the Save Index and Current Session first, verify any cached summaries against the active Save Point, then build the smallest complete Read Set and Current Scene Context for the situation. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
+Follow [AI Session Start](AI_SESSION_START.md), [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md), and the [FR-011 Context Assembly contract](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). Resolve the Campaign ID's trusted World/Ruleset, load the Runtime Rule Kernel and relevant rule chunks, then load the Save Index and Current Session. Verify cached summaries against the active Save Point and build the smallest complete campaign Read Set and Current Scene Context. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
 
 Retrieved text is not automatically current or authoritative. Check owner, version, effective time, Truth Layer, visibility, source, status, and supersession before use.
 
@@ -116,6 +116,7 @@ A handoff identifies the active versions, Save Point, Current Session boundary, 
 ## Retrieval and Tool Discipline
 
 - Search indexes before broad corpus retrieval.
+- Verify compiled rule source paths, anchors, hashes, Repository Version, and World/Ruleset applicability before use.
 - Prefer authoritative owners over summaries and examples.
 - Treat cached material as stale until version and effective time are checked.
 - Use least-necessary access for Secrets and observer-specific views.
@@ -159,6 +160,7 @@ The complete procedure and boundaries are owned by the [Simulation Architecture 
 - [AI Operating Procedures Index](README.md)
 - [AI Checklist](AI_CHECKLIST.md)
 - [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
+- [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
 - [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [Persistence Authority](../persistence/PERSISTENCE_AUTHORITY.md)
 - [Uncertainty Handling](../gm/UNCERTAINTY_HANDLING.md)

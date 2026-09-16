@@ -4847,3 +4847,35 @@ A presentational choice required to render an image where Canon is silent, such 
 ## Visual Canon Adoption
 
 An explicit authorized decision to establish a rendered or proposed visual trait through its proper owner and the normal validated Save Transaction. Generation alone is not adoption.
+
+## Campaign ID
+
+The stable identifier for one campaign. It scopes canonical campaign reads and writes and remains distinct from World/Ruleset identity, SQL Schema, SQL Database, player identity, and character identity.
+
+## World/Ruleset/Domain Model
+
+The stable identity of a compatible game-world structural and rule model. It selects applicable world-specific rules and may map to a compatible SQL Schema without becoming a Campaign ID or database locator.
+
+## SQL Schema
+
+A validated SQL Server persistence namespace capable of hosting one or more campaigns that share its structural contract. `ec` is the standard default schema, not a universal requirement.
+
+## SQL Database
+
+The SQL Server database that hosts one or more schemas. Database identity does not identify a campaign, World Model, or canonical rule source.
+
+## Rule Source ID
+
+A stable identifier for one canonical rule source registered for compilation. It remains stable when a title or source presentation changes and carries path, anchor, hash, Repository Version, and applicability provenance.
+
+## Runtime Rule Kernel
+
+The compact mandatory set of authority, agency, simulation, ownership, read, unknown-information, and persistence invariants loaded before specialist rule retrieval. It cannot replace a required specialist rule.
+
+## Compiled Rule Index
+
+A replaceable Derived index of provenance-bearing rule chunks and applicability metadata built from Repository Canon. It owns no rule or campaign fact.
+
+## Rule Context
+
+A bounded Derived selection of the Runtime Rule Kernel and relevant Core, World/Ruleset, optional-module, Campaign Mode, operation, and topic rule chunks for one runtime operation. Campaign Canon is retrieved separately under the same Campaign ID.

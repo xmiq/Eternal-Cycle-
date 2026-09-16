@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <None Include="Schema\001_initial.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\001_initial.template.sql" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

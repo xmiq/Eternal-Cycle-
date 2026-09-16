@@ -92,12 +92,13 @@ Before dependent play, an AI runtime:
 
 1. loads Campaign Configuration through an authorized channel;
 2. identifies the selected Repository Version, Rules Profile, Campaign Mode, AI Execution Profile, and Persistence Mode;
-3. in `DIRECT`, resolves the complete adapter chain and asks the canonical Storage Adapter for the latest identified source;
-4. in `MCP`, resolves the configured service and campaign binding, then requests semantic status and canonical records without opening a database;
-5. reads the Save Index, active Campaign Version, Current Session, and open recovery, migration, continuity, or validation state;
-6. validates enough of the source and required Read Set to establish an honest readiness state;
-7. loads only the material campaign dependency closure and applicable Repository Canon;
-8. establishes Gameplay Context only after boot requirements pass.
+3. resolves the stable Campaign ID to its trusted World/Ruleset identity and retrieves the Runtime Rule Kernel plus relevant provenance-bearing Repository Canon;
+4. in `DIRECT`, resolves the complete adapter chain and asks the canonical Storage Adapter for the latest identified source;
+5. in `MCP`, resolves the configured service and campaign binding, then requests semantic status and canonical records without opening a database;
+6. reads the Save Index, active Campaign Version, Current Session, and open recovery, migration, continuity, or validation state;
+7. validates enough of the source and required Read Set to establish an honest readiness state;
+8. loads only the material campaign dependency closure and applicable Repository Canon;
+9. establishes Gameplay Context only after boot requirements pass.
 
 If the latest source, active version, visibility boundary, or required owner cannot be established, the runtime enters the appropriate clarification, source-recovery, continuity-resolution, or Operational Failure state. It does not substitute conversation memory.
 
@@ -204,6 +205,7 @@ Replacing a profile or adapter changes runtime operation only. It does not alter
 ## Safeguards
 
 - The AI GM does not own the rules or campaign state.
+- A compiled rule index is a Derived navigation artifact; Repository Canon remains authoritative and World/Ruleset filtering cannot substitute another world's rules.
 - Model memory and conversation context are non-authoritative.
 - Current release metadata outranks historical lifecycle wording during bootstrap.
 - A new campaign defaults to `NORMAL`; testing Campaign Modes require explicit selection.
@@ -230,6 +232,7 @@ Entity, Controller, and Perspective must remain separate in loaded state and gen
 - [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md)
 - [Direct Persistence Mode](../persistence/DIRECT_PERSISTENCE_MODE.md)
 - [MCP Persistence Mode](../persistence/MCP_PERSISTENCE_MODE.md)
+- [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
 - [Direct Persistence Adapter Index](../persistence/adapters/README.md)
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)

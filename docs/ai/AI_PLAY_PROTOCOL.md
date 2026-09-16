@@ -54,7 +54,7 @@ Ask a concise clarifying question only when competing interpretations materially
 
 ### 3. Establish the claim and Read Set
 
-State the exact attempted or disputed effect. Load the canonical owner and every material supporting record. Verify current embodiment, access, capability, tools, environment, relationships, opposition, time, costs, information, and prior Pending Session changes.
+State the exact attempted or disputed effect. Use [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md) to load the Runtime Rule Kernel and relevant Core, selected World/Ruleset, optional-module, operation, and topic rules. Separately load the canonical campaign owner and every material supporting record under the same Campaign ID. Verify current embodiment, access, capability, tools, environment, relationships, opposition, time, costs, information, and prior Pending Session changes.
 
 If retrieval produces conflicting versions, stale records, or missing material, do not choose the most recent text automatically. Enter the relevant clarification, source-recovery, or continuity-resolution state.
 
@@ -162,6 +162,7 @@ When a participant pauses, rewinds, corrects, or changes presentation preference
 - [AI Session Start](AI_SESSION_START.md)
 - [AI Save Protocol](AI_SAVE_PROTOCOL.md)
 - [Canonical Visual Context](CANONICAL_VISUAL_CONTEXT.md)
+- [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
 - [Visual Identity](../persistence/VISUAL_IDENTITY.md)
 - [Capability Assessment](../progression/CAPABILITY_ASSESSMENT.md)
 - [GM Principles](../gm/GM_PRINCIPLES.md)

@@ -16,8 +16,17 @@ builder.Services
     .Validate(
         value => !string.IsNullOrWhiteSpace(value.ConnectionString),
         "EternalCycle:Persistence:ConnectionString is required.")
+    .Validate(
+        ConfiguredCampaignSchemaResolver.IsValidOptions,
+        "EternalCycle persistence schema routing contains an invalid identifier or incomplete world binding.")
     .ValidateOnStart();
 
+builder.Services
+    .AddOptions<RuleRetrievalOptions>()
+    .Bind(builder.Configuration.GetSection("EternalCycle:Rules"));
+
+builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
+builder.Services.AddSingleton<IRuleContextProvider, RepositoryRuleContextProvider>();
 builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersistenceStore>();
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();

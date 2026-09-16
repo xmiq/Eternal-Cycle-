@@ -3,7 +3,9 @@ using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
-public sealed class SqlServerDurabilityService(IOptions<SqlServerPersistenceOptions> options) : IDurabilityService
+public sealed class SqlServerDurabilityService(
+    IOptions<SqlServerPersistenceOptions> options,
+    ICampaignSchemaResolver schemaResolver) : IDurabilityService
 {
     private readonly SqlServerPersistenceOptions settings = options.Value;
 
@@ -57,8 +59,9 @@ public sealed class SqlServerDurabilityService(IOptions<SqlServerPersistenceOpti
         await using (var record = connection.CreateCommand())
         {
             record.CommandTimeout = settings.CommandTimeoutSeconds;
-            record.CommandText = """
-                INSERT INTO ec.recovery_points (
+            var route = schemaResolver.Resolve(campaignId);
+            record.CommandText = SqlServerSchemaIdentifier.Bind("""
+                INSERT INTO {{schema}}.recovery_points (
                     recovery_point_id,
                     campaign_id,
                     campaign_version,
@@ -79,7 +82,7 @@ public sealed class SqlServerDurabilityService(IOptions<SqlServerPersistenceOpti
                     SYSUTCDATETIME(),
                     SYSUTCDATETIME()
                 );
-                """;
+                """, route.SchemaName);
             record.Parameters.AddWithValue("@recovery_point_id", recoveryPointId);
             record.Parameters.AddWithValue("@campaign_id", campaignId);
             record.Parameters.AddWithValue("@campaign_version", campaignVersion);

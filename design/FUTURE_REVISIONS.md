@@ -58,11 +58,25 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-No Future Revision is currently roadmapped and pending. FR-001 through FR-017 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+No Future Revision is currently roadmapped and pending. FR-001 through FR-018 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
 
-All currently known FR-001 through FR-017 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-018 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
 ## Closed
+
+### FR-018 - Rule Compilation and Context-Efficient Retrieval
+
+- **Status:** Closed
+- **Issue:** Full-corpus rule loading exceeded practical local-runtime context, while a local test attempted to solve queryability by making one hard-coded SQL table authoritative over Repository Canon. FR-017 also treated the reference `ec` schema as universal application topology rather than a configurable default.
+- **Affected systems:** Repository Canon, AI Runtime Model, FR-011 Context Assembly, Campaign Configuration, World/Ruleset identity, MCP persistence, SQL Server schema routing, migration, validation, and runtime hosting.
+- **Gameplay impact:** Small-context runtimes could omit required rules or load unrelated worlds, and custom World Models could not safely share a database without either using `ec` or forking the service.
+- **Evidence needed:** source-provenance checks, kernel and specialist retrieval, operation/topic/module/mode filters, multi-world isolation, 8K context regression, default and configured schema routes, shared-schema campaign isolation, cross-schema isolation, scoped migrations, unsafe identifier rejection, and standard `ec` compatibility.
+- **Approved direction:** Keep Markdown Repository Canon authoritative. Compile replaceable provenance-bearing chunks, retrieve the Runtime Rule Kernel plus relevant Core, selected World/Ruleset, optional-module, operation, and topic rules, and load Campaign Canon separately under the same Campaign ID. Treat `ec` as the standard default while resolving validated schemas only through trusted campaign-to-world configuration.
+- **Suggested future phase:** Phase 13 — Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented through canonical compilation/retrieval rules, a compact kernel and reference manifest, the MCP `ec_get_rule_context` tool, trusted schema routing and safe identifier binding, a schema-scoped migration template, 22 passing service tests, focused FR-017/FR-018 harnesses, governance, navigation, and repository validation.
+- **Authorized roadmap link:** [FR-018 — Rule Compilation and Context-Efficient Retrieval](ROADMAP.md#phase-13--future-revisions)
+- **Closure references:** [Rule Compilation and Context-Efficient Retrieval](../docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md), [Reference MCP Service](../services/eternal-cycle-mcp/README.md), and [FR-018 Implementation Audit](audits/FR_018_RULE_COMPILATION_AND_SCHEMA_ROUTING_AUDIT.md)
 
 ### FR-017 - Portable Persistence Architecture and MCP Persistence Service
 

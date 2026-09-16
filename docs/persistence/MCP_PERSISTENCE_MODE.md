@@ -44,6 +44,7 @@ The reference interface exposes:
 - `ec_read_records` - exact owner-domain and stable-ID reads at the active version;
 - `ec_commit_changes` - one complete Affected Set with expected parent, idempotency key, mutations, references, and source interaction;
 - `ec_retry_persistence` - resume an existing staged, activated, or failed-read-back transaction without replaying gameplay.
+- `ec_get_rule_context` - retrieve a Derived, provenance-bearing rule context for the campaign's trusted World/Ruleset binding; it reads Repository Canon sources and does not read or mutate campaign state.
 
 It deliberately exposes no arbitrary SQL, table browser, connection-string reader, filesystem path, backup locator, or general administrative shell.
 
@@ -92,6 +93,10 @@ The included [reference MCP service](../../services/eternal-cycle-mcp/README.md)
 
 These tables implement the service; they do not become new fictional mechanics or replace specialist logical owners. A different MCP implementation may use another backend only after a future approved revision preserves the same contract.
 
+The standard reference schema is `ec`. It is a default, not a universal requirement. Trusted service configuration maps a stable Campaign ID to a World/Ruleset/Domain Model and maps that model to a strictly validated SQL schema and schema-model version. Compatible campaigns may share a schema while remaining isolated by parameterized Campaign ID. Different World Models may use different schemas in the same SQL database. Schema identity never comes from player text, campaign narration, or an MCP tool argument.
+
+Every schema used by the common interface must implement that World's compatible baseline persistence contract. World-specific extensions may add domain operations without exposing arbitrary SQL. Migrations are scoped to the selected World Model/schema and must not modify unrelated schemas merely because they share a database.
+
 ## Backup and Recovery
 
 Backup and recovery are service responsibilities. The service deployment must:
@@ -118,6 +123,7 @@ MCP mode never displays `☁️💾`, because the client cannot and need not cla
 
 - Authenticate and authorize the MCP session outside gameplay text.
 - Scope every operation to the configured campaign identity.
+- Resolve schemas only from trusted World Model configuration; validate and quote identifiers before building schema-qualified SQL.
 - Use least-privilege SQL credentials held by the service.
 - Parameterize values; never accept client-supplied SQL.
 - Keep GM Secrets in authorized owner domains and enforce read scope at the service boundary.
@@ -146,3 +152,4 @@ Repository contracts and the reference service can enforce server-side validatio
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Persistence Configuration Template](../../templates/PERSISTENCE_CONFIGURATION_TEMPLATE.md)
 - [FR-017 Implementation Audit](../../design/audits/FR_017_PORTABLE_PERSISTENCE_AND_MCP_AUDIT.md)
+- [Rule Compilation and Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)

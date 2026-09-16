@@ -1,0 +1,101 @@
+{
+  "repositoryVersion": "1.0.0+fr.018",
+  "sources": [
+    {
+      "ruleSourceId": "runtime-kernel",
+      "path": "docs/rules/RUNTIME_RULE_KERNEL.md",
+      "layer": "RuntimeKernel",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["*"],
+      "topics": [],
+      "priority": 1000,
+      "alwaysInclude": true
+    },
+    {
+      "ruleSourceId": "core-design-philosophy",
+      "path": "docs/core/DESIGN_PHILOSOPHY.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "world.simulate", "gm.adjudicate"],
+      "topics": ["core", "agency", "consequences"],
+      "priority": 100,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-reincarnation",
+      "path": "docs/soul/REINCARNATION.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "reincarnation.resolve"],
+      "topics": ["soul", "death", "reincarnation"],
+      "priority": 200,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-development",
+      "path": "docs/progression/DEVELOPMENT_SYSTEM.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "development.evaluate"],
+      "topics": ["development", "training", "capability"],
+      "priority": 150,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-monster-evolution",
+      "path": "docs/monster-evolution/MONSTER_EVOLUTION.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "evolution.resolve", "world.simulate"],
+      "topics": ["monster", "species", "evolution"],
+      "priority": 150,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-world-engine",
+      "path": "docs/world-engine/WORLD_ENGINE_OVERVIEW.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "world.simulate", "time.advance"],
+      "topics": ["world", "simulation", "causality"],
+      "priority": 125,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-context-assembly",
+      "path": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["context.assemble", "gameplay.resolve", "persistence.commit"],
+      "topics": ["context", "persistence", "read-set", "affected-set"],
+      "priority": 300,
+      "alwaysInclude": false
+    },
+    {
+      "ruleSourceId": "core-persistence-authority",
+      "path": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["context.assemble", "persistence.read", "persistence.commit"],
+      "topics": ["authority", "canon", "persistence"],
+      "priority": 300,
+      "alwaysInclude": false
+    }
+  ]
+}

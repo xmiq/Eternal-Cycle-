@@ -102,6 +102,7 @@ The **Context Assembly Layer** selects the smallest complete Read Set that can m
 Canonical Persistence
     -> Relevance Selection
     -> Direct Parameterized Queries or MCP Semantic Reads
+    -> provenance-bearing Rule Context retrieval
     -> Context Packet
     -> GM Resolution
 ```
@@ -116,6 +117,8 @@ Database stored procedures are not assumed. Implementations may use:
 - structured packet serialization.
 
 These mechanisms navigate authority. They do not create another owner.
+
+Rule retrieval follows the separate [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md) contract. The runtime loads the compact Runtime Rule Kernel, relevant Core rules, the selected World/Ruleset rules, enabled modules, and operation/topic sources. Campaign Canon remains a separate authoritative read under the same Campaign ID. The normal compiled-rule target is at most 8,000 estimated tokens; relevance filtering must exclude unrelated worlds without omitting a materially required rule.
 
 ## Relevance Selection
 
@@ -598,6 +601,10 @@ The MCP transport call returns but no validated receipt exists. The runtime disp
 
 A Direct DuckDB writer encounters an optimistic concurrency conflict. The candidate fails, the runtime reloads the active parent, and no last-writer-wins overwrite or false `💾` occurs.
 
+### Y. World-Specific Rule Retrieval
+
+A campaign bound to World A resolves the Runtime Rule Kernel, relevant Eternal Cycle Core rules, relevant World A and operation/topic rules, and Campaign A Canon. World B rules and another campaign's Canon are excluded, source provenance is retained, and the compiled-rule portion remains within the 8K normal-play target.
+
 ## Acceptance Criteria
 
 FR-011 conformance requires all of the following:
@@ -623,6 +630,7 @@ FR-011 conformance requires all of the following:
 - Derived context refresh follows canonical verification;
 - host tests exercise Regression Cases A through U against the configured persistence mode;
 - mode-specific host tests also exercise Regression Cases V through X;
+- rule-retrieval tests exercise Regression Case Y, source provenance, and the 8K world-isolation target;
 - the repository regression harness passes its mock-adapter state-machine cases.
 
 ## Safeguards
@@ -653,4 +661,5 @@ FR-011 conformance requires all of the following:
 - [Save Update Protocol](../persistence/SAVE_UPDATE_PROTOCOL.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)
 - [Context Packet Template](../../templates/CONTEXT_PACKET_TEMPLATE.md)
+- [Rule Compilation and Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md)
 - [FR-011 Implementation Audit](../../design/audits/FR_011_CONTEXT_AND_PERSISTENCE_AUDIT.md)

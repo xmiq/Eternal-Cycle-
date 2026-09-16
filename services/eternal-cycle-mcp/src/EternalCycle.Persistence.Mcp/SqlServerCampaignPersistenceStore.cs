@@ -10,6 +10,7 @@ namespace EternalCycle.Persistence.Mcp;
 
 public sealed class SqlServerCampaignPersistenceStore(
     IOptions<SqlServerPersistenceOptions> options,
+    ICampaignSchemaResolver schemaResolver,
     IDurabilityService durabilityService,
     ILogger<SqlServerCampaignPersistenceStore> logger) : ICampaignPersistenceStore
 {
@@ -20,21 +21,21 @@ public sealed class SqlServerCampaignPersistenceStore(
         CancellationToken cancellationToken)
     {
         await using var connection = await OpenConnectionAsync(cancellationToken);
-        await using var command = CreateCommand(connection, null, """
+        await using var command = CreateCampaignCommand(connection, null, campaignId, """
             SELECT
                 c.active_version,
                 c.last_validated_commit_at,
                 t.transaction_id,
                 t.status,
                 t.failure_reason
-            FROM ec.campaigns AS c
+            FROM {{schema}}.campaigns AS c
             OUTER APPLY (
                 SELECT TOP (1)
                     st.transaction_id,
                     st.status,
                     st.failure_reason,
                     st.started_at
-                FROM ec.save_transactions AS st
+                FROM {{schema}}.save_transactions AS st
                 WHERE st.campaign_id = c.campaign_id
                 ORDER BY st.started_at DESC
             ) AS t
@@ -165,8 +166,8 @@ public sealed class SqlServerCampaignPersistenceStore(
         var candidateVersion = checked(activeVersion + 1);
         var requestJson = JsonSerializer.Serialize(request);
 
-        await using (var insertTransaction = CreateCommand(connection, transaction, """
-            INSERT INTO ec.save_transactions (
+        await using (var insertTransaction = CreateCampaignCommand(connection, transaction, request.CampaignId, """
+            INSERT INTO {{schema}}.save_transactions (
                 transaction_id,
                 campaign_id,
                 idempotency_key,
@@ -227,8 +228,8 @@ public sealed class SqlServerCampaignPersistenceStore(
             var payloadHash = ComputeHash(payload);
             var nextRevision = checked((currentRevision ?? 0) + 1);
 
-            await using var insertRecord = CreateCommand(connection, transaction, """
-                INSERT INTO ec.canonical_record_versions (
+            await using var insertRecord = CreateCampaignCommand(connection, transaction, request.CampaignId, """
+                INSERT INTO {{schema}}.canonical_record_versions (
                     campaign_id,
                     owner_domain,
                     record_id,
@@ -290,8 +291,8 @@ public sealed class SqlServerCampaignPersistenceStore(
                         $"Dangling reference from {mutation.OwnerDomain}/{mutation.RecordId} to {reference.TargetOwnerDomain}/{reference.TargetRecordId}.");
                 }
 
-                await using var insertReference = CreateCommand(connection, transaction, """
-                    INSERT INTO ec.record_references (
+                await using var insertReference = CreateCampaignCommand(connection, transaction, request.CampaignId, """
+                    INSERT INTO {{schema}}.record_references (
                         campaign_id,
                         source_owner_domain,
                         source_record_id,
@@ -398,8 +399,8 @@ public sealed class SqlServerCampaignPersistenceStore(
         }
 
         await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(cancellationToken);
-        await using (var validation = CreateCommand(connection, transaction, """
-            INSERT INTO ec.validation_runs (
+        await using (var validation = CreateCampaignCommand(connection, transaction, stored.CampaignId, """
+            INSERT INTO {{schema}}.validation_runs (
                 validation_id,
                 campaign_id,
                 transaction_id,
@@ -417,7 +418,7 @@ public sealed class SqlServerCampaignPersistenceStore(
                 SYSUTCDATETIME()
             );
 
-            UPDATE ec.save_transactions
+            UPDATE {{schema}}.save_transactions
             SET status = N'CandidateValidated', failure_reason = NULL
             WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
             """))
@@ -452,19 +453,19 @@ public sealed class SqlServerCampaignPersistenceStore(
         }
 
         var receiptId = $"RCPT-{Guid.NewGuid():N}";
-        await using var command = CreateCommand(connection, transaction, """
-            UPDATE ec.campaigns
+        await using var command = CreateCampaignCommand(connection, transaction, stored.CampaignId, """
+            UPDATE {{schema}}.campaigns
             SET active_version = @candidate_version
             WHERE campaign_id = @campaign_id AND active_version = @parent_version;
 
             IF @@ROWCOUNT <> 1
                 THROW 51000, 'Candidate activation lost its parent-version lock.', 1;
 
-            UPDATE ec.save_transactions
+            UPDATE {{schema}}.save_transactions
             SET status = N'ActivatedPendingReadback', activated_at = SYSUTCDATETIME(), failure_reason = NULL
             WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
 
-            INSERT INTO ec.persistence_receipts (
+            INSERT INTO {{schema}}.persistence_receipts (
                 receipt_id,
                 campaign_id,
                 transaction_id,
@@ -515,19 +516,19 @@ public sealed class SqlServerCampaignPersistenceStore(
                 cancellationToken);
 
             await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(cancellationToken);
-            await using var command = CreateCommand(connection, transaction, """
-                UPDATE ec.persistence_receipts
+            await using var command = CreateCampaignCommand(connection, transaction, stored.CampaignId, """
+                UPDATE {{schema}}.persistence_receipts
                 SET
                     status = N'Validated',
                     validation_evidence = @validation_evidence,
                     completed_at = SYSUTCDATETIME()
                 WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
 
-                UPDATE ec.save_transactions
+                UPDATE {{schema}}.save_transactions
                 SET status = N'Completed', completed_at = SYSUTCDATETIME(), failure_reason = NULL
                 WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
 
-                UPDATE ec.campaigns
+                UPDATE {{schema}}.campaigns
                 SET last_validated_commit_at = SYSUTCDATETIME()
                 WHERE campaign_id = @campaign_id;
                 """);
@@ -556,13 +557,13 @@ public sealed class SqlServerCampaignPersistenceStore(
         CancellationToken cancellationToken)
     {
         await using var connection = await OpenConnectionAsync(cancellationToken);
-        await using var command = CreateCommand(connection, null, """
+        await using var command = CreateCampaignCommand(connection, null, campaignId, """
             SELECT
                 receipt_id,
                 campaign_version,
                 validation_evidence,
                 completed_at
-            FROM ec.persistence_receipts
+            FROM {{schema}}.persistence_receipts
             WHERE campaign_id = @campaign_id
               AND transaction_id = @transaction_id
               AND status = N'Validated';
@@ -594,7 +595,7 @@ public sealed class SqlServerCampaignPersistenceStore(
         CancellationToken cancellationToken)
     {
         await using var connection = await OpenConnectionAsync(cancellationToken);
-        await using var command = CreateCommand(connection, null, """
+        await using var command = CreateCampaignCommand(connection, null, campaignId, """
             SELECT TOP (1)
                 transaction_id,
                 campaign_id,
@@ -604,7 +605,7 @@ public sealed class SqlServerCampaignPersistenceStore(
                 candidate_version,
                 status,
                 failure_reason
-            FROM ec.save_transactions
+            FROM {{schema}}.save_transactions
             WHERE campaign_id = @campaign_id
               AND (
                     (@transaction_id IS NOT NULL AND transaction_id = @transaction_id)
@@ -638,8 +639,8 @@ public sealed class SqlServerCampaignPersistenceStore(
         CancellationToken cancellationToken)
     {
         await using var connection = await OpenConnectionAsync(cancellationToken);
-        await using var command = CreateCommand(connection, null, """
-            UPDATE ec.save_transactions
+        await using var command = CreateCampaignCommand(connection, null, campaignId, """
+            UPDATE {{schema}}.save_transactions
             SET status = @status, failure_reason = @failure_reason
             WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
             """);
@@ -658,10 +659,11 @@ public sealed class SqlServerCampaignPersistenceStore(
         CancellationToken cancellationToken)
     {
         var lockHint = lockForUpdate ? " WITH (UPDLOCK, HOLDLOCK)" : string.Empty;
-        await using var command = CreateCommand(
+        await using var command = CreateCampaignCommand(
             connection,
             transaction,
-            $"SELECT active_version FROM ec.campaigns{lockHint} WHERE campaign_id = @campaign_id;");
+            campaignId,
+            $"SELECT active_version FROM {{{{schema}}}}.campaigns{lockHint} WHERE campaign_id = @campaign_id;");
         AddParameter(command, "@campaign_id", campaignId);
         var value = await command.ExecuteScalarAsync(cancellationToken);
         return value is null or DBNull
@@ -678,7 +680,7 @@ public sealed class SqlServerCampaignPersistenceStore(
         long atVersion,
         CancellationToken cancellationToken)
     {
-        await using var command = CreateCommand(connection, transaction, """
+        await using var command = CreateCampaignCommand(connection, transaction, campaignId, """
             SELECT TOP (1)
                 records.owner_domain,
                 records.record_id,
@@ -686,8 +688,8 @@ public sealed class SqlServerCampaignPersistenceStore(
                 records.campaign_version,
                 records.payload_json,
                 records.is_tombstone
-            FROM ec.canonical_record_versions AS records
-            INNER JOIN ec.save_transactions AS transactions
+            FROM {{schema}}.canonical_record_versions AS records
+            INNER JOIN {{schema}}.save_transactions AS transactions
                 ON transactions.campaign_id = records.campaign_id
                AND transactions.transaction_id = records.transaction_id
             WHERE records.campaign_id = @campaign_id
@@ -729,7 +731,7 @@ public sealed class SqlServerCampaignPersistenceStore(
         string transactionId,
         CancellationToken cancellationToken)
     {
-        await using var command = CreateCommand(connection, transaction, """
+        await using var command = CreateCampaignCommand(connection, transaction, campaignId, """
             SELECT
                 owner_domain,
                 record_id,
@@ -737,7 +739,7 @@ public sealed class SqlServerCampaignPersistenceStore(
                 campaign_version,
                 payload_json,
                 is_tombstone
-            FROM ec.canonical_record_versions
+            FROM {{schema}}.canonical_record_versions
             WHERE campaign_id = @campaign_id
               AND owner_domain = @owner_domain
               AND record_id = @record_id
@@ -771,6 +773,16 @@ public sealed class SqlServerCampaignPersistenceStore(
 
     private SqlCommand CreateCommand(SqlConnection connection, SqlTransaction? transaction, string text) =>
         new(text, connection, transaction) { CommandTimeout = settings.CommandTimeoutSeconds };
+
+    private SqlCommand CreateCampaignCommand(
+        SqlConnection connection,
+        SqlTransaction? transaction,
+        string campaignId,
+        string text)
+    {
+        var route = schemaResolver.Resolve(campaignId);
+        return CreateCommand(connection, transaction, SqlServerSchemaIdentifier.Bind(text, route.SchemaName));
+    }
 
     private static void AddParameter(SqlCommand command, string name, object? value) =>
         command.Parameters.AddWithValue(name, value ?? DBNull.Value);

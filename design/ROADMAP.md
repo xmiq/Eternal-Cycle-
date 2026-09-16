@@ -336,13 +336,14 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 
 - [x] **FR-017 — Portable Persistence Architecture and MCP Persistence Service** — Established first-class `DIRECT` and `MCP` modes; separated runtime-neutral Database Format and Storage Adapters from the ChatGPT profile; added SQLite, DuckDB, local-storage, and Google Drive Direct contracts; added semantic MCP receipt and hidden-backend rules; and implemented a Microsoft SQL Server-backed reference MCP service with staged candidate versions, idempotent commits, validation, activation read-back, and server-owned durability hooks.
 - [x] **Release-neutral Provisional Rulings and campaign status cleanup** — Replaced the live pre-release Alpha owner with Provisional Rulings, established `NORMAL` as the released new-campaign default, made testing modes explicit, preserved First-Life Mode independently, and added legacy-metadata and runtime-bootstrap protections without creating a new Future Revision.
-- [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-017 without renumbering historical entries.
+- [x] **FR-018 — Rule Compilation and Context-Efficient Retrieval** — Preserved Repository Canon as rule authority; added a compact Runtime Rule Kernel, provenance-bearing compiler/indexer, Core/World/module/mode/operation/topic applicability, and an 8K world-isolation regression; corrected the MCP SQL Server reference so `ec` is a configurable default rather than a universal schema; and added trusted campaign-to-world-to-schema routing, scoped migration rendering, identifier security, and shared-schema campaign isolation.
+- [∞] **Future Revisions** — Gather evidence, maintain the register, and implement only objectives explicitly promoted by the project maintainer. New identifiers continue after FR-018 without renumbering historical entries.
 
 ### Current Position
 
 - **Approved pending objectives:** None.
 - **Selected implementation objective:** None.
-- **Latest completed objective:** Release-neutral Provisional Rulings and campaign status cleanup.
+- **Latest completed objective:** FR-018 — Rule Compilation and Context-Efficient Retrieval.
 - **Next action:** Continue evidence gathering and maintainer review through the [Future Revisions register](FUTURE_REVISIONS.md); no later objective is selected automatically.
 
 ### Governance

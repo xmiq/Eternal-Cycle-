@@ -1,16 +1,13 @@
 SET XACT_ABORT ON;
 GO
 
--- Reference deployment for the standard Eternal Cycle world model.
--- The `ec` schema is the default, not a universal requirement. Use
--- 001_initial.template.sql through the validated schema renderer for another
--- configured world/schema binding.
-
-IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'ec')
-    EXEC(N'CREATE SCHEMA ec AUTHORIZATION dbo;');
+-- Render only through SqlServerSchemaMigration with a trusted, validated
+-- world/schema binding. Never substitute player- or model-supplied text.
+IF NOT EXISTS (SELECT 1 FROM sys.schemas WHERE name = N'{{schema_name}}')
+    EXEC(N'CREATE SCHEMA {{schema}} AUTHORIZATION dbo;');
 GO
 
-CREATE TABLE ec.campaigns (
+CREATE TABLE {{schema}}.campaigns (
     campaign_id nvarchar(128) NOT NULL,
     repository_version nvarchar(64) NOT NULL,
     persistence_model_version nvarchar(64) NOT NULL,
@@ -23,7 +20,7 @@ CREATE TABLE ec.campaigns (
 );
 GO
 
-CREATE TABLE ec.save_transactions (
+CREATE TABLE {{schema}}.save_transactions (
     transaction_id nvarchar(128) NOT NULL,
     campaign_id nvarchar(128) NOT NULL,
     idempotency_key nvarchar(128) NOT NULL,
@@ -40,7 +37,7 @@ CREATE TABLE ec.save_transactions (
     completed_at datetimeoffset(7) NULL,
     CONSTRAINT PK_ec_save_transactions PRIMARY KEY (transaction_id),
     CONSTRAINT FK_ec_save_transactions_campaigns FOREIGN KEY (campaign_id)
-        REFERENCES ec.campaigns(campaign_id),
+        REFERENCES {{schema}}.campaigns(campaign_id),
     CONSTRAINT UQ_ec_save_transactions_idempotency UNIQUE (campaign_id, idempotency_key),
     CONSTRAINT CK_ec_save_transactions_request_json CHECK (ISJSON(request_json) = 1),
     CONSTRAINT CK_ec_save_transactions_affected_set_json CHECK (ISJSON(affected_set_json) = 1),
@@ -60,7 +57,7 @@ CREATE TABLE ec.save_transactions (
 );
 GO
 
-CREATE TABLE ec.canonical_record_versions (
+CREATE TABLE {{schema}}.canonical_record_versions (
     campaign_id nvarchar(128) NOT NULL,
     owner_domain nvarchar(128) NOT NULL,
     record_id nvarchar(128) NOT NULL,
@@ -78,9 +75,9 @@ CREATE TABLE ec.canonical_record_versions (
         campaign_version
     ),
     CONSTRAINT FK_ec_record_versions_campaigns FOREIGN KEY (campaign_id)
-        REFERENCES ec.campaigns(campaign_id),
+        REFERENCES {{schema}}.campaigns(campaign_id),
     CONSTRAINT FK_ec_record_versions_transactions FOREIGN KEY (transaction_id)
-        REFERENCES ec.save_transactions(transaction_id),
+        REFERENCES {{schema}}.save_transactions(transaction_id),
     CONSTRAINT CK_ec_record_versions_revision CHECK (record_revision > 0),
     CONSTRAINT CK_ec_record_versions_campaign_version CHECK (campaign_version > 0),
     CONSTRAINT CK_ec_record_versions_payload CHECK (ISJSON(payload_json) = 1)
@@ -88,7 +85,7 @@ CREATE TABLE ec.canonical_record_versions (
 GO
 
 CREATE INDEX IX_ec_record_versions_effective
-    ON ec.canonical_record_versions (
+    ON {{schema}}.canonical_record_versions (
         campaign_id,
         owner_domain,
         record_id,
@@ -97,7 +94,7 @@ CREATE INDEX IX_ec_record_versions_effective
     INCLUDE (record_revision, payload_hash, is_tombstone);
 GO
 
-CREATE TABLE ec.record_references (
+CREATE TABLE {{schema}}.record_references (
     campaign_id nvarchar(128) NOT NULL,
     source_owner_domain nvarchar(128) NOT NULL,
     source_record_id nvarchar(128) NOT NULL,
@@ -120,19 +117,19 @@ CREATE TABLE ec.record_references (
         source_owner_domain,
         source_record_id,
         campaign_version
-    ) REFERENCES ec.canonical_record_versions (
+    ) REFERENCES {{schema}}.canonical_record_versions (
         campaign_id,
         owner_domain,
         record_id,
         campaign_version
     ),
     CONSTRAINT FK_ec_record_references_transactions FOREIGN KEY (transaction_id)
-        REFERENCES ec.save_transactions(transaction_id)
+        REFERENCES {{schema}}.save_transactions(transaction_id)
 );
 GO
 
 CREATE INDEX IX_ec_record_references_target
-    ON ec.record_references (
+    ON {{schema}}.record_references (
         campaign_id,
         target_owner_domain,
         target_record_id,
@@ -140,7 +137,7 @@ CREATE INDEX IX_ec_record_references_target
     );
 GO
 
-CREATE TABLE ec.validation_runs (
+CREATE TABLE {{schema}}.validation_runs (
     validation_id nvarchar(128) NOT NULL,
     campaign_id nvarchar(128) NOT NULL,
     transaction_id nvarchar(128) NOT NULL,
@@ -150,14 +147,14 @@ CREATE TABLE ec.validation_runs (
     completed_at datetimeoffset(7) NOT NULL,
     CONSTRAINT PK_ec_validation_runs PRIMARY KEY (validation_id),
     CONSTRAINT FK_ec_validation_runs_campaigns FOREIGN KEY (campaign_id)
-        REFERENCES ec.campaigns(campaign_id),
+        REFERENCES {{schema}}.campaigns(campaign_id),
     CONSTRAINT FK_ec_validation_runs_transactions FOREIGN KEY (transaction_id)
-        REFERENCES ec.save_transactions(transaction_id),
+        REFERENCES {{schema}}.save_transactions(transaction_id),
     CONSTRAINT CK_ec_validation_runs_outcome CHECK (outcome IN (N'PASS', N'FAIL', N'WARNING'))
 );
 GO
 
-CREATE TABLE ec.persistence_receipts (
+CREATE TABLE {{schema}}.persistence_receipts (
     receipt_id nvarchar(128) NOT NULL,
     campaign_id nvarchar(128) NOT NULL,
     transaction_id nvarchar(128) NOT NULL,
@@ -168,14 +165,14 @@ CREATE TABLE ec.persistence_receipts (
     CONSTRAINT PK_ec_persistence_receipts PRIMARY KEY (receipt_id),
     CONSTRAINT UQ_ec_persistence_receipts_transaction UNIQUE (campaign_id, transaction_id),
     CONSTRAINT FK_ec_persistence_receipts_campaigns FOREIGN KEY (campaign_id)
-        REFERENCES ec.campaigns(campaign_id),
+        REFERENCES {{schema}}.campaigns(campaign_id),
     CONSTRAINT FK_ec_persistence_receipts_transactions FOREIGN KEY (transaction_id)
-        REFERENCES ec.save_transactions(transaction_id),
+        REFERENCES {{schema}}.save_transactions(transaction_id),
     CONSTRAINT CK_ec_persistence_receipts_status CHECK (status IN (N'PendingReadback', N'Validated'))
 );
 GO
 
-CREATE TABLE ec.recovery_points (
+CREATE TABLE {{schema}}.recovery_points (
     recovery_point_id nvarchar(128) NOT NULL,
     campaign_id nvarchar(128) NOT NULL,
     campaign_version bigint NOT NULL,
@@ -187,7 +184,7 @@ CREATE TABLE ec.recovery_points (
     verified_at datetimeoffset(7) NULL,
     CONSTRAINT PK_ec_recovery_points PRIMARY KEY (recovery_point_id),
     CONSTRAINT FK_ec_recovery_points_campaigns FOREIGN KEY (campaign_id)
-        REFERENCES ec.campaigns(campaign_id),
+        REFERENCES {{schema}}.campaigns(campaign_id),
     CONSTRAINT CK_ec_recovery_points_status CHECK (status IN (N'Pending', N'Verified', N'Failed'))
 );
 GO
