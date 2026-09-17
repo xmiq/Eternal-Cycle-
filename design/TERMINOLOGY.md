@@ -4972,6 +4972,34 @@ A non-canonical operational index of stable Campaign IDs, meaningful display nam
 
 An authorized, systematically redacted operational failure record carrying one correlation identity, operation, stage, structured error code, exception evidence, versions, relevant stable identifiers, duration, and outcome. It contains no credential, connection string, Campaign Canon, GM Secret, or private conversation and never becomes gameplay state.
 
+## Managed Operation
+
+A durably identified, service-owned unit of work that may outlive the client request that initiated it. It has explicit state, stage, bounded policy, independent status discovery, idempotent initiation where appropriate, and deterministic interruption recovery.
+
+## Rule Preparation Tier
+
+Portable dependency and urgency metadata used to order authoritative rule availability. Runtime Kernel, Campaign Bootstrap, immediate gameplay, campaign-relevant, standard, and optional or rare concerns are semantic priorities rather than arbitrary file order.
+
+## Rule Closure Readiness
+
+The `READY`, `PENDING`, or `FAILED` availability of every Rule Source and dependency required for one requested operation. Pending or failed closure forbids invented substitution.
+
+## Gameplay Ready
+
+A Managed readiness claim that the authoritative minimum closure required to begin or resume safe gameplay is available. It does not claim that every selected rule is prepared.
+
+## Full Ruleset Ready
+
+A Managed readiness claim that all required Rule Sources for the selected Ruleset and source have completed preparation. It may remain false while gameplay is safely ready.
+
+## RC Discovery Tag
+
+A deliberately moving Eternal Cycle prerelease pointer, such as `v1.1.0-rc`, used to discover the currently nominated release-candidate source. It is not immutable publication identity.
+
+## Prerelease Display Version
+
+Human-readable metadata such as `1.1.0-rc.47`, derived from a target version and commits since an immutable base release. It does not replace the exact resolved Source Identity and may not be globally unique after history changes.
+
 ## Publication Correlation ID
 
 A stable operation-scoped identifier joining one Managed publication response to its authorized diagnostic evidence and physical fallback record. It is not a Rule Release ID, Campaign ID, or security credential.

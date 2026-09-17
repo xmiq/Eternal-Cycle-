@@ -27,11 +27,11 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 
 1. Install .NET 10 and provide an existing SQL Server database plus a least-privilege connection with permission to create or upgrade the configured Eternal Cycle schemas.
 2. Set `EternalCycle:Persistence:ConnectionString` in protected host configuration.
-3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true` and set a private approval phrase.
+3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true`. Natural informed user approval is the normal path; optionally enable a private operator confirmation as an additional deployment safeguard.
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
-5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `005` to configured EC-owned scopes.
+5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `007` to configured EC-owned scopes.
 6. Select the official source from packaged [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or provide a compatible custom Git source. The selection persists in `ec_domain`.
-7. Approve initial publication. The service acquires/caches the source, resolves an immutable commit, compiles, validates, publishes, activates according to policy, and verifies readiness.
+7. Approve initial publication. The call returns a durable Operation ID promptly; the hosted worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules.
 8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
 
 The ordinary player never needs SSMS, migration filenames, schema names, Git commands, `RepositoryRoot`, Rule Release IDs, or MCP tool names. Manual SQL and local-checkout configuration below remain advanced development and recovery paths.
@@ -51,6 +51,9 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - structured first-run readiness across transport, persistence, campaign schema, Rule Domain, source, publication, activation, and campaign state;
 - permission-gated EC-owned migrations, persisted source selection, managed Git acquisition/cache, initial publication, and campaign discovery/creation;
 - bounded rule-publication batches, stage-aware structured failures, and idempotent publication resume;
+- durable queued/running/completed Managed Operations with deduplication, independent status discovery, startup interruption recovery, and service-owned timeouts;
+- fresh-database worker startup that waits for authorized migration 007 instead of requiring the operation tables to pre-exist;
+- progressive per-source readiness, dependency-aware minimum closure, manifest preparation tiers, and gameplay-driven priority boosts;
 - SQL-first Managed-operation diagnostics with a protected local physical fallback;
 - optional sanitized general file logging for hosts that hide stderr.
 
@@ -68,17 +71,19 @@ The reference does not implement PostgreSQL, MySQL, document, graph, key/value, 
 | `ec_get_rule_context` | Retrieve an already-published bounded Rule Packet. |
 | `ec_get_diagnostics` | Return sanitized implementation, rules, source, namespace, and update provenance. |
 | `ec_get_readiness` | Return structured setup and gameplay readiness without mutation. |
+| `ec_get_operation_status` | Return durable operation state, current stage, causal status, and result identity. |
+| `ec_list_managed_operations` | Rediscover recent operations after a client disconnect or lost immediate response. |
 | `ec_get_setup_plan` | Preview packaged EC-owned migrations. |
 | `ec_list_campaigns` | List meaningful campaign names with stable internal IDs. |
 | `ec_resolve_resume_campaign` | Select the sole campaign or return meaningful choices. |
 
-Administrative tools are separately configuration-gated and require an exact explicit approval phrase:
+Administrative tools are separately configuration-gated and require explicit informed user approval. An exact operator phrase is optional and, when configured, is an additional administrative safeguard rather than ordinary player UX:
 
 | Tool | Purpose |
 | --- | --- |
 | `ec_initialize_service` | Apply and validate only packaged EC-owned migrations. |
 | `ec_configure_rule_source` | Persist an explicit Stable or Prerelease official channel, or a compatible custom Git source/ref. |
-| `ec_publish_initial_rules` | Run explicit initial acquire/compile/validate/publish/activate workflow. |
+| `ec_publish_initial_rules` | Create or reuse a durable initial-publication operation and return promptly. |
 | `ec_create_campaign` | Create one stable campaign identity in the trusted default namespace. |
 
 No tool accepts arbitrary SQL, a caller-supplied schema, a connection string, or a credential. Source publication and schema mutation remain administrative responsibilities even when exposed through the explicitly gated setup surface.
@@ -100,6 +105,7 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 4. [`004_rule_source_configuration.sql`](src/EternalCycle.Persistence.Mcp/Schema/004_rule_source_configuration.sql) to persist the selected Rule Source without storing source credentials.
 5. [`005_managed_operation_diagnostics.sql`](src/EternalCycle.Persistence.Mcp/Schema/005_managed_operation_diagnostics.sql) to preserve redacted operation evidence with correlation and publication-stage metadata.
 6. [`006_rule_source_compatibility.sql`](src/EternalCycle.Persistence.Mcp/Schema/006_rule_source_compatibility.sql) to add source-channel, discovery-ref, manifest-contract, and safe causal-diagnostic provenance.
+7. [`007_durable_managed_operations.sql`](src/EternalCycle.Persistence.Mcp/Schema/007_durable_managed_operations.sql) to add durable operations, per-source preparation state and priority, and human-readable prerelease metadata while preserving source SHA identity.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 
@@ -141,6 +147,8 @@ EternalCycle:Rules:ReleaseChannel = Stable | Prerelease
 EternalCycle:Rules:MaximumEstimatedTokens = 8000
 EternalCycle:Rules:UpdatePolicy = Disabled | Startup | Periodic | Manual
 EternalCycle:Rules:ActivationPolicy = Automatic | Manual
+EternalCycle:Rules:ManagedOperationTimeout = 00:30:00
+EternalCycle:Rules:ManagedOperationPollInterval = 00:00:01
 EternalCycle:Rules:CampaignPinnedRuleReleaseIds:<campaign-id> = <published-release-id>
 EternalCycle:Rules:GitSource:RepositoryRoot = <trusted Git checkout>
 EternalCycle:Rules:GitSource:Ref = <trusted branch, tag, or commit>
@@ -157,7 +165,8 @@ Administration configuration includes:
 
 ```text
 EternalCycle:Administration:Enabled = false
-EternalCycle:Administration:ApprovalPhrase = <private explicit confirmation phrase>
+EternalCycle:Administration:RequireOperatorConfirmation = false
+EternalCycle:Administration:ApprovalPhrase = <optional private operator confirmation>
 EternalCycle:Administration:ManagedRuleCacheDirectory = <optional managed cache>
 EternalCycle:Administration:SanitizedLogFile = <optional log file>
 ```
@@ -173,6 +182,8 @@ EternalCycle:Diagnostics:PersistenceTimeout = 00:00:10
 `VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
 
 The packaged `distribution-metadata.json` identifies the official repository, historical product release tag, compatible Stable and Prerelease Rule Source refs, and source manifest. Product version and Rule Source channel are independent: `VERSION` remains `1.0.0`, and the immutable `v1.0.0` tag remains historical provenance even though it predates the Managed manifest contract. Stable is the default and never falls forward to unreleased content. If no compatible Stable source is published, setup returns `RULE_SOURCE_INCOMPATIBLE`; an administrator must explicitly select Prerelease for current development testing.
+
+Eternal Cycle full-release tags are immutable. The configured `v1.1.0-rc` tag is a deliberately moving discovery pointer and is not created or moved by this implementation task. For an official Prerelease snapshot, the service records Base Release, Discovery Tag, commits since base, derived display version such as `1.1.0-rc.47`, and the exact source commit. The commit SHA is identity; the display version is metadata and may collide across rewritten histories.
 
 The reference project resolves distribution metadata from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the discovery ref once, records the exact commit SHA as immutable publication provenance, and reads the manifest and declared documents at that commit. Moving the discovery ref later does not rewrite an existing Rule Release.
 
@@ -190,12 +201,12 @@ Candidate campaign records remain inactive until the complete Affected Set valid
 - Campaign ID isolation is enforced independently of namespace routing.
 - Configurable identifiers are strictly validated and safely quoted.
 - Gameplay tools have no source-publication or database-administration authority.
-- Setup operations require both service-side enablement and an exact approval phrase; they can execute only packaged migrations and bounded domain operations.
+- Setup operations require service-side enablement and explicit informed user approval; deployments may separately require operator confirmation. They can execute only packaged migrations and bounded domain operations.
 - Diagnostic output excludes connection strings, credentials, locators, Campaign Canon, GM Secrets, and conversations.
 
 ## Validation Boundary
 
-The repository tests use fakes, the official manifest, and local Git fixtures for no-checkout acquisition, publication, bounded write planning, fallback, activation, filtering, diagnostics, readiness, approval, campaign selection, cancellation, and routing. They do not prove live SQL Server migration/transaction/concurrency, remote GitHub acquisition, authentication, backup/recovery, long-running scheduling, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
+The repository tests use fakes, the official manifest, and local Git fixtures for no-checkout acquisition, durable worker recovery, publication, bounded write planning, progressive readiness, dynamic priority, fallback, activation, filtering, diagnostics, authorization, campaign selection, cancellation, and routing. They do not prove live SQL Server migration/transaction/concurrency, remote GitHub acquisition, authentication, backup/recovery, sustained process restart across real infrastructure, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
 
 ## Troubleshooting
 
@@ -212,6 +223,8 @@ The repository tests use fakes, the official manifest, and local Git fixtures fo
 - `RULE_SOURCE_READ_FAILED`: verify the manifest and every declared source path at the resolved commit.
 - `RULE_COMPILATION_FAILED` or `RULE_VALIDATION_FAILED`: inspect the immutable source revision and correlated diagnostic; blind retry is not expected to repair invalid content.
 - `RULE_STORE_STAGE_FAILED`, `RULE_PUBLICATION_FAILED`, or `RULE_ACTIVATION_FAILED`: inspect SQL availability and the correlated diagnostic; retry resumes durable publication state rather than duplicating it.
+- `RULE_CLOSURE_PENDING` or `RULE_CONTEXT_PENDING`: query operation/context status and allow priority preparation to complete; do not improvise the missing rule.
+- `MANAGED_OPERATION_INTERRUPTED`: the service detected lost execution ownership after restart and will reclaim idempotent work or leave a retryable failure.
 - `RULE_PUBLICATION_CANCELLED`: retry safely; the service reuses any candidate stage that committed before cancellation.
 - `CAMPAIGN_NOT_FOUND`: list campaigns or use the authorized creation path.
 - generic host error with hidden stderr: use the returned correlation ID, inspect the SQL diagnostic record or protected physical fallback, and optionally enable verbose errors in a trusted development environment.

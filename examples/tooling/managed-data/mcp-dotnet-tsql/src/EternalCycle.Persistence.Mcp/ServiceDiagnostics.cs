@@ -19,30 +19,32 @@ public sealed record SanitizedDiagnosticReport(
     string Interface,
     string PersistenceStrategy,
     string StorageAdapterFamily,
-    string CampaignId,
-    string WorldModelId,
-    string DataNamespaceId,
-    string RulesetId,
-    string RulesetVersion,
+    string? CampaignId,
+    string? WorldModelId,
+    string? DataNamespaceId,
+    string? RulesetId,
+    string? RulesetVersion,
     string? ActiveRuleReleaseId,
     string? CanonicalSourceIdentity,
     string RuleUpdateStatus,
     string? RuleUpdateDetail,
     ManagedReadinessReport Readiness,
-    string SanitizationStatement);
+    string SanitizationStatement,
+    ManagedOperationStatus? LatestManagedOperation = null);
 
 public interface IServiceDiagnostics
 {
     ManagedServiceCapabilities GetCapabilities();
 
     Task<SanitizedDiagnosticReport> GetReportAsync(
-        string campaignId,
+        string? campaignId,
         CancellationToken cancellationToken);
 }
 
 public sealed class ServiceDiagnostics(
     ICampaignSchemaResolver schemaResolver,
-    IManagedReadinessService readiness) : IServiceDiagnostics
+    IManagedReadinessService readiness,
+    IManagedOperationStore? operations = null) : IServiceDiagnostics
 {
     public ManagedServiceCapabilities GetCapabilities() =>
         new(
@@ -58,36 +60,42 @@ public sealed class ServiceDiagnostics(
                 "rules.context",
                 "diagnostics.sanitized",
                 "readiness.structured",
+                "operations.durable",
+                "rules.progressive-readiness",
                 "setup.permission-gated",
                 "campaign.discovery"
             ],
             true);
 
     public async Task<SanitizedDiagnosticReport> GetReportAsync(
-        string campaignId,
+        string? campaignId,
         CancellationToken cancellationToken)
     {
-        var route = schemaResolver.Resolve(campaignId);
+        var route = campaignId is null ? null : schemaResolver.Resolve(campaignId);
         var report = await readiness.GetReadinessAsync(campaignId, cancellationToken);
+        var latestOperation = operations is null
+            ? null
+            : (await operations.ListRecentAsync(null, 1, cancellationToken)).FirstOrDefault();
         var implementationVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "unknown";
         return new SanitizedDiagnosticReport(
-            "1.0.0+post-release",
+            "1.0.0",
             ".NET / MCP / T-SQL reference implementation",
             implementationVersion,
             "MCP",
             "MANAGED",
             "Microsoft SQL Server / T-SQL",
-            route.CampaignId,
-            route.WorldModelId,
-            route.DataNamespaceId,
-            route.RulesetId,
-            route.RulesetVersion,
+            route?.CampaignId,
+            route?.WorldModelId,
+            route?.DataNamespaceId,
+            route?.RulesetId,
+            route?.RulesetVersion,
             report.ActiveRuleReleaseId,
             report.RuleSourceRevision,
             report.State.ToString(),
             report.ErrorCode,
             report,
-            "Credentials, connection strings, locators, Campaign Canon, GM Secrets, and private conversations are omitted.");
+            "Credentials, connection strings, locators, Campaign Canon, GM Secrets, and private conversations are omitted.",
+            latestOperation);
     }
 }
 
@@ -101,7 +109,7 @@ public sealed class ServiceDiagnosticTools(IServiceDiagnostics diagnostics)
     [McpServerTool(Name = "ec_get_diagnostics", ReadOnly = true, Idempotent = true),
      Description("Returns a sanitized provenance and service-status report without Campaign Canon or backend secrets.")]
     public Task<SanitizedDiagnosticReport> GetReportAsync(
-        [Description("Stable campaign identifier from protected Campaign Configuration.")] string campaignId,
+        [Description("Optional stable campaign identifier. Omit it for service/bootstrap diagnostics before a campaign exists.")] string? campaignId,
         CancellationToken cancellationToken) =>
         diagnostics.GetReportAsync(campaignId, cancellationToken);
 }

@@ -5,6 +5,9 @@
   "stableReleaseTag": "v1.0.0",
   "developmentRef": "main",
   "stableRuleSourceRef": null,
-  "prereleaseRuleSourceRef": "refs/heads/main",
+  "prereleaseRuleSourceRef": "refs/tags/v1.1.0-rc",
+  "prereleaseBaseRelease": "v1.0.0",
+  "prereleaseDiscoveryTag": "v1.1.0-rc",
+  "prereleaseTargetVersion": "1.1.0",
   "ruleSourceManifest": "docs/rules/rule-source-manifest.json"
 }

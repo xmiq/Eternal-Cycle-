@@ -12,6 +12,7 @@ public enum ManagedReadinessState
     RuleSourceRequired,
     RulePublicationRequired,
     RuleActivationRequired,
+    RulePreparationPending,
     CampaignRequired,
     Degraded,
     Error
@@ -65,7 +66,12 @@ public sealed record ManagedReadinessReport(
     string Message,
     bool AdministrativeActionRequired,
     bool SanitizedFileLogConfigured,
-    ManagedCausalDiagnostic? LatestRelevantFailure = null);
+    ManagedCausalDiagnostic? LatestRelevantFailure = null,
+    bool ServiceReady = true,
+    bool PersistenceReady = false,
+    bool RuleKernelReady = false,
+    bool CampaignBootstrapReady = false,
+    bool FullRulesetReady = false);
 
 public sealed record ManagedInfrastructureSnapshot(
     ManagedComponentStatus PersistenceConnection,
@@ -80,7 +86,10 @@ public sealed record ManagedInfrastructureSnapshot(
     string? LatestUpdateOutcome,
     bool SanitizedFileLogConfigured,
     string? FailureCode = null,
-    ManagedCausalDiagnostic? LatestRelevantFailure = null);
+    ManagedCausalDiagnostic? LatestRelevantFailure = null,
+    bool? RuleKernelReady = null,
+    bool? CampaignBootstrapReady = null,
+    bool? FullRulesetReady = null);
 
 public interface IManagedInfrastructureInspector
 {
@@ -120,6 +129,13 @@ public static class ManagedReadinessEvaluator
             : snapshot.ActiveRuleReleaseCompatible
                 ? new ReadinessComponent(ManagedComponentStatus.Ready, "An active compatible Rule Release is available.")
                 : new ReadinessComponent(ManagedComponentStatus.Incompatible, "The active Rule Release is incompatible with the configured RuleSet version.");
+        var persistenceReady = snapshot.PersistenceConnection == ManagedComponentStatus.Ready &&
+            snapshot.CampaignSchema == ManagedComponentStatus.Ready &&
+            snapshot.RuleDomainSchema == ManagedComponentStatus.Ready;
+        var ruleKernelReady = snapshot.RuleKernelReady ??
+            (snapshot.ActiveRuleReleaseId is not null && snapshot.ActiveRuleReleaseCompatible);
+        var campaignBootstrapReady = snapshot.CampaignBootstrapReady ?? ruleKernelReady;
+        var fullRulesetReady = snapshot.FullRulesetReady ?? campaignBootstrapReady;
 
         ManagedReadinessState state;
         string? errorCode;
@@ -193,6 +209,14 @@ public static class ManagedReadinessEvaluator
             gameplayReady = false;
             administrativeActionRequired = true;
         }
+        else if (!ruleKernelReady || !campaignBootstrapReady)
+        {
+            state = ManagedReadinessState.RulePreparationPending;
+            errorCode = "RULE_CLOSURE_PENDING";
+            message = "The minimum authoritative gameplay rule closure is still being prepared. Query the active Managed Operation rather than guessing missing rules.";
+            gameplayReady = false;
+            administrativeActionRequired = false;
+        }
         else if (campaignRequested && snapshot.Campaign is ManagedComponentStatus.Missing)
         {
             state = ManagedReadinessState.CampaignRequired;
@@ -213,7 +237,9 @@ public static class ManagedReadinessEvaluator
         {
             state = ManagedReadinessState.Ready;
             errorCode = null;
-            message = "The Managed service is ready for gameplay.";
+            message = fullRulesetReady
+                ? "The Managed service and full selected RuleSet are ready for gameplay."
+                : "The minimum authoritative closure is ready for gameplay while remaining rules continue preparation.";
             gameplayReady = true;
             administrativeActionRequired = false;
         }
@@ -235,7 +261,12 @@ public static class ManagedReadinessEvaluator
             message,
             administrativeActionRequired,
             snapshot.SanitizedFileLogConfigured,
-            snapshot.LatestRelevantFailure);
+            snapshot.LatestRelevantFailure,
+            ServiceReady: true,
+            PersistenceReady: persistenceReady,
+            RuleKernelReady: ruleKernelReady,
+            CampaignBootstrapReady: campaignBootstrapReady,
+            FullRulesetReady: fullRulesetReady);
     }
 
     private static ReadinessComponent Component(ManagedComponentStatus status, string name) =>
@@ -309,7 +340,11 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 domainTables.Contains("rule_source_configurations") &&
                 domainTables.Contains("managed_operation_diagnostics") &&
                 await RuleSourceCompatibilityColumnsReadyAsync(connection, cancellationToken);
-            if (domainCoreReady && !ruleSourceCompatibilityReady)
+            var durableOperationsReady = domainCoreReady &&
+                domainTables.Contains("managed_operations") &&
+                domainTables.Contains("rule_source_preparation") &&
+                await DurableManagedOperationColumnsReadyAsync(connection, cancellationToken);
+            if (domainCoreReady && (!ruleSourceCompatibilityReady || !durableOperationsReady))
             {
                 domainSchema = ManagedComponentStatus.Outdated;
             }
@@ -319,13 +354,17 @@ public sealed class SqlServerManagedInfrastructureInspector(
             string? activeReleaseId = null;
             string? activeSourceIdentity = null;
             var activeCompatible = false;
+            bool? ruleKernelReady = null;
+            bool? campaignBootstrapReady = null;
+            bool? fullRulesetReady = null;
             string? latestUpdateOutcome = null;
             ManagedCausalDiagnostic? latestRelevantFailure = null;
 
             if (domainCoreReady)
             {
-                (publishedCount, activeReleaseId, activeSourceIdentity, activeCompatible, latestUpdateOutcome) =
-                    await ReadRuleStateAsync(connection, route, cancellationToken);
+                (publishedCount, activeReleaseId, activeSourceIdentity, activeCompatible, latestUpdateOutcome,
+                    ruleKernelReady, campaignBootstrapReady, fullRulesetReady) =
+                    await ReadRuleStateAsync(connection, route, durableOperationsReady, cancellationToken);
                 if (latestUpdateOutcome is "Failed" or "Degraded")
                 {
                     source = ManagedComponentStatus.Unavailable;
@@ -356,7 +395,10 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 campaign,
                 latestUpdateOutcome,
                 !string.IsNullOrWhiteSpace(administration.SanitizedLogFile),
-                LatestRelevantFailure: latestRelevantFailure);
+                LatestRelevantFailure: latestRelevantFailure,
+                RuleKernelReady: ruleKernelReady,
+                CampaignBootstrapReady: campaignBootstrapReady,
+                FullRulesetReady: fullRulesetReady);
         }
         catch (SqlException)
         {
@@ -407,6 +449,35 @@ public sealed class SqlServerManagedInfrastructureInspector(
         };
         command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
         return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 10;
+    }
+
+    private async Task<bool> DurableManagedOperationColumnsReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND (
+                    (tables.name = N'managed_operations' AND columns.name IN (
+                        N'operation_id', N'operation_state', N'current_stage', N'deduplication_key',
+                        N'user_approval_required', N'administrative_intervention_required',
+                        N'result_rule_release_id'))
+                   OR (tables.name = N'rule_source_preparation' AND columns.name IN (
+                          N'rule_release_id', N'rule_source_id', N'preparation_tier',
+                          N'preparation_state', N'base_priority', N'priority_boost'))
+                 OR (tables.name = N'rule_releases' AND columns.name IN (
+                        N'base_release', N'discovery_tag', N'commits_since_base', N'display_version'))
+              );
+            """, connection)
+        {
+            CommandTimeout = persistence.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 17;
     }
 
     private async Task<ManagedCausalDiagnostic?> ReadLatestRelevantFailureAsync(
@@ -504,10 +575,19 @@ public sealed class SqlServerManagedInfrastructureInspector(
         return ManagedComponentStatus.NotConfigured;
     }
 
-    private async Task<(int Count, string? ReleaseId, string? SourceIdentity, bool Compatible, string? UpdateOutcome)>
+    private async Task<(
+        int Count,
+        string? ReleaseId,
+        string? SourceIdentity,
+        bool Compatible,
+        string? UpdateOutcome,
+        bool? RuleKernelReady,
+        bool? CampaignBootstrapReady,
+        bool? FullRulesetReady)>
         ReadRuleStateAsync(
             SqlConnection connection,
             CampaignSchemaRoute route,
+            bool preparationAvailable,
             CancellationToken cancellationToken)
     {
         await using var command = DomainCommand(connection, """
@@ -533,12 +613,48 @@ public sealed class SqlServerManagedInfrastructureInspector(
         var sourceIdentity = reader.IsDBNull(2) ? null : reader.GetString(2);
         var repositoryVersion = reader.IsDBNull(3) ? null : reader.GetString(3);
         var updateOutcome = reader.IsDBNull(4) ? null : reader.GetString(4);
+        bool? ruleKernelReady = null;
+        bool? campaignBootstrapReady = null;
+        bool? fullRulesetReady = null;
+        if (preparationAvailable && releaseId is not null)
+        {
+            await reader.DisposeAsync();
+            await using var preparation = DomainCommand(connection, """
+                SELECT
+                    SUM(CASE WHEN preparation_tier = N'RuntimeKernel' THEN 1 ELSE 0 END),
+                    SUM(CASE WHEN preparation_tier = N'RuntimeKernel' AND preparation_state = N'Ready' THEN 1 ELSE 0 END),
+                    SUM(CASE WHEN preparation_tier IN (N'RuntimeKernel', N'CampaignBootstrap', N'ImmediateGameplayCore') THEN 1 ELSE 0 END),
+                    SUM(CASE WHEN preparation_tier IN (N'RuntimeKernel', N'CampaignBootstrap', N'ImmediateGameplayCore') AND preparation_state = N'Ready' THEN 1 ELSE 0 END),
+                    COUNT(*),
+                    SUM(CASE WHEN preparation_state = N'Ready' THEN 1 ELSE 0 END)
+                FROM {{schema}}.rule_source_preparation
+                WHERE rule_release_id = @rule_release_id;
+                """);
+            preparation.Parameters.AddWithValue("@rule_release_id", releaseId);
+            await using var preparationReader = await preparation.ExecuteReaderAsync(
+                CommandBehavior.SingleRow,
+                cancellationToken);
+            _ = await preparationReader.ReadAsync(cancellationToken);
+            var kernelCount = preparationReader.IsDBNull(0) ? 0 : preparationReader.GetInt32(0);
+            var kernelReadyCount = preparationReader.IsDBNull(1) ? 0 : preparationReader.GetInt32(1);
+            var bootstrapCount = preparationReader.IsDBNull(2) ? 0 : preparationReader.GetInt32(2);
+            var bootstrapReadyCount = preparationReader.IsDBNull(3) ? 0 : preparationReader.GetInt32(3);
+            var totalCount = preparationReader.GetInt32(4);
+            var totalReadyCount = preparationReader.IsDBNull(5) ? 0 : preparationReader.GetInt32(5);
+            ruleKernelReady = kernelCount > 0 && kernelCount == kernelReadyCount;
+            campaignBootstrapReady = ruleKernelReady.Value && bootstrapCount == bootstrapReadyCount;
+            fullRulesetReady = totalCount > 0 && totalCount == totalReadyCount;
+        }
+
         return (
             count,
             releaseId,
             sourceIdentity,
             releaseId is not null && repositoryVersion is not null && Compatible(route.RulesetVersion, repositoryVersion),
-            updateOutcome);
+            updateOutcome,
+            ruleKernelReady,
+            campaignBootstrapReady,
+            fullRulesetReady);
     }
 
     private async Task<HashSet<string>> ReadTablesAsync(

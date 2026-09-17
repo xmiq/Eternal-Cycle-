@@ -11,6 +11,8 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 5. [Unresolved Questions](UNRESOLVED_QUESTIONS.md) - blocking and non-blocking questions that have not become accepted decisions.
 6. [Future Revisions](FUTURE_REVISIONS.md) - Phase 13 evidence candidates for later owner-authorized post-release work.
 7. [Developer Notes](DEVELOPER_NOTES.md) - non-canonical checkpoints, watchlists, alternatives, and resume instructions.
+8. [Development Feedback Method](DEVELOPMENT_METHOD.md) - the observe, classify, fix, and evidence loop for reference, Managed-contract, and Eternal Cycle-wide findings.
+9. [Release and Version Provenance](RELEASE_VERSIONING.md) - immutable full releases, moving RC discovery, source identity, and display metadata.
 
 ## Audits
 

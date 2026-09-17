@@ -67,7 +67,7 @@ When the user asks to start a new game without an explicit testing request:
 5. enumerate available compliant persistence capabilities, select `DIRECT` or `MANAGED`, persist the selection, and bind its canonical authority under [Enumerate -> Select -> Persist -> Reuse](../persistence/PERSISTENCE_STRATEGY_SELECTION.md);
 6. create the external Campaign ID, Campaign Canon and Rules Profile, Save Index, required owner records, and initial Timeline boundary;
 7. validate the canonical persistence target and blank-to-initial-state transaction;
-8. enter play only after the initial canonical save is committed and validated;
+8. enter play only after the initial canonical save is committed and validated and the minimum authoritative rule closure reports `GameplayReady`; do not require unrelated remaining modules to reach `FullRulesetReady`;
 9. present ordinary Eternal Cycle setup or gameplay without Alpha or playtest wording.
 
 The GM may ask clarifying questions when a required premise, persistence choice, or player-controlled decision is missing. It must not fill missing campaign facts by genre assumption.

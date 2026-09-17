@@ -26,12 +26,15 @@ Stable is the normal default and must not silently use unreleased content. Until
 7. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
 8. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
 9. Repeat with an isolated custom compatible source to prove override behavior.
-10. Publish and activate an initial release from the managed `--no-checkout` cache within the target client's operation timeout; verify one source-unique release and `READY`.
-11. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
-12. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
-13. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
-14. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
-15. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
+10. Initiate publication and verify the call returns promptly with a durable Operation ID, without requiring the client request to remain open for acquisition, compilation, validation, publication, or activation.
+11. Poll or rediscover the operation independently. Verify the Runtime Rule Kernel and Campaign Bootstrap closure become ready, `GameplayReady` becomes true while `FullRulesetReady` may remain false, and remaining rules continue preparation under service-owned timeout policy.
+12. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
+13. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
+14. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
+15. Stop the client during publication, reconnect, and verify recent-operation discovery recovers the authoritative status without cancelling service-owned work.
+16. Restart the service while an operation is `Running`; verify it cannot remain phantom-running, is recovered as `Interrupted`, and is safely reclaimed through idempotent publication or left retryable.
+17. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
+18. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
 
 ## MCP-Only Gameplay Run
 
@@ -59,3 +62,31 @@ Exercise missing campaign schema, missing rule schema, missing source, source un
 ## Evidence and Pass Boundary
 
 The run passes only when SQL inspection, service diagnostics, MCP traces, restart/resume behavior, and receipts agree. Unit-test fakes cannot establish this acceptance result. Document any host that hides stderr and confirm the optional sanitized file log contains useful category and exception-type evidence without secrets.
+
+## Required Real-Deployment Scenarios
+
+These scenarios remain pending until executed against their named real infrastructure. Repository tests and fakes do not establish them.
+
+### A. LM Studio Fresh Campaign
+
+Start a new campaign through LM Studio. Natural informed approval authorizes setup without a magic phrase. Initial publication returns an Operation ID promptly; minimum authoritative rules become playable before full preparation completes. The player supplies no Campaign ID, SHA, Git instruction, SQL instruction, mirror, or infrastructure diagnosis.
+
+### B. Unsloth Studio Fresh Campaign
+
+Repeat Scenario A through Unsloth Studio. Its interactive request deadline must not cancel the durable publication operation.
+
+### C. Client Disconnect and Restart
+
+Begin publication, close the client, reconnect, and discover the existing operation. Service state remains authoritative and no duplicate initial publication is launched.
+
+### D. Managed Service Restart
+
+Restart the reference service during publication. Persisted work is detected as interrupted and safely resumed or left retryable; no operation remains `Running` forever without an owner.
+
+### E. Progressive Gameplay
+
+Begin from a cold Rule Store, prepare the minimum authoritative gameplay closure, and start play while optional rules remain pending. Request an unexpected mechanic and verify its dependency closure receives higher preparation priority, returns `PENDING` rather than invented rules, then succeeds only after becoming `READY`.
+
+### F. Moving RC Update
+
+Resolve `v1.1.0-rc` to SHA A and publish its derived `rc.N` metadata. Move the discovery tag to SHA B, detect and publish the new derived `rc.M`, and verify the earlier Rule Release remains permanently bound to SHA A.

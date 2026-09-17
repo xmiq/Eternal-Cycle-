@@ -5313,3 +5313,27 @@ A Managed Rule Source must provide a supported manifest format, compatible compi
 ## D-1328 — Network Acquisition and Local Git Work Have Separate Bounds
 
 Remote clone and fetch use a configurable acquisition timeout distinct from the local Git process timeout used for ref and object inspection. Process-tree termination and redirected-stream cleanup have their own bounded grace period and cannot indefinitely delay the original timeout result. Valid no-checkout caches and locally verified immutable revisions may be reused under the selected update policy; incomplete caches are replaced deterministically. Readiness may retain a broad current classification while exposing the latest safe causal operation diagnostic separately.
+
+## D-1329 — Long-Running Managed Work Uses Durable Operations
+
+A Managed action that may exceed an interactive request creates or reuses a durable Managed Operation and returns its identity promptly. Client timeout or disconnect does not cancel service-owned work; service restart recovers persisted execution ownership deterministically, and domain idempotency remains authoritative.
+
+## D-1330 — Gameplay Readiness Is Progressive but Never Speculative
+
+Gameplay may begin when the Runtime Rule Kernel and Campaign Bootstrap dependency closure is available even while unrelated rules remain pending. A requested unavailable closure becomes pending and receives preparation priority; the GM does not invent the missing authoritative rule. `GameplayReady` and `FullRulesetReady` are distinct claims.
+
+## D-1331 — Service Diagnostics Do Not Require Campaign Identity
+
+Transport, persistence, migration, Rule Source, publication, activation, Managed Operation, implementation, and latest causal service diagnostics are available without a Campaign ID. A valid Campaign ID may enrich that report but is never borrowed from an unrelated campaign merely to diagnose setup.
+
+## D-1332 — User Approval and Operator Intervention Are Distinct
+
+Normal informed user approval may authorize a gated Managed action through an explicit authorization field after the user agrees. Operator intervention is a separate deployment condition. Ordinary players are not required to provide magic phrases, Git references, SHAs, repository paths, SQL identifiers, or other implementation details.
+
+## D-1333 — RC Discovery Moves but Resolved Provenance Does Not
+
+Eternal Cycle full-release tags are immutable. A target-version RC tag is a deliberately moving discovery pointer. Providers record the exact resolved source identity as authoritative provenance and may derive `rc.N` display metadata from commits since the previous full release; display metadata never replaces immutable source identity or rewrites an earlier Rule Release.
+
+## D-1334 — Deployment Findings Are Generalized by Invariant
+
+Every real-deployment finding is classified as reference-only, Managed-contract, or Eternal Cycle-wide before correction. The project generalizes the invariant revealed by an implementation failure, not the implementation accident, and records automated or real-deployment evidence at the layer it actually proves.

@@ -31,10 +31,11 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 20. [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md) defines the first-class `DIRECT` and `MANAGED` strategies, shared completion contract, configuration boundary, status evidence, and migration.
 21. [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md) defines runtime-operated Database Format and Storage Adapter composition, capability gates, and direct completion evidence.
 22. [Managed Data Service](MANAGED_DATA_SERVICE.md) defines the implementation-neutral semantic service contract, hidden backend, service-owned durability, and required capability families.
-23. [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md) defines runtime-neutral readiness, first-run setup handoff, source selection, and start/resume operation.
-24. [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md) defines MCP as one optional interface realization, including validated receipts and no raw datastore surface.
-25. [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md) defines stable storage-neutral isolation and native datastore mappings.
-26. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
+23. [Managed Operations](MANAGED_OPERATIONS.md) defines durable long-running operation identity, lifecycle, idempotency, recovery, authorization, timeout policy, status, and result evidence.
+24. [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md) defines runtime-neutral readiness, first-run setup handoff, source selection, and start/resume operation.
+25. [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md) defines MCP as one optional interface realization, including validated receipts and no raw datastore surface.
+26. [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md) defines stable storage-neutral isolation and native datastore mappings.
+27. [Campaign Persistence Integration](CAMPAIGN_PERSISTENCE_INTEGRATION.md) defines the completed-system ownership matrix, operating cycle, specialist handoffs, cross-system state changes, correction routes, and blank-template boundary.
 
 ## Foundational Boundary
 

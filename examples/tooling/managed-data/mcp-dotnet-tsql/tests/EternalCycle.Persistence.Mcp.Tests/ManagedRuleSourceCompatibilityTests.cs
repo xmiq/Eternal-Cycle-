@@ -525,6 +525,11 @@ public sealed class ManagedRuleSourceCompatibilityTests
                 return Task.FromResult(new GitProcessResult(0, Sha, string.Empty));
             }
 
+            if (arguments[0] == "rev-list")
+            {
+                return Task.FromResult(new GitProcessResult(0, "47", string.Empty));
+            }
+
             if (arguments[0] == "show" && arguments[1].EndsWith(":docs/rules/manifest.json", StringComparison.Ordinal))
             {
                 return Task.FromResult(new GitProcessResult(0, """

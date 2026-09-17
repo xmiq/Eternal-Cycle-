@@ -16,8 +16,10 @@ public enum RulePublicationStage
     Compile,
     Validate,
     Stage,
+    PrepareMinimumClosure,
     Publish,
     Activate,
+    PrepareRemainingRules,
     RecordUpdateCheck,
     Cancelled
 }

@@ -78,7 +78,11 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
                 releases.release_channel,
                 releases.discovery_ref,
                 releases.manifest_format_version,
-                releases.compiler_contract_version
+                releases.compiler_contract_version,
+                releases.base_release,
+                releases.discovery_tag,
+                releases.commits_since_base,
+                releases.display_version
             FROM {{schema}}.active_rule_releases AS active
             INNER JOIN {{schema}}.rule_releases AS releases
                 ON releases.ruleset_id = active.ruleset_id
@@ -110,7 +114,11 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
                 release_channel,
                 discovery_ref,
                 manifest_format_version,
-                compiler_contract_version
+                compiler_contract_version,
+                base_release,
+                discovery_tag,
+                commits_since_base,
+                display_version
             FROM {{schema}}.rule_releases
             WHERE ruleset_id = @ruleset_id AND source_identity = @source_identity
             ORDER BY created_at DESC;
@@ -141,7 +149,11 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
                 release_channel,
                 discovery_ref,
                 manifest_format_version,
-                compiler_contract_version
+                compiler_contract_version,
+                base_release,
+                discovery_tag,
+                commits_since_base,
+                display_version
             FROM {{schema}}.rule_releases
             WHERE ruleset_id = @ruleset_id AND rule_release_id = @rule_release_id;
             """);
@@ -210,7 +222,11 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
                 release_channel,
                 discovery_ref,
                 manifest_format_version,
-                compiler_contract_version
+                compiler_contract_version,
+                base_release,
+                discovery_tag,
+                commits_since_base,
+                display_version
             ) VALUES (
                 @rule_release_id,
                 @ruleset_id,
@@ -224,7 +240,11 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
                 @release_channel,
                 @discovery_ref,
                 @manifest_format_version,
-                @compiler_contract_version
+                @compiler_contract_version,
+                @base_release,
+                @discovery_tag,
+                @commits_since_base,
+                @display_version
             );
             """))
         {
@@ -240,6 +260,10 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
             AddParameter(releaseCommand, "@discovery_ref", release.DiscoveryRef);
             AddParameter(releaseCommand, "@manifest_format_version", release.ManifestFormatVersion);
             AddParameter(releaseCommand, "@compiler_contract_version", release.CompilerContractVersion);
+            AddParameter(releaseCommand, "@base_release", release.VersionMetadata?.BaseRelease);
+            AddParameter(releaseCommand, "@discovery_tag", release.VersionMetadata?.DiscoveryTag);
+            AddParameter(releaseCommand, "@commits_since_base", release.VersionMetadata?.CommitsSinceBase);
+            AddParameter(releaseCommand, "@display_version", release.VersionMetadata?.DisplayVersion);
             await releaseCommand.ExecuteNonQueryAsync(cancellationToken);
         }
 
@@ -519,7 +543,15 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
             Enum.Parse<RuleSourceReleaseChannel>(reader.GetString(10), ignoreCase: true),
             reader.IsDBNull(11) ? null : reader.GetString(11),
             reader.IsDBNull(12) ? null : reader.GetInt32(12),
-            reader.IsDBNull(13) ? null : reader.GetString(13));
+            reader.IsDBNull(13) ? null : reader.GetString(13),
+            reader.IsDBNull(14) || reader.IsDBNull(15) || reader.IsDBNull(16) || reader.IsDBNull(17)
+                ? null
+                : new RuleSourceVersionMetadata(
+                    reader.GetString(14),
+                    reader.GetString(15),
+                    reader.GetInt32(16),
+                    reader.GetString(17),
+                    reader.GetString(3)));
     }
 
     private async Task<SqlConnection> OpenConnectionAsync(CancellationToken cancellationToken)

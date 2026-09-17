@@ -7,7 +7,7 @@ This document defines the storage- and protocol-neutral contract for a service t
 ## Document Control
 
 - **Owner:** Managed service capabilities, semantic operations, authority, evidence, failure, diagnostics, and administrative separation
-- **Dependencies:** [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md), [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md), and [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
+- **Dependencies:** [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md), [Save Update Protocol](SAVE_UPDATE_PROTOCOL.md), [Managed Operations](MANAGED_OPERATIONS.md), and [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - **Extensions:** MCP, HTTP, local IPC, or another authorized interface; relational, document, key/value, graph, or indexed-file storage implementations
 - **Consumers:** Campaign Configuration, AI and human GM clients, service implementers, diagnostics, and migration tooling
 - **Repository boundary:** no endpoint, credential, connection string, populated campaign record, or private diagnostic belongs here
@@ -30,6 +30,8 @@ A compliant service can report:
 - campaign binding and Logical Data Namespace identity;
 - persistence and rules-release status;
 - sanitized health and failure information.
+
+Long-running administrative work follows the [Managed Operations](MANAGED_OPERATIONS.md) contract. Initiation returns durable operation identity promptly; status and recovery do not depend on the initiating client remaining connected.
 
 Readiness is multidimensional. It distinguishes transport, persistence connection, campaign schema, Domain Namespace, Rule Source, published release, active compatible release, requested campaign, and overall gameplay readiness. Expected first-run states are structured outcomes such as setup, migration, source, publication, activation, or campaign required; they are not generic exceptions.
 
@@ -61,9 +63,10 @@ inspect readiness
   -> explicit approval
   -> initialize and validate
   -> select and persist Rule Source
-  -> acquire immutable source
-  -> compile, validate, publish, activate
-  -> verify READY
+  -> create or reuse durable publication operation
+  -> observe minimum authoritative closure readiness
+  -> begin safe gameplay when GameplayReady
+  -> continue preparing remaining rules until FullRulesetReady
   -> create or resume campaign
 ```
 
@@ -114,6 +117,7 @@ The repository includes an optional [.NET / MCP / T-SQL reference implementation
 - [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md)
 - [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md)
 - [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
+- [Managed Operations](MANAGED_OPERATIONS.md)
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [Community Feedback and Diagnostics](../support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md)
 - [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md)

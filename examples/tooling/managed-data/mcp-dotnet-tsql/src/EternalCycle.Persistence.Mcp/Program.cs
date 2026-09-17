@@ -41,11 +41,19 @@ builder.Services
 builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
 builder.Services.AddSingleton<IRuleSourceConfigurationStore, SqlServerRuleSourceConfigurationStore>();
 builder.Services.AddSingleton<IRuleSourceProvider, GitRuleSourceProvider>();
-builder.Services.AddSingleton<IPublishedRuleStore, SqlServerPublishedRuleStore>();
+builder.Services.AddSingleton<SqlServerPublishedRuleStore>();
+builder.Services.AddSingleton<IPublishedRuleStore>(services =>
+    services.GetRequiredService<SqlServerPublishedRuleStore>());
+builder.Services.AddSingleton<IRulePreparationStore, SqlServerRulePreparationStore>();
+builder.Services.AddSingleton<IManagedOperationStore, SqlServerManagedOperationStore>();
+builder.Services.AddSingleton<IManagedOperationService, ManagedOperationService>();
 builder.Services.AddSingleton<IManagedDiagnosticStore, SqlServerManagedDiagnosticStore>();
 builder.Services.AddSingleton<IManagedDiagnosticFileSink, PhysicalManagedDiagnosticFileSink>();
 builder.Services.AddSingleton<IManagedDiagnosticRecorder, ManagedDiagnosticRecorder>();
 builder.Services.AddSingleton<ManagedRulePublicationCoordinator>();
+builder.Services.AddSingleton<IRulePublicationExecutor, ManagedRulePublicationExecutor>();
+builder.Services.AddSingleton<ManagedOperationProcessor>();
+builder.Services.AddHostedService<ManagedOperationWorker>();
 builder.Services.AddHostedService<ManagedRuleUpdateHostedService>();
 builder.Services.AddSingleton<IRuleContextProvider, PublishedRuleContextProvider>();
 builder.Services.AddSingleton<IManagedInfrastructureInspector, SqlServerManagedInfrastructureInspector>();

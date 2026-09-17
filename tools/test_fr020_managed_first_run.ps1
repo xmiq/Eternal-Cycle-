@@ -62,13 +62,13 @@ Assert-Requirement 12 ($readiness -match 'CAMPAIGN_NOT_FOUND' -and $readiness -m
 
 # Permission-gated bootstrap (13-20)
 Assert-Requirement 13 ($administration -match 'administration.Enabled' -and $administration -match 'ADMINISTRATION_DISABLED') 'Administrative setup is service-side gated.'
-Assert-Requirement 14 ($administration -match 'ADMINISTRATIVE_APPROVAL_REQUIRED' -and $administration -match 'ApprovalPhrase') 'Setup requires explicit approval.'
+Assert-Requirement 14 ($administration -match 'USER_APPROVAL_REQUIRED' -and $administration -match 'UserApproved') 'Setup requires explicit informed user approval.'
 Assert-Requirement 15 ($administration -match '001_initial.template.sql' -and $administration -match '002_rule_domain.template.sql') 'Bootstrap uses packaged 001/002 migrations.'
 Assert-Requirement 16 ($administration -match '003_campaign_directory.template.sql' -and $administration -match '004_rule_source_configuration.template.sql' -and $administration -match '005_managed_operation_diagnostics.template.sql') 'Additive upgrades are versioned and packaged.'
 Assert-Requirement 17 (($schema003 + $schema004 + $schema005) -match 'IF COL_LENGTH|IF OBJECT_ID') 'Upgrade migrations are repeat-safe.'
 Assert-Requirement 18 (($schema001 + $schema002 + $schema003 + $schema004 + $schema005) -notmatch 'DROP\s+(TABLE|SCHEMA|DATABASE)') 'Bootstrap migrations contain no destructive drop.'
 Assert-Requirement 19 ($administration -notmatch 'request\.Sql|sqlText|arbitrary SQL') 'Administrative requests expose no raw SQL input.'
-Assert-Requirement 20 ($tests -match 'BootstrapRequiresEnabledAdministrationAndExactApproval' -and $tests -match 'ApprovedBootstrapIsRepeatSafe') 'Approval and repeat safety have unit coverage.'
+Assert-Requirement 20 ($tests -match 'BootstrapDistinguishesUserApprovalFromOperatorIntervention' -and $tests -match 'ApprovedBootstrapIsRepeatSafe') 'Approval and repeat safety have unit coverage.'
 
 # Diagnostics and rule context (21-25)
 Assert-Requirement 21 ($diagnostics -match 'IManagedReadinessService' -and $diagnostics -notmatch 'GetActiveAsync') 'Diagnostics no longer require an operational Rule Store.'
@@ -85,7 +85,7 @@ Assert-Requirement 29 ($administration -match 'UseOfficialDefault' -and $adminis
 Assert-Requirement 30 ($publication -match 'not yet configured' -and $publication -match 'Disabled') 'Never-initialized and explicitly disabled update states remain distinct.'
 Assert-Requirement 31 ($tests -match 'OfficialSourceDefaultCanBeOverriddenAndSelectionPersists') 'Source selection persistence and override are tested.'
 Assert-Requirement 32 ($tests -match 'PersistedLocalSourceIsReusedWithoutRepositoryRootConfiguration') 'Persisted source reuse is tested with a local Git fixture.'
-Assert-Requirement 33 ($tests -match 'ExplicitInitialPublicationCanReachActiveState') 'Approved initial publication has regression coverage.'
+Assert-Requirement 33 ($tests -match 'ExplicitInitialPublicationQueuesDurableOperationWhileUpdatesRemainManualOrDisabled') 'Approved initial publication has durable-operation regression coverage.'
 
 # Campaign UX and logging (34-38)
 Assert-Requirement 34 ($administration -match 'ec_list_campaigns' -and $administration -match 'ec_resolve_resume_campaign') 'Campaign discovery tools are present.'

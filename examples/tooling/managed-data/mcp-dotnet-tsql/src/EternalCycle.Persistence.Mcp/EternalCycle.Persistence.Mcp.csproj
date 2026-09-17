@@ -32,6 +32,8 @@
     <None Include="Schema\005_managed_operation_diagnostics.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\006_rule_source_compatibility.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\006_rule_source_compatibility.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\007_durable_managed_operations.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\007_durable_managed_operations.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(OfficialDistributionMetadataSource)"
           Link="distribution-metadata.json"
           CopyToOutputDirectory="PreserveNewest"

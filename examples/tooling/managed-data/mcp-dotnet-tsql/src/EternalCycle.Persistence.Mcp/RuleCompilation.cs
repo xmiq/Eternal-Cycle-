@@ -20,7 +20,8 @@ public sealed record RuleSourceMetadata(
     IReadOnlyList<string> Topics,
     int Priority = 0,
     bool AlwaysInclude = false,
-    IReadOnlyList<string>? Dependencies = null);
+    IReadOnlyList<string>? Dependencies = null,
+    RulePreparationTier PreparationTier = RulePreparationTier.Standard);
 
 public sealed record RuleSourceDocument(
     string RuleSourceId,
@@ -98,6 +99,8 @@ public sealed class RuleSourceManifestEntry
     public int Priority { get; init; }
 
     public bool AlwaysInclude { get; init; }
+
+    public RulePreparationTier PreparationTier { get; init; } = RulePreparationTier.Standard;
 }
 
 public interface IRuleContextProvider
@@ -297,6 +300,18 @@ public static class RuleCompiler
             selected);
     }
 
+    public static IReadOnlyList<string> RequiredSourceClosure(
+        CompiledRuleIndex index,
+        CampaignSchemaRoute route,
+        RuleContextRequest request)
+    {
+        var selected = Select(index, route, request);
+        return selected.Chunks
+            .Select(chunk => chunk.RuleSourceId)
+            .Distinct(StringComparer.Ordinal)
+            .ToArray();
+    }
+
     private static bool IsEligible(
         CompiledRuleChunk chunk,
         CampaignSchemaRoute route,
@@ -441,7 +456,7 @@ public static class RuleCompiler
         RuleContextRequest request,
         IReadOnlySet<string> topics)
     {
-        var score = chunk.Metadata.Priority;
+        var score = chunk.Metadata.Priority + PreparationScore(chunk.Metadata.PreparationTier);
         if (chunk.Metadata.Operations.Contains(request.Operation, StringComparer.OrdinalIgnoreCase))
         {
             score += 100;
@@ -450,6 +465,17 @@ public static class RuleCompiler
         score += chunk.Metadata.Topics.Count(topics.Contains) * 10;
         return score;
     }
+
+    private static int PreparationScore(RulePreparationTier tier) => tier switch
+    {
+        RulePreparationTier.RuntimeKernel => 6000,
+        RulePreparationTier.CampaignBootstrap => 5000,
+        RulePreparationTier.ImmediateGameplayCore => 4000,
+        RulePreparationTier.CampaignRelevant => 3000,
+        RulePreparationTier.Standard => 2000,
+        RulePreparationTier.OptionalRare => 1000,
+        _ => 0
+    };
 
     private static IReadOnlySet<string> Normalize(IEnumerable<string> values) =>
         values

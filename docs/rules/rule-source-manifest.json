@@ -2,7 +2,7 @@
   "manifestFormatVersion": 1,
   "compilerContractVersion": "1",
   "rulesetId": "eternal-cycle-core",
-  "repositoryVersion": "1.0.0+fr.020-rc",
+  "repositoryVersion": "1.0.0",
   "sources": [
     {
       "ruleSourceId": "runtime-kernel",
@@ -14,7 +14,8 @@
       "operations": ["*"],
       "topics": [],
       "priority": 1000,
-      "alwaysInclude": true
+      "alwaysInclude": true,
+      "preparationTier": "RuntimeKernel"
     },
     {
       "ruleSourceId": "core-design-philosophy",
@@ -26,7 +27,8 @@
       "operations": ["gameplay.resolve", "world.simulate", "gm.adjudicate"],
       "topics": ["core", "agency", "consequences"],
       "priority": 100,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "CampaignBootstrap"
     },
     {
       "ruleSourceId": "core-reincarnation",
@@ -38,7 +40,8 @@
       "operations": ["gameplay.resolve", "reincarnation.resolve"],
       "topics": ["soul", "death", "reincarnation"],
       "priority": 200,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "CampaignBootstrap"
     },
     {
       "ruleSourceId": "core-development",
@@ -50,7 +53,8 @@
       "operations": ["gameplay.resolve", "development.evaluate"],
       "topics": ["development", "training", "capability"],
       "priority": 150,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "ImmediateGameplayCore"
     },
     {
       "ruleSourceId": "core-monster-evolution",
@@ -62,7 +66,8 @@
       "operations": ["gameplay.resolve", "evolution.resolve", "world.simulate"],
       "topics": ["monster", "species", "evolution"],
       "priority": 150,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "CampaignRelevant"
     },
     {
       "ruleSourceId": "core-world-engine",
@@ -74,7 +79,8 @@
       "operations": ["gameplay.resolve", "world.simulate", "time.advance"],
       "topics": ["world", "simulation", "causality"],
       "priority": 125,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "ImmediateGameplayCore"
     },
     {
       "ruleSourceId": "core-context-assembly",
@@ -87,7 +93,8 @@
       "topics": ["context", "persistence", "read-set", "affected-set"],
       "dependencies": ["core-persistence-authority"],
       "priority": 300,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "CampaignBootstrap"
     },
     {
       "ruleSourceId": "core-persistence-authority",
@@ -99,7 +106,8 @@
       "operations": ["context.assemble", "persistence.read", "persistence.commit"],
       "topics": ["authority", "canon", "persistence"],
       "priority": 300,
-      "alwaysInclude": false
+      "alwaysInclude": false,
+      "preparationTier": "CampaignBootstrap"
     }
   ]
 }

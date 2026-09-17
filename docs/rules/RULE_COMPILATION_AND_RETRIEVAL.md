@@ -46,9 +46,11 @@ Each source declares:
 - Campaign Modes;
 - operations;
 - topics;
-- priority and mandatory-kernel status.
+- priority, preparation tier, and mandatory-kernel status.
 
 An absent world scope means world-neutral. A World source must name its World/Ruleset. An Optional Module source must name its module and may also be world-scoped. `*` may express deliberate applicability across values; it does not waive visibility or authority checks.
+
+Preparation tier classifies a source as Runtime Kernel, Campaign Bootstrap, Immediate Gameplay Core, Campaign Relevant, Standard, or Optional/Rare. It controls progressive preparation order, not rule authority. Explicit dependencies remain mandatory regardless of tier, and runtime requests may raise the priority of an unavailable dependency closure without inventing its contents.
 
 ## Compilation
 
@@ -108,6 +110,8 @@ Compilation or retrieval fails explicitly when:
 - the kernel cannot fit within the budget;
 - the active Rule Release, Repository Version, immutable source identity, or source hash is stale where verification is required;
 - a required specialist rule cannot be retrieved.
+
+When a compatible active release exists but the requested dependency closure is still being prepared, retrieval returns a structured pending result and raises that closure's durable preparation priority. The GM waits; it does not substitute conversational memory or a guessed rule.
 
 The runtime does not fill a missing rule from memory, another world's rules, campaign narration, or a stale publication. A Managed source-check or candidate failure preserves the last valid active release where safe and reports update degradation separately.
 

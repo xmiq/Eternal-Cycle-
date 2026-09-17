@@ -276,6 +276,13 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         }
 
         sourceIdentity = sourceIdentity.ToUpperInvariant();
+        var versionMetadata = await ResolveVersionMetadataAsync(
+            repositoryRoot,
+            sourceIdentity,
+            releaseChannel,
+            requestedRef,
+            configuration?.IsOfficial == true,
+            cancellationToken);
         onStage?.Invoke(RulePublicationStage.ReadManifest);
         var manifestPath = ValidateRepositoryPath(manifestSetting);
         var manifestJson = await ReadRequiredArtifactAsync(
@@ -332,7 +339,8 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
                     source.Topics.ToArray(),
                     source.Priority,
                     source.AlwaysInclude,
-                    source.Dependencies.ToArray())));
+                    source.Dependencies.ToArray(),
+                    source.PreparationTier)));
         }
 
         return new RuleSourceSnapshot(
@@ -345,7 +353,69 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
             requestedRef,
             manifest.ManifestFormatVersion,
             manifest.CompilerContractVersion,
-            manifest.RulesetId);
+            manifest.RulesetId,
+            versionMetadata);
+    }
+
+    private async Task<RuleSourceVersionMetadata?> ResolveVersionMetadataAsync(
+        string repositoryRoot,
+        string sourceIdentity,
+        RuleSourceReleaseChannel releaseChannel,
+        string requestedRef,
+        bool isOfficial,
+        CancellationToken cancellationToken)
+    {
+        if (!isOfficial || releaseChannel != RuleSourceReleaseChannel.Prerelease)
+        {
+            return null;
+        }
+
+        var metadata = OfficialDistributionMetadata.Load(administration);
+        var baseRelease = metadata.PrereleaseBaseRelease ?? metadata.StableReleaseTag;
+        var discoveryTag = metadata.PrereleaseDiscoveryTag ??
+            requestedRef.Replace("refs/tags/", string.Empty, StringComparison.Ordinal);
+        var targetVersion = metadata.PrereleaseTargetVersion;
+        if (string.IsNullOrWhiteSpace(targetVersion) ||
+            string.IsNullOrWhiteSpace(baseRelease) ||
+            string.IsNullOrWhiteSpace(discoveryTag))
+        {
+            throw new RulePublicationException(
+                "RULE_SOURCE_VERSION_METADATA_INVALID",
+                RulePublicationStage.ResolveRef,
+                "Official Prerelease version metadata is incomplete.",
+                retrySafe: false,
+                administrativeInterventionRequired: true,
+                releaseChannel: releaseChannel,
+                discoveryRef: requestedRef,
+                sourceIdentity: sourceIdentity);
+        }
+
+        var canonicalBase = baseRelease.StartsWith('v') ? baseRelease : $"v{baseRelease}";
+        var countText = await RunGitAsync(
+            repositoryRoot,
+            ["rev-list", "--count", $"refs/tags/{canonicalBase}..{sourceIdentity}"],
+            RulePublicationStage.ResolveRef,
+            networkOperation: false,
+            cancellationToken);
+        if (!int.TryParse(countText.Trim(), out var commitsSinceBase) || commitsSinceBase < 0)
+        {
+            throw new RulePublicationException(
+                "RULE_SOURCE_VERSION_METADATA_INVALID",
+                RulePublicationStage.ResolveRef,
+                "The Prerelease commit distance from its immutable base release could not be determined.",
+                retrySafe: false,
+                administrativeInterventionRequired: true,
+                releaseChannel: releaseChannel,
+                discoveryRef: requestedRef,
+                sourceIdentity: sourceIdentity);
+        }
+
+        return PrereleaseVersioning.Derive(
+            canonicalBase,
+            discoveryTag,
+            targetVersion,
+            commitsSinceBase,
+            sourceIdentity);
     }
 
     private async Task<ResolvedGitSource> ResolveManagedRepositoryAsync(

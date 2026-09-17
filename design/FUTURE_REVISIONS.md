@@ -64,6 +64,19 @@ All currently known FR-001 through FR-020 entries are explicitly Roadmapped or C
 
 ## Closed
 
+### FR-021 - Durable Managed Operations and Progressive Rule Readiness
+
+- **Status:** Closed
+- **Issue:** Real LM Studio and Unsloth Studio deployment showed that synchronous initial Rule Publication inherited client request deadlines, while all-or-nothing readiness, campaign-bound diagnostics, implementation-specific approval phrases, and weak RC display provenance made first-run recovery fragile.
+- **Affected systems:** Managed Data Service, Managed Rule Publication, Rule Context retrieval, readiness, diagnostics, authorization, Rule Source provenance, reference MCP tooling, and release/development governance.
+- **Gameplay impact:** A legitimate slow first acquisition could time out despite viable service work, interrupted operations could become undiscoverable, gameplay could wait for unrelated rules, and unavailable authoritative rules risked poor recovery or speculative substitution.
+- **Evidence needed:** durable initiation and discovery, cancellation independence, restart recovery, stage/result/failure status, campaign-free diagnostics, natural approval, deterministic moving-RC metadata, progressive closure readiness, dynamic priority, and preserved FR-017 through FR-020 regressions.
+- **Suggested future phase:** Phase 13 — Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented through the portable Managed Operation contract, SQL Server-backed reference worker and migration 007, progressive preparation state connected to readiness and context retrieval, service diagnostics, approval and prerelease provenance changes, automated regressions, and explicit real-client acceptance scenarios.
+- **Authorized roadmap link:** [FR-021 — Durable Managed Operations and Progressive Rule Readiness](ROADMAP.md#phase-13--future-revisions)
+- **Closure references:** [Managed Operations](../docs/persistence/MANAGED_OPERATIONS.md), [Managed Rule Publication](../docs/rules/MANAGED_RULE_PUBLICATION.md), [Release and Version Provenance](RELEASE_VERSIONING.md), and [FR-021 Implementation Audit](audits/FR_021_DURABLE_MANAGED_OPERATIONS_AUDIT.md)
+
 ### FR-020 - Managed First-Run Readiness and Bootstrap
 
 - **Status:** Closed

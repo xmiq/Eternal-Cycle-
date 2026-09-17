@@ -17,6 +17,8 @@ public sealed class ManagedAdministrationOptions
 
     public string ApprovalPhrase { get; init; } = "INITIALIZE ETERNAL CYCLE";
 
+    public bool RequireOperatorConfirmation { get; init; }
+
     public string DistributionMetadataFile { get; init; } = "distribution-metadata.json";
 
     public string ManagedRuleCacheDirectory { get; init; } = string.Empty;
@@ -34,18 +36,19 @@ public sealed record ManagedOperationResult<T>(
     string? CorrelationId = null,
     bool RetrySafe = false,
     bool AdministrativeInterventionRequired = false,
-    string? DiagnosticsAvailability = null);
+    string? DiagnosticsAvailability = null,
+    bool UserApprovalRequired = false);
 
 public sealed record BootstrapRequest(
     string? CampaignId,
-    bool Approved,
-    string ApprovalPhrase);
+    bool UserApproved,
+    string? OperatorConfirmation = null);
 
 public sealed record BootstrapPlan(
     bool ChangesRequired,
     IReadOnlyList<string> MigrationIds,
     IReadOnlyList<string> OwnedScopes,
-    string ApprovalPhrase,
+    string AuthorizationGuidance,
     string Summary);
 
 public sealed record BootstrapExecution(
@@ -58,8 +61,8 @@ public sealed record RuleSourceSelectionRequest(
     string? SourceLocation,
     string? RequestedRef,
     string? ManifestPath,
-    bool Approved,
-    string ApprovalPhrase,
+    bool UserApproved,
+    string? OperatorConfirmation = null,
     RuleSourceReleaseChannel? ReleaseChannel = null);
 
 public sealed record RuleSourceSelection(
@@ -73,8 +76,8 @@ public sealed record RuleSourceSelection(
     RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable);
 
 public sealed record InitialRulePublicationRequest(
-    bool Approved,
-    string ApprovalPhrase);
+    bool UserApproved,
+    string? OperatorConfirmation = null);
 
 public sealed record CampaignDescriptor(
     string CampaignId,
@@ -86,8 +89,8 @@ public sealed record CampaignDescriptor(
 public sealed record CreateCampaignRequest(
     string DisplayName,
     string? Description,
-    bool Approved,
-    string ApprovalPhrase);
+    bool UserApproved,
+    string? OperatorConfirmation = null);
 
 public sealed record CampaignResolution(
     string Status,
@@ -167,7 +170,7 @@ public interface IManagedAdministrationService
         RuleSourceSelectionRequest request,
         CancellationToken cancellationToken);
 
-    Task<ManagedOperationResult<RulePublicationResult>> PublishInitialRulesAsync(
+    Task<ManagedOperationResult<ManagedOperationStatus>> PublishInitialRulesAsync(
         InitialRulePublicationRequest request,
         CancellationToken cancellationToken);
 
@@ -184,8 +187,8 @@ public sealed class ManagedAdministrationService(
     ISchemaBootstrapExecutor bootstrapExecutor,
     IManagedReadinessService readiness,
     IRuleSourceConfigurationStore sourceConfigurations,
-    ManagedRulePublicationCoordinator publicationCoordinator,
-    ICampaignDirectoryService campaigns) : IManagedAdministrationService
+    ICampaignDirectoryService campaigns,
+    IManagedOperationService? managedOperations = null) : IManagedAdministrationService
 {
     private readonly ManagedAdministrationOptions administration = administrationOptions.Value;
     private readonly ManagedRuleServiceOptions rules = ruleOptions.Value;
@@ -199,10 +202,10 @@ public sealed class ManagedAdministrationService(
         BootstrapRequest request,
         CancellationToken cancellationToken)
     {
-        var denied = Authorize(request.Approved, request.ApprovalPhrase);
+        var denied = Authorize(request.UserApproved, request.OperatorConfirmation);
         if (denied is not null)
         {
-            return new(false, denied.Value.Code, denied.Value.Message, null);
+            return Denied<BootstrapExecution>(denied);
         }
 
         try
@@ -231,10 +234,10 @@ public sealed class ManagedAdministrationService(
         RuleSourceSelectionRequest request,
         CancellationToken cancellationToken)
     {
-        var denied = Authorize(request.Approved, request.ApprovalPhrase);
+        var denied = Authorize(request.UserApproved, request.OperatorConfirmation);
         if (denied is not null)
         {
-            return new(false, denied.Value.Code, denied.Value.Message, null);
+            return Denied<RuleSourceSelection>(denied);
         }
 
         try
@@ -281,14 +284,14 @@ public sealed class ManagedAdministrationService(
         }
     }
 
-    public async Task<ManagedOperationResult<RulePublicationResult>> PublishInitialRulesAsync(
+    public async Task<ManagedOperationResult<ManagedOperationStatus>> PublishInitialRulesAsync(
         InitialRulePublicationRequest request,
         CancellationToken cancellationToken)
     {
-        var denied = Authorize(request.Approved, request.ApprovalPhrase);
+        var denied = Authorize(request.UserApproved, request.OperatorConfirmation);
         if (denied is not null)
         {
-            return new(false, denied.Value.Code, denied.Value.Message, null);
+            return Denied<ManagedOperationStatus>(denied);
         }
 
         var report = await readiness.GetReadinessAsync(null, cancellationToken);
@@ -302,37 +305,34 @@ public sealed class ManagedAdministrationService(
             return new(false, "RULE_SOURCE_NOT_CONFIGURED", report.Message, null);
         }
 
+        if (managedOperations is null)
+        {
+            return new(
+                false,
+                "MANAGED_OPERATIONS_UNAVAILABLE",
+                "Durable Managed Operations are unavailable in this host configuration.",
+                null,
+                AdministrativeInterventionRequired: true);
+        }
+
         try
         {
-            var result = await publicationCoordinator.CheckForUpdateAsync(cancellationToken);
-            var success = result.Status is "Activated" or "Unchanged" or "AlreadyPublished" or "AwaitingAdministratorActivation";
+            var operation = await managedOperations.EnqueueInitialRulePublicationAsync(cancellationToken);
             return new(
-                success,
-                success ? "RULE_PUBLICATION_COMPLETE" : result.ErrorCode ?? "RULE_PUBLICATION_FAILED",
-                success
-                    ? "The initial Rule Release workflow completed. Check readiness to confirm activation policy."
-                    : result.FailureReason ?? "The Rule Release candidate failed. Any previous active release was preserved.",
-                result,
-                result.Operation,
-                result.Stage,
-                result.CorrelationId,
-                result.RetrySafe,
-                result.AdministrativeInterventionRequired,
-                result.DiagnosticsAvailability);
-        }
-        catch (OperationCanceledException)
-        {
-            return new(
-                false,
-                "RULE_PUBLICATION_CANCELLED",
-                "Rule publication was cancelled before the Managed publication coordinator could return a structured result.",
-                null,
-                "PublishInitialRules",
-                RulePublicationStage.Cancelled.ToString(),
-                null,
                 true,
-                false,
-                "Unavailable");
+                operation.State == ManagedOperationState.Queued
+                    ? "RULE_PUBLICATION_QUEUED"
+                    : "RULE_PUBLICATION_ALREADY_ACTIVE",
+                "Durable rule publication was queued or an equivalent active operation was reused. Query its operation ID for progress.",
+                operation,
+                ManagedOperationKinds.InitialRulePublication,
+                operation.CurrentStage,
+                operation.CorrelationId,
+                RetrySafe: true);
+        }
+        catch (ManagedServiceException exception)
+        {
+            return new(false, exception.Code, exception.SafeMessage, null);
         }
     }
 
@@ -343,10 +343,10 @@ public sealed class ManagedAdministrationService(
         CreateCampaignRequest request,
         CancellationToken cancellationToken)
     {
-        var denied = Authorize(request.Approved, request.ApprovalPhrase);
+        var denied = Authorize(request.UserApproved, request.OperatorConfirmation);
         if (denied is not null)
         {
-            return new(false, denied.Value.Code, denied.Value.Message, null);
+            return Denied<CampaignDescriptor>(denied);
         }
 
         try
@@ -360,20 +360,58 @@ public sealed class ManagedAdministrationService(
         }
     }
 
-    private (string Code, string Message)? Authorize(bool approved, string approvalPhrase)
+    private AuthorizationDenial? Authorize(bool userApproved, string? operatorConfirmation)
     {
         if (!administration.Enabled)
         {
-            return ("ADMINISTRATION_DISABLED", "Administrative setup tools are disabled in service configuration.");
+            return new(
+                "ADMINISTRATION_DISABLED",
+                "Administrative setup tools are disabled in service configuration.",
+                UserApprovalRequired: false,
+                AdministrativeInterventionRequired: true,
+                RetrySafe: false);
         }
 
-        if (!approved || !string.Equals(approvalPhrase, administration.ApprovalPhrase, StringComparison.Ordinal))
+        if (!userApproved)
         {
-            return ("ADMINISTRATIVE_APPROVAL_REQUIRED", "Explicit user approval with the configured confirmation phrase is required.");
+            return new(
+                "USER_APPROVAL_REQUIRED",
+                "Explain the proposed administrative action and obtain explicit informed user approval before retrying.",
+                UserApprovalRequired: true,
+                AdministrativeInterventionRequired: false,
+                RetrySafe: true);
+        }
+
+        if (administration.RequireOperatorConfirmation &&
+            !string.Equals(operatorConfirmation, administration.ApprovalPhrase, StringComparison.Ordinal))
+        {
+            return new(
+                "ADMINISTRATIVE_INTERVENTION_REQUIRED",
+                "This deployment requires an operator confirmation in addition to conversational user approval.",
+                UserApprovalRequired: false,
+                AdministrativeInterventionRequired: true,
+                RetrySafe: false);
         }
 
         return null;
     }
+
+    private static ManagedOperationResult<T> Denied<T>(AuthorizationDenial denial) =>
+        new(
+            false,
+            denial.Code,
+            denial.Message,
+            default,
+            RetrySafe: denial.RetrySafe,
+            AdministrativeInterventionRequired: denial.AdministrativeInterventionRequired,
+            UserApprovalRequired: denial.UserApprovalRequired);
+
+    private sealed record AuthorizationDenial(
+        string Code,
+        string Message,
+        bool UserApprovalRequired,
+        bool AdministrativeInterventionRequired,
+        bool RetrySafe);
 
     private static RuleSourceSelection ToSelection(RuleSourceConfiguration value) =>
         new(
@@ -540,7 +578,7 @@ public sealed class SqlServerSchemaBootstrapExecutor(
             plan.Count > 0,
             plan.Select(item => item.Id).ToArray(),
             plan.Select(item => item.Scope).Distinct(StringComparer.Ordinal).ToArray(),
-            "Use the configured administrative approval phrase.",
+            "Obtain explicit informed user approval. A deployment may additionally require an operator confirmation.",
             plan.Count == 0
                 ? "No supported EC-owned schema changes are required."
                 : "Only packaged, versioned Eternal Cycle campaign and rule-domain migrations will be applied.");
@@ -674,6 +712,17 @@ public sealed class SqlServerSchemaBootstrapExecutor(
             }
         }
 
+        if (domainCount == 0 ||
+            !domainTables.Contains("managed_operations") ||
+            !domainTables.Contains("rule_source_preparation") ||
+            !await DurableManagedOperationColumnsReadyAsync(connection, cancellationToken))
+        {
+            migrations.Add(new(
+                "007_durable_managed_operations",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("007_durable_managed_operations.template.sql")));
+        }
+
         return migrations;
     }
 
@@ -747,6 +796,35 @@ public sealed class SqlServerSchemaBootstrapExecutor(
         };
         command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
         return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 10;
+    }
+
+    private async Task<bool> DurableManagedOperationColumnsReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND (
+                    (tables.name = N'managed_operations' AND columns.name IN (
+                        N'operation_id', N'operation_state', N'current_stage', N'deduplication_key',
+                        N'user_approval_required', N'administrative_intervention_required',
+                        N'result_rule_release_id'))
+                 OR (tables.name = N'rule_source_preparation' AND columns.name IN (
+                        N'rule_release_id', N'rule_source_id', N'preparation_tier',
+                        N'preparation_state', N'base_priority', N'priority_boost'))
+                 OR (tables.name = N'rule_releases' AND columns.name IN (
+                        N'base_release', N'discovery_tag', N'commits_since_base', N'display_version'))
+              );
+            """, connection)
+        {
+            CommandTimeout = settings.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 17;
     }
 
     private string Render(string fileName, CampaignSchemaRoute route) =>
@@ -888,7 +966,7 @@ public sealed class SqlServerCampaignDirectoryService(
     }
 }
 
-public sealed class ManagedServiceException(string code, string safeMessage) : Exception(safeMessage)
+public class ManagedServiceException(string code, string safeMessage) : Exception(safeMessage)
 {
     public string Code { get; } = code;
 
@@ -902,7 +980,10 @@ public sealed record OfficialDistributionMetadata(
     string DevelopmentRef,
     string RuleSourceManifest,
     string? StableRuleSourceRef = null,
-    string? PrereleaseRuleSourceRef = null)
+    string? PrereleaseRuleSourceRef = null,
+    string? PrereleaseBaseRelease = null,
+    string? PrereleaseDiscoveryTag = null,
+    string? PrereleaseTargetVersion = null)
 {
     public static OfficialDistributionMetadata Load(ManagedAdministrationOptions options)
     {
@@ -951,22 +1032,22 @@ public sealed class ManagedSetupTools(
         administration.GetBootstrapPlanAsync(campaignId, cancellationToken);
 
     [McpServerTool(Name = "ec_initialize_service", Destructive = true, Idempotent = true),
-     Description("After explicit user approval, applies only packaged Eternal Cycle-owned migrations and validates the result.")]
+     Description("After explicit informed user approval, applies only packaged Eternal Cycle-owned migrations and validates the result. Set userApproved only after the user actually authorizes the explained action.")]
     public Task<ManagedOperationResult<BootstrapExecution>> InitializeAsync(
-        [Description("Explicit approval, configured confirmation phrase, and optional trusted campaign route.")] BootstrapRequest request,
+        [Description("Explicit informed user approval and optional operator-only deployment confirmation plus a trusted campaign route.")] BootstrapRequest request,
         CancellationToken cancellationToken) =>
         administration.BootstrapAsync(request, cancellationToken);
 
     [McpServerTool(Name = "ec_configure_rule_source", Destructive = true, Idempotent = true),
-     Description("After explicit approval, persists the official default or a compatible custom Git Rule Source selection.")]
+     Description("After explicit informed user approval, persists a semantic Stable/Prerelease official selection or an advanced compatible custom source. Ordinary players do not provide refs or SHAs.")]
     public Task<ManagedOperationResult<RuleSourceSelection>> ConfigureRuleSourceAsync(
         RuleSourceSelectionRequest request,
         CancellationToken cancellationToken) =>
         administration.ConfigureRuleSourceAsync(request, cancellationToken);
 
     [McpServerTool(Name = "ec_publish_initial_rules", Destructive = true, Idempotent = true),
-     Description("After explicit approval, acquires, compiles, validates, publishes, and activates initial rules under configured policy.")]
-    public Task<ManagedOperationResult<RulePublicationResult>> PublishRulesAsync(
+     Description("After explicit informed user approval, quickly creates or reuses a durable initial-publication operation. Use ec_get_operation_status to follow background progress.")]
+    public Task<ManagedOperationResult<ManagedOperationStatus>> PublishRulesAsync(
         InitialRulePublicationRequest request,
         CancellationToken cancellationToken) =>
         administration.PublishInitialRulesAsync(request, cancellationToken);
@@ -982,7 +1063,7 @@ public sealed class ManagedSetupTools(
         CampaignDiscovery.ResolveResume(await administration.ListCampaignsAsync(cancellationToken));
 
     [McpServerTool(Name = "ec_create_campaign", Destructive = true, Idempotent = false),
-     Description("After explicit user approval, creates one campaign identity in the trusted default Data Namespace.")]
+     Description("After explicit informed user approval, creates one campaign identity in the trusted default Data Namespace. Set userApproved only after the user actually authorizes creation.")]
     public Task<ManagedOperationResult<CampaignDescriptor>> CreateCampaignAsync(
         CreateCampaignRequest request,
         CancellationToken cancellationToken) =>

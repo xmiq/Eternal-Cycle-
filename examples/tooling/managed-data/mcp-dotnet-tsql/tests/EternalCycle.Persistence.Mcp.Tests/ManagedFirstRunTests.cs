@@ -23,7 +23,10 @@ public sealed class ManagedFirstRunTests
         Assert.Equal("v1.0.0", metadata.StableReleaseTag);
         Assert.Equal("https://github.com/xmiq/Eternal-Cycle-.git", metadata.OfficialRepository);
         Assert.Null(metadata.StableRuleSourceRef);
-        Assert.Equal("refs/heads/main", metadata.PrereleaseRuleSourceRef);
+        Assert.Equal("refs/tags/v1.1.0-rc", metadata.PrereleaseRuleSourceRef);
+        Assert.Equal("v1.0.0", metadata.PrereleaseBaseRelease);
+        Assert.Equal("v1.1.0-rc", metadata.PrereleaseDiscoveryTag);
+        Assert.Equal("1.1.0", metadata.PrereleaseTargetVersion);
     }
 
     [Fact]
@@ -145,21 +148,25 @@ public sealed class ManagedFirstRunTests
     }
 
     [Fact]
-    public async Task BootstrapRequiresEnabledAdministrationAndExactApproval()
+    public async Task BootstrapDistinguishesUserApprovalFromOperatorIntervention()
     {
         var executor = new FakeBootstrapExecutor(["001_campaign_persistence", "002_rule_domain"]);
         var disabled = Administration(executor, enabled: false);
-        var noApproval = await disabled.BootstrapAsync(
+        var disabledResult = await disabled.BootstrapAsync(
             new BootstrapRequest(null, true, Approval),
             CancellationToken.None);
 
         var enabled = Administration(executor, enabled: true);
-        var wrongApproval = await enabled.BootstrapAsync(
-            new BootstrapRequest(null, true, "wrong"),
+        var noApproval = await enabled.BootstrapAsync(
+            new BootstrapRequest(null, false),
             CancellationToken.None);
 
-        Assert.Equal("ADMINISTRATION_DISABLED", noApproval.Code);
-        Assert.Equal("ADMINISTRATIVE_APPROVAL_REQUIRED", wrongApproval.Code);
+        Assert.Equal("ADMINISTRATION_DISABLED", disabledResult.Code);
+        Assert.True(disabledResult.AdministrativeInterventionRequired);
+        Assert.Equal("USER_APPROVAL_REQUIRED", noApproval.Code);
+        Assert.True(noApproval.UserApprovalRequired);
+        Assert.False(noApproval.AdministrativeInterventionRequired);
+        Assert.True(noApproval.RetrySafe);
         Assert.Equal(0, executor.Executions);
     }
 
@@ -283,7 +290,7 @@ public sealed class ManagedFirstRunTests
             Assert.Equal("RULE_SOURCE_INCOMPATIBLE", stable.Code);
             Assert.True(prerelease.Success);
             Assert.Equal(RuleSourceReleaseChannel.Prerelease, prerelease.Data?.ReleaseChannel);
-            Assert.Equal("refs/heads/main", prerelease.Data?.RequestedRef);
+        Assert.Equal("refs/heads/main", prerelease.Data?.RequestedRef);
             Assert.Equal(RuleSourceReleaseChannel.Prerelease, store.Current?.ReleaseChannel);
         }
         finally
@@ -293,13 +300,27 @@ public sealed class ManagedFirstRunTests
     }
 
     [Fact]
-    public async Task ExplicitInitialPublicationCanReachActiveStateWhileUpdatesRemainManualOrDisabled()
+    public async Task ExplicitInitialPublicationQueuesDurableOperationWhileUpdatesRemainManualOrDisabled()
     {
         var store = new MemoryRuleStore();
         var source = new StaticSourceProvider(ValidSnapshot());
+        var sourceConfiguration = new MemorySourceConfigurationStore();
+        _ = await sourceConfiguration.SaveAsync(
+            new RuleSourceConfiguration(
+                "eternal-cycle-core",
+                "Git",
+                "https://example.invalid/rules.git",
+                "refs/tags/v1.1.0-rc",
+                "docs/rules/rule-source-manifest.json",
+                true,
+                1,
+                DateTimeOffset.UnixEpoch,
+                RuleSourceReleaseChannel.Prerelease),
+            CancellationToken.None);
         var service = Administration(
             new FakeBootstrapExecutor([]),
             enabled: true,
+            sourceStore: sourceConfiguration,
             ruleStore: store,
             ruleSource: source,
             readiness: new StaticReadiness(Evaluate(
@@ -312,8 +333,9 @@ public sealed class ManagedFirstRunTests
             CancellationToken.None);
 
         Assert.True(result.Success);
-        Assert.Equal("Activated", result.Data?.Status);
-        Assert.NotNull(await store.GetActiveAsync("eternal-cycle-core", CancellationToken.None));
+        Assert.Equal("RULE_PUBLICATION_QUEUED", result.Code);
+        Assert.Equal(ManagedOperationState.Queued, result.Data?.State);
+        Assert.Null(await store.GetActiveAsync("eternal-cycle-core", CancellationToken.None));
     }
 
     [Fact]
@@ -413,6 +435,7 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("004_rule_source_configuration.template.sql", files);
         Assert.Contains("005_managed_operation_diagnostics.template.sql", files);
         Assert.Contains("006_rule_source_compatibility.template.sql", files);
+        Assert.Contains("007_durable_managed_operations.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
@@ -424,6 +447,11 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("manifest_format_version", compatibility);
         Assert.Contains("retry_safe", compatibility);
         Assert.Contains("IF COL_LENGTH", compatibility);
+        var operations = File.ReadAllText(Path.Combine(schemaDirectory, "007_durable_managed_operations.template.sql"));
+        Assert.Contains("managed_operations", operations);
+        Assert.Contains("rule_source_preparation", operations);
+        Assert.Contains("Interrupted", operations);
+        Assert.Contains("display_version", operations);
     }
 
     private static ManagedReadinessReport Evaluate(
@@ -469,11 +497,10 @@ public sealed class ManagedFirstRunTests
             activeReleaseId: "active",
             compatible: true));
         var ruleOptions = Options.Create(new ManagedRuleServiceOptions());
-        var coordinator = new ManagedRulePublicationCoordinator(
-            ruleSource,
-            ruleStore,
-            ruleOptions,
-            NullLogger<ManagedRulePublicationCoordinator>.Instance);
+        var operationService = new ManagedOperationService(
+            new MemoryManagedOperationStore(),
+            sourceStore,
+            ruleOptions);
         return new ManagedAdministrationService(
             Options.Create(new ManagedAdministrationOptions
             {
@@ -485,8 +512,8 @@ public sealed class ManagedFirstRunTests
             executor,
             readiness,
             sourceStore,
-            coordinator,
-            new FakeCampaignDirectory());
+            new FakeCampaignDirectory(),
+            operationService);
     }
 
     private static ConfiguredCampaignSchemaResolver Resolver() =>

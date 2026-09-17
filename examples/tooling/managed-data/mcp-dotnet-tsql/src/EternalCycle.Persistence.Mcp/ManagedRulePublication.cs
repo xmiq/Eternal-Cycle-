@@ -33,6 +33,41 @@ public enum RuleReleaseState
     Failed
 }
 
+public sealed record RuleSourceVersionMetadata(
+    string BaseRelease,
+    string DiscoveryTag,
+    int CommitsSinceBase,
+    string DisplayVersion,
+    string SourceCommit);
+
+public static class PrereleaseVersioning
+{
+    public static RuleSourceVersionMetadata Derive(
+        string baseRelease,
+        string discoveryTag,
+        string targetVersion,
+        int commitsSinceBase,
+        string sourceCommit)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(baseRelease);
+        ArgumentException.ThrowIfNullOrWhiteSpace(discoveryTag);
+        ArgumentException.ThrowIfNullOrWhiteSpace(targetVersion);
+        ArgumentException.ThrowIfNullOrWhiteSpace(sourceCommit);
+        if (commitsSinceBase < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(commitsSinceBase));
+        }
+
+        var canonicalBase = baseRelease.StartsWith('v') ? baseRelease : $"v{baseRelease}";
+        return new RuleSourceVersionMetadata(
+            canonicalBase,
+            discoveryTag,
+            commitsSinceBase,
+            $"{targetVersion}-rc.{commitsSinceBase}",
+            sourceCommit);
+    }
+}
+
 public sealed class ManagedRuleServiceOptions
 {
     public string RulesetId { get; init; } = "eternal-cycle-core";
@@ -60,6 +95,10 @@ public sealed class ManagedRuleServiceOptions
 
     public TimeSpan UpdateInterval { get; init; } = TimeSpan.FromHours(6);
 
+    public TimeSpan ManagedOperationTimeout { get; init; } = TimeSpan.FromMinutes(30);
+
+    public TimeSpan ManagedOperationPollInterval { get; init; } = TimeSpan.FromSeconds(1);
+
     public GitRuleSourceOptions GitSource { get; init; } = new();
 }
 
@@ -73,7 +112,8 @@ public sealed record RuleSourceSnapshot(
     string DiscoveryRef = "HEAD",
     int ManifestFormatVersion = 1,
     string CompilerContractVersion = "1",
-    string RulesetId = "eternal-cycle-core");
+    string RulesetId = "eternal-cycle-core",
+    RuleSourceVersionMetadata? VersionMetadata = null);
 
 public sealed record PublishedRuleRelease(
     string RuleReleaseId,
@@ -89,7 +129,8 @@ public sealed record PublishedRuleRelease(
     RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable,
     string? DiscoveryRef = null,
     int? ManifestFormatVersion = null,
-    string? CompilerContractVersion = null);
+    string? CompilerContractVersion = null,
+    RuleSourceVersionMetadata? VersionMetadata = null);
 
 public sealed record RulePublicationResult(
     string Status,
@@ -108,7 +149,8 @@ public sealed record RulePublicationResult(
     RuleSourceReleaseChannel? ReleaseChannel = null,
     string? DiscoveryRef = null,
     int? ManifestFormatVersion = null,
-    string? CompilerContractVersion = null);
+    string? CompilerContractVersion = null,
+    RuleSourceVersionMetadata? VersionMetadata = null);
 
 public sealed record RuleUpdateCheck(
     string RulesetId,
@@ -166,6 +208,7 @@ public sealed class ManagedRulePublicationCoordinator
     private readonly ManagedRuleServiceOptions settings;
     private readonly ManagedDiagnosticsOptions diagnosticsSettings;
     private readonly IManagedDiagnosticRecorder diagnostics;
+    private readonly IRulePreparationStore preparation;
     private readonly ILogger<ManagedRulePublicationCoordinator> logger;
 
     public ManagedRulePublicationCoordinator(
@@ -179,6 +222,7 @@ public sealed class ManagedRulePublicationCoordinator
             options,
             Options.Create(new ManagedDiagnosticsOptions()),
             NullManagedDiagnosticRecorder.Instance,
+            new ImmediateRulePreparationStore(),
             logger)
     {
     }
@@ -190,16 +234,41 @@ public sealed class ManagedRulePublicationCoordinator
         IOptions<ManagedDiagnosticsOptions> diagnosticsOptions,
         IManagedDiagnosticRecorder diagnostics,
         ILogger<ManagedRulePublicationCoordinator> logger)
+        : this(
+            sourceProvider,
+            store,
+            options,
+            diagnosticsOptions,
+            diagnostics,
+            new ImmediateRulePreparationStore(),
+            logger)
+    {
+    }
+
+    public ManagedRulePublicationCoordinator(
+        IRuleSourceProvider sourceProvider,
+        IPublishedRuleStore store,
+        IOptions<ManagedRuleServiceOptions> options,
+        IOptions<ManagedDiagnosticsOptions> diagnosticsOptions,
+        IManagedDiagnosticRecorder diagnostics,
+        IRulePreparationStore preparation,
+        ILogger<ManagedRulePublicationCoordinator> logger)
     {
         this.sourceProvider = sourceProvider;
         this.store = store;
         settings = options.Value;
         diagnosticsSettings = diagnosticsOptions.Value;
         this.diagnostics = diagnostics;
+        this.preparation = preparation;
         this.logger = logger;
     }
 
-    public async Task<RulePublicationResult> CheckForUpdateAsync(CancellationToken cancellationToken)
+    public Task<RulePublicationResult> CheckForUpdateAsync(CancellationToken cancellationToken) =>
+        CheckForUpdateAsync(null, cancellationToken);
+
+    public async Task<RulePublicationResult> CheckForUpdateAsync(
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken)
     {
         var correlationId = $"OP-{Guid.NewGuid():N}";
         var startedAt = DateTimeOffset.UtcNow;
@@ -207,15 +276,21 @@ public sealed class ManagedRulePublicationCoordinator
         PublishedRuleRelease? active = null;
         RuleSourceSnapshot? snapshot = null;
         PublishedRuleRelease? candidate = null;
+        void SetStage(RulePublicationStage value)
+        {
+            stage = value;
+            onStage?.Invoke(value);
+        }
+
         try
         {
             active = await store.GetActiveAsync(settings.RulesetId, cancellationToken);
-            snapshot = await sourceProvider.GetSnapshotAsync(value => stage = value, cancellationToken);
+            snapshot = await sourceProvider.GetSnapshotAsync(SetStage, cancellationToken);
 
             if (active is not null &&
                 string.Equals(active.SourceIdentity, snapshot.SourceIdentity, StringComparison.Ordinal))
             {
-                stage = RulePublicationStage.RecordUpdateCheck;
+                SetStage(RulePublicationStage.RecordUpdateCheck);
                 return await CompleteAsync(new RulePublicationResult(
                     "Unchanged",
                     null,
@@ -229,7 +304,8 @@ public sealed class ManagedRulePublicationCoordinator
                     ReleaseChannel: snapshot.ReleaseChannel,
                     DiscoveryRef: snapshot.DiscoveryRef,
                     ManifestFormatVersion: snapshot.ManifestFormatVersion,
-                    CompilerContractVersion: snapshot.CompilerContractVersion), "Unchanged", cancellationToken);
+                    CompilerContractVersion: snapshot.CompilerContractVersion,
+                    VersionMetadata: snapshot.VersionMetadata), "Unchanged", cancellationToken);
             }
 
             candidate = await store.FindBySourceAsync(
@@ -238,7 +314,7 @@ public sealed class ManagedRulePublicationCoordinator
                 cancellationToken);
             if (candidate is null)
             {
-                stage = RulePublicationStage.Compile;
+                SetStage(RulePublicationStage.Compile);
                 var releaseId = $"RULE-{Guid.NewGuid():N}";
                 var index = RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents);
                 candidate = new PublishedRuleRelease(
@@ -254,14 +330,17 @@ public sealed class ManagedRulePublicationCoordinator
                     ReleaseChannel: snapshot.ReleaseChannel,
                     DiscoveryRef: snapshot.DiscoveryRef,
                     ManifestFormatVersion: snapshot.ManifestFormatVersion,
-                    CompilerContractVersion: snapshot.CompilerContractVersion);
+                    CompilerContractVersion: snapshot.CompilerContractVersion,
+                    VersionMetadata: snapshot.VersionMetadata);
 
-                stage = RulePublicationStage.Stage;
+                SetStage(RulePublicationStage.Stage);
                 await store.StageCandidateAsync(candidate, cancellationToken);
             }
 
-            var result = await ResumeCandidateAsync(candidate, active, correlationId, value => stage = value, cancellationToken);
-            stage = RulePublicationStage.RecordUpdateCheck;
+            await preparation.InitializeAsync(candidate, cancellationToken);
+
+            var result = await ResumeCandidateAsync(candidate, active, correlationId, SetStage, cancellationToken);
+            SetStage(RulePublicationStage.RecordUpdateCheck);
             var outcome = result.Status switch
             {
                 "Activated" => "Activated",
@@ -274,7 +353,7 @@ public sealed class ManagedRulePublicationCoordinator
         {
             if (exception is OperationCanceledException)
             {
-                stage = RulePublicationStage.Cancelled;
+                SetStage(RulePublicationStage.Cancelled);
             }
 
             var failure = DescribeFailure(exception, stage);
@@ -339,7 +418,8 @@ public sealed class ManagedRulePublicationCoordinator
                 ReleaseChannel = snapshot?.ReleaseChannel ?? sourceFailure?.ReleaseChannel,
                 DiscoveryRef = snapshot?.DiscoveryRef ?? sourceFailure?.DiscoveryRef,
                 ManifestFormatVersion = snapshot?.ManifestFormatVersion,
-                CompilerContractVersion = snapshot?.CompilerContractVersion
+                CompilerContractVersion = snapshot?.CompilerContractVersion,
+                VersionMetadata = snapshot?.VersionMetadata
             };
             await TryRecordUpdateCheckAsync(result, retainedActive ? "Degraded" : "Failed");
             return result;
@@ -359,6 +439,14 @@ public sealed class ManagedRulePublicationCoordinator
         var state = candidate.State;
         if (state == RuleReleaseState.Active)
         {
+            onStage(RulePublicationStage.PrepareMinimumClosure);
+            var activeMinimumClosure = MinimumGameplayClosure(candidate.Index);
+            await preparation.MarkReadyAsync(
+                candidate.RuleReleaseId,
+                activeMinimumClosure,
+                cancellationToken);
+            onStage(RulePublicationStage.PrepareRemainingRules);
+            await PrepareRemainingAsync(candidate, activeMinimumClosure, cancellationToken);
             return Success("AlreadyPublished", candidate, candidate.RuleReleaseId, active is not null, correlationId);
         }
 
@@ -377,6 +465,13 @@ public sealed class ManagedRulePublicationCoordinator
             state = RuleReleaseState.Validated;
         }
 
+        onStage(RulePublicationStage.PrepareMinimumClosure);
+        var minimumClosure = MinimumGameplayClosure(candidate.Index);
+        await preparation.MarkReadyAsync(
+            candidate.RuleReleaseId,
+            minimumClosure,
+            cancellationToken);
+
         if (state == RuleReleaseState.Validated)
         {
             onStage(RulePublicationStage.Publish);
@@ -388,11 +483,15 @@ public sealed class ManagedRulePublicationCoordinator
         {
             onStage(RulePublicationStage.Activate);
             await store.ActivateAsync(settings.RulesetId, candidate.RuleReleaseId, cancellationToken);
+            onStage(RulePublicationStage.PrepareRemainingRules);
+            await PrepareRemainingAsync(candidate, minimumClosure, cancellationToken);
             return Success("Activated", candidate, candidate.RuleReleaseId, active is not null, correlationId);
         }
 
         if (state == RuleReleaseState.Published)
         {
+            onStage(RulePublicationStage.PrepareRemainingRules);
+            await PrepareRemainingAsync(candidate, minimumClosure, cancellationToken);
             return Success(
                 "AwaitingAdministratorActivation",
                 candidate,
@@ -427,7 +526,8 @@ public sealed class ManagedRulePublicationCoordinator
             ReleaseChannel: candidate.ReleaseChannel,
             DiscoveryRef: candidate.DiscoveryRef,
             ManifestFormatVersion: candidate.ManifestFormatVersion,
-            CompilerContractVersion: candidate.CompilerContractVersion);
+            CompilerContractVersion: candidate.CompilerContractVersion,
+            VersionMetadata: candidate.VersionMetadata);
 
     private static void ValidateCandidate(CompiledRuleIndex index)
     {
@@ -440,6 +540,55 @@ public sealed class ManagedRulePublicationCoordinator
         if (index.Chunks.Any(chunk => chunk.EstimatedTokens <= 0 || string.IsNullOrWhiteSpace(chunk.SourceHash)))
         {
             throw new InvalidOperationException("Every compiled rule chunk requires a token estimate and source hash.");
+        }
+    }
+
+    private static IReadOnlyCollection<string> MinimumGameplayClosure(CompiledRuleIndex index)
+    {
+        var bySource = index.Chunks
+            .GroupBy(chunk => chunk.RuleSourceId, StringComparer.Ordinal)
+            .ToDictionary(group => group.Key, group => group.First().Metadata, StringComparer.Ordinal);
+        var selected = bySource
+            .Where(pair => pair.Value.PreparationTier <= RulePreparationTier.ImmediateGameplayCore)
+            .Select(pair => pair.Key)
+            .ToHashSet(StringComparer.Ordinal);
+        var pending = new Stack<string>(selected);
+        while (pending.TryPop(out var sourceId))
+        {
+            foreach (var dependency in bySource[sourceId].Dependencies ?? [])
+            {
+                if (selected.Add(dependency))
+                {
+                    pending.Push(dependency);
+                }
+            }
+        }
+
+        return selected;
+    }
+
+    private async Task PrepareRemainingAsync(
+        PublishedRuleRelease candidate,
+        IReadOnlyCollection<string> minimumClosure,
+        CancellationToken cancellationToken)
+    {
+        while (await preparation.GetNextPendingAsync(candidate.RuleReleaseId, cancellationToken) is { } source)
+        {
+            await preparation.MarkReadyAsync(
+                candidate.RuleReleaseId,
+                [source.RuleSourceId],
+                cancellationToken);
+        }
+
+        var final = await preparation.GetAsync(candidate.RuleReleaseId, cancellationToken);
+        if (final.Sources.Any(source => source.State == RulePreparationState.Failed))
+        {
+            throw new RulePublicationException(
+                "RULE_REMAINDER_PREPARATION_FAILED",
+                RulePublicationStage.PrepareRemainingRules,
+                "At least one Rule Source remains in a failed preparation state.",
+                retrySafe: true,
+                administrativeInterventionRequired: false);
         }
     }
 
@@ -510,8 +659,10 @@ public sealed class ManagedRulePublicationCoordinator
             RulePublicationStage.Compile => new("RULE_COMPILATION_FAILED", "Rule compilation failed for the immutable source revision.", false, true),
             RulePublicationStage.Validate => new("RULE_VALIDATION_FAILED", "The compiled Rule Release failed validation.", false, true),
             RulePublicationStage.Stage => new("RULE_STORE_STAGE_FAILED", "The Rule Release candidate could not be staged.", true, false),
+            RulePublicationStage.PrepareMinimumClosure => new("RULE_MINIMUM_CLOSURE_FAILED", "The minimum authoritative gameplay closure could not be prepared.", true, false),
             RulePublicationStage.Publish => new("RULE_PUBLICATION_FAILED", "The validated Rule Release could not be published.", true, false),
             RulePublicationStage.Activate => new("RULE_ACTIVATION_FAILED", "The published Rule Release could not be activated.", true, false),
+            RulePublicationStage.PrepareRemainingRules => new("RULE_REMAINDER_PREPARATION_FAILED", "Remaining Rule Sources could not be prepared.", true, false),
             RulePublicationStage.RecordUpdateCheck => new("RULE_UPDATE_CHECK_RECORD_FAILED", "The Rule Release outcome could not be recorded.", true, false),
             _ => new("RULE_PUBLICATION_FAILED", "Rule publication failed.", true, false)
         };
@@ -591,12 +742,32 @@ public sealed class ManagedRulePublicationCoordinator
         bool AdministrativeInterventionRequired);
 }
 
-public sealed class PublishedRuleContextProvider(
-    IPublishedRuleStore store,
-    IOptions<ManagedRuleServiceOptions> options,
-    ICampaignSchemaResolver schemaResolver) : IRuleContextProvider
+public sealed class PublishedRuleContextProvider : IRuleContextProvider
 {
-    private readonly ManagedRuleServiceOptions settings = options.Value;
+    private readonly IPublishedRuleStore store;
+    private readonly IRulePreparationStore? preparation;
+    private readonly ICampaignSchemaResolver schemaResolver;
+    private readonly ManagedRuleServiceOptions settings;
+
+    public PublishedRuleContextProvider(
+        IPublishedRuleStore store,
+        IOptions<ManagedRuleServiceOptions> options,
+        ICampaignSchemaResolver schemaResolver)
+        : this(store, null, options, schemaResolver)
+    {
+    }
+
+    public PublishedRuleContextProvider(
+        IPublishedRuleStore store,
+        IRulePreparationStore? preparation,
+        IOptions<ManagedRuleServiceOptions> options,
+        ICampaignSchemaResolver schemaResolver)
+    {
+        this.store = store;
+        this.preparation = preparation;
+        this.schemaResolver = schemaResolver;
+        settings = options.Value;
+    }
 
     public async Task<RuleContextResult> GetContextAsync(
         RuleContextRequest request,
@@ -631,15 +802,31 @@ public sealed class PublishedRuleContextProvider(
             ? Math.Min(request.MaxEstimatedTokens, configuredMaximum)
             : configuredMaximum;
 
-        var selected = RuleCompiler.Select(
-            release.Index,
-            route,
-            request with
+        var effectiveRequest = request with
+        {
+            CampaignMode = campaignMode,
+            OptionalModules = modules,
+            MaxEstimatedTokens = requestedMaximum
+        };
+        var selected = RuleCompiler.Select(release.Index, route, effectiveRequest);
+        var requiredSources = selected.Chunks
+            .Select(chunk => chunk.RuleSourceId)
+            .Distinct(StringComparer.Ordinal)
+            .ToArray();
+        if (preparation is not null)
+        {
+            var state = await preparation.GetAsync(release.RuleReleaseId, cancellationToken);
+            var ready = state.Sources
+                .Where(source => source.State == RulePreparationState.Ready)
+                .Select(source => source.RuleSourceId)
+                .ToHashSet(StringComparer.Ordinal);
+            var pending = requiredSources.Where(sourceId => !ready.Contains(sourceId)).ToArray();
+            if (pending.Length > 0)
             {
-                CampaignMode = campaignMode,
-                OptionalModules = modules,
-                MaxEstimatedTokens = requestedMaximum
-            });
+                await preparation.RaisePriorityAsync(release.RuleReleaseId, pending, cancellationToken);
+                throw new RuleContextPendingException(pending);
+            }
+        }
 
         return selected with
         {

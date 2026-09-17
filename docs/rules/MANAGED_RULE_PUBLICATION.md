@@ -65,6 +65,20 @@ The source manifest declares a supported manifest format, compiler contract, Rul
 
 Network clone and fetch operations use a separately bounded acquisition timeout. Local ref resolution and object reads use a shorter process timeout. Cancellation bounds process-tree termination and redirected-output cleanup. A complete no-checkout cache may be reused, and an already-present immutable revision may satisfy an update-policy-compatible request without unnecessary network access. Partial clone directories have no authority and are replaced deterministically.
 
+### Eternal Cycle release-candidate provenance
+
+Full-release tags such as `v1.0.0` are immutable. Eternal Cycle release-candidate discovery tags intentionally move; development toward 1.1 uses `v1.1.0-rc` as a human and tool discovery pointer.
+
+For an official Prerelease source, publication records:
+
+- immutable Base Release tag;
+- moving Discovery Tag;
+- commits from the Base Release to the resolved source;
+- derived display version such as `1.1.0-rc.47`;
+- exact resolved commit SHA.
+
+The SHA is authoritative identity and provenance. The derived display version is not globally unique and never replaces it. Moving the discovery tag may nominate another candidate, but it cannot alter a historical Rule Release's stored source commit. No task may move the discovery tag merely by documenting or testing this convention.
+
 ## Rule Release
 
 Each release records:
@@ -81,7 +95,35 @@ Each release records:
 
 Candidate identity is stable and source-unique. Durable `Candidate`, `Validated`, or `Published` work resumes on retry instead of creating a competing release for the same source identity. A failed acquisition, compilation, validation, publication, or activation leaves the current active validated release intact. Activation is atomic from runtime retrieval's perspective.
 
-The observable publication stages are source acquisition, ref resolution, manifest read, rule-document read, compilation, validation, candidate staging, publication, activation, and update-check recording. Cancellation stops dependent work, terminates owned source processes where supported, preserves completed durable stages, and permits idempotent retry. A safe interface response identifies the failed stage and correlation ID without exposing protected diagnostics.
+The observable publication stages are source acquisition, ref resolution, manifest read, rule-document read, compilation, candidate staging, validation, minimum-closure preparation, publication, activation, remaining-rule preparation, and update-check recording. Initial publication runs as a [Managed Operation](../persistence/MANAGED_OPERATIONS.md): initiation returns durable identity promptly, a service-owned worker advances the stages, and independent status lookup reports progress and result identity. Client timeout or disconnect does not cancel that operation. Service restart detects interrupted ownership and resumes through the existing idempotent release lifecycle.
+
+Cancellation under service policy stops dependent work, terminates owned source processes where supported, preserves completed durable stages, and permits idempotent retry. A safe interface response identifies the failed stage and correlation ID without exposing protected diagnostics.
+
+## Progressive Rule Readiness
+
+Rule publication is not an all-or-nothing gameplay gate. The service tracks preparation for each Rule Source in a release and exposes distinct readiness:
+
+- **ServiceReady** - the service interface is responding;
+- **PersistenceReady** - required service and campaign persistence structures are usable;
+- **RuleKernelReady** - the Runtime Rule Kernel closure is validated and available;
+- **CampaignBootstrapReady** - the minimum authoritative closure needed to create or resume safe play is available;
+- **GameplayReady** - persistence, active compatible release, kernel, bootstrap closure, and requested campaign conditions permit play;
+- **FullRulesetReady** - every selected Rule Source is prepared.
+
+`GameplayReady` may be true while `FullRulesetReady` is false. This never permits guessing. A requested operation's Rule IDs and dependency closure must be ready before resolution. If they are not, retrieval returns `PENDING`, raises the closure's preparation priority, and waits for authoritative availability. Failed preparation returns `FAILED` with safe causal evidence.
+
+## Preparation Order
+
+The portable priority order is:
+
+1. Runtime Rule Kernel;
+2. Campaign Bootstrap and starting-play requirements;
+3. immediate gameplay core;
+4. campaign-relevant modules;
+5. remaining standard rules;
+6. optional, world-specific, or rare rules.
+
+Manifest preparation tier, ordinary priority, selectors, applicability, and dependency closure refine this order. A gameplay request may dynamically boost a pending required closure above unrelated work. The service re-evaluates durable pending priority between preparation units; a stored boost is not merely diagnostic metadata.
 
 ## Update Policies
 
@@ -128,6 +170,7 @@ Direct runtimes may use packaged compiled indexes, local indexes, repository-bac
 
 - [Rule Compilation and Retrieval](RULE_COMPILATION_AND_RETRIEVAL.md)
 - [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md)
+- [Managed Operations](../persistence/MANAGED_OPERATIONS.md)
 - [Logical Data Namespace](../persistence/LOGICAL_DATA_NAMESPACE.md)
 - [Community Feedback and Diagnostics](../support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md)
 - [Running Eternal Cycle](../persistence/RUNNING_ETERNAL_CYCLE.md)

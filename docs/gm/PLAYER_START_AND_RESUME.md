@@ -32,6 +32,10 @@ A suitable prompt is:
 
 Approval is specific to that administrative action. It is not permission for arbitrary SQL, source access, or unrelated database changes.
 
+The player may approve naturally after the action is explained. They do not need to type a provider-specific confirmation phrase. A deployment that additionally requires operator intervention reports that separately; it does not reinterpret ordinary conversational approval as administrator access.
+
+Initial rule publication returns a background Operation ID promptly. The runtime may report concise progress while the service continues independently. Play may begin when persistence and the minimum authoritative gameplay closure are ready, even while unrelated rules continue preparation. An action whose required rules are still pending waits rather than being guessed.
+
 ## New Game
 
 When no campaign exists, the runtime offers the authorized campaign-creation path and asks for a meaningful campaign name. It creates a stable internal Campaign ID, keeps that identifier backstage, then performs normal Campaign Bootstrap.

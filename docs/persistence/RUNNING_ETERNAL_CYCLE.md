@@ -7,7 +7,7 @@ This guide explains how a runtime discovers, selects, initializes, and reuses an
 ## Document Control
 
 - **Owner:** runtime-neutral startup, capability discovery, setup handoff, and strategy reuse
-- **Dependencies:** [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md), [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Managed Data Service](MANAGED_DATA_SERVICE.md), and [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md)
+- **Dependencies:** [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md), [Portable Persistence Architecture](PORTABLE_PERSISTENCE_ARCHITECTURE.md), [Managed Data Service](MANAGED_DATA_SERVICE.md), [Managed Operations](MANAGED_OPERATIONS.md), and [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md)
 - **Extensions:** runtime profiles, Direct Adapter instructions, Managed service quick starts, and deployment-specific configuration
 - **Consumers:** players, human and AI GMs, runtime integrators, and administrators
 - **Repository boundary:** no endpoint, credential, populated Campaign ID, or live state belongs here
@@ -35,12 +35,13 @@ The service may report:
 
 | State | Meaning | Normal response |
 | --- | --- | --- |
-| `READY` | Required schemas, source, active compatible Rule Release, and requested campaign are ready. | Start or resume play. |
+| `READY` | Persistence and the minimum authoritative closure required for the requested play are ready. | Start or resume play; remaining rules may continue preparation. |
 | `SETUP_REQUIRED` | EC-owned persistence or rule structures are missing. | Explain the bounded setup plan and request approval. |
 | `MIGRATION_REQUIRED` | Existing EC-owned structures require a supported upgrade or administrator review. | Stop state-changing play and migrate. |
 | `RULE_SOURCE_REQUIRED` | No Rule Source has been selected. | Offer the official source and compatible custom alternatives. |
-| `RULE_PUBLICATION_REQUIRED` | A source exists but no validated release is published. | Request approval for initial publication. |
+| `RULE_PUBLICATION_REQUIRED` | A source exists but no validated release is published. | Request approval, create or reuse a durable publication operation, and return its ID promptly. |
 | `RULE_ACTIVATION_REQUIRED` | A release is published but not active. | Follow the configured activation policy. |
+| `RULE_PREPARATION_PENDING` | An active release exists but the minimum or requested authoritative closure is still being prepared. | Query operation or context status; never guess the missing rule. |
 | `CAMPAIGN_REQUIRED` | The requested campaign is absent. | Discover campaigns or offer authorized creation. |
 | `DEGRADED` | Gameplay can use the last active release, but a noncritical source/update facility is unavailable. | Continue with a clear diagnostic state. |
 | `ERROR` | A blocking connection, compatibility, or validation failure exists. | Stop dependent play and surface a sanitized remedy. |
@@ -48,6 +49,10 @@ The service may report:
 Administrative initialization is never inferred from connection success. The client previews the exact EC-owned scope, explains it in ordinary language, obtains explicit approval, and invokes a separately authorized setup capability. Repeated setup must be idempotent or safely report that no migration is needed.
 
 If no Rule Source is configured, the service may offer the official Eternal Cycle repository described by authoritative distribution metadata. A user may instead authorize another compatible source or an offline local checkout. The successful choice is persisted and reused. The service, not the AI GM, acquires and compiles that source.
+
+Readiness is granular: `ServiceReady`, `PersistenceReady`, `RuleKernelReady`, `CampaignBootstrapReady`, `GameplayReady`, and `FullRulesetReady` are distinct claims. `GameplayReady` may become true before `FullRulesetReady`; a later action still waits when its dependency closure is `PENDING` or `FAILED`.
+
+Initial publication is a durable [Managed Operation](MANAGED_OPERATIONS.md). The initiating client may disconnect after receiving the Operation ID. On reconnect it reads status or recent operations; it does not restart publication blindly. Service diagnostics require no Campaign ID, while an optional Campaign ID adds campaign-specific routing and readiness.
 
 ## Direct Startup
 
@@ -71,5 +76,6 @@ When nothing is configured, an AI or human operator must inspect actual capabili
 
 - [Player Start and Resume](../gm/PLAYER_START_AND_RESUME.md)
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
+- [Managed Operations](MANAGED_OPERATIONS.md)
 - [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md)
 - [AI Session Start](../ai/AI_SESSION_START.md)

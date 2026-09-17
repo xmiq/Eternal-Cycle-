@@ -42,6 +42,7 @@ Runtime-specific profiles are replaceable operational extensions. They do not re
 - [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md) - first-class `DIRECT` and `MANAGED` strategies with one shared authority and completion contract.
 - [Direct Persistence Mode](../persistence/DIRECT_PERSISTENCE_MODE.md) - runtime-operated Database Format and Storage Adapter composition.
 - [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md) - storage- and interface-neutral semantic service operations, completion evidence, hidden backend, and service-owned durability.
+- [Managed Operations](../persistence/MANAGED_OPERATIONS.md) - durable service-owned work, independent status discovery, restart recovery, and client-timeout independence.
 - [MCP Managed Service Interface](../persistence/MCP_PERSISTENCE_MODE.md) - MCP realization of the Managed contract.
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md) - service-owned acquisition, compilation, validation, publication, activation, and bounded retrieval.
 - [Direct Persistence Adapter Index](../persistence/adapters/README.md) - SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
