@@ -1,5 +1,8 @@
 {
-  "repositoryVersion": "1.0.0+fr.019",
+  "manifestFormatVersion": 1,
+  "compilerContractVersion": "1",
+  "rulesetId": "eternal-cycle-core",
+  "repositoryVersion": "1.0.0+fr.020-rc",
   "sources": [
     {
       "ruleSourceId": "runtime-kernel",

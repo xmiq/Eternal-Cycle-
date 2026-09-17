@@ -246,6 +246,9 @@ public sealed class ManagedRulePublicationTests
                 Path.Combine(root, "docs", "rules", "manifest.json"),
                 """
                 {
+                  "manifestFormatVersion": 1,
+                  "compilerContractVersion": "1",
+                  "rulesetId": "eternal-cycle-core",
                   "repositoryVersion": "1.0.0",
                   "sources": [{
                     "ruleSourceId": "kernel",

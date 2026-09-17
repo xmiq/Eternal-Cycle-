@@ -52,12 +52,27 @@ A fresh Managed installation distinguishes **not yet configured** from an admini
 
 A cache created with `git clone --no-checkout` intentionally has no populated working tree. The provider resolves a ref to an immutable commit and reads the manifest and declared sources from Git objects. Missing working-tree files in that cache are not evidence of failed acquisition.
 
+## Release Channels and Compatibility
+
+The product/service version, Rule Source channel, discovery ref, immutable source commit, compiled Rule Release identity, and manifest/compiler contract are separate claims.
+
+- `Stable` is the default. It selects only a compatible released source and never silently falls forward to development content.
+- `Prerelease` is an explicit administrative opt-in. It may discover from a moving development ref, but compilation first resolves that ref to one immutable snapshot.
+
+The resulting Rule Release records both the discovery ref and exact source identity. Later movement of a branch cannot change an already-published release's provenance. A historical product tag remains immutable even when it predates the Managed compilation contract; absence of a compatible Stable source is reported honestly rather than repaired by relabeling development content.
+
+The source manifest declares a supported manifest format, compiler contract, RuleSet identity, repository version, and required canonical documents. The service validates that contract before compilation. Missing manifests, unsupported format or compiler contracts, RuleSet mismatch, and missing required sources are `RULE_SOURCE_INCOMPATIBLE`, not transient availability failures. Retrying the same immutable incompatible source is not safe; administrators must select a compatible source or channel.
+
+Network clone and fetch operations use a separately bounded acquisition timeout. Local ref resolution and object reads use a shorter process timeout. Cancellation bounds process-tree termination and redirected-output cleanup. A complete no-checkout cache may be reused, and an already-present immutable revision may satisfy an update-policy-compatible request without unnecessary network access. Partial clone directories have no authority and are replaced deterministically.
+
 ## Rule Release
 
 Each release records:
 
 - RuleSet and Rule Release IDs;
 - exact source identity and provider kind;
+- selected source channel and discovery ref;
+- manifest format and compiler contract versions;
 - compiler version and compilation time;
 - Repository Version and source hashes;
 - validation, publication, and activation states;

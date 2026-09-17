@@ -17,25 +17,53 @@ public sealed class ManagedPublicationRegressionTests
     public async Task OfficialManifestHasMeasuredBoundedPublicationPlan()
     {
         var repositoryRoot = FindRepositoryRoot();
-        var provider = new GitRuleSourceProvider(Options.Create(new ManagedRuleServiceOptions
+        var fixtureRoot = Path.Combine(Path.GetTempPath(), $"ec-official-manifest-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(fixtureRoot);
+        try
         {
-            GitSource = new GitRuleSourceOptions
+            var manifestPath = Path.Combine(repositoryRoot, "docs", "rules", "rule-source-manifest.json");
+            using var manifest = JsonDocument.Parse(File.ReadAllText(manifestPath));
+            foreach (var source in manifest.RootElement.GetProperty("sources").EnumerateArray())
             {
-                RepositoryRoot = repositoryRoot,
-                Ref = "HEAD",
-                ManifestPath = "docs/rules/rule-source-manifest.json"
+                var relativePath = source.GetProperty("path").GetString()
+                    ?? throw new InvalidOperationException("Official source path was null.");
+                var destination = Path.Combine(fixtureRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+                Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                File.Copy(Path.Combine(repositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)), destination);
             }
-        }));
 
-        var snapshot = await provider.GetSnapshotAsync(CancellationToken.None);
-        var plan = RulePublicationWritePlan.Create(
-            RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents));
+            var fixtureManifest = Path.Combine(fixtureRoot, "docs", "rules", "rule-source-manifest.json");
+            Directory.CreateDirectory(Path.GetDirectoryName(fixtureManifest)!);
+            File.Copy(manifestPath, fixtureManifest);
+            RunGit(fixtureRoot, "init");
+            RunGit(fixtureRoot, "config", "user.email", "fixture@example.invalid");
+            RunGit(fixtureRoot, "config", "user.name", "Fixture");
+            RunGit(fixtureRoot, "add", ".");
+            RunGit(fixtureRoot, "commit", "-m", "official manifest fixture");
+            var provider = new GitRuleSourceProvider(Options.Create(new ManagedRuleServiceOptions
+            {
+                GitSource = new GitRuleSourceOptions
+                {
+                    RepositoryRoot = fixtureRoot,
+                    Ref = "HEAD",
+                    ManifestPath = "docs/rules/rule-source-manifest.json"
+                }
+            }));
 
-        Assert.Equal(8, snapshot.Documents.Count);
-        Assert.Equal(147, plan.ChunkRows);
-        Assert.Equal(990, plan.SelectorRows);
-        Assert.Equal(768, plan.DependencyRows);
-        Assert.Equal(9, plan.StagingCommandCount);
+            var snapshot = await provider.GetSnapshotAsync(CancellationToken.None);
+            var plan = RulePublicationWritePlan.Create(
+                RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents));
+
+            Assert.Equal(8, snapshot.Documents.Count);
+            Assert.Equal(147, plan.ChunkRows);
+            Assert.Equal(990, plan.SelectorRows);
+            Assert.Equal(768, plan.DependencyRows);
+            Assert.Equal(9, plan.StagingCommandCount);
+        }
+        finally
+        {
+            DeleteTree(fixtureRoot);
+        }
     }
 
     [Fact]
@@ -81,6 +109,9 @@ public sealed class ManagedPublicationRegressionTests
             var manifestPath = Path.Combine(fixtureRoot, "docs", "rules", "manifest.json");
             File.WriteAllText(manifestPath, JsonSerializer.Serialize(new
             {
+                manifestFormatVersion = 1,
+                compilerContractVersion = "1",
+                rulesetId = "eternal-cycle-core",
                 repositoryVersion = "1.0.0+managed-regression",
                 sources = entries
             }));

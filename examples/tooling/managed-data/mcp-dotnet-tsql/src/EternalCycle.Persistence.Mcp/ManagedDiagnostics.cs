@@ -41,7 +41,12 @@ public sealed record ManagedDiagnosticContext(
     string? RuleReleaseId = null,
     string? SourceIdentity = null,
     string? CampaignId = null,
-    string Outcome = "Failed");
+    string Outcome = "Failed",
+    bool? RetrySafe = null,
+    bool? AdministrativeInterventionRequired = null,
+    RuleSourceReleaseChannel? ReleaseChannel = null,
+    string? DiscoveryRef = null,
+    string? SafeDetail = null);
 
 public sealed record ManagedOperationDiagnostic(
     string DiagnosticId,
@@ -61,7 +66,12 @@ public sealed record ManagedOperationDiagnostic(
     string? SourceIdentity,
     string? CampaignId,
     long DurationMilliseconds,
-    string Outcome);
+    string Outcome,
+    bool? RetrySafe = null,
+    bool? AdministrativeInterventionRequired = null,
+    string? ReleaseChannel = null,
+    string? DiscoveryRef = null,
+    string? SafeDetail = null);
 
 public sealed record ManagedDiagnosticReceipt(
     string CorrelationId,
@@ -160,7 +170,12 @@ public sealed class ManagedDiagnosticRecorder(
             context.SourceIdentity,
             context.CampaignId,
             Math.Max(0, (long)(DateTimeOffset.UtcNow - context.StartedAt).TotalMilliseconds),
-            context.Outcome);
+            context.Outcome,
+            context.RetrySafe,
+            context.AdministrativeInterventionRequired,
+            context.ReleaseChannel?.ToString(),
+            context.DiscoveryRef,
+            DiagnosticRedactor.Redact(context.SafeDetail));
     }
 
     private static string? BuildInnerChain(Exception? exception)
@@ -199,14 +214,18 @@ public sealed class SqlServerManagedDiagnosticStore(
                     sanitized_exception_message, sanitized_inner_exception_chain,
                     sanitized_stack_trace, eternal_cycle_version,
                     implementation_version, ruleset_id, rule_release_id,
-                    source_identity, campaign_id, duration_ms, outcome
+                    source_identity, campaign_id, duration_ms, outcome,
+                    retry_safe, administrative_intervention_required,
+                    source_channel, discovery_ref, safe_detail
                 ) VALUES (
                     @diagnostic_id, @correlation_id, @recorded_at, @operation_name,
                     @operation_stage, @error_code, @exception_type,
                     @sanitized_exception_message, @sanitized_inner_exception_chain,
                     @sanitized_stack_trace, @eternal_cycle_version,
                     @implementation_version, @ruleset_id, @rule_release_id,
-                    @source_identity, @campaign_id, @duration_ms, @outcome
+                    @source_identity, @campaign_id, @duration_ms, @outcome,
+                    @retry_safe, @administrative_intervention_required,
+                    @source_channel, @discovery_ref, @safe_detail
                 );
                 """, settings.DomainSchema),
             connection)
@@ -231,6 +250,11 @@ public sealed class SqlServerManagedDiagnosticStore(
         Add(command, "@campaign_id", diagnostic.CampaignId);
         Add(command, "@duration_ms", diagnostic.DurationMilliseconds);
         Add(command, "@outcome", diagnostic.Outcome);
+        Add(command, "@retry_safe", diagnostic.RetrySafe);
+        Add(command, "@administrative_intervention_required", diagnostic.AdministrativeInterventionRequired);
+        Add(command, "@source_channel", diagnostic.ReleaseChannel);
+        Add(command, "@discovery_ref", diagnostic.DiscoveryRef);
+        Add(command, "@safe_detail", diagnostic.SafeDetail);
         await command.ExecuteNonQueryAsync(cancellationToken);
     }
 
@@ -329,7 +353,10 @@ public sealed class RulePublicationException(
     string safeMessage,
     bool retrySafe,
     bool administrativeInterventionRequired,
-    Exception? innerException = null)
+    Exception? innerException = null,
+    RuleSourceReleaseChannel? releaseChannel = null,
+    string? discoveryRef = null,
+    string? sourceIdentity = null)
     : Exception(safeMessage, innerException)
 {
     public string Code { get; } = code;
@@ -341,4 +368,10 @@ public sealed class RulePublicationException(
     public bool RetrySafe { get; } = retrySafe;
 
     public bool AdministrativeInterventionRequired { get; } = administrativeInterventionRequired;
+
+    public RuleSourceReleaseChannel? ReleaseChannel { get; } = releaseChannel;
+
+    public string? DiscoveryRef { get; } = discoveryRef;
+
+    public string? SourceIdentity { get; } = sourceIdentity;
 }

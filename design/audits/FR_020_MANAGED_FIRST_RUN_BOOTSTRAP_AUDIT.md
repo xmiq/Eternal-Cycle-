@@ -33,7 +33,8 @@ The observed database containing campaign tables but no rule-domain tables is su
 - `002` Rule Domain publication;
 - `003` additive campaign display metadata;
 - `004` durable Rule Source configuration;
-- `005` redacted Managed-operation diagnostics.
+- `005` redacted Managed-operation diagnostics;
+- `006` additive Rule Source channel, compatibility-provenance, and causal-diagnostic fields.
 
 Partial unknown schemas produce `MIGRATION_REQUIRED` for administrator review. Additive upgrades are repeat-safe. Post-migration inspection must find no remaining supported plan.
 
@@ -51,7 +52,7 @@ Optional sanitized file logging supports MCP hosts that hide stderr. It is disab
 
 ## Schema and Compatibility
 
-The schema changes are additive. New installations receive display metadata in `001`; existing campaign schemas use idempotent `003`. Rule-source selection uses new idempotent `004` after `002`. No campaign data migration, database reset, destructive SQL, Direct persistence change, or Rule Packet budget change occurs.
+The schema changes are additive. New installations receive display metadata in `001`; existing campaign schemas use idempotent `003`. Rule-source selection uses new idempotent `004` after `002`, diagnostics use `005`, and `006` adds channel, discovery-ref, manifest/compiler-contract, and safe causal-diagnostic columns. Prior source rows retain a Stable operational default; unavailable historical discovery and manifest-contract details remain `NULL` rather than being invented. No campaign data migration, database reset, destructive SQL, Direct persistence change, or Rule Packet budget change occurs.
 
 The successful `ec_get_rule_context` response is now wrapped in a semantic result envelope. MCP clients that generated a rigid v1 response type for this optional post-v1 reference tool must regenerate or adapt that binding. Campaign transaction tools and validated receipt contracts are unchanged.
 
@@ -67,7 +68,7 @@ The successful `ec_get_rule_context` response is now wrapped in a semantic resul
 Repository-proven checks:
 
 - .NET build: pass, zero warnings and errors;
-- .NET tests: 70 passed, zero failed;
+- .NET tests: 81 passed, zero failed;
 - FR-011 persistence gate: 13 assertions passed;
 - FR-017 portable persistence: 29 assertions passed;
 - FR-018 rule compilation: 19 assertions passed;
@@ -76,7 +77,7 @@ Repository-proven checks:
 - reference MCP build from a different working directory: pass with zero warnings and errors;
 - reference MCP publish to a temporary output directory: pass, with `distribution-metadata.json` present in the publish output;
 - release-neutral campaign modes: 17 assertions passed;
-- full repository validator: pass across 278 Markdown files, 7,057 relative links, 161 anchors, 185 indexed canonical documents, 43 templates, 1,239 terminology checks, 192 roadmap tasks, and 20 Future Revision entries.
+- full repository validator: pass across 278 Markdown files, 7,059 relative links, 162 anchors, 185 indexed canonical documents, 43 templates, 1,243 terminology checks, 192 roadmap tasks, and 20 Future Revision entries.
 
 Startup and periodic update checks now consult readiness before touching the Rule Store or Rule Source. Expected first-run states defer the background check instead of terminating the service, so diagnostics and permission-gated setup remain reachable under non-default update policies.
 
@@ -107,15 +108,28 @@ Generic exception replacement was removed from this path. Failures receive a cor
 
 The regression suite uses both the actual official manifest and a temporary remote-style `file://` Git source acquired into a real `--no-checkout` managed cache. It covers acquisition, ref, source-read, compile, validate, stage, publish, activate, cancellation, SQL-first diagnostics, file fallback, logging failure, sanitized and verbose output, secret redaction, and idempotent resume.
 
+### Source compatibility and acquisition follow-up
+
+The next real Unsloth Studio, local-Qwen, and SQL Server run confirmed that migration, correlation IDs, publication stages, SQL-first diagnostics, and safe structured failure responses operated as designed. It also proved two separate defects remained:
+
+1. the official default selected immutable `v1.0.0`, but that historical release predates `docs/rules/rule-source-manifest.json` and cannot satisfy the Managed compiler contract;
+2. the shared two-minute Git timeout was too short for first remote acquisition on the tested connection, and process cleanup could extend an internal timeout toward the MCP client's outer limit.
+
+The repair leaves product `VERSION` and tag `v1.0.0` unchanged. Distribution metadata now declares compatible Stable and Prerelease Rule Source refs separately from the product release tag. Stable remains the default and fails honestly when no compatible Stable source exists; Prerelease is explicit and resolves its discovery ref to an immutable SHA before compilation. Published releases preserve channel, discovery ref, SHA, manifest format, and compiler contract as separate provenance.
+
+The manifest now declares a portable format version, compiler contract, and RuleSet identity. Missing manifests, unsupported contracts, RuleSet mismatch, and missing declared sources produce non-retryable `RULE_SOURCE_INCOMPATIBLE`. Migration `006` persists this provenance and safe causal-diagnostic data without replacing existing releases or campaign data.
+
+Remote clone and fetch now use a four-minute acquisition timeout while local ref and object operations retain a two-minute process timeout. Process-tree termination, exit waiting, and redirected-reader cleanup are bounded by a five-second grace period. Partial caches are replaced deterministically; complete no-checkout caches and locally verified immutable commits can be reused when the update policy permits. Readiness keeps its broad current classification and exposes the latest relevant causal failure separately so MCP-only clients can distinguish compatibility, acquisition, ref, and source-read problems without filesystem or shell access.
+
 ## Remaining Real-Infrastructure Acceptance
 
 A new real deployment must still prove:
 
 - clean and prior-schema SQL Server bootstrap with least-privilege permissions;
-- migration `005` and diagnostic insertion/fallback under the deployment identity;
+- migrations `005` and `006`, including diagnostic insertion/fallback and compatibility-provenance read-back under the deployment identity;
 - schema-only migration scope and read-back;
-- official remote Git acquisition and cache refresh;
-- full initial publication within the target MCP client's timeout using the official source;
+- official remote Git acquisition, separately bounded local Git operations, cache refresh, and bounded cancellation cleanup;
+- full initial publication within the target MCP client's timeout using explicit Prerelease selection and an immutable resolved source SHA;
 - cancellation and retry against a live SQL Server without duplicate releases;
 - source-unavailable fallback after a real successful publication;
 - campaign creation and restart discovery;

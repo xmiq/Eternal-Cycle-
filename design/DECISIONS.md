@@ -5301,3 +5301,15 @@ Every failed Managed administrative operation receives one correlation identity 
 ## D-1325 — Rule Publication Is Bounded and Resumable
 
 Managed Rule publication stages candidate chunks, selectors, and dependencies through bounded multi-row writes in one transaction rather than one datastore round trip per record. A retry reuses durable source-unique Candidate, Validated, or Published state and never creates a second release for the same immutable source identity. Cancellation terminates owned source processes where supported, preserves completed durable stages, and never replaces an active validated release.
+
+## D-1326 — Rule Source Channels Are Explicit and Do Not Rewrite Releases
+
+Product version, Rule Source release channel, discovery ref, immutable source commit, compiled Rule Release identity, and manifest/compiler compatibility are distinct. `Stable` is the default and never silently falls forward to unreleased content. `Prerelease` requires explicit administrative selection and resolves any moving discovery ref to an immutable commit before compilation; an existing Rule Release retains that exact source provenance even after the ref moves. Historical `v1.0.0` remains immutable despite predating the Managed manifest contract.
+
+## D-1327 — Managed Source Compatibility Is Manifest-Declared
+
+A Managed Rule Source must provide a supported manifest format, compatible compiler contract, matching RuleSet identity, and all declared canonical source documents. Missing or unsupported contracts are non-transient `RULE_SOURCE_INCOMPATIBLE` failures rather than generic source unavailability. Retrying the same immutable incompatible source is not considered safe, and an absent compatible Stable source requires an honest administrative decision rather than silent Prerelease substitution.
+
+## D-1328 — Network Acquisition and Local Git Work Have Separate Bounds
+
+Remote clone and fetch use a configurable acquisition timeout distinct from the local Git process timeout used for ref and object inspection. Process-tree termination and redirected-stream cleanup have their own bounded grace period and cannot indefinitely delay the original timeout result. Valid no-checkout caches and locally verified immutable revisions may be reused under the selected update policy; incomplete caches are replaced deterministically. Readiness may retain a broad current classification while exposing the latest safe causal operation diagnostic separately.

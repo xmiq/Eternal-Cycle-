@@ -13,6 +13,8 @@ This acceptance test validates the optional .NET/MCP/T-SQL reference implementat
 
 Record service build, configuration class, source revision, client version, and sanitized timestamps. Do not record credentials or campaign secrets.
 
+Stable is the normal default and must not silently use unreleased content. Until a compatible Stable Managed Rule Source is published, current v1.1 development acceptance explicitly sets `EternalCycle__Rules__ReleaseChannel=Prerelease`. Record the discovery ref and the immutable resolved commit SHA separately; do not describe a published release only as `main`.
+
 ## First-Run Matrix
 
 1. Connect to a clean database and verify `SETUP_REQUIRED`, not a generic invocation error.
@@ -21,12 +23,15 @@ Record service build, configuration class, source revision, client version, and 
 4. Repeat setup and verify a safe no-op.
 5. Verify diagnostics before rule publication reports an initialized but empty Rule Store.
 6. Verify no source reports `RULE_SOURCE_REQUIRED`.
-7. Select the official default, then repeat with an isolated custom compatible source to prove override behavior.
-8. Publish and activate an initial release from the managed `--no-checkout` cache within the target client's operation timeout; verify one source-unique release and `READY`.
-9. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
-10. Submit an invalid candidate and verify it never replaces the active release.
-11. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
-12. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
+7. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
+8. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
+9. Repeat with an isolated custom compatible source to prove override behavior.
+10. Publish and activate an initial release from the managed `--no-checkout` cache within the target client's operation timeout; verify one source-unique release and `READY`.
+11. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
+12. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
+13. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
+14. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
+15. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
 
 ## MCP-Only Gameplay Run
 
@@ -49,7 +54,7 @@ Record service build, configuration class, source revision, client version, and 
 
 ## Failure Cases
 
-Exercise missing campaign schema, missing rule schema, missing source, source unavailable, ref resolution, source read, failed compilation, failed validation, SQL staging/publication, activation, cancellation, no published release, no active release, incompatible release, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. Confirm SQL diagnostic failure uses the physical fallback, and failure of both sinks still preserves the original operation error. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets, including in verbose mode.
+Exercise missing campaign schema, missing rule schema, missing source, source unavailable, remote acquisition timeout, ref resolution, missing manifest, unsupported manifest/compiler contract, source read, failed compilation, failed validation, SQL staging/publication, activation, cancellation, no published release, no active release, incompatible release, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. Confirm the model can distinguish these cases through MCP readiness, setup responses, and authorized diagnostics without filesystem, shell, Git, source-code, or direct-SQL access. Confirm SQL diagnostic failure uses the physical fallback, and failure of both sinks still preserves the original operation error. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets, including in verbose mode.
 
 ## Evidence and Pass Boundary
 

@@ -18,6 +18,12 @@ public enum RuleActivationPolicy
     Manual
 }
 
+public enum RuleSourceReleaseChannel
+{
+    Stable,
+    Prerelease
+}
+
 public enum RuleReleaseState
 {
     Candidate,
@@ -32,6 +38,8 @@ public sealed class ManagedRuleServiceOptions
     public string RulesetId { get; init; } = "eternal-cycle-core";
 
     public string CompilerVersion { get; init; } = "1";
+
+    public RuleSourceReleaseChannel ReleaseChannel { get; init; } = RuleSourceReleaseChannel.Stable;
 
     public int MaximumEstimatedTokens { get; init; } = RuleCompiler.DefaultContextBudget;
 
@@ -60,7 +68,12 @@ public sealed record RuleSourceSnapshot(
     string SourceIdentity,
     string RepositoryVersion,
     IReadOnlyList<RuleSourceDocument> Documents,
-    DateTimeOffset AcquiredAt);
+    DateTimeOffset AcquiredAt,
+    RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable,
+    string DiscoveryRef = "HEAD",
+    int ManifestFormatVersion = 1,
+    string CompilerContractVersion = "1",
+    string RulesetId = "eternal-cycle-core");
 
 public sealed record PublishedRuleRelease(
     string RuleReleaseId,
@@ -72,7 +85,11 @@ public sealed record PublishedRuleRelease(
     RuleReleaseState State,
     CompiledRuleIndex Index,
     DateTimeOffset CreatedAt,
-    string? FailureReason = null);
+    string? FailureReason = null,
+    RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable,
+    string? DiscoveryRef = null,
+    int? ManifestFormatVersion = null,
+    string? CompilerContractVersion = null);
 
 public sealed record RulePublicationResult(
     string Status,
@@ -87,7 +104,11 @@ public sealed record RulePublicationResult(
     string? CorrelationId = null,
     bool RetrySafe = false,
     bool AdministrativeInterventionRequired = false,
-    string? DiagnosticsAvailability = null);
+    string? DiagnosticsAvailability = null,
+    RuleSourceReleaseChannel? ReleaseChannel = null,
+    string? DiscoveryRef = null,
+    int? ManifestFormatVersion = null,
+    string? CompilerContractVersion = null);
 
 public sealed record RuleUpdateCheck(
     string RulesetId,
@@ -204,7 +225,11 @@ public sealed class ManagedRulePublicationCoordinator
                     null,
                     Operation: OperationName,
                     Stage: stage.ToString(),
-                    CorrelationId: correlationId), "Unchanged", cancellationToken);
+                    CorrelationId: correlationId,
+                    ReleaseChannel: snapshot.ReleaseChannel,
+                    DiscoveryRef: snapshot.DiscoveryRef,
+                    ManifestFormatVersion: snapshot.ManifestFormatVersion,
+                    CompilerContractVersion: snapshot.CompilerContractVersion), "Unchanged", cancellationToken);
             }
 
             candidate = await store.FindBySourceAsync(
@@ -225,7 +250,11 @@ public sealed class ManagedRulePublicationCoordinator
                     settings.CompilerVersion,
                     RuleReleaseState.Candidate,
                     index,
-                    DateTimeOffset.UtcNow);
+                    DateTimeOffset.UtcNow,
+                    ReleaseChannel: snapshot.ReleaseChannel,
+                    DiscoveryRef: snapshot.DiscoveryRef,
+                    ManifestFormatVersion: snapshot.ManifestFormatVersion,
+                    CompilerContractVersion: snapshot.CompilerContractVersion);
 
                 stage = RulePublicationStage.Stage;
                 await store.StageCandidateAsync(candidate, cancellationToken);
@@ -249,6 +278,7 @@ public sealed class ManagedRulePublicationCoordinator
             }
 
             var failure = DescribeFailure(exception, stage);
+            var sourceFailure = exception as RulePublicationException;
             var releaseId = candidate?.RuleReleaseId;
             if (releaseId is not null && stage != RulePublicationStage.Activate)
             {
@@ -264,7 +294,12 @@ public sealed class ManagedRulePublicationCoordinator
                     startedAt,
                     settings.RulesetId,
                     releaseId,
-                    snapshot?.SourceIdentity),
+                    snapshot?.SourceIdentity ?? sourceFailure?.SourceIdentity,
+                    RetrySafe: failure.RetrySafe,
+                    AdministrativeInterventionRequired: failure.AdministrativeInterventionRequired,
+                    ReleaseChannel: snapshot?.ReleaseChannel ?? sourceFailure?.ReleaseChannel,
+                    DiscoveryRef: snapshot?.DiscoveryRef ?? sourceFailure?.DiscoveryRef,
+                    SafeDetail: failure.SafeMessage),
                 exception,
                 CancellationToken.None);
 
@@ -289,7 +324,7 @@ public sealed class ManagedRulePublicationCoordinator
                 status,
                 releaseId,
                 active?.RuleReleaseId,
-                snapshot?.SourceIdentity ?? active?.SourceIdentity,
+                snapshot?.SourceIdentity ?? sourceFailure?.SourceIdentity ?? active?.SourceIdentity,
                 retainedActive,
                 VisibleMessage(exception, failure.SafeMessage),
                 failure.Code,
@@ -299,6 +334,13 @@ public sealed class ManagedRulePublicationCoordinator
                 failure.RetrySafe,
                 failure.AdministrativeInterventionRequired,
                 receipt.Availability);
+            result = result with
+            {
+                ReleaseChannel = snapshot?.ReleaseChannel ?? sourceFailure?.ReleaseChannel,
+                DiscoveryRef = snapshot?.DiscoveryRef ?? sourceFailure?.DiscoveryRef,
+                ManifestFormatVersion = snapshot?.ManifestFormatVersion,
+                CompilerContractVersion = snapshot?.CompilerContractVersion
+            };
             await TryRecordUpdateCheckAsync(result, retainedActive ? "Degraded" : "Failed");
             return result;
         }
@@ -381,7 +423,11 @@ public sealed class ManagedRulePublicationCoordinator
             activeReleasePreserved,
             null,
             Operation: OperationName,
-            CorrelationId: correlationId);
+            CorrelationId: correlationId,
+            ReleaseChannel: candidate.ReleaseChannel,
+            DiscoveryRef: candidate.DiscoveryRef,
+            ManifestFormatVersion: candidate.ManifestFormatVersion,
+            CompilerContractVersion: candidate.CompilerContractVersion);
 
     private static void ValidateCandidate(CompiledRuleIndex index)
     {

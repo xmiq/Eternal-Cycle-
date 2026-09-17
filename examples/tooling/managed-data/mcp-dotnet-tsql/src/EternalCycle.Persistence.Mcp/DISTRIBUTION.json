@@ -4,5 +4,7 @@
   "supportPage": "https://github.com/xmiq/Eternal-Cycle-/issues",
   "stableReleaseTag": "v1.0.0",
   "developmentRef": "main",
+  "stableRuleSourceRef": null,
+  "prereleaseRuleSourceRef": "refs/heads/main",
   "ruleSourceManifest": "docs/rules/rule-source-manifest.json"
 }

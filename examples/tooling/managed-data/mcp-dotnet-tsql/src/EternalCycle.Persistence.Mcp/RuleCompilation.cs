@@ -64,6 +64,12 @@ public sealed record RuleContextResult(
 
 public sealed class RuleSourceManifest
 {
+    public int ManifestFormatVersion { get; init; }
+
+    public string CompilerContractVersion { get; init; } = string.Empty;
+
+    public string RulesetId { get; init; } = string.Empty;
+
     public string RepositoryVersion { get; init; } = string.Empty;
 
     public IList<RuleSourceManifestEntry> Sources { get; init; } = [];

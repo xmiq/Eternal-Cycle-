@@ -77,7 +77,7 @@ Administrative tools are separately configuration-gated and require an exact exp
 | Tool | Purpose |
 | --- | --- |
 | `ec_initialize_service` | Apply and validate only packaged EC-owned migrations. |
-| `ec_configure_rule_source` | Persist the official stable-tag default or a compatible custom Git source/ref. |
+| `ec_configure_rule_source` | Persist an explicit Stable or Prerelease official channel, or a compatible custom Git source/ref. |
 | `ec_publish_initial_rules` | Run explicit initial acquire/compile/validate/publish/activate workflow. |
 | `ec_create_campaign` | Create one stable campaign identity in the trusted default namespace. |
 
@@ -99,6 +99,7 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 3. [`003_campaign_directory.sql`](src/EternalCycle.Persistence.Mcp/Schema/003_campaign_directory.sql) to add player-meaningful campaign metadata to a prior default deployment.
 4. [`004_rule_source_configuration.sql`](src/EternalCycle.Persistence.Mcp/Schema/004_rule_source_configuration.sql) to persist the selected Rule Source without storing source credentials.
 5. [`005_managed_operation_diagnostics.sql`](src/EternalCycle.Persistence.Mcp/Schema/005_managed_operation_diagnostics.sql) to preserve redacted operation evidence with correlation and publication-stage metadata.
+6. [`006_rule_source_compatibility.sql`](src/EternalCycle.Persistence.Mcp/Schema/006_rule_source_compatibility.sql) to add source-channel, discovery-ref, manifest-contract, and safe causal-diagnostic provenance.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 
@@ -136,6 +137,7 @@ Rule publication configuration includes:
 ```text
 EternalCycle:Rules:RulesetId = eternal-cycle-core
 EternalCycle:Rules:CompilerVersion = 1
+EternalCycle:Rules:ReleaseChannel = Stable | Prerelease
 EternalCycle:Rules:MaximumEstimatedTokens = 8000
 EternalCycle:Rules:UpdatePolicy = Disabled | Startup | Periodic | Manual
 EternalCycle:Rules:ActivationPolicy = Automatic | Manual
@@ -144,8 +146,12 @@ EternalCycle:Rules:GitSource:RepositoryRoot = <trusted Git checkout>
 EternalCycle:Rules:GitSource:Ref = <trusted branch, tag, or commit>
 EternalCycle:Rules:GitSource:ManifestPath = docs/rules/rule-source-manifest.json
 EternalCycle:Rules:GitSource:FetchBeforeCheck = false
+EternalCycle:Rules:GitSource:AcquisitionTimeout = 00:04:00
 EternalCycle:Rules:GitSource:ProcessTimeout = 00:02:00
+EternalCycle:Rules:GitSource:TerminationGracePeriod = 00:00:05
 ```
+
+.NET configuration maps these names to environment variables naturally. For example, current v1.1 release-candidate testing uses `EternalCycle__Rules__ReleaseChannel=Prerelease`; the two timeout settings become `EternalCycle__Rules__GitSource__AcquisitionTimeout` and `EternalCycle__Rules__GitSource__ProcessTimeout`.
 
 Administration configuration includes:
 
@@ -166,7 +172,11 @@ EternalCycle:Diagnostics:PersistenceTimeout = 00:00:10
 
 `VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
 
-The packaged `distribution-metadata.json` identifies the official repository, stable tag, development ref, and source manifest. The reference project resolves it from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the selected ref to an immutable commit SHA and reads all content at that commit. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
+The packaged `distribution-metadata.json` identifies the official repository, historical product release tag, compatible Stable and Prerelease Rule Source refs, and source manifest. Product version and Rule Source channel are independent: `VERSION` remains `1.0.0`, and the immutable `v1.0.0` tag remains historical provenance even though it predates the Managed manifest contract. Stable is the default and never falls forward to unreleased content. If no compatible Stable source is published, setup returns `RULE_SOURCE_INCOMPATIBLE`; an administrator must explicitly select Prerelease for current development testing.
+
+The reference project resolves distribution metadata from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the discovery ref once, records the exact commit SHA as immutable publication provenance, and reads the manifest and declared documents at that commit. Moving the discovery ref later does not rewrite an existing Rule Release.
+
+The manifest declares its format, compiler contract, RuleSet, repository version, and required sources. Missing or unsupported manifest contracts fail as non-retryable `RULE_SOURCE_INCOMPATIBLE`, rather than as transient network failures. Remote clone and fetch use the longer `AcquisitionTimeout`; local `rev-parse`, `show`, and object inspection use `ProcessTimeout`. Cancellation attempts to terminate the process tree and bounds cleanup and redirected-reader waits by `TerminationGracePeriod`. Valid no-checkout caches and locally available immutable revisions are reused when update policy permits, while incomplete clone directories are discarded before retry. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
 
 General sanitized host logging is disabled unless `SanitizedLogFile` is set. It records timestamp, level, category, event, message, and exception type, but omits exception text. This is separate from the Managed-operation diagnostic fallback, which is available when SQL diagnostic persistence fails. Both paths exclude credentials, connection strings, Campaign Canon, and GM Secrets.
 
@@ -195,7 +205,9 @@ The repository tests use fakes, the official manifest, and local Git fixtures fo
 - `NO_PUBLISHED_RULE_RELEASE`: approve initial publication.
 - `NO_ACTIVE_RULE_RELEASE`: follow the configured activation policy.
 - `RULE_SOURCE_UNAVAILABLE`: repair source access; an existing active release remains usable in `DEGRADED` mode.
+- `RULE_SOURCE_INCOMPATIBLE`: the selected immutable source lacks or violates the supported Managed manifest/compiler contract. Repeating the same immutable source cannot repair it; select a compatible released source or explicitly opt into the configured Prerelease source for authorized testing.
 - `RULE_SOURCE_ACQUISITION_FAILED`: inspect network, Git executable, cache permissions, and the correlated authorized diagnostic.
+- `RULE_SOURCE_OPERATION_TIMEOUT`: distinguish remote acquisition from local Git work using the reported stage and latest relevant causal diagnostic; tune the corresponding bounded timeout only after checking network or process health.
 - `RULE_SOURCE_REF_RESOLUTION_FAILED`: verify the configured ref exists in the selected source.
 - `RULE_SOURCE_READ_FAILED`: verify the manifest and every declared source path at the resolved commit.
 - `RULE_COMPILATION_FAILED` or `RULE_VALIDATION_FAILED`: inspect the immutable source revision and correlated diagnostic; blind retry is not expected to repair invalid content.

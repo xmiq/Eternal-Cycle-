@@ -22,6 +22,8 @@ public sealed class ManagedFirstRunTests
         Assert.Equal("Eternal Cycle", metadata.Project);
         Assert.Equal("v1.0.0", metadata.StableReleaseTag);
         Assert.Equal("https://github.com/xmiq/Eternal-Cycle-.git", metadata.OfficialRepository);
+        Assert.Null(metadata.StableRuleSourceRef);
+        Assert.Equal("refs/heads/main", metadata.PrereleaseRuleSourceRef);
     }
 
     [Fact]
@@ -196,6 +198,8 @@ public sealed class ManagedFirstRunTests
               "officialRepository": "https://example.invalid/official.git",
               "stableReleaseTag": "v1.0.0",
               "developmentRef": "main",
+              "stableRuleSourceRef": "refs/tags/v1.1.0",
+              "prereleaseRuleSourceRef": "refs/heads/main",
               "ruleSourceManifest": "docs/rules/rule-source-manifest.json"
             }
             """);
@@ -223,11 +227,64 @@ public sealed class ManagedFirstRunTests
 
             Assert.True(official.Success);
             Assert.True(official.Data?.IsOfficial);
-            Assert.Equal("refs/tags/v1.0.0", official.Data?.RequestedRef);
+            Assert.Equal("refs/tags/v1.1.0", official.Data?.RequestedRef);
             Assert.True(custom.Success);
             Assert.False(custom.Data?.IsOfficial);
             Assert.Equal("https://example.invalid/custom.git", store.Current?.SourceLocation);
             Assert.Equal(2, store.Current?.ConfigurationRevision);
+        }
+        finally
+        {
+            Directory.Delete(root, recursive: true);
+        }
+    }
+
+    [Fact]
+    public async Task StableDoesNotFallForwardAndPrereleaseRequiresExplicitSelection()
+    {
+        var root = Path.Combine(Path.GetTempPath(), $"ec-channel-metadata-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(root);
+        var metadata = Path.Combine(root, "distribution.json");
+        await File.WriteAllTextAsync(metadata, """
+            {
+              "project": "Eternal Cycle",
+              "officialRepository": "https://example.invalid/official.git",
+              "stableReleaseTag": "v1.0.0",
+              "developmentRef": "main",
+              "stableRuleSourceRef": null,
+              "prereleaseRuleSourceRef": "refs/heads/main",
+              "ruleSourceManifest": "docs/rules/rule-source-manifest.json"
+            }
+            """);
+        try
+        {
+            var store = new MemorySourceConfigurationStore();
+            var service = Administration(
+                new FakeBootstrapExecutor([]),
+                enabled: true,
+                sourceStore: store,
+                metadataPath: metadata);
+
+            var stable = await service.ConfigureRuleSourceAsync(
+                new RuleSourceSelectionRequest(true, null, null, null, true, Approval),
+                CancellationToken.None);
+            var prerelease = await service.ConfigureRuleSourceAsync(
+                new RuleSourceSelectionRequest(
+                    true,
+                    null,
+                    null,
+                    null,
+                    true,
+                    Approval,
+                    RuleSourceReleaseChannel.Prerelease),
+                CancellationToken.None);
+
+            Assert.False(stable.Success);
+            Assert.Equal("RULE_SOURCE_INCOMPATIBLE", stable.Code);
+            Assert.True(prerelease.Success);
+            Assert.Equal(RuleSourceReleaseChannel.Prerelease, prerelease.Data?.ReleaseChannel);
+            Assert.Equal("refs/heads/main", prerelease.Data?.RequestedRef);
+            Assert.Equal(RuleSourceReleaseChannel.Prerelease, store.Current?.ReleaseChannel);
         }
         finally
         {
@@ -269,6 +326,9 @@ public sealed class ManagedFirstRunTests
             await File.WriteAllTextAsync(Path.Combine(root, "docs", "rules", "kernel.md"), "# Kernel\n\nRequired.");
             await File.WriteAllTextAsync(Path.Combine(root, "docs", "rules", "manifest.json"), """
                 {
+                  "manifestFormatVersion": 1,
+                  "compilerContractVersion": "1",
+                  "rulesetId": "eternal-cycle-core",
                   "repositoryVersion": "1.0.0",
                   "sources": [{
                     "ruleSourceId": "kernel",
@@ -352,11 +412,18 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("003_campaign_directory.template.sql", files);
         Assert.Contains("004_rule_source_configuration.template.sql", files);
         Assert.Contains("005_managed_operation_diagnostics.template.sql", files);
+        Assert.Contains("006_rule_source_compatibility.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
         Assert.Contains("IF OBJECT_ID", File.ReadAllText(Path.Combine(schemaDirectory, "004_rule_source_configuration.template.sql")));
         Assert.Contains("IF OBJECT_ID", File.ReadAllText(Path.Combine(schemaDirectory, "005_managed_operation_diagnostics.template.sql")));
+        var compatibility = File.ReadAllText(Path.Combine(schemaDirectory, "006_rule_source_compatibility.template.sql"));
+        Assert.Contains("release_channel", compatibility);
+        Assert.Contains("discovery_ref", compatibility);
+        Assert.Contains("manifest_format_version", compatibility);
+        Assert.Contains("retry_safe", compatibility);
+        Assert.Contains("IF COL_LENGTH", compatibility);
     }
 
     private static ManagedReadinessReport Evaluate(

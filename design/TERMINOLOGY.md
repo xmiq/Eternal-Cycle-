@@ -4920,6 +4920,22 @@ The SQL Server database that hosts one or more schemas. Database identity does n
 
 A stable identifier for one canonical rule source registered for compilation. It remains stable when a title or source presentation changes and carries path, anchor, hash, Repository Version, and applicability provenance.
 
+## Rule Source Release Channel
+
+An explicit source-selection class independent of product version. `Stable` selects only compatible released content and is the default; `Prerelease` is an administrator-selected path for compatible unreleased testing. A channel discovers a candidate and never becomes the immutable identity of a published Rule Release.
+
+## Discovery Ref
+
+A branch, tag, commit expression, or provider-equivalent reference used to locate a candidate Rule Source snapshot. A moving Discovery Ref must resolve to and be recorded alongside one immutable Source Identity before compilation or publication.
+
+## Managed Source Compatibility Contract
+
+The source manifest fields and required-content checks that establish whether a Managed compiler can consume a Rule Source. The contract includes manifest format, compiler contract, RuleSet identity, repository version, and declared source availability; it is portable across Git histories and providers.
+
+## Latest Relevant Causal Failure
+
+The most recent sanitized operation failure that materially explains a current Managed readiness condition. It supplements but does not replace the current readiness classification and may carry stage, correlation ID, retry guidance, safe detail, source channel, discovery ref, and immutable source identity.
+
 ## Runtime Rule Kernel
 
 The compact mandatory set of authority, agency, simulation, ownership, read, unknown-information, and persistence invariants loaded before specialist rule retrieval. It cannot replace a required specialist rule.

@@ -36,6 +36,18 @@ public sealed record ReadinessComponent(
     ManagedComponentStatus Status,
     string Detail);
 
+public sealed record ManagedCausalDiagnostic(
+    string ErrorCode,
+    string Stage,
+    string CorrelationId,
+    bool? RetrySafe,
+    bool? AdministrativeInterventionRequired,
+    string? SafeDetail,
+    RuleSourceReleaseChannel? ReleaseChannel,
+    string? DiscoveryRef,
+    string? SourceIdentity,
+    DateTimeOffset RecordedAt);
+
 public sealed record ManagedReadinessReport(
     ManagedReadinessState State,
     bool GameplayReady,
@@ -52,7 +64,8 @@ public sealed record ManagedReadinessReport(
     string? ErrorCode,
     string Message,
     bool AdministrativeActionRequired,
-    bool SanitizedFileLogConfigured);
+    bool SanitizedFileLogConfigured,
+    ManagedCausalDiagnostic? LatestRelevantFailure = null);
 
 public sealed record ManagedInfrastructureSnapshot(
     ManagedComponentStatus PersistenceConnection,
@@ -66,7 +79,8 @@ public sealed record ManagedInfrastructureSnapshot(
     ManagedComponentStatus Campaign,
     string? LatestUpdateOutcome,
     bool SanitizedFileLogConfigured,
-    string? FailureCode = null);
+    string? FailureCode = null,
+    ManagedCausalDiagnostic? LatestRelevantFailure = null);
 
 public interface IManagedInfrastructureInspector
 {
@@ -220,7 +234,8 @@ public static class ManagedReadinessEvaluator
             errorCode,
             message,
             administrativeActionRequired,
-            snapshot.SanitizedFileLogConfigured);
+            snapshot.SanitizedFileLogConfigured,
+            snapshot.LatestRelevantFailure);
     }
 
     private static ReadinessComponent Component(ManagedComponentStatus status, string name) =>
@@ -290,9 +305,11 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 campaignSchema = ManagedComponentStatus.Outdated;
             }
 
-            if (domainCoreReady &&
-                (!domainTables.Contains("rule_source_configurations") ||
-                 !domainTables.Contains("managed_operation_diagnostics")))
+            var ruleSourceCompatibilityReady = domainCoreReady &&
+                domainTables.Contains("rule_source_configurations") &&
+                domainTables.Contains("managed_operation_diagnostics") &&
+                await RuleSourceCompatibilityColumnsReadyAsync(connection, cancellationToken);
+            if (domainCoreReady && !ruleSourceCompatibilityReady)
             {
                 domainSchema = ManagedComponentStatus.Outdated;
             }
@@ -303,6 +320,7 @@ public sealed class SqlServerManagedInfrastructureInspector(
             string? activeSourceIdentity = null;
             var activeCompatible = false;
             string? latestUpdateOutcome = null;
+            ManagedCausalDiagnostic? latestRelevantFailure = null;
 
             if (domainCoreReady)
             {
@@ -311,6 +329,10 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 if (latestUpdateOutcome is "Failed" or "Degraded")
                 {
                     source = ManagedComponentStatus.Unavailable;
+                    if (ruleSourceCompatibilityReady)
+                    {
+                        latestRelevantFailure = await ReadLatestRelevantFailureAsync(connection, cancellationToken);
+                    }
                 }
             }
 
@@ -333,7 +355,8 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 activeCompatible,
                 campaign,
                 latestUpdateOutcome,
-                !string.IsNullOrWhiteSpace(administration.SanitizedLogFile));
+                !string.IsNullOrWhiteSpace(administration.SanitizedLogFile),
+                LatestRelevantFailure: latestRelevantFailure);
         }
         catch (SqlException)
         {
@@ -359,6 +382,80 @@ public sealed class SqlServerManagedInfrastructureInspector(
             null,
             !string.IsNullOrWhiteSpace(administration.SanitizedLogFile),
             code);
+
+    private async Task<bool> RuleSourceCompatibilityColumnsReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND (
+                    (tables.name = N'rule_source_configurations' AND columns.name = N'release_channel')
+                 OR (tables.name = N'rule_releases' AND columns.name IN (
+                        N'release_channel', N'discovery_ref', N'manifest_format_version', N'compiler_contract_version'))
+                 OR (tables.name = N'managed_operation_diagnostics' AND columns.name IN (
+                        N'safe_detail', N'retry_safe', N'administrative_intervention_required',
+                        N'source_channel', N'discovery_ref'))
+              );
+            """, connection)
+        {
+            CommandTimeout = persistence.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 10;
+    }
+
+    private async Task<ManagedCausalDiagnostic?> ReadLatestRelevantFailureAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = DomainCommand(connection, """
+            SELECT TOP (1)
+                error_code,
+                operation_stage,
+                correlation_id,
+                retry_safe,
+                administrative_intervention_required,
+                safe_detail,
+                source_channel,
+                discovery_ref,
+                source_identity,
+                recorded_at
+            FROM {{schema}}.managed_operation_diagnostics
+            WHERE ruleset_id = @ruleset_id
+              AND operation_name = N'PublishInitialRules'
+            ORDER BY recorded_at DESC, diagnostic_id DESC;
+            """);
+        command.Parameters.AddWithValue("@ruleset_id", rules.RulesetId);
+        await using var reader = await command.ExecuteReaderAsync(CommandBehavior.SingleRow, cancellationToken);
+        if (!await reader.ReadAsync(cancellationToken))
+        {
+            return null;
+        }
+
+        RuleSourceReleaseChannel? channel = null;
+        if (!reader.IsDBNull(6) &&
+            Enum.TryParse<RuleSourceReleaseChannel>(reader.GetString(6), ignoreCase: true, out var parsedChannel))
+        {
+            channel = parsedChannel;
+        }
+
+        return new ManagedCausalDiagnostic(
+            reader.GetString(0),
+            reader.GetString(1),
+            reader.GetString(2),
+            reader.IsDBNull(3) ? null : reader.GetBoolean(3),
+            reader.IsDBNull(4) ? null : reader.GetBoolean(4),
+            reader.IsDBNull(5) ? null : reader.GetString(5),
+            channel,
+            reader.IsDBNull(7) ? null : reader.GetString(7),
+            reader.IsDBNull(8) ? null : reader.GetString(8),
+            reader.GetDateTimeOffset(9));
+    }
 
     private static ManagedComponentStatus Classify(
         ISet<string> actual,

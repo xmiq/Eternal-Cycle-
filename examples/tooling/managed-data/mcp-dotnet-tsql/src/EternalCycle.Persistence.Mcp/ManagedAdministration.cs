@@ -59,7 +59,8 @@ public sealed record RuleSourceSelectionRequest(
     string? RequestedRef,
     string? ManifestPath,
     bool Approved,
-    string ApprovalPhrase);
+    string ApprovalPhrase,
+    RuleSourceReleaseChannel? ReleaseChannel = null);
 
 public sealed record RuleSourceSelection(
     string RulesetId,
@@ -68,7 +69,8 @@ public sealed record RuleSourceSelection(
     string ManifestPath,
     bool IsOfficial,
     long ConfigurationRevision,
-    DateTimeOffset ConfiguredAt);
+    DateTimeOffset ConfiguredAt,
+    RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable);
 
 public sealed record InitialRulePublicationRequest(
     bool Approved,
@@ -124,7 +126,8 @@ public sealed record RuleSourceConfiguration(
     string ManifestPath,
     bool IsOfficial,
     long ConfigurationRevision,
-    DateTimeOffset ConfiguredAt);
+    DateTimeOffset ConfiguredAt,
+    RuleSourceReleaseChannel ReleaseChannel = RuleSourceReleaseChannel.Stable);
 
 public interface IRuleSourceConfigurationStore
 {
@@ -236,14 +239,17 @@ public sealed class ManagedAdministrationService(
 
         try
         {
+            var releaseChannel = request.ReleaseChannel ?? rules.ReleaseChannel;
             var metadata = request.UseOfficialDefault ? OfficialDistributionMetadata.Load(administration) : null;
             var sourceLocation = request.UseOfficialDefault
                 ? metadata!.OfficialRepository
                 : Require(request.SourceLocation, nameof(request.SourceLocation));
-            var requestedRef = request.RequestedRef
-                ?? (request.UseOfficialDefault ? OfficialStableRef(metadata!.StableReleaseTag) : "HEAD");
-            var manifestPath = request.ManifestPath
-                ?? (request.UseOfficialDefault ? metadata!.RuleSourceManifest : rules.GitSource.ManifestPath);
+            var requestedRef = request.UseOfficialDefault
+                ? OfficialRuleSourceRef(metadata!, releaseChannel)
+                : request.RequestedRef ?? "HEAD";
+            var manifestPath = request.UseOfficialDefault
+                ? metadata!.RuleSourceManifest
+                : request.ManifestPath ?? rules.GitSource.ManifestPath;
 
             var saved = await sourceConfigurations.SaveAsync(
                 new RuleSourceConfiguration(
@@ -254,7 +260,8 @@ public sealed class ManagedAdministrationService(
                     Require(manifestPath, nameof(request.ManifestPath)),
                     request.UseOfficialDefault,
                     1,
-                    DateTimeOffset.UtcNow),
+                    DateTimeOffset.UtcNow,
+                    releaseChannel),
                 cancellationToken);
             return new(
                 true,
@@ -376,7 +383,8 @@ public sealed class ManagedAdministrationService(
             value.ManifestPath,
             value.IsOfficial,
             value.ConfigurationRevision,
-            value.ConfiguredAt);
+            value.ConfiguredAt,
+            value.ReleaseChannel);
 
     private static string Require(string? value, string name)
     {
@@ -388,10 +396,34 @@ public sealed class ManagedAdministrationService(
         return value;
     }
 
-    private static string OfficialStableRef(string stableReleaseTag)
+    private static string OfficialRuleSourceRef(
+        OfficialDistributionMetadata metadata,
+        RuleSourceReleaseChannel releaseChannel)
     {
-        var value = Require(stableReleaseTag, nameof(stableReleaseTag));
-        return value.StartsWith("refs/", StringComparison.Ordinal) ? value : $"refs/tags/{value}";
+        var configured = releaseChannel switch
+        {
+            RuleSourceReleaseChannel.Stable => metadata.StableRuleSourceRef,
+            RuleSourceReleaseChannel.Prerelease => metadata.PrereleaseRuleSourceRef ?? metadata.DevelopmentRef,
+            _ => null
+        };
+        if (string.IsNullOrWhiteSpace(configured))
+        {
+            throw new ManagedServiceException(
+                "RULE_SOURCE_INCOMPATIBLE",
+                releaseChannel == RuleSourceReleaseChannel.Stable
+                    ? "No compatible Stable Managed Rule Source is published. An administrator may explicitly select Prerelease for unreleased testing."
+                    : "No compatible Prerelease Managed Rule Source is configured in official distribution metadata.");
+        }
+
+        var value = Require(configured, nameof(configured));
+        if (value.StartsWith("refs/", StringComparison.Ordinal))
+        {
+            return value;
+        }
+
+        return releaseChannel == RuleSourceReleaseChannel.Stable
+            ? $"refs/tags/{value}"
+            : $"refs/heads/{value}";
     }
 }
 
@@ -407,7 +439,8 @@ public sealed class SqlServerRuleSourceConfigurationStore(
         await using var connection = await OpenAsync(cancellationToken);
         await using var command = Command(connection, """
             SELECT ruleset_id, provider_kind, source_location, requested_ref,
-                   manifest_path, is_official, config_revision, configured_at
+                   manifest_path, is_official, config_revision, configured_at,
+                   release_channel
             FROM {{schema}}.rule_source_configurations
             WHERE ruleset_id = @ruleset_id;
             """);
@@ -431,18 +464,22 @@ public sealed class SqlServerRuleSourceConfigurationStore(
                 requested_ref = @requested_ref,
                 manifest_path = @manifest_path,
                 is_official = @is_official,
+                release_channel = @release_channel,
                 config_revision = target.config_revision + 1,
                 configured_at = @configured_at
             WHEN NOT MATCHED THEN INSERT (
                 ruleset_id, provider_kind, source_location, requested_ref,
-                manifest_path, is_official, config_revision, configured_at
+                manifest_path, is_official, config_revision, configured_at,
+                release_channel
             ) VALUES (
                 @ruleset_id, @provider_kind, @source_location, @requested_ref,
-                @manifest_path, @is_official, 1, @configured_at
+                @manifest_path, @is_official, 1, @configured_at,
+                @release_channel
             );
 
             SELECT ruleset_id, provider_kind, source_location, requested_ref,
-                   manifest_path, is_official, config_revision, configured_at
+                   manifest_path, is_official, config_revision, configured_at,
+                   release_channel
             FROM {{schema}}.rule_source_configurations
             WHERE ruleset_id = @ruleset_id;
             """);
@@ -453,6 +490,7 @@ public sealed class SqlServerRuleSourceConfigurationStore(
         command.Parameters.AddWithValue("@manifest_path", configuration.ManifestPath);
         command.Parameters.AddWithValue("@is_official", configuration.IsOfficial);
         command.Parameters.AddWithValue("@configured_at", configuration.ConfiguredAt);
+        command.Parameters.AddWithValue("@release_channel", configuration.ReleaseChannel.ToString());
         await using var reader = await command.ExecuteReaderAsync(CommandBehavior.SingleRow, cancellationToken);
         _ = await reader.ReadAsync(cancellationToken);
         return Read(reader);
@@ -467,7 +505,8 @@ public sealed class SqlServerRuleSourceConfigurationStore(
             reader.GetString(4),
             reader.GetBoolean(5),
             reader.GetInt64(6),
-            reader.GetDateTimeOffset(7));
+            reader.GetDateTimeOffset(7),
+            Enum.Parse<RuleSourceReleaseChannel>(reader.GetString(8), ignoreCase: true));
 
     private async Task<SqlConnection> OpenAsync(CancellationToken cancellationToken)
     {
@@ -599,15 +638,21 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 "005_managed_operation_diagnostics",
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("005_managed_operation_diagnostics.template.sql")));
+            migrations.Add(new(
+                "006_rule_source_compatibility",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("006_rule_source_compatibility.template.sql")));
         }
         else
         {
+            var compatibilityFoundationAdded = false;
             if (!domainTables.Contains("rule_source_configurations"))
             {
                 migrations.Add(new(
                     "004_rule_source_configuration",
                     $"Domain schema {settings.DomainSchema}",
                     RenderDomain("004_rule_source_configuration.template.sql")));
+                compatibilityFoundationAdded = true;
             }
 
             if (!domainTables.Contains("managed_operation_diagnostics"))
@@ -616,6 +661,16 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                     "005_managed_operation_diagnostics",
                     $"Domain schema {settings.DomainSchema}",
                     RenderDomain("005_managed_operation_diagnostics.template.sql")));
+                compatibilityFoundationAdded = true;
+            }
+
+            if (compatibilityFoundationAdded ||
+                !await RuleSourceCompatibilityColumnsReadyAsync(connection, cancellationToken))
+            {
+                migrations.Add(new(
+                    "006_rule_source_compatibility",
+                    $"Domain schema {settings.DomainSchema}",
+                    RenderDomain("006_rule_source_compatibility.template.sql")));
             }
         }
 
@@ -666,6 +721,32 @@ public sealed class SqlServerSchemaBootstrapExecutor(
         };
         command.Parameters.AddWithValue("@schema_name", schemaName);
         return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 2;
+    }
+
+    private async Task<bool> RuleSourceCompatibilityColumnsReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND (
+                    (tables.name = N'rule_source_configurations' AND columns.name = N'release_channel')
+                 OR (tables.name = N'rule_releases' AND columns.name IN (
+                        N'release_channel', N'discovery_ref', N'manifest_format_version', N'compiler_contract_version'))
+                 OR (tables.name = N'managed_operation_diagnostics' AND columns.name IN (
+                        N'safe_detail', N'retry_safe', N'administrative_intervention_required',
+                        N'source_channel', N'discovery_ref'))
+              );
+            """, connection)
+        {
+            CommandTimeout = settings.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 10;
     }
 
     private string Render(string fileName, CampaignSchemaRoute route) =>
@@ -819,7 +900,9 @@ public sealed record OfficialDistributionMetadata(
     string OfficialRepository,
     string StableReleaseTag,
     string DevelopmentRef,
-    string RuleSourceManifest)
+    string RuleSourceManifest,
+    string? StableRuleSourceRef = null,
+    string? PrereleaseRuleSourceRef = null)
 {
     public static OfficialDistributionMetadata Load(ManagedAdministrationOptions options)
     {
