@@ -1,0 +1,8 @@
+{
+  "project": "Eternal Cycle",
+  "officialRepository": "https://github.com/xmiq/Eternal-Cycle-.git",
+  "supportPage": "https://github.com/xmiq/Eternal-Cycle-/issues",
+  "stableReleaseTag": "v1.0.0",
+  "developmentRef": "main",
+  "ruleSourceManifest": "docs/rules/rule-source-manifest.json"
+}

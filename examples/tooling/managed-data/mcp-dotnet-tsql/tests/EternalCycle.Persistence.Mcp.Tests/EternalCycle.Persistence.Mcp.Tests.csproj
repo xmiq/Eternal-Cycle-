@@ -19,6 +19,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\EternalCycle.Persistence.Mcp\EternalCycle.Persistence.Mcp.csproj" />
+    <None Include="..\..\src\EternalCycle.Persistence.Mcp\DISTRIBUTION.json"
+          Link="distribution-metadata.json"
+          CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

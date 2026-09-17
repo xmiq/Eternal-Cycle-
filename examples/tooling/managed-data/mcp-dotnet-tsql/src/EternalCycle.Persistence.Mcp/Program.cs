@@ -34,10 +34,17 @@ builder.Services
     .AddOptions<ManagedAdministrationOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Administration"));
 
+builder.Services
+    .AddOptions<ManagedDiagnosticsOptions>()
+    .Bind(builder.Configuration.GetSection("EternalCycle:Diagnostics"));
+
 builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
 builder.Services.AddSingleton<IRuleSourceConfigurationStore, SqlServerRuleSourceConfigurationStore>();
 builder.Services.AddSingleton<IRuleSourceProvider, GitRuleSourceProvider>();
 builder.Services.AddSingleton<IPublishedRuleStore, SqlServerPublishedRuleStore>();
+builder.Services.AddSingleton<IManagedDiagnosticStore, SqlServerManagedDiagnosticStore>();
+builder.Services.AddSingleton<IManagedDiagnosticFileSink, PhysicalManagedDiagnosticFileSink>();
+builder.Services.AddSingleton<IManagedDiagnosticRecorder, ManagedDiagnosticRecorder>();
 builder.Services.AddSingleton<ManagedRulePublicationCoordinator>();
 builder.Services.AddHostedService<ManagedRuleUpdateHostedService>();
 builder.Services.AddSingleton<IRuleContextProvider, PublishedRuleContextProvider>();

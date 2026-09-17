@@ -93,6 +93,10 @@ MCP is the supplied reference interface, not a universal requirement. A differen
 - Sanitized diagnostics distinguish degraded update status from unavailable gameplay authority.
 - Expected setup failures retain semantic codes and actionable explanations through the interface boundary.
 
+Managed administrative failures carry an operation name, stage, correlation ID, semantic error code, safe message, retry guidance, intervention guidance, and authorized-diagnostic availability. The ordinary response remains sanitized; the underlying exception chain and stack evidence are redacted and preserved in the service's authorized diagnostic store. If that store is unavailable, a service may use a protected physical fallback. Failure of either diagnostic sink never replaces the original operation failure or makes it appear successful.
+
+Verbose development visibility is opt-in and changes only how much redacted evidence an authorized operator sees. It never disables redaction, weakens transaction behavior, or changes success into failure or failure into success.
+
 ## Security
 
 - No arbitrary SQL or general backend query surface is part of the gameplay contract.

@@ -290,7 +290,9 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 campaignSchema = ManagedComponentStatus.Outdated;
             }
 
-            if (domainCoreReady && !domainTables.Contains("rule_source_configurations"))
+            if (domainCoreReady &&
+                (!domainTables.Contains("rule_source_configurations") ||
+                 !domainTables.Contains("managed_operation_diagnostics")))
             {
                 domainSchema = ManagedComponentStatus.Outdated;
             }

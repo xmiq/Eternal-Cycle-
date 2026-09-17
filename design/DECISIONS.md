@@ -5293,3 +5293,11 @@ Campaign IDs remain stable isolation and routing identities. Start and resume in
 ## D-1323 — Managed Diagnostics Must Survive Degraded Infrastructure
 
 Diagnostics inspect readiness before depending on optional or uninitialized stores. They identify missing schemas, empty publication, absent or unavailable sources, inactive or incompatible releases, and missing campaigns without exposing credentials, locators, Campaign Canon, or GM Secrets. Optional file logging is conservative, sanitized, and independent of the MCP client.
+
+## D-1324 — Managed Failure Evidence Is Preserved Behind Safe Responses
+
+Every failed Managed administrative operation receives one correlation identity and stage-specific error category. The ordinary response remains sanitized, while systematically redacted exception type, message, inner chain, stack evidence, versions, relevant stable identifiers, duration, and outcome are written to the authorized diagnostic store. If that store fails, a protected physical fallback receives the same correlation identity; diagnostic failure never replaces or disguises the original operation failure. Verbose mode changes authorized visibility only and never disables redaction.
+
+## D-1325 — Rule Publication Is Bounded and Resumable
+
+Managed Rule publication stages candidate chunks, selectors, and dependencies through bounded multi-row writes in one transaction rather than one datastore round trip per record. A retry reuses durable source-unique Candidate, Validated, or Published state and never creates a second release for the same immutable source identity. Cancellation terminates owned source processes where supported, preserves completed durable stages, and never replaces an active validated release.

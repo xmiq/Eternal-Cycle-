@@ -50,6 +50,8 @@ For Git sources, the immutable commit SHA is the compiled-source identity. Branc
 
 A fresh Managed installation distinguishes **not yet configured** from an administrator's explicit disabled/offline update policy. When no source is selected, readiness reports `RULE_SOURCE_REQUIRED`. The service may offer an official source from authoritative distribution metadata, accept another compatible provider/source, persist the approved selection, and reuse it. A Git reference implementation may maintain a service-owned cache so an ordinary player does not need to clone a repository or configure a local `RepositoryRoot`; local checkout support remains valid for advanced, offline, and development use.
 
+A cache created with `git clone --no-checkout` intentionally has no populated working tree. The provider resolves a ref to an immutable commit and reads the manifest and declared sources from Git objects. Missing working-tree files in that cache are not evidence of failed acquisition.
+
 ## Rule Release
 
 Each release records:
@@ -62,7 +64,9 @@ Each release records:
 - applicability and dependency metadata;
 - failure evidence where applicable.
 
-Candidates are append-only release attempts. A failed acquisition, compilation, validation, publication, or activation leaves the current active validated release intact. Activation is atomic from runtime retrieval's perspective.
+Candidate identity is stable and source-unique. Durable `Candidate`, `Validated`, or `Published` work resumes on retry instead of creating a competing release for the same source identity. A failed acquisition, compilation, validation, publication, or activation leaves the current active validated release intact. Activation is atomic from runtime retrieval's perspective.
+
+The observable publication stages are source acquisition, ref resolution, manifest read, rule-document read, compilation, validation, candidate staging, publication, activation, and update-check recording. Cancellation stops dependent work, terminates owned source processes where supported, preserves completed durable stages, and permits idempotent retry. A safe interface response identifies the failed stage and correlation ID without exposing protected diagnostics.
 
 ## Update Policies
 
@@ -99,7 +103,7 @@ Campaign Canon and current scene/input remain separate context inputs. The norma
 
 ## T-SQL Reference Mapping
 
-The reference implementation stores published reusable Rule Releases, chunks, applicability, dependencies, source provenance, update status, and active-release pointers in `ec_domain`. World schemas contain Campaign Canon only. Other Managed implementations use their Domain Namespace equivalent.
+The reference implementation stores published reusable Rule Releases, chunks, applicability, dependencies, source provenance, update status, active-release pointers, and sanitized Managed-operation diagnostics in `ec_domain`. Candidate rows, chunks, selectors, and dependencies are staged in one transaction; bounded multi-row writes avoid pathological per-record round trips without changing atomicity. World schemas contain Campaign Canon only. Other Managed implementations use their Domain Namespace equivalent.
 
 ## DIRECT Delivery
 

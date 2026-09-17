@@ -4951,3 +4951,11 @@ The Eternal Cycle source identity published by authoritative distribution metada
 ## Campaign Directory
 
 A non-canonical operational index of stable Campaign IDs, meaningful display names, short descriptions, and trusted routing metadata used for start and resume selection. It contains no Campaign Canon and does not weaken campaign isolation.
+
+## Managed Operation Diagnostic
+
+An authorized, systematically redacted operational failure record carrying one correlation identity, operation, stage, structured error code, exception evidence, versions, relevant stable identifiers, duration, and outcome. It contains no credential, connection string, Campaign Canon, GM Secret, or private conversation and never becomes gameplay state.
+
+## Publication Correlation ID
+
+A stable operation-scoped identifier joining one Managed publication response to its authorized diagnostic evidence and physical fallback record. It is not a Rule Release ID, Campaign ID, or security credential.

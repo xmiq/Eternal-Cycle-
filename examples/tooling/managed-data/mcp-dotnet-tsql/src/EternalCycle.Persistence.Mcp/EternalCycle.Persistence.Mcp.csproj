@@ -6,6 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EternalCycleRepositoryRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\..\..\..'))</EternalCycleRepositoryRoot>
+    <OfficialDistributionMetadataRepositorySource>$([System.IO.Path]::Combine('$(EternalCycleRepositoryRoot)', 'DISTRIBUTION.json'))</OfficialDistributionMetadataRepositorySource>
+    <OfficialDistributionMetadataLocalSource>$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', 'DISTRIBUTION.json'))</OfficialDistributionMetadataLocalSource>
+    <OfficialDistributionMetadataSource Condition="Exists('$(OfficialDistributionMetadataRepositorySource)')">$(OfficialDistributionMetadataRepositorySource)</OfficialDistributionMetadataSource>
+    <OfficialDistributionMetadataSource Condition="'$(OfficialDistributionMetadataSource)' == '' and Exists('$(OfficialDistributionMetadataLocalSource)')">$(OfficialDistributionMetadataLocalSource)</OfficialDistributionMetadataSource>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,9 +28,27 @@
     <None Include="Schema\003_campaign_directory.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\004_rule_source_configuration.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\004_rule_source_configuration.template.sql" CopyToOutputDirectory="PreserveNewest" />
-    <None Include="..\..\..\..\..\..\DISTRIBUTION.json"
+    <None Include="Schema\005_managed_operation_diagnostics.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\005_managed_operation_diagnostics.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(OfficialDistributionMetadataSource)"
           Link="distribution-metadata.json"
-          CopyToOutputDirectory="PreserveNewest" />
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
+
+  <Target Name="ValidateOfficialDistributionMetadataSource" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('$(OfficialDistributionMetadataSource)')"
+           Text="Eternal Cycle distribution metadata must resolve from the repository checkout or the packaged project directory relative to this project file." />
+  </Target>
+
+  <Target Name="ValidateOfficialDistributionMetadataOutput" AfterTargets="CopyFilesToOutputDirectory">
+    <Error Condition="!Exists('$(TargetDir)distribution-metadata.json')"
+           Text="Eternal Cycle distribution metadata was not copied to the build output." />
+  </Target>
+
+  <Target Name="ValidateOfficialDistributionMetadataPublish" AfterTargets="Publish">
+    <Error Condition="!Exists('$(PublishDir)distribution-metadata.json')"
+           Text="Eternal Cycle distribution metadata was not copied to the publish output." />
+  </Target>
 
 </Project>

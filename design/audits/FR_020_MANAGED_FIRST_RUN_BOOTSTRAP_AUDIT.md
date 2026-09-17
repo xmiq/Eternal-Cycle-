@@ -32,7 +32,8 @@ The observed database containing campaign tables but no rule-domain tables is su
 - `001` campaign persistence;
 - `002` Rule Domain publication;
 - `003` additive campaign display metadata;
-- `004` durable Rule Source configuration.
+- `004` durable Rule Source configuration;
+- `005` redacted Managed-operation diagnostics.
 
 Partial unknown schemas produce `MIGRATION_REQUIRED` for administrator review. Additive upgrades are repeat-safe. Post-migration inspection must find no remaining supported plan.
 
@@ -66,26 +67,56 @@ The successful `ec_get_rule_context` response is now wrapped in a semantic resul
 Repository-proven checks:
 
 - .NET build: pass, zero warnings and errors;
-- .NET tests: 50 passed, zero failed;
+- .NET tests: 70 passed, zero failed;
 - FR-011 persistence gate: 13 assertions passed;
 - FR-017 portable persistence: 29 assertions passed;
 - FR-018 rule compilation: 19 assertions passed;
 - FR-019 managed architecture: 48 assertions passed after updating its freshness check to the readiness-safe owner;
-- FR-020 first-run bootstrap: 48 assertions passed;
+- FR-020 first-run bootstrap: 59 assertions passed, including repository-relative and standalone distribution metadata packaging, runtime loading, bounded staging, no-checkout acquisition, structured diagnostics, and resumable publication;
+- reference MCP build from a different working directory: pass with zero warnings and errors;
+- reference MCP publish to a temporary output directory: pass, with `distribution-metadata.json` present in the publish output;
 - release-neutral campaign modes: 17 assertions passed;
-- full repository validator: pass after final navigation and governance integration.
+- full repository validator: pass across 278 Markdown files, 7,057 relative links, 161 anchors, 185 indexed canonical documents, 43 templates, 1,239 terminology checks, 192 roadmap tasks, and 20 Future Revision entries.
 
 Startup and periodic update checks now consult readiness before touching the Rule Store or Rule Source. Expected first-run states defer the background check instead of terminating the service, so diagnostics and permission-gated setup remain reachable under non-default update policies.
 
 Unit tests use in-memory stores, fake readiness/bootstrap services, static migration inspection, and local temporary Git repositories. They prove contract behavior and compilation, not live SQL Server permissions, transactional DDL, remote Git/GitHub acquisition, real MCP schema serialization, authentication, backup/recovery, or client restart behavior.
+
+## Build Regression Repair
+
+The reference MCP project resolves the official `DISTRIBUTION.json` source from `MSBuildThisFileDirectory`, preferring the repository root relative to the project file and falling back to the shipped project-local metadata when the source directory is extracted as a standalone tool. The source target fails only when neither repository nor packaged source exists; it never requires a drive-root file. The project explicitly copies the selected metadata into both build output and publish output and fails those targets if the packaged file is absent. `OfficialDistributionMetadata.Load` continues to resolve relative metadata names from `AppContext.BaseDirectory`, and the managed first-run test proves the packaged test-output file is present and loadable. No developer-specific path is required.
+
+## RC Publication Regression Repair
+
+A subsequent real Managed/MCP and SQL Server acceptance run proved the repaired readiness and degraded diagnostics path, then exposed a separate initial-publication timeout. The managed cache was correctly created with `git clone --no-checkout`; the provider intentionally reads the manifest and rule documents from immutable Git objects, so its empty working tree was not a failed checkout.
+
+Tracing the official source quantified the path:
+
+- 8 declared rule documents and 164,840 source bytes;
+- 11 Git processes for clone or fetch, ref resolution, manifest read, and eight document reads;
+- 147 compiled chunks;
+- 990 selector rows;
+- 768 dependency rows;
+- 1,906 sequential SQL commands in the prior candidate-staging transaction, before state publication and activation.
+
+The sequential per-record SQL path was the credible implementation-level cause of the greater-than-300-second behavior. Candidate staging now uses bounded multi-row commands: one release command, two chunk batches, four selector batches, and two dependency batches for the official manifest, or 9 staging commands total. It retains the same transaction and rollback boundary.
+
+Publication now reports source acquisition, ref resolution, manifest read, rule-document read, compilation, validation, staging, publication, activation, and update-check stages. Git operations have a bounded timeout and terminate their owned process tree on cancellation. A retry reuses durable source-unique Candidate, Validated, or Published state, including activation retry, instead of inserting a competing release.
+
+Generic exception replacement was removed from this path. Failures receive a correlation ID and structured stage-specific code. Redacted exception type, message, inner chain, stack evidence, versions, relevant stable IDs, duration, and outcome are written to `ec_domain.managed_operation_diagnostics`. When SQL diagnostic persistence fails, the same evidence and correlation ID use a protected local JSON-lines fallback. Failure of both diagnostic sinks cannot mask the original operation. `EternalCycle:Diagnostics:VerboseErrors` defaults to `false`; enabling it changes authorized response visibility but never disables redaction.
+
+The regression suite uses both the actual official manifest and a temporary remote-style `file://` Git source acquired into a real `--no-checkout` managed cache. It covers acquisition, ref, source-read, compile, validate, stage, publish, activate, cancellation, SQL-first diagnostics, file fallback, logging failure, sanitized and verbose output, secret redaction, and idempotent resume.
 
 ## Remaining Real-Infrastructure Acceptance
 
 A new real deployment must still prove:
 
 - clean and prior-schema SQL Server bootstrap with least-privilege permissions;
+- migration `005` and diagnostic insertion/fallback under the deployment identity;
 - schema-only migration scope and read-back;
 - official remote Git acquisition and cache refresh;
+- full initial publication within the target MCP client's timeout using the official source;
+- cancellation and retry against a live SQL Server without duplicate releases;
 - source-unavailable fallback after a real successful publication;
 - campaign creation and restart discovery;
 - semantic MCP results in the target client;

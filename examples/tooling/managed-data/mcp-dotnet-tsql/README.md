@@ -29,7 +29,7 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 2. Set `EternalCycle:Persistence:ConnectionString` in protected host configuration.
 3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true` and set a private approval phrase.
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
-5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `004` to configured EC-owned scopes.
+5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `005` to configured EC-owned scopes.
 6. Select the official source from packaged [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or provide a compatible custom Git source. The selection persists in `ec_domain`.
 7. Approve initial publication. The service acquires/caches the source, resolves an immutable commit, compiles, validates, publishes, activates according to policy, and verifies readiness.
 8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
@@ -47,10 +47,12 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - runtime retrieval from an already-published Rule Release rather than repository compilation;
 - source provenance, World/Ruleset/module/mode/operation/topic filtering, and an 8K packet ceiling;
 - startup, periodic, manual, and offline update policies;
-- sanitized capabilities and diagnostic reports.
+- sanitized capabilities and diagnostic reports;
 - structured first-run readiness across transport, persistence, campaign schema, Rule Domain, source, publication, activation, and campaign state;
 - permission-gated EC-owned migrations, persisted source selection, managed Git acquisition/cache, initial publication, and campaign discovery/creation;
-- optional sanitized file logging for hosts that hide stderr.
+- bounded rule-publication batches, stage-aware structured failures, and idempotent publication resume;
+- SQL-first Managed-operation diagnostics with a protected local physical fallback;
+- optional sanitized general file logging for hosts that hide stderr.
 
 The reference does not implement PostgreSQL, MySQL, document, graph, key/value, or indexed-file adapters. Those are contract-compatible extension families, not claimed implementations.
 
@@ -96,10 +98,11 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 2. [`002_rule_domain.sql`](src/EternalCycle.Persistence.Mcp/Schema/002_rule_domain.sql) for the reference `ec_domain` Domain Namespace, or render its template under an approved physical mapping policy.
 3. [`003_campaign_directory.sql`](src/EternalCycle.Persistence.Mcp/Schema/003_campaign_directory.sql) to add player-meaningful campaign metadata to a prior default deployment.
 4. [`004_rule_source_configuration.sql`](src/EternalCycle.Persistence.Mcp/Schema/004_rule_source_configuration.sql) to persist the selected Rule Source without storing source credentials.
+5. [`005_managed_operation_diagnostics.sql`](src/EternalCycle.Persistence.Mcp/Schema/005_managed_operation_diagnostics.sql) to preserve redacted operation evidence with correlation and publication-stage metadata.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 
-`ec_domain` stores only shared service data and Derived rule publications: RuleSets, Rule Releases, compiled chunks, selectors, dependencies, active-release pointers, provenance, and update checks. World-specific Campaign Canon remains in the selected world schema.
+`ec_domain` stores only shared service data and Derived rule publications: RuleSets, Rule Releases, compiled chunks, selectors, dependencies, active-release pointers, provenance, update checks, and redacted Managed-operation diagnostics. World-specific Campaign Canon remains in the selected world schema.
 
 ## Trusted Configuration
 
@@ -141,6 +144,7 @@ EternalCycle:Rules:GitSource:RepositoryRoot = <trusted Git checkout>
 EternalCycle:Rules:GitSource:Ref = <trusted branch, tag, or commit>
 EternalCycle:Rules:GitSource:ManifestPath = docs/rules/rule-source-manifest.json
 EternalCycle:Rules:GitSource:FetchBeforeCheck = false
+EternalCycle:Rules:GitSource:ProcessTimeout = 00:02:00
 ```
 
 Administration configuration includes:
@@ -152,9 +156,19 @@ EternalCycle:Administration:ManagedRuleCacheDirectory = <optional managed cache>
 EternalCycle:Administration:SanitizedLogFile = <optional log file>
 ```
 
-The packaged `distribution-metadata.json` identifies the official repository, stable tag, development ref, and source manifest. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the selected ref to an immutable commit SHA and reads all content at that commit. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
+Managed diagnostic configuration includes:
 
-Sanitized file logging is disabled unless `SanitizedLogFile` is set. It records timestamp, level, category, event, message, and exception type, but omits exception text and does not intentionally log credentials, connection strings, Campaign Canon, or GM Secrets.
+```text
+EternalCycle:Diagnostics:VerboseErrors = false
+EternalCycle:Diagnostics:FallbackLogFile = <optional protected path>
+EternalCycle:Diagnostics:PersistenceTimeout = 00:00:10
+```
+
+`VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
+
+The packaged `distribution-metadata.json` identifies the official repository, stable tag, development ref, and source manifest. The reference project resolves it from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the selected ref to an immutable commit SHA and reads all content at that commit. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
+
+General sanitized host logging is disabled unless `SanitizedLogFile` is set. It records timestamp, level, category, event, message, and exception type, but omits exception text. This is separate from the Managed-operation diagnostic fallback, which is available when SQL diagnostic persistence fails. Both paths exclude credentials, connection strings, Campaign Canon, and GM Secrets.
 
 ## Campaign Transactions
 
@@ -171,7 +185,7 @@ Candidate campaign records remain inactive until the complete Affected Set valid
 
 ## Validation Boundary
 
-The repository tests use fakes and local fixtures for publication, fallback, activation, filtering, diagnostics, readiness, approval, campaign selection, and routing. They do not prove live SQL Server migration/transaction/concurrency, remote Git acquisition, authentication, backup/recovery, long-running scheduling, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
+The repository tests use fakes, the official manifest, and local Git fixtures for no-checkout acquisition, publication, bounded write planning, fallback, activation, filtering, diagnostics, readiness, approval, campaign selection, cancellation, and routing. They do not prove live SQL Server migration/transaction/concurrency, remote GitHub acquisition, authentication, backup/recovery, long-running scheduling, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
 
 ## Troubleshooting
 
@@ -181,5 +195,11 @@ The repository tests use fakes and local fixtures for publication, fallback, act
 - `NO_PUBLISHED_RULE_RELEASE`: approve initial publication.
 - `NO_ACTIVE_RULE_RELEASE`: follow the configured activation policy.
 - `RULE_SOURCE_UNAVAILABLE`: repair source access; an existing active release remains usable in `DEGRADED` mode.
+- `RULE_SOURCE_ACQUISITION_FAILED`: inspect network, Git executable, cache permissions, and the correlated authorized diagnostic.
+- `RULE_SOURCE_REF_RESOLUTION_FAILED`: verify the configured ref exists in the selected source.
+- `RULE_SOURCE_READ_FAILED`: verify the manifest and every declared source path at the resolved commit.
+- `RULE_COMPILATION_FAILED` or `RULE_VALIDATION_FAILED`: inspect the immutable source revision and correlated diagnostic; blind retry is not expected to repair invalid content.
+- `RULE_STORE_STAGE_FAILED`, `RULE_PUBLICATION_FAILED`, or `RULE_ACTIVATION_FAILED`: inspect SQL availability and the correlated diagnostic; retry resumes durable publication state rather than duplicating it.
+- `RULE_PUBLICATION_CANCELLED`: retry safely; the service reuses any candidate stage that committed before cancellation.
 - `CAMPAIGN_NOT_FOUND`: list campaigns or use the authorized creation path.
-- generic host error with hidden stderr: enable a protected sanitized file log and retry diagnostics.
+- generic host error with hidden stderr: use the returned correlation ID, inspect the SQL diagnostic record or protected physical fallback, and optionally enable verbose errors in a trusted development environment.

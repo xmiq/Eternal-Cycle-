@@ -80,7 +80,14 @@ public sealed record RulePublicationResult(
     string? ActiveReleaseId,
     string? SourceIdentity,
     bool ActiveReleasePreserved,
-    string? FailureReason);
+    string? FailureReason,
+    string? ErrorCode = null,
+    string? Operation = null,
+    string? Stage = null,
+    string? CorrelationId = null,
+    bool RetrySafe = false,
+    bool AdministrativeInterventionRequired = false,
+    string? DiagnosticsAvailability = null);
 
 public sealed record RuleUpdateCheck(
     string RulesetId,
@@ -92,6 +99,11 @@ public sealed record RuleUpdateCheck(
 public interface IRuleSourceProvider
 {
     Task<RuleSourceSnapshot> GetSnapshotAsync(CancellationToken cancellationToken);
+
+    Task<RuleSourceSnapshot> GetSnapshotAsync(
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken) =>
+        GetSnapshotAsync(cancellationToken);
 }
 
 public interface IPublishedRuleStore
@@ -125,138 +137,251 @@ public interface IPublishedRuleStore
     Task RecordUpdateCheckAsync(RuleUpdateCheck updateCheck, CancellationToken cancellationToken);
 }
 
-public sealed class ManagedRulePublicationCoordinator(
-    IRuleSourceProvider sourceProvider,
-    IPublishedRuleStore store,
-    IOptions<ManagedRuleServiceOptions> options,
-    ILogger<ManagedRulePublicationCoordinator> logger)
+public sealed class ManagedRulePublicationCoordinator
 {
-    private readonly ManagedRuleServiceOptions settings = options.Value;
+    private const string OperationName = "PublishInitialRules";
+    private readonly IRuleSourceProvider sourceProvider;
+    private readonly IPublishedRuleStore store;
+    private readonly ManagedRuleServiceOptions settings;
+    private readonly ManagedDiagnosticsOptions diagnosticsSettings;
+    private readonly IManagedDiagnosticRecorder diagnostics;
+    private readonly ILogger<ManagedRulePublicationCoordinator> logger;
+
+    public ManagedRulePublicationCoordinator(
+        IRuleSourceProvider sourceProvider,
+        IPublishedRuleStore store,
+        IOptions<ManagedRuleServiceOptions> options,
+        ILogger<ManagedRulePublicationCoordinator> logger)
+        : this(
+            sourceProvider,
+            store,
+            options,
+            Options.Create(new ManagedDiagnosticsOptions()),
+            NullManagedDiagnosticRecorder.Instance,
+            logger)
+    {
+    }
+
+    public ManagedRulePublicationCoordinator(
+        IRuleSourceProvider sourceProvider,
+        IPublishedRuleStore store,
+        IOptions<ManagedRuleServiceOptions> options,
+        IOptions<ManagedDiagnosticsOptions> diagnosticsOptions,
+        IManagedDiagnosticRecorder diagnostics,
+        ILogger<ManagedRulePublicationCoordinator> logger)
+    {
+        this.sourceProvider = sourceProvider;
+        this.store = store;
+        settings = options.Value;
+        diagnosticsSettings = diagnosticsOptions.Value;
+        this.diagnostics = diagnostics;
+        this.logger = logger;
+    }
 
     public async Task<RulePublicationResult> CheckForUpdateAsync(CancellationToken cancellationToken)
     {
-        var active = await store.GetActiveAsync(settings.RulesetId, cancellationToken);
-        RuleSourceSnapshot snapshot;
+        var correlationId = $"OP-{Guid.NewGuid():N}";
+        var startedAt = DateTimeOffset.UtcNow;
+        var stage = RulePublicationStage.AcquireSource;
+        PublishedRuleRelease? active = null;
+        RuleSourceSnapshot? snapshot = null;
+        PublishedRuleRelease? candidate = null;
         try
         {
-            snapshot = await sourceProvider.GetSnapshotAsync(cancellationToken);
-        }
-        catch (Exception exception) when (active is not null)
-        {
-            logger.LogWarning(exception, "Rule source check failed; retaining active release {ReleaseId}.", active.RuleReleaseId);
-            return await CompleteAsync(new RulePublicationResult(
-                "SourceUnavailableUsingActive",
-                null,
-                active.RuleReleaseId,
-                active.SourceIdentity,
-                true,
-                Sanitize(exception)), "Degraded", cancellationToken);
-        }
-        catch (Exception exception)
-        {
-            await store.RecordUpdateCheckAsync(
-                new RuleUpdateCheck(
-                    settings.RulesetId,
-                    null,
-                    "Failed",
-                    Sanitize(exception),
-                    DateTimeOffset.UtcNow),
-                cancellationToken);
-            throw;
-        }
+            active = await store.GetActiveAsync(settings.RulesetId, cancellationToken);
+            snapshot = await sourceProvider.GetSnapshotAsync(value => stage = value, cancellationToken);
 
-        if (active is not null &&
-            string.Equals(active.SourceIdentity, snapshot.SourceIdentity, StringComparison.Ordinal))
-        {
-            return await CompleteAsync(new RulePublicationResult(
-                "Unchanged",
-                null,
-                active.RuleReleaseId,
-                active.SourceIdentity,
-                true,
-                null), "Unchanged", cancellationToken);
-        }
-
-        var prior = await store.FindBySourceAsync(settings.RulesetId, snapshot.SourceIdentity, cancellationToken);
-        if (prior is not null && prior.State is RuleReleaseState.Active or RuleReleaseState.Published)
-        {
-            return await CompleteAsync(new RulePublicationResult(
-                "AlreadyPublished",
-                prior.RuleReleaseId,
-                active?.RuleReleaseId,
-                prior.SourceIdentity,
-                active is not null,
-                null), "Candidate", cancellationToken);
-        }
-
-        var releaseId = $"RULE-{Guid.NewGuid():N}";
-        try
-        {
-            var index = RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents);
-            var candidate = new PublishedRuleRelease(
-                releaseId,
-                settings.RulesetId,
-                snapshot.ProviderKind,
-                snapshot.SourceIdentity,
-                snapshot.RepositoryVersion,
-                settings.CompilerVersion,
-                RuleReleaseState.Candidate,
-                index,
-                DateTimeOffset.UtcNow);
-
-            await store.StageCandidateAsync(candidate, cancellationToken);
-            ValidateCandidate(index);
-            await store.SetStateAsync(releaseId, RuleReleaseState.Validated, null, cancellationToken);
-            await store.SetStateAsync(releaseId, RuleReleaseState.Published, null, cancellationToken);
-
-            if (settings.ActivationPolicy == RuleActivationPolicy.Automatic)
+            if (active is not null &&
+                string.Equals(active.SourceIdentity, snapshot.SourceIdentity, StringComparison.Ordinal))
             {
-                await store.ActivateAsync(settings.RulesetId, releaseId, cancellationToken);
+                stage = RulePublicationStage.RecordUpdateCheck;
                 return await CompleteAsync(new RulePublicationResult(
-                    "Activated",
-                    releaseId,
-                    releaseId,
-                    snapshot.SourceIdentity,
-                    active is not null,
-                    null), "Activated", cancellationToken);
+                    "Unchanged",
+                    null,
+                    active.RuleReleaseId,
+                    active.SourceIdentity,
+                    true,
+                    null,
+                    Operation: OperationName,
+                    Stage: stage.ToString(),
+                    CorrelationId: correlationId), "Unchanged", cancellationToken);
             }
 
-            return await CompleteAsync(new RulePublicationResult(
-                "AwaitingAdministratorActivation",
-                releaseId,
-                active?.RuleReleaseId,
+            candidate = await store.FindBySourceAsync(
+                settings.RulesetId,
                 snapshot.SourceIdentity,
-                active is not null,
-                null), "Candidate", cancellationToken);
+                cancellationToken);
+            if (candidate is null)
+            {
+                stage = RulePublicationStage.Compile;
+                var releaseId = $"RULE-{Guid.NewGuid():N}";
+                var index = RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents);
+                candidate = new PublishedRuleRelease(
+                    releaseId,
+                    settings.RulesetId,
+                    snapshot.ProviderKind,
+                    snapshot.SourceIdentity,
+                    snapshot.RepositoryVersion,
+                    settings.CompilerVersion,
+                    RuleReleaseState.Candidate,
+                    index,
+                    DateTimeOffset.UtcNow);
+
+                stage = RulePublicationStage.Stage;
+                await store.StageCandidateAsync(candidate, cancellationToken);
+            }
+
+            var result = await ResumeCandidateAsync(candidate, active, correlationId, value => stage = value, cancellationToken);
+            stage = RulePublicationStage.RecordUpdateCheck;
+            var outcome = result.Status switch
+            {
+                "Activated" => "Activated",
+                "Unchanged" => "Unchanged",
+                _ => "Candidate"
+            };
+            return await CompleteAsync(result with { Stage = stage.ToString() }, outcome, cancellationToken);
         }
         catch (Exception exception)
         {
-            try
+            if (exception is OperationCanceledException)
             {
-                await store.SetStateAsync(
-                    releaseId,
-                    RuleReleaseState.Failed,
-                    Sanitize(exception),
-                    cancellationToken);
-            }
-            catch (Exception stateException)
-            {
-                logger.LogWarning(stateException, "Could not persist failed state for rule release {ReleaseId}.", releaseId);
+                stage = RulePublicationStage.Cancelled;
             }
 
-            logger.LogError(exception, "Rule release candidate {ReleaseId} failed; the active release is unchanged.", releaseId);
-            return await CompleteAsync(new RulePublicationResult(
-                "CandidateFailed",
+            var failure = DescribeFailure(exception, stage);
+            var releaseId = candidate?.RuleReleaseId;
+            if (releaseId is not null && stage != RulePublicationStage.Activate)
+            {
+                await TrySetFailedAsync(releaseId, failure.SafeMessage);
+            }
+
+            var receipt = await diagnostics.RecordFailureAsync(
+                new ManagedDiagnosticContext(
+                    correlationId,
+                    OperationName,
+                    stage,
+                    failure.Code,
+                    startedAt,
+                    settings.RulesetId,
+                    releaseId,
+                    snapshot?.SourceIdentity),
+                exception,
+                CancellationToken.None);
+
+            logger.LogError(
+                "Managed rule publication failed at {Stage} with {ErrorCode}; correlation {CorrelationId}; exception {ExceptionType}.",
+                stage,
+                failure.Code,
+                correlationId,
+                exception.GetType().FullName);
+
+            var retainedActive = active is not null;
+            var status = retainedActive && stage is
+                RulePublicationStage.AcquireSource or
+                RulePublicationStage.ResolveRef or
+                RulePublicationStage.ReadManifest or
+                RulePublicationStage.ReadRuleDocuments
+                    ? "SourceUnavailableUsingActive"
+                    : stage == RulePublicationStage.Cancelled
+                        ? "Cancelled"
+                        : "CandidateFailed";
+            var result = new RulePublicationResult(
+                status,
                 releaseId,
                 active?.RuleReleaseId,
-                snapshot.SourceIdentity,
-                active is not null,
-                Sanitize(exception)), "Failed", cancellationToken);
+                snapshot?.SourceIdentity ?? active?.SourceIdentity,
+                retainedActive,
+                VisibleMessage(exception, failure.SafeMessage),
+                failure.Code,
+                OperationName,
+                stage.ToString(),
+                correlationId,
+                failure.RetrySafe,
+                failure.AdministrativeInterventionRequired,
+                receipt.Availability);
+            await TryRecordUpdateCheckAsync(result, retainedActive ? "Degraded" : "Failed");
+            return result;
         }
     }
 
     public Task ActivateAsync(string ruleReleaseId, CancellationToken cancellationToken) =>
         store.ActivateAsync(settings.RulesetId, ruleReleaseId, cancellationToken);
+
+    private async Task<RulePublicationResult> ResumeCandidateAsync(
+        PublishedRuleRelease candidate,
+        PublishedRuleRelease? active,
+        string correlationId,
+        Action<RulePublicationStage> onStage,
+        CancellationToken cancellationToken)
+    {
+        var state = candidate.State;
+        if (state == RuleReleaseState.Active)
+        {
+            return Success("AlreadyPublished", candidate, candidate.RuleReleaseId, active is not null, correlationId);
+        }
+
+        if (state == RuleReleaseState.Failed)
+        {
+            onStage(RulePublicationStage.Stage);
+            await store.SetStateAsync(candidate.RuleReleaseId, RuleReleaseState.Candidate, null, cancellationToken);
+            state = RuleReleaseState.Candidate;
+        }
+
+        if (state == RuleReleaseState.Candidate)
+        {
+            onStage(RulePublicationStage.Validate);
+            ValidateCandidate(candidate.Index);
+            await store.SetStateAsync(candidate.RuleReleaseId, RuleReleaseState.Validated, null, cancellationToken);
+            state = RuleReleaseState.Validated;
+        }
+
+        if (state == RuleReleaseState.Validated)
+        {
+            onStage(RulePublicationStage.Publish);
+            await store.SetStateAsync(candidate.RuleReleaseId, RuleReleaseState.Published, null, cancellationToken);
+            state = RuleReleaseState.Published;
+        }
+
+        if (state == RuleReleaseState.Published && settings.ActivationPolicy == RuleActivationPolicy.Automatic)
+        {
+            onStage(RulePublicationStage.Activate);
+            await store.ActivateAsync(settings.RulesetId, candidate.RuleReleaseId, cancellationToken);
+            return Success("Activated", candidate, candidate.RuleReleaseId, active is not null, correlationId);
+        }
+
+        if (state == RuleReleaseState.Published)
+        {
+            return Success(
+                "AwaitingAdministratorActivation",
+                candidate,
+                active?.RuleReleaseId,
+                active is not null,
+                correlationId);
+        }
+
+        throw new RulePublicationException(
+            "RULE_PUBLICATION_STATE_INVALID",
+            RulePublicationStage.Publish,
+            $"Rule Release '{candidate.RuleReleaseId}' cannot resume from state '{state}'.",
+            retrySafe: false,
+            administrativeInterventionRequired: true);
+    }
+
+    private static RulePublicationResult Success(
+        string status,
+        PublishedRuleRelease candidate,
+        string? activeReleaseId,
+        bool activeReleasePreserved,
+        string correlationId) =>
+        new(
+            status,
+            candidate.RuleReleaseId,
+            activeReleaseId,
+            candidate.SourceIdentity,
+            activeReleasePreserved,
+            null,
+            Operation: OperationName,
+            CorrelationId: correlationId);
 
     private static void ValidateCandidate(CompiledRuleIndex index)
     {
@@ -272,24 +397,152 @@ public sealed class ManagedRulePublicationCoordinator(
         }
     }
 
-    private static string Sanitize(Exception exception) =>
-        $"{exception.GetType().Name}: rule update operation failed; inspect authorized service logs.";
+    private async Task TrySetFailedAsync(string releaseId, string failureReason)
+    {
+        using var bounded = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        try
+        {
+            await store.SetStateAsync(releaseId, RuleReleaseState.Failed, failureReason, bounded.Token);
+        }
+        catch (Exception exception)
+        {
+            logger.LogWarning(
+                "Could not persist failed state for rule release {ReleaseId}; exception {ExceptionType}.",
+                releaseId,
+                exception.GetType().FullName);
+        }
+    }
+
+    private async Task TryRecordUpdateCheckAsync(RulePublicationResult result, string outcome)
+    {
+        using var bounded = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        try
+        {
+            await store.RecordUpdateCheckAsync(
+                new RuleUpdateCheck(
+                    settings.RulesetId,
+                    result.SourceIdentity,
+                    outcome,
+                    result.FailureReason,
+                    DateTimeOffset.UtcNow),
+                bounded.Token);
+        }
+        catch (Exception exception)
+        {
+            logger.LogWarning(
+                "Could not persist rule update outcome for correlation {CorrelationId}; exception {ExceptionType}.",
+                result.CorrelationId,
+                exception.GetType().FullName);
+        }
+    }
+
+    private FailureDescriptor DescribeFailure(Exception exception, RulePublicationStage stage)
+    {
+        if (exception is RulePublicationException publication)
+        {
+            return new(
+                publication.Code,
+                publication.SafeMessage,
+                publication.RetrySafe,
+                publication.AdministrativeInterventionRequired);
+        }
+
+        if (exception is OperationCanceledException)
+        {
+            return new(
+                "RULE_PUBLICATION_CANCELLED",
+                "Rule publication was cancelled before completion. A retry resumes from any durable completed stage.",
+                true,
+                false);
+        }
+
+        return stage switch
+        {
+            RulePublicationStage.AcquireSource => new("RULE_SOURCE_ACQUISITION_FAILED", "Rule Source acquisition failed.", true, true),
+            RulePublicationStage.ResolveRef => new("RULE_SOURCE_REF_RESOLUTION_FAILED", "The configured Rule Source ref could not be resolved.", true, true),
+            RulePublicationStage.ReadManifest or RulePublicationStage.ReadRuleDocuments => new("RULE_SOURCE_READ_FAILED", "The immutable Rule Source content could not be read.", true, true),
+            RulePublicationStage.Compile => new("RULE_COMPILATION_FAILED", "Rule compilation failed for the immutable source revision.", false, true),
+            RulePublicationStage.Validate => new("RULE_VALIDATION_FAILED", "The compiled Rule Release failed validation.", false, true),
+            RulePublicationStage.Stage => new("RULE_STORE_STAGE_FAILED", "The Rule Release candidate could not be staged.", true, false),
+            RulePublicationStage.Publish => new("RULE_PUBLICATION_FAILED", "The validated Rule Release could not be published.", true, false),
+            RulePublicationStage.Activate => new("RULE_ACTIVATION_FAILED", "The published Rule Release could not be activated.", true, false),
+            RulePublicationStage.RecordUpdateCheck => new("RULE_UPDATE_CHECK_RECORD_FAILED", "The Rule Release outcome could not be recorded.", true, false),
+            _ => new("RULE_PUBLICATION_FAILED", "Rule publication failed.", true, false)
+        };
+    }
+
+    private string VisibleMessage(Exception exception, string safeMessage)
+    {
+        if (!diagnosticsSettings.VerboseErrors)
+        {
+            return safeMessage;
+        }
+
+        var entries = new List<string>();
+        for (var current = exception; current is not null; current = current.InnerException)
+        {
+            entries.Add($"{current.GetType().FullName}: {current.Message}");
+        }
+
+        var detail = DiagnosticRedactor.Redact(string.Join(" -> ", entries));
+        return $"{safeMessage} Authorized diagnostic: {detail}";
+    }
 
     private async Task<RulePublicationResult> CompleteAsync(
         RulePublicationResult result,
         string outcome,
         CancellationToken cancellationToken)
     {
-        await store.RecordUpdateCheckAsync(
-            new RuleUpdateCheck(
-                settings.RulesetId,
-                result.SourceIdentity,
-                outcome,
-                result.FailureReason,
-                DateTimeOffset.UtcNow),
-            cancellationToken);
-        return result;
+        try
+        {
+            await store.RecordUpdateCheckAsync(
+                new RuleUpdateCheck(
+                    settings.RulesetId,
+                    result.SourceIdentity,
+                    outcome,
+                    result.FailureReason,
+                    DateTimeOffset.UtcNow),
+                cancellationToken);
+            return result;
+        }
+        catch (Exception exception)
+        {
+            var correlationId = result.CorrelationId ?? $"OP-{Guid.NewGuid():N}";
+            var receipt = await diagnostics.RecordFailureAsync(
+                new ManagedDiagnosticContext(
+                    correlationId,
+                    OperationName,
+                    RulePublicationStage.RecordUpdateCheck,
+                    "RULE_UPDATE_CHECK_RECORD_FAILED",
+                    DateTimeOffset.UtcNow,
+                    settings.RulesetId,
+                    result.CandidateReleaseId,
+                    result.SourceIdentity,
+                    Outcome: "DiagnosticWriteFailed"),
+                exception,
+                CancellationToken.None);
+            logger.LogWarning(
+                "Rule publication completed but its update-check record failed; correlation {CorrelationId}; exception {ExceptionType}.",
+                correlationId,
+                exception.GetType().FullName);
+            return result with
+            {
+                Status = "UpdateCheckFailed",
+                FailureReason = "The Rule Release reached its requested state, but the update-check record failed.",
+                ErrorCode = "RULE_UPDATE_CHECK_RECORD_FAILED",
+                Stage = RulePublicationStage.RecordUpdateCheck.ToString(),
+                RetrySafe = true,
+                AdministrativeInterventionRequired = false,
+                DiagnosticsAvailability = receipt.Availability
+            };
+        }
     }
+
+    private sealed record FailureDescriptor(
+        string Code,
+        string SafeMessage,
+        bool RetrySafe,
+        bool AdministrativeInterventionRequired);
 }
 
 public sealed class PublishedRuleContextProvider(

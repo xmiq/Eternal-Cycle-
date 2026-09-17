@@ -1,10 +1,52 @@
 using System.Data;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
+
+public sealed record RulePublicationWritePlan(
+    int ChunkRows,
+    int SelectorRows,
+    int DependencyRows,
+    int StagingCommandCount)
+{
+    public const int ChunkBatchSize = 100;
+    public const int SelectorBatchSize = 300;
+    public const int DependencyBatchSize = 500;
+
+    public static RulePublicationWritePlan Create(CompiledRuleIndex index)
+    {
+        var selectors = index.Chunks.Sum(chunk =>
+            DistinctCount(chunk.Metadata.WorldModelIds) +
+            DistinctCount(chunk.Metadata.ModuleIds) +
+            DistinctCount(chunk.Metadata.CampaignModes) +
+            DistinctCount(chunk.Metadata.Operations) +
+            DistinctCount(chunk.Metadata.Topics));
+        var sourceCounts = index.Chunks
+            .GroupBy(chunk => chunk.RuleSourceId, StringComparer.Ordinal)
+            .ToDictionary(group => group.Key, group => group.Count(), StringComparer.Ordinal);
+        var dependencies = index.Chunks.Sum(chunk =>
+            (chunk.Metadata.Dependencies ?? [])
+                .Distinct(StringComparer.Ordinal)
+                .Sum(sourceId => sourceCounts.GetValueOrDefault(sourceId)));
+        return new(
+            index.Chunks.Count,
+            selectors,
+            dependencies,
+            1 + BatchCount(index.Chunks.Count, ChunkBatchSize) +
+            BatchCount(selectors, SelectorBatchSize) +
+            BatchCount(dependencies, DependencyBatchSize));
+    }
+
+    private static int DistinctCount(IEnumerable<string> values) =>
+        values.Distinct(StringComparer.OrdinalIgnoreCase).Count();
+
+    private static int BatchCount(int count, int size) =>
+        count == 0 ? 0 : (count + size - 1) / size;
+}
 
 public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOptions> options) : IPublishedRuleStore
 {
@@ -177,84 +219,9 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
             await releaseCommand.ExecuteNonQueryAsync(cancellationToken);
         }
 
-        foreach (var chunk in release.Index.Chunks)
-        {
-            await using (var chunkCommand = CreateDomainCommand(connection, transaction, """
-                INSERT INTO {{schema}}.rule_chunks (
-                    rule_release_id,
-                    chunk_id,
-                    rule_source_id,
-                    source_path,
-                    source_anchor,
-                    source_hash,
-                    rule_layer,
-                    priority,
-                    always_include,
-                    estimated_tokens,
-                    content,
-                    metadata_json
-                ) VALUES (
-                    @rule_release_id,
-                    @chunk_id,
-                    @rule_source_id,
-                    @source_path,
-                    @source_anchor,
-                    @source_hash,
-                    @rule_layer,
-                    @priority,
-                    @always_include,
-                    @estimated_tokens,
-                    @content,
-                    @metadata_json
-                );
-                """))
-            {
-                AddParameter(chunkCommand, "@rule_release_id", release.RuleReleaseId);
-                AddParameter(chunkCommand, "@chunk_id", chunk.ChunkId);
-                AddParameter(chunkCommand, "@rule_source_id", chunk.RuleSourceId);
-                AddParameter(chunkCommand, "@source_path", chunk.SourcePath);
-                AddParameter(chunkCommand, "@source_anchor", chunk.SourceAnchor);
-                AddParameter(chunkCommand, "@source_hash", chunk.SourceHash);
-                AddParameter(chunkCommand, "@rule_layer", chunk.Metadata.Layer.ToString());
-                AddParameter(chunkCommand, "@priority", chunk.Metadata.Priority);
-                AddParameter(chunkCommand, "@always_include", chunk.Metadata.AlwaysInclude);
-                AddParameter(chunkCommand, "@estimated_tokens", chunk.EstimatedTokens);
-                AddParameter(chunkCommand, "@content", chunk.Content);
-                AddParameter(chunkCommand, "@metadata_json", JsonSerializer.Serialize(chunk.Metadata, JsonOptions));
-                await chunkCommand.ExecuteNonQueryAsync(cancellationToken);
-            }
-
-            await InsertSelectorsAsync(
-                connection,
-                transaction,
-                release.RuleReleaseId,
-                chunk.ChunkId,
-                "WorldModel",
-                chunk.Metadata.WorldModelIds,
-                cancellationToken);
-            await InsertSelectorsAsync(connection, transaction, release.RuleReleaseId, chunk.ChunkId, "Module", chunk.Metadata.ModuleIds, cancellationToken);
-            await InsertSelectorsAsync(connection, transaction, release.RuleReleaseId, chunk.ChunkId, "CampaignMode", chunk.Metadata.CampaignModes, cancellationToken);
-            await InsertSelectorsAsync(connection, transaction, release.RuleReleaseId, chunk.ChunkId, "Operation", chunk.Metadata.Operations, cancellationToken);
-            await InsertSelectorsAsync(connection, transaction, release.RuleReleaseId, chunk.ChunkId, "Topic", chunk.Metadata.Topics, cancellationToken);
-        }
-
-        foreach (var sourceChunk in release.Index.Chunks)
-        {
-            foreach (var dependencySourceId in sourceChunk.Metadata.Dependencies ?? [])
-            {
-                foreach (var requiredChunk in release.Index.Chunks.Where(candidate =>
-                    string.Equals(candidate.RuleSourceId, dependencySourceId, StringComparison.Ordinal)))
-                {
-                    await InsertDependencyAsync(
-                        connection,
-                        transaction,
-                        release.RuleReleaseId,
-                        sourceChunk.ChunkId,
-                        requiredChunk.ChunkId,
-                        cancellationToken);
-                }
-            }
-        }
+        await InsertChunkBatchesAsync(connection, transaction, release, cancellationToken);
+        await InsertSelectorBatchesAsync(connection, transaction, release, cancellationToken);
+        await InsertDependencyBatchesAsync(connection, transaction, release, cancellationToken);
 
         await transaction.CommitAsync(cancellationToken);
     }
@@ -357,64 +324,150 @@ public sealed class SqlServerPublishedRuleStore(IOptions<SqlServerPersistenceOpt
         await command.ExecuteNonQueryAsync(cancellationToken);
     }
 
-    private async Task InsertDependencyAsync(
+    private async Task InsertChunkBatchesAsync(
         SqlConnection connection,
         SqlTransaction transaction,
-        string ruleReleaseId,
-        string sourceChunkId,
-        string requiredChunkId,
+        PublishedRuleRelease release,
         CancellationToken cancellationToken)
     {
-        await using var command = CreateDomainCommand(connection, transaction, """
-            INSERT INTO {{schema}}.rule_dependencies (
-                rule_release_id,
-                source_chunk_id,
-                required_chunk_id,
-                dependency_reason
-            ) VALUES (
-                @rule_release_id,
-                @source_chunk_id,
-                @required_chunk_id,
-                N'Manifest dependency'
-            );
-            """);
-        AddParameter(command, "@rule_release_id", ruleReleaseId);
-        AddParameter(command, "@source_chunk_id", sourceChunkId);
-        AddParameter(command, "@required_chunk_id", requiredChunkId);
-        await command.ExecuteNonQueryAsync(cancellationToken);
-    }
-
-    private async Task InsertSelectorsAsync(
-        SqlConnection connection,
-        SqlTransaction transaction,
-        string ruleReleaseId,
-        string chunkId,
-        string selectorType,
-        IReadOnlyList<string> values,
-        CancellationToken cancellationToken)
-    {
-        foreach (var value in values.Distinct(StringComparer.OrdinalIgnoreCase))
+        foreach (var batch in release.Index.Chunks.Chunk(RulePublicationWritePlan.ChunkBatchSize))
         {
-            await using var command = CreateDomainCommand(connection, transaction, """
-                INSERT INTO {{schema}}.rule_chunk_selectors (
-                    rule_release_id,
-                    chunk_id,
-                    selector_type,
-                    selector_value
-                ) VALUES (
-                    @rule_release_id,
-                    @chunk_id,
-                    @selector_type,
-                    @selector_value
-                );
+            var sql = new StringBuilder("""
+                INSERT INTO {{schema}}.rule_chunks (
+                    rule_release_id, chunk_id, rule_source_id, source_path,
+                    source_anchor, source_hash, rule_layer, priority,
+                    always_include, estimated_tokens, content, metadata_json
+                ) VALUES
                 """);
-            AddParameter(command, "@rule_release_id", ruleReleaseId);
-            AddParameter(command, "@chunk_id", chunkId);
-            AddParameter(command, "@selector_type", selectorType);
-            AddParameter(command, "@selector_value", value);
+            await using var command = CreateDomainCommand(connection, transaction, string.Empty);
+            AddParameter(command, "@rule_release_id", release.RuleReleaseId);
+            for (var index = 0; index < batch.Length; index++)
+            {
+                var chunk = batch[index];
+                if (index > 0)
+                {
+                    sql.Append(',');
+                }
+
+                sql.Append($"""
+
+                    (@rule_release_id, @chunk_id_{index}, @rule_source_id_{index}, @source_path_{index},
+                     @source_anchor_{index}, @source_hash_{index}, @rule_layer_{index}, @priority_{index},
+                     @always_include_{index}, @estimated_tokens_{index}, @content_{index}, @metadata_json_{index})
+                    """);
+                AddParameter(command, $"@chunk_id_{index}", chunk.ChunkId);
+                AddParameter(command, $"@rule_source_id_{index}", chunk.RuleSourceId);
+                AddParameter(command, $"@source_path_{index}", chunk.SourcePath);
+                AddParameter(command, $"@source_anchor_{index}", chunk.SourceAnchor);
+                AddParameter(command, $"@source_hash_{index}", chunk.SourceHash);
+                AddParameter(command, $"@rule_layer_{index}", chunk.Metadata.Layer.ToString());
+                AddParameter(command, $"@priority_{index}", chunk.Metadata.Priority);
+                AddParameter(command, $"@always_include_{index}", chunk.Metadata.AlwaysInclude);
+                AddParameter(command, $"@estimated_tokens_{index}", chunk.EstimatedTokens);
+                AddParameter(command, $"@content_{index}", chunk.Content);
+                AddParameter(command, $"@metadata_json_{index}", JsonSerializer.Serialize(chunk.Metadata, JsonOptions));
+            }
+
+            sql.Append(';');
+            command.CommandText = SqlServerSchemaIdentifier.Bind(sql.ToString(), settings.DomainSchema);
             await command.ExecuteNonQueryAsync(cancellationToken);
         }
     }
+
+    private async Task InsertSelectorBatchesAsync(
+        SqlConnection connection,
+        SqlTransaction transaction,
+        PublishedRuleRelease release,
+        CancellationToken cancellationToken)
+    {
+        var rows = release.Index.Chunks.SelectMany(chunk =>
+            Selectors(chunk.ChunkId, "WorldModel", chunk.Metadata.WorldModelIds)
+                .Concat(Selectors(chunk.ChunkId, "Module", chunk.Metadata.ModuleIds))
+                .Concat(Selectors(chunk.ChunkId, "CampaignMode", chunk.Metadata.CampaignModes))
+                .Concat(Selectors(chunk.ChunkId, "Operation", chunk.Metadata.Operations))
+                .Concat(Selectors(chunk.ChunkId, "Topic", chunk.Metadata.Topics)))
+            .ToArray();
+        foreach (var batch in rows.Chunk(RulePublicationWritePlan.SelectorBatchSize))
+        {
+            var sql = new StringBuilder("""
+                INSERT INTO {{schema}}.rule_chunk_selectors (
+                    rule_release_id, chunk_id, selector_type, selector_value
+                ) VALUES
+                """);
+            await using var command = CreateDomainCommand(connection, transaction, string.Empty);
+            AddParameter(command, "@rule_release_id", release.RuleReleaseId);
+            for (var index = 0; index < batch.Length; index++)
+            {
+                if (index > 0)
+                {
+                    sql.Append(',');
+                }
+
+                sql.Append($"\n(@rule_release_id, @chunk_id_{index}, @selector_type_{index}, @selector_value_{index})");
+                AddParameter(command, $"@chunk_id_{index}", batch[index].ChunkId);
+                AddParameter(command, $"@selector_type_{index}", batch[index].SelectorType);
+                AddParameter(command, $"@selector_value_{index}", batch[index].Value);
+            }
+
+            sql.Append(';');
+            command.CommandText = SqlServerSchemaIdentifier.Bind(sql.ToString(), settings.DomainSchema);
+            await command.ExecuteNonQueryAsync(cancellationToken);
+        }
+    }
+
+    private async Task InsertDependencyBatchesAsync(
+        SqlConnection connection,
+        SqlTransaction transaction,
+        PublishedRuleRelease release,
+        CancellationToken cancellationToken)
+    {
+        var chunksBySource = release.Index.Chunks
+            .GroupBy(chunk => chunk.RuleSourceId, StringComparer.Ordinal)
+            .ToDictionary(group => group.Key, group => group.ToArray(), StringComparer.Ordinal);
+        var rows = release.Index.Chunks.SelectMany(sourceChunk =>
+            (sourceChunk.Metadata.Dependencies ?? [])
+                .Distinct(StringComparer.Ordinal)
+                .SelectMany(dependencySourceId => chunksBySource.GetValueOrDefault(dependencySourceId) ?? [])
+                .Select(requiredChunk => new DependencyRow(sourceChunk.ChunkId, requiredChunk.ChunkId)))
+            .ToArray();
+        foreach (var batch in rows.Chunk(RulePublicationWritePlan.DependencyBatchSize))
+        {
+            var sql = new StringBuilder("""
+                INSERT INTO {{schema}}.rule_dependencies (
+                    rule_release_id, source_chunk_id, required_chunk_id, dependency_reason
+                ) VALUES
+                """);
+            await using var command = CreateDomainCommand(connection, transaction, string.Empty);
+            AddParameter(command, "@rule_release_id", release.RuleReleaseId);
+            for (var index = 0; index < batch.Length; index++)
+            {
+                if (index > 0)
+                {
+                    sql.Append(',');
+                }
+
+                sql.Append($"\n(@rule_release_id, @source_chunk_id_{index}, @required_chunk_id_{index}, N'Manifest dependency')");
+                AddParameter(command, $"@source_chunk_id_{index}", batch[index].SourceChunkId);
+                AddParameter(command, $"@required_chunk_id_{index}", batch[index].RequiredChunkId);
+            }
+
+            sql.Append(';');
+            command.CommandText = SqlServerSchemaIdentifier.Bind(sql.ToString(), settings.DomainSchema);
+            await command.ExecuteNonQueryAsync(cancellationToken);
+        }
+    }
+
+    private static IEnumerable<SelectorRow> Selectors(
+        string chunkId,
+        string selectorType,
+        IEnumerable<string> values) =>
+        values
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Select(value => new SelectorRow(chunkId, selectorType, value));
+
+    private sealed record SelectorRow(string ChunkId, string SelectorType, string Value);
+
+    private sealed record DependencyRow(string SourceChunkId, string RequiredChunkId);
 
     private async Task<PublishedRuleRelease?> ReadReleaseAsync(
         SqlCommand command,

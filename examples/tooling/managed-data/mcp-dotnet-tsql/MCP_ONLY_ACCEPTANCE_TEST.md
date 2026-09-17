@@ -22,9 +22,11 @@ Record service build, configuration class, source revision, client version, and 
 5. Verify diagnostics before rule publication reports an initialized but empty Rule Store.
 6. Verify no source reports `RULE_SOURCE_REQUIRED`.
 7. Select the official default, then repeat with an isolated custom compatible source to prove override behavior.
-8. Publish and activate an initial release; verify `READY`.
+8. Publish and activate an initial release from the managed `--no-checkout` cache within the target client's operation timeout; verify one source-unique release and `READY`.
 9. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
 10. Submit an invalid candidate and verify it never replaces the active release.
+11. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
+12. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
 
 ## MCP-Only Gameplay Run
 
@@ -47,7 +49,7 @@ Record service build, configuration class, source revision, client version, and 
 
 ## Failure Cases
 
-Exercise missing campaign schema, missing rule schema, missing source, source unavailable, no published release, no active release, incompatible release, failed compilation, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets.
+Exercise missing campaign schema, missing rule schema, missing source, source unavailable, ref resolution, source read, failed compilation, failed validation, SQL staging/publication, activation, cancellation, no published release, no active release, incompatible release, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. Confirm SQL diagnostic failure uses the physical fallback, and failure of both sinks still preserves the original operation error. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets, including in verbose mode.
 
 ## Evidence and Pass Boundary
 

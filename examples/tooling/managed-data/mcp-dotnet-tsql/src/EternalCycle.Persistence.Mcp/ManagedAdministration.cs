@@ -28,7 +28,13 @@ public sealed record ManagedOperationResult<T>(
     bool Success,
     string Code,
     string Message,
-    T? Data);
+    T? Data,
+    string? Operation = null,
+    string? Stage = null,
+    string? CorrelationId = null,
+    bool RetrySafe = false,
+    bool AdministrativeInterventionRequired = false,
+    string? DiagnosticsAvailability = null);
 
 public sealed record BootstrapRequest(
     string? CampaignId,
@@ -230,7 +236,7 @@ public sealed class ManagedAdministrationService(
 
         try
         {
-            var metadata = request.UseOfficialDefault ? DistributionMetadata.Load(administration) : null;
+            var metadata = request.UseOfficialDefault ? OfficialDistributionMetadata.Load(administration) : null;
             var sourceLocation = request.UseOfficialDefault
                 ? metadata!.OfficialRepository
                 : Require(request.SourceLocation, nameof(request.SourceLocation));
@@ -295,15 +301,31 @@ public sealed class ManagedAdministrationService(
             var success = result.Status is "Activated" or "Unchanged" or "AlreadyPublished" or "AwaitingAdministratorActivation";
             return new(
                 success,
-                success ? "RULE_PUBLICATION_COMPLETE" : "RULE_PUBLICATION_FAILED",
+                success ? "RULE_PUBLICATION_COMPLETE" : result.ErrorCode ?? "RULE_PUBLICATION_FAILED",
                 success
                     ? "The initial Rule Release workflow completed. Check readiness to confirm activation policy."
-                    : "The Rule Release candidate failed. Any previous active release was preserved.",
-                result);
+                    : result.FailureReason ?? "The Rule Release candidate failed. Any previous active release was preserved.",
+                result,
+                result.Operation,
+                result.Stage,
+                result.CorrelationId,
+                result.RetrySafe,
+                result.AdministrativeInterventionRequired,
+                result.DiagnosticsAvailability);
         }
-        catch (Exception)
+        catch (OperationCanceledException)
         {
-            return new(false, "RULE_SOURCE_UNAVAILABLE", "The configured Rule Source could not produce a candidate. Inspect authorized sanitized service logs.", null);
+            return new(
+                false,
+                "RULE_PUBLICATION_CANCELLED",
+                "Rule publication was cancelled before the Managed publication coordinator could return a structured result.",
+                null,
+                "PublishInitialRules",
+                RulePublicationStage.Cancelled.ToString(),
+                null,
+                true,
+                false,
+                "Unavailable");
         }
     }
 
@@ -573,13 +595,28 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 "004_rule_source_configuration",
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("004_rule_source_configuration.template.sql")));
-        }
-        else if (!domainTables.Contains("rule_source_configurations"))
-        {
             migrations.Add(new(
-                "004_rule_source_configuration",
+                "005_managed_operation_diagnostics",
                 $"Domain schema {settings.DomainSchema}",
-                RenderDomain("004_rule_source_configuration.template.sql")));
+                RenderDomain("005_managed_operation_diagnostics.template.sql")));
+        }
+        else
+        {
+            if (!domainTables.Contains("rule_source_configurations"))
+            {
+                migrations.Add(new(
+                    "004_rule_source_configuration",
+                    $"Domain schema {settings.DomainSchema}",
+                    RenderDomain("004_rule_source_configuration.template.sql")));
+            }
+
+            if (!domainTables.Contains("managed_operation_diagnostics"))
+            {
+                migrations.Add(new(
+                    "005_managed_operation_diagnostics",
+                    $"Domain schema {settings.DomainSchema}",
+                    RenderDomain("005_managed_operation_diagnostics.template.sql")));
+            }
         }
 
         return migrations;
@@ -777,14 +814,14 @@ public sealed class ManagedServiceException(string code, string safeMessage) : E
     public string SafeMessage { get; } = safeMessage;
 }
 
-public sealed record DistributionMetadata(
+public sealed record OfficialDistributionMetadata(
     string Project,
     string OfficialRepository,
     string StableReleaseTag,
     string DevelopmentRef,
     string RuleSourceManifest)
 {
-    public static DistributionMetadata Load(ManagedAdministrationOptions options)
+    public static OfficialDistributionMetadata Load(ManagedAdministrationOptions options)
     {
         var path = Path.IsPathRooted(options.DistributionMetadataFile)
             ? options.DistributionMetadataFile
@@ -796,7 +833,7 @@ public sealed record DistributionMetadata(
                 "Official distribution metadata is unavailable; configure a compatible custom Rule Source or repair the installation.");
         }
 
-        var metadata = JsonSerializer.Deserialize<DistributionMetadata>(
+        var metadata = JsonSerializer.Deserialize<OfficialDistributionMetadata>(
             File.ReadAllText(path),
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         return metadata is not null &&

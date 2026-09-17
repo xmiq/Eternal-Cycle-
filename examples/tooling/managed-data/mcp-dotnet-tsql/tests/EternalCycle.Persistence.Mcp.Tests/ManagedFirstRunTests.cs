@@ -11,6 +11,20 @@ public sealed class ManagedFirstRunTests
     private const string Approval = "APPROVE TEST SETUP";
 
     [Fact]
+    public void PackagedOfficialDistributionMetadataIsCopiedAndLoadable()
+    {
+        var metadataPath = Path.Combine(AppContext.BaseDirectory, "distribution-metadata.json");
+
+        Assert.True(File.Exists(metadataPath), $"Expected packaged metadata at {metadataPath}.");
+
+        var metadata = OfficialDistributionMetadata.Load(new ManagedAdministrationOptions());
+
+        Assert.Equal("Eternal Cycle", metadata.Project);
+        Assert.Equal("v1.0.0", metadata.StableReleaseTag);
+        Assert.Equal("https://github.com/xmiq/Eternal-Cycle-.git", metadata.OfficialRepository);
+    }
+
+    [Fact]
     public void CleanDatabaseIsSetupRequiredInsteadOfGenericFailure()
     {
         var report = Evaluate(
@@ -150,7 +164,7 @@ public sealed class ManagedFirstRunTests
     [Fact]
     public async Task ApprovedBootstrapIsRepeatSafeAndUsesOnlyPackagedMigrations()
     {
-        var executor = new FakeBootstrapExecutor(["001_campaign_persistence", "002_rule_domain", "004_rule_source_configuration"]);
+        var executor = new FakeBootstrapExecutor(["001_campaign_persistence", "002_rule_domain", "004_rule_source_configuration", "005_managed_operation_diagnostics"]);
         var service = Administration(executor, enabled: true);
 
         var first = await service.BootstrapAsync(
@@ -166,7 +180,7 @@ public sealed class ManagedFirstRunTests
         Assert.Equal("ALREADY_INITIALIZED", second.Code);
         Assert.Equal(2, executor.Executions);
         Assert.Equal(
-            ["001_campaign_persistence", "002_rule_domain", "004_rule_source_configuration"],
+            ["001_campaign_persistence", "002_rule_domain", "004_rule_source_configuration", "005_managed_operation_diagnostics"],
             first.Data?.AppliedMigrationIds);
     }
 
@@ -337,10 +351,12 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("002_rule_domain.template.sql", files);
         Assert.Contains("003_campaign_directory.template.sql", files);
         Assert.Contains("004_rule_source_configuration.template.sql", files);
+        Assert.Contains("005_managed_operation_diagnostics.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
         Assert.Contains("IF OBJECT_ID", File.ReadAllText(Path.Combine(schemaDirectory, "004_rule_source_configuration.template.sql")));
+        Assert.Contains("IF OBJECT_ID", File.ReadAllText(Path.Combine(schemaDirectory, "005_managed_operation_diagnostics.template.sql")));
     }
 
     private static ManagedReadinessReport Evaluate(

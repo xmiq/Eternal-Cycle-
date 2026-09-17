@@ -2992,3 +2992,19 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **External boundary:** live SQL Server bootstrap, remote Git/GitHub acquisition, MCP-client semantic serialization, and a repository-blind 8K local-AI run remain real deployment acceptance.
 - **Current active task:** none; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
 - **Exact resume point:** run the documented MCP-only acceptance test in the target Unsloth/local-AI environment. Record qualifying evidence without changing `VERSION`, publishing v1.1.0, or selecting another objective automatically.
+
+## FR-020 Build Path Regression Repair
+
+- **Completed:** Restored only `examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/` from `HEAD` after an accidental working-tree deletion, then repaired repository-relative `DISTRIBUTION.json` packaging and loading.
+- **Changed:** Anchored the source path to the project file, added a standalone-package metadata fallback, added build/publish output guards, renamed the runtime model to `OfficialDistributionMetadata`, copied metadata into the test output, and added regression coverage.
+- **Validation:** Full-checkout and simulated standalone-root builds passed from a different working directory with zero warnings/errors; both publish checks produced `distribution-metadata.json`; 51 .NET tests, the 53-assertion FR-020 harness, and the full repository validator passed. No campaign data or unrelated working-tree files were restored.
+- **Exact resume point:** commit only this build-regression repair, then report the 25 restored tracked source files and the eight modified/new files.
+
+## FR-020 RC Publication Regression Repair
+
+- **Evidence:** A real Managed/MCP and SQL Server run reached `RulePublicationRequired`, but repeated initial publication calls exceeded the client timeout and left no published release. The managed Git cache used the intended `--no-checkout` layout; missing working-tree files were not the defect.
+- **Measured path:** The official manifest contains 8 documents and compiles to 147 chunks, 990 selectors, and 768 dependency rows. Acquisition uses 11 Git processes on a fresh or refreshed cache. The prior staging path issued 1,906 sequential SQL commands inside one transaction before validation, publication, and activation.
+- **Repair:** Replaced per-record staging with 9 bounded multi-row staging commands, added stage-aware bounded Git processes with process-tree cancellation, made Candidate/Validated/Published retries idempotently resumable, added structured MCP failures, and preserved redacted exception evidence through SQL-first diagnostics with a protected physical fallback.
+- **Schema:** Added repeat-safe migration `005_managed_operation_diagnostics`; no campaign schema or populated campaign data changed.
+- **Validation:** Build passed with zero warnings/errors; 70 .NET tests passed; FR-011 (13), FR-017 (29), FR-018 (19), FR-019 (48), FR-020 (59), and release-neutral (17) assertions passed; the full repository validator passed across 278 Markdown files and 7,057 relative links. Full-checkout and simulated standalone-root builds passed, and publish output contained loadable distribution metadata. Real remote Git, the target Unsloth MCP client, and live SQL Server publication remain external acceptance.
+- **Current active task:** After the focused repair commit, return to Phase 13 Future Revisions `[∞]`; no later objective is selected.

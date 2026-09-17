@@ -48,6 +48,7 @@ $readiness = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Mana
 $domainSchema = Read-RepoFile "$referenceRoot/src/EternalCycle.Persistence.Mcp/Schema/002_rule_domain.sql"
 $referenceReadme = Read-RepoFile "$referenceRoot/README.md"
 $publicationTests = Read-RepoFile "$referenceRoot/tests/EternalCycle.Persistence.Mcp.Tests/ManagedRulePublicationTests.cs"
+$publicationRegressionTests = Read-RepoFile "$referenceRoot/tests/EternalCycle.Persistence.Mcp.Tests/ManagedPublicationRegressionTests.cs"
 $routingTests = Read-RepoFile "$referenceRoot/tests/EternalCycle.Persistence.Mcp.Tests/SchemaRoutingAndRuleCompilationTests.cs"
 
 # Strategy selection (1-5)
@@ -80,7 +81,7 @@ Assert-Requirement 18 ($routingTests -match 'MigrationRenderingTargetsOnlyTheSel
 Assert-Requirement 19 ($publication -match 'RuleCompiler.Compile' -and $publication -match 'RuleReleaseState.Candidate') 'Canonical source compiles to a candidate release.'
 Assert-Requirement 20 ($publication -match 'ValidateCandidate' -and $publication -match 'RuleReleaseState.Validated') 'Validation precedes publication and activation.'
 Assert-Requirement 21 ($domainSchema -match 'CREATE TABLE \[ec_domain\]\.rule_releases' -and $domainSchema -match 'CREATE TABLE \[ec_domain\]\.rule_chunks') 'Compiled publications are stored in ec_domain.'
-Assert-Requirement 22 ($publication -match 'CandidateFailed' -and $publication -match 'active release is unchanged') 'Compilation failure preserves the active release.'
+Assert-Requirement 22 ($publication -match 'CandidateFailed' -and $publicationRegressionTests -match 'CompilerFailureIsNotMisclassifiedAsSourceUnavailable' -and $publicationRegressionTests -match 'ActiveReleasePreserved') 'Compilation failure preserves the active release.'
 Assert-Requirement 23 ($publicationTests -match 'InvalidCandidatePreservesPreviousActiveRelease') 'Validation failure preservation has regression coverage.'
 Assert-Requirement 24 ($publishedStore -match 'MERGE \{\{schema\}\}\.active_rule_releases' -and $publishedStore -match 'CommitAsync') 'Activation is atomic in the T-SQL reference.'
 Assert-Requirement 25 ($publication -match 'PublishedRuleContextProvider' -and $publicationTests -match 'RuntimeRetrievalUsesPublishedStoreWithoutCallingSourceProvider') 'Runtime retrieval uses published rules, not repository compilation.'

@@ -21,6 +21,8 @@ public sealed class GitRuleSourceOptions
     public string Remote { get; init; } = "origin";
 
     public string GitExecutable { get; init; } = "git";
+
+    public TimeSpan ProcessTimeout { get; init; } = TimeSpan.FromMinutes(2);
 }
 
 public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
@@ -52,8 +54,14 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         administration = administrationOptions.Value;
     }
 
-    public async Task<RuleSourceSnapshot> GetSnapshotAsync(CancellationToken cancellationToken)
+    public Task<RuleSourceSnapshot> GetSnapshotAsync(CancellationToken cancellationToken) =>
+        GetSnapshotAsync(null, cancellationToken);
+
+    public async Task<RuleSourceSnapshot> GetSnapshotAsync(
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken)
     {
+        onStage?.Invoke(RulePublicationStage.AcquireSource);
         var configuration = configurations is null
             ? null
             : await configurations.GetAsync(ruleSettings.RulesetId, cancellationToken);
@@ -77,7 +85,7 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         var manifestSetting = useAdvancedLocal ? settings.ManifestPath : configuration!.ManifestPath;
         var resolved = useAdvancedLocal
             ? new ResolvedGitSource(Path.GetFullPath(settings.RepositoryRoot), false)
-            : await ResolveManagedRepositoryAsync(configuration!, cancellationToken);
+            : await ResolveManagedRepositoryAsync(configuration!, onStage, cancellationToken);
         var repositoryRoot = resolved.RepositoryRoot;
         if (!Directory.Exists(repositoryRoot))
         {
@@ -91,28 +99,34 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
             _ = await RunGitAsync(
                 repositoryRoot,
                 ["fetch", "--prune", RequireValue(settings.Remote, nameof(settings.Remote))],
+                RulePublicationStage.AcquireSource,
                 cancellationToken);
         }
 
+        onStage?.Invoke(RulePublicationStage.ResolveRef);
         var sourceIdentity = (await RunGitAsync(
             repositoryRoot,
             ["rev-parse", $"{ResolveRef(requestedRef, resolved.ManagedRemote)}^{{commit}}"],
+            RulePublicationStage.ResolveRef,
             cancellationToken)).Trim();
         if (!CommitSha().IsMatch(sourceIdentity))
         {
             throw new InvalidOperationException("Git source did not resolve to an immutable commit SHA.");
         }
 
+        onStage?.Invoke(RulePublicationStage.ReadManifest);
         var manifestPath = ValidateRepositoryPath(manifestSetting);
         var manifestJson = await ReadAtCommitAsync(
             repositoryRoot,
             sourceIdentity,
             manifestPath,
+            RulePublicationStage.ReadManifest,
             cancellationToken);
         var manifest = JsonSerializer.Deserialize<RuleSourceManifest>(manifestJson, ManifestJsonOptions)
             ?? throw new InvalidOperationException("The configured rule-source manifest is unreadable.");
         var documents = new List<RuleSourceDocument>(manifest.Sources.Count);
 
+        onStage?.Invoke(RulePublicationStage.ReadRuleDocuments);
         foreach (var source in manifest.Sources)
         {
             var sourcePath = ValidateRepositoryPath(source.Path);
@@ -120,6 +134,7 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
                 repositoryRoot,
                 sourceIdentity,
                 sourcePath,
+                RulePublicationStage.ReadRuleDocuments,
                 cancellationToken);
             documents.Add(new RuleSourceDocument(
                 RequireValue(source.RuleSourceId, nameof(source.RuleSourceId)),
@@ -147,8 +162,10 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
 
     private async Task<ResolvedGitSource> ResolveManagedRepositoryAsync(
         RuleSourceConfiguration configuration,
+        Action<RulePublicationStage>? onStage,
         CancellationToken cancellationToken)
     {
+        onStage?.Invoke(RulePublicationStage.AcquireSource);
         if (Directory.Exists(configuration.SourceLocation))
         {
             return new ResolvedGitSource(Path.GetFullPath(configuration.SourceLocation), false);
@@ -183,11 +200,16 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
             await RunProcessAsync(
                 cacheRoot,
                 ["clone", "--no-checkout", configuration.SourceLocation, repositoryRoot],
+                RulePublicationStage.AcquireSource,
                 cancellationToken);
         }
         else
         {
-            await RunProcessAsync(repositoryRoot, ["fetch", "--prune", "origin"], cancellationToken);
+            await RunProcessAsync(
+                repositoryRoot,
+                ["fetch", "--prune", "origin"],
+                RulePublicationStage.AcquireSource,
+                cancellationToken);
         }
 
         return new ResolvedGitSource(repositoryRoot, true);
@@ -213,21 +235,25 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         string repositoryRoot,
         string sourceIdentity,
         string repositoryPath,
+        RulePublicationStage stage,
         CancellationToken cancellationToken) =>
         await RunGitAsync(
             repositoryRoot,
             ["show", $"{sourceIdentity}:{repositoryPath}"],
+            stage,
             cancellationToken);
 
     private async Task<string> RunGitAsync(
         string repositoryRoot,
         IReadOnlyList<string> arguments,
+        RulePublicationStage stage,
         CancellationToken cancellationToken) =>
-        await RunProcessAsync(repositoryRoot, arguments, cancellationToken);
+        await RunProcessAsync(repositoryRoot, arguments, stage, cancellationToken);
 
     private async Task<string> RunProcessAsync(
         string workingDirectory,
         IReadOnlyList<string> arguments,
+        RulePublicationStage stage,
         CancellationToken cancellationToken)
     {
         var startInfo = new ProcessStartInfo
@@ -245,20 +271,85 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         }
 
         using var process = Process.Start(startInfo)
-            ?? throw new InvalidOperationException("The configured Git executable could not be started.");
-        var outputTask = process.StandardOutput.ReadToEndAsync(cancellationToken);
-        var errorTask = process.StandardError.ReadToEndAsync(cancellationToken);
-        await process.WaitForExitAsync(cancellationToken);
+            ?? throw new RulePublicationException(
+                CodeFor(stage),
+                stage,
+                "The configured Git executable could not be started.",
+                retrySafe: true,
+                administrativeInterventionRequired: true);
+        var outputTask = process.StandardOutput.ReadToEndAsync();
+        var errorTask = process.StandardError.ReadToEndAsync();
+        var processTimeout = settings.ProcessTimeout > TimeSpan.Zero
+            ? settings.ProcessTimeout
+            : TimeSpan.FromMinutes(2);
+        using var timeout = new CancellationTokenSource(processTimeout);
+        using var linked = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeout.Token);
+        try
+        {
+            await process.WaitForExitAsync(linked.Token);
+        }
+        catch (OperationCanceledException exception)
+        {
+            TryKill(process);
+            await process.WaitForExitAsync(CancellationToken.None);
+            _ = await outputTask;
+            _ = await errorTask;
+            if (cancellationToken.IsCancellationRequested)
+            {
+                throw;
+            }
+
+            throw new RulePublicationException(
+                "RULE_SOURCE_OPERATION_TIMEOUT",
+                stage,
+                $"Git Rule Source operation exceeded the configured timeout at stage {stage}.",
+                retrySafe: true,
+                administrativeInterventionRequired: false,
+                exception);
+        }
+
         var output = await outputTask;
         var error = await errorTask;
         if (process.ExitCode != 0)
         {
-            throw new ManagedServiceException(
-                "RULE_SOURCE_UNAVAILABLE",
-                $"Git Rule Source operation failed with exit code {process.ExitCode}; inspect authorized sanitized service logs.");
+            var detail = DiagnosticRedactor.Redact(error)?.Trim();
+            var boundedDetail = string.IsNullOrWhiteSpace(detail)
+                ? "No Git diagnostic text was returned."
+                : detail.Length <= 1000 ? detail : detail[..1000];
+            throw new RulePublicationException(
+                CodeFor(stage),
+                stage,
+                $"Git Rule Source operation failed at stage {stage}; inspect the correlated authorized diagnostic.",
+                retrySafe: true,
+                administrativeInterventionRequired: stage == RulePublicationStage.AcquireSource,
+                innerException: new InvalidOperationException(
+                    $"Git exited with code {process.ExitCode}: {boundedDetail}"));
         }
 
         return output;
+    }
+
+    private static string CodeFor(RulePublicationStage stage) => stage switch
+    {
+        RulePublicationStage.AcquireSource => "RULE_SOURCE_ACQUISITION_FAILED",
+        RulePublicationStage.ResolveRef => "RULE_SOURCE_REF_RESOLUTION_FAILED",
+        RulePublicationStage.ReadManifest or RulePublicationStage.ReadRuleDocuments => "RULE_SOURCE_READ_FAILED",
+        _ => "RULE_SOURCE_OPERATION_FAILED"
+    };
+
+    private static void TryKill(Process process)
+    {
+        try
+        {
+            if (!process.HasExited)
+            {
+                process.Kill(entireProcessTree: true);
+            }
+        }
+        catch (InvalidOperationException)
+        {
+            // The process exited between the check and the kill request.
+        }
     }
 
     private static string ValidateRepositoryPath(string value)
