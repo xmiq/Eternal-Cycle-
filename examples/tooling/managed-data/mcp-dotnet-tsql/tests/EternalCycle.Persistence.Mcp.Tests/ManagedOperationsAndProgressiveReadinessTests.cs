@@ -82,6 +82,112 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
     }
 
     [Fact]
+    public async Task DurableOperationPropagatesItsTrueOperationAndCorrelationIds()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var publisher = new ContextCapturingPublisher();
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+
+        _ = await Processor(store, publisher).ProcessNextAsync(CancellationToken.None);
+
+        Assert.Equal(queued.OperationId, publisher.Execution?.OperationId);
+        Assert.Equal(queued.CorrelationId, publisher.Execution?.CorrelationId);
+    }
+
+    [Fact]
+    public async Task HostShutdownLeavesDurableOperationInterruptedAndRecoverable()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var publisher = new BlockingPublisher();
+        var diagnostics = new RecordingDiagnosticRecorder();
+        var processor = Processor(store, publisher, diagnostics: diagnostics);
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        using var stopping = new CancellationTokenSource();
+
+        var processing = processor.ProcessNextAsync(stopping.Token);
+        await publisher.Started.Task.WaitAsync(TimeSpan.FromSeconds(2));
+        stopping.Cancel();
+        _ = await processing;
+        var result = await service.GetAsync(queued.OperationId, CancellationToken.None);
+
+        Assert.Equal(ManagedOperationState.Interrupted, result?.State);
+        Assert.Equal("MANAGED_OPERATION_INTERRUPTED", result?.ErrorCode);
+        Assert.True(result?.RetrySafe);
+        var diagnostic = Assert.Single(diagnostics.Events);
+        Assert.Equal(queued.OperationId, diagnostic.OperationId);
+        Assert.Equal(queued.CorrelationId, diagnostic.CorrelationId);
+        Assert.Contains("CancellationSource=HostShutdown", diagnostic.SafeDetail);
+    }
+
+    [Fact]
+    public async Task ManagedOperationTimeoutIsClassifiedAtDurableOwner()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var publisher = new BlockingPublisher();
+        var diagnostics = new RecordingDiagnosticRecorder();
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+
+        _ = await Processor(
+            store,
+            publisher,
+            TimeSpan.FromMilliseconds(40),
+            diagnostics).ProcessNextAsync(CancellationToken.None);
+        var result = await service.GetAsync(queued.OperationId, CancellationToken.None);
+
+        Assert.Equal(ManagedOperationState.Failed, result?.State);
+        Assert.Equal("MANAGED_OPERATION_TIMEOUT", result?.ErrorCode);
+        Assert.Contains("CancellationSource=ManagedOperationTimeout", Assert.Single(diagnostics.Events).SafeDetail);
+    }
+
+    [Fact]
+    public async Task UnexpectedParentCancellationIsNotMisreportedAsShutdownOrTimeout()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var diagnostics = new RecordingDiagnosticRecorder();
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+
+        _ = await Processor(
+            store,
+            new UnexpectedCancellationPublisher(),
+            diagnostics: diagnostics).ProcessNextAsync(CancellationToken.None);
+        var result = await service.GetAsync(queued.OperationId, CancellationToken.None);
+
+        Assert.Equal(ManagedOperationState.Failed, result?.State);
+        Assert.Equal("MANAGED_OPERATION_CANCELLED_UNEXPECTED", result?.ErrorCode);
+        Assert.Contains("CancellationSource=UnexpectedParentCancellation", Assert.Single(diagnostics.Events).SafeDetail);
+    }
+
+    [Fact]
+    public async Task OperationStatusEnvelopeMatchesInnerRetrySemantics()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        await store.FailAsync(
+            queued.OperationId,
+            ManagedOperationState.Failed,
+            "AcquireSource",
+            "RULE_SOURCE_REF_NOT_FOUND",
+            "The requested ref was not found.",
+            retrySafe: false,
+            administrativeInterventionRequired: true,
+            CancellationToken.None);
+
+        var result = await new ManagedOperationTools(service)
+            .GetStatusAsync(queued.OperationId, CancellationToken.None);
+
+        Assert.NotNull(result.Data);
+        Assert.Equal(result.Data!.RetrySafe, result.RetrySafe);
+        Assert.Equal(
+            result.Data.AdministrativeInterventionRequired,
+            result.AdministrativeInterventionRequired);
+    }
+
+    [Fact]
     public async Task RestartTurnsPhantomRunningWorkIntoRetryableInterruptedWork()
     {
         var store = new MemoryManagedOperationStore();
@@ -326,15 +432,18 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
 
     private static ManagedOperationProcessor Processor(
         IManagedOperationStore store,
-        IRulePublicationExecutor publisher) =>
+        IRulePublicationExecutor publisher,
+        TimeSpan? operationTimeout = null,
+        IManagedDiagnosticRecorder? diagnostics = null) =>
         new(
             store,
             publisher,
             Options.Create(new ManagedRuleServiceOptions
             {
-                ManagedOperationTimeout = TimeSpan.FromSeconds(10)
+                ManagedOperationTimeout = operationTimeout ?? TimeSpan.FromSeconds(10)
             }),
-            NullLogger<ManagedOperationProcessor>.Instance);
+            NullLogger<ManagedOperationProcessor>.Instance,
+            diagnostics);
 
     private static ManagedReadinessReport Ready(bool fullRulesetReady) =>
         ManagedReadinessEvaluator.Evaluate(
@@ -472,6 +581,52 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
             onStage?.Invoke(RulePublicationStage.PrepareMinimumClosure);
             onStage?.Invoke(RulePublicationStage.Activate);
             return Task.FromResult(Success());
+        }
+    }
+
+    private sealed class ContextCapturingPublisher : IRulePublicationExecutor
+    {
+        public RulePublicationExecutionContext? Execution { get; private set; }
+
+        public Task<RulePublicationResult> ExecuteAsync(CancellationToken cancellationToken) =>
+            Task.FromResult(Success());
+
+        public Task<RulePublicationResult> ExecuteAsync(
+            RulePublicationExecutionContext execution,
+            Action<RulePublicationStage>? onStage,
+            CancellationToken cancellationToken)
+        {
+            Execution = execution;
+            return Task.FromResult(Success());
+        }
+    }
+
+    private sealed class UnexpectedCancellationPublisher : IRulePublicationExecutor
+    {
+        public Task<RulePublicationResult> ExecuteAsync(CancellationToken cancellationToken) =>
+            throw new OperationCanceledException("fixture parent cancellation");
+    }
+
+    private sealed class RecordingDiagnosticRecorder : IManagedDiagnosticRecorder
+    {
+        public List<ManagedDiagnosticContext> Events { get; } = [];
+
+        public Task<ManagedDiagnosticReceipt> RecordFailureAsync(
+            ManagedDiagnosticContext context,
+            Exception exception,
+            CancellationToken cancellationToken) =>
+            RecordEventAsync(context, cancellationToken);
+
+        public Task<ManagedDiagnosticReceipt> RecordEventAsync(
+            ManagedDiagnosticContext context,
+            CancellationToken cancellationToken)
+        {
+            Events.Add(context);
+            return Task.FromResult(new ManagedDiagnosticReceipt(
+                context.CorrelationId,
+                "Captured",
+                true,
+                false));
         }
     }
 

@@ -1,5 +1,7 @@
 # FR-020 Managed First-Run Readiness and Bootstrap Audit
 
+> **Historical implementation note:** This audit accurately records the FR-020 cache implementation and tests at that time. The retained no-checkout cache shape was later superseded by the [FR-021 Rule Source Live-Acceptance Repair](FR_021_RULE_SOURCE_LIVE_ACCEPTANCE_REPAIR_AUDIT.md), which uses disposable Git acquisition and retains only the manifest-defined Runtime Rule Source Payload plus provenance.
+
 ## Scope
 
 This audit records the owner-authorized pre-v1.1 release-candidate repair prompted by a real local-AI, third-party stdio MCP, and Microsoft SQL Server deployment. It preserves FR-017 through FR-019, the `DIRECT`/`MANAGED` split, **Enumerate -> Select -> Persist -> Reuse**, Managed service rule ownership, MCP's optional-interface status, and the reference-only .NET/T-SQL implementation.

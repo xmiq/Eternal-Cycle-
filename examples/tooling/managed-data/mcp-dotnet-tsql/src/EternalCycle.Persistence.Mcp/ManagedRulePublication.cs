@@ -167,6 +167,20 @@ public interface IRuleSourceProvider
         Action<RulePublicationStage>? onStage,
         CancellationToken cancellationToken) =>
         GetSnapshotAsync(cancellationToken);
+
+    Task<RuleSourceSnapshot> GetSnapshotAsync(
+        RulePublicationExecutionContext execution,
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken) =>
+        GetSnapshotAsync(onStage, cancellationToken);
+}
+
+public sealed record RulePublicationExecutionContext(
+    string? OperationId,
+    string CorrelationId)
+{
+    public static RulePublicationExecutionContext CreateStandalone() =>
+        new(null, $"CORR-{Guid.NewGuid():N}");
 }
 
 public interface IPublishedRuleStore
@@ -264,13 +278,19 @@ public sealed class ManagedRulePublicationCoordinator
     }
 
     public Task<RulePublicationResult> CheckForUpdateAsync(CancellationToken cancellationToken) =>
-        CheckForUpdateAsync(null, cancellationToken);
+        CheckForUpdateAsync(RulePublicationExecutionContext.CreateStandalone(), null, cancellationToken);
+
+    public Task<RulePublicationResult> CheckForUpdateAsync(
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken) =>
+        CheckForUpdateAsync(RulePublicationExecutionContext.CreateStandalone(), onStage, cancellationToken);
 
     public async Task<RulePublicationResult> CheckForUpdateAsync(
+        RulePublicationExecutionContext execution,
         Action<RulePublicationStage>? onStage,
         CancellationToken cancellationToken)
     {
-        var correlationId = $"OP-{Guid.NewGuid():N}";
+        var correlationId = execution.CorrelationId;
         var startedAt = DateTimeOffset.UtcNow;
         var stage = RulePublicationStage.AcquireSource;
         PublishedRuleRelease? active = null;
@@ -285,7 +305,7 @@ public sealed class ManagedRulePublicationCoordinator
         try
         {
             active = await store.GetActiveAsync(settings.RulesetId, cancellationToken);
-            snapshot = await sourceProvider.GetSnapshotAsync(SetStage, cancellationToken);
+            snapshot = await sourceProvider.GetSnapshotAsync(execution, SetStage, cancellationToken);
 
             if (active is not null &&
                 string.Equals(active.SourceIdentity, snapshot.SourceIdentity, StringComparison.Ordinal))
@@ -349,13 +369,13 @@ public sealed class ManagedRulePublicationCoordinator
             };
             return await CompleteAsync(result with { Stage = stage.ToString() }, outcome, cancellationToken);
         }
+        catch (OperationCanceledException)
+        {
+            SetStage(RulePublicationStage.Cancelled);
+            throw;
+        }
         catch (Exception exception)
         {
-            if (exception is OperationCanceledException)
-            {
-                SetStage(RulePublicationStage.Cancelled);
-            }
-
             var failure = DescribeFailure(exception, stage);
             var sourceFailure = exception as RulePublicationException;
             var releaseId = candidate?.RuleReleaseId;
@@ -378,7 +398,8 @@ public sealed class ManagedRulePublicationCoordinator
                     AdministrativeInterventionRequired: failure.AdministrativeInterventionRequired,
                     ReleaseChannel: snapshot?.ReleaseChannel ?? sourceFailure?.ReleaseChannel,
                     DiscoveryRef: snapshot?.DiscoveryRef ?? sourceFailure?.DiscoveryRef,
-                    SafeDetail: failure.SafeMessage),
+                    SafeDetail: failure.SafeMessage,
+                    OperationId: execution.OperationId),
                 exception,
                 CancellationToken.None);
 

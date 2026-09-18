@@ -128,6 +128,7 @@ public interface IManagedDiagnosticEvidenceReader
 {
     Task<IReadOnlyList<ManagedOperationDiagnostic>> ReadAsync(
         string? correlationId,
+        string? operationId,
         int maximumCount,
         CancellationToken cancellationToken);
 }
@@ -139,6 +140,7 @@ public sealed class SqlServerManagedDiagnosticEvidenceReader(
 
     public async Task<IReadOnlyList<ManagedOperationDiagnostic>> ReadAsync(
         string? correlationId,
+        string? operationId,
         int maximumCount,
         CancellationToken cancellationToken)
     {
@@ -171,7 +173,8 @@ public sealed class SqlServerManagedDiagnosticEvidenceReader(
                         CAST(NULL AS bit) AS administrative_intervention_required,
                         CAST(NULL AS nvarchar(32)) AS source_channel,
                         CAST(NULL AS nvarchar(256)) AS discovery_ref,
-                        CAST(NULL AS nvarchar(2000)) AS safe_detail;
+                        CAST(NULL AS nvarchar(2000)) AS safe_detail,
+                        CAST(NULL AS nvarchar(128)) AS operation_id;
                     RETURN;
                 END;
 
@@ -183,9 +186,11 @@ public sealed class SqlServerManagedDiagnosticEvidenceReader(
                     implementation_version, ruleset_id, rule_release_id,
                     source_identity, campaign_id, duration_ms, outcome,
                     retry_safe, administrative_intervention_required,
-                    source_channel, discovery_ref, safe_detail
+                    source_channel, discovery_ref, safe_detail, operation_id
                 FROM {{schema}}.managed_operation_diagnostics
-                WHERE @correlation_id IS NULL OR correlation_id = @correlation_id
+                WHERE (@correlation_id IS NULL AND @operation_id IS NULL)
+                   OR correlation_id = @correlation_id
+                   OR operation_id = @operation_id
                 ORDER BY recorded_at DESC, diagnostic_id DESC;
                 """, settings.DomainSchema),
             connection)
@@ -194,6 +199,7 @@ public sealed class SqlServerManagedDiagnosticEvidenceReader(
         };
         command.Parameters.AddWithValue("@maximum_count", Math.Clamp(maximumCount, 1, 20));
         command.Parameters.AddWithValue("@correlation_id", (object?)correlationId ?? DBNull.Value);
+        command.Parameters.AddWithValue("@operation_id", (object?)operationId ?? DBNull.Value);
         var result = new List<ManagedOperationDiagnostic>();
         await using var reader = await command.ExecuteReaderAsync(cancellationToken);
         while (await reader.ReadAsync(cancellationToken))
@@ -228,7 +234,8 @@ public sealed class SqlServerManagedDiagnosticEvidenceReader(
             reader.IsDBNull(19) ? null : reader.GetBoolean(19),
             OptionalString(reader, 20),
             OptionalString(reader, 21),
-            OptionalString(reader, 22));
+            OptionalString(reader, 22),
+            OptionalString(reader, 23));
 
     private static string? OptionalString(SqlDataReader reader, int ordinal) =>
         reader.IsDBNull(ordinal) ? null : reader.GetString(ordinal);
@@ -261,30 +268,6 @@ public sealed partial class ErrorDumpService(
         var correlationId = NormalizeSelector(request.CorrelationId);
         var operationId = NormalizeSelector(request.OperationId);
         var sourceStatuses = new List<ErrorDumpSourceStatus>();
-        var recentErrors = recent.Find(correlationId, maximumCount).Select(Bound).ToArray();
-        sourceStatuses.Add(new("InProcess", true, recentErrors.Length, "Bounded process-local error evidence was queried."));
-
-        var fileDiagnostics = ReadFallback(correlationId, maximumCount, out var fileStatus);
-        sourceStatuses.Add(fileStatus);
-
-        IReadOnlyList<ManagedOperationDiagnostic> databaseEvidence = [];
-        if (databaseDiagnostics is not null)
-        {
-            try
-            {
-                databaseEvidence = await databaseDiagnostics.ReadAsync(correlationId, maximumCount, cancellationToken);
-                sourceStatuses.Add(new("DatabaseDiagnostics", true, databaseEvidence.Count, "Schema-independent diagnostic lookup completed."));
-            }
-            catch (Exception exception) when (exception is not OperationCanceledException)
-            {
-                sourceStatuses.Add(new("DatabaseDiagnostics", false, 0, $"Database diagnostic evidence was unavailable ({exception.GetType().Name})."));
-            }
-        }
-        else
-        {
-            sourceStatuses.Add(new("DatabaseDiagnostics", false, 0, "No database diagnostic reader is registered."));
-        }
-
         ManagedReadinessReport? readinessReport = null;
         if (readiness is not null)
         {
@@ -300,7 +283,7 @@ public sealed partial class ErrorDumpService(
         }
 
         ManagedOperationStatus? operation = null;
-        if (operations is not null && operationId is not null)
+        if (operations is not null && (operationId is not null || correlationId is not null))
         {
             if (readinessReport?.State is
                 ManagedReadinessState.ConfigurationRequired or
@@ -318,7 +301,9 @@ public sealed partial class ErrorDumpService(
             {
                 try
                 {
-                    operation = await operations.GetAsync(operationId, cancellationToken);
+                    operation = operationId is not null
+                        ? await operations.GetAsync(operationId, cancellationToken)
+                        : await operations.GetByCorrelationAsync(correlationId!, cancellationToken);
                     sourceStatuses.Add(new("ManagedOperation", true, operation is null ? 0 : 1, "Durable operation lookup completed."));
                 }
                 catch (Exception exception) when (exception is not OperationCanceledException)
@@ -326,6 +311,45 @@ public sealed partial class ErrorDumpService(
                     sourceStatuses.Add(new("ManagedOperation", false, 0, $"Managed Operation evidence was unavailable ({exception.GetType().Name})."));
                 }
             }
+        }
+
+        var effectiveCorrelationId = correlationId ?? operation?.CorrelationId;
+        var recentErrors = recent.Find(effectiveCorrelationId, maximumCount).Select(Bound).ToArray();
+        sourceStatuses.Add(new("InProcess", true, recentErrors.Length, "Bounded process-local error evidence was queried."));
+
+        var fileDiagnostics = ReadFallback(effectiveCorrelationId, operationId, maximumCount, out var fileStatus);
+        sourceStatuses.Add(fileStatus);
+
+        IReadOnlyList<ManagedOperationDiagnostic> databaseEvidence = [];
+        if (databaseDiagnostics is not null && readinessReport?.State is not (
+            ManagedReadinessState.ConfigurationRequired or
+            ManagedReadinessState.ConfigurationInvalid or
+            ManagedReadinessState.SetupRequired or
+            ManagedReadinessState.MigrationRequired))
+        {
+            try
+            {
+                databaseEvidence = await databaseDiagnostics.ReadAsync(
+                    effectiveCorrelationId,
+                    operationId,
+                    maximumCount,
+                    cancellationToken);
+                sourceStatuses.Add(new("DatabaseDiagnostics", true, databaseEvidence.Count, "Diagnostic lookup by durable operation or correlation completed."));
+            }
+            catch (Exception exception) when (exception is not OperationCanceledException)
+            {
+                sourceStatuses.Add(new("DatabaseDiagnostics", false, 0, $"Database diagnostic evidence was unavailable ({exception.GetType().Name})."));
+            }
+        }
+        else
+        {
+            sourceStatuses.Add(new(
+                "DatabaseDiagnostics",
+                false,
+                0,
+                databaseDiagnostics is null
+                    ? "No database diagnostic reader is registered."
+                    : "Diagnostic evidence was not queried before its required schema migration."));
         }
 
         var diagnostics = fileDiagnostics
@@ -358,7 +382,7 @@ public sealed partial class ErrorDumpService(
         var text = BuildText(
             state,
             generatedAt,
-            correlationId,
+            effectiveCorrelationId,
             operationId,
             primaryCode,
             readinessReport,
@@ -376,7 +400,7 @@ public sealed partial class ErrorDumpService(
             "1.0.0+post-release",
             ".NET / MCP / T-SQL reference implementation",
             identity,
-            correlationId,
+            effectiveCorrelationId,
             operationId,
             recentErrors,
             diagnostics,
@@ -393,6 +417,7 @@ public sealed partial class ErrorDumpService(
 
     private IReadOnlyList<ManagedOperationDiagnostic> ReadFallback(
         string? correlationId,
+        string? operationId,
         int maximumCount,
         out ErrorDumpSourceStatus status)
     {
@@ -415,7 +440,10 @@ public sealed partial class ErrorDumpService(
                 .Select(TryParse)
                 .Where(value => value is not null)
                 .Select(value => value!)
-                .Where(value => correlationId is null || string.Equals(value.CorrelationId, correlationId, StringComparison.Ordinal))
+                .Where(value =>
+                    (correlationId is null && operationId is null) ||
+                    string.Equals(value.CorrelationId, correlationId, StringComparison.Ordinal) ||
+                    string.Equals(value.OperationId, operationId, StringComparison.Ordinal))
                 .OrderByDescending(value => value.RecordedAt)
                 .Take(maximumCount)
                 .ToArray();

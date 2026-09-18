@@ -56,6 +56,15 @@ public interface IManagedOperationStore
 
     Task<ManagedOperationStatus?> GetAsync(string operationId, CancellationToken cancellationToken);
 
+    async Task<ManagedOperationStatus?> GetByCorrelationAsync(
+        string correlationId,
+        CancellationToken cancellationToken) =>
+        (await ListRecentAsync(null, 50, cancellationToken))
+            .FirstOrDefault(value => string.Equals(
+                value.CorrelationId,
+                correlationId,
+                StringComparison.Ordinal));
+
     Task<IReadOnlyList<ManagedOperationStatus>> ListRecentAsync(
         string? operationKind,
         int maximumCount,
@@ -116,7 +125,7 @@ public sealed class ManagedOperationService(
         var source = await sourceConfigurations.GetAsync(rules.RulesetId, cancellationToken)
             ?? throw new ManagedServiceException(
                 "RULE_SOURCE_NOT_CONFIGURED",
-                "No Rule Source is configured. Select Stable or Prerelease before publishing rules.");
+                "No Rule Source is configured. Select the packaged default or another compatible source before publishing rules.");
         var deduplicationKey = string.Join(
             ':',
             ManagedOperationKinds.InitialRulePublication,
@@ -165,6 +174,12 @@ public interface IRulePublicationExecutor
         Action<RulePublicationStage>? onStage,
         CancellationToken cancellationToken) =>
         ExecuteAsync(cancellationToken);
+
+    Task<RulePublicationResult> ExecuteAsync(
+        RulePublicationExecutionContext execution,
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken) =>
+        ExecuteAsync(onStage, cancellationToken);
 }
 
 public sealed class ManagedRulePublicationExecutor(ManagedRulePublicationCoordinator coordinator)
@@ -177,13 +192,20 @@ public sealed class ManagedRulePublicationExecutor(ManagedRulePublicationCoordin
         Action<RulePublicationStage>? onStage,
         CancellationToken cancellationToken) =>
         coordinator.CheckForUpdateAsync(onStage, cancellationToken);
+
+    public Task<RulePublicationResult> ExecuteAsync(
+        RulePublicationExecutionContext execution,
+        Action<RulePublicationStage>? onStage,
+        CancellationToken cancellationToken) =>
+        coordinator.CheckForUpdateAsync(execution, onStage, cancellationToken);
 }
 
 public sealed class ManagedOperationProcessor(
     IManagedOperationStore store,
     IRulePublicationExecutor rulePublication,
     IOptions<ManagedRuleServiceOptions> options,
-    ILogger<ManagedOperationProcessor> logger)
+    ILogger<ManagedOperationProcessor> logger,
+    IManagedDiagnosticRecorder? diagnostics = null)
 {
     private readonly ManagedRuleServiceOptions settings = options.Value;
 
@@ -196,6 +218,10 @@ public sealed class ManagedOperationProcessor(
         }
 
         var currentStage = operation.CurrentStage;
+        using var operationTimeout = new CancellationTokenSource(
+            settings.ManagedOperationTimeout > TimeSpan.Zero
+                ? settings.ManagedOperationTimeout
+                : TimeSpan.FromMinutes(30));
         try
         {
             if (!string.Equals(
@@ -215,11 +241,9 @@ public sealed class ManagedOperationProcessor(
                 return true;
             }
 
-            using var timeout = new CancellationTokenSource(
-                settings.ManagedOperationTimeout > TimeSpan.Zero
-                    ? settings.ManagedOperationTimeout
-                    : TimeSpan.FromMinutes(30));
-            using var linked = CancellationTokenSource.CreateLinkedTokenSource(stoppingToken, timeout.Token);
+            using var linked = CancellationTokenSource.CreateLinkedTokenSource(
+                stoppingToken,
+                operationTimeout.Token);
             void ReportStage(RulePublicationStage stage)
             {
                 currentStage = stage.ToString();
@@ -234,7 +258,10 @@ public sealed class ManagedOperationProcessor(
             }
 
             ReportStage(RulePublicationStage.AcquireSource);
-            var result = await rulePublication.ExecuteAsync(ReportStage, linked.Token);
+            var execution = new RulePublicationExecutionContext(
+                operation.OperationId,
+                operation.CorrelationId);
+            var result = await rulePublication.ExecuteAsync(execution, ReportStage, linked.Token);
             if (result.Status is "Activated" or "Unchanged" or "AlreadyPublished" or "AwaitingAdministratorActivation")
             {
                 await store.CompleteAsync(
@@ -260,24 +287,54 @@ public sealed class ManagedOperationProcessor(
         }
         catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
         {
-                await store.FailAsync(
-                    operation.OperationId,
-                    ManagedOperationState.Interrupted,
-                    currentStage,
+            await RecordCancellationAsync(
+                operation,
+                currentStage,
+                "MANAGED_OPERATION_INTERRUPTED",
+                "HostShutdown",
+                retrySafe: true);
+            await store.FailAsync(
+                operation.OperationId,
+                ManagedOperationState.Interrupted,
+                currentStage,
                 "MANAGED_OPERATION_INTERRUPTED",
                 "Service shutdown interrupted the operation. It is eligible for deterministic recovery.",
                 retrySafe: true,
                 administrativeInterventionRequired: false,
                 CancellationToken.None);
         }
-        catch (OperationCanceledException)
+        catch (OperationCanceledException) when (operationTimeout.IsCancellationRequested)
         {
-                await store.FailAsync(
-                    operation.OperationId,
-                    ManagedOperationState.Failed,
-                    currentStage,
+            await RecordCancellationAsync(
+                operation,
+                currentStage,
+                "MANAGED_OPERATION_TIMEOUT",
+                "ManagedOperationTimeout",
+                retrySafe: true);
+            await store.FailAsync(
+                operation.OperationId,
+                ManagedOperationState.Failed,
+                currentStage,
                 "MANAGED_OPERATION_TIMEOUT",
                 "The operation exceeded the Managed Service timeout and may be retried safely.",
+                retrySafe: true,
+                administrativeInterventionRequired: false,
+                CancellationToken.None);
+        }
+        catch (OperationCanceledException)
+        {
+            await RecordCancellationAsync(
+                operation,
+                currentStage,
+                "MANAGED_OPERATION_CANCELLED_UNEXPECTED",
+                "UnexpectedParentCancellation",
+                retrySafe: true);
+            await store.FailAsync(
+                operation.OperationId,
+                ManagedOperationState.Failed,
+                currentStage,
+                "MANAGED_OPERATION_CANCELLED_UNEXPECTED",
+                "An unexpected parent cancellation interrupted durable work; inspect correlated diagnostics before retrying.",
                 retrySafe: true,
                 administrativeInterventionRequired: false,
                 CancellationToken.None);
@@ -288,10 +345,10 @@ public sealed class ManagedOperationProcessor(
                 "Managed operation {OperationId} failed with {ExceptionType}.",
                 operation.OperationId,
                 exception.GetType().FullName);
-                await store.FailAsync(
-                    operation.OperationId,
-                    ManagedOperationState.Failed,
-                    currentStage,
+            await store.FailAsync(
+                operation.OperationId,
+                ManagedOperationState.Failed,
+                currentStage,
                 "MANAGED_OPERATION_FAILED",
                 "The Managed Operation failed; inspect authorized sanitized diagnostics.",
                 retrySafe: true,
@@ -301,6 +358,29 @@ public sealed class ManagedOperationProcessor(
 
         return true;
     }
+
+    private Task RecordCancellationAsync(
+        ManagedOperationStatus operation,
+        string stage,
+        string errorCode,
+        string cancellationSource,
+        bool retrySafe) =>
+        diagnostics?.RecordEventAsync(
+            new ManagedDiagnosticContext(
+                operation.CorrelationId,
+                operation.OperationKind,
+                Enum.TryParse<RulePublicationStage>(stage, out var parsed)
+                    ? parsed
+                    : RulePublicationStage.Cancelled,
+                errorCode,
+                operation.StartedAt ?? operation.CreatedAt,
+                operation.RulesetId,
+                SourceIdentity: operation.SourceIdentity,
+                Outcome: "Cancelled",
+                RetrySafe: retrySafe,
+                SafeDetail: $"CancellationSource={cancellationSource}",
+                OperationId: operation.OperationId),
+            CancellationToken.None) ?? Task.CompletedTask;
 
     private static int ProgressFor(RulePublicationStage stage) => stage switch
     {
@@ -411,7 +491,16 @@ public sealed class ManagedOperationTools(
         var operation = await operations.GetAsync(operationId, cancellationToken);
         return operation is null
             ? new(false, "MANAGED_OPERATION_NOT_FOUND", "No Managed Operation with that ID exists.", null)
-            : new(true, "MANAGED_OPERATION_STATUS", "Durable Managed Operation status is available.", operation);
+            : new(
+                true,
+                "MANAGED_OPERATION_STATUS",
+                "Durable Managed Operation status is available.",
+                operation,
+                operation.OperationKind,
+                operation.CurrentStage,
+                operation.CorrelationId,
+                RetrySafe: operation.RetrySafe,
+                AdministrativeInterventionRequired: operation.AdministrativeInterventionRequired);
     }
 
     [McpServerTool(Name = "ec_list_managed_operations", ReadOnly = true, Idempotent = true),

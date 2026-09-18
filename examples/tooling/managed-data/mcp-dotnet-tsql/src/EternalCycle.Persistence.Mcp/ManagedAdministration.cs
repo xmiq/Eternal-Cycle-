@@ -303,8 +303,8 @@ public sealed class ManagedAdministrationService(
                 true,
                 "RULE_SOURCE_CONFIGURED",
                 request.UseOfficialDefault
-                    ? "The official Eternal Cycle Git source was selected and will be acquired by the Managed service."
-                    : "The compatible custom Git source was selected and will be acquired by the Managed service.",
+                ? "The packaged default Eternal Cycle Git source was selected and will be acquired by the Managed service."
+                : "The user-selected compatible Git source was selected and will use the same technical validation and publication pipeline.",
                 ToSelection(saved));
         }
         catch (ManagedServiceException exception)
@@ -794,7 +794,37 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 RenderDomain("007_durable_managed_operations.template.sql")));
         }
 
+        if (domainCount == 0 ||
+            !domainTables.Contains("managed_operation_diagnostics") ||
+            !await DiagnosticOperationCorrelationReadyAsync(connection, cancellationToken))
+        {
+            migrations.Add(new(
+                "008_diagnostic_operation_correlation",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("008_diagnostic_operation_correlation.template.sql")));
+        }
+
         return migrations;
+    }
+
+    private async Task<bool> DiagnosticOperationCorrelationReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND tables.name = N'managed_operation_diagnostics'
+              AND columns.name = N'operation_id';
+            """, connection)
+        {
+            CommandTimeout = settings.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 1;
     }
 
     private async Task<HashSet<string>> ReadTablesAsync(
@@ -1116,7 +1146,7 @@ public sealed class ManagedSetupTools(
         administration.BootstrapAsync(request, cancellationToken);
 
     [McpServerTool(Name = "ec_configure_rule_source", Destructive = true, Idempotent = true),
-     Description("After explicit informed user approval, persists a semantic Stable/Prerelease official selection or an advanced compatible custom source. Ordinary players do not provide refs or SHAs.")]
+     Description("After explicit informed user approval, persists the packaged Stable/Prerelease default or another user-selected compatible Git source. Source location does not bypass or weaken technical validation.")]
     public Task<ManagedOperationResult<RuleSourceSelection>> ConfigureRuleSourceAsync(
         RuleSourceSelectionRequest request,
         CancellationToken cancellationToken) =>

@@ -3037,3 +3037,11 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **Validation:** Release build passed with zero warnings/errors; 109 reference tests and the 1-test genuine LocalDB pre-007 fixture passed; 47 existing FR-021 and 35 control-plane assertions passed; full repository validation passed across 284 Markdown files and 7,127 relative links; full-checkout publish and standalone build both included distribution metadata, `LICENSE`, and `NOTICE`; no vendored binary or third-party source tree was detected.
 - **External boundary:** LM Studio/Unsloth interoperability, remote Git acquisition, production SQL Server authentication, and production restart behavior remain deployment acceptance rather than repository proof.
 - **Current active task:** none after this corrective commit; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
+
+## FR-021 Corrective Maintenance - Rule Source Live Acceptance
+
+- **Scope:** Bounded maintenance to the completed FR-021 implementation; no new Future Revision, release, version change, or tag movement.
+- **Confirmed repairs:** cancellation propagation and durable-owner classification; actual Operation/Correlation diagnostic identity; operation-aware Error Dump lookup; migration 008 diagnostic correlation; safe effective configuration discovery; consistent retry metadata; missing-ref classification; minimal manifest-defined runtime payload materialization; first-class compatible local, forked, and modified Git sources; and deterministic full-review archive tooling.
+- **Artifact boundary:** `Eternal Cycle.zip` is a full useful repository review snapshot. The runtime Rule Source cache contains only the selected manifest, declared rule documents, and compatibility/provenance metadata. The two processes are independent.
+- **Unknown retained:** the source of the cancellation observed in the external client remains unknown until live host evidence identifies it. Repository documentation and diagnostics do not assign it to Git, network, cache, client, or host without evidence.
+- **Current active task:** none after validation; Phase 13 Future Revisions remains `[∞]` and no later objective is selected.

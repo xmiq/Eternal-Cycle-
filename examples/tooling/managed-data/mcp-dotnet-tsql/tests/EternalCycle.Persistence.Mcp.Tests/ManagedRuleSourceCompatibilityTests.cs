@@ -144,7 +144,7 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
-    public async Task CloneUsesAcquisitionTimeoutWhileLocalGitUsesProcessTimeout()
+    public async Task AcquisitionBudgetContainsIndividuallyBoundedGitProcesses()
     {
         var cache = Path.Combine(Path.GetTempPath(), $"ec-timeout-cache-{Guid.NewGuid():N}");
         Directory.CreateDirectory(cache);
@@ -167,9 +167,10 @@ public sealed class ManagedRuleSourceCompatibilityTests
 
             _ = await provider.GetSnapshotAsync(CancellationToken.None);
 
-            Assert.Contains(runner.Calls, call => call.Command == "clone" && call.Timeout == acquisition);
+            Assert.Contains(runner.Calls, call => call.Command == "init" && call.Timeout == local);
+            Assert.Contains(runner.Calls, call => call.Command == "fetch" && call.Timeout == local);
             Assert.Contains(runner.Calls, call => call.Command == "rev-parse" && call.Timeout == local);
-            Assert.All(runner.Calls.Where(call => call.Command == "show"), call => Assert.Equal(local, call.Timeout));
+            Assert.All(runner.Calls, call => Assert.Equal(local, call.Timeout));
         }
         finally
         {
@@ -178,7 +179,7 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
-    public async Task FetchUsesAcquisitionTimeoutForMovingDiscoveryRef()
+    public async Task FetchUsesPerProcessTimeoutWithinOverallAcquisitionBudget()
     {
         var cache = Path.Combine(Path.GetTempPath(), $"ec-fetch-cache-{Guid.NewGuid():N}");
         Directory.CreateDirectory(cache);
@@ -209,7 +210,8 @@ public sealed class ManagedRuleSourceCompatibilityTests
 
             _ = await provider.GetSnapshotAsync(CancellationToken.None);
 
-            Assert.Contains(runner.Calls, call => call.Command == "fetch" && call.Timeout == acquisition);
+            Assert.Contains(runner.Calls, call =>
+                call.Command == "fetch" && call.Timeout == TimeSpan.FromSeconds(20));
         }
         finally
         {
@@ -254,6 +256,146 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
+    public async Task OverallAcquisitionTimeoutIsDistinctFromGitProcessTimeout()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-acquisition-timeout-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/main"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new BlockingRunner(),
+                TimeSpan.FromMilliseconds(40),
+                TimeSpan.FromSeconds(30));
+
+            var error = await Assert.ThrowsAsync<RulePublicationException>(() =>
+                provider.GetSnapshotAsync(CancellationToken.None));
+
+            Assert.Equal("RULE_SOURCE_ACQUISITION_TIMEOUT", error.Code);
+            Assert.True(error.RetrySafe);
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task IndividualGitTimeoutHasItsOwnStructuredFailure()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-process-timeout-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/main"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new ProcessTimeoutRunner());
+
+            var error = await Assert.ThrowsAsync<RulePublicationException>(() =>
+                provider.GetSnapshotAsync(CancellationToken.None));
+
+            Assert.Equal("RULE_SOURCE_PROCESS_TIMEOUT", error.Code);
+            Assert.True(error.RetrySafe);
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task MissingRemoteRefFailsSpecificallyWithoutWaitingForTimeout()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-missing-ref-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        var stopwatch = Stopwatch.StartNew();
+        try
+        {
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/does-not-exist"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new MissingRefRunner(),
+                TimeSpan.FromSeconds(30),
+                TimeSpan.FromSeconds(30));
+
+            var error = await Assert.ThrowsAsync<RulePublicationException>(() =>
+                provider.GetSnapshotAsync(CancellationToken.None));
+
+            stopwatch.Stop();
+            Assert.Equal("RULE_SOURCE_REF_NOT_FOUND", error.Code);
+            Assert.False(error.RetrySafe);
+            Assert.True(stopwatch.Elapsed < TimeSpan.FromSeconds(2));
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task GitObservationsUseTrueOperationCorrelationAndSafeCommandCategories()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-git-observation-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var recorder = new RecordingDiagnosticRecorder();
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/main"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new RecordingRunner(),
+                diagnostics: recorder);
+            var execution = new RulePublicationExecutionContext("OP-TRUE", "CORR-TRUE");
+
+            _ = await provider.GetSnapshotAsync(execution, null, CancellationToken.None);
+
+            Assert.NotEmpty(recorder.Events);
+            Assert.All(recorder.Events, value =>
+            {
+                Assert.Equal("OP-TRUE", value.OperationId);
+                Assert.Equal("CORR-TRUE", value.CorrelationId);
+                Assert.Contains("CommandCategory=", value.SafeDetail);
+                Assert.Contains("TimeoutScope=GitProcess", value.SafeDetail);
+                Assert.DoesNotContain("example.invalid", value.SafeDetail, StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("refs/heads/main", value.SafeDetail, StringComparison.Ordinal);
+            });
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task UserSelectedLocalCloneWithCommittedRuleChangesUsesSameValidationPipeline()
+    {
+        var root = CreateFixture(includeManifest: true);
+        try
+        {
+            File.AppendAllText(Path.Combine(root, "docs", "rules", "kernel.md"), "\nHouse rule.\n");
+            RunGit(root, "add", ".");
+            RunGit(root, "commit", "-m", "user-selected rule change");
+
+            var snapshot = await Provider(Configuration(root))
+                .GetSnapshotAsync(CancellationToken.None);
+
+            Assert.Contains("House rule.", Assert.Single(snapshot.Documents).Content);
+            Assert.Matches("^[A-F0-9]{40}$", snapshot.SourceIdentity);
+            Assert.Equal("eternal-cycle-core", snapshot.RulesetId);
+        }
+        finally
+        {
+            DeleteTree(root);
+        }
+    }
+
+    [Fact]
     public async Task PartialCacheIsReplacedAndExactImmutableRevisionIsReusedOffline()
     {
         var root = CreateFixture(includeManifest: true);
@@ -283,8 +425,12 @@ public sealed class ManagedRuleSourceCompatibilityTests
             var second = await provider.GetSnapshotAsync(CancellationToken.None);
 
             Assert.False(File.Exists(Path.Combine(cachePath, "partial.txt")));
-            Assert.True(Directory.Exists(Path.Combine(cachePath, ".git")));
-            Assert.False(Directory.Exists(Path.Combine(cachePath, "docs")));
+            var payloadPath = Path.Combine(cachePath, "snapshots", commit.ToUpperInvariant());
+            Assert.False(Directory.Exists(Path.Combine(cachePath, ".git")));
+            Assert.True(File.Exists(Path.Combine(payloadPath, "docs", "rules", "manifest.json")));
+            Assert.True(File.Exists(Path.Combine(payloadPath, "docs", "rules", "kernel.md")));
+            Assert.True(File.Exists(Path.Combine(payloadPath, ".eternal-cycle-rule-source.json")));
+            Assert.False(Directory.Exists(Path.Combine(payloadPath, "tests")));
             Assert.Equal(first.SourceIdentity, second.SourceIdentity);
         }
         finally
@@ -336,7 +482,8 @@ public sealed class ManagedRuleSourceCompatibilityTests
         string? cache = null,
         IGitProcessRunner? runner = null,
         TimeSpan? acquisitionTimeout = null,
-        TimeSpan? processTimeout = null)
+        TimeSpan? processTimeout = null,
+        IManagedDiagnosticRecorder? diagnostics = null)
     {
         var options = Options.Create(new ManagedRuleServiceOptions
         {
@@ -353,8 +500,25 @@ public sealed class ManagedRuleSourceCompatibilityTests
         });
         return runner is null
             ? new GitRuleSourceProvider(options, new StaticConfigurationStore(configuration), administration)
-            : new GitRuleSourceProvider(options, new StaticConfigurationStore(configuration), administration, runner);
+            : new GitRuleSourceProvider(
+                options,
+                new StaticConfigurationStore(configuration),
+                administration,
+                diagnostics ?? NullManagedDiagnosticRecorder.Instance,
+                runner);
     }
+
+    private static RuleSourceConfiguration RemoteConfiguration(string requestedRef) =>
+        new(
+            "eternal-cycle-core",
+            "Git",
+            "https://example.invalid/rules.git",
+            requestedRef,
+            "docs/rules/manifest.json",
+            false,
+            1,
+            DateTimeOffset.UtcNow,
+            RuleSourceReleaseChannel.Stable);
 
     private static ManagedRulePublicationCoordinator Coordinator(
         RuleSourceSnapshot snapshot,
@@ -561,6 +725,70 @@ public sealed class ManagedRuleSourceCompatibilityTests
             }
 
             return Task.FromResult(new GitProcessResult(0, string.Empty, string.Empty));
+        }
+    }
+
+    private sealed class BlockingRunner : IGitProcessRunner
+    {
+        public async Task<GitProcessResult> RunAsync(
+            string executable,
+            string workingDirectory,
+            IReadOnlyList<string> arguments,
+            TimeSpan timeout,
+            TimeSpan terminationGracePeriod,
+            CancellationToken cancellationToken)
+        {
+            await Task.Delay(Timeout.InfiniteTimeSpan, cancellationToken);
+            throw new InvalidOperationException("Unreachable.");
+        }
+    }
+
+    private sealed class ProcessTimeoutRunner : IGitProcessRunner
+    {
+        public Task<GitProcessResult> RunAsync(
+            string executable,
+            string workingDirectory,
+            IReadOnlyList<string> arguments,
+            TimeSpan timeout,
+            TimeSpan terminationGracePeriod,
+            CancellationToken cancellationToken) =>
+            throw new GitProcessTimeoutException("fixture process timeout");
+    }
+
+    private sealed class MissingRefRunner : IGitProcessRunner
+    {
+        public Task<GitProcessResult> RunAsync(
+            string executable,
+            string workingDirectory,
+            IReadOnlyList<string> arguments,
+            TimeSpan timeout,
+            TimeSpan terminationGracePeriod,
+            CancellationToken cancellationToken) =>
+            Task.FromResult(arguments[0] == "fetch"
+                ? new GitProcessResult(128, string.Empty, "fatal: couldn't find remote ref refs/heads/does-not-exist")
+                : new GitProcessResult(0, string.Empty, string.Empty));
+    }
+
+    private sealed class RecordingDiagnosticRecorder : IManagedDiagnosticRecorder
+    {
+        public List<ManagedDiagnosticContext> Events { get; } = [];
+
+        public Task<ManagedDiagnosticReceipt> RecordFailureAsync(
+            ManagedDiagnosticContext context,
+            Exception exception,
+            CancellationToken cancellationToken) =>
+            RecordEventAsync(context, cancellationToken);
+
+        public Task<ManagedDiagnosticReceipt> RecordEventAsync(
+            ManagedDiagnosticContext context,
+            CancellationToken cancellationToken)
+        {
+            Events.Add(context);
+            return Task.FromResult(new ManagedDiagnosticReceipt(
+                context.CorrelationId,
+                "Captured",
+                true,
+                false));
         }
     }
 

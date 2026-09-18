@@ -96,6 +96,22 @@ public sealed class SqlServerManagedOperationStore(
         return await ReadAsync(command, cancellationToken);
     }
 
+    public async Task<ManagedOperationStatus?> GetByCorrelationAsync(
+        string correlationId,
+        CancellationToken cancellationToken)
+    {
+        await using var connection = await OpenAsync(cancellationToken);
+        await using var command = Command(connection, null, """
+            SELECT TOP (1) {{columns}}
+            FROM {{schema}}.managed_operations
+            WHERE correlation_id = @correlation_id
+            ORDER BY updated_at DESC, operation_id DESC;
+            """);
+        command.CommandText = BindColumns(command.CommandText);
+        command.Parameters.AddWithValue("@correlation_id", correlationId);
+        return await ReadAsync(command, cancellationToken);
+    }
+
     public async Task<IReadOnlyList<ManagedOperationStatus>> ListRecentAsync(
         string? operationKind,
         int maximumCount,

@@ -94,7 +94,7 @@ Assert-Requirement 29 ($publicationTests -match 'UnchangedSourceDoesNotRepublish
 Assert-Requirement 30 ($publicationTests -match 'ChangedSourceCreatesNewCandidateAndAtomicActivation') 'Changed sources create candidates.'
 Assert-Requirement 31 ($publicationTests -match 'SourceFailureAndOfflineOperationPreserveActiveRelease') 'Source acquisition failure preserves active release.'
 Assert-Requirement 32 ($publication -match 'RuleUpdatePolicy.Disabled' -and $rulePublication -match 'disabled/offline operation') 'Offline operation can serve a valid publication.'
-Assert-Requirement 33 ($sourceProvider -match 'rev-parse' -and $sourceProvider -match 'CommitSha' -and $sourceProvider -match 'immutable commit SHA') 'Git source identity resolves to a commit SHA.'
+Assert-Requirement 33 ($sourceProvider -match 'rev-parse' -and $sourceProvider -match 'CommitSha' -and $sourceProvider -match 'sourceIdentity') 'Git source identity resolves to an immutable commit SHA.'
 
 # 8K retrieval (34-38)
 Assert-Requirement 34 ($routingTests -match 'A_DefaultSchemaUsesEc' -and $routingTests -match 'H_DefaultSchemaIsNotMandatory') 'FR-018 scenarios A-H remain present.'

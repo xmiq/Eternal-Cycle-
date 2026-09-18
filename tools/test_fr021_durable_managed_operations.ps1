@@ -40,6 +40,12 @@ $manifest = Read-RepoFile 'docs/rules/rule-source-manifest.json'
 $tests = Read-RepoFile "$testsRoot/ManagedOperationsAndProgressiveReadinessTests.cs"
 $firstRunTests = Read-RepoFile "$testsRoot/ManagedFirstRunTests.cs"
 $compatibilityTests = Read-RepoFile "$testsRoot/ManagedRuleSourceCompatibilityTests.cs"
+$controlPlaneTests = Read-RepoFile "$testsRoot/ManagedControlPlaneRepairTests.cs"
+$errorDump = Read-RepoFile "$source/ErrorDump.cs"
+$managedDiagnostics = Read-RepoFile "$source/ManagedDiagnostics.cs"
+$managedConfiguration = Read-RepoFile "$source/ManagedConfiguration.cs"
+$migration008 = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.sql"
+$migration008Template = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.template.sql"
 $managedContract = Read-RepoFile 'docs/persistence/MANAGED_OPERATIONS.md'
 $publicationContract = Read-RepoFile 'docs/rules/MANAGED_RULE_PUBLICATION.md'
 $retrievalContract = Read-RepoFile 'docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md'
@@ -48,6 +54,9 @@ $method = Read-RepoFile 'design/DEVELOPMENT_METHOD.md'
 $acceptance = Read-RepoFile "$reference/MCP_ONLY_ACCEPTANCE_TEST.md"
 $roadmap = Read-RepoFile 'design/ROADMAP.md'
 $future = Read-RepoFile 'design/FUTURE_REVISIONS.md'
+$decisions = Read-RepoFile 'design/DECISIONS.md'
+$distributionBuilder = Read-RepoFile 'tools/build_distribution.ps1'
+$distributionValidator = Read-RepoFile 'tools/test_distribution_archive.ps1'
 $version = (Read-RepoFile 'VERSION').Trim()
 
 Assert-Requirement 1 ($operations -match 'enum ManagedOperationState' -and $operations -match 'Queued' -and $operations -match 'Interrupted') 'Durable operations expose the required explicit states.'
@@ -102,6 +111,21 @@ Assert-Requirement 44 ($future -match '### FR-021' -and $future -match 'Status:\
 Assert-Requirement 45 ($manifest -match 'preparationTier') 'Rule Source manifest carries portable preparation metadata.'
 Assert-Requirement 46 ($publicationContract -match 'GameplayReady' -and $publicationContract -match 'FullRulesetReady') 'Canonical publication guidance distinguishes progressive readiness levels.'
 Assert-Requirement 47 ($operations -match 'recoveryComplete = false' -and $tests -match 'HostedWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes') 'Fresh-database worker startup waits for durable setup and reruns recovery.'
+Assert-Requirement 48 ($publication -match 'catch \(OperationCanceledException\)' -and $publication -match 'throw;') 'Publication propagates cancellation to its durable owner.'
+Assert-Requirement 49 ($operations -match 'MANAGED_OPERATION_INTERRUPTED' -and $operations -match 'MANAGED_OPERATION_TIMEOUT' -and $operations -match 'MANAGED_OPERATION_CANCELLED_UNEXPECTED') 'The durable owner distinguishes host shutdown, its timeout, and unexplained parent cancellation.'
+Assert-Requirement 50 ($gitProvider -match 'RULE_SOURCE_ACQUISITION_TIMEOUT' -and $gitProvider -match 'RULE_SOURCE_PROCESS_TIMEOUT') 'Overall acquisition and individual Git-process timeouts are distinct.'
+Assert-Requirement 51 ($gitProvider -match 'execution\.OperationId' -and $gitProvider -match 'execution\.CorrelationId' -and $gitProvider -notmatch 'OP-\{Guid') 'Git observations use supplied durable identity rather than invented operation correlation.'
+Assert-Requirement 52 ($migration008 -match 'ADD operation_id nvarchar\(128\) NULL' -and $migration008 -match 'WHERE operation_id IS NOT NULL' -and $migration008Template -match '\{\{schema\}\}') 'Migration 008 additively persists operation correlation for fixed and routed schemas.'
+Assert-Requirement 53 ($project -match '008_diagnostic_operation_correlation.sql' -and $project -match '008_diagnostic_operation_correlation.template.sql') 'Migration 008 and its template are packaged.'
+Assert-Requirement 54 ($managedDiagnostics -match 'string\? OperationId' -and $errorDump -match 'GetByCorrelationAsync' -and $controlPlaneTests -match 'ErrorDumpFindsTrueDurableEvidenceByOperationCorrelationOrBoth') 'Diagnostics and Error Dumps support durable Operation ID and Correlation ID lookup.'
+Assert-Requirement 55 ($managedConfiguration -match 'EffectiveValue' -and $controlPlaneTests -match 'ConfigurationDiscoveryRequiresNoDatabaseAndNeverReturnsSensitiveValues') 'Configuration discovery exposes safe effective values while retaining the sensitive-value boundary.'
+Assert-Requirement 56 ($gitProvider -match 'RULE_SOURCE_REF_NOT_FOUND' -and $compatibilityTests -match 'MissingRemoteRefFailsSpecificallyWithoutWaitingForTimeout') 'Missing refs fail quickly with a specific non-retryable error.'
+Assert-Requirement 57 ($gitProvider -match 'PayloadMetadataFile' -and $gitProvider -match 'manifest\.Sources' -and $compatibilityTests -match 'Assert\.False\(Directory\.Exists\(Path\.Combine\(payloadPath, "tests"\)\)\)') 'Persistent runtime materialization contains only manifest-declared files and provenance.'
+Assert-Requirement 58 ($compatibilityTests -match 'UserSelectedLocalCloneWithCommittedRuleChangesUsesSameValidationPipeline') 'A user-selected modified local clone is a first-class source using normal validation.'
+Assert-Requirement 59 ($publicationContract -match 'semantic identity' -and $publicationContract -match 'Existing local clones are inspected in place') 'Managed Rule Publication documents technical validation without official semantic conformity.'
+Assert-Requirement 60 ($decisions -match 'Rule Source Choice Is User-Owned' -and $decisions -match 'Review Distributions and Runtime Rule Payloads Are Independent') 'Governance preserves source freedom and separates review archives from runtime payloads.'
+Assert-Requirement 61 ($distributionBuilder -match "'bin'" -and $distributionBuilder -match "'obj'" -and $distributionValidator -match 'mcp-dotnet-tsql/src' -and $distributionValidator -match 'Forbidden generated or local path') 'Distribution tooling retains review source while excluding generated bin/obj/cache paths.'
+Assert-Requirement 62 ($tests -match 'HostShutdownLeavesDurableOperationInterruptedAndRecoverable' -and $tests -match 'UnexpectedParentCancellationIsNotMisreportedAsShutdownOrTimeout') 'Cancellation ownership and retry behavior have direct regression coverage.'
 
 if ($failures.Count -gt 0) {
     Write-Output "FR-021 durable Managed-operation harness: FAIL ($($failures.Count) failure(s))"

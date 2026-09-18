@@ -5369,3 +5369,15 @@ Distribution metadata identifies the build's provenance and support-destination 
 ## D-1342 — Eternal Cycle Uses Apache License 2.0
 
 The Eternal Cycle repository's original material is distributed under Apache License 2.0 with the repository `NOTICE` preserving original authorship and derivative-distribution boundaries. Packaged reference tooling carries `LICENSE`, `NOTICE`, and distribution metadata. Third-party dependencies and non-owned material retain their own licenses and are not relicensed by this decision.
+
+## D-1343 — Rule Source Choice Is User-Owned and Technically Validated
+
+The packaged Eternal Cycle Rule Source is a convenient default, not a policy restriction. A user may select a compatible local clone, fork, modified source, or future approved provider. Every source follows the same manifest, compatibility, immutable-provenance, compilation, validation, and publication pipeline; technical compatibility does not require semantic equality with the packaged default.
+
+## D-1344 — Review Distributions and Runtime Rule Payloads Are Independent
+
+A Distribution Archive is a full useful repository snapshot for external review and audit, including tracked reference-tooling source, tests, design records, and reusable documentation while excluding generated build, cache, credential, and temporary artifacts. A Runtime Rule Source Payload contains only the manifest-declared authoritative rule documents plus required compatibility and immutable-provenance metadata. Neither artifact is optimized or interpreted as the other. This supersedes D-1328's allowance for retaining a no-checkout Git cache in the current reference provider; D-1328's separate acquisition/process bounds and immutable-revision reuse remain accepted.
+
+## D-1345 — Cancellation Classification Belongs to the Durable Operation Boundary
+
+Lower Rule Source and publication layers propagate cancellation rather than converting it into ordinary results. The durable Managed Operation owner classifies observed host shutdown, its own timeout, acquisition timeout, Git-process timeout, or an otherwise unexplained parent cancellation, and never invents an unobserved cause. Diagnostics carry the actual Operation ID and Correlation ID so status, error lookup, and Error Dump retrieval identify the same durable work.

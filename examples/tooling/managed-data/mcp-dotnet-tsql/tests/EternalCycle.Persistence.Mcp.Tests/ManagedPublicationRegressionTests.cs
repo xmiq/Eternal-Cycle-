@@ -145,8 +145,13 @@ public sealed class ManagedPublicationRegressionTests
                 .CheckForUpdateAsync(CancellationToken.None);
 
             var managedRepository = Assert.Single(Directory.GetDirectories(cacheRoot));
-            Assert.True(Directory.Exists(Path.Combine(managedRepository, ".git")));
-            Assert.False(Directory.Exists(Path.Combine(managedRepository, "docs")));
+            var payload = Assert.Single(Directory.GetDirectories(
+                Path.Combine(managedRepository, "snapshots")));
+            Assert.False(Directory.Exists(Path.Combine(managedRepository, ".git")));
+            Assert.True(File.Exists(Path.Combine(payload, "docs", "rules", "manifest.json")));
+            Assert.True(File.Exists(Path.Combine(payload, ".eternal-cycle-rule-source.json")));
+            Assert.False(Directory.Exists(Path.Combine(payload, "examples")));
+            Assert.False(Directory.Exists(Path.Combine(payload, "design")));
             Assert.Equal(8, snapshot.Documents.Count);
             Assert.Contains(RulePublicationStage.ReadManifest, stages);
             Assert.Contains(RulePublicationStage.ReadRuleDocuments, stages);
@@ -238,18 +243,16 @@ public sealed class ManagedPublicationRegressionTests
     }
 
     [Fact]
-    public async Task ClientCancellationIsStructuredAndDoesNotDiscardDiagnostics()
+    public async Task ClientCancellationPropagatesToTheDurableOperationOwner()
     {
         var recorder = new CapturingRecorder();
         using var cancellation = new CancellationTokenSource(TimeSpan.FromMilliseconds(50));
 
-        var result = await Coordinator(new CancellingSource(), new MemoryRuleStore(), recorder: recorder)
-            .CheckForUpdateAsync(cancellation.Token);
+        await Assert.ThrowsAnyAsync<OperationCanceledException>(() =>
+            Coordinator(new CancellingSource(), new MemoryRuleStore(), recorder: recorder)
+                .CheckForUpdateAsync(cancellation.Token));
 
-        Assert.Equal("Cancelled", result.Status);
-        Assert.Equal("RULE_PUBLICATION_CANCELLED", result.ErrorCode);
-        Assert.Equal(nameof(RulePublicationStage.Cancelled), result.Stage);
-        Assert.NotNull(recorder.Exception);
+        Assert.Null(recorder.Exception);
     }
 
     [Fact]
@@ -368,11 +371,11 @@ public sealed class ManagedPublicationRegressionTests
     {
         var store = new MemoryRuleStore { CancelAfterStage = true };
         var source = new StaticSource(HealthySnapshot());
-        var first = await Coordinator(source, store).CheckForUpdateAsync(CancellationToken.None);
+        await Assert.ThrowsAnyAsync<OperationCanceledException>(() =>
+            Coordinator(source, store).CheckForUpdateAsync(CancellationToken.None));
         store.CancelAfterStage = false;
         var second = await Coordinator(source, store).CheckForUpdateAsync(CancellationToken.None);
 
-        Assert.Equal("RULE_PUBLICATION_CANCELLED", first.ErrorCode);
         Assert.Equal("Activated", second.Status);
         Assert.Equal(1, store.StageCalls);
         Assert.Single(store.Releases);

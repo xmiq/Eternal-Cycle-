@@ -57,7 +57,7 @@ A safe operation view includes:
 - safe Ruleset or source identity;
 - result identity after completion.
 
-The service must support status lookup by Operation ID and bounded discovery of recent relevant operations. Losing the immediate response does not make recovery impossible.
+The service must support status lookup by Operation ID and bounded discovery of recent relevant operations. Diagnostics may correlate by Operation ID, correlation ID, or both without requiring a Campaign ID. Losing the immediate response does not make recovery impossible. Retry safety and intervention claims must agree between an outer response envelope and its inner operation record.
 
 Before the durable operation schema exists, operation initiation, status, and listing remain semantically callable but do not query absent operation tables. They return a structured `MIGRATION_REQUIRED` outcome, configuration state where relevant, and the bounded setup recovery capability. Successful schema migration then enables normal durable operation behavior without changing the client's conceptual workflow.
 
@@ -70,6 +70,10 @@ Domain execution remains idempotent. Rule publication reuses durable `Candidate 
 ## Timeouts
 
 Interactive request deadlines do not define server execution policy. The service retains bounded operation, network-acquisition, local-process, compilation, datastore, and cleanup limits. A long legitimate operation may therefore outlive the request that initiated it while remaining finite and cancellable by service policy.
+
+Cancellation classification belongs to the durable operation owner. Lower publication and provider layers propagate cancellation instead of converting it into an ordinary result. The owner distinguishes host shutdown, its own Managed Operation timeout, provider acquisition timeout, provider subprocess timeout, explicit administrative cancellation when such a capability exists, and an unexpected parent cancellation. Implementations must not claim an explicit administrative-cancel path exists until they expose and authorize one.
+
+Host shutdown leaves work `Interrupted` and recoverable. A Managed Operation timeout and an unexpected parent cancellation leave safe causal evidence with the operation's true Operation ID and correlation ID. Unknown parent-token origins remain unknown until evidence identifies them.
 
 ## Authorization
 

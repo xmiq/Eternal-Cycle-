@@ -18,7 +18,7 @@ It is not the Eternal Cycle persistence architecture itself. A compliant Managed
 1. Ask a compatible AI client to connect to the installed Eternal Cycle Managed service.
 2. Say: **“Start a new Eternal Cycle game.”**
 3. If the service reports setup is required, review its plain-language EC-owned setup summary and approve only if it matches the intended database.
-4. Accept the official Eternal Cycle Git source when offered, or ask the administrator to select another compatible source.
+4. Select the packaged default Rule Source or another compatible source you choose.
 5. After the service reports `READY`, continue character and campaign bootstrap normally.
 
 To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign is selected automatically; several are presented by meaningful name. Internal Campaign IDs remain backstage.
@@ -29,8 +29,8 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 2. Set `EternalCycle:Persistence:ConnectionString` in protected host configuration.
 3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true`. Natural informed user approval is the normal path; optionally enable a private operator confirmation as an additional deployment safeguard.
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
-5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `007` to configured EC-owned scopes.
-6. Select the official source from packaged [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or provide a compatible custom Git source. The selection persists in `ec_domain`.
+5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `008` to configured EC-owned scopes.
+6. Select the packaged default from [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or another compatible Git source, including an existing local clone. The selection persists in `ec_domain`; source location does not change the technical validation pipeline.
 7. Approve initial publication. The call returns a durable Operation ID promptly; the hosted worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules.
 8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
 
@@ -88,7 +88,7 @@ Administrative tools are separately configuration-gated and require explicit inf
 | Tool | Purpose |
 | --- | --- |
 | `ec_initialize_service` | Apply and validate only packaged EC-owned migrations. |
-| `ec_configure_rule_source` | Persist an explicit Stable or Prerelease official channel, or a compatible custom Git source/ref. |
+| `ec_configure_rule_source` | Persist the packaged Stable/Prerelease default or another user-selected compatible Git source/ref. |
 | `ec_publish_initial_rules` | Create or reuse a durable initial-publication operation and return promptly. |
 | `ec_create_campaign` | Create one stable campaign identity in the trusted default namespace. |
 
@@ -201,9 +201,11 @@ The packaged `distribution-metadata.json` identifies the official repository, hi
 
 Eternal Cycle full-release tags are immutable. The configured `v1.1.0-rc` tag is a deliberately moving discovery pointer and is not created or moved by this implementation task. For an official Prerelease snapshot, the service records Base Release, Discovery Tag, commits since base, derived display version such as `1.1.0-rc.47`, and the exact source commit. The commit SHA is identity; the display version is metadata and may collide across rewritten histories.
 
-The reference project resolves distribution metadata from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition; `RepositoryRoot` remains an advanced/offline override. The provider resolves the discovery ref once, records the exact commit SHA as immutable publication provenance, and reads the manifest and declared documents at that commit. Moving the discovery ref later does not rewrite an existing Rule Release.
+The reference project resolves distribution metadata from the repository root when built in a full checkout and from its shipped project-local `DISTRIBUTION.json` when extracted as a standalone tool; it does not depend on the caller's working directory or a machine-specific path. A persisted source selection takes precedence for managed acquisition. An existing local clone is a first-class source and is not treated as a validation bypass. The provider resolves the discovery ref once, records the exact commit SHA as immutable publication provenance, and materializes only the manifest, declared rule documents, and compact provenance metadata into its runtime cache. Moving the discovery ref later does not rewrite an existing Rule Release.
 
-The manifest declares its format, compiler contract, RuleSet, repository version, and required sources. Missing or unsupported manifest contracts fail as non-retryable `RULE_SOURCE_INCOMPATIBLE`, rather than as transient network failures. Remote clone and fetch use the longer `AcquisitionTimeout`; local `rev-parse`, `show`, and object inspection use `ProcessTimeout`. Cancellation attempts to terminate the process tree and bounds cleanup and redirected-reader waits by `TerminationGracePeriod`. Valid no-checkout caches and locally available immutable revisions are reused when update policy permits, while incomplete clone directories are discarded before retry. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
+The manifest declares its format, compiler contract, RuleSet, repository version, and required sources. Missing or unsupported manifest contracts fail as non-retryable `RULE_SOURCE_INCOMPATIBLE`, rather than as transient network failures. `AcquisitionTimeout` bounds the complete acquisition while `ProcessTimeout` bounds each Git subprocess. Cancellation attempts to terminate the process tree and bounds cleanup and redirected-reader waits by `TerminationGracePeriod`. Exact immutable payloads can be reused offline; partial payloads and temporary acquisition state are discarded before retry. Safe diagnostics identify command category and timeout scope without exposing raw command lines or source credentials. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
+
+Runtime Rule Source acquisition and repository distribution packaging are independent. The service cache is a minimal manifest-defined rules payload comparable to the rules content itself; it does not retain the reference MCP source, tests, audits, or development tooling. `tools/build_distribution.ps1` instead creates the full useful review/audit repository ZIP and intentionally includes authored reference tooling while excluding generated `bin/`, `obj/`, caches, temporary output, credentials, and campaign data.
 
 General sanitized host logging is disabled unless `SanitizedLogFile` is set. It records timestamp, level, category, event, message, and exception type, but omits exception text. This is separate from the Managed-operation diagnostic fallback, which is available when SQL diagnostic persistence fails. Both paths exclude credentials, connection strings, Campaign Canon, and GM Secrets.
 
@@ -224,20 +226,21 @@ Candidate campaign records remain inactive until the complete Affected Set valid
 
 ## Validation Boundary
 
-The repository tests use fakes, the official manifest, local Git fixtures, and an opt-in genuine LocalDB pre-007 fixture for no-checkout acquisition, durable worker recovery, publication, bounded write planning, progressive readiness, dynamic priority, configuration discovery, pre-migration repair, fail-safe errors, Error Dumps, fallback, activation, filtering, diagnostics, authorization, campaign selection, cancellation, and routing. They do not prove remote GitHub acquisition, external SQL Server authentication, backup/recovery, sustained process restart across a production deployment, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
+The repository tests use fakes, the official manifest, local Git fixtures, and an opt-in genuine LocalDB pre-007 fixture for minimal source materialization, durable worker recovery, publication, bounded write planning, progressive readiness, dynamic priority, configuration discovery, pre-migration repair, fail-safe errors, Error Dumps, fallback, activation, filtering, diagnostics, authorization, campaign selection, cancellation, and routing. They do not prove remote GitHub acquisition, external SQL Server authentication, backup/recovery, sustained process restart across a production deployment, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
 
 ## Troubleshooting
 
 - `RULE_SCHEMA_MISSING`: preview and approve EC-owned initialization.
 - `MIGRATION_REQUIRED`: use readiness and `ec_get_setup_plan`, obtain informed approval, then run supported bootstrap; operation tools remain callable but do not query missing tables. Partial unknown schemas require administrator review.
-- `RULE_SOURCE_NOT_CONFIGURED`: select the official source or a compatible override.
+- `RULE_SOURCE_NOT_CONFIGURED`: select the packaged default or another compatible source you choose.
 - `NO_PUBLISHED_RULE_RELEASE`: approve initial publication.
 - `NO_ACTIVE_RULE_RELEASE`: follow the configured activation policy.
 - `RULE_SOURCE_UNAVAILABLE`: repair source access; an existing active release remains usable in `DEGRADED` mode.
 - `RULE_SOURCE_INCOMPATIBLE`: the selected immutable source lacks or violates the supported Managed manifest/compiler contract. Repeating the same immutable source cannot repair it; select a compatible released source or explicitly opt into the configured Prerelease source for authorized testing.
 - `RULE_SOURCE_ACQUISITION_FAILED`: inspect network, Git executable, cache permissions, and the correlated authorized diagnostic.
-- `RULE_SOURCE_OPERATION_TIMEOUT`: distinguish remote acquisition from local Git work using the reported stage and latest relevant causal diagnostic; tune the corresponding bounded timeout only after checking network or process health.
-- `RULE_SOURCE_REF_RESOLUTION_FAILED`: verify the configured ref exists in the selected source.
+- `RULE_SOURCE_ACQUISITION_TIMEOUT`: the complete acquisition exceeded its overall bound; inspect correlated command observations before changing policy.
+- `RULE_SOURCE_PROCESS_TIMEOUT`: one Git subprocess exceeded its individual bound; inspect its safe command category and stage.
+- `RULE_SOURCE_REF_NOT_FOUND`: verify that the requested ref exists in the selected source.
 - `RULE_SOURCE_READ_FAILED`: verify the manifest and every declared source path at the resolved commit.
 - `RULE_COMPILATION_FAILED` or `RULE_VALIDATION_FAILED`: inspect the immutable source revision and correlated diagnostic; blind retry is not expected to repair invalid content.
 - `RULE_STORE_STAGE_FAILED`, `RULE_PUBLICATION_FAILED`, or `RULE_ACTIVATION_FAILED`: inspect SQL availability and the correlated diagnostic; retry resumes durable publication state rather than duplicating it.

@@ -27,7 +27,7 @@ Stable is the normal default and must not silently use unreleased content. Until
 8. Verify no source reports `RULE_SOURCE_REQUIRED`.
 9. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
 10. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
-11. Repeat with an isolated custom compatible source to prove override behavior.
+11. Repeat with an existing local clone and an isolated modified compatible source. Verify both use the same technical validation/publication pipeline and are not described as unsafe merely because they are not the packaged default.
 12. Initiate publication and verify the call returns promptly with a durable Operation ID, without requiring the client request to remain open for acquisition, compilation, validation, publication, or activation.
 13. Poll or rediscover the operation independently. Verify the Runtime Rule Kernel and Campaign Bootstrap closure become ready, `GameplayReady` becomes true while `FullRulesetReady` may remain false, and remaining rules continue preparation under service-owned timeout policy.
 14. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
@@ -40,16 +40,16 @@ Stable is the normal default and must not silently use unreleased content. Until
 
 ## Genuine Pre-007 Upgrade Regression
 
-Use a database initialized through migrations `001` to `006` with one preserved campaign, then connect the current service without manually applying migration `007`.
+Use a database initialized through migrations `001` to `006` with one preserved campaign, then connect the current service without manually applying migrations `007` or `008`.
 
 1. Call `ec_get_configuration_requirements`; verify configuration is discoverable without schema access.
 2. Call `ec_get_readiness`; expect `MIGRATION_REQUIRED` and a supported recovery capability, not a missing-table exception.
-3. Call `ec_get_setup_plan`; verify only unapplied migration `007` is planned.
+3. Call `ec_get_setup_plan`; verify only unapplied migrations `007` and `008` are planned.
 4. Call `ec_get_diagnostics`; verify its scope is explicitly pre-migration and it does not query operation tables.
 5. Call `ec_get_error_dump`; verify a bounded partial dump is returned even though post-007 evidence is unavailable.
 6. Call `ec_get_operation_status` and `ec_list_managed_operations`; verify structured `MIGRATION_REQUIRED` responses and no operation-table query failure.
 7. Attempt initialization without approval; verify no mutation.
-8. Give natural informed approval and call `ec_initialize_service`; verify migration `007` applies and validates without requiring a literal magic phrase or raw SQL.
+8. Give natural informed approval and call `ec_initialize_service`; verify migrations `007` and `008` apply and validate without requiring a literal magic phrase or raw SQL.
 9. Verify the pre-existing campaign remains intact.
 10. Call readiness; expect `RULE_SOURCE_REQUIRED` rather than migration failure.
 11. Configure a compatible source, approve publication, and call `ec_publish_initial_rules`; verify a durable queued Operation ID is returned.

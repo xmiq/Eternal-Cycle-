@@ -38,7 +38,7 @@ The service may report:
 | `READY` | Persistence and the minimum authoritative closure required for the requested play are ready. | Start or resume play; remaining rules may continue preparation. |
 | `SETUP_REQUIRED` | EC-owned persistence or rule structures are missing. | Explain the bounded setup plan and request approval. |
 | `MIGRATION_REQUIRED` | Existing EC-owned structures require a supported upgrade or administrator review. | Stop state-changing play and migrate. |
-| `RULE_SOURCE_REQUIRED` | No Rule Source has been selected. | Offer the official source and compatible custom alternatives. |
+| `RULE_SOURCE_REQUIRED` | No Rule Source has been selected. | Offer the packaged default and compatible user-selected alternatives. |
 | `RULE_PUBLICATION_REQUIRED` | A source exists but no validated release is published. | Request approval, create or reuse a durable publication operation, and return its ID promptly. |
 | `RULE_ACTIVATION_REQUIRED` | A release is published but not active. | Follow the configured activation policy. |
 | `RULE_PREPARATION_PENDING` | An active release exists but the minimum or requested authoritative closure is still being prepared. | Query operation or context status; never guess the missing rule. |

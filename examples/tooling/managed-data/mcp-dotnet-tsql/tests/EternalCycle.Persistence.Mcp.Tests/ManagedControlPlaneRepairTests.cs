@@ -36,11 +36,17 @@ public sealed class ManagedControlPlaneRepairTests
         Assert.True(connection.Sensitive);
         Assert.True(connection.Configured);
         Assert.Null(connection.DefaultValue);
+        Assert.Null(connection.EffectiveValue);
         Assert.DoesNotContain("do-not-return", JsonSerializer.Serialize(report), StringComparison.Ordinal);
         Assert.Equal(["Stable", "Prerelease"], channel.AllowedValues);
+        Assert.Equal("Prerelease", channel.EffectiveValue);
         Assert.True(channel.RestartRequired);
         Assert.Equal("Development", verbose.Audience);
+        Assert.Equal("true", verbose.EffectiveValue);
+        Assert.Equal("00:05:00", Assert.Single(report.Settings, value =>
+            value.Key == "EternalCycle:Rules:GitSource:AcquisitionTimeout").EffectiveValue);
         Assert.False(fallback.Required);
+        Assert.Null(fallback.EffectiveValue);
         Assert.Equal(ManagedConfigurationValidationStatus.Defaulted, fallback.ValidationStatus);
     }
 
@@ -280,6 +286,74 @@ public sealed class ManagedControlPlaneRepairTests
     }
 
     [Fact]
+    public async Task ErrorDumpFindsTrueDurableEvidenceByOperationCorrelationOrBoth()
+    {
+        var operations = new MemoryManagedOperationStore();
+        var operation = await operations.EnqueueOrReuseAsync(
+            new ManagedOperationEnqueueRequest(
+                ManagedOperationKinds.InitialRulePublication,
+                "fixture",
+                "eternal-cycle-core",
+                "Fixture operation."),
+            CancellationToken.None);
+        var diagnostic = new ManagedOperationDiagnostic(
+            "DIAG-TRUE",
+            operation.CorrelationId,
+            DateTimeOffset.UtcNow,
+            "PublishInitialRules",
+            RulePublicationStage.AcquireSource.ToString(),
+            "RULE_SOURCE_PROCESS_TIMEOUT",
+            "TimeoutException",
+            "A Git process timed out.",
+            null,
+            null,
+            "1.0.0",
+            "fixture",
+            "eternal-cycle-core",
+            null,
+            null,
+            null,
+            42,
+            "Timeout",
+            true,
+            false,
+            OperationId: operation.OperationId);
+        var reader = new SelectorDiagnosticReader(diagnostic);
+        var dumps = new ErrorDumpService(
+            new BoundedRecentManagedErrorStore(),
+            ConfigurationService([]),
+            new SanitizedDiagnosticFallbackState(
+                SanitizedDiagnosticFallbackStatus.ExplicitlyDisabled,
+                null,
+                "disabled for fixture"),
+            databaseDiagnostics: reader,
+            operations: operations);
+
+        var byOperation = await dumps.GetAsync(
+            new ErrorDumpRequest(OperationId: operation.OperationId),
+            CancellationToken.None);
+        var byCorrelation = await dumps.GetAsync(
+            new ErrorDumpRequest(CorrelationId: operation.CorrelationId),
+            CancellationToken.None);
+        var byBoth = await dumps.GetAsync(
+            new ErrorDumpRequest(operation.CorrelationId, operation.OperationId),
+            CancellationToken.None);
+
+        Assert.Equal(operation.OperationId, byOperation.ManagedOperation?.OperationId);
+        Assert.Equal(operation.OperationId, byCorrelation.ManagedOperation?.OperationId);
+        Assert.Equal(operation.OperationId, byBoth.ManagedOperation?.OperationId);
+        Assert.All([byOperation, byCorrelation, byBoth], dump =>
+            Assert.Contains(dump.Diagnostics, value =>
+                value.OperationId == operation.OperationId &&
+                value.CorrelationId == operation.CorrelationId));
+        Assert.Contains(reader.Queries, value =>
+            value.CorrelationId == operation.CorrelationId && value.OperationId is null);
+        Assert.Contains(reader.Queries, value =>
+            value.CorrelationId == operation.CorrelationId &&
+            value.OperationId == operation.OperationId);
+    }
+
+    [Fact]
     public void DistributionSupportIsIndependentFromOriginalAuthorAttribution()
     {
         var root = Path.Combine(Path.GetTempPath(), $"ec-derivative-{Guid.NewGuid():N}");
@@ -414,9 +488,29 @@ public sealed class ManagedControlPlaneRepairTests
     {
         public Task<IReadOnlyList<ManagedOperationDiagnostic>> ReadAsync(
             string? correlationId,
+            string? operationId,
             int maximumCount,
             CancellationToken cancellationToken) =>
             throw new IOException("fault-injected evidence failure");
+    }
+
+    private sealed class SelectorDiagnosticReader(ManagedOperationDiagnostic diagnostic)
+        : IManagedDiagnosticEvidenceReader
+    {
+        public List<(string? CorrelationId, string? OperationId)> Queries { get; } = [];
+
+        public Task<IReadOnlyList<ManagedOperationDiagnostic>> ReadAsync(
+            string? correlationId,
+            string? operationId,
+            int maximumCount,
+            CancellationToken cancellationToken)
+        {
+            Queries.Add((correlationId, operationId));
+            var matches = string.Equals(diagnostic.CorrelationId, correlationId, StringComparison.Ordinal) ||
+                string.Equals(diagnostic.OperationId, operationId, StringComparison.Ordinal);
+            return Task.FromResult<IReadOnlyList<ManagedOperationDiagnostic>>(
+                matches ? [diagnostic] : []);
+        }
     }
 
     private sealed class ThrowingDumpService : IErrorDumpService

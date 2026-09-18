@@ -129,7 +129,8 @@ public sealed record ManagedDiagnosticContext(
     bool? AdministrativeInterventionRequired = null,
     RuleSourceReleaseChannel? ReleaseChannel = null,
     string? DiscoveryRef = null,
-    string? SafeDetail = null);
+    string? SafeDetail = null,
+    string? OperationId = null);
 
 public sealed record ManagedOperationDiagnostic(
     string DiagnosticId,
@@ -154,7 +155,8 @@ public sealed record ManagedOperationDiagnostic(
     bool? AdministrativeInterventionRequired = null,
     string? ReleaseChannel = null,
     string? DiscoveryRef = null,
-    string? SafeDetail = null);
+    string? SafeDetail = null,
+    string? OperationId = null);
 
 public sealed record ManagedDiagnosticReceipt(
     string CorrelationId,
@@ -178,6 +180,15 @@ public interface IManagedDiagnosticRecorder
         ManagedDiagnosticContext context,
         Exception exception,
         CancellationToken cancellationToken);
+
+    Task<ManagedDiagnosticReceipt> RecordEventAsync(
+        ManagedDiagnosticContext context,
+        CancellationToken cancellationToken) =>
+        Task.FromResult(new ManagedDiagnosticReceipt(
+            context.CorrelationId,
+            "Unavailable",
+            false,
+            false));
 }
 
 public sealed class ManagedDiagnosticRecorder(
@@ -193,11 +204,27 @@ public sealed class ManagedDiagnosticRecorder(
         CancellationToken cancellationToken)
     {
         var diagnostic = CreateDiagnostic(context, exception);
+        return await PersistAsync(context.CorrelationId, diagnostic, cancellationToken);
+    }
+
+    public async Task<ManagedDiagnosticReceipt> RecordEventAsync(
+        ManagedDiagnosticContext context,
+        CancellationToken cancellationToken)
+    {
+        var diagnostic = CreateDiagnostic(context, null);
+        return await PersistAsync(context.CorrelationId, diagnostic, cancellationToken);
+    }
+
+    private async Task<ManagedDiagnosticReceipt> PersistAsync(
+        string correlationId,
+        ManagedOperationDiagnostic diagnostic,
+        CancellationToken cancellationToken)
+    {
         using var bounded = CreateBoundedToken(cancellationToken);
         try
         {
             await store.WriteAsync(diagnostic, bounded.Token);
-            return new(context.CorrelationId, "Database", true, false);
+            return new(correlationId, "Database", true, false);
         }
         catch (Exception) when (!cancellationToken.IsCancellationRequested)
         {
@@ -212,11 +239,11 @@ public sealed class ManagedDiagnosticRecorder(
         try
         {
             await fallback.WriteAsync(diagnostic, fallbackBounded.Token);
-            return new(context.CorrelationId, "FallbackFile", false, true);
+            return new(correlationId, "FallbackFile", false, true);
         }
         catch (Exception)
         {
-            return new(context.CorrelationId, "Unavailable", false, false);
+            return new(correlationId, "Unavailable", false, false);
         }
     }
 
@@ -232,7 +259,7 @@ public sealed class ManagedDiagnosticRecorder(
 
     private static ManagedOperationDiagnostic CreateDiagnostic(
         ManagedDiagnosticContext context,
-        Exception exception)
+        Exception? exception)
     {
         var assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "unknown";
         return new(
@@ -242,10 +269,10 @@ public sealed class ManagedDiagnosticRecorder(
             context.Operation,
             context.Stage.ToString(),
             context.ErrorCode,
-            exception.GetType().FullName ?? exception.GetType().Name,
-            DiagnosticRedactor.Redact(exception.Message) ?? string.Empty,
-            BuildInnerChain(exception.InnerException),
-            DiagnosticRedactor.Redact(exception.StackTrace),
+            exception?.GetType().FullName ?? string.Empty,
+            DiagnosticRedactor.Redact(exception?.Message ?? context.SafeDetail) ?? string.Empty,
+            BuildInnerChain(exception?.InnerException),
+            DiagnosticRedactor.Redact(exception?.StackTrace),
             "1.0.0+post-release",
             assemblyVersion,
             context.RulesetId,
@@ -258,7 +285,8 @@ public sealed class ManagedDiagnosticRecorder(
             context.AdministrativeInterventionRequired,
             context.ReleaseChannel?.ToString(),
             context.DiscoveryRef,
-            DiagnosticRedactor.Redact(context.SafeDetail));
+            DiagnosticRedactor.Redact(context.SafeDetail),
+            context.OperationId);
     }
 
     private static string? BuildInnerChain(Exception? exception)
@@ -292,7 +320,7 @@ public sealed class SqlServerManagedDiagnosticStore(
         await using var command = new SqlCommand(
             SqlServerSchemaIdentifier.Bind("""
                 INSERT INTO {{schema}}.managed_operation_diagnostics (
-                    diagnostic_id, correlation_id, recorded_at, operation_name,
+                    diagnostic_id, correlation_id, operation_id, recorded_at, operation_name,
                     operation_stage, error_code, exception_type,
                     sanitized_exception_message, sanitized_inner_exception_chain,
                     sanitized_stack_trace, eternal_cycle_version,
@@ -301,7 +329,7 @@ public sealed class SqlServerManagedDiagnosticStore(
                     retry_safe, administrative_intervention_required,
                     source_channel, discovery_ref, safe_detail
                 ) VALUES (
-                    @diagnostic_id, @correlation_id, @recorded_at, @operation_name,
+                    @diagnostic_id, @correlation_id, @operation_id, @recorded_at, @operation_name,
                     @operation_stage, @error_code, @exception_type,
                     @sanitized_exception_message, @sanitized_inner_exception_chain,
                     @sanitized_stack_trace, @eternal_cycle_version,
@@ -317,6 +345,7 @@ public sealed class SqlServerManagedDiagnosticStore(
         };
         Add(command, "@diagnostic_id", diagnostic.DiagnosticId);
         Add(command, "@correlation_id", diagnostic.CorrelationId);
+        Add(command, "@operation_id", diagnostic.OperationId);
         Add(command, "@recorded_at", diagnostic.RecordedAt);
         Add(command, "@operation_name", diagnostic.Operation);
         Add(command, "@operation_stage", diagnostic.Stage);
@@ -407,6 +436,11 @@ public sealed class NullManagedDiagnosticRecorder : IManagedDiagnosticRecorder
     public Task<ManagedDiagnosticReceipt> RecordFailureAsync(
         ManagedDiagnosticContext context,
         Exception exception,
+        CancellationToken cancellationToken) =>
+        Task.FromResult(new ManagedDiagnosticReceipt(context.CorrelationId, "Unavailable", false, false));
+
+    public Task<ManagedDiagnosticReceipt> RecordEventAsync(
+        ManagedDiagnosticContext context,
         CancellationToken cancellationToken) =>
         Task.FromResult(new ManagedDiagnosticReceipt(context.CorrelationId, "Unavailable", false, false));
 }

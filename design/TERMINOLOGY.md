@@ -5035,3 +5035,11 @@ Machine- and human-readable provenance identifying the project distribution from
 ## Support Destination
 
 The provenance-bound route or route type to which an explicitly authorized support report may be sent. It is not a credential and never authorizes automatic submission.
+
+## Distribution Archive
+
+A deterministic full useful repository snapshot intended for external review or audit. It includes reusable source, tests, reference tooling, design records, and documentation while excluding generated builds, caches, credentials, and temporary artifacts. It is not a Runtime Rule Source Payload.
+
+## Runtime Rule Source Payload
+
+The minimal materialized set consumed by a rule compiler: the selected manifest, its declared authoritative rule documents, and required compatibility and immutable-provenance metadata. Development tooling, tests, audits, reference implementations, and unrelated repository files are not part of this payload.

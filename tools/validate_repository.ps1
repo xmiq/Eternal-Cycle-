@@ -1214,6 +1214,46 @@ if (Test-Path -LiteralPath $compatibilityPath) {
     }
 }
 
+$distributionBuilder = Join-Path $rootPath 'tools/build_distribution.ps1'
+$distributionValidator = Join-Path $rootPath 'tools/test_distribution_archive.ps1'
+if (-not (Test-Path -LiteralPath $distributionBuilder) -or
+    -not (Test-Path -LiteralPath $distributionValidator)) {
+    Add-ValidationError 'Distribution build or validation tooling is missing.'
+}
+else {
+    $distributionOne = Join-Path ([IO.Path]::GetTempPath()) "ec-distribution-$([Guid]::NewGuid().ToString('N'))-1.zip"
+    $distributionTwo = Join-Path ([IO.Path]::GetTempPath()) "ec-distribution-$([Guid]::NewGuid().ToString('N'))-2.zip"
+    try {
+        $buildOne = @(& pwsh -NoProfile -File $distributionBuilder -Root $rootPath -OutputPath $distributionOne 2>&1)
+        if ($LASTEXITCODE -ne 0) {
+            Add-ValidationError "Distribution build failed: $($buildOne -join ' ')"
+        }
+        $buildTwo = @(& pwsh -NoProfile -File $distributionBuilder -Root $rootPath -OutputPath $distributionTwo 2>&1)
+        if ($LASTEXITCODE -ne 0) {
+            Add-ValidationError "Second deterministic distribution build failed: $($buildTwo -join ' ')"
+        }
+        if ((Test-Path -LiteralPath $distributionOne) -and (Test-Path -LiteralPath $distributionTwo)) {
+            $firstHash = (Get-FileHash -LiteralPath $distributionOne -Algorithm SHA256).Hash
+            $secondHash = (Get-FileHash -LiteralPath $distributionTwo -Algorithm SHA256).Hash
+            if ($firstHash -ne $secondHash) {
+                Add-ValidationError 'Distribution archive builds are not deterministic for an unchanged repository tree.'
+            }
+
+            $distributionCheck = @(& pwsh -NoProfile -File $distributionValidator -ArchivePath $distributionOne 2>&1)
+            if ($LASTEXITCODE -ne 0) {
+                Add-ValidationError "Distribution content validation failed: $($distributionCheck -join ' ')"
+            }
+        }
+    }
+    finally {
+        foreach ($archive in @($distributionOne, $distributionTwo)) {
+            if (Test-Path -LiteralPath $archive) {
+                Remove-Item -LiteralPath $archive -Force
+            }
+        }
+    }
+}
+
 $committedDatabaseArtifacts = @(Get-ChildItem -LiteralPath $rootPath -Recurse -File |
     Where-Object { $_.FullName -notlike '*\.git\*' -and $_.Extension -in @('.sqlite', '.sqlite3', '.db') })
 foreach ($artifact in $committedDatabaseArtifacts) {
@@ -1269,3 +1309,4 @@ Write-Output 'Phase 12 clarifications: Reincarnation selection, Soul Depth visib
 Write-Output 'Blocking unresolved questions: 0'
 Write-Output 'Orphaned Markdown documents: 0 (root README is the entry point)'
 Write-Output 'Forbidden campaign-data directories: 0'
+Write-Output 'Distribution archive: deterministic build and content boundaries checked'

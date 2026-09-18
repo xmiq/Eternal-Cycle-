@@ -436,6 +436,7 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("005_managed_operation_diagnostics.template.sql", files);
         Assert.Contains("006_rule_source_compatibility.template.sql", files);
         Assert.Contains("007_durable_managed_operations.template.sql", files);
+        Assert.Contains("008_diagnostic_operation_correlation.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
@@ -452,6 +453,11 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("rule_source_preparation", operations);
         Assert.Contains("Interrupted", operations);
         Assert.Contains("display_version", operations);
+        var diagnosticCorrelation = File.ReadAllText(Path.Combine(
+            schemaDirectory,
+            "008_diagnostic_operation_correlation.template.sql"));
+        Assert.Contains("operation_id", diagnosticCorrelation);
+        Assert.Contains("IF COL_LENGTH", diagnosticCorrelation);
     }
 
     private static ManagedReadinessReport Evaluate(

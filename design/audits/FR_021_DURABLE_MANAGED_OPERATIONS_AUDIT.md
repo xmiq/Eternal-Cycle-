@@ -1,5 +1,7 @@
 # FR-021 Durable Managed Operations and Progressive Rule Readiness Audit
 
+> **Maintenance note:** The original reference cache and cancellation details recorded here were later refined by the [FR-021 Rule Source Live-Acceptance Repair](FR_021_RULE_SOURCE_LIVE_ACCEPTANCE_REPAIR_AUDIT.md). The portable durable-operation and progressive-readiness contracts remain authoritative.
+
 ## Scope
 
 FR-021 responds to real LM Studio and Unsloth Studio deployment evidence: a valid first Rule Source acquisition and publication could outlive an MCP client's request deadline. The objective replaces synchronous first-run publication with durable service-owned work and makes authoritative rule availability progressive without weakening rule authority.

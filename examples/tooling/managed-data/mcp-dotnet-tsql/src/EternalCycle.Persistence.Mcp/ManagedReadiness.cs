@@ -567,14 +567,14 @@ public sealed class SqlServerManagedInfrastructureInspector(
                         N'release_channel', N'discovery_ref', N'manifest_format_version', N'compiler_contract_version'))
                  OR (tables.name = N'managed_operation_diagnostics' AND columns.name IN (
                         N'safe_detail', N'retry_safe', N'administrative_intervention_required',
-                        N'source_channel', N'discovery_ref'))
+                        N'source_channel', N'discovery_ref', N'operation_id'))
               );
             """, connection)
         {
             CommandTimeout = persistence.CommandTimeoutSeconds
         };
         command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
-        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 10;
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 11;
     }
 
     private async Task<bool> DurableManagedOperationColumnsReadyAsync(

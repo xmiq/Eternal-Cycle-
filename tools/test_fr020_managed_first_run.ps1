@@ -35,6 +35,7 @@ $schema004 = Read-RepoFile "$reference/src/EternalCycle.Persistence.Mcp/Schema/0
 $schema005 = Read-RepoFile "$reference/src/EternalCycle.Persistence.Mcp/Schema/005_managed_operation_diagnostics.template.sql"
 $tests = Read-RepoFile "$reference/tests/EternalCycle.Persistence.Mcp.Tests/ManagedFirstRunTests.cs"
 $publicationTests = Read-RepoFile "$reference/tests/EternalCycle.Persistence.Mcp.Tests/ManagedPublicationRegressionTests.cs"
+$compatibilityTests = Read-RepoFile "$reference/tests/EternalCycle.Persistence.Mcp.Tests/ManagedRuleSourceCompatibilityTests.cs"
 $readme = Read-RepoFile "$reference/README.md"
 $acceptance = Read-RepoFile "$reference/MCP_ONLY_ACCEPTANCE_TEST.md"
 $running = Read-RepoFile 'docs/persistence/RUNNING_ETERNAL_CYCLE.md'
@@ -111,7 +112,7 @@ Assert-Requirement 51 ($managedAdministration -match 'sealed record OfficialDist
 Assert-Requirement 52 ($managedTests -match 'PackagedOfficialDistributionMetadataIsCopiedAndLoadable' -and $managedTests -match 'OfficialDistributionMetadata\.Load') 'Regression test loads packaged metadata from the test output directory.'
 Assert-Requirement 53 (Test-Path -LiteralPath (Join-Path $root 'examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/DISTRIBUTION.json')) 'Standalone reference package includes distribution metadata without a machine-specific path.'
 Assert-Requirement 54 ($publicationStore -match 'RulePublicationWritePlan' -and $publicationStore -match 'Chunk\(' -and $publicationTests -match 'OfficialManifestHasMeasuredBoundedPublicationPlan') 'Rule staging uses measured bounded batches against the official manifest.'
-Assert-Requirement 55 ($source -match 'clone", "--no-checkout' -and $publicationTests -match 'ManagedNoCheckoutCacheReadsRealisticManifestAndPublishes') 'Managed no-checkout acquisition and publication have realistic regression coverage.'
+Assert-Requirement 55 ($source -match 'CreatePayloadAsync' -and $source -match 'manifest\.Sources' -and $compatibilityTests -match 'PartialCacheIsReplacedAndExactImmutableRevisionIsReusedOffline') 'Managed acquisition retains a minimal manifest-defined payload and reuses immutable provenance.'
 Assert-Requirement 56 ($managedDiagnostics -match 'IManagedDiagnosticStore' -and $managedDiagnostics -match 'PhysicalManagedDiagnosticFileSink' -and $schema005 -match 'managed_operation_diagnostics') 'Managed operation diagnostics use SQL first with a physical fallback.'
 Assert-Requirement 57 ($publicationRuntime -match 'CorrelationId' -and $publicationRuntime -match 'RULE_SOURCE_REF_RESOLUTION_FAILED' -and $publicationRuntime -match 'RULE_ACTIVATION_FAILED') 'Publication failures preserve correlation, stage, and structured categories.'
 Assert-Requirement 58 ($managedDiagnostics -match 'VerboseErrors' -and $managedDiagnostics -match 'DiagnosticRedactor' -and $publicationTests -match 'NormalFailureIsSanitizedWhileVerboseFailureRetainsRedactedDetail') 'Verbose diagnostics remain opt-in and redacted.'
