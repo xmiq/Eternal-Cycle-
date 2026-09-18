@@ -1,5 +1,10 @@
 {
   "project": "Eternal Cycle",
+  "originalProjectAuthor": "xmiq",
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 xmiq",
+  "distributionIdentity": "xmiq/Eternal Cycle upstream distribution",
+  "supportDestinationType": "IssueTracker",
   "officialRepository": "https://github.com/xmiq/Eternal-Cycle-.git",
   "supportPage": "https://github.com/xmiq/Eternal-Cycle-/issues",
   "stableReleaseTag": "v1.0.0",

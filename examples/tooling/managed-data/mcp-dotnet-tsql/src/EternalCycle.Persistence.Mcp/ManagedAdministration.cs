@@ -37,7 +37,11 @@ public sealed record ManagedOperationResult<T>(
     bool RetrySafe = false,
     bool AdministrativeInterventionRequired = false,
     string? DiagnosticsAvailability = null,
-    bool UserApprovalRequired = false);
+    bool UserApprovalRequired = false,
+    string? BlockingCondition = null,
+    string? RequiredAction = null,
+    IReadOnlyList<string>? AllowedNextActions = null,
+    string? RecommendedNextAction = null);
 
 public sealed record BootstrapRequest(
     string? CampaignId,
@@ -49,7 +53,11 @@ public sealed record BootstrapPlan(
     IReadOnlyList<string> MigrationIds,
     IReadOnlyList<string> OwnedScopes,
     string AuthorizationGuidance,
-    string Summary);
+    string Summary,
+    string? BlockingCondition = null,
+    string? RequiredAction = null,
+    IReadOnlyList<string>? AllowedNextActions = null,
+    string? RecommendedNextAction = null);
 
 public sealed record BootstrapExecution(
     IReadOnlyList<string> AppliedMigrationIds,
@@ -188,15 +196,24 @@ public sealed class ManagedAdministrationService(
     IManagedReadinessService readiness,
     IRuleSourceConfigurationStore sourceConfigurations,
     ICampaignDirectoryService campaigns,
-    IManagedOperationService? managedOperations = null) : IManagedAdministrationService
+    IManagedOperationService? managedOperations = null,
+    IManagedConfigurationService? configuration = null) : IManagedAdministrationService
 {
     private readonly ManagedAdministrationOptions administration = administrationOptions.Value;
     private readonly ManagedRuleServiceOptions rules = ruleOptions.Value;
 
-    public Task<BootstrapPlan> GetBootstrapPlanAsync(
+    public async Task<BootstrapPlan> GetBootstrapPlanAsync(
         string? campaignId,
-        CancellationToken cancellationToken) =>
-        bootstrapExecutor.PlanAsync(campaignId, cancellationToken);
+        CancellationToken cancellationToken)
+    {
+        var configurationReport = configuration?.GetReport();
+        if (configurationReport is { Ready: false })
+        {
+            return ConfigurationPlan(configurationReport);
+        }
+
+        return await bootstrapExecutor.PlanAsync(campaignId, cancellationToken);
+    }
 
     public async Task<ManagedOperationResult<BootstrapExecution>> BootstrapAsync(
         BootstrapRequest request,
@@ -206,6 +223,12 @@ public sealed class ManagedAdministrationService(
         if (denied is not null)
         {
             return Denied<BootstrapExecution>(denied);
+        }
+
+        var configurationReport = configuration?.GetReport();
+        if (configurationReport is { Ready: false })
+        {
+            return ConfigurationBlocked<BootstrapExecution>(configurationReport);
         }
 
         try
@@ -238,6 +261,16 @@ public sealed class ManagedAdministrationService(
         if (denied is not null)
         {
             return Denied<RuleSourceSelection>(denied);
+        }
+
+        var readinessReport = await readiness.GetReadinessAsync(null, cancellationToken);
+        if (readinessReport.State is
+            ManagedReadinessState.ConfigurationRequired or
+            ManagedReadinessState.ConfigurationInvalid or
+            ManagedReadinessState.SetupRequired or
+            ManagedReadinessState.MigrationRequired)
+        {
+            return ReadinessBlocked<RuleSourceSelection>(readinessReport);
         }
 
         try
@@ -297,7 +330,7 @@ public sealed class ManagedAdministrationService(
         var report = await readiness.GetReadinessAsync(null, cancellationToken);
         if (report.State is ManagedReadinessState.SetupRequired or ManagedReadinessState.MigrationRequired)
         {
-            return new(false, report.ErrorCode ?? "SETUP_REQUIRED", report.Message, null);
+            return ReadinessBlocked<ManagedOperationStatus>(report);
         }
 
         if (report.State == ManagedReadinessState.RuleSourceRequired)
@@ -405,6 +438,44 @@ public sealed class ManagedAdministrationService(
             RetrySafe: denial.RetrySafe,
             AdministrativeInterventionRequired: denial.AdministrativeInterventionRequired,
             UserApprovalRequired: denial.UserApprovalRequired);
+
+    private static BootstrapPlan ConfigurationPlan(ManagedConfigurationReport report) =>
+        new(
+            false,
+            [],
+            [],
+            "Correct required host configuration before database setup. The MCP returns exact supported environment-variable names.",
+            report.Message,
+            report.State,
+            "Use ec_get_configuration_requirements, update host configuration, and restart the MCP service.",
+            ["ec_get_configuration_requirements", "ec_service_capabilities"],
+            "ec_get_configuration_requirements");
+
+    private static ManagedOperationResult<T> ConfigurationBlocked<T>(ManagedConfigurationReport report) =>
+        new(
+            false,
+            report.State == "ConfigurationRequired" ? "CONFIGURATION_REQUIRED" : "CONFIGURATION_INVALID",
+            report.Message,
+            default,
+            RetrySafe: false,
+            AdministrativeInterventionRequired: true,
+            BlockingCondition: report.State,
+            RequiredAction: "Correct host configuration and restart the MCP service.",
+            AllowedNextActions: ["ec_get_configuration_requirements", "ec_service_capabilities"],
+            RecommendedNextAction: "ec_get_configuration_requirements");
+
+    private static ManagedOperationResult<T> ReadinessBlocked<T>(ManagedReadinessReport report) =>
+        new(
+            false,
+            report.ErrorCode ?? "SETUP_REQUIRED",
+            report.Message,
+            default,
+            RetrySafe: false,
+            AdministrativeInterventionRequired: report.AdministrativeActionRequired,
+            BlockingCondition: report.BlockingCondition,
+            RequiredAction: report.RequiredAction,
+            AllowedNextActions: report.AllowedNextActions,
+            RecommendedNextAction: report.RecommendedNextAction);
 
     private sealed record AuthorizationDenial(
         string Code,
@@ -976,9 +1047,15 @@ public class ManagedServiceException(string code, string safeMessage) : Exceptio
 public sealed record OfficialDistributionMetadata(
     string Project,
     string OfficialRepository,
+    string? SupportPage,
     string StableReleaseTag,
     string DevelopmentRef,
     string RuleSourceManifest,
+    string? OriginalProjectAuthor = null,
+    string? License = null,
+    string? Copyright = null,
+    string? DistributionIdentity = null,
+    string? SupportDestinationType = null,
     string? StableRuleSourceRef = null,
     string? PrereleaseRuleSourceRef = null,
     string? PrereleaseBaseRelease = null,

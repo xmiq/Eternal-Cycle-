@@ -2,9 +2,9 @@ SET XACT_ABORT ON;
 GO
 
 -- Render this template with a validated Domain Namespace schema identifier.
-IF OBJECT_ID(N'{{DOMAIN_SCHEMA}}.managed_operations', N'U') IS NULL
+IF OBJECT_ID(N'{{schema_name}}.managed_operations', N'U') IS NULL
 BEGIN
-    CREATE TABLE [{{DOMAIN_SCHEMA}}].managed_operations (
+    CREATE TABLE {{schema}}.managed_operations (
         operation_id nvarchar(128) NOT NULL,
         operation_kind nvarchar(128) NOT NULL,
         deduplication_key nvarchar(512) NOT NULL,
@@ -26,9 +26,9 @@ BEGIN
         result_rule_release_id nvarchar(128) NULL,
         CONSTRAINT PK_ec_domain_managed_operations PRIMARY KEY (operation_id),
         CONSTRAINT FK_ec_domain_managed_operations_ruleset FOREIGN KEY (ruleset_id)
-            REFERENCES [{{DOMAIN_SCHEMA}}].rulesets(ruleset_id),
+            REFERENCES {{schema}}.rulesets(ruleset_id),
         CONSTRAINT FK_ec_domain_managed_operations_release FOREIGN KEY (result_rule_release_id)
-            REFERENCES [{{DOMAIN_SCHEMA}}].rule_releases(rule_release_id),
+            REFERENCES {{schema}}.rule_releases(rule_release_id),
         CONSTRAINT CK_ec_domain_managed_operations_state CHECK (operation_state IN (
             N'Queued', N'Running', N'Succeeded', N'Failed',
             N'Cancelling', N'Cancelled', N'Interrupted'
@@ -39,19 +39,19 @@ BEGIN
     );
 
     CREATE INDEX IX_ec_domain_managed_operations_dispatch
-        ON [{{DOMAIN_SCHEMA}}].managed_operations (operation_state, created_at, operation_id);
+        ON {{schema}}.managed_operations (operation_state, created_at, operation_id);
 
     CREATE INDEX IX_ec_domain_managed_operations_deduplication
-        ON [{{DOMAIN_SCHEMA}}].managed_operations (deduplication_key, operation_state, updated_at DESC);
+        ON {{schema}}.managed_operations (deduplication_key, operation_state, updated_at DESC);
 
     CREATE INDEX IX_ec_domain_managed_operations_recent
-        ON [{{DOMAIN_SCHEMA}}].managed_operations (operation_kind, updated_at DESC);
+        ON {{schema}}.managed_operations (operation_kind, updated_at DESC);
 END;
 GO
 
-IF OBJECT_ID(N'{{DOMAIN_SCHEMA}}.rule_source_preparation', N'U') IS NULL
+IF OBJECT_ID(N'{{schema_name}}.rule_source_preparation', N'U') IS NULL
 BEGIN
-    CREATE TABLE [{{DOMAIN_SCHEMA}}].rule_source_preparation (
+    CREATE TABLE {{schema}}.rule_source_preparation (
         rule_release_id nvarchar(128) NOT NULL,
         rule_source_id nvarchar(128) NOT NULL,
         preparation_tier nvarchar(32) NOT NULL,
@@ -62,7 +62,7 @@ BEGIN
         updated_at datetimeoffset(7) NOT NULL,
         CONSTRAINT PK_ec_domain_rule_source_preparation PRIMARY KEY (rule_release_id, rule_source_id),
         CONSTRAINT FK_ec_domain_rule_source_preparation_release FOREIGN KEY (rule_release_id)
-            REFERENCES [{{DOMAIN_SCHEMA}}].rule_releases(rule_release_id),
+            REFERENCES {{schema}}.rule_releases(rule_release_id),
         CONSTRAINT CK_ec_domain_rule_source_preparation_tier CHECK (preparation_tier IN (
             N'RuntimeKernel', N'CampaignBootstrap', N'ImmediateGameplayCore',
             N'CampaignRelevant', N'Standard', N'OptionalRare'
@@ -74,14 +74,14 @@ BEGIN
     );
 
     CREATE INDEX IX_ec_domain_rule_source_preparation_dispatch
-        ON [{{DOMAIN_SCHEMA}}].rule_source_preparation (
+        ON {{schema}}.rule_source_preparation (
             rule_release_id, preparation_state, priority_boost DESC,
             preparation_tier, base_priority DESC, rule_source_id
         );
 END;
 GO
 
-INSERT INTO [{{DOMAIN_SCHEMA}}].rule_source_preparation (
+INSERT INTO {{schema}}.rule_source_preparation (
     rule_release_id, rule_source_id, preparation_tier,
     preparation_state, base_priority, priority_boost, updated_at
 )
@@ -97,28 +97,28 @@ SELECT
     MAX(chunks.priority),
     0,
     SYSUTCDATETIME()
-FROM [{{DOMAIN_SCHEMA}}].rule_chunks AS chunks
+FROM {{schema}}.rule_chunks AS chunks
 WHERE NOT EXISTS (
     SELECT 1
-    FROM [{{DOMAIN_SCHEMA}}].rule_source_preparation AS existing
+    FROM {{schema}}.rule_source_preparation AS existing
     WHERE existing.rule_release_id = chunks.rule_release_id
       AND existing.rule_source_id = chunks.rule_source_id
 )
 GROUP BY chunks.rule_release_id, chunks.rule_source_id;
 GO
 
-IF COL_LENGTH(N'{{DOMAIN_SCHEMA}}.rule_releases', N'base_release') IS NULL
-    ALTER TABLE [{{DOMAIN_SCHEMA}}].rule_releases ADD base_release nvarchar(64) NULL;
+IF COL_LENGTH(N'{{schema_name}}.rule_releases', N'base_release') IS NULL
+    ALTER TABLE {{schema}}.rule_releases ADD base_release nvarchar(64) NULL;
 GO
 
-IF COL_LENGTH(N'{{DOMAIN_SCHEMA}}.rule_releases', N'discovery_tag') IS NULL
-    ALTER TABLE [{{DOMAIN_SCHEMA}}].rule_releases ADD discovery_tag nvarchar(128) NULL;
+IF COL_LENGTH(N'{{schema_name}}.rule_releases', N'discovery_tag') IS NULL
+    ALTER TABLE {{schema}}.rule_releases ADD discovery_tag nvarchar(128) NULL;
 GO
 
-IF COL_LENGTH(N'{{DOMAIN_SCHEMA}}.rule_releases', N'commits_since_base') IS NULL
-    ALTER TABLE [{{DOMAIN_SCHEMA}}].rule_releases ADD commits_since_base int NULL;
+IF COL_LENGTH(N'{{schema_name}}.rule_releases', N'commits_since_base') IS NULL
+    ALTER TABLE {{schema}}.rule_releases ADD commits_since_base int NULL;
 GO
 
-IF COL_LENGTH(N'{{DOMAIN_SCHEMA}}.rule_releases', N'display_version') IS NULL
-    ALTER TABLE [{{DOMAIN_SCHEMA}}].rule_releases ADD display_version nvarchar(128) NULL;
+IF COL_LENGTH(N'{{schema_name}}.rule_releases', N'display_version') IS NULL
+    ALTER TABLE {{schema}}.rule_releases ADD display_version nvarchar(128) NULL;
 GO

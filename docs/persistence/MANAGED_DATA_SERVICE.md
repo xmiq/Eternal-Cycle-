@@ -35,6 +35,8 @@ Long-running administrative work follows the [Managed Operations](MANAGED_OPERAT
 
 Readiness is multidimensional. It distinguishes transport, persistence connection, campaign schema, Domain Namespace, Rule Source, published release, active compatible release, requested campaign, and overall gameplay readiness. Expected first-run states are structured outcomes such as setup, migration, source, publication, activation, or campaign required; they are not generic exceptions.
 
+The base control plane remains available before the latest service schema exists. It provides configuration discovery, structured readiness, migration planning, semantic error lookup, and bounded portable Error Dumps without first querying missing post-migration tables. Tools that depend on the durable operation store return a structured migration-required result until that store exists.
+
 ### Campaign
 
 The service supports authorized provisioning, open/resume, canonical record or context reads, validation, migration, and stable Campaign ID routing. Provisioning remains an administrative/bootstrap operation and need not be exposed to gameplay clients.
@@ -72,6 +74,8 @@ inspect readiness
 
 A service with an available database but missing rule infrastructure is not ready. A configured source with no publication is distinct from a published but inactive release. Source unavailability may be `DEGRADED` only when a compatible active release remains safe to use.
 
+Configuration discovery precedes datastore assumptions. It names required and optional settings, their safe status, accepted form, restart requirement, and operator audience without echoing secret values. A deployment must not require ordinary players to infer environment names from generic startup failures.
+
 ## Storage Neutrality
 
 A Managed implementation may use a relational database, document database, key/value store, graph store, indexed file-backed store, or another structured technology. It must faithfully implement stable identity, Logical Data Namespaces, campaign isolation, versioning, concurrency, validation, indexed retrieval, migration, durability, and recovery.
@@ -98,7 +102,11 @@ MCP is the supplied reference interface, not a universal requirement. A differen
 
 Managed administrative failures carry an operation name, stage, correlation ID, semantic error code, safe message, retry guidance, intervention guidance, and authorized-diagnostic availability. The ordinary response remains sanitized; the underlying exception chain and stack evidence are redacted and preserved in the service's authorized diagnostic store. If that store is unavailable, a service may use a protected physical fallback. Failure of either diagnostic sink never replaces the original operation failure or makes it appear successful.
 
+The physical fallback is automatic unless explicitly disabled by trusted deployment configuration. It is independent of optional general logging and requires no player command. Configuration discovery reports its location override, disable control, and current availability without exposing private diagnostic contents.
+
 Verbose development visibility is opt-in and changes only how much redacted evidence an authorized operator sees. It never disables redaction, weakens transaction behavior, or changes success into failure or failure into success.
+
+Every externally callable tool is protected by a final semantic error boundary. Known errors retain their code and recovery route. Unexpected errors become a stable internal-error response. If normal error rendering itself fails, a static bounded emergency string remains available. The complete reliability hierarchy is defined by [Errors and Portable Diagnostics](../support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md).
 
 ## Security
 
@@ -120,4 +128,5 @@ The repository includes an optional [.NET / MCP / T-SQL reference implementation
 - [Managed Operations](MANAGED_OPERATIONS.md)
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [Community Feedback and Diagnostics](../support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md)
+- [Errors and Portable Diagnostics](../support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md)
 - [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md)

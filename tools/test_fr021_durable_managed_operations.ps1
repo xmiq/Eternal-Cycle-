@@ -64,7 +64,7 @@ Assert-Requirement 10 ($operations -match 'ErrorCode' -and $tests -match 'Preser
 Assert-Requirement 11 ($schema -match 'managed_operations' -and $schema -match 'rule_source_preparation') 'Migration 007 adds both durable operations and preparation state.'
 Assert-Requirement 12 ($schema -match 'base_priority' -and $schema -match 'priority_boost') 'Preparation stores base and dynamic priority separately.'
 Assert-Requirement 13 ($project -match '007_durable_managed_operations.sql' -and $project -match '007_durable_managed_operations.template.sql') 'Migration 007 and its template are packaged.'
-Assert-Requirement 14 ($schemaTemplate -match '\{\{domain_schema\}\}') 'The schema template preserves trusted Domain Namespace rendering.'
+Assert-Requirement 14 ($schemaTemplate -match '\{\{schema\}\}' -and $schemaTemplate -match '\{\{schema_name\}\}' -and $schemaTemplate -notmatch '\{\{DOMAIN_SCHEMA\}\}') 'Migration 007 uses the renderer-supported trusted Domain Namespace tokens.'
 Assert-Requirement 15 ($preparation -match 'RuntimeKernel' -and $preparation -match 'OptionalRare') 'Portable preparation tiers cover kernel through optional rules.'
 Assert-Requirement 16 ($preparation -match 'GetNextPendingAsync' -and $preparation -match 'priority_boost DESC') 'Remaining preparation reads current dynamic priority from durable state.'
 Assert-Requirement 17 ($publication -match 'PrepareMinimumClosure' -and $publication -match 'PrepareRemainingAsync') 'Minimum and remaining preparation are distinct publication stages.'

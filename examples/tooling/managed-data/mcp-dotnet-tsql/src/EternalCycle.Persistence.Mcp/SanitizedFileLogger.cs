@@ -26,7 +26,7 @@ public sealed class SanitizedFileLoggerProvider(string filePath) : ILoggerProvid
             Directory.CreateDirectory(directory);
         }
 
-        var safeMessage = SingleLine(message);
+        var safeMessage = SingleLine(DiagnosticRedactor.Redact(message) ?? string.Empty);
         var safeCategory = SingleLine(category);
         var exceptionType = exception is null ? string.Empty : $" exception={exception.GetType().Name}";
         var line = $"{DateTimeOffset.UtcNow:O} level={level} event={eventId.Id} category={safeCategory}{exceptionType} message={safeMessage}{Environment.NewLine}";

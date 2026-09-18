@@ -166,6 +166,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Direct Persistence Adapter Index](persistence/adapters/README.md) - runtime-neutral SQLite, DuckDB, local-storage, and Google Drive adapter contracts.
 - [Support and Diagnostics Index](support/README.md) - release-neutral support navigation and privacy boundary.
 - [Community Feedback and Diagnostics](support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md) - privacy-conscious classification, diagnostics, reporting, and support routing.
+- [Errors and Portable Diagnostics](support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md) - database-independent error identity, configuration discovery, automatic fallback, bounded Error Dumps, optional Support Bundles, and explicit submission consent.
 
 ## Rule Compilation and Retrieval
 

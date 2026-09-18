@@ -59,6 +59,8 @@ A safe operation view includes:
 
 The service must support status lookup by Operation ID and bounded discovery of recent relevant operations. Losing the immediate response does not make recovery impossible.
 
+Before the durable operation schema exists, operation initiation, status, and listing remain semantically callable but do not query absent operation tables. They return a structured `MIGRATION_REQUIRED` outcome, configuration state where relevant, and the bounded setup recovery capability. Successful schema migration then enables normal durable operation behavior without changing the client's conceptual workflow.
+
 ## Idempotency and Concurrency
 
 Equivalent active requests reuse one operation when competing execution would be unsafe or wasteful. The operation's deduplication identity includes the semantic work target and configuration revision needed to distinguish materially different work.
@@ -82,6 +84,8 @@ Current readiness and latest causal operation evidence are separate:
 
 Unknown infrastructure causes remain unknown. Safe output does not speculate about network policy, authentication, or provider health without evidence. Protected diagnostics retain implementation detail according to the service's security policy.
 
+Semantic failures cross the interface unchanged: a migration requirement remains a migration requirement rather than becoming a generic tool exception. Error-code lookup and a partial Error Dump remain available without an operation record or Campaign ID.
+
 ## Generalization Boundary
 
 The universal contract requires durable identity, independent execution, explicit state, idempotency, recovery, bounded policy, status discovery, and safe evidence. It does not require .NET, MCP, SQL Server, T-SQL, Git, a filesystem, or a particular worker technology.
@@ -92,3 +96,4 @@ The universal contract requires durable identity, independent execution, explici
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [Running Eternal Cycle](RUNNING_ETERNAL_CYCLE.md)
 - [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)
+- [Errors and Portable Diagnostics](../support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md)

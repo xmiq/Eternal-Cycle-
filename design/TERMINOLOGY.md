@@ -5003,3 +5003,35 @@ Human-readable metadata such as `1.1.0-rc.47`, derived from a target version and
 ## Publication Correlation ID
 
 A stable operation-scoped identifier joining one Managed publication response to its authorized diagnostic evidence and physical fallback record. It is not a Rule Release ID, Campaign ID, or security credential.
+
+## Managed Configuration Contract
+
+The database-independent description of a Managed service's required and optional settings, exact configuration and environment names, accepted forms, safe defaults, restart requirements, audience, and validation state. It never exposes configured secret values.
+
+## Eternal Cycle Error Code
+
+A stable implementation-facing identifier for one semantic operational failure class. It preserves recovery meaning across interfaces and is distinct from exception type, localized prose, correlation identity, or campaign state.
+
+## Emergency Error String
+
+A static bounded sanitized response returned only when the ordinary error boundary cannot safely construct its normal structured result. It contains no interpolated exception, secret, locator, or campaign fact.
+
+## Error Dump
+
+A bounded, sanitized, provider-neutral structured-and-text diagnostic snapshot assembled from safely available evidence. It may be partial and requires neither a Support Bundle nor external submission.
+
+## Support Bundle
+
+An optional richer local troubleshooting artifact assembled through an explicit authorized action. It is not part of base error recovery and remains separate from external submission.
+
+## Support Submission
+
+An explicitly authorized transfer of sanitized diagnostic material to an identified support destination. A configured destination, prepared Error Dump, or local Support Bundle does not itself grant submission consent.
+
+## Distribution Identity
+
+Machine- and human-readable provenance identifying the project distribution from which a build was produced. It supports compatibility and support routing without proving endorsement of derivatives.
+
+## Support Destination
+
+The provenance-bound route or route type to which an explicitly authorized support report may be sent. It is not a credential and never authorizes automatic submission.

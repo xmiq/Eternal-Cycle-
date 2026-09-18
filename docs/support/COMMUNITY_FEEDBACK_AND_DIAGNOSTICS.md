@@ -34,6 +34,8 @@ A runtime or Managed service may produce a report containing only relevant field
 
 Diagnostics never automatically include credentials, tokens, connection strings, private locators, complete Campaign Canon, GM Secrets, private conversations, personal information, or unrelated system data. The AI minimizes the report again before external use.
 
+The portable reliability hierarchy is defined by [Errors and Portable Diagnostics](ERRORS_AND_PORTABLE_DIAGNOSTICS.md). A bounded **Error Dump** is an immediate local view and does not depend on a **Support Bundle**. A Support Bundle is an optional richer local artifact. **Support submission** is a third, separate action that requires explicit destination-aware consent. None is silently uploaded.
+
 ## Issue Report
 
 Prepare:
@@ -80,6 +82,7 @@ Canonical Markdown
 ## Related Documents
 
 - [Official Support Metadata](../../SUPPORT.md)
+- [Errors and Portable Diagnostics](ERRORS_AND_PORTABLE_DIAGNOSTICS.md)
 - [Provisional Rulings](../gm/PROVISIONAL_RULINGS.md)
 - [Managed Rule Publication](../rules/MANAGED_RULE_PUBLICATION.md)
 - [AI Capabilities and Limitations](../ai/AI_CAPABILITIES_AND_LIMITATIONS.md)

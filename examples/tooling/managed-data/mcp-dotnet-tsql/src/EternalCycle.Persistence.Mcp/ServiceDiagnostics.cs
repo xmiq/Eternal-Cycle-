@@ -30,7 +30,10 @@ public sealed record SanitizedDiagnosticReport(
     string? RuleUpdateDetail,
     ManagedReadinessReport Readiness,
     string SanitizationStatement,
-    ManagedOperationStatus? LatestManagedOperation = null);
+    ManagedOperationStatus? LatestManagedOperation = null,
+    string DiagnosticScope = "Full",
+    string? SanitizedFileLogStatus = null,
+    string? SanitizedFileLogLocation = null);
 
 public interface IServiceDiagnostics
 {
@@ -63,7 +66,11 @@ public sealed class ServiceDiagnostics(
                 "operations.durable",
                 "rules.progressive-readiness",
                 "setup.permission-gated",
-                "campaign.discovery"
+                "campaign.discovery",
+                "configuration.discovery",
+                "errors.registry",
+                "errors.dump",
+                "diagnostics.automatic-fallback"
             ],
             true);
 
@@ -71,11 +78,36 @@ public sealed class ServiceDiagnostics(
         string? campaignId,
         CancellationToken cancellationToken)
     {
-        var route = campaignId is null ? null : schemaResolver.Resolve(campaignId);
         var report = await readiness.GetReadinessAsync(campaignId, cancellationToken);
-        var latestOperation = operations is null
-            ? null
-            : (await operations.ListRecentAsync(null, 1, cancellationToken)).FirstOrDefault();
+        CampaignSchemaRoute? route = null;
+        if (campaignId is not null && report.Configuration?.Ready is not false)
+        {
+            try
+            {
+                route = schemaResolver.Resolve(campaignId);
+            }
+            catch (Exception exception) when (exception is ArgumentException or InvalidOperationException)
+            {
+                // Readiness already carries the safe routing/configuration failure.
+            }
+        }
+
+        ManagedOperationStatus? latestOperation = null;
+        var diagnosticScope = report.RuleDomainSchema.Status == ManagedComponentStatus.Ready
+            ? "Full"
+            : "PreMigration";
+        if (operations is not null && diagnosticScope == "Full")
+        {
+            try
+            {
+                latestOperation = (await operations.ListRecentAsync(null, 1, cancellationToken)).FirstOrDefault();
+            }
+            catch (Exception exception) when (exception is Microsoft.Data.SqlClient.SqlException or InvalidOperationException)
+            {
+                diagnosticScope = "Degraded";
+            }
+        }
+
         var implementationVersion = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "unknown";
         return new SanitizedDiagnosticReport(
             "1.0.0",
@@ -95,7 +127,10 @@ public sealed class ServiceDiagnostics(
             report.ErrorCode,
             report,
             "Credentials, connection strings, locators, Campaign Canon, GM Secrets, and private conversations are omitted.",
-            latestOperation);
+            latestOperation,
+            diagnosticScope,
+            report.SanitizedFileLogStatus,
+            report.SanitizedFileLogLocation);
     }
 }
 
@@ -107,7 +142,7 @@ public sealed class ServiceDiagnosticTools(IServiceDiagnostics diagnostics)
     public ManagedServiceCapabilities GetCapabilities() => diagnostics.GetCapabilities();
 
     [McpServerTool(Name = "ec_get_diagnostics", ReadOnly = true, Idempotent = true),
-     Description("Returns a sanitized provenance and service-status report without Campaign Canon or backend secrets.")]
+     Description("Returns schema-tolerant sanitized service diagnostics without Campaign Canon or backend secrets. It works without a campaign and degrades safely before supported migrations; follow its recommended action rather than retrying unrelated rule operations.")]
     public Task<SanitizedDiagnosticReport> GetReportAsync(
         [Description("Optional stable campaign identifier. Omit it for service/bootstrap diagnostics before a campaign exists.")] string? campaignId,
         CancellationToken cancellationToken) =>

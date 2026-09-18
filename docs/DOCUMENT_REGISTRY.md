@@ -369,6 +369,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | --- | --- | --- |
 | [Support Index](support/README.md) | Support-document navigation and privacy boundary | Routes contributors without becoming a defect tracker. |
 | [Community Feedback and Diagnostics](support/COMMUNITY_FEEDBACK_AND_DIAGNOSTICS.md) | Issue classification, sanitized diagnostics, reporting structure, provenance-aware routing, and feedback lifecycle | Helps prepare reports without submitting them silently or exposing Campaign Canon. |
+| [Errors and Portable Diagnostics](support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md) | Error identity, configuration discovery, diagnostic reliability levels, sanitization, consent, and provenance-aware support boundaries | Keeps recovery portable before migration and separates Error Dumps, optional Support Bundles, and external submission. |
 
 ## Interface Resolution
 

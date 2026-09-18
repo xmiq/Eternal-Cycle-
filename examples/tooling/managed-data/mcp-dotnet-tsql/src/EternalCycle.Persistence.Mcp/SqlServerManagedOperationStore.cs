@@ -38,6 +38,20 @@ public sealed class SqlServerManagedOperationStore(
         var now = DateTimeOffset.UtcNow;
         var operationId = $"OP-{Guid.NewGuid():N}";
         var correlationId = $"CORR-{Guid.NewGuid():N}";
+        await using (var ensureRuleset = Command(connection, transaction, """
+            IF NOT EXISTS (
+                SELECT 1
+                FROM {{schema}}.rulesets WITH (UPDLOCK, HOLDLOCK)
+                WHERE ruleset_id = @ruleset_id
+            )
+                INSERT INTO {{schema}}.rulesets (ruleset_id, display_name)
+                VALUES (@ruleset_id, @ruleset_id);
+            """))
+        {
+            ensureRuleset.Parameters.AddWithValue("@ruleset_id", request.RulesetId);
+            await ensureRuleset.ExecuteNonQueryAsync(cancellationToken);
+        }
+
         await using (var insert = Command(connection, transaction, """
             INSERT INTO {{schema}}.managed_operations (
                 operation_id, operation_kind, deduplication_key, correlation_id,

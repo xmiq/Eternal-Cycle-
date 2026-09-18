@@ -3,12 +3,14 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
 public enum RulePublicationStage
 {
+    ToolInvocation,
     AcquireSource,
     ResolveRef,
     ReadManifest,
@@ -30,7 +32,86 @@ public sealed class ManagedDiagnosticsOptions
 
     public string FallbackLogFile { get; init; } = string.Empty;
 
+    public bool DisableAutomaticFallback { get; init; }
+
     public TimeSpan PersistenceTimeout { get; init; } = TimeSpan.FromSeconds(10);
+}
+
+public enum SanitizedDiagnosticFallbackStatus
+{
+    ConfiguredAutomatically,
+    ConfiguredByOverride,
+    ExplicitlyDisabled,
+    InitializationFailed
+}
+
+public sealed record SanitizedDiagnosticFallbackState(
+    SanitizedDiagnosticFallbackStatus Status,
+    string? ResolvedPath,
+    string Detail)
+{
+    public bool Available => Status is
+        SanitizedDiagnosticFallbackStatus.ConfiguredAutomatically or
+        SanitizedDiagnosticFallbackStatus.ConfiguredByOverride;
+}
+
+public static class SanitizedDiagnosticFallbackBootstrap
+{
+    public static SanitizedDiagnosticFallbackState Establish(
+        IConfiguration configuration,
+        string? automaticBaseDirectory = null)
+    {
+        if (bool.TryParse(
+                configuration["EternalCycle:Diagnostics:DisableAutomaticFallback"],
+                out var disabled) &&
+            disabled)
+        {
+            return new(
+                SanitizedDiagnosticFallbackStatus.ExplicitlyDisabled,
+                null,
+                "The deployment explicitly disabled the automatic sanitized diagnostic fallback.");
+        }
+
+        var configured = configuration["EternalCycle:Diagnostics:FallbackLogFile"];
+        var path = !string.IsNullOrWhiteSpace(configured)
+            ? Path.GetFullPath(configured)
+            : automaticBaseDirectory is null
+                ? PhysicalManagedDiagnosticFileSink.ResolvePath(string.Empty)
+                : Path.Combine(
+                    Path.GetFullPath(automaticBaseDirectory),
+                    "EternalCycle",
+                    "logs",
+                    "managed-diagnostics.jsonl");
+        try
+        {
+            var directory = Path.GetDirectoryName(path);
+            if (!string.IsNullOrWhiteSpace(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            using var stream = new FileStream(
+                path,
+                FileMode.OpenOrCreate,
+                FileAccess.Write,
+                FileShare.ReadWrite);
+            return new(
+                string.IsNullOrWhiteSpace(configured)
+                    ? SanitizedDiagnosticFallbackStatus.ConfiguredAutomatically
+                    : SanitizedDiagnosticFallbackStatus.ConfiguredByOverride,
+                path,
+                string.IsNullOrWhiteSpace(configured)
+                    ? "A writable per-user sanitized diagnostic fallback was established automatically."
+                    : "A writable operator-overridden sanitized diagnostic fallback was established.");
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException)
+        {
+            return new(
+                SanitizedDiagnosticFallbackStatus.InitializationFailed,
+                path,
+                $"Automatic sanitized diagnostic fallback initialization failed with {exception.GetType().Name}.");
+        }
+    }
 }
 
 public sealed record ManagedDiagnosticContext(
@@ -265,7 +346,8 @@ public sealed class SqlServerManagedDiagnosticStore(
 }
 
 public sealed class PhysicalManagedDiagnosticFileSink(
-    IOptions<ManagedDiagnosticsOptions> options) : IManagedDiagnosticFileSink
+    IOptions<ManagedDiagnosticsOptions> options,
+    SanitizedDiagnosticFallbackState? startupState = null) : IManagedDiagnosticFileSink
 {
     private static readonly SemaphoreSlim WriteLock = new(1, 1);
     private readonly ManagedDiagnosticsOptions settings = options.Value;
@@ -274,7 +356,16 @@ public sealed class PhysicalManagedDiagnosticFileSink(
         ManagedOperationDiagnostic diagnostic,
         CancellationToken cancellationToken)
     {
-        var path = ResolvePath(settings.FallbackLogFile);
+        if (startupState is not null && !startupState.Available)
+        {
+            throw new IOException(startupState.Detail);
+        }
+
+        var path = startupState?.ResolvedPath ?? ResolvePath(settings.FallbackLogFile);
+        if (string.IsNullOrWhiteSpace(path))
+        {
+            throw new IOException("No sanitized diagnostic fallback path is available.");
+        }
         var directory = Path.GetDirectoryName(path);
         if (!string.IsNullOrWhiteSpace(directory))
         {

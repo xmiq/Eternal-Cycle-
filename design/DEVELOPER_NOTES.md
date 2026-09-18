@@ -3028,3 +3028,12 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **External boundary:** live SQL Server migration 007, slow remote acquisition, LM Studio, Unsloth Studio, client disconnect, service restart, progressive gameplay, and moving discovery-tag acceptance remain real-infrastructure work and are not claimed by repository tests.
 - **Current active task:** none after the FR-021 commit; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
 - **Exact resume point:** run Scenarios A-F in the MCP-only acceptance plan, record evidence, and promote no later revision without maintainer authorization.
+
+## FR-021 Corrective Maintenance - Pre-Migration Control Plane
+
+- **Evidence:** the interrupted reference-service pass exposed a schema-bound recovery loop: diagnostic and operation paths could touch post-007 tables while migration 007 was still required, leaving external clients with opaque tool failures instead of an actionable bootstrap path.
+- **Implemented:** database-independent configuration discovery; schema-safe pre-007 readiness, diagnostics, setup, and operation responses; a final semantic tool boundary; static error registry; automatic protected diagnostic fallback; bounded portable Error Dumps; and Apache-2.0 distribution metadata and packaging.
+- **Schema:** no new migration. Migration 007 keeps its additive intent; only its renderer tokens were corrected to the supported schema placeholders. Operation enqueue now ensures the referenced RuleSet identity exists in the same bounded transaction before creating the foreign-key-bound operation.
+- **Validation:** Release build passed with zero warnings/errors; 109 reference tests and the 1-test genuine LocalDB pre-007 fixture passed; 47 existing FR-021 and 35 control-plane assertions passed; full repository validation passed across 284 Markdown files and 7,127 relative links; full-checkout publish and standalone build both included distribution metadata, `LICENSE`, and `NOTICE`; no vendored binary or third-party source tree was detected.
+- **External boundary:** LM Studio/Unsloth interoperability, remote Git acquisition, production SQL Server authentication, and production restart behavior remain deployment acceptance rather than repository proof.
+- **Current active task:** none after this corrective commit; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.

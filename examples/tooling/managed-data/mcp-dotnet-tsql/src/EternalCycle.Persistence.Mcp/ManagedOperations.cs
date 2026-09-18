@@ -392,7 +392,9 @@ public sealed class ManagedOperationWorker(
 }
 
 [McpServerToolType]
-public sealed class ManagedOperationTools(IManagedOperationService operations)
+public sealed class ManagedOperationTools(
+    IManagedOperationService operations,
+    IManagedReadinessService? readiness = null)
 {
     [McpServerTool(Name = "ec_get_operation_status", ReadOnly = true, Idempotent = true),
      Description("Returns durable Managed Operation state, current stage, safe causal status, and result identity without requiring a campaign.")]
@@ -400,6 +402,12 @@ public sealed class ManagedOperationTools(IManagedOperationService operations)
         [Description("Operation ID returned by a Managed administrative action.")] string operationId,
         CancellationToken cancellationToken)
     {
+        var blocked = await PreMigrationBlockAsync<ManagedOperationStatus>(cancellationToken);
+        if (blocked is not null)
+        {
+            return blocked;
+        }
+
         var operation = await operations.GetAsync(operationId, cancellationToken);
         return operation is null
             ? new(false, "MANAGED_OPERATION_NOT_FOUND", "No Managed Operation with that ID exists.", null)
@@ -407,10 +415,53 @@ public sealed class ManagedOperationTools(IManagedOperationService operations)
     }
 
     [McpServerTool(Name = "ec_list_managed_operations", ReadOnly = true, Idempotent = true),
-     Description("Lists recent safe Managed Operation summaries so a client can recover after losing an immediate operation ID.")]
-    public Task<IReadOnlyList<ManagedOperationStatus>> ListRecentAsync(
+     Description("Lists recent safe Managed Operation summaries after the durable-operation schema exists. If migration is required, returns the supported migration recovery route rather than querying post-migration tables.")]
+    public async Task<ManagedOperationResult<IReadOnlyList<ManagedOperationStatus>>> ListRecentAsync(
         [Description("Optional operation kind filter; omit for all kinds.")] string? operationKind,
         [Description("Maximum results from 1 through 50.")] int maximumCount,
-        CancellationToken cancellationToken) =>
-        operations.ListRecentAsync(operationKind, maximumCount, cancellationToken);
+        CancellationToken cancellationToken)
+    {
+        var blocked = await PreMigrationBlockAsync<IReadOnlyList<ManagedOperationStatus>>(cancellationToken);
+        if (blocked is not null)
+        {
+            return blocked;
+        }
+
+        var result = await operations.ListRecentAsync(operationKind, maximumCount, cancellationToken);
+        return new(
+            true,
+            "MANAGED_OPERATION_LIST",
+            "Recent durable Managed Operations are available.",
+            result);
+    }
+
+    private async Task<ManagedOperationResult<T>?> PreMigrationBlockAsync<T>(CancellationToken cancellationToken)
+    {
+        if (readiness is null)
+        {
+            return null;
+        }
+
+        var report = await readiness.GetReadinessAsync(null, cancellationToken);
+        if (report.State is not (
+            ManagedReadinessState.ConfigurationRequired or
+            ManagedReadinessState.ConfigurationInvalid or
+            ManagedReadinessState.SetupRequired or
+            ManagedReadinessState.MigrationRequired))
+        {
+            return null;
+        }
+
+        return new(
+            false,
+            report.ErrorCode ?? "SETUP_REQUIRED",
+            report.Message,
+            default,
+            RetrySafe: false,
+            AdministrativeInterventionRequired: report.AdministrativeActionRequired,
+            BlockingCondition: report.BlockingCondition,
+            RequiredAction: report.RequiredAction,
+            AllowedNextActions: report.AllowedNextActions,
+            RecommendedNextAction: report.RecommendedNextAction);
+    }
 }

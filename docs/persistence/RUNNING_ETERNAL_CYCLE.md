@@ -29,7 +29,7 @@ SQL Server, MCP, GitHub, ChatGPT, Unsloth, SQLite, DuckDB, and Google Drive are 
 
 ## Managed Startup
 
-A Managed client first asks the selected service for structured capabilities and readiness. A healthy transport or datastore connection alone does not mean gameplay is ready.
+A Managed client first asks the selected service for configuration requirements, structured capabilities, and readiness. Configuration discovery requires no campaign or datastore connection and reports exact safe setting names without echoing credentials. A healthy transport or datastore connection alone does not mean gameplay is ready.
 
 The service may report:
 
@@ -48,11 +48,15 @@ The service may report:
 
 Administrative initialization is never inferred from connection success. The client previews the exact EC-owned scope, explains it in ordinary language, obtains explicit approval, and invokes a separately authorized setup capability. Repeated setup must be idempotent or safely report that no migration is needed.
 
+If the connected database predates the latest service migration, the base control plane stays usable. Readiness reports `MIGRATION_REQUIRED`; diagnostics avoid missing post-migration tables; operation tools return the migration recovery route; and an authorized operator can preview and apply the next bounded service-owned migration. The client does not need raw SQL, filesystem access, a special approval phrase, or a Campaign ID.
+
 If no Rule Source is configured, the service may offer the official Eternal Cycle repository described by authoritative distribution metadata. A user may instead authorize another compatible source or an offline local checkout. The successful choice is persisted and reused. The service, not the AI GM, acquires and compiles that source.
 
 Readiness is granular: `ServiceReady`, `PersistenceReady`, `RuleKernelReady`, `CampaignBootstrapReady`, `GameplayReady`, and `FullRulesetReady` are distinct claims. `GameplayReady` may become true before `FullRulesetReady`; a later action still waits when its dependency closure is `PENDING` or `FAILED`.
 
 Initial publication is a durable [Managed Operation](MANAGED_OPERATIONS.md). The initiating client may disconnect after receiving the Operation ID. On reconnect it reads status or recent operations; it does not restart publication blindly. Service diagnostics require no Campaign ID, while an optional Campaign ID adds campaign-specific routing and readiness.
+
+When startup or administration fails, the client preserves the semantic error code and follows its advertised recovery capability. Static error lookup and bounded Error Dumps remain available before migration. Preferred structured diagnostics use an automatic protected fallback when their primary sink is unavailable. Support Bundle creation and external report submission are later, optional, explicitly authorized actions.
 
 ## Direct Startup
 
@@ -79,3 +83,4 @@ When nothing is configured, an AI or human operator must inspect actual capabili
 - [Managed Operations](MANAGED_OPERATIONS.md)
 - [Direct Persistence Mode](DIRECT_PERSISTENCE_MODE.md)
 - [AI Session Start](../ai/AI_SESSION_START.md)
+- [Errors and Portable Diagnostics](../support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md)

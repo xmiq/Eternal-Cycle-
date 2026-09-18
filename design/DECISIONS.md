@@ -5337,3 +5337,35 @@ Eternal Cycle full-release tags are immutable. A target-version RC tag is a deli
 ## D-1334 — Deployment Findings Are Generalized by Invariant
 
 Every real-deployment finding is classified as reference-only, Managed-contract, or Eternal Cycle-wide before correction. The project generalizes the invariant revealed by an implementation failure, not the implementation accident, and records automated or real-deployment evidence at the layer it actually proves.
+
+## D-1335 — The Managed Base Control Plane Precedes Schema Readiness
+
+Configuration discovery, readiness, migration planning, semantic error lookup, and bounded Error Dumps remain callable before the latest Managed schema exists. A capability that requires a later table returns a structured migration-required result instead of querying that missing table or collapsing into a generic tool failure.
+
+## D-1336 — Managed Configuration Is Discoverable Without Revealing Secrets
+
+A reference Managed service exposes exact configuration keys and environment-variable names, requirement status, accepted forms, defaults, restart requirements, and operator audience without requiring a database. Sensitive configured values are never returned.
+
+## D-1337 — Every Tool Has a Fail-Safe Semantic Error Boundary
+
+Known Managed failures retain their semantic code, correlation identity, and recovery route across the external tool boundary. Unexpected failures become a stable internal-error response. A static bounded emergency error string remains available if ordinary error rendering fails.
+
+## D-1338 — Diagnostic Fallback Is Automatic and Independent
+
+The preferred structured diagnostic store may fall back automatically to a protected bounded local sink when unavailable. Ordinary users do not enable that safety net manually. General host logging remains separate, and failure of every diagnostic sink never masks or replaces the original operation failure.
+
+## D-1339 — Error Dumps Are Portable and Bounded
+
+An Error Dump is a provider-neutral, sanitized, bounded structured-and-text snapshot assembled from safely available evidence. It can be partial, requires no Campaign ID or initialized database, performs no network submission, and does not depend on a Support Bundle.
+
+## D-1340 — Diagnostic Collection and Submission Are Separate Consent Boundaries
+
+Static error lookup, Error Dump creation, optional Support Bundle creation, and external support submission are distinct reliability levels. Bundle creation requires an explicit local action; external submission separately requires destination-aware user consent. Lower levels never depend on higher levels.
+
+## D-1341 — Support Routing Follows Build Provenance
+
+Distribution metadata identifies the build's provenance and support-destination type. Official support metadata applies to the identified upstream distribution only. Derivative builds must identify their modifications and support destination and cannot imply endorsement, warranty, or support by the original author.
+
+## D-1342 — Eternal Cycle Uses Apache License 2.0
+
+The Eternal Cycle repository's original material is distributed under Apache License 2.0 with the repository `NOTICE` preserving original authorship and derivative-distribution boundaries. Packaged reference tooling carries `LICENSE`, `NOTICE`, and distribution metadata. Third-party dependencies and non-owned material retain their own licenses and are not relicensed by this decision.

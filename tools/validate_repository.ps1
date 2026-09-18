@@ -594,6 +594,19 @@ else {
     }
 }
 
+$fr021ControlPlaneHarnessPath = Join-Path $rootPath 'tools/test_fr021_control_plane_repair.ps1'
+if (-not (Test-Path -LiteralPath $fr021ControlPlaneHarnessPath)) {
+    Add-ValidationError 'Missing FR-021 control-plane repair regression harness.'
+}
+else {
+    try {
+        & $fr021ControlPlaneHarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-021 control-plane repair regression harness failed.'
+    }
+}
+
 $campaignModeHarnessPath = Join-Path $rootPath 'tools/test_release_neutral_campaign_modes.ps1'
 if (-not (Test-Path -LiteralPath $campaignModeHarnessPath)) {
     Add-ValidationError 'Missing release-neutral campaign-mode regression harness.'
@@ -1244,6 +1257,7 @@ Write-Output 'FR-018 Rule Compilation: source authority, 8K retrieval, world iso
 Write-Output 'FR-019 Managed Data Architecture: Direct/Managed strategy, namespaces, versioned publication, dependencies, diagnostics, and compatibility checked'
 Write-Output 'FR-020 Managed First-Run: readiness, gated bootstrap, source publication, campaign discovery, diagnostics, and RC boundary checked'
 Write-Output 'FR-021 Durable Managed Operations: background publication, restart recovery, progressive readiness, dynamic priority, diagnostics, approval, and RC provenance checked'
+Write-Output 'FR-021 Control-Plane Repair: pre-migration recovery, configuration discovery, fail-safe errors, portable diagnostics, and licensing checked'
 Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {

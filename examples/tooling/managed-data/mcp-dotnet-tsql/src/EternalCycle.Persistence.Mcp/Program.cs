@@ -2,8 +2,10 @@ using EternalCycle.Persistence.Mcp;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ModelContextProtocol.Protocol;
 
 var builder = Host.CreateApplicationBuilder(args);
+var diagnosticFallback = SanitizedDiagnosticFallbackBootstrap.Establish(builder.Configuration);
 
 builder.Logging.AddConsole(options =>
 {
@@ -17,14 +19,7 @@ if (!string.IsNullOrWhiteSpace(sanitizedLogFile))
 
 builder.Services
     .AddOptions<SqlServerPersistenceOptions>()
-    .Bind(builder.Configuration.GetSection("EternalCycle:Persistence"))
-    .Validate(
-        value => !string.IsNullOrWhiteSpace(value.ConnectionString),
-        "EternalCycle:Persistence:ConnectionString is required.")
-    .Validate(
-        ConfiguredCampaignSchemaResolver.IsValidOptions,
-        "EternalCycle persistence schema routing contains an invalid identifier or incomplete world binding.")
-    .ValidateOnStart();
+    .Bind(builder.Configuration.GetSection("EternalCycle:Persistence"));
 
 builder.Services
     .AddOptions<ManagedRuleServiceOptions>()
@@ -38,6 +33,8 @@ builder.Services
     .AddOptions<ManagedDiagnosticsOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Diagnostics"));
 
+builder.Services.AddSingleton(diagnosticFallback);
+builder.Services.AddSingleton<IManagedConfigurationService, ManagedConfigurationService>();
 builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
 builder.Services.AddSingleton<IRuleSourceConfigurationStore, SqlServerRuleSourceConfigurationStore>();
 builder.Services.AddSingleton<IRuleSourceProvider, GitRuleSourceProvider>();
@@ -50,6 +47,12 @@ builder.Services.AddSingleton<IManagedOperationService, ManagedOperationService>
 builder.Services.AddSingleton<IManagedDiagnosticStore, SqlServerManagedDiagnosticStore>();
 builder.Services.AddSingleton<IManagedDiagnosticFileSink, PhysicalManagedDiagnosticFileSink>();
 builder.Services.AddSingleton<IManagedDiagnosticRecorder, ManagedDiagnosticRecorder>();
+builder.Services.AddSingleton<IRecentManagedErrorStore, BoundedRecentManagedErrorStore>();
+builder.Services.AddSingleton<IManagedDiagnosticEvidenceReader, SqlServerManagedDiagnosticEvidenceReader>();
+builder.Services.AddSingleton<IManagedDistributionIdentityProvider, PackagedManagedDistributionIdentityProvider>();
+builder.Services.AddSingleton<IErrorDumpService, ErrorDumpService>();
+builder.Services.AddSingleton<IMcpToolExceptionBoundary, McpToolExceptionBoundary>();
+builder.Services.AddSingleton<IMcpToolInvocationGuard, McpToolInvocationGuard>();
 builder.Services.AddSingleton<ManagedRulePublicationCoordinator>();
 builder.Services.AddSingleton<IRulePublicationExecutor, ManagedRulePublicationExecutor>();
 builder.Services.AddSingleton<ManagedOperationProcessor>();
@@ -68,6 +71,35 @@ builder.Services.AddSingleton<IServiceDiagnostics, ServiceDiagnostics>();
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
+    .WithRequestFilters(filters =>
+    {
+        filters.AddCallToolFilter(next => async (context, cancellationToken) =>
+        {
+            var toolName = context.Params?.Name ?? "unknown-tool";
+            var guard = context.Services?.GetService<IMcpToolInvocationGuard>();
+            if (guard is not null)
+            {
+                return await guard.InvokeAsync(
+                    toolName,
+                    () => next(context, cancellationToken).AsTask(),
+                    cancellationToken);
+            }
+
+            var correlationId = McpToolFailureContract.NewCorrelationId();
+            try
+            {
+                return await next(context, cancellationToken);
+            }
+            catch
+            {
+                return new CallToolResult
+                {
+                    Content = [new TextContentBlock { Text = EmergencyErrorText.Create("INTERNAL_ERROR", correlationId, toolName) }],
+                    IsError = true
+                };
+            }
+        });
+    })
     .WithToolsFromAssembly();
 
 await builder.Build().RunAsync();

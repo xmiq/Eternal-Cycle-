@@ -7,6 +7,8 @@ namespace EternalCycle.Persistence.Mcp;
 public enum ManagedReadinessState
 {
     Ready,
+    ConfigurationRequired,
+    ConfigurationInvalid,
     SetupRequired,
     MigrationRequired,
     RuleSourceRequired,
@@ -24,6 +26,7 @@ public enum ManagedComponentStatus
     Missing,
     Outdated,
     NotConfigured,
+    Invalid,
     Unavailable,
     Empty,
     Inactive,
@@ -71,7 +74,14 @@ public sealed record ManagedReadinessReport(
     bool PersistenceReady = false,
     bool RuleKernelReady = false,
     bool CampaignBootstrapReady = false,
-    bool FullRulesetReady = false);
+    bool FullRulesetReady = false,
+    string? SanitizedFileLogStatus = null,
+    string? SanitizedFileLogLocation = null,
+    string? BlockingCondition = null,
+    string? RequiredAction = null,
+    IReadOnlyList<string>? AllowedNextActions = null,
+    string? RecommendedNextAction = null,
+    ManagedConfigurationReport? Configuration = null);
 
 public sealed record ManagedInfrastructureSnapshot(
     ManagedComponentStatus PersistenceConnection,
@@ -89,7 +99,10 @@ public sealed record ManagedInfrastructureSnapshot(
     ManagedCausalDiagnostic? LatestRelevantFailure = null,
     bool? RuleKernelReady = null,
     bool? CampaignBootstrapReady = null,
-    bool? FullRulesetReady = null);
+    bool? FullRulesetReady = null,
+    string? SanitizedFileLogStatus = null,
+    string? SanitizedFileLogLocation = null,
+    ManagedConfigurationReport? Configuration = null);
 
 public interface IManagedInfrastructureInspector
 {
@@ -143,7 +156,23 @@ public static class ManagedReadinessEvaluator
         bool gameplayReady;
         bool administrativeActionRequired;
 
-        if (snapshot.PersistenceConnection is not ManagedComponentStatus.Ready)
+        if (snapshot.Configuration?.State == "ConfigurationRequired")
+        {
+            state = ManagedReadinessState.ConfigurationRequired;
+            errorCode = "CONFIGURATION_REQUIRED";
+            message = snapshot.Configuration.Message;
+            gameplayReady = false;
+            administrativeActionRequired = true;
+        }
+        else if (snapshot.Configuration?.State == "ConfigurationInvalid")
+        {
+            state = ManagedReadinessState.ConfigurationInvalid;
+            errorCode = "CONFIGURATION_INVALID";
+            message = snapshot.Configuration.Message;
+            gameplayReady = false;
+            administrativeActionRequired = true;
+        }
+        else if (snapshot.PersistenceConnection is not ManagedComponentStatus.Ready)
         {
             state = ManagedReadinessState.Error;
             errorCode = snapshot.FailureCode ?? "PERSISTENCE_UNAVAILABLE";
@@ -244,6 +273,7 @@ public static class ManagedReadinessEvaluator
             administrativeActionRequired = false;
         }
 
+        var recovery = RecoveryFor(state);
         return new ManagedReadinessReport(
             state,
             gameplayReady,
@@ -266,18 +296,63 @@ public static class ManagedReadinessEvaluator
             PersistenceReady: persistenceReady,
             RuleKernelReady: ruleKernelReady,
             CampaignBootstrapReady: campaignBootstrapReady,
-            FullRulesetReady: fullRulesetReady);
+            FullRulesetReady: fullRulesetReady,
+            SanitizedFileLogStatus: snapshot.SanitizedFileLogStatus,
+            SanitizedFileLogLocation: snapshot.SanitizedFileLogLocation,
+            BlockingCondition: recovery.BlockingCondition,
+            RequiredAction: recovery.RequiredAction,
+            AllowedNextActions: recovery.AllowedNextActions,
+            RecommendedNextAction: recovery.RecommendedNextAction,
+            Configuration: snapshot.Configuration);
     }
+
+    private static RecoveryGuidance RecoveryFor(ManagedReadinessState state) => state switch
+    {
+        ManagedReadinessState.ConfigurationRequired => new(
+            "ConfigurationRequired",
+            "Configure the required host values reported by the running MCP and restart it.",
+            ["ec_get_configuration_requirements", "ec_service_capabilities"],
+            "ec_get_configuration_requirements"),
+        ManagedReadinessState.ConfigurationInvalid => new(
+            "ConfigurationInvalid",
+            "Correct the invalid host values reported by the running MCP and restart it.",
+            ["ec_get_configuration_requirements", "ec_service_capabilities"],
+            "ec_get_configuration_requirements"),
+        ManagedReadinessState.SetupRequired or ManagedReadinessState.MigrationRequired => new(
+            state.ToString(),
+            "Preview supported Eternal Cycle migrations, obtain explicit user approval, then initialize the service.",
+            ["ec_get_setup_plan", "ec_initialize_service", "ec_get_diagnostics"],
+            "ec_get_setup_plan"),
+        ManagedReadinessState.RuleSourceRequired => new(
+            "RuleSourceRequired",
+            "Select an approved Stable or Prerelease Rule Source after setup is complete.",
+            ["ec_configure_rule_source", "ec_get_diagnostics"],
+            "ec_configure_rule_source"),
+        ManagedReadinessState.RulePublicationRequired => new(
+            "RulePublicationRequired",
+            "Queue initial rule publication after the Rule Source is configured.",
+            ["ec_publish_initial_rules", "ec_get_operation_status"],
+            "ec_publish_initial_rules"),
+        _ => new(null, null, [], null)
+    };
 
     private static ReadinessComponent Component(ManagedComponentStatus status, string name) =>
         new(status, $"{name}: {status}.");
+
+    private sealed record RecoveryGuidance(
+        string? BlockingCondition,
+        string? RequiredAction,
+        IReadOnlyList<string> AllowedNextActions,
+        string? RecommendedNextAction);
 }
 
 public sealed class SqlServerManagedInfrastructureInspector(
     IOptions<SqlServerPersistenceOptions> persistenceOptions,
     IOptions<ManagedRuleServiceOptions> ruleOptions,
     IOptions<ManagedAdministrationOptions> administrationOptions,
-    ICampaignSchemaResolver schemaResolver) : IManagedInfrastructureInspector
+    ICampaignSchemaResolver schemaResolver,
+    IManagedConfigurationService? configuration = null,
+    SanitizedDiagnosticFallbackState? diagnosticFallback = null) : IManagedInfrastructureInspector
 {
     internal static readonly string[] CampaignTables =
     [
@@ -309,6 +384,12 @@ public sealed class SqlServerManagedInfrastructureInspector(
         string? campaignId,
         CancellationToken cancellationToken)
     {
+        var configurationReport = configuration?.GetReport();
+        if (configurationReport is { Ready: false })
+        {
+            return ConfigurationFailure(configurationReport);
+        }
+
         CampaignSchemaRoute route;
         try
         {
@@ -394,11 +475,14 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 activeCompatible,
                 campaign,
                 latestUpdateOutcome,
-                !string.IsNullOrWhiteSpace(administration.SanitizedLogFile),
+                DiagnosticFallbackAvailable,
                 LatestRelevantFailure: latestRelevantFailure,
                 RuleKernelReady: ruleKernelReady,
                 CampaignBootstrapReady: campaignBootstrapReady,
-                FullRulesetReady: fullRulesetReady);
+                FullRulesetReady: fullRulesetReady,
+                SanitizedFileLogStatus: DiagnosticFallbackStatus,
+                SanitizedFileLogLocation: DiagnosticFallbackLocation,
+                Configuration: configurationReport);
         }
         catch (SqlException)
         {
@@ -422,8 +506,50 @@ public sealed class SqlServerManagedInfrastructureInspector(
             false,
             ManagedComponentStatus.Error,
             null,
-            !string.IsNullOrWhiteSpace(administration.SanitizedLogFile),
-            code);
+            DiagnosticFallbackAvailable,
+            code,
+            SanitizedFileLogStatus: DiagnosticFallbackStatus,
+            SanitizedFileLogLocation: DiagnosticFallbackLocation,
+            Configuration: configuration?.GetReport());
+
+    private ManagedInfrastructureSnapshot ConfigurationFailure(ManagedConfigurationReport report) =>
+        new(
+            report.State == "ConfigurationRequired"
+                ? ManagedComponentStatus.NotConfigured
+                : ManagedComponentStatus.Invalid,
+            ManagedComponentStatus.NotRequested,
+            ManagedComponentStatus.NotRequested,
+            ManagedComponentStatus.NotRequested,
+            0,
+            null,
+            null,
+            false,
+            ManagedComponentStatus.NotRequested,
+            null,
+            DiagnosticFallbackAvailable,
+            report.State == "ConfigurationRequired" ? "CONFIGURATION_REQUIRED" : "CONFIGURATION_INVALID",
+            SanitizedFileLogStatus: DiagnosticFallbackStatus,
+            SanitizedFileLogLocation: DiagnosticFallbackLocation,
+            Configuration: report);
+
+    private bool DiagnosticFallbackAvailable =>
+        diagnosticFallback?.Available ?? false;
+
+    private string DiagnosticFallbackStatus =>
+        diagnosticFallback?.Status.ToString() ??
+        (!string.IsNullOrWhiteSpace(administration.SanitizedLogFile)
+            ? "GeneralLoggingOnly"
+            : SanitizedDiagnosticFallbackStatus.InitializationFailed.ToString());
+
+    private string? DiagnosticFallbackLocation => diagnosticFallback?.Status switch
+    {
+        SanitizedDiagnosticFallbackStatus.ConfiguredAutomatically => "PerUserApplicationData",
+        SanitizedDiagnosticFallbackStatus.ConfiguredByOverride => "OperatorConfiguredPath",
+        SanitizedDiagnosticFallbackStatus.ExplicitlyDisabled => "Disabled",
+        SanitizedDiagnosticFallbackStatus.InitializationFailed => "Unavailable",
+        _ when !string.IsNullOrWhiteSpace(administration.SanitizedLogFile) => "GeneralLoggingOnly",
+        _ => null
+    };
 
     private async Task<bool> RuleSourceCompatibilityColumnsReadyAsync(
         SqlConnection connection,

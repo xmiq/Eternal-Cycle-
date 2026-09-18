@@ -17,24 +17,45 @@ Stable is the normal default and must not silently use unreleased content. Until
 
 ## First-Run Matrix
 
-1. Connect to a clean database and verify `SETUP_REQUIRED`, not a generic invocation error.
-2. Verify setup cannot run before explicit approval.
-3. Approve setup and verify only configured Eternal Cycle schemas/tables are created.
-4. Repeat setup and verify a safe no-op.
-5. Verify diagnostics before rule publication reports an initialized but empty Rule Store.
-6. Verify no source reports `RULE_SOURCE_REQUIRED`.
-7. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
-8. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
-9. Repeat with an isolated custom compatible source to prove override behavior.
-10. Initiate publication and verify the call returns promptly with a durable Operation ID, without requiring the client request to remain open for acquisition, compilation, validation, publication, or activation.
-11. Poll or rediscover the operation independently. Verify the Runtime Rule Kernel and Campaign Bootstrap closure become ready, `GameplayReady` becomes true while `FullRulesetReady` may remain false, and remaining rules continue preparation under service-owned timeout policy.
-12. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
-13. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
-14. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
-15. Stop the client during publication, reconnect, and verify recent-operation discovery recovers the authoritative status without cancelling service-owned work.
-16. Restart the service while an operation is `Running`; verify it cannot remain phantom-running, is recovered as `Interrupted`, and is safely reclaimed through idempotent publication or left retryable.
-17. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
-18. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or protected physical fallback contains useful redacted evidence with no secrets.
+1. Before database access, call `ec_get_configuration_requirements`. Verify exact environment names and validation status are returned, and verify no sensitive value is echoed.
+2. Connect to a clean database and verify `SETUP_REQUIRED`, not a generic invocation error.
+3. Call `ec_list_error_codes`, `ec_get_error_code`, and `ec_get_error_dump`. Verify error lookup and a bounded partial dump work without campaign state or initialized SQL diagnostics.
+4. Verify setup cannot run before explicit approval.
+5. Approve setup and verify only configured Eternal Cycle schemas/tables are created.
+6. Repeat setup and verify a safe no-op.
+7. Verify diagnostics before rule publication reports an initialized but empty Rule Store.
+8. Verify no source reports `RULE_SOURCE_REQUIRED`.
+9. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
+10. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
+11. Repeat with an isolated custom compatible source to prove override behavior.
+12. Initiate publication and verify the call returns promptly with a durable Operation ID, without requiring the client request to remain open for acquisition, compilation, validation, publication, or activation.
+13. Poll or rediscover the operation independently. Verify the Runtime Rule Kernel and Campaign Bootstrap closure become ready, `GameplayReady` becomes true while `FullRulesetReady` may remain false, and remaining rules continue preparation under service-owned timeout policy.
+14. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
+15. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
+16. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
+17. Stop the client during publication, reconnect, and verify recent-operation discovery recovers the authoritative status without cancelling service-owned work.
+18. Restart the service while an operation is `Running`; verify it cannot remain phantom-running, is recovered as `Interrupted`, and is safely reclaimed through idempotent publication or left retryable.
+19. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
+20. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or automatic protected physical fallback contains useful redacted evidence with no secrets.
+
+## Genuine Pre-007 Upgrade Regression
+
+Use a database initialized through migrations `001` to `006` with one preserved campaign, then connect the current service without manually applying migration `007`.
+
+1. Call `ec_get_configuration_requirements`; verify configuration is discoverable without schema access.
+2. Call `ec_get_readiness`; expect `MIGRATION_REQUIRED` and a supported recovery capability, not a missing-table exception.
+3. Call `ec_get_setup_plan`; verify only unapplied migration `007` is planned.
+4. Call `ec_get_diagnostics`; verify its scope is explicitly pre-migration and it does not query operation tables.
+5. Call `ec_get_error_dump`; verify a bounded partial dump is returned even though post-007 evidence is unavailable.
+6. Call `ec_get_operation_status` and `ec_list_managed_operations`; verify structured `MIGRATION_REQUIRED` responses and no operation-table query failure.
+7. Attempt initialization without approval; verify no mutation.
+8. Give natural informed approval and call `ec_initialize_service`; verify migration `007` applies and validates without requiring a literal magic phrase or raw SQL.
+9. Verify the pre-existing campaign remains intact.
+10. Call readiness; expect `RULE_SOURCE_REQUIRED` rather than migration failure.
+11. Configure a compatible source, approve publication, and call `ec_publish_initial_rules`; verify a durable queued Operation ID is returned.
+12. Rediscover the operation independently and verify it transitions under the hosted worker.
+
+The external LM Studio acceptance sequence uses these same MCP calls. The user must not be asked for repository access, direct database access, migration filenames, schema names, or developer paths.
 
 ## MCP-Only Gameplay Run
 
@@ -57,11 +78,11 @@ Stable is the normal default and must not silently use unreleased content. Until
 
 ## Failure Cases
 
-Exercise missing campaign schema, missing rule schema, missing source, source unavailable, remote acquisition timeout, ref resolution, missing manifest, unsupported manifest/compiler contract, source read, failed compilation, failed validation, SQL staging/publication, activation, cancellation, no published release, no active release, incompatible release, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. Confirm the model can distinguish these cases through MCP readiness, setup responses, and authorized diagnostics without filesystem, shell, Git, source-code, or direct-SQL access. Confirm SQL diagnostic failure uses the physical fallback, and failure of both sinks still preserves the original operation error. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets, including in verbose mode.
+Exercise missing campaign schema, missing rule schema, pre-007 operation lookup, missing source, source unavailable, remote acquisition timeout, ref resolution, missing manifest, unsupported manifest/compiler contract, source read, failed compilation, failed validation, SQL staging/publication, activation, cancellation, no published release, no active release, incompatible release, and unavailable persistence. Every expected state must return a sanitized semantic code and remedy. Confirm the model can distinguish these cases through MCP readiness, setup responses, static error lookup, Error Dumps, and authorized diagnostics without filesystem, shell, Git, source-code, or direct-SQL access. Confirm SQL diagnostic failure uses the automatic physical fallback, and failure of both sinks still preserves the original operation error through the outer tool boundary. No case may expose connection strings, credentials, source credentials, filesystem details, Campaign Canon, or GM Secrets, including in verbose mode.
 
 ## Evidence and Pass Boundary
 
-The run passes only when SQL inspection, service diagnostics, MCP traces, restart/resume behavior, and receipts agree. Unit-test fakes cannot establish this acceptance result. Document any host that hides stderr and confirm the optional sanitized file log contains useful category and exception-type evidence without secrets.
+The run passes only when SQL inspection, service diagnostics, MCP traces, restart/resume behavior, and receipts agree. Unit-test fakes and the repository's LocalDB migration fixture cannot establish external-client interoperability. Document any host that hides stderr and confirm the automatic diagnostic fallback contains correlated redacted evidence; optional general host logging remains a separate operator choice.
 
 ## Required Real-Deployment Scenarios
 

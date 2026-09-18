@@ -17,7 +17,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 
 ## Project Status
 
-**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 and FR-018 established portable persistence and selective rule retrieval; FR-019 consolidated them into vendor-neutral `DIRECT` and `MANAGED` strategies; FR-020 adds reference-service first-run readiness, gated bootstrap, durable Rule Source selection, and campaign discovery. These are post-v1 developments and do not change the historical v1.0.0 tag or declare v1.1.0 released.
+**Eternal Cycle v1.0.0 — Release 1. Status: Released.** Phases 0 through 12 are complete. Post-release evidence and owner-authorized evolution continue through **Phase 13 — Future Revisions**. FR-017 through FR-021 add portable persistence, selective rule retrieval, vendor-neutral `DIRECT` and `MANAGED` strategies, first-run bootstrap, and durable progressive Managed publication. The latest corrective maintenance makes the reference control plane recoverable before migration and adds fail-safe portable diagnostics. These post-v1 developments do not change the historical v1.0.0 tag or declare v1.1.0 released.
 
 ## Core Pillars
 
@@ -82,6 +82,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`examples/tooling/managed-data/mcp-dotnet-tsql/README.md`](examples/tooling/managed-data/mcp-dotnet-tsql/README.md) - optional .NET/MCP/T-SQL Managed Data Service reference implementation.
 - [`examples/tooling/managed-data/mcp-dotnet-tsql/MCP_ONLY_ACCEPTANCE_TEST.md`](examples/tooling/managed-data/mcp-dotnet-tsql/MCP_ONLY_ACCEPTANCE_TEST.md) - real-infrastructure acceptance test with no repository or direct database access by the AI.
 - [`SUPPORT.md`](SUPPORT.md) - official support provenance and issue-report routing.
+- [`docs/support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md`](docs/support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md) - configuration discovery, semantic errors, automatic diagnostic fallback, bounded Error Dumps, optional Support Bundles, and explicit submission consent.
 - [`docs/gm/CONSEQUENCE_RESOLUTION.md`](docs/gm/CONSEQUENCE_RESOLUTION.md) - bounded resolution of immediate outcomes, costs, traces, affected subjects, responses, persistence, and causal handoffs.
 - [`docs/gm/UNCERTAINTY_HANDLING.md`](docs/gm/UNCERTAINTY_HANDLING.md) - information views, uncertainty sources, evidence, deterministic and random resolution, deferral, fair secrecy, and correction.
 - [`docs/gm/REINCARNATION_GENERATION.md`](docs/gm/REINCARNATION_GENERATION.md) - world-grounded candidate sourcing, eligibility, personhood, Reincarnation Modes, selection handoff, and pre-embodiment revalidation.
@@ -154,6 +155,10 @@ pwsh -NoProfile -File .\tools\validate_repository.ps1
 ```
 
 The validator checks local Markdown links and anchors, navigation and registry coverage, template coverage, orphan documents, roadmap declarations, duplicate terminology headings, and forbidden campaign-data directories.
+
+## License and Support Provenance
+
+Eternal Cycle is licensed under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for authorship and distribution-provenance notices. Derivative distributions must identify their modifications and support destination; redistribution does not imply endorsement, warranty, or support by the original author. Bundled third-party dependencies retain their own licenses.
 
 ## Current Status
 

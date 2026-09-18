@@ -54,7 +54,9 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - durable queued/running/completed Managed Operations with deduplication, independent status discovery, startup interruption recovery, and service-owned timeouts;
 - fresh-database worker startup that waits for authorized migration 007 instead of requiring the operation tables to pre-exist;
 - progressive per-source readiness, dependency-aware minimum closure, manifest preparation tiers, and gameplay-driven priority boosts;
-- SQL-first Managed-operation diagnostics with a protected local physical fallback;
+- SQL-first Managed-operation diagnostics with a zero-configuration protected local physical fallback;
+- a database-independent configuration contract, static semantic error registry, bounded portable Error Dump, and final tool exception boundary;
+- structured pre-migration recovery that does not query post-migration operation tables;
 - optional sanitized general file logging for hosts that hide stderr.
 
 The reference does not implement PostgreSQL, MySQL, document, graph, key/value, or indexed-file adapters. Those are contract-compatible extension families, not claimed implementations.
@@ -64,12 +66,16 @@ The reference does not implement PostgreSQL, MySQL, document, graph, key/value, 
 | Tool | Purpose |
 | --- | --- |
 | `ec_service_capabilities` | Identify this reference implementation and its semantic capability set. |
+| `ec_get_configuration_requirements` | Return exact safe configuration keys, environment names, status, defaults, accepted forms, and restart requirements without requiring a database. |
 | `ec_persistence_status` | Return service-backed campaign status. |
 | `ec_read_records` | Read exact canonical owner-domain and stable-record addresses. |
 | `ec_commit_changes` | Stage, validate, activate, read back, and receipt one complete transaction. |
 | `ec_retry_persistence` | Resume a stable transaction without replaying gameplay. |
 | `ec_get_rule_context` | Retrieve an already-published bounded Rule Packet. |
 | `ec_get_diagnostics` | Return sanitized implementation, rules, source, namespace, and update provenance. |
+| `ec_list_error_codes` | List the static semantic error registry without requiring a database or Campaign ID. |
+| `ec_get_error_code` | Explain one stable error code and its retry, intervention, and recovery semantics. |
+| `ec_get_error_dump` | Return a bounded sanitized structured-and-text diagnostic snapshot; partial evidence is valid. |
 | `ec_get_readiness` | Return structured setup and gameplay readiness without mutation. |
 | `ec_get_operation_status` | Return durable operation state, current stage, causal status, and result identity. |
 | `ec_list_managed_operations` | Rediscover recent operations after a client disconnect or lost immediate response. |
@@ -93,6 +99,13 @@ No tool accepts arbitrary SQL, a caller-supplied schema, a connection string, or
 ```powershell
 dotnet build examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/EternalCycle.Persistence.Mcp.csproj
 dotnet test examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/EternalCycle.Persistence.Mcp.Tests.csproj
+```
+
+The normal test run does not require SQL Server. To run the genuine pre-007 LocalDB migration regression on Windows:
+
+```powershell
+$env:ETERNAL_CYCLE_RUN_SQL_INTEGRATION = "1"
+dotnet test examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/EternalCycle.Persistence.Mcp.Tests.csproj --filter FullyQualifiedName~PreMigrationControlPlaneIntegrationTests
 ```
 
 ## T-SQL Namespaces
@@ -176,10 +189,13 @@ Managed diagnostic configuration includes:
 ```text
 EternalCycle:Diagnostics:VerboseErrors = false
 EternalCycle:Diagnostics:FallbackLogFile = <optional protected path>
+EternalCycle:Diagnostics:DisableAutomaticFallback = false
 EternalCycle:Diagnostics:PersistenceTimeout = 00:00:10
 ```
 
-`VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
+`VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the automatic default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. `FallbackLogFile` is an advanced path override; `DisableAutomaticFallback=true` explicitly disables this safety net. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
+
+Call `ec_get_configuration_requirements` to discover all exact configuration and environment-variable names (`:` becomes `__`), validation status, accepted forms, and restart requirements. Sensitive values are never returned. A generic startup error is not a substitute for this contract.
 
 The packaged `distribution-metadata.json` identifies the official repository, historical product release tag, compatible Stable and Prerelease Rule Source refs, and source manifest. Product version and Rule Source channel are independent: `VERSION` remains `1.0.0`, and the immutable `v1.0.0` tag remains historical provenance even though it predates the Managed manifest contract. Stable is the default and never falls forward to unreleased content. If no compatible Stable source is published, setup returns `RULE_SOURCE_INCOMPATIBLE`; an administrator must explicitly select Prerelease for current development testing.
 
@@ -190,6 +206,8 @@ The reference project resolves distribution metadata from the repository root wh
 The manifest declares its format, compiler contract, RuleSet, repository version, and required sources. Missing or unsupported manifest contracts fail as non-retryable `RULE_SOURCE_INCOMPATIBLE`, rather than as transient network failures. Remote clone and fetch use the longer `AcquisitionTimeout`; local `rev-parse`, `show`, and object inspection use `ProcessTimeout`. Cancellation attempts to terminate the process tree and bounds cleanup and redirected-reader waits by `TerminationGracePeriod`. Valid no-checkout caches and locally available immutable revisions are reused when update policy permits, while incomplete clone directories are discarded before retry. A failed source check or candidate preserves the active validated Rule Release. `Disabled` means an explicit administrator chose offline update behavior; it does not prevent an approved one-time initial publication.
 
 General sanitized host logging is disabled unless `SanitizedLogFile` is set. It records timestamp, level, category, event, message, and exception type, but omits exception text. This is separate from the Managed-operation diagnostic fallback, which is available when SQL diagnostic persistence fails. Both paths exclude credentials, connection strings, Campaign Canon, and GM Secrets.
+
+The service is licensed under the repository's [Apache License 2.0](../../../../LICENSE). Packaged output includes `LICENSE`, `NOTICE`, and `distribution-metadata.json`. `NOTICE` identifies the original project and explains that derivative distributions are independent and do not imply endorsement, warranty, or support. Dependencies retain their own licenses; this repository does not relicense third-party packages.
 
 ## Campaign Transactions
 
@@ -206,12 +224,12 @@ Candidate campaign records remain inactive until the complete Affected Set valid
 
 ## Validation Boundary
 
-The repository tests use fakes, the official manifest, and local Git fixtures for no-checkout acquisition, durable worker recovery, publication, bounded write planning, progressive readiness, dynamic priority, fallback, activation, filtering, diagnostics, authorization, campaign selection, cancellation, and routing. They do not prove live SQL Server migration/transaction/concurrency, remote GitHub acquisition, authentication, backup/recovery, sustained process restart across real infrastructure, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
+The repository tests use fakes, the official manifest, local Git fixtures, and an opt-in genuine LocalDB pre-007 fixture for no-checkout acquisition, durable worker recovery, publication, bounded write planning, progressive readiness, dynamic priority, configuration discovery, pre-migration repair, fail-safe errors, Error Dumps, fallback, activation, filtering, diagnostics, authorization, campaign selection, cancellation, and routing. They do not prove remote GitHub acquisition, external SQL Server authentication, backup/recovery, sustained process restart across a production deployment, or cross-client MCP interoperability. Run the [Managed/MCP-Only Acceptance Test](MCP_ONLY_ACCEPTANCE_TEST.md) before treating a deployment as ready.
 
 ## Troubleshooting
 
 - `RULE_SCHEMA_MISSING`: preview and approve EC-owned initialization.
-- `MIGRATION_REQUIRED`: run supported bootstrap; partial unknown schemas require administrator review.
+- `MIGRATION_REQUIRED`: use readiness and `ec_get_setup_plan`, obtain informed approval, then run supported bootstrap; operation tools remain callable but do not query missing tables. Partial unknown schemas require administrator review.
 - `RULE_SOURCE_NOT_CONFIGURED`: select the official source or a compatible override.
 - `NO_PUBLISHED_RULE_RELEASE`: approve initial publication.
 - `NO_ACTIVE_RULE_RELEASE`: follow the configured activation policy.
@@ -227,4 +245,6 @@ The repository tests use fakes, the official manifest, and local Git fixtures fo
 - `MANAGED_OPERATION_INTERRUPTED`: the service detected lost execution ownership after restart and will reclaim idempotent work or leave a retryable failure.
 - `RULE_PUBLICATION_CANCELLED`: retry safely; the service reuses any candidate stage that committed before cancellation.
 - `CAMPAIGN_NOT_FOUND`: list campaigns or use the authorized creation path.
-- generic host error with hidden stderr: use the returned correlation ID, inspect the SQL diagnostic record or protected physical fallback, and optionally enable verbose errors in a trusted development environment.
+- generic host error with hidden stderr: call `ec_get_error_code` and `ec_get_error_dump`, use the returned correlation ID, inspect the SQL diagnostic record or automatic protected physical fallback, and optionally enable verbose errors in a trusted development environment.
+
+The [portable error and diagnostic hierarchy](../../../../docs/support/ERRORS_AND_PORTABLE_DIAGNOSTICS.md) separates static error lookup, bounded Error Dumps, normal diagnostics, optional Support Bundles, and explicitly authorized external submission.

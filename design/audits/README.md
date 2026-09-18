@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-021 Pre-Migration Control-Plane Repair Audit](FR_021_PRE_MIGRATION_CONTROL_PLANE_REPAIR_AUDIT.md) - schema-safe base control plane, configuration discovery, semantic error boundary, automatic diagnostic fallback, bounded Error Dumps, licensing/provenance, genuine pre-007 migration regression, and external acceptance boundary.
 - [FR-021 Durable Managed Operations and Progressive Rule Readiness Audit](FR_021_DURABLE_MANAGED_OPERATIONS_AUDIT.md) - asynchronous publication, worker recovery, progressive closures, dynamic priority, campaign-free diagnostics, informed approval, moving RC provenance, regressions, and real-acceptance boundary.
 - [FR-019 Managed Data Architecture and Rule Publication Audit](FR_019_MANAGED_DATA_ARCHITECTURE_AUDIT.md) - Direct/Managed strategy correction, sticky selection, Logical Data Namespaces, service-owned rule publication, optional reference tooling, support, compatibility, and real-infrastructure boundary.
 - [FR-020 Managed First-Run Bootstrap Audit](FR_020_MANAGED_FIRST_RUN_BOOTSTRAP_AUDIT.md) - real-deployment root cause, structured readiness, gated EC-owned setup, source and campaign UX, semantic diagnostics, regressions, and RC acceptance boundary.

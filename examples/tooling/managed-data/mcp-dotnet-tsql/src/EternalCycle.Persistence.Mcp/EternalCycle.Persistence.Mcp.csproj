@@ -9,8 +9,16 @@
     <EternalCycleRepositoryRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\..\..\..'))</EternalCycleRepositoryRoot>
     <OfficialDistributionMetadataRepositorySource>$([System.IO.Path]::Combine('$(EternalCycleRepositoryRoot)', 'DISTRIBUTION.json'))</OfficialDistributionMetadataRepositorySource>
     <OfficialDistributionMetadataLocalSource>$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', 'DISTRIBUTION.json'))</OfficialDistributionMetadataLocalSource>
+    <RepositoryLicenseSource>$([System.IO.Path]::Combine('$(EternalCycleRepositoryRoot)', 'LICENSE'))</RepositoryLicenseSource>
+    <RepositoryNoticeSource>$([System.IO.Path]::Combine('$(EternalCycleRepositoryRoot)', 'NOTICE'))</RepositoryNoticeSource>
+    <LocalLicenseSource>$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', 'LICENSE'))</LocalLicenseSource>
+    <LocalNoticeSource>$([System.IO.Path]::Combine('$(MSBuildThisFileDirectory)', 'NOTICE'))</LocalNoticeSource>
     <OfficialDistributionMetadataSource Condition="Exists('$(OfficialDistributionMetadataRepositorySource)')">$(OfficialDistributionMetadataRepositorySource)</OfficialDistributionMetadataSource>
     <OfficialDistributionMetadataSource Condition="'$(OfficialDistributionMetadataSource)' == '' and Exists('$(OfficialDistributionMetadataLocalSource)')">$(OfficialDistributionMetadataLocalSource)</OfficialDistributionMetadataSource>
+    <DistributionLicenseSource Condition="Exists('$(RepositoryLicenseSource)')">$(RepositoryLicenseSource)</DistributionLicenseSource>
+    <DistributionLicenseSource Condition="'$(DistributionLicenseSource)' == '' and Exists('$(LocalLicenseSource)')">$(LocalLicenseSource)</DistributionLicenseSource>
+    <DistributionNoticeSource Condition="Exists('$(RepositoryNoticeSource)')">$(RepositoryNoticeSource)</DistributionNoticeSource>
+    <DistributionNoticeSource Condition="'$(DistributionNoticeSource)' == '' and Exists('$(LocalNoticeSource)')">$(LocalNoticeSource)</DistributionNoticeSource>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,21 +46,41 @@
           Link="distribution-metadata.json"
           CopyToOutputDirectory="PreserveNewest"
           CopyToPublishDirectory="PreserveNewest" />
+    <None Include="$(DistributionLicenseSource)"
+          Link="LICENSE"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <None Include="$(DistributionNoticeSource)"
+          Link="NOTICE"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
 
   <Target Name="ValidateOfficialDistributionMetadataSource" BeforeTargets="PrepareForBuild">
     <Error Condition="!Exists('$(OfficialDistributionMetadataSource)')"
            Text="Eternal Cycle distribution metadata must resolve from the repository checkout or the packaged project directory relative to this project file." />
+    <Error Condition="!Exists('$(DistributionLicenseSource)')"
+           Text="Eternal Cycle distributions require an Apache-2.0 LICENSE beside the repository root or packaged project." />
+    <Error Condition="!Exists('$(DistributionNoticeSource)')"
+           Text="Eternal Cycle distributions require a NOTICE beside the repository root or packaged project." />
   </Target>
 
   <Target Name="ValidateOfficialDistributionMetadataOutput" AfterTargets="CopyFilesToOutputDirectory">
     <Error Condition="!Exists('$(TargetDir)distribution-metadata.json')"
            Text="Eternal Cycle distribution metadata was not copied to the build output." />
+    <Error Condition="!Exists('$(TargetDir)LICENSE')"
+           Text="Eternal Cycle LICENSE was not copied to the build output." />
+    <Error Condition="!Exists('$(TargetDir)NOTICE')"
+           Text="Eternal Cycle NOTICE was not copied to the build output." />
   </Target>
 
   <Target Name="ValidateOfficialDistributionMetadataPublish" AfterTargets="Publish">
     <Error Condition="!Exists('$(PublishDir)distribution-metadata.json')"
            Text="Eternal Cycle distribution metadata was not copied to the publish output." />
+    <Error Condition="!Exists('$(PublishDir)LICENSE')"
+           Text="Eternal Cycle LICENSE was not copied to the publish output." />
+    <Error Condition="!Exists('$(PublishDir)NOTICE')"
+           Text="Eternal Cycle NOTICE was not copied to the publish output." />
   </Target>
 
 </Project>
