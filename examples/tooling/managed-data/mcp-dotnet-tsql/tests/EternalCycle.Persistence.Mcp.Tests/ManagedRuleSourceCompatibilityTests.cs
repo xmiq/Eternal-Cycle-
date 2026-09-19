@@ -226,7 +226,7 @@ public sealed class ManagedRuleSourceCompatibilityTests
         var (executable, arguments) = SleepCommand(1000);
         var stopwatch = Stopwatch.StartNew();
 
-        await Assert.ThrowsAsync<GitProcessTimeoutException>(() => runner.RunAsync(
+        var error = await Assert.ThrowsAsync<GitProcessTimeoutException>(() => runner.RunAsync(
             executable,
             Path.GetTempPath(),
             arguments,
@@ -236,6 +236,91 @@ public sealed class ManagedRuleSourceCompatibilityTests
 
         stopwatch.Stop();
         Assert.True(stopwatch.Elapsed < TimeSpan.FromSeconds(3), $"Cleanup took {stopwatch.Elapsed}.");
+        Assert.NotNull(error.Execution);
+        Assert.Equal("TimedOut", error.Execution.Outcome);
+        Assert.Equal("GitProcessTimeout", error.Execution.CancellationSource);
+        Assert.Equal("GitProcess", error.Execution.TimeoutScope);
+        Assert.NotNull(error.Execution.ProcessId);
+        Assert.True(error.Execution.EndedAt >= error.Execution.StartedAt);
+    }
+
+    [Fact]
+    public async Task SystemRunnerCapturesSuccessfulAndNonzeroExecutionEvidence()
+    {
+        var runner = new SystemGitProcessRunner();
+        var (successExecutable, successArguments) = ExitCommand(0);
+        var success = await runner.RunAsync(
+            successExecutable,
+            Path.GetTempPath(),
+            successArguments,
+            TimeSpan.FromSeconds(5),
+            TimeSpan.FromSeconds(1),
+            CancellationToken.None);
+        var (failureExecutable, failureArguments) = ExitCommand(23);
+        var failure = await runner.RunAsync(
+            failureExecutable,
+            Path.GetTempPath(),
+            failureArguments,
+            TimeSpan.FromSeconds(5),
+            TimeSpan.FromSeconds(1),
+            CancellationToken.None);
+
+        Assert.Equal(0, success.ExitCode);
+        Assert.NotNull(success.Execution);
+        Assert.Equal("Succeeded", success.Execution.Outcome);
+        Assert.Equal("None", success.Execution.CancellationSource);
+        Assert.Equal(0, success.Execution.ExitCode);
+        Assert.NotNull(success.Execution.ProcessId);
+        Assert.False(string.IsNullOrWhiteSpace(success.Execution.ResolvedExecutablePath));
+        Assert.True(success.Execution.EndedAt >= success.Execution.StartedAt);
+        Assert.Equal(23, failure.ExitCode);
+        Assert.NotNull(failure.Execution);
+        Assert.Equal("Failed", failure.Execution.Outcome);
+        Assert.Equal(23, failure.Execution.ExitCode);
+    }
+
+    [Fact]
+    public async Task SystemRunnerPreservesParentCancellationEvidence()
+    {
+        var runner = new SystemGitProcessRunner();
+        var (executable, arguments) = SleepCommand(1000);
+        using var cancellation = new CancellationTokenSource(TimeSpan.FromMilliseconds(75));
+
+        var error = await Assert.ThrowsAsync<GitProcessCancelledException>(() => runner.RunAsync(
+            executable,
+            Path.GetTempPath(),
+            arguments,
+            TimeSpan.FromSeconds(10),
+            TimeSpan.FromMilliseconds(200),
+            cancellation.Token));
+
+        Assert.Equal("Cancelled", error.Execution.Outcome);
+        Assert.Equal("ParentToken", error.Execution.CancellationSource);
+        Assert.Equal("GitProcess", error.Execution.TimeoutScope);
+        Assert.NotNull(error.Execution.ProcessId);
+        Assert.True(error.Execution.EndedAt >= error.Execution.StartedAt);
+    }
+
+    [Fact]
+    public void GitCommandSanitizerPreservesCommandIdentityAndRedactsSecrets()
+    {
+        var command = GitCommandSanitizer.Format(
+            "git",
+            [
+                "fetch",
+                "https://user:password@example.invalid/rules.git?access_token=secret-token&depth=1",
+                "--authorization",
+                "Bearer another-secret",
+                "refs/tags/v1.1.0-rc"
+            ]);
+
+        Assert.Contains("git fetch", command, StringComparison.Ordinal);
+        Assert.Contains("refs/tags/v1.1.0-rc", command, StringComparison.Ordinal);
+        Assert.Contains("depth=1", command, StringComparison.Ordinal);
+        Assert.DoesNotContain("password", command, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("secret-token", command, StringComparison.Ordinal);
+        Assert.DoesNotContain("another-secret", command, StringComparison.Ordinal);
+        Assert.Contains("[REDACTED]", command, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -308,6 +393,99 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
+    public async Task NonzeroGitExitRecordsExactCommandAndExitCode()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-git-failure-observation-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var recorder = new RecordingDiagnosticRecorder();
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/does-not-exist"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new MissingRefRunner(),
+                diagnostics: recorder);
+
+            _ = await Assert.ThrowsAsync<RulePublicationException>(() =>
+                provider.GetSnapshotAsync(new RulePublicationExecutionContext("OP-FAIL", "CORR-FAIL"), null, CancellationToken.None));
+
+            var detail = Detail(Assert.Single(recorder.Events, value =>
+                value.ErrorCode == "GIT_PROCESS_EXITED" && Detail(value).GetProperty("ExitCode").GetInt32() == 128));
+            Assert.Equal("Failed", detail.GetProperty("Outcome").GetString());
+            Assert.Contains("git fetch --no-tags origin refs/heads/does-not-exist", detail.GetProperty("Command").GetString(), StringComparison.Ordinal);
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task ProcessTimeoutRecordsExactCommandAndAuthoritativeTimeoutSource()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-git-timeout-observation-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var recorder = new RecordingDiagnosticRecorder();
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/main"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new ProcessTimeoutRunner(),
+                diagnostics: recorder);
+
+            _ = await Assert.ThrowsAsync<RulePublicationException>(() =>
+                provider.GetSnapshotAsync(new RulePublicationExecutionContext("OP-TIMEOUT", "CORR-TIMEOUT"), null, CancellationToken.None));
+
+            var detail = Detail(Assert.Single(recorder.Events, value => value.ErrorCode == "RULE_SOURCE_PROCESS_TIMEOUT"));
+            Assert.Equal("TimedOut", detail.GetProperty("Outcome").GetString());
+            Assert.Equal("GitProcessTimeout", detail.GetProperty("CancellationSource").GetString());
+            Assert.Equal("git init --quiet", detail.GetProperty("Command").GetString());
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task ParentCancellationRecordsExactCommandWithoutInventingHostProvenance()
+    {
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-git-cancel-observation-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var recorder = new RecordingDiagnosticRecorder();
+            var provider = Provider(
+                RemoteConfiguration("refs/heads/main"),
+                RuleUpdatePolicy.Manual,
+                cache,
+                new BlockingRunner(),
+                TimeSpan.FromSeconds(30),
+                TimeSpan.FromSeconds(30),
+                recorder);
+            using var cancellation = new CancellationTokenSource(TimeSpan.FromMilliseconds(50));
+
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(() =>
+                provider.GetSnapshotAsync(new RulePublicationExecutionContext("OP-CANCEL", "CORR-CANCEL"), null, cancellation.Token));
+
+            var observation = Assert.Single(recorder.Events, value => value.ErrorCode == "GIT_PROCESS_CANCELLED");
+            var detail = Detail(observation);
+            Assert.Equal("OP-CANCEL", observation.OperationId);
+            Assert.Equal("CORR-CANCEL", observation.CorrelationId);
+            Assert.Equal("Cancelled", detail.GetProperty("Outcome").GetString());
+            Assert.Equal("ParentToken", detail.GetProperty("CancellationSource").GetString());
+            Assert.Equal("git init --quiet", detail.GetProperty("Command").GetString());
+        }
+        finally
+        {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
     public async Task MissingRemoteRefFailsSpecificallyWithoutWaitingForTimeout()
     {
         var cache = Path.Combine(Path.GetTempPath(), $"ec-missing-ref-{Guid.NewGuid():N}");
@@ -338,7 +516,7 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
-    public async Task GitObservationsUseTrueOperationCorrelationAndSafeCommandCategories()
+    public async Task GitObservationsUseTrueOperationCorrelationAndDistinguishCommandsWithinCategory()
     {
         var cache = Path.Combine(Path.GetTempPath(), $"ec-git-observation-{Guid.NewGuid():N}");
         Directory.CreateDirectory(cache);
@@ -360,14 +538,61 @@ public sealed class ManagedRuleSourceCompatibilityTests
             {
                 Assert.Equal("OP-TRUE", value.OperationId);
                 Assert.Equal("CORR-TRUE", value.CorrelationId);
-                Assert.Contains("CommandCategory=", value.SafeDetail);
-                Assert.Contains("TimeoutScope=GitProcess", value.SafeDetail);
-                Assert.DoesNotContain("example.invalid", value.SafeDetail, StringComparison.OrdinalIgnoreCase);
-                Assert.DoesNotContain("refs/heads/main", value.SafeDetail, StringComparison.Ordinal);
+                using var detail = JsonDocument.Parse(Assert.IsType<string>(value.SafeDetail));
+                var root = detail.RootElement;
+                Assert.False(string.IsNullOrWhiteSpace(root.GetProperty("GitInvocationId").GetString()));
+                Assert.False(string.IsNullOrWhiteSpace(root.GetProperty("Command").GetString()));
+                Assert.False(string.IsNullOrWhiteSpace(root.GetProperty("WorkingDirectory").GetString()));
+                Assert.Equal("GitProcess", root.GetProperty("TimeoutScope").GetString());
+                Assert.True(root.GetProperty("EndedAt").GetDateTimeOffset() >= root.GetProperty("StartedAt").GetDateTimeOffset());
+                Assert.True(root.GetProperty("ElapsedMs").GetInt64() >= 0);
             });
+            var inspectCommands = recorder.Events
+                .Select(value => JsonDocument.Parse(value.SafeDetail!).RootElement.Clone())
+                .Where(value => value.GetProperty("CommandCategory").GetString() == "Inspect")
+                .Select(value => value.GetProperty("Command").GetString())
+                .ToArray();
+            Assert.Contains(inspectCommands, value => value!.Contains("git init --quiet", StringComparison.Ordinal));
+            Assert.Contains(inspectCommands, value => value!.Contains("git remote add origin https://example.invalid/rules.git", StringComparison.Ordinal));
+            Assert.NotEqual(inspectCommands[0], inspectCommands[1]);
         }
         finally
         {
+            DeleteTree(cache);
+        }
+    }
+
+    [Fact]
+    public async Task RealGitInvocationPersistsProcessIdentityAndTerminalEvidence()
+    {
+        var root = CreateFixture(includeManifest: true);
+        var cache = Path.Combine(Path.GetTempPath(), $"ec-real-git-observation-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(cache);
+        try
+        {
+            var recorder = new RecordingDiagnosticRecorder();
+            var provider = Provider(
+                Configuration(root),
+                RuleUpdatePolicy.Manual,
+                cache,
+                diagnostics: recorder);
+
+            _ = await provider.GetSnapshotAsync(
+                new RulePublicationExecutionContext("OP-REAL", "CORR-REAL"),
+                null,
+                CancellationToken.None);
+
+            var detail = Detail(Assert.Single(recorder.Events, value =>
+                Detail(value).GetProperty("Command").GetString()!.Contains("rev-parse --verify", StringComparison.Ordinal)));
+            Assert.Equal("Succeeded", detail.GetProperty("Outcome").GetString());
+            Assert.Equal(0, detail.GetProperty("ExitCode").GetInt32());
+            Assert.True(detail.GetProperty("GitPid").GetInt32() > 0);
+            Assert.False(string.IsNullOrWhiteSpace(detail.GetProperty("ResolvedExecutablePath").GetString()));
+            Assert.True(detail.GetProperty("EndedAt").GetDateTimeOffset() >= detail.GetProperty("StartedAt").GetDateTimeOffset());
+        }
+        finally
+        {
+            DeleteTree(root);
             DeleteTree(cache);
         }
     }
@@ -396,7 +621,7 @@ public sealed class ManagedRuleSourceCompatibilityTests
     }
 
     [Fact]
-    public async Task PartialCacheIsReplacedAndExactImmutableRevisionIsReusedOffline()
+    public async Task OwnedTemporaryCacheArtifactsAreCleanedWithoutDeletingSnapshotsOrUnknownDirectories()
     {
         var root = CreateFixture(includeManifest: true);
         var cache = Path.Combine(Path.GetTempPath(), $"ec-reuse-cache-{Guid.NewGuid():N}");
@@ -404,7 +629,16 @@ public sealed class ManagedRuleSourceCompatibilityTests
         var sourceUri = new Uri(root + Path.DirectorySeparatorChar).AbsoluteUri;
         var cachePath = Path.Combine(cache, CacheKey(sourceUri));
         Directory.CreateDirectory(cachePath);
-        File.WriteAllText(Path.Combine(cachePath, "partial.txt"), "incomplete");
+        Directory.CreateDirectory(Path.Combine(cachePath, ".acquire-stale"));
+        Directory.CreateDirectory(Path.Combine(cachePath, ".git"));
+        File.WriteAllText(Path.Combine(cachePath, ".partial-interrupted"), "incomplete");
+        var unknownDirectory = Path.Combine(cachePath, "operator-notes");
+        Directory.CreateDirectory(unknownDirectory);
+        File.WriteAllText(Path.Combine(unknownDirectory, "keep.txt"), "not provider-owned");
+        var unknownFile = Path.Combine(cachePath, "operator-note.txt");
+        File.WriteAllText(unknownFile, "not provider-owned");
+        var interruptedSnapshot = Path.Combine(cachePath, "snapshots", "ABCDEF.partial-fixture");
+        Directory.CreateDirectory(interruptedSnapshot);
         try
         {
             var commit = RunGit(root, "rev-parse", "HEAD").Trim();
@@ -424,9 +658,13 @@ public sealed class ManagedRuleSourceCompatibilityTests
             DeleteTree(root);
             var second = await provider.GetSnapshotAsync(CancellationToken.None);
 
-            Assert.False(File.Exists(Path.Combine(cachePath, "partial.txt")));
+            Assert.False(Directory.Exists(Path.Combine(cachePath, ".acquire-stale")));
+            Assert.False(File.Exists(Path.Combine(cachePath, ".partial-interrupted")));
+            Assert.False(Directory.Exists(interruptedSnapshot));
             var payloadPath = Path.Combine(cachePath, "snapshots", commit.ToUpperInvariant());
             Assert.False(Directory.Exists(Path.Combine(cachePath, ".git")));
+            Assert.True(File.Exists(Path.Combine(unknownDirectory, "keep.txt")));
+            Assert.True(File.Exists(unknownFile));
             Assert.True(File.Exists(Path.Combine(payloadPath, "docs", "rules", "manifest.json")));
             Assert.True(File.Exists(Path.Combine(payloadPath, "docs", "rules", "kernel.md")));
             Assert.True(File.Exists(Path.Combine(payloadPath, ".eternal-cycle-rule-source.json")));
@@ -498,14 +736,12 @@ public sealed class ManagedRuleSourceCompatibilityTests
         {
             ManagedRuleCacheDirectory = cache ?? string.Empty
         });
-        return runner is null
-            ? new GitRuleSourceProvider(options, new StaticConfigurationStore(configuration), administration)
-            : new GitRuleSourceProvider(
-                options,
-                new StaticConfigurationStore(configuration),
-                administration,
-                diagnostics ?? NullManagedDiagnosticRecorder.Instance,
-                runner);
+        return new GitRuleSourceProvider(
+            options,
+            new StaticConfigurationStore(configuration),
+            administration,
+            diagnostics ?? NullManagedDiagnosticRecorder.Instance,
+            runner ?? new SystemGitProcessRunner());
     }
 
     private static RuleSourceConfiguration RemoteConfiguration(string requestedRef) =>
@@ -599,10 +835,21 @@ public sealed class ManagedRuleSourceCompatibilityTests
     private static string CacheKey(string value) =>
         Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)))[..24];
 
+    private static JsonElement Detail(ManagedDiagnosticContext context)
+    {
+        using var document = JsonDocument.Parse(Assert.IsType<string>(context.SafeDetail));
+        return document.RootElement.Clone();
+    }
+
     private static (string Executable, IReadOnlyList<string> Arguments) SleepCommand(int milliseconds) =>
         OperatingSystem.IsWindows()
             ? ("powershell.exe", ["-NoProfile", "-Command", $"Start-Sleep -Milliseconds {milliseconds}"])
             : ("/bin/sh", ["-c", $"sleep {Math.Max(1, milliseconds / 1000.0):0.###}"]);
+
+    private static (string Executable, IReadOnlyList<string> Arguments) ExitCommand(int exitCode) =>
+        OperatingSystem.IsWindows()
+            ? ("powershell.exe", ["-NoProfile", "-Command", $"exit {exitCode}"])
+            : ("/bin/sh", ["-c", $"exit {exitCode}"]);
 
     private static string RunGit(string root, params string[] arguments)
     {

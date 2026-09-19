@@ -457,6 +457,8 @@ public static partial class DiagnosticRedactor
         var redacted = ConnectionString().Replace(value, " [REDACTED_CONNECTION_STRING]");
         redacted = SensitiveAssignment().Replace(redacted, match => $"{match.Groups[1].Value}=[REDACTED]");
         redacted = BearerToken().Replace(redacted, "Bearer [REDACTED]");
+        redacted = AuthorizationHeader().Replace(redacted, "$1[REDACTED]");
+        redacted = SensitiveQueryParameter().Replace(redacted, "$1[REDACTED]");
         redacted = UriUserInfo().Replace(redacted, "$1[REDACTED]@");
         return redacted.Length <= 32000 ? redacted : redacted[..32000];
     }
@@ -464,11 +466,17 @@ public static partial class DiagnosticRedactor
     [GeneratedRegex(@"(?i)(?:^|[\s""'])\s*(?:Server|Data\s+Source)\s*=\s*[^;\r\n]+(?:\s*;\s*[^;\r\n=]+\s*=\s*[^;\r\n]+)+")]
     private static partial Regex ConnectionString();
 
-    [GeneratedRegex(@"(?i)\b(password|pwd|user\s*id|uid|access[_\s-]*token|token|secret|api[_\s-]*key|authorization)\s*=\s*[^;\s,]+")]
+    [GeneratedRegex(@"(?i)\b(password|pwd|user\s*id|uid|access[_\s-]*token|oauth[_\s-]*token|private[_\s-]*token|id[_\s-]*token|token|client[_\s-]*secret|secret|api[_\s-]*key|authorization)\s*=\s*[^;&\s,""']+")]
     private static partial Regex SensitiveAssignment();
 
     [GeneratedRegex(@"(?i)Bearer\s+[A-Za-z0-9._~+/=-]+")]
     private static partial Regex BearerToken();
+
+    [GeneratedRegex(@"(?i)(authorization\s*:\s*)(?:basic\s+|bearer\s+)?[^\s""']+")]
+    private static partial Regex AuthorizationHeader();
+
+    [GeneratedRegex(@"(?i)([?&](?:access[_-]?token|oauth[_-]?token|private[_-]?token|id[_-]?token|token|password|passwd|client[_-]?secret|secret|api[_-]?key|authorization|signature|sig|credential|x-amz-(?:signature|credential|security-token)|x-goog-signature)=)[^&#\s]+")]
+    private static partial Regex SensitiveQueryParameter();
 
     [GeneratedRegex(@"([A-Za-z][A-Za-z0-9+.-]*://)[^/@\s]+@")]
     private static partial Regex UriUserInfo();

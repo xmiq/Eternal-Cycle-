@@ -30,6 +30,8 @@ public sealed class ManagedControlPlaneRepairTests
             value.Key == "EternalCycle:Diagnostics:VerboseErrors");
         var fallback = Assert.Single(report.Settings, value =>
             value.Key == "EternalCycle:Diagnostics:FallbackLogFile");
+        var ruleCache = Assert.Single(report.Settings, value =>
+            value.Key == "EternalCycle:Administration:ManagedRuleCacheDirectory");
 
         Assert.True(report.Ready);
         Assert.Equal("EternalCycle__Persistence__ConnectionString", connection.EnvironmentVariableName);
@@ -48,6 +50,8 @@ public sealed class ManagedControlPlaneRepairTests
         Assert.False(fallback.Required);
         Assert.Null(fallback.EffectiveValue);
         Assert.Equal(ManagedConfigurationValidationStatus.Defaulted, fallback.ValidationStatus);
+        Assert.Equal(ManagedRuleCachePath.DefaultRoot, ruleCache.EffectiveValue);
+        Assert.Equal(ManagedConfigurationValidationStatus.Defaulted, ruleCache.ValidationStatus);
     }
 
     [Fact]

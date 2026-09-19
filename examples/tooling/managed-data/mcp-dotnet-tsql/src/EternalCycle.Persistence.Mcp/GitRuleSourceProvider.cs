@@ -22,10 +22,52 @@ public sealed class GitRuleSourceOptions
     public TimeSpan TerminationGracePeriod { get; init; } = TimeSpan.FromSeconds(5);
 }
 
-internal sealed record GitProcessResult(int ExitCode, string StandardOutput, string StandardError);
+internal sealed record GitProcessExecution(
+    string InvocationId,
+    DateTimeOffset StartedAt,
+    DateTimeOffset EndedAt,
+    long ElapsedMilliseconds,
+    string? ResolvedExecutablePath,
+    int? ProcessId,
+    int? ExitCode,
+    string Outcome,
+    string CancellationSource,
+    string TimeoutScope);
 
-internal sealed class GitProcessTimeoutException(string message, Exception? innerException = null)
-    : TimeoutException(message, innerException);
+internal sealed record GitProcessResult(
+    int ExitCode,
+    string StandardOutput,
+    string StandardError,
+    GitProcessExecution? Execution = null);
+
+internal sealed class GitProcessTimeoutException : TimeoutException
+{
+    public GitProcessTimeoutException(
+        string message,
+        Exception? innerException = null,
+        GitProcessExecution? execution = null)
+        : base(message, innerException)
+    {
+        Execution = execution;
+    }
+
+    public GitProcessExecution? Execution { get; }
+}
+
+internal sealed class GitProcessCancelledException : OperationCanceledException
+{
+    public GitProcessCancelledException(
+        string message,
+        Exception innerException,
+        CancellationToken cancellationToken,
+        GitProcessExecution execution)
+        : base(message, innerException, cancellationToken)
+    {
+        Execution = execution;
+    }
+
+    public GitProcessExecution Execution { get; }
+}
 
 internal interface IGitProcessRunner
 {
@@ -66,6 +108,9 @@ internal sealed class SystemGitProcessRunner : IGitProcessRunner
         TimeSpan terminationGracePeriod,
         CancellationToken cancellationToken)
     {
+        var invocationId = $"GIT-{Guid.NewGuid():N}";
+        var startedAt = DateTimeOffset.UtcNow;
+        var stopwatch = Stopwatch.StartNew();
         var startInfo = new ProcessStartInfo
         {
             FileName = executable,
@@ -84,6 +129,8 @@ internal sealed class SystemGitProcessRunner : IGitProcessRunner
 
         using var process = Process.Start(startInfo)
             ?? throw new InvalidOperationException("The configured Git executable could not be started.");
+        var processId = process.Id;
+        var resolvedExecutablePath = TryResolveExecutablePath(process) ?? ResolveConfiguredExecutablePath(executable);
         var outputTask = process.StandardOutput.ReadToEndAsync();
         var errorTask = process.StandardError.ReadToEndAsync();
         using var timeoutSource = new CancellationTokenSource(Positive(timeout, TimeSpan.FromMinutes(2)));
@@ -96,25 +143,134 @@ internal sealed class SystemGitProcessRunner : IGitProcessRunner
         {
             var callerCancelled = cancellationToken.IsCancellationRequested;
             await TerminateBoundedAsync(process, outputTask, errorTask, Positive(terminationGracePeriod, TimeSpan.FromSeconds(5)));
+            var execution = CompleteExecution(
+                invocationId,
+                startedAt,
+                stopwatch,
+                resolvedExecutablePath,
+                processId,
+                TryGetExitCode(process),
+                callerCancelled ? "Cancelled" : "TimedOut",
+                callerCancelled ? "ParentToken" : "GitProcessTimeout");
             if (callerCancelled)
             {
-                throw new OperationCanceledException(
+                throw new GitProcessCancelledException(
                     "The Git operation was cancelled by its parent operation.",
                     exception,
-                    cancellationToken);
+                    cancellationToken,
+                    execution);
             }
 
-            throw new GitProcessTimeoutException("The Git process exceeded its configured timeout.", exception);
+            throw new GitProcessTimeoutException(
+                "The Git process exceeded its configured timeout.",
+                exception,
+                execution);
         }
 
         var readers = Task.WhenAll(outputTask, errorTask);
         if (await Task.WhenAny(readers, Task.Delay(Positive(terminationGracePeriod, TimeSpan.FromSeconds(5)))) != readers)
         {
             await TerminateBoundedAsync(process, outputTask, errorTask, Positive(terminationGracePeriod, TimeSpan.FromSeconds(5)));
-            throw new GitProcessTimeoutException("Git exited but redirected output did not close within the cleanup grace period.");
+            throw new GitProcessTimeoutException(
+                "Git exited but redirected output did not close within the cleanup grace period.",
+                execution: CompleteExecution(
+                    invocationId,
+                    startedAt,
+                    stopwatch,
+                    resolvedExecutablePath,
+                    processId,
+                    TryGetExitCode(process),
+                    "TimedOut",
+                    "GitProcessTimeout"));
         }
 
-        return new GitProcessResult(process.ExitCode, outputTask.Result, errorTask.Result);
+        var exitCode = process.ExitCode;
+        return new GitProcessResult(
+            exitCode,
+            outputTask.Result,
+            errorTask.Result,
+            CompleteExecution(
+                invocationId,
+                startedAt,
+                stopwatch,
+                resolvedExecutablePath,
+                processId,
+                exitCode,
+                exitCode == 0 ? "Succeeded" : "Failed",
+                "None"));
+    }
+
+    private static GitProcessExecution CompleteExecution(
+        string invocationId,
+        DateTimeOffset startedAt,
+        Stopwatch stopwatch,
+        string? resolvedExecutablePath,
+        int? processId,
+        int? exitCode,
+        string outcome,
+        string cancellationSource) =>
+        new(
+            invocationId,
+            startedAt,
+            DateTimeOffset.UtcNow,
+            Math.Max(0, stopwatch.ElapsedMilliseconds),
+            resolvedExecutablePath,
+            processId,
+            exitCode,
+            outcome,
+            cancellationSource,
+            "GitProcess");
+
+    private static string? TryResolveExecutablePath(Process process)
+    {
+        try
+        {
+            return process.MainModule?.FileName;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
+    private static string? ResolveConfiguredExecutablePath(string executable)
+    {
+        if (Path.IsPathRooted(executable))
+        {
+            return File.Exists(executable) ? Path.GetFullPath(executable) : null;
+        }
+
+        var extensions = OperatingSystem.IsWindows()
+            ? (Environment.GetEnvironmentVariable("PATHEXT") ?? ".COM;.EXE;.BAT;.CMD")
+                .Split(';', StringSplitOptions.RemoveEmptyEntries)
+            : [string.Empty];
+        var hasExtension = Path.HasExtension(executable);
+        foreach (var directory in (Environment.GetEnvironmentVariable("PATH") ?? string.Empty)
+            .Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+        {
+            foreach (var extension in hasExtension ? [string.Empty] : extensions)
+            {
+                var candidate = Path.Combine(directory, executable + extension);
+                if (File.Exists(candidate))
+                {
+                    return Path.GetFullPath(candidate);
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private static int? TryGetExitCode(Process process)
+    {
+        try
+        {
+            return process.HasExited ? process.ExitCode : null;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
     }
 
     private async Task TerminateBoundedAsync(
@@ -147,6 +303,73 @@ internal sealed class SystemGitProcessRunner : IGitProcessRunner
 
     private static TimeSpan Positive(TimeSpan value, TimeSpan fallback) =>
         value > TimeSpan.Zero ? value : fallback;
+}
+
+internal static partial class GitCommandSanitizer
+{
+    private static readonly HashSet<string> SensitiveFlags = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "--password",
+        "--passwd",
+        "--token",
+        "--access-token",
+        "--api-key",
+        "--authorization",
+        "--http-extra-header"
+    };
+
+    public static string Format(string executable, IReadOnlyList<string> arguments)
+    {
+        var values = new List<string>(arguments.Count + 1)
+        {
+            Quote(SanitizeValue(executable))
+        };
+        var redactNext = false;
+        foreach (var argument in arguments)
+        {
+            var sanitized = redactNext ? "[REDACTED]" : SanitizeValue(argument);
+            values.Add(Quote(sanitized));
+            redactNext = SensitiveFlags.Contains(argument);
+        }
+
+        return string.Join(' ', values);
+    }
+
+    private static string SanitizeValue(string value)
+    {
+        var redacted = SensitiveInlineOption().Replace(value, "$1=[REDACTED]");
+        redacted = SensitiveQueryParameter().Replace(redacted, "$1[REDACTED]");
+        return DiagnosticRedactor.Redact(redacted) ?? string.Empty;
+    }
+
+    private static string Quote(string value)
+    {
+        if (value.Length == 0)
+        {
+            return "\"\"";
+        }
+
+        return value.Any(character => char.IsWhiteSpace(character) || character is '\"' or '\'')
+            ? $"\"{value.Replace("\"", "\\\"")}\""
+            : value;
+    }
+
+    [GeneratedRegex(@"(?i)^(--?(?:password|passwd|token|access-token|api-key|authorization|http-extra-header))=.*$")]
+    private static partial Regex SensitiveInlineOption();
+
+    [GeneratedRegex(@"(?i)([?&](?:access[_-]?token|oauth[_-]?token|private[_-]?token|id[_-]?token|token|password|passwd|client[_-]?secret|secret|api[_-]?key|authorization|signature|sig|credential|x-amz-(?:signature|credential|security-token)|x-goog-signature)=)[^&#\s]+")]
+    private static partial Regex SensitiveQueryParameter();
+}
+
+internal static class ManagedRuleCachePath
+{
+    public static string DefaultRoot =>
+        Path.GetFullPath(Path.Combine(Path.GetTempPath(), "EternalCycle", "rule-cache"));
+
+    public static string Resolve(string? configuredRoot) =>
+        string.IsNullOrWhiteSpace(configuredRoot)
+            ? DefaultRoot
+            : Path.GetFullPath(configuredRoot);
 }
 
 public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
@@ -236,7 +459,7 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         catch (OperationCanceledException exception)
             when (acquisitionTimeout.IsCancellationRequested && !cancellationToken.IsCancellationRequested)
         {
-            await RecordObservationAsync(
+            await RecordAcquisitionObservationAsync(
                 execution,
                 RulePublicationStage.AcquireSource,
                 "Acquire",
@@ -367,7 +590,7 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         await cacheLock.WaitAsync(cancellationToken);
         try
         {
-            CleanupLegacyCacheArtifacts(sourceCache);
+            CleanupOwnedCacheArtifacts(sourceCache);
             if (CommitSha().IsMatch(requestedRef))
             {
                 var cachedIdentity = requestedRef.ToUpperInvariant();
@@ -639,11 +862,13 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         RulePublicationExecutionContext execution,
         CancellationToken cancellationToken)
     {
+        var executable = RequireValue(settings.GitExecutable, nameof(settings.GitExecutable));
+        var startedAt = DateTimeOffset.UtcNow;
         var started = Stopwatch.StartNew();
         try
         {
             var result = await processRunner.RunAsync(
-                RequireValue(settings.GitExecutable, nameof(settings.GitExecutable)),
+                executable,
                 workingDirectory,
                 arguments,
                 Positive(settings.ProcessTimeout, TimeSpan.FromMinutes(2)),
@@ -653,16 +878,22 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
                 execution,
                 stage,
                 category,
-                started.Elapsed,
-                "GitProcess",
-                result.ExitCode == 0 ? "Succeeded" : "Exited",
-                null,
+                GitCommandSanitizer.Format(executable, arguments),
+                workingDirectory,
+                result.Execution ?? FallbackExecution(startedAt, started, result.ExitCode, result.ExitCode == 0 ? "Succeeded" : "Failed", "None"),
                 result.ExitCode == 0 ? "GIT_PROCESS_COMPLETED" : "GIT_PROCESS_EXITED");
             return result;
         }
         catch (GitProcessTimeoutException exception)
         {
-            await RecordObservationAsync(execution, stage, category, started.Elapsed, "GitProcess", "Timeout", "GitProcessTimeout", "RULE_SOURCE_PROCESS_TIMEOUT");
+            await RecordObservationAsync(
+                execution,
+                stage,
+                category,
+                GitCommandSanitizer.Format(executable, arguments),
+                workingDirectory,
+                exception.Execution ?? FallbackExecution(startedAt, started, null, "TimedOut", "GitProcessTimeout"),
+                "RULE_SOURCE_PROCESS_TIMEOUT");
             throw new RulePublicationException(
                 "RULE_SOURCE_PROCESS_TIMEOUT",
                 stage,
@@ -671,14 +902,40 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
                 administrativeInterventionRequired: false,
                 exception);
         }
+        catch (GitProcessCancelledException exception)
+        {
+            await RecordObservationAsync(
+                execution,
+                stage,
+                category,
+                GitCommandSanitizer.Format(executable, arguments),
+                workingDirectory,
+                exception.Execution,
+                "GIT_PROCESS_CANCELLED");
+            throw;
+        }
         catch (OperationCanceledException)
         {
-            await RecordObservationAsync(execution, stage, category, started.Elapsed, "GitProcess", "Cancelled", "ParentToken", "GIT_PROCESS_CANCELLED");
+            await RecordObservationAsync(
+                execution,
+                stage,
+                category,
+                GitCommandSanitizer.Format(executable, arguments),
+                workingDirectory,
+                FallbackExecution(startedAt, started, null, "Cancelled", "ParentToken"),
+                "GIT_PROCESS_CANCELLED");
             throw;
         }
         catch (Exception exception)
         {
-            await RecordObservationAsync(execution, stage, category, started.Elapsed, "GitProcess", "Failed", null, CodeFor(stage));
+            await RecordObservationAsync(
+                execution,
+                stage,
+                category,
+                GitCommandSanitizer.Format(executable, arguments),
+                workingDirectory,
+                FallbackExecution(startedAt, started, null, "Failed", "None"),
+                CodeFor(stage));
             throw new RulePublicationException(
                 CodeFor(stage),
                 stage,
@@ -693,10 +950,57 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         RulePublicationExecutionContext execution,
         RulePublicationStage stage,
         string category,
+        string command,
+        string workingDirectory,
+        GitProcessExecution process,
+        string code)
+    {
+        try
+        {
+            await diagnostics.RecordEventAsync(
+                new ManagedDiagnosticContext(
+                    execution.CorrelationId,
+                    "GitRuleSource",
+                    stage,
+                    code,
+                    process.StartedAt,
+                    ruleSettings.RulesetId,
+                    Outcome: process.Outcome,
+                    RetrySafe: process.Outcome is "TimedOut" or "Cancelled" or "Failed",
+                    SafeDetail: JsonSerializer.Serialize(new
+                    {
+                        GitInvocationId = process.InvocationId,
+                        CommandCategory = category,
+                        Command = command,
+                        WorkingDirectory = Path.GetFullPath(workingDirectory),
+                        process.ResolvedExecutablePath,
+                        GitPid = process.ProcessId,
+                        process.StartedAt,
+                        process.EndedAt,
+                        ElapsedMs = process.ElapsedMilliseconds,
+                        process.ExitCode,
+                        process.Outcome,
+                        process.CancellationSource,
+                        process.TimeoutScope,
+                        RetryRelevant = process.Outcome is "TimedOut" or "Cancelled" or "Failed"
+                    }),
+                    OperationId: execution.OperationId),
+                CancellationToken.None);
+        }
+        catch (Exception)
+        {
+            // Diagnostic recording cannot replace source acquisition semantics.
+        }
+    }
+
+    private async Task RecordAcquisitionObservationAsync(
+        RulePublicationExecutionContext execution,
+        RulePublicationStage stage,
+        string category,
         TimeSpan elapsed,
         string timeoutScope,
         string outcome,
-        string? cancellationSource,
+        string cancellationSource,
         string code)
     {
         try
@@ -710,14 +1014,16 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
                     DateTimeOffset.UtcNow - elapsed,
                     ruleSettings.RulesetId,
                     Outcome: outcome,
-                    RetrySafe: outcome is "Timeout" or "Cancelled",
-                    SafeDetail: string.Join(
-                        ';',
-                        $"CommandCategory={category}",
-                        $"ElapsedMs={Math.Max(0, (long)elapsed.TotalMilliseconds)}",
-                        $"TimeoutScope={timeoutScope}",
-                        $"Outcome={outcome}",
-                        $"CancellationSource={cancellationSource ?? "None"}"),
+                    RetrySafe: true,
+                    SafeDetail: JsonSerializer.Serialize(new
+                    {
+                        CommandCategory = category,
+                        ElapsedMs = Math.Max(0, (long)elapsed.TotalMilliseconds),
+                        TimeoutScope = timeoutScope,
+                        Outcome = outcome,
+                        CancellationSource = cancellationSource,
+                        RetryRelevant = true
+                    }),
                     OperationId: execution.OperationId),
                 CancellationToken.None);
         }
@@ -726,6 +1032,24 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
             // Diagnostic recording cannot replace source acquisition semantics.
         }
     }
+
+    private static GitProcessExecution FallbackExecution(
+        DateTimeOffset startedAt,
+        Stopwatch stopwatch,
+        int? exitCode,
+        string outcome,
+        string cancellationSource) =>
+        new(
+            $"GIT-{Guid.NewGuid():N}",
+            startedAt,
+            DateTimeOffset.UtcNow,
+            Math.Max(0, stopwatch.ElapsedMilliseconds),
+            null,
+            null,
+            exitCode,
+            outcome,
+            cancellationSource,
+            "GitProcess");
 
     private static RuleSourceManifest ParseManifest(
         string json,
@@ -815,9 +1139,7 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
 
     private string ResolveCacheRoot()
     {
-        var root = string.IsNullOrWhiteSpace(administration.ManagedRuleCacheDirectory)
-            ? Path.Combine(Path.GetTempPath(), "EternalCycle", "rule-cache")
-            : Path.GetFullPath(administration.ManagedRuleCacheDirectory);
+        var root = ManagedRuleCachePath.Resolve(administration.ManagedRuleCacheDirectory);
         Directory.CreateDirectory(root);
         return root;
     }
@@ -889,22 +1211,57 @@ public sealed partial class GitRuleSourceProvider : IRuleSourceProvider
         }
     }
 
-    private static void CleanupLegacyCacheArtifacts(string sourceCache)
+    private static void CleanupOwnedCacheArtifacts(string sourceCache)
     {
         foreach (var file in Directory.EnumerateFiles(sourceCache, "*", SearchOption.TopDirectoryOnly))
         {
-            File.SetAttributes(file, FileAttributes.Normal);
-            File.Delete(file);
+            var name = Path.GetFileName(file);
+            if (name.StartsWith(".acquire-", StringComparison.OrdinalIgnoreCase) ||
+                name.StartsWith(".partial-", StringComparison.OrdinalIgnoreCase))
+            {
+                TryDeleteFile(file);
+            }
         }
 
         foreach (var directory in Directory.EnumerateDirectories(sourceCache, "*", SearchOption.TopDirectoryOnly))
         {
-            if (string.Equals(Path.GetFileName(directory), "snapshots", StringComparison.OrdinalIgnoreCase))
+            var name = Path.GetFileName(directory);
+            if (string.Equals(name, ".git", StringComparison.OrdinalIgnoreCase) ||
+                name.StartsWith(".acquire-", StringComparison.OrdinalIgnoreCase) ||
+                name.StartsWith(".partial-", StringComparison.OrdinalIgnoreCase))
             {
-                continue;
+                TryDeleteDirectory(directory);
             }
+        }
 
-            TryDeleteDirectory(directory);
+        var snapshots = Path.Combine(sourceCache, "snapshots");
+        if (!Directory.Exists(snapshots))
+        {
+            return;
+        }
+
+        foreach (var directory in Directory.EnumerateDirectories(snapshots, "*", SearchOption.TopDirectoryOnly))
+        {
+            if (Path.GetFileName(directory).Contains(".partial-", StringComparison.OrdinalIgnoreCase))
+            {
+                TryDeleteDirectory(directory);
+            }
+        }
+    }
+
+    private static void TryDeleteFile(string path)
+    {
+        try
+        {
+            if (File.Exists(path))
+            {
+                File.SetAttributes(path, FileAttributes.Normal);
+                File.Delete(path);
+            }
+        }
+        catch (Exception)
+        {
+            // A later acquisition always uses a fresh temporary path.
         }
     }
 
