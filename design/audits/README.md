@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-021 Orphaned Managed Operation Recovery Audit](FR_021_ORPHANED_MANAGED_OPERATION_RECOVERY_AUDIT.md) - live power-loss defect, bounded execution ownership, orphan reconciliation, same-identity retry, migration 009, regressions, and remaining infrastructure proof.
 - [FR-021 Rule Source Live-Acceptance Repair Audit](FR_021_RULE_SOURCE_LIVE_ACCEPTANCE_REPAIR_AUDIT.md) - cancellation ownership, diagnostic identity, minimal runtime Rule Source payload, user-selected source freedom, distribution archive separation, migration 008, regressions, and remaining live boundaries.
 - [FR-021 Pre-Migration Control-Plane Repair Audit](FR_021_PRE_MIGRATION_CONTROL_PLANE_REPAIR_AUDIT.md) - schema-safe base control plane, configuration discovery, semantic error boundary, automatic diagnostic fallback, bounded Error Dumps, licensing/provenance, genuine pre-007 migration regression, and external acceptance boundary.
 - [FR-021 Durable Managed Operations and Progressive Rule Readiness Audit](FR_021_DURABLE_MANAGED_OPERATIONS_AUDIT.md) - asynchronous publication, worker recovery, progressive closures, dynamic priority, campaign-free diagnostics, informed approval, moving RC provenance, regressions, and real-acceptance boundary.

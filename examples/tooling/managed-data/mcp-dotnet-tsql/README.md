@@ -29,7 +29,7 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 2. Set `EternalCycle:Persistence:ConnectionString` in protected host configuration.
 3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true`. Natural informed user approval is the normal path; optionally enable a private operator confirmation as an additional deployment safeguard.
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
-5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `008` to configured EC-owned scopes.
+5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `009` to configured EC-owned scopes.
 6. Select the packaged default from [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or another compatible Git source, including an existing local clone. The selection persists in `ec_domain`; source location does not change the technical validation pipeline.
 7. Approve initial publication. The call returns a durable Operation ID promptly; the hosted worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules.
 8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
@@ -51,7 +51,7 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - structured first-run readiness across transport, persistence, campaign schema, Rule Domain, source, publication, activation, and campaign state;
 - permission-gated EC-owned migrations, persisted source selection, managed Git acquisition/cache, initial publication, and campaign discovery/creation;
 - bounded rule-publication batches, stage-aware structured failures, and idempotent publication resume;
-- durable queued/running/completed Managed Operations with deduplication, independent status discovery, startup interruption recovery, and service-owned timeouts;
+- durable queued/running/completed Managed Operations with deduplication, independent status discovery, renewable execution leases, orphan reconciliation, and service-owned timeouts;
 - fresh-database worker startup that waits for authorized migration 007 instead of requiring the operation tables to pre-exist;
 - progressive per-source readiness, dependency-aware minimum closure, manifest preparation tiers, and gameplay-driven priority boosts;
 - SQL-first Managed-operation diagnostics with a zero-configuration protected local physical fallback;
@@ -119,6 +119,8 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 5. [`005_managed_operation_diagnostics.sql`](src/EternalCycle.Persistence.Mcp/Schema/005_managed_operation_diagnostics.sql) to preserve redacted operation evidence with correlation and publication-stage metadata.
 6. [`006_rule_source_compatibility.sql`](src/EternalCycle.Persistence.Mcp/Schema/006_rule_source_compatibility.sql) to add source-channel, discovery-ref, manifest-contract, and safe causal-diagnostic provenance.
 7. [`007_durable_managed_operations.sql`](src/EternalCycle.Persistence.Mcp/Schema/007_durable_managed_operations.sql) to add durable operations, per-source preparation state and priority, and human-readable prerelease metadata while preserving source SHA identity.
+8. [`008_diagnostic_operation_correlation.sql`](src/EternalCycle.Persistence.Mcp/Schema/008_diagnostic_operation_correlation.sql) to join durable Operation IDs directly to persisted diagnostic evidence.
+9. [`009_managed_operation_execution_leases.sql`](src/EternalCycle.Persistence.Mcp/Schema/009_managed_operation_execution_leases.sql) to add renewable worker ownership, bounded orphan detection, and execution-attempt evidence without replacing operation identity.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 
@@ -162,6 +164,7 @@ EternalCycle:Rules:UpdatePolicy = Disabled | Startup | Periodic | Manual
 EternalCycle:Rules:ActivationPolicy = Automatic | Manual
 EternalCycle:Rules:ManagedOperationTimeout = 00:30:00
 EternalCycle:Rules:ManagedOperationPollInterval = 00:00:01
+EternalCycle:Rules:ManagedOperationLeaseDuration = 00:00:30
 EternalCycle:Rules:CampaignPinnedRuleReleaseIds:<campaign-id> = <published-release-id>
 EternalCycle:Rules:GitSource:RepositoryRoot = <trusted Git checkout>
 EternalCycle:Rules:GitSource:Ref = <trusted branch, tag, or commit>

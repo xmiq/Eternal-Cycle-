@@ -64,6 +64,31 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
     }
 
     [Fact]
+    public async Task ActiveProcessorRenewsExecutionLeaseAndRemainsDeduplicated()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var publisher = new BlockingPublisher();
+        var processor = Processor(
+            store,
+            publisher,
+            executionLeaseDuration: TimeSpan.FromMilliseconds(200));
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+
+        var processing = processor.ProcessNextAsync(CancellationToken.None);
+        await publisher.Started.Task.WaitAsync(TimeSpan.FromSeconds(2));
+        await Task.Delay(600);
+        var running = await service.GetAsync(queued.OperationId, CancellationToken.None);
+        var duplicate = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        publisher.Complete();
+        _ = await processing;
+
+        Assert.Equal(ManagedOperationState.Running, running?.State);
+        Assert.Equal(queued.OperationId, duplicate.OperationId);
+        Assert.Equal(queued.CorrelationId, duplicate.CorrelationId);
+    }
+
+    [Fact]
     public async Task PublicationFailurePreservesStructuredCausalStatus()
     {
         var store = new MemoryManagedOperationStore();
@@ -167,6 +192,7 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
         var store = new MemoryManagedOperationStore();
         var service = OperationService(store);
         var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
         await store.FailAsync(
             queued.OperationId,
             ManagedOperationState.Failed,
@@ -193,17 +219,115 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
         var store = new MemoryManagedOperationStore();
         var service = OperationService(store);
         var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
-        _ = await store.ClaimNextAsync(CancellationToken.None);
+        _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+        store.ExpireExecutionLease(queued.OperationId);
 
         var recovered = await store.RecoverInterruptedAsync(CancellationToken.None);
         var interrupted = await service.GetAsync(queued.OperationId, CancellationToken.None);
-        var reclaimed = await store.ClaimNextAsync(CancellationToken.None);
+        var reclaimed = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
 
         Assert.Equal(1, recovered);
         Assert.Equal(ManagedOperationState.Interrupted, interrupted?.State);
         Assert.True(interrupted?.RetrySafe);
         Assert.Equal(queued.OperationId, reclaimed?.OperationId);
+        Assert.Equal(queued.CorrelationId, reclaimed?.CorrelationId);
         Assert.Equal(ManagedOperationState.Running, reclaimed?.State);
+        Assert.Equal(2, reclaimed?.ExecutionAttempt);
+    }
+
+    [Fact]
+    public async Task LiveExecutionLeasePreservesRunningDeduplication()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        var running = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+
+        var recovered = await store.RecoverInterruptedAsync(CancellationToken.None);
+        var duplicate = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+
+        Assert.Equal(0, recovered);
+        Assert.Equal(ManagedOperationState.Running, running?.State);
+        Assert.Equal(queued.OperationId, duplicate.OperationId);
+        Assert.Equal(queued.CorrelationId, duplicate.CorrelationId);
+    }
+
+    [Fact]
+    public async Task ExpiredExecutionLeaseRejectsStaleStateMutation()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+        store.ExpireExecutionLease(queued.OperationId);
+
+        await Assert.ThrowsAsync<ManagedOperationOwnershipLostException>(() =>
+            store.CompleteAsync(
+                queued.OperationId,
+                RulePublicationStage.RecordUpdateCheck.ToString(),
+                "A stale worker must not complete this operation.",
+                null,
+                null,
+                CancellationToken.None));
+
+        var recovered = await store.GetAsync(queued.OperationId, CancellationToken.None);
+
+        Assert.Equal(ManagedOperationState.Interrupted, recovered?.State);
+        Assert.Equal("MANAGED_OPERATION_INTERRUPTED", recovered?.ErrorCode);
+    }
+
+    [Fact]
+    public async Task RepeatInitiationRecoversExpiredRunningPublicationWithoutChangingIdentity()
+    {
+        var store = new MemoryManagedOperationStore();
+        var service = OperationService(store);
+        var original = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+        store.ExpireExecutionLease(original.OperationId);
+
+        var recovered = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        var worker = new ManagedOperationWorker(
+            store,
+            Processor(store, new ImmediatePublisher()),
+            Options.Create(new ManagedRuleServiceOptions
+            {
+                ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
+                ManagedOperationTimeout = TimeSpan.FromSeconds(10),
+                ManagedOperationLeaseDuration = TimeSpan.FromMilliseconds(100)
+            }),
+            NullLogger<ManagedOperationWorker>.Instance);
+
+        Assert.Equal(original.OperationId, recovered.OperationId);
+        Assert.Equal(original.CorrelationId, recovered.CorrelationId);
+        Assert.Equal(ManagedOperationState.Interrupted, recovered.State);
+
+        await worker.StartAsync(CancellationToken.None);
+        try
+        {
+            ManagedOperationStatus? completed = null;
+            for (var attempt = 0; attempt < 100; attempt++)
+            {
+                completed = await service.GetAsync(original.OperationId, CancellationToken.None);
+                if (completed?.State == ManagedOperationState.Succeeded)
+                {
+                    break;
+                }
+
+                await Task.Delay(10);
+            }
+
+            Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
+            Assert.Equal(2, completed?.ExecutionAttempt);
+            Assert.Single(await service.ListRecentAsync(
+                ManagedOperationKinds.InitialRulePublication,
+                10,
+                CancellationToken.None));
+        }
+        finally
+        {
+            await worker.StopAsync(CancellationToken.None);
+            worker.Dispose();
+        }
     }
 
     [Fact]
@@ -212,14 +336,16 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
         var store = new MemoryManagedOperationStore();
         var service = OperationService(store);
         var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
-        _ = await store.ClaimNextAsync(CancellationToken.None);
+        _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+        store.ExpireExecutionLease(queued.OperationId);
         var worker = new ManagedOperationWorker(
             store,
             Processor(store, new ImmediatePublisher()),
             Options.Create(new ManagedRuleServiceOptions
             {
                 ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
-                ManagedOperationTimeout = TimeSpan.FromSeconds(10)
+                ManagedOperationTimeout = TimeSpan.FromSeconds(10),
+                ManagedOperationLeaseDuration = TimeSpan.FromMilliseconds(100)
             }),
             NullLogger<ManagedOperationWorker>.Instance);
 
@@ -434,13 +560,15 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
         IManagedOperationStore store,
         IRulePublicationExecutor publisher,
         TimeSpan? operationTimeout = null,
-        IManagedDiagnosticRecorder? diagnostics = null) =>
+        IManagedDiagnosticRecorder? diagnostics = null,
+        TimeSpan? executionLeaseDuration = null) =>
         new(
             store,
             publisher,
             Options.Create(new ManagedRuleServiceOptions
             {
-                ManagedOperationTimeout = operationTimeout ?? TimeSpan.FromSeconds(10)
+                ManagedOperationTimeout = operationTimeout ?? TimeSpan.FromSeconds(10),
+                ManagedOperationLeaseDuration = executionLeaseDuration ?? TimeSpan.FromSeconds(30)
             }),
             NullLogger<ManagedOperationProcessor>.Instance,
             diagnostics);
@@ -715,8 +843,16 @@ internal sealed class InitiallyUnavailableOperationStore(IManagedOperationStore 
         return inner.RecoverInterruptedAsync(cancellationToken);
     }
 
-    public Task<ManagedOperationStatus?> ClaimNextAsync(CancellationToken cancellationToken) =>
-        inner.ClaimNextAsync(cancellationToken);
+    public Task<ManagedOperationStatus?> ClaimNextAsync(
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken) =>
+        inner.ClaimNextAsync(executionLeaseDuration, cancellationToken);
+
+    public Task<bool> RenewExecutionLeaseAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken) =>
+        inner.RenewExecutionLeaseAsync(operationId, executionLeaseDuration, cancellationToken);
 
     public Task UpdateStageAsync(
         string operationId,
@@ -764,7 +900,14 @@ internal sealed class InitiallyUnavailableOperationStore(IManagedOperationStore 
 internal sealed class MemoryManagedOperationStore : IManagedOperationStore
 {
     private readonly object sync = new();
-    private readonly Dictionary<string, (ManagedOperationStatus Status, string DeduplicationKey)> operations = new(StringComparer.Ordinal);
+    private readonly string executionOwnerId = $"WORKER-{Guid.NewGuid():N}";
+    private readonly Dictionary<string, Entry> operations = new(StringComparer.Ordinal);
+
+    private sealed record Entry(
+        ManagedOperationStatus Status,
+        string DeduplicationKey,
+        string? ExecutionOwnerId = null,
+        DateTimeOffset? ExecutionLeaseExpiresAt = null);
 
     public Task<ManagedOperationStatus> EnqueueOrReuseAsync(
         ManagedOperationEnqueueRequest request,
@@ -772,11 +915,12 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
     {
         lock (sync)
         {
+            _ = RecoverExpiredUnsafe();
             var existing = operations.Values.FirstOrDefault(value =>
                 value.DeduplicationKey == request.DeduplicationKey &&
                 value.Status.State is ManagedOperationState.Queued or ManagedOperationState.Running or
                     ManagedOperationState.Cancelling or ManagedOperationState.Interrupted);
-            if (existing.Status is not null)
+            if (existing is not null)
             {
                 return Task.FromResult(existing.Status);
             }
@@ -800,8 +944,9 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
                 false,
                 request.RulesetId,
                 null,
-                null);
-            operations[status.OperationId] = (status, request.DeduplicationKey);
+                null,
+                0);
+            operations[status.OperationId] = new(status, request.DeduplicationKey);
             return Task.FromResult(status);
         }
     }
@@ -810,7 +955,9 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
     {
         lock (sync)
         {
-            return Task.FromResult<ManagedOperationStatus?>(operations.GetValueOrDefault(operationId).Status);
+            _ = RecoverExpiredUnsafe();
+            return Task.FromResult<ManagedOperationStatus?>(
+                operations.TryGetValue(operationId, out var entry) ? entry.Status : null);
         }
     }
 
@@ -821,6 +968,7 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
     {
         lock (sync)
         {
+            _ = RecoverExpiredUnsafe();
             return Task.FromResult<IReadOnlyList<ManagedOperationStatus>>(operations.Values
                 .Select(value => value.Status)
                 .Where(value => operationKind is null || value.OperationKind == operationKind)
@@ -834,31 +982,13 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
     {
         lock (sync)
         {
-            var count = 0;
-            foreach (var id in operations.Keys.ToArray())
-            {
-                var entry = operations[id];
-                if (entry.Status.State is not (ManagedOperationState.Running or ManagedOperationState.Cancelling))
-                {
-                    continue;
-                }
-
-                operations[id] = (entry.Status with
-                {
-                    State = ManagedOperationState.Interrupted,
-                    CurrentStage = "Interrupted",
-                    UpdatedAt = DateTimeOffset.UtcNow,
-                    ErrorCode = "MANAGED_OPERATION_INTERRUPTED",
-                    RetrySafe = true
-                }, entry.DeduplicationKey);
-                count++;
-            }
-
-            return Task.FromResult(count);
+            return Task.FromResult(RecoverExpiredUnsafe());
         }
     }
 
-    public Task<ManagedOperationStatus?> ClaimNextAsync(CancellationToken cancellationToken)
+    public Task<ManagedOperationStatus?> ClaimNextAsync(
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
     {
         lock (sync)
         {
@@ -866,7 +996,7 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
                 .Where(value => value.Status.State is ManagedOperationState.Queued or ManagedOperationState.Interrupted)
                 .OrderBy(value => value.Status.CreatedAt)
                 .FirstOrDefault();
-            if (pair.Status is null)
+            if (pair is null)
             {
                 return Task.FromResult<ManagedOperationStatus?>(null);
             }
@@ -878,10 +1008,40 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
                 StartedAt = pair.Status.StartedAt ?? DateTimeOffset.UtcNow,
                 UpdatedAt = DateTimeOffset.UtcNow,
                 ProgressPercent = 1,
-                ErrorCode = null
+                ErrorCode = null,
+                ExecutionAttempt = pair.Status.ExecutionAttempt + 1
             };
-            operations[claimed.OperationId] = (claimed, pair.DeduplicationKey);
+            operations[claimed.OperationId] = pair with
+            {
+                Status = claimed,
+                ExecutionOwnerId = executionOwnerId,
+                ExecutionLeaseExpiresAt = DateTimeOffset.UtcNow.Add(executionLeaseDuration)
+            };
             return Task.FromResult<ManagedOperationStatus?>(claimed);
+        }
+    }
+
+    public Task<bool> RenewExecutionLeaseAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
+    {
+        lock (sync)
+        {
+            var entry = operations[operationId];
+            if (entry.Status.State is not (ManagedOperationState.Running or ManagedOperationState.Cancelling) ||
+                entry.ExecutionOwnerId != executionOwnerId ||
+                entry.ExecutionLeaseExpiresAt <= DateTimeOffset.UtcNow)
+            {
+                return Task.FromResult(false);
+            }
+
+            operations[operationId] = entry with
+            {
+                Status = entry.Status with { UpdatedAt = DateTimeOffset.UtcNow },
+                ExecutionLeaseExpiresAt = DateTimeOffset.UtcNow.Add(executionLeaseDuration)
+            };
+            return Task.FromResult(true);
         }
     }
 
@@ -930,9 +1090,66 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
         lock (sync)
         {
             var entry = operations[operationId];
-            operations[operationId] = (mutate(entry.Status), entry.DeduplicationKey);
+            if (entry.ExecutionOwnerId != executionOwnerId ||
+                entry.ExecutionLeaseExpiresAt <= DateTimeOffset.UtcNow)
+            {
+                throw new ManagedOperationOwnershipLostException(operationId);
+            }
+
+            var status = mutate(entry.Status);
+            var releaseOwnership = status.State is not (ManagedOperationState.Running or ManagedOperationState.Cancelling);
+            operations[operationId] = entry with
+            {
+                Status = status,
+                ExecutionOwnerId = releaseOwnership ? null : entry.ExecutionOwnerId,
+                ExecutionLeaseExpiresAt = releaseOwnership ? null : entry.ExecutionLeaseExpiresAt
+            };
             return Task.CompletedTask;
         }
+    }
+
+    public void ExpireExecutionLease(string operationId)
+    {
+        lock (sync)
+        {
+            var entry = operations[operationId];
+            operations[operationId] = entry with
+            {
+                ExecutionLeaseExpiresAt = DateTimeOffset.UtcNow.AddSeconds(-1)
+            };
+        }
+    }
+
+    private int RecoverExpiredUnsafe()
+    {
+        var count = 0;
+        foreach (var id in operations.Keys.ToArray())
+        {
+            var entry = operations[id];
+            if (entry.Status.State is not (ManagedOperationState.Running or ManagedOperationState.Cancelling) ||
+                (entry.ExecutionOwnerId is not null &&
+                 entry.ExecutionLeaseExpiresAt is not null &&
+                 entry.ExecutionLeaseExpiresAt > DateTimeOffset.UtcNow))
+            {
+                continue;
+            }
+
+            operations[id] = entry with
+            {
+                Status = entry.Status with
+                {
+                    State = ManagedOperationState.Interrupted,
+                    UpdatedAt = DateTimeOffset.UtcNow,
+                    ErrorCode = "MANAGED_OPERATION_INTERRUPTED",
+                    RetrySafe = true
+                },
+                ExecutionOwnerId = null,
+                ExecutionLeaseExpiresAt = null
+            };
+            count++;
+        }
+
+        return count;
     }
 }
 

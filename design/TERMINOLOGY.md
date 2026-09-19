@@ -4976,6 +4976,10 @@ An authorized, systematically redacted operational failure record carrying one c
 
 A durably identified, service-owned unit of work that may outlive the client request that initiated it. It has explicit state, stage, bounded policy, independent status discovery, idempotent initiation where appropriate, and deterministic interruption recovery.
 
+## Managed Execution Ownership
+
+The bounded renewable claim proving which worker may currently advance a `Running` Managed Operation. Missing or expired ownership makes the operation orphaned and recoverable as `Interrupted`; unexpired ownership preserves active-operation deduplication. An execution lease is one reference implementation, not a required provider technology.
+
 ## Rule Preparation Tier
 
 Portable dependency and urgency metadata used to order authoritative rule availability. Runtime Kernel, Campaign Bootstrap, immediate gameplay, campaign-relevant, standard, and optional or rare concerns are semantic priorities rather than arbitrary file order.

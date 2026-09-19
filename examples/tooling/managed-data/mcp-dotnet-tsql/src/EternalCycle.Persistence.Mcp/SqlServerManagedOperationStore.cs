@@ -8,6 +8,7 @@ public sealed class SqlServerManagedOperationStore(
     IOptions<SqlServerPersistenceOptions> options) : IManagedOperationStore
 {
     private readonly SqlServerPersistenceOptions settings = options.Value;
+    private readonly string executionOwnerId = $"WORKER-{Guid.NewGuid():N}";
 
     public async Task<ManagedOperationStatus> EnqueueOrReuseAsync(
         ManagedOperationEnqueueRequest request,
@@ -17,6 +18,7 @@ public sealed class SqlServerManagedOperationStore(
         await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(
             IsolationLevel.Serializable,
             cancellationToken);
+        await RecoverExpiredAsync(connection, transaction, cancellationToken);
         await using (var existing = Command(connection, transaction, """
             SELECT TOP (1) {{columns}}
             FROM {{schema}}.managed_operations WITH (UPDLOCK, HOLDLOCK)
@@ -85,6 +87,7 @@ public sealed class SqlServerManagedOperationStore(
         string operationId,
         CancellationToken cancellationToken)
     {
+        await RecoverInterruptedAsync(cancellationToken);
         await using var connection = await OpenAsync(cancellationToken);
         await using var command = Command(connection, null, """
             SELECT {{columns}}
@@ -100,6 +103,7 @@ public sealed class SqlServerManagedOperationStore(
         string correlationId,
         CancellationToken cancellationToken)
     {
+        await RecoverInterruptedAsync(cancellationToken);
         await using var connection = await OpenAsync(cancellationToken);
         await using var command = Command(connection, null, """
             SELECT TOP (1) {{columns}}
@@ -117,6 +121,7 @@ public sealed class SqlServerManagedOperationStore(
         int maximumCount,
         CancellationToken cancellationToken)
     {
+        await RecoverInterruptedAsync(cancellationToken);
         await using var connection = await OpenAsync(cancellationToken);
         await using var command = Command(connection, null, """
             SELECT TOP (@maximum_count) {{columns}}
@@ -140,21 +145,12 @@ public sealed class SqlServerManagedOperationStore(
     public async Task<int> RecoverInterruptedAsync(CancellationToken cancellationToken)
     {
         await using var connection = await OpenAsync(cancellationToken);
-        await using var command = Command(connection, null, """
-            UPDATE {{schema}}.managed_operations
-            SET operation_state = N'Interrupted',
-                current_stage = N'Interrupted',
-                updated_at = SYSUTCDATETIME(),
-                safe_status_detail = N'The service restarted while this operation was running; durable retry will resume idempotent publication.',
-                error_code = N'MANAGED_OPERATION_INTERRUPTED',
-                retry_safe = 1,
-                administrative_intervention_required = 0
-            WHERE operation_state IN (N'Running', N'Cancelling');
-            """);
-        return await command.ExecuteNonQueryAsync(cancellationToken);
+        return await RecoverExpiredAsync(connection, null, cancellationToken);
     }
 
-    public async Task<ManagedOperationStatus?> ClaimNextAsync(CancellationToken cancellationToken)
+    public async Task<ManagedOperationStatus?> ClaimNextAsync(
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
     {
         await using var connection = await OpenAsync(cancellationToken);
         await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(
@@ -189,16 +185,43 @@ public sealed class SqlServerManagedOperationStore(
                 safe_status_detail = N'Durable background execution has started.',
                 error_code = NULL,
                 retry_safe = 1,
-                administrative_intervention_required = 0
-            WHERE operation_id = @operation_id;
+                administrative_intervention_required = 0,
+                execution_owner_id = @execution_owner_id,
+                execution_lease_expires_at = DATEADD(millisecond, @lease_milliseconds, SYSUTCDATETIME()),
+                execution_attempt_count = execution_attempt_count + 1
+            WHERE operation_id = @operation_id
+              AND operation_state IN (N'Queued', N'Interrupted');
             """))
         {
             update.Parameters.AddWithValue("@operation_id", operationId);
+            update.Parameters.AddWithValue("@execution_owner_id", executionOwnerId);
+            update.Parameters.AddWithValue("@lease_milliseconds", LeaseMilliseconds(executionLeaseDuration));
             await update.ExecuteNonQueryAsync(cancellationToken);
         }
 
         await transaction.CommitAsync(cancellationToken);
         return await GetAsync(operationId, cancellationToken);
+    }
+
+    public async Task<bool> RenewExecutionLeaseAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
+    {
+        await using var connection = await OpenAsync(cancellationToken);
+        await using var command = Command(connection, null, """
+            UPDATE {{schema}}.managed_operations
+            SET execution_lease_expires_at = DATEADD(millisecond, @lease_milliseconds, SYSUTCDATETIME()),
+                updated_at = SYSUTCDATETIME()
+            WHERE operation_id = @operation_id
+              AND operation_state IN (N'Running', N'Cancelling')
+              AND execution_owner_id = @execution_owner_id
+              AND execution_lease_expires_at > SYSUTCDATETIME();
+            """);
+        command.Parameters.AddWithValue("@operation_id", operationId);
+        command.Parameters.AddWithValue("@execution_owner_id", executionOwnerId);
+        command.Parameters.AddWithValue("@lease_milliseconds", LeaseMilliseconds(executionLeaseDuration));
+        return await command.ExecuteNonQueryAsync(cancellationToken) == 1;
     }
 
     public Task UpdateStageAsync(
@@ -219,6 +242,7 @@ public sealed class SqlServerManagedOperationStore(
             null,
             null,
             completed: false,
+            releaseOwnership: false,
             cancellationToken);
 
     public Task CompleteAsync(
@@ -240,6 +264,7 @@ public sealed class SqlServerManagedOperationStore(
             sourceIdentity,
             resultRuleReleaseId,
             completed: true,
+            releaseOwnership: true,
             cancellationToken);
 
     public Task FailAsync(
@@ -263,6 +288,7 @@ public sealed class SqlServerManagedOperationStore(
             null,
             null,
             completed: state is ManagedOperationState.Failed or ManagedOperationState.Cancelled,
+            releaseOwnership: true,
             cancellationToken);
 
     private async Task UpdateAsync(
@@ -277,6 +303,7 @@ public sealed class SqlServerManagedOperationStore(
         string? sourceIdentity,
         string? resultRuleReleaseId,
         bool completed,
+        bool releaseOwnership,
         CancellationToken cancellationToken)
     {
         await using var connection = await OpenAsync(cancellationToken);
@@ -293,11 +320,12 @@ public sealed class SqlServerManagedOperationStore(
                 user_approval_required = 0,
                 administrative_intervention_required = @administrative_intervention_required,
                 source_identity = COALESCE(@source_identity, source_identity),
-                result_rule_release_id = COALESCE(@result_rule_release_id, result_rule_release_id)
-            WHERE operation_id = @operation_id;
-
-            IF @@ROWCOUNT <> 1
-                THROW 51040, 'Managed Operation target was not found.', 1;
+                result_rule_release_id = COALESCE(@result_rule_release_id, result_rule_release_id),
+                execution_owner_id = CASE WHEN @release_ownership = 1 THEN NULL ELSE execution_owner_id END,
+                execution_lease_expires_at = CASE WHEN @release_ownership = 1 THEN NULL ELSE execution_lease_expires_at END
+            WHERE operation_id = @operation_id
+              AND execution_owner_id = @execution_owner_id
+              AND execution_lease_expires_at > SYSUTCDATETIME();
             """);
         command.Parameters.AddWithValue("@operation_id", operationId);
         command.Parameters.AddWithValue("@operation_state", state.ToString());
@@ -310,8 +338,44 @@ public sealed class SqlServerManagedOperationStore(
         command.Parameters.AddWithValue("@administrative_intervention_required", administrativeInterventionRequired);
         command.Parameters.AddWithValue("@source_identity", (object?)sourceIdentity ?? DBNull.Value);
         command.Parameters.AddWithValue("@result_rule_release_id", (object?)resultRuleReleaseId ?? DBNull.Value);
-        await command.ExecuteNonQueryAsync(cancellationToken);
+        command.Parameters.AddWithValue("@release_ownership", releaseOwnership);
+        command.Parameters.AddWithValue("@execution_owner_id", executionOwnerId);
+        if (await command.ExecuteNonQueryAsync(cancellationToken) != 1)
+        {
+            throw new ManagedOperationOwnershipLostException(operationId);
+        }
     }
+
+    private async Task<int> RecoverExpiredAsync(
+        SqlConnection connection,
+        SqlTransaction? transaction,
+        CancellationToken cancellationToken)
+    {
+        await using var command = Command(connection, transaction, """
+            UPDATE {{schema}}.managed_operations
+            SET operation_state = N'Interrupted',
+                updated_at = SYSUTCDATETIME(),
+                safe_status_detail = N'Execution ownership was lost before completion; durable retry will resume idempotent work.',
+                error_code = N'MANAGED_OPERATION_INTERRUPTED',
+                retry_safe = 1,
+                administrative_intervention_required = 0,
+                execution_owner_id = NULL,
+                execution_lease_expires_at = NULL
+            WHERE operation_state IN (N'Running', N'Cancelling')
+              AND (
+                    execution_owner_id IS NULL
+                 OR execution_lease_expires_at IS NULL
+                 OR execution_lease_expires_at <= SYSUTCDATETIME()
+              );
+            """);
+        return await command.ExecuteNonQueryAsync(cancellationToken);
+    }
+
+    private static int LeaseMilliseconds(TimeSpan value) =>
+        (int)Math.Clamp(
+            (value > TimeSpan.Zero ? value : TimeSpan.FromSeconds(30)).TotalMilliseconds,
+            1,
+            int.MaxValue);
 
     private async Task<SqlConnection> OpenAsync(CancellationToken cancellationToken)
     {
@@ -356,7 +420,8 @@ public sealed class SqlServerManagedOperationStore(
             reader.GetBoolean(14),
             reader.IsDBNull(15) ? null : reader.GetString(15),
             reader.IsDBNull(16) ? null : reader.GetString(16),
-            reader.IsDBNull(17) ? null : reader.GetString(17));
+            reader.IsDBNull(17) ? null : reader.GetString(17),
+            reader.GetInt32(18));
 
     private static string BindColumns(string sql) =>
         sql.Replace(
@@ -364,6 +429,7 @@ public sealed class SqlServerManagedOperationStore(
             "operation_id, operation_kind, correlation_id, operation_state, current_stage, " +
             "created_at, started_at, updated_at, completed_at, progress_percent, " +
             "safe_status_detail, error_code, retry_safe, user_approval_required, " +
-            "administrative_intervention_required, ruleset_id, source_identity, result_rule_release_id",
+            "administrative_intervention_required, ruleset_id, source_identity, result_rule_release_id, " +
+            "execution_attempt_count",
             StringComparison.Ordinal);
 }

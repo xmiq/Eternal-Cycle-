@@ -38,9 +38,11 @@ Supported semantic states are:
 - `Cancelled` - cancellation completed;
 - `Interrupted` - execution ownership was lost and deterministic recovery or retry is required.
 
-Persisted `Running` or `Cancelling` work must not remain phantom-active after service restart. Startup recovery marks it `Interrupted`, then either resumes through idempotent domain stages or leaves a retryable terminal diagnosis. Client disconnect or request cancellation does not cancel the durable operation.
+Persisted `Running` or `Cancelling` work must not remain phantom-active after service restart. A claim therefore has bounded, renewable execution ownership. While a worker owns the claim it renews that ownership; absent or expired ownership is reconciled to `Interrupted`, then either resumes through idempotent domain stages or leaves a retryable terminal diagnosis. Client disconnect or request cancellation does not cancel the durable operation.
 
-A service may start before its administrative bootstrap has created the durable operation store. Its worker waits and retries store recovery under bounded polling instead of crashing the host or substituting an in-memory queue. After any later store outage, it reruns interruption recovery before claiming more work so a previously claimed operation cannot remain phantom-`Running`.
+A service may start before its administrative bootstrap has created the durable operation store. Its worker waits and retries store recovery under bounded polling instead of crashing the host or substituting an in-memory queue. Recovery runs before each claim opportunity, not only once at process startup, so an ownership lease that expires after restart or after a store outage is reclaimed without another restart.
+
+Execution ownership must distinguish a genuinely worker-owned `Running` operation from an orphan. A reference may use a renewable lease, queue visibility timeout, scheduler claim, or equivalent durable mechanism. Recovery is idempotent: repeated service restarts retain the same Operation ID, correlation ID, creation history, committed domain stages, and diagnostic evidence. A new execution attempt increments attempt evidence rather than creating a competing operation. A stale worker cannot complete or mutate an operation after losing ownership.
 
 ## Operation Record
 
@@ -56,6 +58,7 @@ A safe operation view includes:
 - separate `userApprovalRequired` and `administrativeInterventionRequired` claims;
 - safe Ruleset or source identity;
 - result identity after completion.
+- execution-attempt count or equivalent safe recovery evidence.
 
 The service must support status lookup by Operation ID and bounded discovery of recent relevant operations. Diagnostics may correlate by Operation ID, correlation ID, or both without requiring a Campaign ID. Losing the immediate response does not make recovery impossible. Retry safety and intervention claims must agree between an outer response envelope and its inner operation record.
 
@@ -65,6 +68,8 @@ Before the durable operation schema exists, operation initiation, status, and li
 
 Equivalent active requests reuse one operation when competing execution would be unsafe or wasteful. The operation's deduplication identity includes the semantic work target and configuration revision needed to distinguish materially different work.
 
+An unexpired worker-owned operation remains active and blocks competing work. A missing or expired claim is first reconciled to `Interrupted`; repeating the initiating request may return that same recoverable operation, but it cannot leave the orphan permanently blocking publication. Users and AI runtimes never repair the operation by editing storage, deleting rows, or inventing another campaign identity.
+
 Domain execution remains idempotent. Rule publication reuses durable `Candidate -> Validated -> Published -> Active` state and source-unique Rule Release identity. Operation deduplication does not replace domain idempotency.
 
 ## Timeouts
@@ -73,7 +78,7 @@ Interactive request deadlines do not define server execution policy. The service
 
 Cancellation classification belongs to the durable operation owner. Lower publication and provider layers propagate cancellation instead of converting it into an ordinary result. The owner distinguishes host shutdown, its own Managed Operation timeout, provider acquisition timeout, provider subprocess timeout, explicit administrative cancellation when such a capability exists, and an unexpected parent cancellation. Implementations must not claim an explicit administrative-cancel path exists until they expose and authorize one.
 
-Host shutdown leaves work `Interrupted` and recoverable. A Managed Operation timeout and an unexpected parent cancellation leave safe causal evidence with the operation's true Operation ID and correlation ID. Unknown parent-token origins remain unknown until evidence identifies them.
+Graceful host shutdown leaves work `Interrupted` and recoverable. Abrupt process or host loss is detected when durable execution ownership is absent or expires. A Managed Operation timeout and an unexpected parent cancellation leave safe causal evidence with the operation's true Operation ID and correlation ID. Unknown parent-token origins remain unknown until evidence identifies them.
 
 ## Authorization
 

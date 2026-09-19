@@ -34,22 +34,22 @@ Stable is the normal default and must not silently use unreleased content. Until
 15. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
 16. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
 17. Stop the client during publication, reconnect, and verify recent-operation discovery recovers the authoritative status without cancelling service-owned work.
-18. Restart the service while an operation is `Running`; verify it cannot remain phantom-running, is recovered as `Interrupted`, and is safely reclaimed through idempotent publication or left retryable.
+18. Shut down the host while an operation is `Running`, restart the service, and verify missing or expired execution ownership changes the same Operation ID to recoverable `Interrupted` state before it is safely reclaimed. Confirm the Correlation ID and interruption evidence are preserved, the execution-attempt count advances, repeated initiation reuses the same operation, an unexpired worker-owned operation still deduplicates, and no storage edit or new Campaign ID is required.
 19. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
 20. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or automatic protected physical fallback contains useful redacted evidence with no secrets.
 
 ## Genuine Pre-007 Upgrade Regression
 
-Use a database initialized through migrations `001` to `006` with one preserved campaign, then connect the current service without manually applying migrations `007` or `008`.
+Use a database initialized through migrations `001` to `006` with one preserved campaign, then connect the current service without manually applying migrations `007`, `008`, or `009`.
 
 1. Call `ec_get_configuration_requirements`; verify configuration is discoverable without schema access.
 2. Call `ec_get_readiness`; expect `MIGRATION_REQUIRED` and a supported recovery capability, not a missing-table exception.
-3. Call `ec_get_setup_plan`; verify only unapplied migrations `007` and `008` are planned.
+3. Call `ec_get_setup_plan`; verify only unapplied migrations `007`, `008`, and `009` are planned.
 4. Call `ec_get_diagnostics`; verify its scope is explicitly pre-migration and it does not query operation tables.
 5. Call `ec_get_error_dump`; verify a bounded partial dump is returned even though post-007 evidence is unavailable.
 6. Call `ec_get_operation_status` and `ec_list_managed_operations`; verify structured `MIGRATION_REQUIRED` responses and no operation-table query failure.
 7. Attempt initialization without approval; verify no mutation.
-8. Give natural informed approval and call `ec_initialize_service`; verify migrations `007` and `008` apply and validate without requiring a literal magic phrase or raw SQL.
+8. Give natural informed approval and call `ec_initialize_service`; verify migrations `007`, `008`, and `009` apply and validate without requiring a literal magic phrase or raw SQL.
 9. Verify the pre-existing campaign remains intact.
 10. Call readiness; expect `RULE_SOURCE_REQUIRED` rather than migration failure.
 11. Configure a compatible source, approve publication, and call `ec_publish_initial_rules`; verify a durable queued Operation ID is returned.

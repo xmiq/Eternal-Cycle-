@@ -54,7 +54,7 @@ If no Rule Source is configured, the service may offer the official Eternal Cycl
 
 Readiness is granular: `ServiceReady`, `PersistenceReady`, `RuleKernelReady`, `CampaignBootstrapReady`, `GameplayReady`, and `FullRulesetReady` are distinct claims. `GameplayReady` may become true before `FullRulesetReady`; a later action still waits when its dependency closure is `PENDING` or `FAILED`.
 
-Initial publication is a durable [Managed Operation](MANAGED_OPERATIONS.md). The initiating client may disconnect after receiving the Operation ID. On reconnect it reads status or recent operations; it does not restart publication blindly. Service diagnostics require no Campaign ID, while an optional Campaign ID adds campaign-specific routing and readiness.
+Initial publication is a durable [Managed Operation](MANAGED_OPERATIONS.md). The initiating client may disconnect after receiving the Operation ID. On reconnect it reads status or recent operations; it does not restart publication blindly. After abrupt service or host loss, missing or expired execution ownership makes the same operation recoverable without storage edits or a new Campaign ID. Service diagnostics require no Campaign ID, while an optional Campaign ID adds campaign-specific routing and readiness.
 
 When startup or administration fails, the client preserves the semantic error code and follows its advertised recovery capability. Static error lookup and bounded Error Dumps remain available before migration. Preferred structured diagnostics use an automatic protected fallback when their primary sink is unavailable. Support Bundle creation and external report submission are later, optional, explicitly authorized actions.
 

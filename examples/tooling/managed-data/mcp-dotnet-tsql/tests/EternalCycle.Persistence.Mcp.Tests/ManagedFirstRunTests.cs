@@ -339,6 +339,51 @@ public sealed class ManagedFirstRunTests
     }
 
     [Fact]
+    public async Task RepeatPublicationReportsRecoveryForExpiredOperationOwnership()
+    {
+        var sourceConfiguration = new MemorySourceConfigurationStore();
+        _ = await sourceConfiguration.SaveAsync(
+            new RuleSourceConfiguration(
+                "eternal-cycle-core",
+                "Git",
+                "https://example.invalid/rules.git",
+                "refs/tags/v1.1.0-rc",
+                "docs/rules/rule-source-manifest.json",
+                true,
+                1,
+                DateTimeOffset.UnixEpoch,
+                RuleSourceReleaseChannel.Prerelease),
+            CancellationToken.None);
+        var operationStore = new MemoryManagedOperationStore();
+        var operationService = new ManagedOperationService(
+            operationStore,
+            sourceConfiguration,
+            Options.Create(new ManagedRuleServiceOptions()));
+        var original = await operationService.EnqueueInitialRulePublicationAsync(CancellationToken.None);
+        _ = await operationStore.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
+        operationStore.ExpireExecutionLease(original.OperationId);
+        var service = Administration(
+            new FakeBootstrapExecutor([]),
+            enabled: true,
+            sourceStore: sourceConfiguration,
+            readiness: new StaticReadiness(Evaluate(
+                campaignSchema: ManagedComponentStatus.Ready,
+                domainSchema: ManagedComponentStatus.Ready,
+                source: ManagedComponentStatus.Ready)),
+            managedOperations: operationService);
+
+        var result = await service.PublishInitialRulesAsync(
+            new InitialRulePublicationRequest(true, Approval),
+            CancellationToken.None);
+
+        Assert.True(result.Success);
+        Assert.Equal("RULE_PUBLICATION_RECOVERY_QUEUED", result.Code);
+        Assert.Equal(original.OperationId, result.Data?.OperationId);
+        Assert.Equal(original.CorrelationId, result.Data?.CorrelationId);
+        Assert.Equal(ManagedOperationState.Interrupted, result.Data?.State);
+    }
+
+    [Fact]
     public async Task PersistedLocalSourceIsReusedWithoutRepositoryRootConfiguration()
     {
         var root = Path.Combine(Path.GetTempPath(), $"ec-persisted-rules-{Guid.NewGuid():N}");
@@ -437,6 +482,7 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("006_rule_source_compatibility.template.sql", files);
         Assert.Contains("007_durable_managed_operations.template.sql", files);
         Assert.Contains("008_diagnostic_operation_correlation.template.sql", files);
+        Assert.Contains("009_managed_operation_execution_leases.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
@@ -458,6 +504,13 @@ public sealed class ManagedFirstRunTests
             "008_diagnostic_operation_correlation.template.sql"));
         Assert.Contains("operation_id", diagnosticCorrelation);
         Assert.Contains("IF COL_LENGTH", diagnosticCorrelation);
+        var executionLeases = File.ReadAllText(Path.Combine(
+            schemaDirectory,
+            "009_managed_operation_execution_leases.template.sql"));
+        Assert.Contains("execution_owner_id", executionLeases);
+        Assert.Contains("execution_lease_expires_at", executionLeases);
+        Assert.Contains("execution_attempt_count", executionLeases);
+        Assert.Contains("IF COL_LENGTH", executionLeases);
     }
 
     private static ManagedReadinessReport Evaluate(
@@ -488,9 +541,10 @@ public sealed class ManagedFirstRunTests
         bool enabled,
         IRuleSourceConfigurationStore? sourceStore = null,
         string? metadataPath = null,
-        IPublishedRuleStore? ruleStore = null,
-        IRuleSourceProvider? ruleSource = null,
-        IManagedReadinessService? readiness = null)
+      IPublishedRuleStore? ruleStore = null,
+      IRuleSourceProvider? ruleSource = null,
+      IManagedReadinessService? readiness = null,
+      IManagedOperationService? managedOperations = null)
     {
         sourceStore ??= new MemorySourceConfigurationStore();
         ruleStore ??= new MemoryRuleStore();
@@ -503,10 +557,10 @@ public sealed class ManagedFirstRunTests
             activeReleaseId: "active",
             compatible: true));
         var ruleOptions = Options.Create(new ManagedRuleServiceOptions());
-        var operationService = new ManagedOperationService(
-            new MemoryManagedOperationStore(),
-            sourceStore,
-            ruleOptions);
+      managedOperations ??= new ManagedOperationService(
+          new MemoryManagedOperationStore(),
+          sourceStore,
+          ruleOptions);
         return new ManagedAdministrationService(
             Options.Create(new ManagedAdministrationOptions
             {
@@ -519,7 +573,7 @@ public sealed class ManagedFirstRunTests
             readiness,
             sourceStore,
             new FakeCampaignDirectory(),
-            operationService);
+          managedOperations);
     }
 
     private static ConfiguredCampaignSchemaResolver Resolver() =>

@@ -5381,3 +5381,7 @@ A Distribution Archive is a full useful repository snapshot for external review 
 ## D-1345 — Cancellation Classification Belongs to the Durable Operation Boundary
 
 Lower Rule Source and publication layers propagate cancellation rather than converting it into ordinary results. The durable Managed Operation owner classifies observed host shutdown, its own timeout, acquisition timeout, Git-process timeout, or an otherwise unexplained parent cancellation, and never invents an unobserved cause. Diagnostics carry the actual Operation ID and Correlation ID so status, error lookup, and Error Dump retrieval identify the same durable work.
+
+## D-1346 — Managed Execution Ownership Is Bounded and Recoverable
+
+A `Running` Managed Operation must carry renewable durable execution ownership or an equivalent bounded claim. Only the current owner may advance or complete it. Missing or expired ownership is reconciled to `Interrupted` and reclaimed idempotently under the same Operation ID and correlation ID; live unexpired ownership continues to prevent competing work. This is a Managed Service contract. Lease columns, heartbeat timing, SQL locking, and hosted-worker implementation are reference details.

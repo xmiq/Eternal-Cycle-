@@ -22,6 +22,9 @@ public static class ManagedOperationKinds
     public const string InitialRulePublication = "InitialRulePublication";
 }
 
+public sealed class ManagedOperationOwnershipLostException(string operationId)
+    : InvalidOperationException($"Managed Operation {operationId} no longer has valid execution ownership.");
+
 public sealed record ManagedOperationStatus(
     string OperationId,
     string OperationKind,
@@ -40,7 +43,8 @@ public sealed record ManagedOperationStatus(
     bool AdministrativeInterventionRequired,
     string? RulesetId,
     string? SourceIdentity,
-    string? ResultRuleReleaseId);
+    string? ResultRuleReleaseId,
+    int ExecutionAttempt);
 
 public sealed record ManagedOperationEnqueueRequest(
     string OperationKind,
@@ -72,7 +76,14 @@ public interface IManagedOperationStore
 
     Task<int> RecoverInterruptedAsync(CancellationToken cancellationToken);
 
-    Task<ManagedOperationStatus?> ClaimNextAsync(CancellationToken cancellationToken);
+    Task<ManagedOperationStatus?> ClaimNextAsync(
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken);
+
+    Task<bool> RenewExecutionLeaseAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken);
 
     Task UpdateStageAsync(
         string operationId,
@@ -211,13 +222,23 @@ public sealed class ManagedOperationProcessor(
 
     public async Task<bool> ProcessNextAsync(CancellationToken stoppingToken)
     {
-        var operation = await store.ClaimNextAsync(stoppingToken);
+        var leaseDuration = settings.ManagedOperationLeaseDuration > TimeSpan.Zero
+            ? settings.ManagedOperationLeaseDuration
+            : TimeSpan.FromSeconds(30);
+        var operation = await store.ClaimNextAsync(leaseDuration, stoppingToken);
         if (operation is null)
         {
             return false;
         }
 
         var currentStage = operation.CurrentStage;
+        using var executionOwnershipLost = new CancellationTokenSource();
+        using var heartbeatStop = new CancellationTokenSource();
+        var heartbeat = MaintainExecutionOwnershipAsync(
+            operation,
+            leaseDuration,
+            heartbeatStop.Token,
+            executionOwnershipLost);
         using var operationTimeout = new CancellationTokenSource(
             settings.ManagedOperationTimeout > TimeSpan.Zero
                 ? settings.ManagedOperationTimeout
@@ -243,7 +264,8 @@ public sealed class ManagedOperationProcessor(
 
             using var linked = CancellationTokenSource.CreateLinkedTokenSource(
                 stoppingToken,
-                operationTimeout.Token);
+                operationTimeout.Token,
+                executionOwnershipLost.Token);
             void ReportStage(RulePublicationStage stage)
             {
                 currentStage = stage.ToString();
@@ -321,6 +343,30 @@ public sealed class ManagedOperationProcessor(
                 administrativeInterventionRequired: false,
                 CancellationToken.None);
         }
+        catch (OperationCanceledException) when (executionOwnershipLost.IsCancellationRequested)
+        {
+            await RecordCancellationAsync(
+                operation,
+                currentStage,
+                "MANAGED_OPERATION_INTERRUPTED",
+                "ExecutionLeaseLost",
+                retrySafe: true);
+            logger.LogWarning(
+                "Managed operation {OperationId} stopped because its durable execution lease was lost.",
+                operation.OperationId);
+        }
+        catch (ManagedOperationOwnershipLostException)
+        {
+            await RecordCancellationAsync(
+                operation,
+                currentStage,
+                "MANAGED_OPERATION_INTERRUPTED",
+                "ExecutionLeaseLost",
+                retrySafe: true);
+            logger.LogWarning(
+                "Managed operation {OperationId} stopped because its durable execution ownership expired before a state update.",
+                operation.OperationId);
+        }
         catch (OperationCanceledException)
         {
             await RecordCancellationAsync(
@@ -355,8 +401,59 @@ public sealed class ManagedOperationProcessor(
                 administrativeInterventionRequired: false,
                 CancellationToken.None);
         }
+        finally
+        {
+            heartbeatStop.Cancel();
+            try
+            {
+                await heartbeat;
+            }
+            catch (OperationCanceledException) when (heartbeatStop.IsCancellationRequested)
+            {
+                // Normal processor completion stops the lease heartbeat.
+            }
+        }
 
         return true;
+    }
+
+    private async Task MaintainExecutionOwnershipAsync(
+        ManagedOperationStatus operation,
+        TimeSpan leaseDuration,
+        CancellationToken stopToken,
+        CancellationTokenSource ownershipLost)
+    {
+        var interval = TimeSpan.FromMilliseconds(Math.Clamp(
+            leaseDuration.TotalMilliseconds / 3,
+            10,
+            5000));
+        try
+        {
+            while (!stopToken.IsCancellationRequested)
+            {
+                await Task.Delay(interval, stopToken);
+                if (!await store.RenewExecutionLeaseAsync(
+                        operation.OperationId,
+                        leaseDuration,
+                        stopToken))
+                {
+                    ownershipLost.Cancel();
+                    return;
+                }
+            }
+        }
+        catch (OperationCanceledException) when (stopToken.IsCancellationRequested)
+        {
+            // Normal completion or host shutdown stops the heartbeat.
+        }
+        catch (Exception exception)
+        {
+            logger.LogWarning(
+                "Managed operation {OperationId} could not renew durable ownership after {ExceptionType}.",
+                operation.OperationId,
+                exception.GetType().FullName);
+            ownershipLost.Cancel();
+        }
     }
 
     private Task RecordCancellationAsync(
@@ -430,21 +527,16 @@ public sealed class ManagedOperationWorker(
         var delay = settings.ManagedOperationPollInterval > TimeSpan.Zero
             ? settings.ManagedOperationPollInterval
             : TimeSpan.FromSeconds(1);
-        var recoveryComplete = false;
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
-                if (!recoveryComplete)
+                var recovered = await store.RecoverInterruptedAsync(stoppingToken);
+                if (recovered > 0)
                 {
-                    var recovered = await store.RecoverInterruptedAsync(stoppingToken);
-                    recoveryComplete = true;
-                    if (recovered > 0)
-                    {
-                        logger.LogWarning(
-                            "Recovered {RecoveredCount} Managed Operations that were Running when the service stopped.",
-                            recovered);
-                    }
+                    logger.LogWarning(
+                        "Recovered {RecoveredCount} Managed Operations whose durable execution ownership expired.",
+                        recovered);
                 }
 
                 if (!await processor.ProcessNextAsync(stoppingToken))
@@ -459,9 +551,8 @@ public sealed class ManagedOperationWorker(
             catch (Exception exception)
             {
                 // A fresh service may start before administrative migrations create
-                // the operation store. Re-run recovery after any store outage so a
-                // claimed operation cannot remain phantom-Running when it returns.
-                recoveryComplete = false;
+                // the operation store. Polling always reconciles expired ownership
+                // before claiming work once the store is available.
                 logger.LogWarning(
                     "Managed-operation polling is waiting for its durable store after {ExceptionType}.",
                     exception.GetType().FullName);

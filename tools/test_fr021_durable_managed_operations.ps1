@@ -46,6 +46,8 @@ $managedDiagnostics = Read-RepoFile "$source/ManagedDiagnostics.cs"
 $managedConfiguration = Read-RepoFile "$source/ManagedConfiguration.cs"
 $migration008 = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.sql"
 $migration008Template = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.template.sql"
+$migration009 = Read-RepoFile "$source/Schema/009_managed_operation_execution_leases.sql"
+$migration009Template = Read-RepoFile "$source/Schema/009_managed_operation_execution_leases.template.sql"
 $managedContract = Read-RepoFile 'docs/persistence/MANAGED_OPERATIONS.md'
 $publicationContract = Read-RepoFile 'docs/rules/MANAGED_RULE_PUBLICATION.md'
 $retrievalContract = Read-RepoFile 'docs/rules/RULE_COMPILATION_AND_RETRIEVAL.md'
@@ -110,7 +112,7 @@ Assert-Requirement 43 ($roadmap -match '\[x\] \*\*FR-021' -and $roadmap -match '
 Assert-Requirement 44 ($future -match '### FR-021' -and $future -match 'Status:\*\* Closed') 'Future Revision provenance records FR-021 closure.'
 Assert-Requirement 45 ($manifest -match 'preparationTier') 'Rule Source manifest carries portable preparation metadata.'
 Assert-Requirement 46 ($publicationContract -match 'GameplayReady' -and $publicationContract -match 'FullRulesetReady') 'Canonical publication guidance distinguishes progressive readiness levels.'
-Assert-Requirement 47 ($operations -match 'recoveryComplete = false' -and $tests -match 'HostedWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes') 'Fresh-database worker startup waits for durable setup and reruns recovery.'
+Assert-Requirement 47 ($operations -match 'var recovered = await store\.RecoverInterruptedAsync' -and $tests -match 'HostedWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes') 'Fresh-database worker startup waits for durable setup and reconciles ownership before each claim opportunity.'
 Assert-Requirement 48 ($publication -match 'catch \(OperationCanceledException\)' -and $publication -match 'throw;') 'Publication propagates cancellation to its durable owner.'
 Assert-Requirement 49 ($operations -match 'MANAGED_OPERATION_INTERRUPTED' -and $operations -match 'MANAGED_OPERATION_TIMEOUT' -and $operations -match 'MANAGED_OPERATION_CANCELLED_UNEXPECTED') 'The durable owner distinguishes host shutdown, its timeout, and unexplained parent cancellation.'
 Assert-Requirement 50 ($gitProvider -match 'RULE_SOURCE_ACQUISITION_TIMEOUT' -and $gitProvider -match 'RULE_SOURCE_PROCESS_TIMEOUT') 'Overall acquisition and individual Git-process timeouts are distinct.'
@@ -126,6 +128,17 @@ Assert-Requirement 59 ($publicationContract -match 'semantic identity' -and $pub
 Assert-Requirement 60 ($decisions -match 'Rule Source Choice Is User-Owned' -and $decisions -match 'Review Distributions and Runtime Rule Payloads Are Independent') 'Governance preserves source freedom and separates review archives from runtime payloads.'
 Assert-Requirement 61 ($distributionBuilder -match "'bin'" -and $distributionBuilder -match "'obj'" -and $distributionValidator -match 'mcp-dotnet-tsql/src' -and $distributionValidator -match 'Forbidden generated or local path') 'Distribution tooling retains review source while excluding generated bin/obj/cache paths.'
 Assert-Requirement 62 ($tests -match 'HostShutdownLeavesDurableOperationInterruptedAndRecoverable' -and $tests -match 'UnexpectedParentCancellationIsNotMisreportedAsShutdownOrTimeout') 'Cancellation ownership and retry behavior have direct regression coverage.'
+Assert-Requirement 63 ($migration009 -match 'execution_owner_id' -and $migration009 -match 'execution_lease_expires_at' -and $migration009 -match 'execution_attempt_count') 'Migration 009 adds bounded execution ownership and attempt evidence.'
+Assert-Requirement 64 ($migration009Template -match '\{\{schema\}\}' -and $migration009Template -match '\{\{schema_name\}\}' -and $project -match '009_managed_operation_execution_leases') 'Migration 009 supports routed schemas and is packaged.'
+Assert-Requirement 65 ($operationStore -match 'RenewExecutionLeaseAsync' -and $operations -match 'MaintainExecutionOwnershipAsync') 'The active worker renews its durable execution claim.'
+Assert-Requirement 66 ($operationStore -match 'execution_lease_expires_at <= SYSUTCDATETIME\(\)' -and $operationStore -match 'execution_owner_id IS NULL') 'Only missing or expired execution ownership is reconciled as interrupted.'
+Assert-Requirement 67 ($operationStore -match 'AND execution_owner_id = @execution_owner_id' -and $operationStore -match 'execution_attempt_count = execution_attempt_count \+ 1') 'State writes are ownership-guarded and retries record another attempt.'
+Assert-Requirement 68 ($tests -match 'LiveExecutionLeasePreservesRunningDeduplication' -and $tests -match 'ActiveProcessorRenewsExecutionLeaseAndRemainsDeduplicated') 'Live worker ownership remains Running and preserves active-operation deduplication.'
+Assert-Requirement 69 ($tests -match 'RepeatInitiationRecoversExpiredRunningPublicationWithoutChangingIdentity' -and $tests -match 'Assert\.Equal\(original\.CorrelationId, recovered\.CorrelationId\)') 'Power-loss recovery reuses the original Operation ID and Correlation ID.'
+Assert-Requirement 70 ($managedContract -match 'bounded, renewable execution ownership' -and $decisions -match 'Managed Execution Ownership Is Bounded and Recoverable') 'The repair is classified at the Managed Service contract layer rather than as fictional Canon.'
+Assert-Requirement 71 ($administration -match 'RULE_PUBLICATION_RECOVERY_QUEUED' -and $firstRunTests -match 'RepeatPublicationReportsRecoveryForExpiredOperationOwnership') 'Repeat initiation reports recoverable interruption rather than falsely describing an orphan as active.'
+Assert-Requirement 72 ($readiness -match 'execution_owner_id' -and $readiness -match 'execution_lease_expires_at' -and $readiness -match 'execution_attempt_count') 'Readiness requires migration 009 before operation tools query lease-aware storage.'
+Assert-Requirement 73 ($operationStore -match 'AND execution_lease_expires_at > SYSUTCDATETIME\(\)' -and $tests -match 'ExpiredExecutionLeaseRejectsStaleStateMutation') 'An expired owner cannot write completion before reconciliation.'
 
 if ($failures.Count -gt 0) {
     Write-Output "FR-021 durable Managed-operation harness: FAIL ($($failures.Count) failure(s))"

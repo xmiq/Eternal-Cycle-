@@ -351,12 +351,17 @@ public sealed class ManagedAdministrationService(
         try
         {
             var operation = await managedOperations.EnqueueInitialRulePublicationAsync(cancellationToken);
+            var recovery = operation.State == ManagedOperationState.Interrupted;
             return new(
                 true,
                 operation.State == ManagedOperationState.Queued
                     ? "RULE_PUBLICATION_QUEUED"
-                    : "RULE_PUBLICATION_ALREADY_ACTIVE",
-                "Durable rule publication was queued or an equivalent active operation was reused. Query its operation ID for progress.",
+                    : recovery
+                        ? "RULE_PUBLICATION_RECOVERY_QUEUED"
+                        : "RULE_PUBLICATION_ALREADY_ACTIVE",
+                recovery
+                    ? "Interrupted durable rule publication was recovered under the same operation identity and is eligible for worker reclamation."
+                    : "Durable rule publication was queued or an equivalent active operation was reused. Query its operation ID for progress.",
                 operation,
                 ManagedOperationKinds.InitialRulePublication,
                 operation.CurrentStage,
@@ -804,7 +809,41 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 RenderDomain("008_diagnostic_operation_correlation.template.sql")));
         }
 
+        if (domainCount == 0 ||
+            !domainTables.Contains("managed_operations") ||
+            !await ManagedOperationExecutionLeaseReadyAsync(connection, cancellationToken))
+        {
+            migrations.Add(new(
+                "009_managed_operation_execution_leases",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("009_managed_operation_execution_leases.template.sql")));
+        }
+
         return migrations;
+    }
+
+    private async Task<bool> ManagedOperationExecutionLeaseReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND tables.name = N'managed_operations'
+              AND columns.name IN (
+                    N'execution_owner_id',
+                    N'execution_lease_expires_at',
+                    N'execution_attempt_count'
+              );
+            """, connection)
+        {
+            CommandTimeout = settings.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 3;
     }
 
     private async Task<bool> DiagnosticOperationCorrelationReadyAsync(

@@ -99,6 +99,8 @@ public sealed class ManagedRuleServiceOptions
 
     public TimeSpan ManagedOperationPollInterval { get; init; } = TimeSpan.FromSeconds(1);
 
+    public TimeSpan ManagedOperationLeaseDuration { get; init; } = TimeSpan.FromSeconds(30);
+
     public GitRuleSourceOptions GitSource { get; init; } = new();
 }
 

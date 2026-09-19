@@ -591,7 +591,8 @@ public sealed class SqlServerManagedInfrastructureInspector(
                     (tables.name = N'managed_operations' AND columns.name IN (
                         N'operation_id', N'operation_state', N'current_stage', N'deduplication_key',
                         N'user_approval_required', N'administrative_intervention_required',
-                        N'result_rule_release_id'))
+                        N'result_rule_release_id', N'execution_owner_id',
+                        N'execution_lease_expires_at', N'execution_attempt_count'))
                    OR (tables.name = N'rule_source_preparation' AND columns.name IN (
                           N'rule_release_id', N'rule_source_id', N'preparation_tier',
                           N'preparation_state', N'base_priority', N'priority_boost'))
@@ -603,7 +604,7 @@ public sealed class SqlServerManagedInfrastructureInspector(
             CommandTimeout = persistence.CommandTimeoutSeconds
         };
         command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
-        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 17;
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 20;
     }
 
     private async Task<ManagedCausalDiagnostic?> ReadLatestRelevantFailureAsync(

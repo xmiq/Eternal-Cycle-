@@ -97,7 +97,11 @@ public sealed class PreMigrationControlPlaneIntegrationTests
 
             var plan = await service.GetBootstrapPlanAsync("the-second-turn", CancellationToken.None);
         Assert.Equal(
-            ["007_durable_managed_operations", "008_diagnostic_operation_correlation"],
+            [
+                "007_durable_managed_operations",
+                "008_diagnostic_operation_correlation",
+                "009_managed_operation_execution_leases"
+            ],
             plan.MigrationIds);
 
             var diagnostics = await new ServiceDiagnostics(resolver, readiness, operationStore)
@@ -141,7 +145,11 @@ public sealed class PreMigrationControlPlaneIntegrationTests
             Assert.True(initialized.Success);
             Assert.Equal("INITIALIZATION_COMPLETE", initialized.Code);
         Assert.Equal(
-            ["007_durable_managed_operations", "008_diagnostic_operation_correlation"],
+            [
+                "007_durable_managed_operations",
+                "008_diagnostic_operation_correlation",
+                "009_managed_operation_execution_leases"
+            ],
             initialized.Data!.AppliedMigrationIds);
             Assert.True(await CampaignExistsAsync(databaseConnectionString, "the-second-turn"));
 
