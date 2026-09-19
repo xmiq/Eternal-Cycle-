@@ -78,6 +78,20 @@
            Text="Eternal Cycle NOTICE was not copied to the build output." />
   </Target>
 
+  <Target Name="CreateIndependentManagedWorkerAppHost"
+          AfterTargets="Build"
+          Condition="Exists('$(TargetDir)$(AssemblyName).exe')">
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).exe"
+          DestinationFiles="$(TargetDir)EternalCycle.ManagedWorker.exe" />
+  </Target>
+
+  <Target Name="CreatePublishedIndependentManagedWorkerAppHost"
+          AfterTargets="Publish"
+          Condition="Exists('$(PublishDir)$(AssemblyName).exe')">
+    <Copy SourceFiles="$(PublishDir)$(AssemblyName).exe"
+          DestinationFiles="$(PublishDir)EternalCycle.ManagedWorker.exe" />
+  </Target>
+
   <Target Name="ValidateOfficialDistributionMetadataPublish" AfterTargets="Publish">
     <Error Condition="!Exists('$(PublishDir)distribution-metadata.json')"
            Text="Eternal Cycle distribution metadata was not copied to the publish output." />
@@ -85,6 +99,8 @@
            Text="Eternal Cycle LICENSE was not copied to the publish output." />
     <Error Condition="!Exists('$(PublishDir)NOTICE')"
            Text="Eternal Cycle NOTICE was not copied to the publish output." />
+    <Error Condition="'$(OS)' == 'Windows_NT' and !Exists('$(PublishDir)EternalCycle.ManagedWorker.exe')"
+           Text="The independent Eternal Cycle Managed Worker was not copied to the publish output." />
   </Target>
 
 </Project>

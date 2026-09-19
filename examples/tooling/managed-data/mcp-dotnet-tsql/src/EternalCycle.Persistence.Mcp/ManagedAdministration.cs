@@ -41,7 +41,8 @@ public sealed record ManagedOperationResult<T>(
     string? BlockingCondition = null,
     string? RequiredAction = null,
     IReadOnlyList<string>? AllowedNextActions = null,
-    string? RecommendedNextAction = null);
+    string? RecommendedNextAction = null,
+    bool UserInterventionRequired = false);
 
 public sealed record BootstrapRequest(
     string? CampaignId,
@@ -350,7 +351,27 @@ public sealed class ManagedAdministrationService(
 
         try
         {
-            var operation = await managedOperations.EnqueueInitialRulePublicationAsync(cancellationToken);
+            var initiation = await managedOperations.InitiateInitialRulePublicationAsync(cancellationToken);
+            var operation = initiation.Operation;
+            if (initiation.WorkerLaunch.UserInterventionRequired)
+            {
+                return new(
+                    false,
+                    initiation.WorkerLaunch.Code,
+                    initiation.WorkerLaunch.Message,
+                    operation,
+                    ManagedOperationKinds.InitialRulePublication,
+                    operation.CurrentStage,
+                    operation.CorrelationId,
+                    RetrySafe: true,
+                    AdministrativeInterventionRequired: false,
+                    BlockingCondition: "Automatic independent worker launch was blocked by the hosting environment.",
+                    RequiredAction: $"Double-click '{initiation.WorkerLaunch.PreparedLauncherPath}'.",
+                    AllowedNextActions: ["Run the prepared launcher", "Query the existing operation"],
+                    RecommendedNextAction: "Run the prepared launcher once; it resumes the existing Durable Managed Operation.",
+                    UserInterventionRequired: true);
+            }
+
             var recovery = operation.State == ManagedOperationState.Interrupted;
             return new(
                 true,

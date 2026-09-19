@@ -28,12 +28,12 @@ Stable is the normal default and must not silently use unreleased content. Until
 9. With the default Stable channel, verify an historical official source that lacks the Managed manifest returns non-retryable `RULE_SOURCE_INCOMPATIBLE` and never falls forward to Prerelease.
 10. Explicitly select Prerelease, verify the official development discovery ref resolves to one immutable SHA, and confirm the persisted Rule Release records channel, discovery ref, SHA, manifest format, and compiler contract separately.
 11. Repeat with an existing local clone and an isolated modified compatible source. Verify both use the same technical validation/publication pipeline and are not described as unsafe merely because they are not the packaged default.
-12. Initiate publication and verify the call returns promptly with a durable Operation ID, without requiring the client request to remain open for acquisition, compilation, validation, publication, or activation.
+12. Initiate publication and verify the call returns promptly with a durable Operation ID and launches an independent Managed Worker, without requiring the client request or MCP transport process to remain open for acquisition, compilation, validation, publication, or activation.
 13. Poll or rediscover the operation independently. Verify the Runtime Rule Kernel and Campaign Bootstrap closure become ready, `GameplayReady` becomes true while `FullRulesetReady` may remain false, and remaining rules continue preparation under service-owned timeout policy.
 14. Move the discovery ref after publication and verify the existing release retains its original immutable SHA.
 15. Make the source unavailable and verify the active valid release remains usable with `DEGRADED` update status.
 16. Submit missing-manifest and unsupported-contract candidates and verify both are compatibility failures rather than network failures.
-17. Stop the client during publication, reconnect, and verify recent-operation discovery recovers the authoritative status without cancelling service-owned work.
+17. Stop the client and its MCP transport process during publication without terminating the independent worker. Verify the same worker continues the same execution attempt, then reconnect and confirm recent-operation discovery reports progress produced while the transport was absent.
 18. Shut down the host while an operation is `Running`, restart the service, and verify missing or expired execution ownership changes the same Operation ID to recoverable `Interrupted` state before it is safely reclaimed. Confirm the Correlation ID and interruption evidence are preserved, the execution-attempt count advances, repeated initiation reuses the same operation, an unexpired worker-owned operation still deduplicates, and no storage edit or new Campaign ID is required.
 19. Cancel one publication after a durable stage, retry it, and verify the service resumes the same release identity without duplicate chunks, selectors, dependencies, or activation effects.
 20. Force one publication-stage failure and verify the safe response carries operation, stage, code, correlation ID, retry guidance, intervention guidance, and diagnostic availability. Verify readiness retains its current broad state while exposing the latest relevant causal failure. Verify the SQL diagnostic or automatic protected physical fallback contains useful redacted evidence with no secrets.
@@ -53,7 +53,7 @@ Use a database initialized through migrations `001` to `006` with one preserved 
 9. Verify the pre-existing campaign remains intact.
 10. Call readiness; expect `RULE_SOURCE_REQUIRED` rather than migration failure.
 11. Configure a compatible source, approve publication, and call `ec_publish_initial_rules`; verify a durable queued Operation ID is returned.
-12. Rediscover the operation independently and verify it transitions under the hosted worker.
+12. Rediscover the operation independently and verify it transitions under the independent Managed Worker.
 
 The external LM Studio acceptance sequence uses these same MCP calls. The user must not be asked for repository access, direct database access, migration filenames, schema names, or developer paths.
 
@@ -111,3 +111,17 @@ Begin from a cold Rule Store, prepare the minimum authoritative gameplay closure
 ### F. Moving RC Update
 
 Resolve `v1.1.0-rc` to SHA A and publish its derived `rc.N` metadata. Move the discovery tag to SHA B, detect and publish the new derived `rc.M`, and verify the earlier Rule Release remains permanently bound to SHA A.
+
+### G. Ephemeral-Transport Worker Lifetime
+
+1. Through Unsloth Studio or another host known to terminate its MCP transport process after an AI response, configure and authorize initial Rule publication.
+2. Record the returned Operation ID, correlation ID, and execution-attempt count.
+3. Confirm `EternalCycle.ManagedWorker.exe` is running independently.
+4. Let the AI response finish and confirm the host terminates its Python/MCP process tree as expected.
+5. Verify the independent worker remains alive and the same operation continues changing durable stage/progress.
+6. Reconnect MCP and query the original Operation ID. Confirm identity and correlation are unchanged and transport disappearance did not increment the execution attempt.
+7. If automatic Windows Job Object breakaway is refused, verify `WORKER_INDEPENDENT_LAUNCH_BLOCKED` reports user intervention without administrator intervention and prepares `Continue Eternal Cycle Setup.bat`.
+8. Double-click that file without entering any technical parameter. Confirm the worker reaches durable control, the launcher and its temporary configuration remove themselves, and later MCP status reports the same original operation.
+9. Exercise `ec_stop_managed_operation` while a deterministic fixture blocks forward progress and verify cancellation begins without waiting for that fixture to return.
+
+This scenario is the decisive live acceptance for the lifecycle repair. Repository unit tests prove process launch, parent-tree survival, lease/idempotency behavior, and fallback mechanics, but they do not prove the actual Unsloth process host permits either automatic breakaway or the prepared manual path.

@@ -5389,3 +5389,11 @@ A `Running` Managed Operation must carry renewable durable execution ownership o
 ## D-1347 — External Source Commands Produce Sanitized Terminal Evidence
 
 Each external command used by a Managed Rule Source Provider produces one correlated terminal diagnostic that identifies the logical command after deterministic secret redaction, working context, timing, process identity when available, exit evidence, outcome, timeout scope, and only the cancellation provenance actually observed at that layer. A lower runner may report `ParentToken` when the durable parent alone can distinguish host shutdown, an operation timeout, or explicit cancellation; it must not invent the parent's cause. Provider-owned temporary acquisition workspaces may be cleaned conservatively, while valid snapshots, unrelated cache entries, and historical cache roots remain outside that cleanup. Command execution and filesystem cleanup are reference details; correlated, sanitized, non-speculative evidence and bounded temporary-resource ownership are Managed Service/provider contracts.
+
+## D-1348 — Durable Execution Outlives Ephemeral Transport
+
+A Durable Managed Operation cannot depend on an MCP process, AI response, client session, or equivalent transport lifetime. The transport persists or reuses work and may ensure an executor exists; the executor advances that same durable identity under bounded ownership and domain idempotency. Transport disappearance does not interrupt an independently running attempt, while actual executor or machine loss remains subject to interruption recovery. A separate .NET worker process, Windows Job Object breakaway, and local control files are reference implementation details.
+
+## D-1349 — Prepared Recovery Minimizes User Intervention
+
+When automatic setup cannot proceed but Eternal Cycle can prepare the recovery action completely, it prepares that action and asks the user only to execute or approve it. A host-blocked independent-worker launch is user intervention, not renewed gameplay approval and not administrator intervention. The Windows reference may create a temporary one-click launcher carrying the existing operation handoff and protected effective configuration; successful handoff removes temporary material, failed handoff remains retryable, and neither path creates a replacement operation or campaign.

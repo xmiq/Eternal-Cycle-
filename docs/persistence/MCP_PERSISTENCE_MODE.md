@@ -27,6 +27,8 @@ An MCP realization exposes domain operations rather than arbitrary backend acces
 
 Administrative source synchronization, compilation, publication, activation, migration, backup, and recovery are separately authorized and need not be exposed through the gameplay MCP server.
 
+When an MCP action creates a Durable Managed Operation, MCP is only its transport/control-plane boundary. The operation executor must not depend on that MCP process, request, or client session remaining alive. A later MCP instance observes the same durable identity and result. Worker processes, service schedulers, and provider-native queues are implementation choices governed by [Managed Operations](MANAGED_OPERATIONS.md).
+
 The interface exposes no raw SQL, table browser, filesystem shell, unrestricted query, connection string, database path, token, or backup locator.
 
 ## Receipt Boundary

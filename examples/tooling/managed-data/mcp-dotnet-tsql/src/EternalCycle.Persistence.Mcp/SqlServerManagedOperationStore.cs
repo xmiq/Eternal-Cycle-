@@ -203,6 +203,41 @@ public sealed class SqlServerManagedOperationStore(
         return await GetAsync(operationId, cancellationToken);
     }
 
+    public async Task<ManagedOperationStatus?> ClaimAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
+    {
+        await using var connection = await OpenAsync(cancellationToken);
+        await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(
+            IsolationLevel.ReadCommitted,
+            cancellationToken);
+        await RecoverExpiredAsync(connection, transaction, cancellationToken);
+        await using var update = Command(connection, transaction, """
+            UPDATE {{schema}}.managed_operations WITH (UPDLOCK, ROWLOCK)
+            SET operation_state = N'Running',
+                current_stage = N'AcquireSource',
+                started_at = COALESCE(started_at, SYSUTCDATETIME()),
+                updated_at = SYSUTCDATETIME(),
+                progress_percent = 1,
+                safe_status_detail = N'Durable background execution has started.',
+                error_code = NULL,
+                retry_safe = 1,
+                administrative_intervention_required = 0,
+                execution_owner_id = @execution_owner_id,
+                execution_lease_expires_at = DATEADD(millisecond, @lease_milliseconds, SYSUTCDATETIME()),
+                execution_attempt_count = execution_attempt_count + 1
+            WHERE operation_id = @operation_id
+              AND operation_state IN (N'Queued', N'Interrupted');
+            """);
+        update.Parameters.AddWithValue("@operation_id", operationId);
+        update.Parameters.AddWithValue("@execution_owner_id", executionOwnerId);
+        update.Parameters.AddWithValue("@lease_milliseconds", LeaseMilliseconds(executionLeaseDuration));
+        var claimed = await update.ExecuteNonQueryAsync(cancellationToken) == 1;
+        await transaction.CommitAsync(cancellationToken);
+        return claimed ? await GetAsync(operationId, cancellationToken) : null;
+    }
+
     public async Task<bool> RenewExecutionLeaseAsync(
         string operationId,
         TimeSpan executionLeaseDuration,

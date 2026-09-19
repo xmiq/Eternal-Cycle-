@@ -1,4 +1,5 @@
 using EternalCycle.Persistence.Mcp;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Xunit;
@@ -286,134 +287,84 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
         store.ExpireExecutionLease(original.OperationId);
 
         var recovered = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
-        var worker = new ManagedOperationWorker(
-            store,
-            Processor(store, new ImmediatePublisher()),
-            Options.Create(new ManagedRuleServiceOptions
-            {
-                ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
-                ManagedOperationTimeout = TimeSpan.FromSeconds(10),
-                ManagedOperationLeaseDuration = TimeSpan.FromMilliseconds(100)
-            }),
-            NullLogger<ManagedOperationWorker>.Instance);
 
         Assert.Equal(original.OperationId, recovered.OperationId);
         Assert.Equal(original.CorrelationId, recovered.CorrelationId);
         Assert.Equal(ManagedOperationState.Interrupted, recovered.State);
 
-        await worker.StartAsync(CancellationToken.None);
-        try
-        {
-            ManagedOperationStatus? completed = null;
-            for (var attempt = 0; attempt < 100; attempt++)
-            {
-                completed = await service.GetAsync(original.OperationId, CancellationToken.None);
-                if (completed?.State == ManagedOperationState.Succeeded)
-                {
-                    break;
-                }
+        Assert.Equal(0, await RunIndependentWorkerAsync(store, original.OperationId));
+        var completed = await service.GetAsync(original.OperationId, CancellationToken.None);
 
-                await Task.Delay(10);
-            }
-
-            Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
-            Assert.Equal(2, completed?.ExecutionAttempt);
-            Assert.Single(await service.ListRecentAsync(
-                ManagedOperationKinds.InitialRulePublication,
-                10,
-                CancellationToken.None));
-        }
-        finally
-        {
-            await worker.StopAsync(CancellationToken.None);
-            worker.Dispose();
-        }
+        Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
+        Assert.Equal(2, completed?.ExecutionAttempt);
+        Assert.Single(await service.ListRecentAsync(
+            ManagedOperationKinds.InitialRulePublication,
+            10,
+            CancellationToken.None));
     }
 
     [Fact]
-    public async Task HostedWorkerRecoversPersistedRunningWorkAndCompletesIt()
+    public async Task IndependentWorkerRecoversPersistedRunningWorkAndCompletesIt()
     {
         var store = new MemoryManagedOperationStore();
         var service = OperationService(store);
         var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
         _ = await store.ClaimNextAsync(TimeSpan.FromMinutes(1), CancellationToken.None);
         store.ExpireExecutionLease(queued.OperationId);
-        var worker = new ManagedOperationWorker(
-            store,
-            Processor(store, new ImmediatePublisher()),
-            Options.Create(new ManagedRuleServiceOptions
-            {
-                ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
-                ManagedOperationTimeout = TimeSpan.FromSeconds(10),
-                ManagedOperationLeaseDuration = TimeSpan.FromMilliseconds(100)
-            }),
-            NullLogger<ManagedOperationWorker>.Instance);
 
-        await worker.StartAsync(CancellationToken.None);
-        try
-        {
-            ManagedOperationStatus? completed = null;
-            for (var attempt = 0; attempt < 100; attempt++)
-            {
-                completed = await service.GetAsync(queued.OperationId, CancellationToken.None);
-                if (completed?.State == ManagedOperationState.Succeeded)
-                {
-                    break;
-                }
+        Assert.Equal(0, await RunIndependentWorkerAsync(store, queued.OperationId));
+        var completed = await service.GetAsync(queued.OperationId, CancellationToken.None);
 
-                await Task.Delay(10);
-            }
-
-            Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
-            Assert.Equal("RULE-RESULT", completed?.ResultRuleReleaseId);
-        }
-        finally
-        {
-            await worker.StopAsync(CancellationToken.None);
-            worker.Dispose();
-        }
+        Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
+        Assert.Equal("RULE-RESULT", completed?.ResultRuleReleaseId);
     }
 
     [Fact]
-    public async Task HostedWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes()
+    public async Task IndependentWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes()
     {
         var inner = new MemoryManagedOperationStore();
         var service = OperationService(inner);
         var queued = await service.EnqueueInitialRulePublicationAsync(CancellationToken.None);
         var store = new InitiallyUnavailableOperationStore(inner);
-        var worker = new ManagedOperationWorker(
-            store,
-            Processor(store, new ImmediatePublisher()),
-            Options.Create(new ManagedRuleServiceOptions
-            {
-                ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
-                ManagedOperationTimeout = TimeSpan.FromSeconds(10)
-            }),
-            NullLogger<ManagedOperationWorker>.Instance);
-
-        await worker.StartAsync(CancellationToken.None);
-        try
+        var workerOptions = Options.Create(new ManagedRuleServiceOptions
         {
-            ManagedOperationStatus? completed = null;
-            for (var attempt = 0; attempt < 100; attempt++)
-            {
-                completed = await service.GetAsync(queued.OperationId, CancellationToken.None);
-                if (completed?.State == ManagedOperationState.Succeeded)
-                {
-                    break;
-                }
+            ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
+            ManagedOperationTimeout = TimeSpan.FromSeconds(10),
+            ManagedOperationLeaseDuration = TimeSpan.FromSeconds(1)
+        });
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddSingleton<IManagedOperationStore>(store);
+        services.AddSingleton<IRulePublicationExecutor>(new ImmediatePublisher());
+        services.AddSingleton(workerOptions);
+        services.AddSingleton(serviceProvider => new ManagedOperationProcessor(
+            serviceProvider.GetRequiredService<IManagedOperationStore>(),
+            serviceProvider.GetRequiredService<IRulePublicationExecutor>(),
+            serviceProvider.GetRequiredService<IOptions<ManagedRuleServiceOptions>>(),
+            serviceProvider.GetRequiredService<Microsoft.Extensions.Logging.ILogger<ManagedOperationProcessor>>()));
+        await using var provider = services.BuildServiceProvider();
 
-                await Task.Delay(10);
+        var worker = ManagedWorkerEntrypoint.RunAsync(
+            provider,
+            new ManagedWorkerCommand(
+                queued.OperationId,
+                "LAUNCH-STORE-RECOVERY",
+                Path.Combine(Path.GetTempPath(), "EternalCycle.Tests", Guid.NewGuid().ToString("N"))));
+        ManagedOperationStatus? completed = null;
+        for (var attempt = 0; attempt < 100; attempt++)
+        {
+            completed = await service.GetAsync(queued.OperationId, CancellationToken.None);
+            if (completed?.State == ManagedOperationState.Succeeded)
+            {
+                break;
             }
 
-            Assert.True(store.RecoveryAttempts >= 2);
-            Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
+            await Task.Delay(10);
         }
-        finally
-        {
-            await worker.StopAsync(CancellationToken.None);
-            worker.Dispose();
-        }
+
+        Assert.Equal(0, await worker.WaitAsync(TimeSpan.FromSeconds(3)));
+        Assert.True(store.RecoveryAttempts >= 2);
+        Assert.Equal(ManagedOperationState.Succeeded, completed?.State);
     }
 
     [Fact]
@@ -572,6 +523,35 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
             }),
             NullLogger<ManagedOperationProcessor>.Instance,
             diagnostics);
+
+    private static async Task<int> RunIndependentWorkerAsync(
+        IManagedOperationStore store,
+        string operationId)
+    {
+        var options = Options.Create(new ManagedRuleServiceOptions
+        {
+            ManagedOperationPollInterval = TimeSpan.FromMilliseconds(5),
+            ManagedOperationTimeout = TimeSpan.FromSeconds(10),
+            ManagedOperationLeaseDuration = TimeSpan.FromMilliseconds(100)
+        });
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddSingleton(store);
+        services.AddSingleton<IRulePublicationExecutor>(new ImmediatePublisher());
+        services.AddSingleton(options);
+        services.AddSingleton(serviceProvider => new ManagedOperationProcessor(
+            serviceProvider.GetRequiredService<IManagedOperationStore>(),
+            serviceProvider.GetRequiredService<IRulePublicationExecutor>(),
+            serviceProvider.GetRequiredService<IOptions<ManagedRuleServiceOptions>>(),
+            serviceProvider.GetRequiredService<Microsoft.Extensions.Logging.ILogger<ManagedOperationProcessor>>()));
+        await using var provider = services.BuildServiceProvider();
+        return await ManagedWorkerEntrypoint.RunAsync(
+            provider,
+            new ManagedWorkerCommand(
+                operationId,
+                $"LAUNCH-{Guid.NewGuid():N}",
+                Path.Combine(Path.GetTempPath(), "EternalCycle.Tests", Guid.NewGuid().ToString("N"))));
+    }
 
     private static ManagedReadinessReport Ready(bool fullRulesetReady) =>
         ManagedReadinessEvaluator.Evaluate(
@@ -848,6 +828,12 @@ internal sealed class InitiallyUnavailableOperationStore(IManagedOperationStore 
         CancellationToken cancellationToken) =>
         inner.ClaimNextAsync(executionLeaseDuration, cancellationToken);
 
+    public Task<ManagedOperationStatus?> ClaimAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken) =>
+        inner.ClaimAsync(operationId, executionLeaseDuration, cancellationToken);
+
     public Task<bool> RenewExecutionLeaseAsync(
         string operationId,
         TimeSpan executionLeaseDuration,
@@ -997,6 +983,40 @@ internal sealed class MemoryManagedOperationStore : IManagedOperationStore
                 .OrderBy(value => value.Status.CreatedAt)
                 .FirstOrDefault();
             if (pair is null)
+            {
+                return Task.FromResult<ManagedOperationStatus?>(null);
+            }
+
+            var claimed = pair.Status with
+            {
+                State = ManagedOperationState.Running,
+                CurrentStage = RulePublicationStage.AcquireSource.ToString(),
+                StartedAt = pair.Status.StartedAt ?? DateTimeOffset.UtcNow,
+                UpdatedAt = DateTimeOffset.UtcNow,
+                ProgressPercent = 1,
+                ErrorCode = null,
+                ExecutionAttempt = pair.Status.ExecutionAttempt + 1
+            };
+            operations[claimed.OperationId] = pair with
+            {
+                Status = claimed,
+                ExecutionOwnerId = executionOwnerId,
+                ExecutionLeaseExpiresAt = DateTimeOffset.UtcNow.Add(executionLeaseDuration)
+            };
+            return Task.FromResult<ManagedOperationStatus?>(claimed);
+        }
+    }
+
+    public Task<ManagedOperationStatus?> ClaimAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken)
+    {
+        lock (sync)
+        {
+            _ = RecoverExpiredUnsafe();
+            if (!operations.TryGetValue(operationId, out var pair) ||
+                pair.Status.State is not (ManagedOperationState.Queued or ManagedOperationState.Interrupted))
             {
                 return Task.FromResult<ManagedOperationStatus?>(null);
             }

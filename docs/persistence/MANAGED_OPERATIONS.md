@@ -20,11 +20,25 @@ An initiating request validates authority, creates or reuses a durable operation
 authorize and validate
   -> create or reuse operation
   -> return operation identity and Queued/Running state
-  -> service executes durable stages
+  -> transport-independent executor claims durable work
+  -> executor performs durable stages
   -> client reads status independently
 ```
 
-The implementation must not substitute an in-memory detached task for durability. SQL Server and a hosted worker are one reference mapping, not an Eternal Cycle requirement.
+The implementation must not substitute an in-memory detached task for durability. SQL Server and an independently launched worker process are one reference mapping, not an Eternal Cycle requirement.
+
+## Execution Lifetime
+
+A Durable Managed Operation must not depend on the lifetime of an MCP process, tool call, AI response, client session, or equivalent ephemeral transport. The transport creates or reuses durable work and may ask the deployment to ensure an executor exists; durable persistence, execution ownership, and domain idempotency coordinate the executor. The client does not poll merely to keep work alive.
+
+The .NET reference launches a separate Managed Worker process for one active operation. Windows process breakaway flags, a short-lived command trampoline, local executor-lock files, stop signals, and progress files are reference details. The durable database remains authoritative; a progress file is only an operator convenience and cannot compete with operation state.
+
+If a host or operating system prevents genuine independent launch, an implementation must not silently run the executor under the ephemeral transport lifetime. It may return a recoverable user-intervention condition. When the implementation can completely prepare a safe recovery action, it should require the smallest reasonable user action. The Windows reference prepares a one-click launcher for the existing Operation ID. The launcher carries no campaign authority, creates no replacement operation or campaign, and removes its temporary configuration and itself only after the worker confirms handoff to the durable control plane.
+
+Transport disappearance and executor disappearance are distinct:
+
+- transport disappearance does not interrupt an independently running executor or advance the execution-attempt count;
+- executor or machine loss is reconciled through the existing ownership-expiry and interruption rules.
 
 ## State Model
 
@@ -55,7 +69,7 @@ A safe operation view includes:
 - meaningful bounded progress where available;
 - safe status detail and error code;
 - retry safety;
-- separate `userApprovalRequired` and `administrativeInterventionRequired` claims;
+- separate `userApprovalRequired`, `userInterventionRequired`, and `administrativeInterventionRequired` claims where applicable;
 - safe Ruleset or source identity;
 - result identity after completion.
 - execution-attempt count or equivalent safe recovery evidence.
@@ -82,7 +96,7 @@ Graceful host shutdown leaves work `Interrupted` and recoverable. Abrupt process
 
 ## Authorization
 
-Administrative initiation requires explicit informed user approval. An AI may set an approval field only after the user actually authorizes the explained action. A deployment may additionally require operator intervention, but that is a separate condition and must not be presented as a magic phrase that an ordinary player must discover or type.
+Administrative initiation requires explicit informed user approval. An AI may set an approval field only after the user actually authorizes the explained action. A later one-click recovery action is user intervention, not renewed design approval and not administrator intervention. A deployment may additionally require operator intervention, but that is a separate condition and must not be presented as a magic phrase that an ordinary player must discover or type.
 
 ## Diagnostics and Failure
 
@@ -97,7 +111,7 @@ Semantic failures cross the interface unchanged: a migration requirement remains
 
 ## Generalization Boundary
 
-The universal contract requires durable identity, independent execution, explicit state, idempotency, recovery, bounded policy, status discovery, and safe evidence. It does not require .NET, MCP, SQL Server, T-SQL, Git, a filesystem, or a particular worker technology.
+The universal contract requires durable identity, execution independent of ephemeral transport lifetime, explicit state, idempotency, recovery, bounded policy, status discovery, and safe evidence. It does not require .NET, MCP, SQL Server, T-SQL, Git, a filesystem, process breakaway flags, a batch launcher, or a particular worker technology.
 
 ## Related Documents
 

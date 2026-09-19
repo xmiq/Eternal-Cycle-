@@ -31,8 +31,10 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
 5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `009` to configured EC-owned scopes.
 6. Select the packaged default from [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or another compatible Git source, including an existing local clone. The selection persists in `ec_domain`; source location does not change the technical validation pipeline.
-7. Approve initial publication. The call returns a durable Operation ID promptly; the hosted worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules.
+7. Approve initial publication. The call returns a durable Operation ID promptly; an independent Managed Worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules even if the MCP transport exits.
 8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
+
+The reference service normally launches that worker automatically. If the Windows host refuses Job Object breakaway, the response reports `WORKER_INDEPENDENT_LAUNCH_BLOCKED` and prepares `Continue Eternal Cycle Setup.bat` in the configured fallback directory (the current user's Desktop by default). Double-click it once. It contains the existing operation handoff and a locator for temporary protected effective configuration; it asks for no Operation ID, connection string, source, ref, Campaign ID, terminal command, or administrator privilege. A confirmed handoff removes the temporary configuration and launcher. A failed handoff preserves them for retry and diagnostics.
 
 The ordinary player never needs SSMS, migration filenames, schema names, Git commands, `RepositoryRoot`, Rule Release IDs, or MCP tool names. Manual SQL and local-checkout configuration below remain advanced development and recovery paths.
 
@@ -51,7 +53,7 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - structured first-run readiness across transport, persistence, campaign schema, Rule Domain, source, publication, activation, and campaign state;
 - permission-gated EC-owned migrations, persisted source selection, managed Git acquisition/cache, initial publication, and campaign discovery/creation;
 - bounded rule-publication batches, stage-aware structured failures, and idempotent publication resume;
-- durable queued/running/completed Managed Operations with deduplication, independent status discovery, renewable execution leases, orphan reconciliation, and service-owned timeouts;
+- durable queued/running/completed Managed Operations with deduplication, transport-independent worker execution, independent status discovery, renewable execution leases, orphan reconciliation, and service-owned timeouts;
 - fresh-database worker startup that waits for authorized migration 007 instead of requiring the operation tables to pre-exist;
 - progressive per-source readiness, dependency-aware minimum closure, manifest preparation tiers, and gameplay-driven priority boosts;
 - SQL-first Managed-operation diagnostics with a zero-configuration protected local physical fallback;
@@ -79,6 +81,7 @@ The reference does not implement PostgreSQL, MySQL, document, graph, key/value, 
 | `ec_get_readiness` | Return structured setup and gameplay readiness without mutation. |
 | `ec_get_operation_status` | Return durable operation state, current stage, causal status, and result identity. |
 | `ec_list_managed_operations` | Rediscover recent operations after a client disconnect or lost immediate response. |
+| `ec_stop_managed_operation` | Request orderly cancellation from the independent worker without editing durable state. |
 | `ec_get_setup_plan` | Preview packaged EC-owned migrations. |
 | `ec_list_campaigns` | List meaningful campaign names with stable internal IDs. |
 | `ec_resolve_resume_campaign` | Select the sole campaign or return meaningful choices. |
@@ -196,6 +199,17 @@ EternalCycle:Diagnostics:DisableAutomaticFallback = false
 EternalCycle:Diagnostics:PersistenceTimeout = 00:00:10
 ```
 
+Independent worker configuration includes:
+
+```text
+EternalCycle:ManagedWorker:ExecutablePath = <optional packaged-worker override>
+EternalCycle:ManagedWorker:ControlDirectory = <optional non-authoritative local control directory>
+EternalCycle:ManagedWorker:FallbackLauncherDirectory = <optional one-click launcher directory>
+EternalCycle:ManagedWorker:FallbackHandoffTimeout = 00:00:30
+```
+
+The packaged `EternalCycle.ManagedWorker.exe` is a second app host for the same validated execution code. MCP persists or reuses the operation and launches the worker; SQL operation state, leases, attempts, diagnostics, and results remain authoritative. The local lock, stop, progress, handoff, and temporary fallback files are not a second operation store. The Windows automatic path uses a process created outside the restrictive host Job Object and a short-lived command trampoline so recursive transport-tree termination does not own the worker lifetime. If breakaway is refused, the service does not silently downgrade to a transport-owned process.
+
 `VerboseErrors` defaults to `false`. It adds useful redacted exception detail to authorized administrative failures but never exposes credentials, changes transaction behavior, or controls whether diagnostics are preserved. If SQL diagnostic insertion fails, the automatic default fallback is `%LOCALAPPDATA%\EternalCycle\logs\managed-diagnostics.jsonl` on Windows or the platform-equivalent local application-data directory. `FallbackLogFile` is an advanced path override; `DisableAutomaticFallback=true` explicitly disables this safety net. The fallback retains the operation correlation ID. Failure of both sinks never masks the publication failure.
 
 Call `ec_get_configuration_requirements` to discover all exact configuration and environment-variable names (`:` becomes `__`), validation status, accepted forms, effective Managed Rule Source cache root, and restart requirements. Sensitive values are never returned. A generic startup error is not a substitute for this contract.
@@ -249,6 +263,8 @@ The repository tests use fakes, the official manifest, local Git fixtures, and a
 - `RULE_STORE_STAGE_FAILED`, `RULE_PUBLICATION_FAILED`, or `RULE_ACTIVATION_FAILED`: inspect SQL availability and the correlated diagnostic; retry resumes durable publication state rather than duplicating it.
 - `RULE_CLOSURE_PENDING` or `RULE_CONTEXT_PENDING`: query operation/context status and allow priority preparation to complete; do not improvise the missing rule.
 - `MANAGED_OPERATION_INTERRUPTED`: the service detected lost execution ownership after restart and will reclaim idempotent work or leave a retryable failure.
+- `WORKER_INDEPENDENT_LAUNCH_BLOCKED`: automatic transport-independent launch was refused; double-click the prepared one-click launcher to resume the same operation. This is user intervention, not administrator intervention.
+- `MANAGED_WORKER_NOT_FOUND` or `MANAGED_WORKER_FALLBACK_PREPARATION_FAILED`: repair the packaged reference-service installation or its local launcher directory without deleting the durable operation.
 - `RULE_PUBLICATION_CANCELLED`: retry safely; the service reuses any candidate stage that committed before cancellation.
 - `CAMPAIGN_NOT_FOUND`: list campaigns or use the authorized creation path.
 - generic host error with hidden stderr: call `ec_get_error_code` and `ec_get_error_dump`, use the returned correlation ID, inspect the SQL diagnostic record or automatic protected physical fallback, and optionally enable verbose errors in a trusted development environment.

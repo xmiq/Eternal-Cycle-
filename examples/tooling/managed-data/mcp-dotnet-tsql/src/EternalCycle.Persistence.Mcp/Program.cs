@@ -1,10 +1,21 @@
 using EternalCycle.Persistence.Mcp;
+using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ModelContextProtocol.Protocol;
 
-var builder = Host.CreateApplicationBuilder(args);
+_ = ManagedWorkerCommand.TryParse(args, out var workerCommand);
+var builder = Host.CreateApplicationBuilder(workerCommand is null ? args : []);
+if (workerCommand?.FallbackConfigurationFile is not null)
+{
+    var fallbackConfiguration = JsonSerializer.Deserialize<Dictionary<string, string?>>(
+        File.ReadAllText(workerCommand.FallbackConfigurationFile))
+        ?? throw new InvalidOperationException("The one-click Managed Worker configuration is invalid.");
+    builder.Configuration.AddInMemoryCollection(fallbackConfiguration);
+}
+
 var diagnosticFallback = SanitizedDiagnosticFallbackBootstrap.Establish(builder.Configuration);
 
 builder.Logging.AddConsole(options =>
@@ -33,6 +44,10 @@ builder.Services
     .AddOptions<ManagedDiagnosticsOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Diagnostics"));
 
+builder.Services
+    .AddOptions<ManagedWorkerOptions>()
+    .Bind(builder.Configuration.GetSection("EternalCycle:ManagedWorker"));
+
 builder.Services.AddSingleton(diagnosticFallback);
 builder.Services.AddSingleton<IManagedConfigurationService, ManagedConfigurationService>();
 builder.Services.AddSingleton<ICampaignSchemaResolver, ConfiguredCampaignSchemaResolver>();
@@ -43,6 +58,12 @@ builder.Services.AddSingleton<IPublishedRuleStore>(services =>
     services.GetRequiredService<SqlServerPublishedRuleStore>());
 builder.Services.AddSingleton<IRulePreparationStore, SqlServerRulePreparationStore>();
 builder.Services.AddSingleton<IManagedOperationStore, SqlServerManagedOperationStore>();
+builder.Services.AddSingleton<IIndependentProcessStarter, PlatformIndependentProcessStarter>();
+builder.Services.AddSingleton<ManagedWorkerFallbackLauncher>();
+builder.Services.AddSingleton<ManagedWorkerControlFiles>();
+builder.Services.AddSingleton<IManagedWorkerControl>(services =>
+    services.GetRequiredService<ManagedWorkerControlFiles>());
+builder.Services.AddSingleton<IManagedWorkerLauncher, IndependentManagedWorkerLauncher>();
 builder.Services.AddSingleton<IManagedOperationService, ManagedOperationService>();
 builder.Services.AddSingleton<IManagedDiagnosticStore, SqlServerManagedDiagnosticStore>();
 builder.Services.AddSingleton<IManagedDiagnosticFileSink, PhysicalManagedDiagnosticFileSink>();
@@ -56,8 +77,6 @@ builder.Services.AddSingleton<IMcpToolInvocationGuard, McpToolInvocationGuard>()
 builder.Services.AddSingleton<ManagedRulePublicationCoordinator>();
 builder.Services.AddSingleton<IRulePublicationExecutor, ManagedRulePublicationExecutor>();
 builder.Services.AddSingleton<ManagedOperationProcessor>();
-builder.Services.AddHostedService<ManagedOperationWorker>();
-builder.Services.AddHostedService<ManagedRuleUpdateHostedService>();
 builder.Services.AddSingleton<IRuleContextProvider, PublishedRuleContextProvider>();
 builder.Services.AddSingleton<IManagedInfrastructureInspector, SqlServerManagedInfrastructureInspector>();
 builder.Services.AddSingleton<IManagedReadinessService, ManagedReadinessService>();
@@ -68,6 +87,15 @@ builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersis
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();
 builder.Services.AddSingleton<IServiceDiagnostics, ServiceDiagnostics>();
+
+if (workerCommand is not null)
+{
+    using var workerHost = builder.Build();
+    return await ManagedWorkerEntrypoint.RunAsync(workerHost.Services, workerCommand);
+}
+
+builder.Services.AddHostedService<ManagedWorkerRecoveryHostedService>();
+builder.Services.AddHostedService<ManagedRuleUpdateHostedService>();
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
@@ -103,3 +131,4 @@ builder.Services
     .WithToolsFromAssembly();
 
 await builder.Build().RunAsync();
+return 0;

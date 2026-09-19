@@ -44,6 +44,8 @@ $controlPlaneTests = Read-RepoFile "$testsRoot/ManagedControlPlaneRepairTests.cs
 $errorDump = Read-RepoFile "$source/ErrorDump.cs"
 $managedDiagnostics = Read-RepoFile "$source/ManagedDiagnostics.cs"
 $managedConfiguration = Read-RepoFile "$source/ManagedConfiguration.cs"
+$workerRuntime = Read-RepoFile "$source/ManagedWorkerRuntime.cs"
+$workerTests = Read-RepoFile "$testsRoot/ManagedWorkerLifecycleTests.cs"
 $migration008 = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.sql"
 $migration008Template = Read-RepoFile "$source/Schema/008_diagnostic_operation_correlation.template.sql"
 $migration009 = Read-RepoFile "$source/Schema/009_managed_operation_execution_leases.sql"
@@ -64,7 +66,7 @@ $version = (Read-RepoFile 'VERSION').Trim()
 Assert-Requirement 1 ($operations -match 'enum ManagedOperationState' -and $operations -match 'Queued' -and $operations -match 'Interrupted') 'Durable operations expose the required explicit states.'
 Assert-Requirement 2 ($operations -match 'EnqueueOrReuseAsync' -and $operationStore -match 'SERIALIZABLE') 'Equivalent initiation is durably deduplicated.'
 Assert-Requirement 3 ($operations -match 'ec_get_operation_status' -and $operations -match 'ec_list_managed_operations') 'Status and recent-operation discovery tools are registered.'
-Assert-Requirement 4 ($program -match 'AddHostedService<ManagedOperationWorker>') 'The background worker is registered with the host.'
+Assert-Requirement 4 ($program -notmatch 'AddHostedService<ManagedOperationWorker>' -and $program -match 'ManagedWorkerEntrypoint.RunAsync' -and $program -match 'ManagedWorkerRecoveryHostedService') 'Long-running execution is hosted by the independent Managed Worker rather than the MCP process.'
 Assert-Requirement 5 ($operations -match 'RecoverInterruptedAsync' -and $operations -match 'ClaimNextAsync') 'Worker startup recovers and reclaims persisted work.'
 Assert-Requirement 6 ($operationStore -match "N'Interrupted'" -and $operationStore -match "N'Running', N'Cancelling'") 'Restart recovery prevents phantom Running or Cancelling state.'
 Assert-Requirement 7 ($operations -match 'ManagedOperationTimeout' -and $operations -match 'CreateLinkedTokenSource') 'Service-owned timeout policy is independent of initiation.'
@@ -107,12 +109,12 @@ Assert-Requirement 38 ($version -eq '1.0.0') 'Root VERSION remains 1.0.0.'
 Assert-Requirement 39 ($managedContract -match 'does not require \.NET, MCP, SQL Server, T-SQL, Git') 'Managed Operations remains implementation-neutral.'
 Assert-Requirement 40 ($method -match 'Reference implementation only' -and $method -match 'Managed Service contract' -and $method -match 'Eternal Cycle-wide') 'The three-level Generalization Audit is explicit.'
 Assert-Requirement 41 ($method -match 'observe real failure' -and $method -match 'add regression or acceptance evidence') 'The deployment feedback loop is canonical.'
-Assert-Requirement 42 ($acceptance -match '### A\. LM Studio' -and $acceptance -match '### F\. Moving RC Update') 'All six real-deployment scenarios are documented without claiming execution.'
+Assert-Requirement 42 ($acceptance -match '### A\. LM Studio' -and $acceptance -match '### G\. Ephemeral-Transport Worker Lifetime') 'Real-deployment scenarios include decisive ephemeral-transport worker acceptance without claiming execution.'
 Assert-Requirement 43 ($roadmap -match '\[x\] \*\*FR-021' -and $roadmap -match '\[∞\].*Future Revisions') 'FR-021 is complete while Phase 13 rolling governance remains active.'
 Assert-Requirement 44 ($future -match '### FR-021' -and $future -match 'Status:\*\* Closed') 'Future Revision provenance records FR-021 closure.'
 Assert-Requirement 45 ($manifest -match 'preparationTier') 'Rule Source manifest carries portable preparation metadata.'
 Assert-Requirement 46 ($publicationContract -match 'GameplayReady' -and $publicationContract -match 'FullRulesetReady') 'Canonical publication guidance distinguishes progressive readiness levels.'
-Assert-Requirement 47 ($operations -match 'var recovered = await store\.RecoverInterruptedAsync' -and $tests -match 'HostedWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes') 'Fresh-database worker startup waits for durable setup and reconciles ownership before each claim opportunity.'
+Assert-Requirement 47 ($workerRuntime -match 'await store\.RecoverInterruptedAsync' -and $workerRuntime -match 'waiting for its durable control plane' -and $tests -match 'IndependentWorkerWaitsForDurableStoreSetupThenRecoversAndCompletes') 'Independent worker startup waits for durable setup and reconciles ownership before each claim opportunity.'
 Assert-Requirement 48 ($publication -match 'catch \(OperationCanceledException\)' -and $publication -match 'throw;') 'Publication propagates cancellation to its durable owner.'
 Assert-Requirement 49 ($operations -match 'MANAGED_OPERATION_INTERRUPTED' -and $operations -match 'MANAGED_OPERATION_TIMEOUT' -and $operations -match 'MANAGED_OPERATION_CANCELLED_UNEXPECTED') 'The durable owner distinguishes host shutdown, its timeout, and unexplained parent cancellation.'
 Assert-Requirement 50 ($gitProvider -match 'RULE_SOURCE_ACQUISITION_TIMEOUT' -and $gitProvider -match 'RULE_SOURCE_PROCESS_TIMEOUT') 'Overall acquisition and individual Git-process timeouts are distinct.'
@@ -139,6 +141,14 @@ Assert-Requirement 70 ($managedContract -match 'bounded, renewable execution own
 Assert-Requirement 71 ($administration -match 'RULE_PUBLICATION_RECOVERY_QUEUED' -and $firstRunTests -match 'RepeatPublicationReportsRecoveryForExpiredOperationOwnership') 'Repeat initiation reports recoverable interruption rather than falsely describing an orphan as active.'
 Assert-Requirement 72 ($readiness -match 'execution_owner_id' -and $readiness -match 'execution_lease_expires_at' -and $readiness -match 'execution_attempt_count') 'Readiness requires migration 009 before operation tools query lease-aware storage.'
 Assert-Requirement 73 ($operationStore -match 'AND execution_lease_expires_at > SYSUTCDATETIME\(\)' -and $tests -match 'ExpiredExecutionLeaseRejectsStaleStateMutation') 'An expired owner cannot write completion before reconciliation.'
+Assert-Requirement 74 ($workerRuntime -match 'CreateBreakawayFromJob' -and $workerRuntime -match 'CreateNewProcessGroup' -and $workerRuntime -match 'WaitForSingleObject') 'The Windows reference establishes independent worker lifetime and verifies its launch trampoline.'
+Assert-Requirement 75 ($workerRuntime -match 'TryAcquireExecutorLock' -and $operationStore -match 'ClaimAsync' -and $operations -match 'ProcessAsync' -and $workerTests -match 'DuplicateExecutorCannotClaimSameOperation') 'Local executor locks and durable exact-operation claims prevent duplicate execution.'
+Assert-Requirement 76 ($workerRuntime -match 'Continue Eternal Cycle Setup\.bat' -and $workerRuntime -match 'FallbackConfigurationSwitch' -and $workerRuntime -match 'HandoffSwitch' -and $workerTests -match 'SuccessfulFallbackHandoffSelfDeletesLauncherAndTemporaryConfiguration') 'Host-blocked automatic launch prepares and tests a self-cleaning one-click fallback for the existing operation.'
+Assert-Requirement 77 ($administration -match 'UserInterventionRequired: true' -and $administration -match 'AdministrativeInterventionRequired: false' -and $workerRuntime -match 'WORKER_INDEPENDENT_LAUNCH_BLOCKED') 'Recoverable user intervention remains distinct from administrator intervention.'
+Assert-Requirement 78 ($workerRuntime -match 'MonitorStopAsync' -and $workerTests -match 'WorkerEntrypointStopsBlockedWorkWithoutWaitingForForwardProgress') 'Worker stop monitoring remains responsive independently of forward progress.'
+Assert-Requirement 79 ($workerTests -match 'WindowsWorkerSurvivesEphemeralLauncherProcessTreeTermination' -and $workerTests -match 'IndependentExecutionKeepsSameAttemptAfterInitiatingRequestEnds') 'Lifecycle regressions prove parent-tree survival and unchanged execution-attempt identity.'
+Assert-Requirement 80 ($managedContract -match 'progress file is only an operator convenience' -and $managedContract -match 'database remains authoritative') 'Convenience progress/control files do not become competing operation authority.'
+Assert-Requirement 81 ($project -notmatch '010_.*\.sql' -and $version -eq '1.0.0') 'The lifecycle repair requires no migration 010 and does not bump VERSION.'
 
 if ($failures.Count -gt 0) {
     Write-Output "FR-021 durable Managed-operation harness: FAIL ($($failures.Count) failure(s))"

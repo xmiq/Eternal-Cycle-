@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ModelContextProtocol.Server;
@@ -80,6 +79,13 @@ public interface IManagedOperationStore
         TimeSpan executionLeaseDuration,
         CancellationToken cancellationToken);
 
+    Task<ManagedOperationStatus?> ClaimAsync(
+        string operationId,
+        TimeSpan executionLeaseDuration,
+        CancellationToken cancellationToken) =>
+        Task.FromException<ManagedOperationStatus?>(
+            new NotSupportedException("This Managed Operation store does not support exact-operation claims."));
+
     Task<bool> RenewExecutionLeaseAsync(
         string operationId,
         TimeSpan executionLeaseDuration,
@@ -113,6 +119,9 @@ public interface IManagedOperationStore
 
 public interface IManagedOperationService
 {
+    Task<ManagedOperationInitiation> InitiateInitialRulePublicationAsync(
+        CancellationToken cancellationToken);
+
     Task<ManagedOperationStatus> EnqueueInitialRulePublicationAsync(CancellationToken cancellationToken);
 
     Task<ManagedOperationStatus?> GetAsync(string operationId, CancellationToken cancellationToken);
@@ -121,16 +130,26 @@ public interface IManagedOperationService
         string? operationKind,
         int maximumCount,
         CancellationToken cancellationToken);
+
+    Task<ManagedWorkerStopResult> RequestStopAsync(
+        string operationId,
+        CancellationToken cancellationToken);
 }
 
 public sealed class ManagedOperationService(
     IManagedOperationStore store,
     IRuleSourceConfigurationStore sourceConfigurations,
-    IOptions<ManagedRuleServiceOptions> ruleOptions) : IManagedOperationService
+    IOptions<ManagedRuleServiceOptions> ruleOptions,
+    IManagedWorkerLauncher? workerLauncher = null,
+    IManagedWorkerControl? workerControl = null) : IManagedOperationService
 {
     private readonly ManagedRuleServiceOptions rules = ruleOptions.Value;
 
     public async Task<ManagedOperationStatus> EnqueueInitialRulePublicationAsync(
+        CancellationToken cancellationToken) =>
+        (await InitiateInitialRulePublicationAsync(cancellationToken)).Operation;
+
+    public async Task<ManagedOperationInitiation> InitiateInitialRulePublicationAsync(
         CancellationToken cancellationToken)
     {
         var source = await sourceConfigurations.GetAsync(rules.RulesetId, cancellationToken)
@@ -143,13 +162,26 @@ public sealed class ManagedOperationService(
             rules.RulesetId,
             source.ConfigurationRevision,
             source.ReleaseChannel);
-        return await store.EnqueueOrReuseAsync(
+        var operation = await store.EnqueueOrReuseAsync(
             new ManagedOperationEnqueueRequest(
                 ManagedOperationKinds.InitialRulePublication,
                 deduplicationKey,
                 rules.RulesetId,
                 "Initial rule publication is queued for durable background execution."),
             cancellationToken);
+        var launch = ManagedWorkerLaunchResult.NotRequired();
+        if (workerLauncher is not null && operation.State is
+            ManagedOperationState.Queued or
+            ManagedOperationState.Running or
+            ManagedOperationState.Cancelling or
+            ManagedOperationState.Interrupted)
+        {
+            // The durable row already exists. Launching must not inherit the initiating
+            // request lifetime, so a later client cancellation cannot strand queued work.
+            launch = await workerLauncher.EnsureLaunchedAsync(operation, CancellationToken.None);
+        }
+
+        return new(operation, launch);
     }
 
     public Task<ManagedOperationStatus?> GetAsync(
@@ -165,6 +197,29 @@ public sealed class ManagedOperationService(
             string.IsNullOrWhiteSpace(operationKind) ? null : operationKind.Trim(),
             Math.Clamp(maximumCount, 1, 50),
             cancellationToken);
+
+    public async Task<ManagedWorkerStopResult> RequestStopAsync(
+        string operationId,
+        CancellationToken cancellationToken)
+    {
+        var normalized = RequireOperationId(operationId);
+        var operation = await store.GetAsync(normalized, cancellationToken);
+        if (operation is null)
+        {
+            return new(false, "MANAGED_OPERATION_NOT_FOUND", "No Managed Operation with that ID exists.");
+        }
+
+        if (operation.State is ManagedOperationState.Succeeded or
+            ManagedOperationState.Failed or
+            ManagedOperationState.Cancelled)
+        {
+            return new(false, "MANAGED_OPERATION_TERMINAL", "The Managed Operation is already terminal.");
+        }
+
+        return workerControl is null
+            ? new(false, "MANAGED_WORKER_CONTROL_UNAVAILABLE", "Independent worker control is unavailable in this deployment.")
+            : await workerControl.RequestStopAsync(normalized, cancellationToken);
+    }
 
     private static string RequireOperationId(string value)
     {
@@ -222,14 +277,47 @@ public sealed class ManagedOperationProcessor(
 
     public async Task<bool> ProcessNextAsync(CancellationToken stoppingToken)
     {
-        var leaseDuration = settings.ManagedOperationLeaseDuration > TimeSpan.Zero
-            ? settings.ManagedOperationLeaseDuration
-            : TimeSpan.FromSeconds(30);
+        var leaseDuration = LeaseDuration();
         var operation = await store.ClaimNextAsync(leaseDuration, stoppingToken);
         if (operation is null)
         {
             return false;
         }
+
+        return await ProcessClaimedAsync(
+            operation,
+            leaseDuration,
+            stoppingToken,
+            static () => "HostShutdown");
+    }
+
+    public async Task<bool> ProcessAsync(
+        string operationId,
+        CancellationToken stoppingToken,
+        Func<string>? cancellationSource = null,
+        Action<ManagedOperationStatus>? onClaimed = null)
+    {
+        var leaseDuration = LeaseDuration();
+        var operation = await store.ClaimAsync(operationId, leaseDuration, stoppingToken);
+        if (operation is null)
+        {
+            return false;
+        }
+
+        onClaimed?.Invoke(operation);
+        return await ProcessClaimedAsync(
+            operation,
+            leaseDuration,
+            stoppingToken,
+            cancellationSource ?? (static () => ManagedWorkerCancellationSources.WorkerShutdown));
+    }
+
+    private async Task<bool> ProcessClaimedAsync(
+        ManagedOperationStatus operation,
+        TimeSpan leaseDuration,
+        CancellationToken stoppingToken,
+        Func<string> cancellationSource)
+    {
 
         var currentStage = operation.CurrentStage;
         using var executionOwnershipLost = new CancellationTokenSource();
@@ -309,18 +397,25 @@ public sealed class ManagedOperationProcessor(
         }
         catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
         {
+            var source = cancellationSource();
+            var explicitlyStopped = string.Equals(
+                source,
+                ManagedWorkerCancellationSources.ExplicitWorkerStop,
+                StringComparison.Ordinal);
             await RecordCancellationAsync(
                 operation,
                 currentStage,
-                "MANAGED_OPERATION_INTERRUPTED",
-                "HostShutdown",
+                explicitlyStopped ? "MANAGED_OPERATION_CANCELLED" : "MANAGED_OPERATION_INTERRUPTED",
+                source,
                 retrySafe: true);
             await store.FailAsync(
                 operation.OperationId,
-                ManagedOperationState.Interrupted,
+                explicitlyStopped ? ManagedOperationState.Cancelled : ManagedOperationState.Interrupted,
                 currentStage,
-                "MANAGED_OPERATION_INTERRUPTED",
-                "Service shutdown interrupted the operation. It is eligible for deterministic recovery.",
+                explicitlyStopped ? "MANAGED_OPERATION_CANCELLED" : "MANAGED_OPERATION_INTERRUPTED",
+                explicitlyStopped
+                    ? "An authorized worker stop interrupted the operation without discarding durable evidence."
+                    : "Worker shutdown interrupted the operation. It is eligible for deterministic recovery.",
                 retrySafe: true,
                 administrativeInterventionRequired: false,
                 CancellationToken.None);
@@ -416,6 +511,11 @@ public sealed class ManagedOperationProcessor(
 
         return true;
     }
+
+    private TimeSpan LeaseDuration() =>
+        settings.ManagedOperationLeaseDuration > TimeSpan.Zero
+            ? settings.ManagedOperationLeaseDuration
+            : TimeSpan.FromSeconds(30);
 
     private async Task MaintainExecutionOwnershipAsync(
         ManagedOperationStatus operation,
@@ -514,54 +614,6 @@ public sealed class ManagedOperationProcessor(
     };
 }
 
-public sealed class ManagedOperationWorker(
-    IManagedOperationStore store,
-    ManagedOperationProcessor processor,
-    IOptions<ManagedRuleServiceOptions> options,
-    ILogger<ManagedOperationWorker> logger) : BackgroundService
-{
-    private readonly ManagedRuleServiceOptions settings = options.Value;
-
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-    {
-        var delay = settings.ManagedOperationPollInterval > TimeSpan.Zero
-            ? settings.ManagedOperationPollInterval
-            : TimeSpan.FromSeconds(1);
-        while (!stoppingToken.IsCancellationRequested)
-        {
-            try
-            {
-                var recovered = await store.RecoverInterruptedAsync(stoppingToken);
-                if (recovered > 0)
-                {
-                    logger.LogWarning(
-                        "Recovered {RecoveredCount} Managed Operations whose durable execution ownership expired.",
-                        recovered);
-                }
-
-                if (!await processor.ProcessNextAsync(stoppingToken))
-                {
-                    await Task.Delay(delay, stoppingToken);
-                }
-            }
-            catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
-            {
-                return;
-            }
-            catch (Exception exception)
-            {
-                // A fresh service may start before administrative migrations create
-                // the operation store. Polling always reconciles expired ownership
-                // before claiming work once the store is available.
-                logger.LogWarning(
-                    "Managed-operation polling is waiting for its durable store after {ExceptionType}.",
-                    exception.GetType().FullName);
-                await Task.Delay(delay, stoppingToken);
-            }
-        }
-    }
-}
-
 [McpServerToolType]
 public sealed class ManagedOperationTools(
     IManagedOperationService operations,
@@ -613,6 +665,28 @@ public sealed class ManagedOperationTools(
             "MANAGED_OPERATION_LIST",
             "Recent durable Managed Operations are available.",
             result);
+    }
+
+    [McpServerTool(Name = "ec_stop_managed_operation", Destructive = true, Idempotent = true),
+     Description("Requests orderly cancellation of the currently executing independent worker for one durable Managed Operation. The database remains authoritative for the resulting state.")]
+    public async Task<ManagedOperationResult<ManagedWorkerStopResult>> StopAsync(
+        [Description("Operation ID returned by a Managed administrative action.")] string operationId,
+        CancellationToken cancellationToken)
+    {
+        var blocked = await PreMigrationBlockAsync<ManagedWorkerStopResult>(cancellationToken);
+        if (blocked is not null)
+        {
+            return blocked;
+        }
+
+        var result = await operations.RequestStopAsync(operationId, cancellationToken);
+        return new(
+            result.Accepted,
+            result.Code,
+            result.Message,
+            result,
+            RetrySafe: true,
+            AdministrativeInterventionRequired: false);
     }
 
     private async Task<ManagedOperationResult<T>?> PreMigrationBlockAsync<T>(CancellationToken cancellationToken)

@@ -4976,6 +4976,14 @@ An authorized, systematically redacted operational failure record carrying one c
 
 A durably identified, service-owned unit of work that may outlive the client request that initiated it. It has explicit state, stage, bounded policy, independent status discovery, idempotent initiation where appropriate, and deterministic interruption recovery.
 
+## Managed Worker
+
+An executor that claims and advances a Durable Managed Operation through its authoritative control plane without depending on an initiating client or transport process remaining alive. Worker process layout, launch flags, stop files, and progress files are provider details; durable operation state remains authoritative.
+
+## One-Click Recovery Launcher
+
+A temporary reference-deployment artifact prepared when automatic independent execution is blocked but the existing Durable Managed Operation remains valid. It carries or resolves the complete worker handoff so the user only runs the artifact once, creates no replacement operation or campaign, exposes no secret through ordinary output, and removes temporary material after confirmed handoff.
+
 ## Managed Execution Ownership
 
 The bounded renewable claim proving which worker may currently advance a `Running` Managed Operation. Missing or expired ownership makes the operation orphaned and recoverable as `Interrupted`; unexpired ownership preserves active-operation deduplication. An execution lease is one reference implementation, not a required provider technology.
