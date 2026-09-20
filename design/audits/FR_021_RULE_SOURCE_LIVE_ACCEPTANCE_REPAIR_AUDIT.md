@@ -28,6 +28,8 @@ A later live run narrowed the evidence without identifying a cause. Operation `O
 
 Subsequent lifecycle testing identified a separate architectural cause for repeated operation interruption: the tested AI host terminated its Python/MCP process tree shortly after response generation, while long-running operation execution still lived in that MCP process. Durable SQL recovery worked and reclaimed the same operation through execution attempt 4, but transport disappearance unnecessarily became executor disappearance. This evidence did not identify a Git defect and did not justify redesigning Rule Source acquisition.
 
+A later run used the transport-independent worker's one-click fallback on the same user network and the same durable operation. Remote RC and base-release fetches completed in about 1.74 and 1.84 seconds, ref resolution and commit-distance inspection completed in about 81 and 88 milliseconds, and individual manifest-declared rule reads completed in about 50 to 114 milliseconds. The network environment had not materially changed. Unsloth-hosted execution is therefore the leading explanation for the historical abnormal Git behavior, but the exact mechanism remains unproven and the audit does not retroactively assign one cause to every older slow invocation. What is proven is that current acquisition completed quickly and that network or Git performance was not the blocker in this run.
+
 ## Repair
 
 ### Durable cancellation and identity
@@ -60,6 +62,16 @@ If automatic independent launch is refused, the existing operation stays queued/
 
 No schema migration was required. Operation identity, correlation, execution ownership, attempt evidence, state, stage, progress, errors, and results already have durable owners. Local launch/control artifacts do not become another persistence model.
 
+### Live fallback acceptance and Rule Store Stage repair
+
+The first live Unsloth test of the one-click fallback resumed durable operation `OP-1f57ee2497c8455eaa6e0c7e753fa9a2` with correlation `CORR-39ae3cbda162476796115ba62b6832a1` at execution attempt 9. It preserved the requested prerelease ref, resolved immutable SHA `520B5525DD10E3395C5BB35ECF43E95EE0FE0230`, compiled candidate `RULE-ff2a7b8cff364277a55703c590c7f588`, and advanced that same operation through acquisition, manifest reading, rule materialization, compilation, and into `Stage`. This is live evidence that the fallback can hand the existing durable operation to independent execution. It does not yet prove terminal publication and activation or every fallback-cleanup behavior.
+
+The live failure at 55 percent was `RULE_STORE_STAGE_FAILED`, caused before SQL execution. Each of the chunk, selector, and dependency batch writers created a schema-bound command with `string.Empty` and only assigned the generated multi-row SQL afterward. `SqlServerSchemaIdentifier.Bind` correctly rejected the empty command immediately, so every non-empty first batch failed; the official candidate's 147 chunks merely exercised the unconditional defect first. The repair now constructs a complete non-empty batch statement before command creation and schema binding, while preserving the existing row parameters, batch sizes, transaction, and execution order. The same concrete defect was removed from all three writers rather than deferred to the next table.
+
+`StageCandidateAsync` owns the release-row insert and all three batch families in one SQL transaction and commits only after every batch succeeds. Because the live exception occurred before the first chunk command executed and before commit, disposal rolled the transaction back; no special SQL cleanup or operation replacement is required. Retry continues through the existing durable operation contract. No migration was needed because neither schema nor durable state ownership changed.
+
+The regression compiles the actual official manifest and asserts its measured 147 chunks, 990 selectors, and 768 dependencies. It builds all eight resulting multi-row batch statements across full and partial boundaries, proves each is non-empty before schema binding, and rejects zero-row generation at the producer boundary. An opt-in SQL Server integration test additionally stages, validates, publishes, and activates that candidate shape, verifies stored row counts, and verifies rollback after a deliberate duplicate-chunk failure. The installed LocalDB automatic instance could not start on this machine, so that real-SQL path remains available but was not proven here.
+
 ### Distribution archive
 
 The Distribution Archive is deliberately separate from runtime acquisition. `tools/build_distribution.ps1` creates a deterministic full useful repository snapshot containing tracked and useful untracked source, documentation, reference implementations, tests, migrations, manifests, templates, license, notice, version, and distribution metadata. It excludes `.git`, `bin`, `obj`, caches, test output, logs, temporary files, credentials, and prior archives. `tools/test_distribution_archive.ps1` verifies required review material and rejects forbidden generated paths.
@@ -79,8 +91,8 @@ The migration adds one nullable `nvarchar(128)` column and one filtered index. E
 ## Validation Evidence
 
 - Release build: passed with zero warnings and zero errors.
-- reference-service automated tests: 148 passed, 0 failed, 0 skipped. The focused Managed Worker lifecycle subset contributed 16 passing tests and covers transport-independent continuation, duplicate-executor exclusion, responsive stop handling, launch isolation, same-operation fallback handoff, successful self-deletion, failed-handoff retry preservation, configuration loading, app-host packaging, and real Windows parent-tree termination. The focused Git diagnostics/cache subset continues to cover successful execution, nonzero exit, process timeout, parent cancellation, exact-command differentiation, sanitization, process identity, Operation/Correlation propagation, and conservative cleanup.
-- opt-in LocalDB fixture: attempted in restricted and unrestricted execution; both failed before product SQL ran because the LocalDB automatic instance could not start. This is recorded as unproven real-infrastructure validation, not a product pass.
+- reference-service automated tests: 150 passed, 0 failed, 0 skipped. The focused Managed Rule Publication subset contributed 12 passing tests; the focused Managed Worker lifecycle subset contributed 16 passing tests and continues to cover transport-independent continuation, duplicate-executor exclusion, responsive stop handling, launch isolation, same-operation fallback handoff, successful self-deletion, failed-handoff retry preservation, configuration loading, app-host packaging, and real Windows parent-tree termination. The Stage regression plus opt-in SQL integration fixtures contributed 22 passing default-run tests when SQL integration was not enabled.
+- opt-in LocalDB publication fixture: attempted explicitly and failed before product SQL ran because the LocalDB automatic instance could not start. This is recorded as unproven real-infrastructure validation, not a product pass. The deterministic official-candidate batching regression passed.
 - FR-011 persistence-gate harness: 13 assertions passed.
 - FR-017 portable-persistence harness: 29 assertions passed.
 - FR-018 rule-compilation harness: 19 assertions passed.
@@ -90,7 +102,7 @@ The migration adds one nullable `nvarchar(128)` column and one filtered index. E
 - FR-021 control-plane repair harness: 35 assertions passed.
 - release-neutral campaign-mode harness: 17 assertions passed.
 - repository validation: passed across 286 Markdown files, 7,147 relative links, 163 anchors, 187 indexed canonical documents, 43 templates, 1,263 terminology checks, 193 roadmap tasks, and 21 Future Revision entries.
-- release publish: passed and contained `EternalCycle.ManagedWorker.exe`, distribution metadata, `LICENSE`, and `NOTICE`.
+- `win-x64` release publish: passed and contained `EternalCycle.ManagedWorker.exe`, the shared MCP runtime DLL/dependency/runtime-configuration artifacts, distribution metadata, `LICENSE`, and `NOTICE`.
 - distribution check: a fresh 362-entry archive passed required-content validation with zero forbidden generated paths.
 
 ## Remaining Live Acceptance
@@ -101,10 +113,10 @@ Repository validation does not prove:
 - remote Git host latency, authentication, proxy, or credential behavior;
 - migration 008 execution on a working LocalDB or production SQL Server;
 - LM Studio interoperability;
-- the decisive Unsloth Studio lifecycle case in which its Python/MCP process tree ends while `EternalCycle.ManagedWorker.exe` continues the same durable operation and execution attempt;
 - automatic Job Object breakaway under the actual Unsloth host;
-- the one-click batch fallback, handoff acknowledgement, and self-deletion under the actual Unsloth host if automatic breakaway is refused;
-- real SQL Server publication and remote Git acquisition through the independently hosted worker;
+- terminal Unsloth publication after the now-proven one-click handoff reaches `Stage`;
+- one-click fallback self-deletion under the actual Unsloth host;
+- real SQL Server Stage, Publish, and Activate completion through the independently hosted worker;
 - remote moving-RC discovery and publication until a validated candidate is deliberately accepted and pushed.
 
 ## Result

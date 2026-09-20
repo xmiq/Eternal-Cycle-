@@ -16,54 +16,48 @@ public sealed class ManagedPublicationRegressionTests
     [Fact]
     public async Task OfficialManifestHasMeasuredBoundedPublicationPlan()
     {
-        var repositoryRoot = FindRepositoryRoot();
-        var fixtureRoot = Path.Combine(Path.GetTempPath(), $"ec-official-manifest-{Guid.NewGuid():N}");
-        Directory.CreateDirectory(fixtureRoot);
-        try
+        var (documentCount, index) = await CompileOfficialRuleIndexAsync();
+        var plan = RulePublicationWritePlan.Create(index);
+
+        Assert.Equal(8, documentCount);
+        Assert.Equal(147, plan.ChunkRows);
+        Assert.Equal(990, plan.SelectorRows);
+        Assert.Equal(768, plan.DependencyRows);
+        Assert.Equal(9, plan.StagingCommandCount);
+    }
+
+    [Fact]
+    public async Task OfficialCandidateBuildsOnlyCompleteNonEmptyStageBatchCommands()
+    {
+        var (_, index) = await CompileOfficialRuleIndexAsync();
+        var plan = RulePublicationWritePlan.Create(index);
+        var commands = new List<(string Kind, int Rows, string Text)>();
+
+        commands.AddRange(BatchSizes(plan.ChunkRows, RulePublicationWritePlan.ChunkBatchSize)
+            .Select(rows => ("Chunk", rows, RulePublicationBatchSql.ChunkInsert(rows))));
+        commands.AddRange(BatchSizes(plan.SelectorRows, RulePublicationWritePlan.SelectorBatchSize)
+            .Select(rows => ("Selector", rows, RulePublicationBatchSql.SelectorInsert(rows))));
+        commands.AddRange(BatchSizes(plan.DependencyRows, RulePublicationWritePlan.DependencyBatchSize)
+            .Select(rows => ("Dependency", rows, RulePublicationBatchSql.DependencyInsert(rows))));
+
+        Assert.Equal(plan.StagingCommandCount - 1, commands.Count);
+        Assert.Equal([100, 47], commands.Where(value => value.Kind == "Chunk").Select(value => value.Rows));
+        Assert.Equal([300, 300, 300, 90], commands.Where(value => value.Kind == "Selector").Select(value => value.Rows));
+        Assert.Equal([500, 268], commands.Where(value => value.Kind == "Dependency").Select(value => value.Rows));
+        Assert.All(commands, batch =>
         {
-            var manifestPath = Path.Combine(repositoryRoot, "docs", "rules", "rule-source-manifest.json");
-            using var manifest = JsonDocument.Parse(File.ReadAllText(manifestPath));
-            foreach (var source in manifest.RootElement.GetProperty("sources").EnumerateArray())
-            {
-                var relativePath = source.GetProperty("path").GetString()
-                    ?? throw new InvalidOperationException("Official source path was null.");
-                var destination = Path.Combine(fixtureRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
-                Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
-                File.Copy(Path.Combine(repositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)), destination);
-            }
-
-            var fixtureManifest = Path.Combine(fixtureRoot, "docs", "rules", "rule-source-manifest.json");
-            Directory.CreateDirectory(Path.GetDirectoryName(fixtureManifest)!);
-            File.Copy(manifestPath, fixtureManifest);
-            RunGit(fixtureRoot, "init");
-            RunGit(fixtureRoot, "config", "user.email", "fixture@example.invalid");
-            RunGit(fixtureRoot, "config", "user.name", "Fixture");
-            RunGit(fixtureRoot, "add", ".");
-            RunGit(fixtureRoot, "commit", "-m", "official manifest fixture");
-            var provider = new GitRuleSourceProvider(Options.Create(new ManagedRuleServiceOptions
-            {
-                GitSource = new GitRuleSourceOptions
-                {
-                    RepositoryRoot = fixtureRoot,
-                    Ref = "HEAD",
-                    ManifestPath = "docs/rules/rule-source-manifest.json"
-                }
-            }));
-
-            var snapshot = await provider.GetSnapshotAsync(CancellationToken.None);
-            var plan = RulePublicationWritePlan.Create(
-                RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents));
-
-            Assert.Equal(8, snapshot.Documents.Count);
-            Assert.Equal(147, plan.ChunkRows);
-            Assert.Equal(990, plan.SelectorRows);
-            Assert.Equal(768, plan.DependencyRows);
-            Assert.Equal(9, plan.StagingCommandCount);
-        }
-        finally
-        {
-            DeleteTree(fixtureRoot);
-        }
+            Assert.False(string.IsNullOrWhiteSpace(batch.Text));
+            Assert.Contains(SqlServerSchemaIdentifier.Token, batch.Text, StringComparison.Ordinal);
+            Assert.Equal(
+                batch.Rows,
+                batch.Text.Split("@rule_release_id", StringSplitOptions.None).Length - 1);
+            var bound = SqlServerSchemaIdentifier.Bind(batch.Text, "ec_domain");
+            Assert.Contains("INSERT INTO [ec_domain].", bound, StringComparison.Ordinal);
+            Assert.DoesNotContain(SqlServerSchemaIdentifier.Token, bound, StringComparison.Ordinal);
+        });
+        Assert.Throws<ArgumentOutOfRangeException>(() => RulePublicationBatchSql.ChunkInsert(0));
+        Assert.Throws<ArgumentOutOfRangeException>(() => RulePublicationBatchSql.SelectorInsert(0));
+        Assert.Throws<ArgumentOutOfRangeException>(() => RulePublicationBatchSql.DependencyInsert(0));
     }
 
     [Fact]
@@ -494,6 +488,61 @@ public sealed class ManagedPublicationRegressionTests
         }
 
         return output;
+    }
+
+    private static async Task<(int DocumentCount, CompiledRuleIndex Index)> CompileOfficialRuleIndexAsync()
+    {
+        var repositoryRoot = FindRepositoryRoot();
+        var fixtureRoot = Path.Combine(Path.GetTempPath(), $"ec-official-manifest-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(fixtureRoot);
+        try
+        {
+            var manifestPath = Path.Combine(repositoryRoot, "docs", "rules", "rule-source-manifest.json");
+            using var manifest = JsonDocument.Parse(File.ReadAllText(manifestPath));
+            foreach (var source in manifest.RootElement.GetProperty("sources").EnumerateArray())
+            {
+                var relativePath = source.GetProperty("path").GetString()
+                    ?? throw new InvalidOperationException("Official source path was null.");
+                var destination = Path.Combine(fixtureRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+                Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                File.Copy(Path.Combine(repositoryRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)), destination);
+            }
+
+            var fixtureManifest = Path.Combine(fixtureRoot, "docs", "rules", "rule-source-manifest.json");
+            Directory.CreateDirectory(Path.GetDirectoryName(fixtureManifest)!);
+            File.Copy(manifestPath, fixtureManifest);
+            RunGit(fixtureRoot, "init");
+            RunGit(fixtureRoot, "config", "user.email", "fixture@example.invalid");
+            RunGit(fixtureRoot, "config", "user.name", "Fixture");
+            RunGit(fixtureRoot, "add", ".");
+            RunGit(fixtureRoot, "commit", "-m", "official manifest fixture");
+            var provider = new GitRuleSourceProvider(Options.Create(new ManagedRuleServiceOptions
+            {
+                GitSource = new GitRuleSourceOptions
+                {
+                    RepositoryRoot = fixtureRoot,
+                    Ref = "HEAD",
+                    ManifestPath = "docs/rules/rule-source-manifest.json"
+                }
+            }));
+
+            var snapshot = await provider.GetSnapshotAsync(CancellationToken.None);
+            return (
+                snapshot.Documents.Count,
+                RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents));
+        }
+        finally
+        {
+            DeleteTree(fixtureRoot);
+        }
+    }
+
+    private static IEnumerable<int> BatchSizes(int rowCount, int batchSize)
+    {
+        for (var offset = 0; offset < rowCount; offset += batchSize)
+        {
+            yield return Math.Min(batchSize, rowCount - offset);
+        }
     }
 
     private static void DeleteTree(string path)

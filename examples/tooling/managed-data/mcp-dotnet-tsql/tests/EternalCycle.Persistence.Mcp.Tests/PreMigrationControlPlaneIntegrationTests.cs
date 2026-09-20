@@ -16,6 +16,112 @@ public sealed class PreMigrationControlPlaneIntegrationTests
 
     [Fact]
     [Trait("Category", "SqlServerIntegration")]
+    public async Task OfficialRuleCandidateStagesPublishesAndActivatesAtomically()
+    {
+        if (!string.Equals(
+                Environment.GetEnvironmentVariable(RunIntegrationVariable),
+                "1",
+                StringComparison.Ordinal))
+        {
+            return;
+        }
+
+        var databaseName = $"EC_RuleStage_{Guid.NewGuid():N}";
+        var masterConnectionString = ConnectionString("master");
+        var databaseConnectionString = ConnectionString(databaseName);
+        await CreateDatabaseAsync(masterConnectionString, databaseName);
+        try
+        {
+            var persistence = Options.Create(new SqlServerPersistenceOptions
+            {
+                ConnectionString = databaseConnectionString,
+                DomainSchema = "ec_domain",
+                DefaultSchema = "ec"
+            });
+            var resolver = new ConfiguredCampaignSchemaResolver(persistence);
+            var bootstrap = new SqlServerSchemaBootstrapExecutor(persistence, resolver);
+            await bootstrap.ExecuteAsync("rule-stage-fixture", CancellationToken.None);
+
+            var repositoryRoot = FindRepositoryRoot();
+            var provider = new GitRuleSourceProvider(Options.Create(new ManagedRuleServiceOptions
+            {
+                GitSource = new GitRuleSourceOptions
+                {
+                    RepositoryRoot = repositoryRoot,
+                    Ref = "HEAD",
+                    ManifestPath = "docs/rules/rule-source-manifest.json"
+                }
+            }));
+            var snapshot = await provider.GetSnapshotAsync(CancellationToken.None);
+            var release = new PublishedRuleRelease(
+                $"RULE-{Guid.NewGuid():N}",
+                snapshot.RulesetId,
+                snapshot.ProviderKind,
+                snapshot.SourceIdentity,
+                snapshot.RepositoryVersion,
+                snapshot.CompilerContractVersion,
+                RuleReleaseState.Candidate,
+                RuleCompiler.Compile(snapshot.RepositoryVersion, snapshot.Documents),
+                DateTimeOffset.UtcNow,
+                ReleaseChannel: snapshot.ReleaseChannel,
+                DiscoveryRef: snapshot.DiscoveryRef,
+                ManifestFormatVersion: snapshot.ManifestFormatVersion,
+                CompilerContractVersion: snapshot.CompilerContractVersion,
+                VersionMetadata: snapshot.VersionMetadata);
+            var plan = RulePublicationWritePlan.Create(release.Index);
+            Assert.Equal(147, plan.ChunkRows);
+            Assert.Equal(990, plan.SelectorRows);
+            Assert.Equal(768, plan.DependencyRows);
+
+            var store = new SqlServerPublishedRuleStore(persistence);
+            await store.StageCandidateAsync(release, CancellationToken.None);
+            await store.SetStateAsync(release.RuleReleaseId, RuleReleaseState.Validated, null, CancellationToken.None);
+            await store.SetStateAsync(release.RuleReleaseId, RuleReleaseState.Published, null, CancellationToken.None);
+            await store.ActivateAsync(release.RulesetId, release.RuleReleaseId, CancellationToken.None);
+
+            var active = await store.GetActiveAsync(release.RulesetId, CancellationToken.None);
+            Assert.NotNull(active);
+            Assert.Equal(release.RuleReleaseId, active.RuleReleaseId);
+            Assert.Equal(RuleReleaseState.Active, active.State);
+            Assert.Equal(plan.ChunkRows, await CountReleaseRowsAsync(
+                databaseConnectionString,
+                "rule_chunks",
+                release.RuleReleaseId));
+            Assert.Equal(plan.SelectorRows, await CountReleaseRowsAsync(
+                databaseConnectionString,
+                "rule_chunk_selectors",
+                release.RuleReleaseId));
+            Assert.Equal(plan.DependencyRows, await CountReleaseRowsAsync(
+                databaseConnectionString,
+                "rule_dependencies",
+                release.RuleReleaseId));
+
+            var duplicateChunk = release.Index.Chunks[0];
+            var invalidRelease = release with
+            {
+                RuleReleaseId = $"RULE-{Guid.NewGuid():N}",
+                State = RuleReleaseState.Candidate,
+                Index = new CompiledRuleIndex(
+                    release.Index.RepositoryVersion,
+                    DateTimeOffset.UtcNow,
+                    [duplicateChunk, duplicateChunk])
+            };
+            await Assert.ThrowsAsync<SqlException>(() =>
+                store.StageCandidateAsync(invalidRelease, CancellationToken.None));
+            Assert.Equal(0, await CountReleaseRowsAsync(
+                databaseConnectionString,
+                "rule_releases",
+                invalidRelease.RuleReleaseId));
+        }
+        finally
+        {
+            SqlConnection.ClearAllPools();
+            await DropDatabaseAsync(masterConnectionString, databaseName);
+        }
+    }
+
+    [Fact]
+    [Trait("Category", "SqlServerIntegration")]
     public async Task SupportedPre007DatabaseCanRecoverThroughNormalControlPlane()
     {
         if (!string.Equals(
@@ -266,6 +372,32 @@ public sealed class PreMigrationControlPlaneIntegrationTests
         return Convert.ToInt32(await command.ExecuteScalarAsync()) == 1;
     }
 
+    private static async Task<int> CountReleaseRowsAsync(
+        string connectionString,
+        string tableName,
+        string ruleReleaseId)
+    {
+        var allowedTables = new HashSet<string>(StringComparer.Ordinal)
+        {
+            "rule_releases",
+            "rule_chunks",
+            "rule_chunk_selectors",
+            "rule_dependencies"
+        };
+        if (!allowedTables.Contains(tableName))
+        {
+            throw new ArgumentOutOfRangeException(nameof(tableName));
+        }
+
+        await using var connection = new SqlConnection(connectionString);
+        await connection.OpenAsync();
+        await using var command = new SqlCommand(
+            $"SELECT COUNT(*) FROM [ec_domain].[{tableName}] WHERE rule_release_id = @rule_release_id;",
+            connection);
+        command.Parameters.AddWithValue("@rule_release_id", ruleReleaseId);
+        return Convert.ToInt32(await command.ExecuteScalarAsync());
+    }
+
     private static async Task ExecuteBatchesAsync(string connectionString, string sql)
     {
         await using var connection = new SqlConnection(connectionString);
@@ -308,4 +440,21 @@ public sealed class PreMigrationControlPlaneIntegrationTests
             TrustServerCertificate = true,
             ConnectTimeout = 10
         }.ConnectionString;
+
+    private static string FindRepositoryRoot()
+    {
+        var directory = new DirectoryInfo(AppContext.BaseDirectory);
+        while (directory is not null)
+        {
+            if (File.Exists(Path.Combine(directory.FullName, "docs", "rules", "rule-source-manifest.json")) &&
+                File.Exists(Path.Combine(directory.FullName, "VERSION")))
+            {
+                return directory.FullName;
+            }
+
+            directory = directory.Parent;
+        }
+
+        throw new InvalidOperationException("Could not locate the Eternal Cycle repository root.");
+    }
 }
