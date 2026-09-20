@@ -564,6 +564,8 @@ public sealed class ManagedRulePublicationCoordinator
         {
             throw new InvalidOperationException("Every compiled rule chunk requires a token estimate and source hash.");
         }
+
+        RuleCompiler.ValidateRequiredRuntimeSources(index);
     }
 
     private static IReadOnlyCollection<string> MinimumGameplayClosure(CompiledRuleIndex index)

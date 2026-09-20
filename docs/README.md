@@ -172,6 +172,8 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 
 - [Rule Compilation Index](rules/README.md) - authority boundary, reading order, reference manifest, and runtime consumers.
 - [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) - compact mandatory authority, agency, world-simulation, read, ownership, and persistence invariants.
+- [GM Runtime Procedure](rules/GM_RUNTIME_PROCEDURE.md) - mandatory read, resolve, persist, validate, narrate, and yield lifecycle for every gameplay-resolution interaction.
+- [GM Host Bootstrap](rules/GM_HOST_BOOTSTRAP.txt) - compact versioned execution contract for the highest instruction level supported by a host.
 - [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
 - [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) - service-owned source acquisition, versioned publication, activation, update policy, compatibility, and bounded Rule Packets.
 

@@ -840,7 +840,41 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 RenderDomain("009_managed_operation_execution_leases.template.sql")));
         }
 
+        if (domainCount == 0 ||
+            !domainTables.Contains("gm_host_configurations") ||
+            !await GmHostConfigurationReadyAsync(connection, cancellationToken))
+        {
+            migrations.Add(new(
+                "010_gm_host_configuration",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("010_gm_host_configuration.template.sql")));
+        }
+
         return migrations;
+    }
+
+    private async Task<bool> GmHostConfigurationReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND tables.name = N'gm_host_configurations'
+              AND columns.name IN (
+                    N'ruleset_id', N'bootstrap_source_hash', N'configuration_state',
+                    N'presented_at', N'confirmed_at', N'verified_at',
+                    N'configuration_revision', N'updated_at'
+              );
+            """, connection)
+        {
+            CommandTimeout = settings.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", settings.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 8;
     }
 
     private async Task<bool> ManagedOperationExecutionLeaseReadyAsync(
@@ -1182,7 +1216,8 @@ public sealed record OfficialDistributionMetadata(
 [McpServerToolType]
 public sealed class ManagedSetupTools(
     IManagedReadinessService readiness,
-    IManagedAdministrationService administration)
+    IManagedAdministrationService administration,
+    IGmHostConfigurationService gmHostConfiguration)
 {
     [McpServerTool(Name = "ec_get_readiness", ReadOnly = true, Idempotent = true),
      Description("Returns structured Managed-service readiness without mutating infrastructure or exposing secrets.")]
@@ -1218,6 +1253,20 @@ public sealed class ManagedSetupTools(
         InitialRulePublicationRequest request,
         CancellationToken cancellationToken) =>
         administration.PublishInitialRulesAsync(request, cancellationToken);
+
+    [McpServerTool(Name = "ec_get_gm_host_configuration", Idempotent = true),
+     Description("Returns the exact canonical, versioned GM Host Bootstrap and records that setup presented it. The host setting remains user-owned unless a capable integration can attest it.")]
+    public Task<ManagedOperationResult<GmHostConfigurationStatus>> GetGmHostConfigurationAsync(
+        CancellationToken cancellationToken) =>
+        gmHostConfiguration.PresentInstructionsAsync(cancellationToken);
+
+    [McpServerTool(Name = "ec_confirm_gm_host_configuration", Idempotent = true),
+     Description("Records natural user confirmation that the canonical bootstrap was installed. User confirmation is never mislabeled as technical verification.")]
+    public Task<ManagedOperationResult<GmHostConfigurationStatus>> ConfirmGmHostConfigurationAsync(
+        [Description("Set true only after the user naturally confirms that the exact presented bootstrap was installed.")]
+        GmHostConfigurationConfirmation confirmation,
+        CancellationToken cancellationToken) =>
+        gmHostConfiguration.ConfirmAsync(confirmation, cancellationToken);
 
     [McpServerTool(Name = "ec_list_campaigns", ReadOnly = true, Idempotent = true),
      Description("Lists stable campaign identities with player-meaningful names without returning Campaign Canon.")]

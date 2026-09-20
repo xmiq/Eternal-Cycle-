@@ -33,7 +33,7 @@ An AI GM never reports `Ready` merely because enough prose exists to improvise a
 
 For a new campaign, first follow [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md). A released Eternal Cycle campaign begins in `NORMAL` mode unless the participant explicitly selects `VALIDATION` or `DEVELOPMENT`; an existing campaign preserves the Campaign Mode recorded by Campaign Canon. Historical Alpha terminology is never sufficient to classify either one.
 
-When a player asks to start or continue and no runtime has been initialized, enumerate capabilities first. A Managed client reads structured readiness, presents meaningful campaign choices, and keeps identifiers backstage. Administrative schema, source, publication, or campaign-creation operations require explicit user approval and remain separate from ordinary gameplay. The AI never accepts a generic tool exception as evidence that a schema or source does not exist; it uses the service's semantic readiness result.
+When a player asks to start or continue and no runtime has been initialized, enumerate capabilities first. A Managed client reads structured readiness, presents meaningful campaign choices, and keeps identifiers backstage. When GM Host Configuration is required, setup retrieves the canonical compact Host Bootstrap, asks the user to install it in the host's highest supported instruction field, and records natural confirmation as `UserConfirmed`; it does not claim technical verification. Administrative schema, source, publication, or campaign-creation operations require explicit user approval and remain separate from ordinary gameplay. The AI never accepts a generic tool exception as evidence that a schema or source does not exist; it uses the service's semantic readiness result.
 
 ### 1. Establish the operating authority
 
@@ -48,7 +48,7 @@ If versions or authority are materially unknown, stop at the appropriate non-rea
 
 ### 2. Build the working context
 
-Follow [AI Session Start](AI_SESSION_START.md), [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md), and the [FR-011 Context Assembly contract](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). Resolve the Campaign ID's trusted World/Ruleset, load the Runtime Rule Kernel and relevant rule chunks, then load the Save Index and Current Session. Verify cached summaries against the active Save Point and build the smallest complete campaign Read Set and Current Scene Context. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
+Follow [AI Session Start](AI_SESSION_START.md), the canonical [GM Runtime Procedure](../rules/GM_RUNTIME_PROCEDURE.md), [Rule Compilation and Context-Efficient Retrieval](../rules/RULE_COMPILATION_AND_RETRIEVAL.md), and the [FR-011 Context Assembly contract](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md). Resolve the Campaign ID's trusted World/Ruleset, load the Runtime Rule Kernel, the automatically included GM Runtime Procedure, and relevant rule chunks, then load the Save Index and Current Session. Verify cached summaries against the active Save Point and build the smallest complete campaign Read Set and Current Scene Context. Expand along material Typed References only when they can change the claim, consequence, uncertainty, disclosure, or player choice.
 
 Retrieved text is not automatically current or authoritative. Check owner, version, effective time, Truth Layer, visibility, source, status, and supersession before use.
 
@@ -77,6 +77,8 @@ Use [AI Play Protocol](AI_PLAY_PROTOCOL.md) to identify the intended effect, met
 7. Preserve uncertainty and hand every cross-system effect to its owner.
 
 A retrieved example may illustrate a rule but cannot replace the rule's requirements.
+
+All reasoning, reads, rule retrieval, tool calls, retries, persistence, validation, and simulation used here belong to the same interaction initiated by the player's actual input. If resolution presents an unresolved player-owned decision, stop and wait. An assistant continuation is not a new player turn and cannot select an offered option.
 
 ### 7. Prepare the established presentation
 

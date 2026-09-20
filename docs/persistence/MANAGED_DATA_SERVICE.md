@@ -45,7 +45,7 @@ Campaign discovery preserves stable IDs without making players type them. Zero c
 
 ### Turn persistence
 
-The service supports stable transaction identity, exact Read and Affected Sets, expected-parent or equivalent optimistic concurrency, idempotent commit and retry, validation, atomic activation, read-back, and evidence sufficient for the turn-completion gate.
+The service supports stable transaction identity, exact Read and Affected Sets, expected-parent or equivalent optimistic concurrency, idempotent commit and retry, validation, atomic activation, read-back, and evidence sufficient for the turn-completion gate. It may also expose a constrained set-only patch for existing owner records: the service loads authoritative state, preserves omitted fields, rejects identity/reference changes, expands the patch into the ordinary full mutation path, and applies the same concurrency, validation, activation, and receipt rules. It never exposes arbitrary SQL or treats omission as deletion.
 
 ### Rules
 

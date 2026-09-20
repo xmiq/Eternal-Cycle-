@@ -153,6 +153,7 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         var documents = new[]
         {
             Document("kernel", RuleLayer.RuntimeKernel, "Runtime gate and authority order.", alwaysInclude: true),
+            Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, "Mandatory GM procedure.", alwaysInclude: true),
             Document("core", RuleLayer.Core, "Core action and consequence rules.", topics: ["combat"]),
             Document("world-a", RuleLayer.World, "World A gravity and magic rules.", worlds: ["world-a"], topics: ["combat"]),
             Document("world-b", RuleLayer.World, new string('B', 18_000), worlds: ["world-b"], topics: ["combat"]),
@@ -180,6 +181,7 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         Assert.Equal("campaign-a", result.CampaignId);
         Assert.Equal("world-a", result.WorldModelId);
         Assert.Contains(result.Chunks, chunk => chunk.RuleSourceId == "kernel");
+        Assert.Contains(result.Chunks, chunk => chunk.RuleSourceId == RuleCompiler.GmRuntimeProcedureSourceId);
         Assert.Contains(result.Chunks, chunk => chunk.RuleSourceId == "core");
         Assert.Contains(result.Chunks, chunk => chunk.RuleSourceId == "world-a");
         Assert.DoesNotContain(result.Chunks, chunk => chunk.RuleSourceId == "world-b");
@@ -194,6 +196,7 @@ public sealed class SchemaRoutingAndRuleCompilationTests
         var documents = new[]
         {
             Document("kernel", RuleLayer.RuntimeKernel, "Kernel.", alwaysInclude: true),
+            Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, "Mandatory GM procedure.", alwaysInclude: true),
             Document("normal", RuleLayer.Core, "Normal rule.", topics: ["combat"]),
             new RuleSourceDocument(
                 "validation",

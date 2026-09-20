@@ -143,6 +143,8 @@ public sealed class ManagedRulePublicationTests
             "1.0.0+fr019",
             [
                 Document("kernel", RuleLayer.RuntimeKernel, "Mandatory kernel.", alwaysInclude: true),
+                Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, "Mandatory GM procedure.", alwaysInclude: true),
+                Document(RuleCompiler.GmHostBootstrapSourceId, RuleLayer.Core, "Canonical host bootstrap."),
                 Document("foundation", RuleLayer.Core, "Required foundation.", topics: ["foundation"]),
                 Document("combat", RuleLayer.Core, "Combat rule.", topics: ["combat"], dependencies: ["foundation"])
             ],
@@ -338,6 +340,8 @@ public sealed class ManagedRulePublicationTests
             "1.0.0+fr019",
             [
                 Document("kernel", RuleLayer.RuntimeKernel, "Mandatory kernel.", alwaysInclude: true),
+                Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, "Mandatory GM procedure.", alwaysInclude: true),
+                Document(RuleCompiler.GmHostBootstrapSourceId, RuleLayer.Core, "Canonical host bootstrap."),
                 Document("core", RuleLayer.Core, "Core combat.", topics: ["combat"]),
                 Document("world-a", RuleLayer.World, "World A.", worlds: ["eternal-cycle-standard"], topics: ["combat"]),
                 Document("world-b", RuleLayer.World, "World B.", worlds: ["world-b"], topics: ["combat"])

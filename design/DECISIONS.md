@@ -5397,3 +5397,23 @@ A Durable Managed Operation cannot depend on an MCP process, AI response, client
 ## D-1349 — Prepared Recovery Minimizes User Intervention
 
 When automatic setup cannot proceed but Eternal Cycle can prepare the recovery action completely, it prepares that action and asks the user only to execute or approve it. A host-blocked independent-worker launch is user intervention, not renewed gameplay approval and not administrator intervention. The Windows reference may create a temporary one-click launcher carrying the existing operation handoff and protected effective configuration; successful handoff removes temporary material, failed handoff remains retryable, and neither path creates a replacement operation or campaign.
+
+## D-1350 — GM Bootstrap and Runtime Procedure Are Distinct Mandatory Layers
+
+The compact GM Host Bootstrap belongs at the highest instruction level a host supports and tells the GM where authority lives and which invariants always apply. The detailed, versioned GM Runtime Procedure remains Repository Canon and is automatically included with the Runtime Rule Kernel for `gameplay.resolve`. Neither substitutes for the other, and the caller is not required to know a special retrieval topic.
+
+## D-1351 — Only Actual New Player Input Starts a Player Turn
+
+Assistant continuation, private reasoning, tool calls or results, retries, reads, persistence, validation, retrieval, and same-input simulation remain inside the interaction initiated by the player's actual input. When the GM reaches an unresolved player-controlled decision, it yields and waits; internal continuation never authorizes selection for the player.
+
+## D-1352 — Compact Rule Delivery Retains Service-Side Provenance
+
+The normal LLM-facing Rule Packet carries minimal packet/release/source identity, stable Rule Source IDs, token totals, and selected executable text. Full paths, anchors, hashes, selectors, dependencies, preparation state, and other provenance remain authoritative inside the Managed service and its diagnostic surfaces. Compact transport cannot omit required content or turn missing Canon into inference.
+
+## D-1353 — Host Configuration Confirmation Is Not Verification
+
+GM Host Configuration is tracked against the current canonical bootstrap revision as `Required`, `InstructionsPresented`, `UserConfirmed`, or `Verified`. Natural user confirmation is sufficient for the generic setup path but remains `UserConfirmed`; only a host integration able to inspect or attest the installed configuration may record `Verified`.
+
+## D-1354 — Constrained Record Patches Reuse the Full Persistence Transaction
+
+A Managed implementation may reduce context pressure by accepting set-only patches for existing authoritative object records. The service loads current state, preserves omitted fields, rejects identity/reference changes and creates/deletes, expands the result into full owner-routed mutations, and uses the existing expected-version, revision, idempotency, validation, activation, read-back, and receipt contract. It exposes neither arbitrary SQL nor omission-as-deletion behavior.

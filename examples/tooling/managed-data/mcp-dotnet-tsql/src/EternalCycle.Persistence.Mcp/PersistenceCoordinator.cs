@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace EternalCycle.Persistence.Mcp;
 
@@ -46,6 +47,58 @@ public sealed class PersistenceCoordinator(ICampaignPersistenceStore store)
         Validate(request);
         var requestHash = ComputeHash(JsonSerializer.Serialize(request, CanonicalJsonOptions));
         var result = await store.CommitAsync(request, requestHash, cancellationToken);
+        return EnforceReceiptBoundary(result);
+    }
+
+    public async Task<CommitResult> PatchAsync(
+        PatchCampaignRequest request,
+        CancellationToken cancellationToken)
+    {
+        Validate(request);
+        var requestHash = ComputeHash(JsonSerializer.Serialize(request, CanonicalJsonOptions));
+        var records = await store.ReadRecordsAsync(
+            request.CampaignId,
+            request.Patches
+                .Select(patch => new RecordAddress(patch.OwnerDomain, patch.RecordId))
+                .ToArray(),
+            cancellationToken);
+        var byAddress = records.Records.ToDictionary(
+            record => $"{record.OwnerDomain}\u001f{record.RecordId}",
+            StringComparer.Ordinal);
+        var mutations = new List<RecordMutation>(request.Patches.Count);
+        foreach (var patch in request.Patches)
+        {
+            if (!byAddress.TryGetValue($"{patch.OwnerDomain}\u001f{patch.RecordId}", out var current) ||
+                current.Tombstone)
+            {
+                throw new InvalidOperationException(
+                    $"Merge patch requires an existing canonical record: {patch.OwnerDomain}/{patch.RecordId}.");
+            }
+
+            var payload = JsonNode.Parse(current.PayloadJson) as JsonObject
+                ?? throw new InvalidOperationException("The authoritative record payload is not a JSON object.");
+            var setValues = JsonNode.Parse(patch.SetValuesJson) as JsonObject
+                ?? throw new ArgumentException("SetValuesJson must be a JSON object.", nameof(request));
+            ApplySetValues(payload, setValues);
+            mutations.Add(new RecordMutation(
+                patch.OwnerDomain,
+                patch.RecordId,
+                patch.ExpectedRevision,
+                payload.ToJsonString(CanonicalJsonOptions),
+                false));
+        }
+
+        var expanded = new CommitCampaignRequest(
+            request.CampaignId,
+            request.TransactionId,
+            request.IdempotencyKey,
+            request.ExpectedParentVersion,
+            request.AffectedOwnerDomains,
+            mutations,
+            request.SourceInteractionId,
+            request.Reason);
+        Validate(expanded);
+        var result = await store.CommitAsync(expanded, requestHash, cancellationToken);
         return EnforceReceiptBoundary(result);
     }
 
@@ -119,6 +172,94 @@ public sealed class PersistenceCoordinator(ICampaignPersistenceStore store)
                 RequireIdentifier(reference.RelationType, nameof(reference.RelationType));
                 RequireIdentifier(reference.TargetOwnerDomain, nameof(reference.TargetOwnerDomain));
                 RequireIdentifier(reference.TargetRecordId, nameof(reference.TargetRecordId));
+            }
+        }
+    }
+
+    private static void Validate(PatchCampaignRequest request)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        RequireIdentifier(request.CampaignId, nameof(request.CampaignId));
+        RequireIdentifier(request.TransactionId, nameof(request.TransactionId));
+        RequireIdentifier(request.IdempotencyKey, nameof(request.IdempotencyKey));
+        RequireIdentifier(request.SourceInteractionId, nameof(request.SourceInteractionId));
+        if (request.ExpectedParentVersion < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(request.ExpectedParentVersion));
+        }
+
+        if (request.Patches.Count is < 1 or > 200)
+        {
+            throw new ArgumentOutOfRangeException(nameof(request.Patches), "A merge-patch transaction must contain between 1 and 200 existing records.");
+        }
+
+        var affected = request.AffectedOwnerDomains
+            .Select(value => RequireIdentifier(value, "affectedOwnerDomain"))
+            .ToHashSet(StringComparer.Ordinal);
+        var actual = request.Patches
+            .Select(patch => RequireIdentifier(patch.OwnerDomain, nameof(patch.OwnerDomain)))
+            .ToHashSet(StringComparer.Ordinal);
+        if (!affected.SetEquals(actual))
+        {
+            throw new ArgumentException("AffectedOwnerDomains must exactly match the owner domains represented by the patches.");
+        }
+
+        var addresses = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var patch in request.Patches)
+        {
+            RequireIdentifier(patch.RecordId, nameof(patch.RecordId));
+            if (patch.ExpectedRevision < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(patch.ExpectedRevision));
+            }
+
+            if (!addresses.Add($"{patch.OwnerDomain}\u001f{patch.RecordId}"))
+            {
+                throw new ArgumentException("A transaction may patch each authoritative record at most once.");
+            }
+
+            var setValues = JsonNode.Parse(patch.SetValuesJson) as JsonObject
+                ?? throw new ArgumentException("SetValuesJson must be a JSON object.");
+            if (setValues.Count == 0)
+            {
+                throw new ArgumentException("A record merge patch cannot be empty.");
+            }
+
+            ValidatePatchKeys(setValues);
+        }
+    }
+
+    private static void ApplySetValues(JsonObject target, JsonObject patch)
+    {
+        foreach (var (name, value) in patch)
+        {
+            if (value is JsonObject patchObject && target[name] is JsonObject targetObject)
+            {
+                ApplySetValues(targetObject, patchObject);
+                continue;
+            }
+
+            target[name] = value?.DeepClone();
+        }
+    }
+
+    private static void ValidatePatchKeys(JsonObject patch)
+    {
+        foreach (var (name, value) in patch)
+        {
+            var normalized = name.Replace("_", string.Empty, StringComparison.Ordinal).ToLowerInvariant();
+            if (normalized is "id" or "recordid" or "ownerdomain" or "references" ||
+                normalized.EndsWith("id", StringComparison.Ordinal) ||
+                normalized.EndsWith("ids", StringComparison.Ordinal) ||
+                normalized.Contains("reference", StringComparison.Ordinal))
+            {
+                throw new ArgumentException(
+                    $"Merge patches cannot alter identity or reference-bearing field '{name}'; use the full mutation path.");
+            }
+
+            if (value is JsonObject child)
+            {
+                ValidatePatchKeys(child);
             }
         }
     }

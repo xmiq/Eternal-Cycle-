@@ -120,6 +120,8 @@ This view is navigation, not authority. It must carry freshness and source refer
 
 For a Managed strategy, inspect structured service readiness before requesting rules or campaign state. Transport success alone is insufficient. Treat setup, migration, Rule Source, publication, activation, and campaign-required results as explicit operational states. Explain the bounded action in ordinary language, ask the user before any administrative change, and invoke only a separately authorized setup capability. Never substitute raw datastore commands, invent a source, or silently create a blank campaign.
 
+Read GM Host Configuration as a separate readiness concern. When it is `Required` or `InstructionsPresented`, retrieve and present the exact canonical [GM Host Bootstrap](../rules/GM_HOST_BOOTSTRAP.txt), explain that the user must place it in the highest instruction field the host supports, and accept natural conversational confirmation. Record that generic path as `UserConfirmed`, never `Verified`; only a host capable of inspecting or attesting its configuration may record `Verified`. A changed bootstrap revision requires renewed presentation and acknowledgment.
+
 If initial publication is required, obtain explicit informed approval and initiate one durable [Managed Operation](../persistence/MANAGED_OPERATIONS.md). Retain its Operation ID or rediscover recent relevant operations; do not keep an interactive request open for the full publication lifecycle and do not infer failure merely because a client request timed out. `GameplayReady` permits play only for validated available rule closures. `FullRulesetReady` is separate. A `PENDING` requested closure waits and receives higher service preparation priority; it is never replaced with an invented rule.
 
 Service/bootstrap diagnostics do not require a Campaign ID. Supply one only when campaign-specific enrichment is relevant. Ordinary players are not asked for Campaign IDs, Git refs, SHAs, schemas, migration names, connection strings, or confirmation phrases.
@@ -157,6 +159,7 @@ Do not reclassify a resumed campaign from historical repository wording. An exis
 - [AI GM Workflow](AI_GM_WORKFLOW.md)
 - [Campaign Bootstrap](../gm/CAMPAIGN_BOOTSTRAP.md)
 - [Context Assembly and Gameplay Turn Persistence](CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md)
+- [GM Runtime Procedure](../rules/GM_RUNTIME_PROCEDURE.md)
 - [Save Index Template](../../templates/SAVE_INDEX_TEMPLATE.md)
 - [Truth Layers](../persistence/TRUTH_LAYERS.md)
 - [Persistence Validation](../persistence/PERSISTENCE_VALIDATION.md)

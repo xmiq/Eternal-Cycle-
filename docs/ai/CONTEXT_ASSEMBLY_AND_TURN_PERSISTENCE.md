@@ -38,6 +38,8 @@ Repository validation proves that the required contract and integration points e
 14. Player-visible persistence status is derived from adapter evidence, never intent or prepared narration.
 15. Derived context refresh follows canonical validation and read-back; it never promotes unsaved narration.
 16. A canonical representation request receives a purpose-specific, visibility-filtered Canonical Visual Context before depiction; conversation context is not visual authority.
+17. A new player Gameplay Turn begins only with actual new player input; assistant continuation and internal tool work remain inside the originating interaction.
+18. When resolution reaches an unresolved player-controlled choice, the GM yields and waits rather than selecting through an internal continuation.
 
 ## Gameplay Turn State Machine
 
@@ -74,6 +76,8 @@ Player Action
     -> Validate and Verify
     -> Deliver the Final Player-Facing Result
 ```
+
+`Player Action` means actual new player input. Hidden reasoning, assistant continuation, tool invocation or result, retry, canonical read, rule retrieval, persistence, validation, and same-input world simulation do not reopen the player-action boundary. They remain work inside the same interaction. Once the resulting situation requires a new player-owned choice, processing stops until that input arrives.
 
 Prepared narration may exist before persistence, but it is not a delivered durable consequence. A strict execution profile uses `resolve target -> read -> resolve -> persist -> validate -> verify configured authority -> refresh derived context -> deliver`. No background promise, asynchronous stage, decorative status, or later-save claim satisfies this gate.
 
@@ -279,6 +283,12 @@ For a non-empty Affected Set:
 12. enter `TURN_COMPLETE` and deliver the final player-facing result with the evidence-derived status marker.
 
 The player issues no save command. Direct local database success alone is insufficient when configuration requires remote deployment. Managed interface success alone is insufficient without validated service completion evidence.
+
+### Constrained Patch Updates
+
+A Managed service may accept a bounded set-only patch for existing authoritative JSON-object records when reconstructing an entire record would waste context or risk erasing omitted state. The service, not the model, reads each current record, preserves omitted fields, applies only supplied values, expands the result into the ordinary full owner-routed mutation path, and enforces the same expected Campaign Version, record revision, transaction identity, validation, activation, read-back, and receipt boundary.
+
+This path cannot create or delete records, alter identity or reference-bearing fields, accept arbitrary SQL, bypass owner routing, or turn omission into deletion. Structural identity/reference changes and unsupported payloads use the full mutation contract. Retry retains the same transaction and idempotency identity, and a failed patch activates nothing.
 
 ## Player-Visible Persistence Status
 

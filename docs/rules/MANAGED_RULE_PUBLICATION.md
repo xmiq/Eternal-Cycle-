@@ -115,10 +115,11 @@ Rule publication is not an all-or-nothing gameplay gate. The service tracks prep
 - **PersistenceReady** - required service and campaign persistence structures are usable;
 - **RuleKernelReady** - the Runtime Rule Kernel closure is validated and available;
 - **CampaignBootstrapReady** - the minimum authoritative closure needed to create or resume safe play is available;
-- **GameplayReady** - persistence, active compatible release, kernel, bootstrap closure, and requested campaign conditions permit play;
+- **GMHostConfiguration** - the canonical Host Bootstrap is `Required`, `InstructionsPresented`, `UserConfirmed`, or `Verified` for the active bootstrap revision;
+- **GameplayReady** - persistence, active compatible release, kernel, bootstrap closure, acceptable GM Host Configuration, and requested campaign conditions permit play;
 - **FullRulesetReady** - every selected Rule Source is prepared.
 
-`GameplayReady` may be true while `FullRulesetReady` is false. This never permits guessing. A requested operation's Rule IDs and dependency closure must be ready before resolution. If they are not, retrieval returns `PENDING`, raises the closure's preparation priority, and waits for authoritative availability. Failed preparation returns `FAILED` with safe causal evidence.
+`GameplayReady` may be true while `FullRulesetReady` is false. It is false while GM Host Configuration is only `Required` or `InstructionsPresented`; generic setup may proceed after natural `UserConfirmed`, while `Verified` is reserved for a host that can actually attest the installed configuration. This never permits guessing. A requested operation's Rule IDs and dependency closure must be ready before resolution. If they are not, retrieval returns `PENDING`, raises the closure's preparation priority, and waits for authoritative availability. Failed preparation returns `FAILED` with safe causal evidence.
 
 ## Preparation Order
 
@@ -157,18 +158,21 @@ Campaign Configuration records the compatible RuleSet, World/Domain Model, activ
 A semantic retrieval request identifies campaign, operation, topics, and bounded budget. The service resolves trusted Campaign Mode, World/Ruleset, modules, active compatible Rule Release, explicit dependencies, and access policy. The returned Rule Packet includes:
 
 - Runtime Rule Kernel;
+- GM Runtime Procedure for `gameplay.resolve` without requiring a special topic;
 - relevant Core rules;
 - selected World/Ruleset rules;
 - enabled optional modules;
 - operation/topic-specific rules;
-- dependency-complete provenance;
+- packet format, active Rule Release, immutable source identity, and stable Rule Source IDs;
 - estimated context size.
 
 Campaign Canon and current scene/input remain separate context inputs. The normal compiled-rule ceiling remains approximately 8,000 estimated tokens, and no hidden full-repository prompt evades that measurement.
 
+The normal LLM-facing representation groups executable text by stable Rule Source ID and omits repeated source paths, hashes, selectors, dependencies, and preparation metadata. The service retains that complete provenance and dependency graph for validation, diagnostics, publication, and audit. Compact transport is therefore lossless with respect to selected rule content and authority, not a second rules format.
+
 ## T-SQL Reference Mapping
 
-The reference implementation stores published reusable Rule Releases, chunks, applicability, dependencies, source provenance, update status, active-release pointers, and sanitized Managed-operation diagnostics in `ec_domain`. Candidate rows, chunks, selectors, and dependencies are staged in one transaction; bounded multi-row writes avoid pathological per-record round trips without changing atomicity. World schemas contain Campaign Canon only. Other Managed implementations use their Domain Namespace equivalent.
+The reference implementation stores published reusable Rule Releases, chunks, applicability, dependencies, source provenance, update status, active-release pointers, GM Host Configuration acknowledgment, and sanitized Managed-operation diagnostics in `ec_domain`. Candidate rows, chunks, selectors, and dependencies are staged in one transaction; bounded multi-row writes avoid pathological per-record round trips without changing atomicity. World schemas contain Campaign Canon only. Other Managed implementations use their Domain Namespace equivalent.
 
 ## DIRECT Delivery
 

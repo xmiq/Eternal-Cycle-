@@ -19,10 +19,10 @@ public sealed class ManagedPublicationRegressionTests
         var (documentCount, index) = await CompileOfficialRuleIndexAsync();
         var plan = RulePublicationWritePlan.Create(index);
 
-        Assert.Equal(8, documentCount);
-        Assert.Equal(147, plan.ChunkRows);
-        Assert.Equal(990, plan.SelectorRows);
-        Assert.Equal(768, plan.DependencyRows);
+        Assert.Equal(10, documentCount);
+        Assert.Equal(154, plan.ChunkRows);
+        Assert.Equal(1004, plan.SelectorRows);
+        Assert.Equal(803, plan.DependencyRows);
         Assert.Equal(9, plan.StagingCommandCount);
     }
 
@@ -41,9 +41,9 @@ public sealed class ManagedPublicationRegressionTests
             .Select(rows => ("Dependency", rows, RulePublicationBatchSql.DependencyInsert(rows))));
 
         Assert.Equal(plan.StagingCommandCount - 1, commands.Count);
-        Assert.Equal([100, 47], commands.Where(value => value.Kind == "Chunk").Select(value => value.Rows));
-        Assert.Equal([300, 300, 300, 90], commands.Where(value => value.Kind == "Selector").Select(value => value.Rows));
-        Assert.Equal([500, 268], commands.Where(value => value.Kind == "Dependency").Select(value => value.Rows));
+        Assert.Equal([100, 54], commands.Where(value => value.Kind == "Chunk").Select(value => value.Rows));
+        Assert.Equal([300, 300, 300, 104], commands.Where(value => value.Kind == "Selector").Select(value => value.Rows));
+        Assert.Equal([500, 303], commands.Where(value => value.Kind == "Dependency").Select(value => value.Rows));
         Assert.All(commands, batch =>
         {
             Assert.False(string.IsNullOrWhiteSpace(batch.Text));
@@ -71,7 +71,13 @@ public sealed class ManagedPublicationRegressionTests
             var entries = new List<object>();
             for (var documentIndex = 0; documentIndex < 8; documentIndex++)
             {
-                var id = documentIndex == 0 ? "runtime-kernel" : $"rules-{documentIndex}";
+                var id = documentIndex switch
+                {
+                    0 => "runtime-kernel",
+                    1 => RuleCompiler.GmRuntimeProcedureSourceId,
+                    2 => RuleCompiler.GmHostBootstrapSourceId,
+                    _ => $"rules-{documentIndex}"
+                };
                 var path = $"docs/rules/{id}.md";
                 var content = new StringBuilder($"# {id}\n\nReusable Eternal Cycle rule source.\n");
                 for (var section = 0; section < 20; section++)
@@ -92,11 +98,13 @@ public sealed class ManagedPublicationRegressionTests
                     worldModelIds = Array.Empty<string>(),
                     moduleIds = new[] { "core" },
                     campaignModes = new[] { "NORMAL" },
-                    operations = new[] { "gameplay.resolve", "turn.commit" },
+                    operations = id == RuleCompiler.GmHostBootstrapSourceId
+                        ? new[] { "setup.gm-host" }
+                        : new[] { "gameplay.resolve", "turn.commit" },
                     topics = new[] { "persistence", "continuity" },
                     dependencies = documentIndex > 0 ? new[] { "runtime-kernel" } : Array.Empty<string>(),
                     priority = 100 - documentIndex,
-                    alwaysInclude = documentIndex == 0
+                    alwaysInclude = documentIndex is 0 or 1
                 });
             }
 
@@ -423,6 +431,8 @@ public sealed class ManagedPublicationRegressionTests
             "1.0.0+regression",
             [
                 Document("kernel", RuleLayer.RuntimeKernel, alwaysInclude: true),
+                Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, alwaysInclude: true),
+                Document(RuleCompiler.GmHostBootstrapSourceId, RuleLayer.Core),
                 Document("core", RuleLayer.Core, dependencies: ["kernel"])
             ],
             DateTimeOffset.UtcNow);

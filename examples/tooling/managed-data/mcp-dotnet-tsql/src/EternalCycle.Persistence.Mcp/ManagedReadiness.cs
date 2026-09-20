@@ -15,6 +15,7 @@ public enum ManagedReadinessState
     RulePublicationRequired,
     RuleActivationRequired,
     RulePreparationPending,
+    GmHostConfigurationRequired,
     CampaignRequired,
     Degraded,
     Error
@@ -81,7 +82,8 @@ public sealed record ManagedReadinessReport(
     string? RequiredAction = null,
     IReadOnlyList<string>? AllowedNextActions = null,
     string? RecommendedNextAction = null,
-    ManagedConfigurationReport? Configuration = null);
+    ManagedConfigurationReport? Configuration = null,
+    GmHostConfigurationState GmHostConfiguration = GmHostConfigurationState.Verified);
 
 public sealed record ManagedInfrastructureSnapshot(
     ManagedComponentStatus PersistenceConnection,
@@ -102,7 +104,8 @@ public sealed record ManagedInfrastructureSnapshot(
     bool? FullRulesetReady = null,
     string? SanitizedFileLogStatus = null,
     string? SanitizedFileLogLocation = null,
-    ManagedConfigurationReport? Configuration = null);
+    ManagedConfigurationReport? Configuration = null,
+    GmHostConfigurationState? GmHostConfiguration = null);
 
 public interface IManagedInfrastructureInspector
 {
@@ -149,6 +152,7 @@ public static class ManagedReadinessEvaluator
             (snapshot.ActiveRuleReleaseId is not null && snapshot.ActiveRuleReleaseCompatible);
         var campaignBootstrapReady = snapshot.CampaignBootstrapReady ?? ruleKernelReady;
         var fullRulesetReady = snapshot.FullRulesetReady ?? campaignBootstrapReady;
+        var gmHostConfiguration = snapshot.GmHostConfiguration ?? GmHostConfigurationState.Verified;
 
         ManagedReadinessState state;
         string? errorCode;
@@ -246,6 +250,18 @@ public static class ManagedReadinessEvaluator
             gameplayReady = false;
             administrativeActionRequired = false;
         }
+        else if (gmHostConfiguration is
+                 GmHostConfigurationState.Required or
+                 GmHostConfigurationState.InstructionsPresented)
+        {
+            state = ManagedReadinessState.GmHostConfigurationRequired;
+            errorCode = "GM_HOST_CONFIGURATION_REQUIRED";
+            message = gmHostConfiguration == GmHostConfigurationState.Required
+                ? "The canonical GM Host Bootstrap must be presented and installed before gameplay."
+                : "The canonical GM Host Bootstrap was presented; wait for natural user confirmation after installation.";
+            gameplayReady = false;
+            administrativeActionRequired = false;
+        }
         else if (campaignRequested && snapshot.Campaign is ManagedComponentStatus.Missing)
         {
             state = ManagedReadinessState.CampaignRequired;
@@ -303,7 +319,8 @@ public static class ManagedReadinessEvaluator
             RequiredAction: recovery.RequiredAction,
             AllowedNextActions: recovery.AllowedNextActions,
             RecommendedNextAction: recovery.RecommendedNextAction,
-            Configuration: snapshot.Configuration);
+            Configuration: snapshot.Configuration,
+            GmHostConfiguration: gmHostConfiguration);
     }
 
     private static RecoveryGuidance RecoveryFor(ManagedReadinessState state) => state switch
@@ -333,6 +350,11 @@ public static class ManagedReadinessEvaluator
             "Queue initial rule publication after the Rule Source is configured.",
             ["ec_publish_initial_rules", "ec_get_operation_status"],
             "ec_publish_initial_rules"),
+        ManagedReadinessState.GmHostConfigurationRequired => new(
+            "GmHostConfigurationRequired",
+            "Present the canonical GM Host Bootstrap, ask the user to install it in the host's highest supported instruction field, then record natural confirmation.",
+            ["ec_get_gm_host_configuration", "ec_confirm_gm_host_configuration", "ec_get_readiness"],
+            "ec_get_gm_host_configuration"),
         _ => new(null, null, [], null)
     };
 
@@ -425,7 +447,11 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 domainTables.Contains("managed_operations") &&
                 domainTables.Contains("rule_source_preparation") &&
                 await DurableManagedOperationColumnsReadyAsync(connection, cancellationToken);
-            if (domainCoreReady && (!ruleSourceCompatibilityReady || !durableOperationsReady))
+            var gmHostConfigurationReady = domainCoreReady &&
+                domainTables.Contains("gm_host_configurations") &&
+                await GmHostConfigurationColumnsReadyAsync(connection, cancellationToken);
+            if (domainCoreReady &&
+                (!ruleSourceCompatibilityReady || !durableOperationsReady || !gmHostConfigurationReady))
             {
                 domainSchema = ManagedComponentStatus.Outdated;
             }
@@ -440,6 +466,7 @@ public sealed class SqlServerManagedInfrastructureInspector(
             bool? fullRulesetReady = null;
             string? latestUpdateOutcome = null;
             ManagedCausalDiagnostic? latestRelevantFailure = null;
+            var gmHostConfiguration = GmHostConfigurationState.Required;
 
             if (domainCoreReady)
             {
@@ -453,6 +480,15 @@ public sealed class SqlServerManagedInfrastructureInspector(
                     {
                         latestRelevantFailure = await ReadLatestRelevantFailureAsync(connection, cancellationToken);
                     }
+                }
+
+                if (gmHostConfigurationReady && activeReleaseId is not null)
+                {
+                    gmHostConfiguration = await ReadGmHostConfigurationAsync(
+                        connection,
+                        route.RulesetId,
+                        activeReleaseId,
+                        cancellationToken);
                 }
             }
 
@@ -482,7 +518,8 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 FullRulesetReady: fullRulesetReady,
                 SanitizedFileLogStatus: DiagnosticFallbackStatus,
                 SanitizedFileLogLocation: DiagnosticFallbackLocation,
-                Configuration: configurationReport);
+                Configuration: configurationReport,
+                GmHostConfiguration: gmHostConfiguration);
         }
         catch (SqlException)
         {
@@ -605,6 +642,66 @@ public sealed class SqlServerManagedInfrastructureInspector(
         };
         command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
         return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 20;
+    }
+
+    private async Task<bool> GmHostConfigurationColumnsReadyAsync(
+        SqlConnection connection,
+        CancellationToken cancellationToken)
+    {
+        await using var command = new SqlCommand("""
+            SELECT COUNT(*)
+            FROM sys.columns AS columns
+            INNER JOIN sys.tables AS tables ON tables.object_id = columns.object_id
+            INNER JOIN sys.schemas AS schemas ON schemas.schema_id = tables.schema_id
+            WHERE schemas.name = @schema_name
+              AND tables.name = N'gm_host_configurations'
+              AND columns.name IN (
+                    N'ruleset_id', N'bootstrap_source_hash', N'configuration_state',
+                    N'presented_at', N'confirmed_at', N'verified_at',
+                    N'configuration_revision', N'updated_at'
+              );
+            """, connection)
+        {
+            CommandTimeout = persistence.CommandTimeoutSeconds
+        };
+        command.Parameters.AddWithValue("@schema_name", persistence.DomainSchema);
+        return Convert.ToInt32(await command.ExecuteScalarAsync(cancellationToken)) == 8;
+    }
+
+    private async Task<GmHostConfigurationState> ReadGmHostConfigurationAsync(
+        SqlConnection connection,
+        string rulesetId,
+        string ruleReleaseId,
+        CancellationToken cancellationToken)
+    {
+        await using var command = DomainCommand(connection, """
+            SELECT TOP (1)
+                chunks.source_hash,
+                configuration.bootstrap_source_hash,
+                configuration.configuration_state
+            FROM {{schema}}.rule_chunks AS chunks
+            LEFT JOIN {{schema}}.gm_host_configurations AS configuration
+              ON configuration.ruleset_id = @ruleset_id
+            WHERE chunks.rule_release_id = @rule_release_id
+              AND chunks.rule_source_id = @bootstrap_source_id
+            ORDER BY chunks.chunk_id;
+            """);
+        command.Parameters.AddWithValue("@ruleset_id", rulesetId);
+        command.Parameters.AddWithValue("@rule_release_id", ruleReleaseId);
+        command.Parameters.AddWithValue("@bootstrap_source_id", RuleCompiler.GmHostBootstrapSourceId);
+        await using var reader = await command.ExecuteReaderAsync(CommandBehavior.SingleRow, cancellationToken);
+        if (!await reader.ReadAsync(cancellationToken) || reader.IsDBNull(1) || reader.IsDBNull(2))
+        {
+            return GmHostConfigurationState.Required;
+        }
+
+        if (!string.Equals(reader.GetString(0), reader.GetString(1), StringComparison.Ordinal) ||
+            !Enum.TryParse<GmHostConfigurationState>(reader.GetString(2), out var state))
+        {
+            return GmHostConfigurationState.Required;
+        }
+
+        return state;
     }
 
     private async Task<ManagedCausalDiagnostic?> ReadLatestRelevantFailureAsync(

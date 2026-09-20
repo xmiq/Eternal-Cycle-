@@ -416,7 +416,13 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
     {
         var release = Release();
         var rules = new SingleReleaseStore(release);
-        var preparation = new MemoryPreparationStore(release, ready: ["kernel"]);
+        var preparation = new MemoryPreparationStore(
+            release,
+            ready: [
+                "kernel",
+                RuleCompiler.GmRuntimeProcedureSourceId,
+                RuleCompiler.GmHostBootstrapSourceId
+            ]);
         var provider = new PublishedRuleContextProvider(
             rules,
             preparation,
@@ -588,6 +594,8 @@ public sealed class ManagedOperationsAndProgressiveReadinessTests
             Document("rare-module", RuleLayer.OptionalModule, RulePreparationTier.OptionalRare, ["rare"], []),
             Document("exploration", RuleLayer.Core, RulePreparationTier.CampaignRelevant, ["exploration"], ["authority"]),
             Document("authority", RuleLayer.Core, RulePreparationTier.CampaignBootstrap, ["authority"], []),
+            Document(RuleCompiler.GmRuntimeProcedureSourceId, RuleLayer.Core, RulePreparationTier.RuntimeKernel, [], ["kernel"], alwaysInclude: true),
+            Document(RuleCompiler.GmHostBootstrapSourceId, RuleLayer.Core, RulePreparationTier.CampaignBootstrap, [], ["kernel"]),
             Document("kernel", RuleLayer.RuntimeKernel, RulePreparationTier.RuntimeKernel, [], [], alwaysInclude: true)
         };
         var index = RuleCompiler.Compile("1.0.0", documents);

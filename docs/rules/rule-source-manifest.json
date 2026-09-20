@@ -18,6 +18,34 @@
       "preparationTier": "RuntimeKernel"
     },
     {
+      "ruleSourceId": "gm-runtime-procedure",
+      "path": "docs/rules/GM_RUNTIME_PROCEDURE.md",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve"],
+      "topics": [],
+      "dependencies": ["runtime-kernel"],
+      "priority": 1000,
+      "alwaysInclude": true,
+      "preparationTier": "RuntimeKernel"
+    },
+    {
+      "ruleSourceId": "gm-host-bootstrap",
+      "path": "docs/rules/GM_HOST_BOOTSTRAP.txt",
+      "layer": "Core",
+      "worldModelIds": [],
+      "moduleIds": [],
+      "campaignModes": ["*"],
+      "operations": ["setup.gm-host"],
+      "topics": [],
+      "dependencies": ["runtime-kernel"],
+      "priority": 1000,
+      "alwaysInclude": false,
+      "preparationTier": "CampaignBootstrap"
+    },
+    {
       "ruleSourceId": "core-design-philosophy",
       "path": "docs/core/DESIGN_PHILOSOPHY.md",
       "layer": "Core",

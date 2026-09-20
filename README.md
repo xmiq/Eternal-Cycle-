@@ -69,7 +69,7 @@ It does **not** contain campaign saves, active characters, live world state, inv
 - [`docs/ai/README.md`](docs/ai/README.md) - AI runtime architecture, shared operating procedures, execution profiles, persistence adapters, and authority boundaries.
 - [`docs/ai/AI_RUNTIME_MODEL.md`](docs/ai/AI_RUNTIME_MODEL.md) - implementation-neutral runtime layers, authority boundaries, transaction flow, adapter composition, failure boundaries, and extension rules.
 - [`docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md`](docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md) - FR-011 relevance-filtered canonical context, mandatory reads, automatic validated persistence, turn closure, and reset-resilient reload.
-- [`docs/rules/README.md`](docs/rules/README.md) - FR-018 rule compilation, source provenance, World/Ruleset isolation, and context-efficient retrieval map.
+- [`docs/rules/README.md`](docs/rules/README.md) - Rule Kernel, mandatory GM Runtime Procedure, canonical Host Bootstrap, source provenance, World/Ruleset isolation, and compact context retrieval map.
 - [`docs/ai/CANONICAL_VISUAL_CONTEXT.md`](docs/ai/CANONICAL_VISUAL_CONTEXT.md) - purpose-specific canonical image context, observer filtering, Current Appearance assembly, and non-canonical rendering boundaries.
 - [`docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md`](docs/ai/AI_CAPABILITIES_AND_LIMITATIONS.md) - operational limits for memory, context, tools, validation, information protection, numerical state, and failure handling.
 - [`docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md`](docs/ai/chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT execution profile for Gameplay and Development Contexts, strict Save-Before-Delivery, correction, and failure behavior.

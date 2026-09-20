@@ -28,6 +28,14 @@ public sealed class PersistenceTools(PersistenceCoordinator coordinator)
         CancellationToken cancellationToken) =>
         coordinator.CommitAsync(request, cancellationToken);
 
+    [McpServerTool(Name = "ec_patch_records", Destructive = true, Idempotent = true),
+     Description("Loads existing authoritative records and transactionally applies bounded object merge patches. Omitted fields are preserved; identity, references, creates, deletes, and tombstones require ec_commit_changes.")]
+    public Task<CommitResult> PatchAsync(
+        [Description("Affected existing records, set-only JSON object patches, stable transaction identity, and expected campaign/record revisions.")]
+        PatchCampaignRequest request,
+        CancellationToken cancellationToken) =>
+        coordinator.PatchAsync(request, cancellationToken);
+
     [McpServerTool(Name = "ec_retry_persistence", Destructive = true, Idempotent = true),
      Description("Resumes validation or activation for an existing transaction without replaying gameplay effects.")]
     public Task<CommitResult> RetryAsync(

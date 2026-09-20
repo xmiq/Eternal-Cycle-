@@ -80,6 +80,8 @@ builder.Services.AddSingleton<ManagedOperationProcessor>();
 builder.Services.AddSingleton<IRuleContextProvider, PublishedRuleContextProvider>();
 builder.Services.AddSingleton<IManagedInfrastructureInspector, SqlServerManagedInfrastructureInspector>();
 builder.Services.AddSingleton<IManagedReadinessService, ManagedReadinessService>();
+builder.Services.AddSingleton<IGmHostConfigurationStore, SqlServerGmHostConfigurationStore>();
+builder.Services.AddSingleton<IGmHostConfigurationService, GmHostConfigurationService>();
 builder.Services.AddSingleton<ISchemaBootstrapExecutor, SqlServerSchemaBootstrapExecutor>();
 builder.Services.AddSingleton<ICampaignDirectoryService, SqlServerCampaignDirectoryService>();
 builder.Services.AddSingleton<IManagedAdministrationService, ManagedAdministrationService>();

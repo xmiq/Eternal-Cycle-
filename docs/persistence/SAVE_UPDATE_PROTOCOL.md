@@ -245,6 +245,8 @@ Represent each operation with before state, event, owner, after state or Pending
 
 Apply the Write Set to an isolated candidate state or transaction boundary. Update each claim through its Authoritative Record Owner.
 
+Where a Managed implementation supports a constrained [Record Merge Patch](../ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md#constrained-patch-updates), it first loads the authoritative existing object, preserves omitted fields, rejects identity/reference changes and structural creates/deletes, and expands the patch into this same complete owner-routed Write Set. The patch path does not weaken parent-version, record-revision, idempotency, validation, or activation requirements.
+
 Do not activate partial owner updates. A body injury, item consumption, spell effect, witness Knowledge, and Timeline Event from one interaction must not split into contradictory active versions.
 
 ### 8. Append the Session Log

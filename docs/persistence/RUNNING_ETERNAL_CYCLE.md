@@ -42,6 +42,7 @@ The service may report:
 | `RULE_PUBLICATION_REQUIRED` | A source exists but no validated release is published. | Request approval, create or reuse a durable publication operation, and return its ID promptly. |
 | `RULE_ACTIVATION_REQUIRED` | A release is published but not active. | Follow the configured activation policy. |
 | `RULE_PREPARATION_PENDING` | An active release exists but the minimum or requested authoritative closure is still being prepared. | Query operation or context status; never guess the missing rule. |
+| `GM_HOST_CONFIGURATION_REQUIRED` | The current canonical GM Host Bootstrap has not been acknowledged for this Ruleset. | Present the exact bootstrap, guide installation in the host's highest instruction field, and record natural confirmation. |
 | `CAMPAIGN_REQUIRED` | The requested campaign is absent. | Discover campaigns or offer authorized creation. |
 | `DEGRADED` | Gameplay can use the last active release, but a noncritical source/update facility is unavailable. | Continue with a clear diagnostic state. |
 | `ERROR` | A blocking connection, compatibility, or validation failure exists. | Stop dependent play and surface a sanitized remedy. |
@@ -52,7 +53,7 @@ If the connected database predates the latest service migration, the base contro
 
 If no Rule Source is configured, the service may offer the official Eternal Cycle repository described by authoritative distribution metadata. A user may instead authorize another compatible source or an offline local checkout. The successful choice is persisted and reused. The service, not the AI GM, acquires and compiles that source.
 
-Readiness is granular: `ServiceReady`, `PersistenceReady`, `RuleKernelReady`, `CampaignBootstrapReady`, `GameplayReady`, and `FullRulesetReady` are distinct claims. `GameplayReady` may become true before `FullRulesetReady`; a later action still waits when its dependency closure is `PENDING` or `FAILED`.
+Readiness is granular: `ServiceReady`, `PersistenceReady`, `RuleKernelReady`, `CampaignBootstrapReady`, `GMHostConfiguration`, `GameplayReady`, and `FullRulesetReady` are distinct claims. GM Host Configuration progresses through `Required`, `InstructionsPresented`, `UserConfirmed`, or `Verified`; generic user acknowledgment is never mislabeled as technical verification. `GameplayReady` may become true before `FullRulesetReady`; a later action still waits when its dependency closure is `PENDING` or `FAILED`.
 
 Initial publication is a durable [Managed Operation](MANAGED_OPERATIONS.md). The initiating client may disconnect after receiving the Operation ID, and the operation's executor must not depend on that client's transport process remaining alive. On reconnect the client reads status or recent operations; it does not restart publication blindly. After actual executor or machine loss, missing or expired execution ownership makes the same operation recoverable without storage edits or a new Campaign ID. Service diagnostics require no Campaign ID, while an optional Campaign ID adds campaign-specific routing and readiness.
 

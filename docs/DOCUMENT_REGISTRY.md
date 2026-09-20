@@ -294,6 +294,7 @@ Indexes own reading order, navigation, and claim routing only. They do not overr
 | --- | --- | --- |
 | [Rule Compilation Index](rules/README.md) | Family reading order, authority boundary, reference manifest, and runtime consumers | Routes compilation and retrieval claims while preserving Repository Canon authority. |
 | [Runtime Rule Kernel](rules/RUNTIME_RULE_KERNEL.md) | Compact mandatory authority, agency, world-simulation, ownership, read, and persistence invariants | Included in every normal compiled rule context; delegates specialist resolution to source rules. |
+| [GM Runtime Procedure](rules/GM_RUNTIME_PROCEDURE.md) | Mandatory read, resolve, persist, validate, narrate, and player-agency yield lifecycle | Included automatically with the Runtime Rule Kernel for `gameplay.resolve`; the host bootstrap points to it without duplicating it. |
 | [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) | Source metadata, compilation, provenance, Core and World/Ruleset filtering, optional modules, budget, failure, and regression contract | Produces Derived rule contexts and hands Campaign Canon retrieval to FR-011 under the same Campaign ID. |
 | [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) | Rule Source Providers, candidate validation, versioned publication, activation, update policy, compatibility, and bounded Rule Packets | Governs Managed rule delivery while preserving Markdown as Rule Canon. |
 

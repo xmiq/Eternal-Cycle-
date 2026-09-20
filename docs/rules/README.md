@@ -13,8 +13,10 @@ This family defines how authorized tooling compiles and delivers small, provenan
 ## Reading Order
 
 1. [Runtime Rule Kernel](RUNTIME_RULE_KERNEL.md) - the compact invariant set included in every normal compiled rule context.
-2. [Rule Compilation and Context-Efficient Retrieval](RULE_COMPILATION_AND_RETRIEVAL.md) - source authority, metadata, indexing, world isolation, selection, token budget, and failure rules.
-3. [Managed Rule Publication](MANAGED_RULE_PUBLICATION.md) - Rule Source Providers, versioned candidates, validation, publication, activation, updates, offline fallback, and bounded runtime packets.
+2. [GM Runtime Procedure](GM_RUNTIME_PROCEDURE.md) - the mandatory read, resolve, persist, validate, narrate, and yield lifecycle for gameplay resolution.
+3. [`GM_HOST_BOOTSTRAP.txt`](GM_HOST_BOOTSTRAP.txt) - the compact, versioned execution contract installed at the highest instruction level a host supports.
+4. [Rule Compilation and Context-Efficient Retrieval](RULE_COMPILATION_AND_RETRIEVAL.md) - source authority, metadata, indexing, world isolation, selection, token budget, and failure rules.
+5. [Managed Rule Publication](MANAGED_RULE_PUBLICATION.md) - Rule Source Providers, versioned candidates, validation, publication, activation, updates, offline fallback, and bounded runtime packets.
 
 The adjacent [`rule-source-manifest.json`](rule-source-manifest.json) is a reference compiler manifest, not an authority source. It identifies its manifest format, compiler contract, RuleSet, repository version, canonical Markdown inputs, and applicability metadata for the included service implementation. [Managed Rule Publication](MANAGED_RULE_PUBLICATION.md#release-channels-and-compatibility) defines Stable and Prerelease channel selection, immutable Git provenance, and compatibility failure behavior.
 

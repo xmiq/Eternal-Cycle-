@@ -35,6 +35,7 @@ $gitProvider = Read-RepoFile "$source/GitRuleSourceProvider.cs"
 $publishedStore = Read-RepoFile "$source/SqlServerPublishedRuleStore.cs"
 $schema = Read-RepoFile "$source/Schema/007_durable_managed_operations.sql"
 $schemaTemplate = Read-RepoFile "$source/Schema/007_durable_managed_operations.template.sql"
+$postWorkerSchema = Read-RepoFile "$source/Schema/010_gm_host_configuration.sql"
 $project = Read-RepoFile "$source/EternalCycle.Persistence.Mcp.csproj"
 $manifest = Read-RepoFile 'docs/rules/rule-source-manifest.json'
 $tests = Read-RepoFile "$testsRoot/ManagedOperationsAndProgressiveReadinessTests.cs"
@@ -148,7 +149,7 @@ Assert-Requirement 77 ($administration -match 'UserInterventionRequired: true' -
 Assert-Requirement 78 ($workerRuntime -match 'MonitorStopAsync' -and $workerTests -match 'WorkerEntrypointStopsBlockedWorkWithoutWaitingForForwardProgress') 'Worker stop monitoring remains responsive independently of forward progress.'
 Assert-Requirement 79 ($workerTests -match 'WindowsWorkerSurvivesEphemeralLauncherProcessTreeTermination' -and $workerTests -match 'IndependentExecutionKeepsSameAttemptAfterInitiatingRequestEnds') 'Lifecycle regressions prove parent-tree survival and unchanged execution-attempt identity.'
 Assert-Requirement 80 ($managedContract -match 'progress file is only an operator convenience' -and $managedContract -match 'database remains authoritative') 'Convenience progress/control files do not become competing operation authority.'
-Assert-Requirement 81 ($project -notmatch '010_.*\.sql' -and $version -eq '1.0.0') 'The lifecycle repair requires no migration 010 and does not bump VERSION.'
+Assert-Requirement 81 ($postWorkerSchema -match 'gm_host_configurations' -and $postWorkerSchema -notmatch 'execution_owner_id|execution_lease_expires_at|managed_operations' -and $version -eq '1.0.0') 'The lifecycle repair added no worker-state migration; later migration 010 is host-configuration-only and VERSION remains unchanged.'
 
 if ($failures.Count -gt 0) {
     Write-Output "FR-021 durable Managed-operation harness: FAIL ($($failures.Count) failure(s))"

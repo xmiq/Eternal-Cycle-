@@ -29,10 +29,11 @@ To resume, say: **“Continue my Eternal Cycle game.”** One suitable campaign 
 2. Set `EternalCycle:Persistence:ConnectionString` in protected host configuration.
 3. Enable the separate setup surface with `EternalCycle:Administration:Enabled=true`. Natural informed user approval is the normal path; optionally enable a private operator confirmation as an additional deployment safeguard.
 4. Add the built executable as an stdio MCP server in the compatible client, then call readiness or ask the AI to start a game.
-5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `009` to configured EC-owned scopes.
+5. Preview setup, obtain explicit user approval, and run the permission-gated initialization. The service applies only packaged migrations `001` through `010` to configured EC-owned scopes.
 6. Select the packaged default from [`DISTRIBUTION.json`](../../../../DISTRIBUTION.json) metadata or another compatible Git source, including an existing local clone. The selection persists in `ec_domain`; source location does not change the technical validation pipeline.
 7. Approve initial publication. The call returns a durable Operation ID promptly; an independent Managed Worker acquires/caches the source, resolves immutable provenance, compiles, validates, prepares the minimum closure, publishes, activates according to policy, and continues preparing remaining rules even if the MCP transport exits.
-8. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
+8. Retrieve the canonical GM Host Bootstrap, install it in the host's highest supported instruction field, and confirm naturally. Generic confirmation records `UserConfirmed`; only a capable host integration may record `Verified`.
+9. Disable administrative setup after provisioning when ongoing administration is handled elsewhere.
 
 The reference service normally launches that worker automatically. If the Windows host refuses Job Object breakaway, the response reports `WORKER_INDEPENDENT_LAUNCH_BLOCKED` and prepares `Continue Eternal Cycle Setup.bat` in the configured fallback directory (the current user's Desktop by default). Double-click it once. It contains the existing operation handoff and a locator for temporary protected effective configuration; it asks for no Operation ID, connection string, source, ref, Campaign ID, terminal command, or administrator privilege. A confirmed handoff removes the temporary configuration and launcher. A failed handoff preserves them for retry and diagnostics.
 
@@ -48,6 +49,9 @@ The ordinary player never needs SSMS, migration filenames, schema names, Git com
 - versioned rule candidates, validation, publication, atomic activation, and active-release fallback;
 - runtime retrieval from an already-published Rule Release rather than repository compilation;
 - source provenance, World/Ruleset/module/mode/operation/topic filtering, and an 8K packet ceiling;
+- automatic Runtime Kernel plus GM Runtime Procedure selection for `gameplay.resolve`, with a compact model-facing Rule Packet and full service-side provenance;
+- durable GM Host Configuration readiness with exact canonical bootstrap presentation and distinct user-confirmed versus verified states;
+- constrained set-only patch updates for existing authoritative records through the normal concurrency, validation, activation, and receipt path;
 - startup, periodic, manual, and offline update policies;
 - sanitized capabilities and diagnostic reports;
 - structured first-run readiness across transport, persistence, campaign schema, Rule Domain, source, publication, activation, and campaign state;
@@ -72,6 +76,7 @@ The reference does not implement PostgreSQL, MySQL, document, graph, key/value, 
 | `ec_persistence_status` | Return service-backed campaign status. |
 | `ec_read_records` | Read exact canonical owner-domain and stable-record addresses. |
 | `ec_commit_changes` | Stage, validate, activate, read back, and receipt one complete transaction. |
+| `ec_patch_records` | Apply bounded set-only patches to existing authoritative records while preserving omitted fields and the ordinary transaction contract. |
 | `ec_retry_persistence` | Resume a stable transaction without replaying gameplay. |
 | `ec_get_rule_context` | Retrieve an already-published bounded Rule Packet. |
 | `ec_get_diagnostics` | Return sanitized implementation, rules, source, namespace, and update provenance. |
@@ -79,6 +84,8 @@ The reference does not implement PostgreSQL, MySQL, document, graph, key/value, 
 | `ec_get_error_code` | Explain one stable error code and its retry, intervention, and recovery semantics. |
 | `ec_get_error_dump` | Return a bounded sanitized structured-and-text diagnostic snapshot; partial evidence is valid. |
 | `ec_get_readiness` | Return structured setup and gameplay readiness without mutation. |
+| `ec_get_gm_host_configuration` | Return the exact canonical Host Bootstrap and record that setup presented its current revision. |
+| `ec_confirm_gm_host_configuration` | Record natural user confirmation as `UserConfirmed`, never as technical verification. |
 | `ec_get_operation_status` | Return durable operation state, current stage, causal status, and result identity. |
 | `ec_list_managed_operations` | Rediscover recent operations after a client disconnect or lost immediate response. |
 | `ec_stop_managed_operation` | Request orderly cancellation from the independent worker without editing durable state. |
@@ -124,6 +131,7 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 7. [`007_durable_managed_operations.sql`](src/EternalCycle.Persistence.Mcp/Schema/007_durable_managed_operations.sql) to add durable operations, per-source preparation state and priority, and human-readable prerelease metadata while preserving source SHA identity.
 8. [`008_diagnostic_operation_correlation.sql`](src/EternalCycle.Persistence.Mcp/Schema/008_diagnostic_operation_correlation.sql) to join durable Operation IDs directly to persisted diagnostic evidence.
 9. [`009_managed_operation_execution_leases.sql`](src/EternalCycle.Persistence.Mcp/Schema/009_managed_operation_execution_leases.sql) to add renewable worker ownership, bounded orphan detection, and execution-attempt evidence without replacing operation identity.
+10. [`010_gm_host_configuration.sql`](src/EternalCycle.Persistence.Mcp/Schema/010_gm_host_configuration.sql) to persist Ruleset-scoped bootstrap revision and `Required`, `InstructionsPresented`, `UserConfirmed`, or `Verified` readiness without storing host prompts or credentials.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 

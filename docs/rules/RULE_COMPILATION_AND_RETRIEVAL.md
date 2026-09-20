@@ -25,6 +25,7 @@ An ordinary context is assembled in this order:
 
 ```text
 Runtime Rule Kernel
+  + GM Runtime Procedure
   + relevant Eternal Cycle Core rules
   + selected World/Ruleset rules
   + explicitly enabled optional-module rules
@@ -74,17 +75,20 @@ In `DIRECT`, equivalent local or packaged tooling may compile or consume a valid
 For one request, the rule-context provider:
 
 1. resolves the Campaign ID to its trusted World/Ruleset configuration;
-2. includes the Runtime Rule Kernel;
+2. includes the Runtime Rule Kernel and, for `gameplay.resolve`, the always-included GM Runtime Procedure without requiring a caller topic;
 3. filters Core sources by operation and topic;
 4. includes only sources for the selected World/Ruleset;
 5. includes only explicitly enabled optional modules;
 6. applies Campaign Mode, operation, and topic filters;
 7. orders eligible chunks by layer, relevance, priority, and stable identity;
 8. includes complete chunks until the configured budget is reached;
-9. returns Rule Release, immutable source, source-path/hash, and calculated-size provenance;
-10. hands campaign-fact retrieval to FR-011 under the same Campaign ID.
+9. retains full Rule Release, immutable source, source-path/hash, dependency, and selector provenance inside the service;
+10. returns a compact LLM-facing packet with packet format, release/source identity, token totals, stable Rule Source IDs, and executable text; and
+11. hands campaign-fact retrieval to FR-011 under the same Campaign ID.
 
-The reference normal-play ceiling is **8,000 estimated rule tokens**. It is a regression target, not permission to omit a necessary rule. If the mandatory kernel exceeds the budget, retrieval fails. If a specialist source does not fit, the provider narrows or expands a dependency-complete packet through another targeted retrieval rather than encouraging improvisation. The measurement cannot hide a full-repository prompt elsewhere.
+The reference normal-play ceiling is **8,000 estimated rule tokens**. It is a regression target, not permission to omit a necessary rule. If the mandatory Kernel and GM Runtime Procedure cannot fit, retrieval fails. If a specialist source does not fit, the provider narrows or expands a dependency-complete packet through another targeted retrieval rather than encouraging improvisation. The measurement cannot hide a full-repository prompt elsewhere.
+
+Compact delivery removes repeated per-chunk metadata from the model-facing envelope; it does not discard service-side provenance or authorize lossy selection. Detailed paths, anchors, hashes, selectors, dependencies, and preparation evidence remain available through publication and diagnostic surfaces rather than being repeated around every small rule fragment.
 
 ## Managed Publication
 
@@ -108,6 +112,7 @@ Compilation or retrieval fails explicitly when:
 - a source escapes the trusted root;
 - source identity, World/Ruleset binding, or Campaign ID is invalid;
 - the kernel cannot fit within the budget;
+- the mandatory GM Runtime Procedure is missing, inapplicable, unprepared, or cannot fit within the budget;
 - the active Rule Release, Repository Version, immutable source identity, or source hash is stale where verification is required;
 - a required specialist rule cannot be retrieved.
 
@@ -120,6 +125,9 @@ The runtime does not fill a missing rule from memory, another world's rules, cam
 The implementation must cover:
 
 - kernel inclusion;
+- automatic GM Runtime Procedure inclusion for `gameplay.resolve` without a caller topic;
+- explicit pending or failure when that mandatory closure is unavailable;
+- compact model-facing delivery with full service-side provenance retained;
 - operation and topic filtering;
 - optional-module exclusion and inclusion;
 - Campaign Mode filtering;

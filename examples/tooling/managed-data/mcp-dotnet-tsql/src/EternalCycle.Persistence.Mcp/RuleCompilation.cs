@@ -63,6 +63,50 @@ public sealed record RuleContextResult(
     string? RuleReleaseId = null,
     string? SourceIdentity = null);
 
+public sealed record CompactRuleSection(
+    string RuleSourceId,
+    string Content);
+
+public sealed record CompactRulePacket(
+    int PacketFormatVersion,
+    string CampaignId,
+    string WorldModelId,
+    string RulesetVersion,
+    string RepositoryVersion,
+    string? RuleReleaseId,
+    string? SourceIdentity,
+    int EstimatedTokens,
+    int MaximumEstimatedTokens,
+    IReadOnlyList<CompactRuleSection> Rules);
+
+public static class RulePacketFormatter
+{
+    public const int CurrentFormatVersion = 1;
+
+    public static CompactRulePacket Compact(RuleContextResult context)
+    {
+        ArgumentNullException.ThrowIfNull(context);
+        var rules = context.Chunks
+            .GroupBy(chunk => chunk.RuleSourceId, StringComparer.Ordinal)
+            .Select(group => new CompactRuleSection(
+                group.Key,
+                string.Join("\n\n", group.Select(chunk => chunk.Content))))
+            .ToArray();
+
+        return new CompactRulePacket(
+            CurrentFormatVersion,
+            context.CampaignId,
+            context.WorldModelId,
+            context.RulesetVersion,
+            context.RepositoryVersion,
+            context.RuleReleaseId,
+            context.SourceIdentity,
+            context.EstimatedTokens,
+            context.MaximumEstimatedTokens,
+            rules);
+    }
+}
+
 public sealed class RuleSourceManifest
 {
     public int ManifestFormatVersion { get; init; }
@@ -113,6 +157,9 @@ public interface IRuleContextProvider
 public static class RuleCompiler
 {
     public const int DefaultContextBudget = 8_000;
+    public const string RuntimeKernelSourceId = "runtime-kernel";
+    public const string GmRuntimeProcedureSourceId = "gm-runtime-procedure";
+    public const string GmHostBootstrapSourceId = "gm-host-bootstrap";
 
     public static CompiledRuleIndex Compile(
         string repositoryVersion,
@@ -265,6 +312,16 @@ public static class RuleCompiler
             throw new InvalidOperationException("The compiled index has no applicable Runtime Rule Kernel.");
         }
 
+        if (IsGameplayResolution(request.Operation) &&
+            !eligible.Any(chunk => string.Equals(
+                chunk.RuleSourceId,
+                GmRuntimeProcedureSourceId,
+                StringComparison.Ordinal)))
+        {
+            throw new InvalidOperationException(
+                "The compiled index has no applicable mandatory GM Runtime Procedure.");
+        }
+
         foreach (var chunk in eligible)
         {
             var closure = BuildDependencyClosure(index, chunk, route, request, modules)
@@ -290,6 +347,16 @@ public static class RuleCompiler
             }
         }
 
+        if (IsGameplayResolution(request.Operation) &&
+            !selected.Any(chunk => string.Equals(
+                chunk.RuleSourceId,
+                GmRuntimeProcedureSourceId,
+                StringComparison.Ordinal)))
+        {
+            throw new InvalidOperationException(
+                "The mandatory GM Runtime Procedure does not fit the configured gameplay context budget.");
+        }
+
         return new RuleContextResult(
             request.CampaignId,
             route.WorldModelId,
@@ -310,6 +377,37 @@ public static class RuleCompiler
             .Select(chunk => chunk.RuleSourceId)
             .Distinct(StringComparer.Ordinal)
             .ToArray();
+    }
+
+    public static void ValidateRequiredRuntimeSources(CompiledRuleIndex index)
+    {
+        ArgumentNullException.ThrowIfNull(index);
+        if (!index.Chunks.Any(chunk => chunk.Metadata.Layer == RuleLayer.RuntimeKernel))
+        {
+            throw new InvalidOperationException("A Rule Release requires a Runtime Rule Kernel.");
+        }
+
+        var procedure = index.Chunks
+            .Where(chunk => string.Equals(
+                chunk.RuleSourceId,
+                GmRuntimeProcedureSourceId,
+                StringComparison.Ordinal))
+            .ToArray();
+        if (procedure.Length == 0 || procedure.Any(chunk =>
+                !chunk.Metadata.AlwaysInclude ||
+                !Matches(chunk.Metadata.Operations, "gameplay.resolve")))
+        {
+            throw new InvalidOperationException(
+                "A Rule Release requires an always-included GM Runtime Procedure applicable to gameplay.resolve.");
+        }
+
+        if (!index.Chunks.Any(chunk => string.Equals(
+                chunk.RuleSourceId,
+                GmHostBootstrapSourceId,
+                StringComparison.Ordinal)))
+        {
+            throw new InvalidOperationException("A Rule Release requires the canonical GM Host Bootstrap artifact.");
+        }
     }
 
     private static bool IsEligible(
@@ -438,6 +536,9 @@ public static class RuleCompiler
         values.Count == 0 ||
         values.Contains("*", StringComparer.OrdinalIgnoreCase) ||
         values.Contains(value, StringComparer.OrdinalIgnoreCase);
+
+    private static bool IsGameplayResolution(string operation) =>
+        string.Equals(operation, "gameplay.resolve", StringComparison.OrdinalIgnoreCase);
 
     private static bool IsMandatoryKernel(CompiledRuleChunk chunk) =>
         chunk.Metadata.Layer == RuleLayer.RuntimeKernel || chunk.Metadata.AlwaysInclude;

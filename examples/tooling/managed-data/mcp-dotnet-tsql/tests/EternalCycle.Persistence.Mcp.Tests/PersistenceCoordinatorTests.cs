@@ -1,5 +1,6 @@
 using EternalCycle.Persistence.Mcp;
 using Microsoft.Extensions.Options;
+using System.Text.Json;
 using Xunit;
 
 namespace EternalCycle.Persistence.Mcp.Tests;
@@ -137,6 +138,89 @@ public sealed class PersistenceCoordinatorTests
         Assert.Contains("server-managed schedule", evidence, StringComparison.OrdinalIgnoreCase);
     }
 
+    [Fact]
+    public async Task MergePatchPreservesUnrelatedAuthoritativeState()
+    {
+        var store = new FakeStore(new CanonicalRecord(
+            "scene-state",
+            "scene-1",
+            4,
+            7,
+            "{\"npc\":{\"alive\":true,\"name\":\"Mira\"},\"player\":{\"position\":\"gate\",\"inventory\":[\"torch\"]},\"weather\":\"rain\"}",
+            false));
+        var coordinator = new PersistenceCoordinator(store);
+        var request = PatchRequest("{\"npc\":{\"alive\":false},\"player\":{\"position\":\"courtyard\",\"inventory\":[\"torch\",\"sword\"]}}");
+
+        var result = await coordinator.PatchAsync(request, CancellationToken.None);
+
+        Assert.Equal(PersistenceMarkers.Saved, result.Marker);
+        var mutation = Assert.Single(store.LastRequest!.Mutations);
+        using var payload = JsonDocument.Parse(mutation.PayloadJson);
+        Assert.False(payload.RootElement.GetProperty("npc").GetProperty("alive").GetBoolean());
+        Assert.Equal("Mira", payload.RootElement.GetProperty("npc").GetProperty("name").GetString());
+        Assert.Equal("rain", payload.RootElement.GetProperty("weather").GetString());
+        Assert.Equal("courtyard", payload.RootElement.GetProperty("player").GetProperty("position").GetString());
+        Assert.Equal(2, payload.RootElement.GetProperty("player").GetProperty("inventory").GetArrayLength());
+        Assert.Equal(7, store.LastRequest.ExpectedParentVersion);
+        Assert.Equal(4, mutation.ExpectedRevision);
+    }
+
+    [Fact]
+    public async Task MergePatchRetryIsIdempotentAndDoesNotReapplyGameplayEffects()
+    {
+        var store = new FakeStore(new CanonicalRecord(
+            "scene-state", "scene-1", 4, 7, "{\"patrolAlert\":false,\"counter\":1}", false));
+        var coordinator = new PersistenceCoordinator(store);
+        var request = PatchRequest("{\"patrolAlert\":true}");
+
+        var first = await coordinator.PatchAsync(request, CancellationToken.None);
+        var second = await coordinator.PatchAsync(request, CancellationToken.None);
+
+        Assert.Equal(first.Receipt, second.Receipt);
+        Assert.Equal(1, store.AppliedTransactions);
+    }
+
+    [Fact]
+    public async Task FailedMergePatchDoesNotPartiallyMutateCanonicalState()
+    {
+        var original = new CanonicalRecord(
+            "scene-state", "scene-1", 4, 7, "{\"alive\":true,\"weather\":\"rain\"}", false);
+        var store = new FakeStore(original)
+        {
+            ForcedResult = new CommitResult(
+                PersistenceMarkers.Failed,
+                "Failed",
+                false,
+                7,
+                null,
+                "validation failed")
+        };
+        var coordinator = new PersistenceCoordinator(store);
+
+        var result = await coordinator.PatchAsync(PatchRequest("{\"alive\":false}"), CancellationToken.None);
+        var read = await store.ReadRecordsAsync(
+            "campaign",
+            [new RecordAddress("scene-state", "scene-1")],
+            CancellationToken.None);
+
+        Assert.Equal(PersistenceMarkers.Failed, result.Marker);
+        Assert.Equal(original.PayloadJson, Assert.Single(read.Records).PayloadJson);
+    }
+
+    [Fact]
+    public async Task MergePatchRejectsIdentityAndReferenceChanges()
+    {
+        var store = new FakeStore(new CanonicalRecord(
+            "scene-state", "scene-1", 4, 7, "{\"locationId\":\"old\"}", false));
+        var coordinator = new PersistenceCoordinator(store);
+
+        var exception = await Assert.ThrowsAsync<ArgumentException>(() =>
+            coordinator.PatchAsync(PatchRequest("{\"locationId\":\"new\"}"), CancellationToken.None));
+
+        Assert.Contains("full mutation path", exception.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Equal(0, store.AppliedTransactions);
+    }
+
     private static CommitCampaignRequest NewRequest() =>
         new(
             "campaign",
@@ -147,13 +231,34 @@ public sealed class PersistenceCoordinatorTests
             [new RecordMutation("characters", "entity-1", 1, "{\"name\":\"Example\"}", false)],
             "interaction-1");
 
+    private static PatchCampaignRequest PatchRequest(string patchJson) =>
+        new(
+            "campaign",
+            "patch-transaction",
+            "patch-idempotency",
+            7,
+            ["scene-state"],
+            [new RecordMergePatch("scene-state", "scene-1", 4, patchJson)],
+            "interaction-1");
+
     private sealed class FakeStore : ICampaignPersistenceStore
     {
         private readonly Dictionary<string, CommitResult> results = new(StringComparer.Ordinal);
+        private readonly Dictionary<string, CanonicalRecord> records = new(StringComparer.Ordinal);
+
+        public FakeStore(params CanonicalRecord[] initialRecords)
+        {
+            foreach (var record in initialRecords)
+            {
+                records[$"{record.OwnerDomain}\u001f{record.RecordId}"] = record;
+            }
+        }
 
         public int AppliedTransactions { get; private set; }
 
         public CommitResult? ForcedResult { get; init; }
+
+        public CommitCampaignRequest? LastRequest { get; private set; }
 
         public Task<PersistenceStatus> GetStatusAsync(string campaignId, CancellationToken cancellationToken) =>
             Task.FromResult(new PersistenceStatus(
@@ -170,14 +275,23 @@ public sealed class PersistenceCoordinatorTests
         public Task<ReadRecordsResult> ReadRecordsAsync(
             string campaignId,
             IReadOnlyList<RecordAddress> records,
-            CancellationToken cancellationToken) =>
-            Task.FromResult(new ReadRecordsResult(campaignId, 1, []));
+            CancellationToken cancellationToken)
+        {
+            var found = records
+                .Select(address => this.records.GetValueOrDefault($"{address.OwnerDomain}\u001f{address.RecordId}"))
+                .Where(record => record is not null)
+                .Cast<CanonicalRecord>()
+                .ToArray();
+            var version = found.Length == 0 ? 1 : found.Max(record => record.CampaignVersion);
+            return Task.FromResult(new ReadRecordsResult(campaignId, version, found));
+        }
 
         public Task<CommitResult> CommitAsync(
             CommitCampaignRequest request,
             string requestHash,
             CancellationToken cancellationToken)
         {
+            LastRequest = request;
             if (ForcedResult is not null)
             {
                 return Task.FromResult(ForcedResult);
@@ -186,6 +300,18 @@ public sealed class PersistenceCoordinatorTests
             if (!results.TryGetValue(request.TransactionId, out var result))
             {
                 AppliedTransactions++;
+                foreach (var mutation in request.Mutations)
+                {
+                    var key = $"{mutation.OwnerDomain}\u001f{mutation.RecordId}";
+                    var previous = records.GetValueOrDefault(key);
+                    records[key] = new CanonicalRecord(
+                        mutation.OwnerDomain,
+                        mutation.RecordId,
+                        (previous?.RecordRevision ?? 0) + 1,
+                        request.ExpectedParentVersion + 1,
+                        mutation.PayloadJson,
+                        mutation.Tombstone);
+                }
                 var receipt = new PersistenceReceipt(
                     "receipt",
                     request.CampaignId,

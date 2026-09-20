@@ -34,6 +34,22 @@ public sealed record CommitCampaignRequest(
     string SourceInteractionId,
     string? Reason = null);
 
+public sealed record RecordMergePatch(
+    string OwnerDomain,
+    string RecordId,
+    long ExpectedRevision,
+    string SetValuesJson);
+
+public sealed record PatchCampaignRequest(
+    string CampaignId,
+    string TransactionId,
+    string IdempotencyKey,
+    long ExpectedParentVersion,
+    IReadOnlyList<string> AffectedOwnerDomains,
+    IReadOnlyList<RecordMergePatch> Patches,
+    string SourceInteractionId,
+    string? Reason = null);
+
 public sealed record PersistenceReceipt(
     string ReceiptId,
     string CampaignId,

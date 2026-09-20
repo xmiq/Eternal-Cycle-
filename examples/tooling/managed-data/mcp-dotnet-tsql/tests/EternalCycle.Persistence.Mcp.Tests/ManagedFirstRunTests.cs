@@ -483,6 +483,7 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("007_durable_managed_operations.template.sql", files);
         Assert.Contains("008_diagnostic_operation_correlation.template.sql", files);
         Assert.Contains("009_managed_operation_execution_leases.template.sql", files);
+        Assert.Contains("010_gm_host_configuration.template.sql", files);
         Assert.DoesNotContain("DROP TABLE", combined, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("DROP SCHEMA", combined, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("IF COL_LENGTH", File.ReadAllText(Path.Combine(schemaDirectory, "003_campaign_directory.template.sql")));
@@ -511,6 +512,14 @@ public sealed class ManagedFirstRunTests
         Assert.Contains("execution_lease_expires_at", executionLeases);
         Assert.Contains("execution_attempt_count", executionLeases);
         Assert.Contains("IF COL_LENGTH", executionLeases);
+        var gmHostConfiguration = File.ReadAllText(Path.Combine(
+            schemaDirectory,
+            "010_gm_host_configuration.template.sql"));
+        Assert.Contains("gm_host_configurations", gmHostConfiguration);
+        Assert.Contains("InstructionsPresented", gmHostConfiguration);
+        Assert.Contains("UserConfirmed", gmHostConfiguration);
+        Assert.Contains("Verified", gmHostConfiguration);
+        Assert.Contains("IF OBJECT_ID", gmHostConfiguration);
     }
 
     private static ManagedReadinessReport Evaluate(
@@ -607,8 +616,8 @@ public sealed class ManagedFirstRunTests
     {
         var documents = new[]
         {
-            new RuleSourceDocument(
-                "kernel",
+              new RuleSourceDocument(
+                  "kernel",
                 "kernel.md",
                 "# Kernel\n\nRequired runtime rule.",
                 new RuleSourceMetadata(
@@ -618,9 +627,39 @@ public sealed class ManagedFirstRunTests
                     ["NORMAL"],
                     ["gameplay.resolve"],
                     [],
-                    0,
-                    true))
-        };
+                  0,
+                  true)),
+              new RuleSourceDocument(
+                  RuleCompiler.GmRuntimeProcedureSourceId,
+                  "gm-runtime.md",
+                  "# GM Runtime Procedure\n\nRequired gameplay procedure.",
+                  new RuleSourceMetadata(
+                      RuleLayer.Core,
+                      [],
+                      [],
+                      ["NORMAL"],
+                      ["gameplay.resolve"],
+                      [],
+                      1000,
+                      true,
+                      ["kernel"],
+                      RulePreparationTier.RuntimeKernel)),
+              new RuleSourceDocument(
+                  RuleCompiler.GmHostBootstrapSourceId,
+                  "gm-host-bootstrap.txt",
+                  "Canonical GM host bootstrap.",
+                  new RuleSourceMetadata(
+                      RuleLayer.Core,
+                      [],
+                      [],
+                      ["NORMAL"],
+                      ["setup.gm-host"],
+                      [],
+                      1000,
+                      false,
+                      ["kernel"],
+                      RulePreparationTier.CampaignBootstrap))
+          };
         return new RuleSourceSnapshot(
             "Git",
             "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",

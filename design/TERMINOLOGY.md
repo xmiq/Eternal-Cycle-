@@ -4810,7 +4810,7 @@ A compact non-authoritative index of Historical Period IDs, bounds, scope, stabl
 
 ## Gameplay Turn
 
-One bounded player-action interaction from intent through required canonical reads, objective resolution, Affected Set determination, automatic persistence where needed, validation, and closure. A state-changing Gameplay Turn is incomplete until its canonical transaction succeeds.
+One bounded player-action interaction initiated only by actual new player input and continuing through required canonical reads, objective resolution, Affected Set determination, automatic persistence where needed, validation, and closure. Assistant continuation, tool work, retry, retrieval, persistence, validation, and same-input simulation remain inside that interaction and do not authorize another player choice. A state-changing Gameplay Turn is incomplete until its canonical transaction succeeds.
 
 ## Context Assembly Layer
 
@@ -5055,3 +5055,23 @@ A deterministic full useful repository snapshot intended for external review or 
 ## Runtime Rule Source Payload
 
 The minimal materialized set consumed by a rule compiler: the selected manifest, its declared authoritative rule documents, and required compatibility and immutable-provenance metadata. Development tooling, tests, audits, reference implementations, and unrelated repository files are not part of this payload.
+
+## GM Host Bootstrap
+
+The compact, versioned Eternal Cycle execution contract installed at the highest instruction level supported by an AI host. It establishes authority, mandatory procedure retrieval, player agency, persistence-before-completed-narration, and the player-turn boundary without embedding the detailed ruleset.
+
+## GM Runtime Procedure
+
+The authoritative Repository Canon procedure ordering one gameplay interaction through relevant reads, declared-intent resolution, Affected Set determination, persistence, validation, narration, and player-agency yield. It is distinct from and mandatory alongside the Runtime Rule Kernel.
+
+## GM Host Configuration
+
+The Ruleset-scoped readiness record for the active GM Host Bootstrap revision. Its states are `Required`, `InstructionsPresented`, `UserConfirmed`, and `Verified`; user acknowledgment never proves host configuration technically.
+
+## Compact Rule Packet
+
+The LLM-facing representation of a dependency-complete selected rule closure. It carries minimal packet and authority identity plus executable text while full per-source provenance, selectors, dependencies, and preparation evidence remain in the service.
+
+## Record Merge Patch
+
+A bounded set-only update to an existing authoritative object record. The persistence owner loads current state, preserves omitted fields, rejects identity/reference changes and unsupported structural operations, and applies the expanded result through the normal transaction contract.

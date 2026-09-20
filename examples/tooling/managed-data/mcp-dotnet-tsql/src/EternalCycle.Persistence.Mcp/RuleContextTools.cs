@@ -10,7 +10,7 @@ public sealed class RuleContextTools(
 {
     [McpServerTool(Name = "ec_get_rule_context", ReadOnly = true, Idempotent = true),
      Description("Returns an already-published, provenance-bearing, world-isolated Rule Packet within the configured normal-play budget.")]
-    public async Task<ManagedOperationResult<RuleContextResult>> GetRuleContextAsync(
+    public async Task<ManagedOperationResult<CompactRulePacket>> GetRuleContextAsync(
         [Description("Stable campaign identifier used to resolve the trusted world/ruleset binding.")] string campaignId,
         [Description("Current semantic operation, such as gameplay.resolve or persistence.commit.")] string operation,
         [Description("Material rule topics for the current operation.")] IReadOnlyList<string> topics,
@@ -34,7 +34,11 @@ public sealed class RuleContextTools(
                     [],
                     maxEstimatedTokens),
                 cancellationToken);
-            return new(true, "RULE_CONTEXT_READY", "A bounded, provenance-bearing Rule Packet is available.", context);
+            return new(
+                true,
+                "RULE_CONTEXT_READY",
+                "A compact, dependency-complete Rule Packet is available; full provenance remains service-side.",
+                RulePacketFormatter.Compact(context));
         }
         catch (ManagedServiceException exception)
         {
