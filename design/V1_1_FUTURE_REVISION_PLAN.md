@@ -73,6 +73,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-023 - Deterministic Offline Rules Compiler
 
+- **Status:** Complete. See the [Standalone Rules Compiler](../examples/tooling/rules-compiler-dotnet/README.md) and [FR-023 acceptance audit](audits/FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md).
 - **Primary classification:** Reference implementation proving an Eternal Cycle-wide reproducibility contract.
 - **Scope:** Add a separate compiler tool that reads the canonical Rule Source manifest and ordinary materialized rule files, creates useful heading/content snippets, preserves provenance and applicability, emits the FR-022 artifact, and runs before gameplay.
 - **Boundaries:** Do not add ranked runtime retrieval, artifact acquisition providers, or release publishing.
@@ -201,8 +202,8 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 | Requirement | Disposition | Owning task or evidence |
 | --- | --- | --- |
-| `#1` Offline Rules Compiler | Partial in FR-018; remaining work Roadmapped | FR-023, FR-024 |
-| `#2` Portable Compiled Rules artifact | Contract complete; compiler implementation pending | FR-022, FR-023 |
+| `#1` Offline Rules Compiler | Compiler complete; vocabulary and compiler-quality audit pending | FR-023, FR-024 |
+| `#2` Portable Compiled Rules artifact | Contract and deterministic compiler complete | FR-022, FR-023 |
 | `#3` Compiled snippets as normal runtime domain | Partial runtime chunks exist | FR-026 |
 | `#4` Intelligent indexed retrieval | Partial selector/topic retrieval exists | FR-024, FR-026 |
 | `#5` Compact Rule Packets | Implemented by FR-021; retain measurement | [FR-021 audit](audits/FR_021_GM_RUNTIME_BOOTSTRAP_REPAIR_AUDIT.md), FR-026, FR-031 |

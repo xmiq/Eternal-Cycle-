@@ -3098,3 +3098,15 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **Validation:** 16 focused and 179 complete reference tests passed; the FR-022 harness passed 32 assertions; full repository validation passed across 291 Markdown files, 7,239 links, all existing regression harnesses, governance, navigation, terminology, and repository boundaries.
 - **Current active task:** none after commit; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
 - **Exact resume point:** the project owner selects a dependency-ready objective. FR-023, FR-025, and FR-030 are available; do not begin one automatically.
+
+## Phase 13 Checkpoint - FR-023 Reproducible Rules Compiler
+
+- **Completed objective:** FR-023 — Deterministic Offline Rules Compiler.
+- **Portable pipeline:** Extracted the provider-neutral artifact contract into `EternalCycle.Rules`; added safe materialized-manifest input, deterministic heading/content snippet compilation, format-1 assembly and validation, canonical byte writing, and a standalone CLI over those stages.
+- **Authority and dependencies:** Repository Canon and FR-022 remain authoritative. The compiler accepts ordinary materialized files and explicit immutable identity, has no Git, network, MCP, SQL, campaign, or provider dependency, and adds no acquisition, import, runtime retrieval, vocabulary-generation, or release behavior.
+- **Canonical evidence:** The actual CLI compiled 10 sources and 154 snippets to semantic digest `4B583A7904CE514B56CF3B497648DB5D778FC04DF2285D30A2E03823A32EA6A4` and serialized-byte SHA-256 `802172680FCE33E7F5F9B75EBEBE1D695B702A22B82F1918601DB7B9F44926EC`; output size was 223,929 bytes and matched direct writer output.
+- **Validation:** Both Release builds passed with zero warnings/errors; 70 portable tests, 18 standalone CLI tests, 181 Managed MCP tests, and 32 FR-022 harness assertions passed; full repository validation and whitespace review passed.
+- **Schema, terminology, and decisions:** No migration, campaign data, new canonical term, or gameplay decision was required.
+- **Downstream boundary:** FR-024 vocabulary/audit, FR-025 acquisition/import, FR-026 runtime store/retrieval, and FR-034 release packaging remain pending and were not started.
+- **Current active task:** none after closure; Phase 13 Future Revisions remains `[∞]` and no later objective is selected.
+- **Exact resume point:** the project owner selects a dependency-ready objective. FR-024, FR-025, and FR-030 are available; do not begin one automatically.

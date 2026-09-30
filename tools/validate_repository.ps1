@@ -330,9 +330,9 @@ if ($releasedState) {
     }
     else {
         foreach ($requiredText in @(
-            '**Approved pending objectives:** FR-023 through FR-036',
+            '**Approved pending objectives:** FR-024 through FR-036',
             '**Selected implementation objective:** None.',
-            '**Latest completed objective:** FR-022'
+            '**Latest completed objective:** FR-023'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
                 Add-ValidationError "Phase 13 planning state lacks required invariant: $requiredText"
@@ -468,7 +468,8 @@ if (-not (Test-Path -LiteralPath $v11PlanPath)) {
 else {
     $v11Plan = Get-Content -Raw -LiteralPath $v11PlanPath
     $v11PlanIds = @(22..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
-    $pendingV11PlanIds = @(23..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $completedV11PlanIds = @(22..23 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $pendingV11PlanIds = @(24..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
     $roadmappedIds = @($roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
     $closedIds = @($closedEntries | ForEach-Object { $_.Groups['id'].Value })
 
@@ -478,8 +479,10 @@ else {
         }
     }
 
-    if ($closedIds -notcontains 'FR-022' -or $roadmap -notmatch [regex]::Escape('- [x] **FR-022')) {
-        Add-ValidationError 'Completed v1.1 Future Revision FR-022 must be Closed and complete in the roadmap.'
+    foreach ($id in $completedV11PlanIds) {
+        if ($closedIds -notcontains $id -or $roadmap -notmatch [regex]::Escape("- [x] **$id")) {
+            Add-ValidationError "Completed v1.1 Future Revision $id must be Closed and complete in the roadmap."
+        }
     }
 
     foreach ($id in $pendingV11PlanIds) {

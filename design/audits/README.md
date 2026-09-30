@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-023 Reproducible Rules Compiler Acceptance Audit](FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md) - portable materialized input, deterministic snippets and artifact bytes, standalone CLI, provenance, provider neutrality, compatibility, and downstream boundaries.
 - [FR-022 Compiled Rules Artifact Audit](FR_022_COMPILED_RULES_ARTIFACT_AUDIT.md) - provider-neutral format, stable snippet identity, portable provenance, applicability, dependencies, retrieval metadata carrier, deterministic integrity, conformance fixtures, and downstream boundaries.
 - [FR-021 GM Runtime Bootstrap and Context-Efficiency Repair Audit](FR_021_GM_RUNTIME_BOOTSTRAP_REPAIR_AUDIT.md) - canonical host bootstrap, mandatory runtime procedure, host-configuration readiness, compact Rule Packets, constrained patches, player-turn boundaries, and remaining live acceptance.
 - [FR-021 Orphaned Managed Operation Recovery Audit](FR_021_ORPHANED_MANAGED_OPERATION_RECOVERY_AUDIT.md) - live power-loss defect, bounded execution ownership, orphan reconciliation, same-identity retry, migration 009, regressions, and remaining infrastructure proof.

@@ -58,22 +58,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-023 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
+FR-024 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
-
-### FR-023 - Deterministic Offline Rules Compiler
-
-- **Status:** Roadmapped
-- **Issue:** Rule compilation currently occurs inside the reference Managed publication path rather than through a separate reproducible offline tool.
-- **Affected systems:** Rule Source manifest, canonical documents, snippet identity, provenance, compiler tooling, validation, and compiled artifacts.
-- **Gameplay impact:** Official and alternate runtimes cannot consume a prebuilt reviewed corpus without reproducing service-side compilation.
-- **Evidence needed:** Repeatable compilation, stable identity, source-change invalidation, source-boundary rejection, and campaign-free operation.
-- **Suggested future phase:** Phase 13 - Future Revisions.
-- **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#1`, `#2`, and `#34` after FR-022.
-- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
-- **Planning specification:** [FR-023 task](V1_1_FUTURE_REVISION_PLAN.md#fr-023---deterministic-offline-rules-compiler)
 
 ### FR-024 - Retrieval Vocabulary and Compiler Audit
 
@@ -245,6 +232,20 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
+
+### FR-023 - Deterministic Offline Rules Compiler
+
+- **Status:** Closed
+- **Issue:** Rule compilation occurred inside the reference Managed publication path rather than through a separate reproducible offline tool.
+- **Affected systems:** Rule Source manifest, canonical documents, snippet identity, provenance, compiler tooling, validation, and compiled artifacts.
+- **Gameplay impact:** Official and alternate runtimes could not consume a prebuilt reviewed corpus without reproducing service-side compilation.
+- **Evidence needed:** Repeatable compilation, stable identity, source-change invalidation, source-boundary rejection, and campaign-free operation.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented as a provider-neutral portable library and standalone CLI over ordinary materialized Rule Source files. The validated pipeline loads exact source bytes, rejects unsafe or malformed inputs, compiles stable heading/content snippets, preserves source and applicability provenance, assembles and validates the FR-022 format-1 artifact, and emits deterministic canonical bytes without Git, network, MCP, SQL, campaign, or provider dependencies. Vocabulary audit, acquisition/import, runtime storage/retrieval, and release packaging remain owned by FR-024 through FR-026 and FR-034.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-023 task](V1_1_FUTURE_REVISION_PLAN.md#fr-023---deterministic-offline-rules-compiler)
+- **Closure references:** [Standalone Rules Compiler](../examples/tooling/rules-compiler-dotnet/README.md), [Compiled Rules Artifact](../docs/rules/COMPILED_RULES_ARTIFACT.md), and [FR-023 Acceptance Audit](audits/FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md)
 
 ### FR-022 - Portable Compiled Rules Artifact Contract
 

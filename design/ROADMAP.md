@@ -341,7 +341,7 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 - [x] **FR-020 — Managed First-Run Readiness and Bootstrap** — Repaired the reference Managed/MCP first-run boundary with multidimensional readiness, semantic setup failures, permission-gated EC-owned migrations, persisted official/custom Rule Source selection and managed acquisition, explicit Stable/Prerelease compatibility, immutable resolved-source provenance, bounded network/local Git execution, intentional initial publication, campaign discovery/creation, SQL-first correlated diagnostics with physical fallback, bounded resumable publication, and MCP-only acceptance guidance while preserving Direct compatibility and the 8K Rule Packet ceiling.
 - [x] **FR-021 — Durable Managed Operations and Progressive Rule Readiness** — Added durable asynchronous initial publication, idempotent operation discovery, transport-independent Managed Worker execution with one-click host-blocked recovery, bounded renewable execution ownership and orphan recovery, service-owned timeouts, dependency-tiered progressive readiness, dynamic context priority, service-level diagnostics without Campaign ID, natural informed approval, moving RC display/provenance support, corrective pre-migration recovery, live-acceptance Rule Source/cancellation repairs with exact sanitized command evidence, corrected atomic Rule Store batch staging, and follow-up canonical GM bootstrap/procedure, compact Rule Packet, host-configuration readiness, and constrained patch maintenance while keeping provider technology at the reference layer.
 - [x] **FR-022 — Portable Compiled Rules Artifact Contract** — Defined the provider-neutral format-1 artifact, stable snippet identity, executable content, portable provenance, applicability, dependencies, retrieval-metadata carrier, deterministic integrity, compatibility rules, schema, fixtures, and strict reference validation required by later compiler, import, retrieval, and release work.
-- [ ] **FR-023 — Deterministic Offline Rules Compiler** — After FR-022, implement a separate reproducible compiler that emits the portable artifact from canonical rule files without campaign or MCP dependency.
+- [x] **FR-023 — Deterministic Offline Rules Compiler** — Added a portable manifest loader, deterministic heading/content snippet compiler, format-1 assembler and canonical writer, and a standalone CLI that compiles materialized Rule Source payloads without campaign, MCP, provider, or network dependency.
 - [ ] **FR-024 — Retrieval Vocabulary and Compiler Audit** — After FR-023, add controlled alternative vocabulary, weights, collision/coverage checks, and reviewable compiler diagnostics.
 - [ ] **FR-025 — Provider-Neutral Artifact Acquisition and Import** — After FR-022, implement common validation/import with local-file and GitHub Release providers plus a replaceable provider boundary.
 - [ ] **FR-026 — Compiled Rule Store and Intelligent Retrieval** — After FR-023 through FR-025, import compiled snippets into the normal Rule Domain and provide explainable ranked retrieval with complete dependencies and compact packets.
@@ -359,10 +359,10 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 
 ### Current Position
 
-- **Approved pending objectives:** FR-023 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
+- **Approved pending objectives:** FR-024 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
 - **Selected implementation objective:** None. Roadmap order records the approved set, not a mandatory execution order.
-- **Latest completed objective:** FR-022 — Portable Compiled Rules Artifact Contract.
-- **Next action:** The project owner may select a dependency-ready objective. FR-023, FR-025, and FR-030 are dependency-ready; none is selected automatically.
+- **Latest completed objective:** FR-023 — Deterministic Offline Rules Compiler.
+- **Next action:** The project owner may select a dependency-ready objective. FR-024, FR-025, and FR-030 are dependency-ready; none is selected automatically.
 
 ### Governance
 

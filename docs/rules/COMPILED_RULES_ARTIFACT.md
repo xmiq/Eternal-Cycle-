@@ -19,7 +19,7 @@ Rule Packet
 
 - **Owner:** artifact semantics, format compatibility, stable snippet identity, portable provenance, deterministic normalization, and conformance validation
 - **Dependencies:** [Rule Compilation and Context-Efficient Retrieval](RULE_COMPILATION_AND_RETRIEVAL.md), [Managed Rule Publication](MANAGED_RULE_PUBLICATION.md), and the canonical [`rule-source-manifest.json`](rule-source-manifest.json) contract
-- **Extensions:** FR-023 may emit this contract, FR-024 may populate reviewed retrieval vocabulary, FR-025 may acquire and import it, FR-026 may store and retrieve it, and FR-034 may package it
+- **Extensions:** the standalone rules compiler emits this contract; FR-024 may populate reviewed retrieval vocabulary, FR-025 may acquire and import it, FR-026 may store and retrieve it, and FR-034 may package it
 - **Consumers:** offline compilers, artifact validators and importers, Direct or Managed runtimes, diagnostics, and release tooling
 - **Repository boundary:** the artifact contains no Campaign Canon, Campaign ID, save locator, credential, private provider locator, GM Secret, or executable host code
 
@@ -230,7 +230,7 @@ Artifact richness does not authorize verbose runtime delivery. FR-026 and FR-031
 
 ## Existing Index Relationship
 
-The current reference `CompiledRuleIndex` proves source classification and bounded retrieval but is an in-process derived representation with publication-time metadata. It is not the portable artifact specification. FR-023 may adapt canonical inputs into this format, and FR-025/FR-026 may adapt a validated artifact into runtime storage, without changing the authority or semantics defined here.
+The current reference `CompiledRuleIndex` proves source classification and bounded retrieval but is an in-process derived representation with publication-time metadata. It is not the portable artifact specification. The standalone compiler adapts materialized canonical inputs into this format, and FR-025/FR-026 may adapt a validated artifact into runtime storage, without changing the authority or semantics defined here.
 
 The format-1 [reference validator](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/CompiledRulesArtifact.cs) and [tests](../../examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/CompiledRulesArtifactContractTests.cs) demonstrate the contract in C#. Their language and implementation choices are reference-only; this document and the portable schema define the normative boundary.
 
