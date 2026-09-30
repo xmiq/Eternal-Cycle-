@@ -31,4 +31,5 @@ Repository Markdown owns the rules. A compiler may split, hash, tag, rank, and r
 - [AI Operations Index](../ai/README.md)
 - [Portable Persistence Architecture](../persistence/PORTABLE_PERSISTENCE_ARCHITECTURE.md)
 - [Managed Data Service](../persistence/MANAGED_DATA_SERVICE.md)
+- [Standalone Rules Compiler](../../examples/tooling/rules-compiler-dotnet/README.md)
 - [Reference Managed Tooling](../../examples/tooling/managed-data/mcp-dotnet-tsql/README.md)
