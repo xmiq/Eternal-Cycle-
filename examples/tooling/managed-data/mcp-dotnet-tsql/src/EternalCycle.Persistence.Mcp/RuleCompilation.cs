@@ -1,6 +1,3 @@
-using System.Security.Cryptography;
-using System.Text;
-
 namespace EternalCycle.Persistence.Mcp;
 
 public sealed record RuleSourceMetadata(
@@ -144,12 +141,19 @@ public static class RuleCompiler
                 throw new InvalidOperationException($"Optional-module rule source '{document.RuleSourceId}' must identify at least one module.");
             }
 
-            var sourceHash = ComputeHash(document.Content);
-            foreach (var section in SplitMarkdown(document.Content))
+            var sourceHash = CompiledRulesArtifactContract.ComputeContentSha256(document.Content);
+            var sections = RuleSnippetText.Split(document.Content);
+            if (sections.Count == 0)
             {
-                var chunkId = section.Anchor is null
-                    ? document.RuleSourceId
-                    : $"{document.RuleSourceId}#{section.Anchor}";
+                throw new InvalidOperationException(
+                    $"Rule source '{document.RuleSourceId}' must contain executable rule text.");
+            }
+
+            foreach (var section in sections)
+            {
+                var chunkId = CompiledRulesArtifactContract.CreateSnippetId(
+                    document.RuleSourceId,
+                    section.SourceAnchor);
                 if (!chunkIds.Add(chunkId))
                 {
                     throw new InvalidOperationException($"Duplicate compiled Rule Chunk ID '{chunkId}'.");
@@ -159,10 +163,10 @@ public static class RuleCompiler
                     chunkId,
                     document.RuleSourceId,
                     document.SourcePath,
-                    section.Anchor,
+                    section.SourceAnchor,
                     sourceHash,
                     document.Metadata,
-                    EstimateTokens(section.Content),
+                    RuleSnippetText.EstimateTokens(section.Content),
                     section.Content));
             }
         }
@@ -535,65 +539,4 @@ public static class RuleCompiler
             .Where(value => !string.IsNullOrWhiteSpace(value))
             .ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-    private static IEnumerable<(string? Anchor, string Content)> SplitMarkdown(string content)
-    {
-        var lines = content.Replace("\r\n", "\n", StringComparison.Ordinal).Split('\n');
-        var current = new StringBuilder();
-        var anchors = new Dictionary<string, int>(StringComparer.Ordinal);
-        string? anchor = null;
-
-        foreach (var line in lines)
-        {
-            if (line.StartsWith("## ", StringComparison.Ordinal) && current.Length > 0)
-            {
-                yield return (anchor, current.ToString().Trim());
-                current.Clear();
-                anchor = NextAnchor(line[3..], anchors);
-            }
-            else if (line.StartsWith("## ", StringComparison.Ordinal))
-            {
-                anchor = NextAnchor(line[3..], anchors);
-            }
-
-            current.AppendLine(line);
-        }
-
-        if (current.Length > 0)
-        {
-            yield return (anchor, current.ToString().Trim());
-        }
-    }
-
-    private static string ToAnchor(string heading)
-    {
-        var normalized = new string(heading
-            .Trim()
-            .ToLowerInvariant()
-            .Select(character => char.IsLetterOrDigit(character) || character is ' ' or '-'
-                ? character
-                : '\0')
-            .Where(character => character != '\0')
-            .ToArray());
-        return string.Join('-', normalized.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-    }
-
-    private static string NextAnchor(string heading, IDictionary<string, int> anchors)
-    {
-        var baseAnchor = ToAnchor(heading);
-        if (!anchors.TryGetValue(baseAnchor, out var count))
-        {
-            anchors[baseAnchor] = 0;
-            return baseAnchor;
-        }
-
-        count++;
-        anchors[baseAnchor] = count;
-        return $"{baseAnchor}-{count}";
-    }
-
-    private static int EstimateTokens(string content) =>
-        Math.Max(1, (Encoding.UTF8.GetByteCount(content) + 2) / 3);
-
-    private static string ComputeHash(string value) =>
-        Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
 }
