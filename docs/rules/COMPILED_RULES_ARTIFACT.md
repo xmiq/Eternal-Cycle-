@@ -224,7 +224,7 @@ Artifact richness does not authorize verbose runtime delivery. FR-026 and FR-031
 
 The current reference `CompiledRuleIndex` proves source classification and bounded retrieval but is an in-process derived representation with publication-time metadata. It is not the portable artifact specification. FR-023 may adapt canonical inputs into this format, and FR-025/FR-026 may adapt a validated artifact into runtime storage, without changing the authority or semantics defined here.
 
-The format-1 [reference validator](../../examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/CompiledRulesArtifact.cs) and [tests](../../examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/CompiledRulesArtifactContractTests.cs) demonstrate the contract in C#. Their language and implementation choices are reference-only; this document and the portable schema define the normative boundary.
+The format-1 [reference validator](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/CompiledRulesArtifact.cs) and [tests](../../examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/CompiledRulesArtifactContractTests.cs) demonstrate the contract in C#. Their language and implementation choices are reference-only; this document and the portable schema define the normative boundary.
 
 ## Downstream Boundaries
 

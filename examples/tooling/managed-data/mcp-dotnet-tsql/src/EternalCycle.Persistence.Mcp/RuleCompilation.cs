@@ -3,14 +3,6 @@ using System.Text;
 
 namespace EternalCycle.Persistence.Mcp;
 
-public enum RuleLayer
-{
-    RuntimeKernel,
-    Core,
-    World,
-    OptionalModule
-}
-
 public sealed record RuleSourceMetadata(
     RuleLayer Layer,
     IReadOnlyList<string> WorldModelIds,

@@ -28,6 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\rules-compiler-dotnet\src\EternalCycle.Rules\EternalCycle.Rules.csproj" />
+    <Using Include="EternalCycle.Rules" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Schema\001_initial.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\001_initial.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\002_rule_domain.sql" CopyToOutputDirectory="PreserveNewest" />

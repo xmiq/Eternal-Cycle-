@@ -4,16 +4,6 @@ using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
-public enum RulePreparationTier
-{
-    RuntimeKernel = 0,
-    CampaignBootstrap = 1,
-    ImmediateGameplayCore = 2,
-    CampaignRelevant = 3,
-    Standard = 4,
-    OptionalRare = 5
-}
-
 public enum RulePreparationState
 {
     Pending,

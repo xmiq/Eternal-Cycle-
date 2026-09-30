@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\EternalCycle.Persistence.Mcp\EternalCycle.Persistence.Mcp.csproj" />
+    <ProjectReference Include="..\..\..\..\rules-compiler-dotnet\src\EternalCycle.Rules\EternalCycle.Rules.csproj" />
+    <Using Include="EternalCycle.Rules" />
     <None Include="..\..\src\EternalCycle.Persistence.Mcp\DISTRIBUTION.json"
           Link="distribution-metadata.json"
           CopyToOutputDirectory="PreserveNewest" />

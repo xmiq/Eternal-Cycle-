@@ -26,6 +26,7 @@ $testsRoot = "$reference/tests/EternalCycle.Persistence.Mcp.Tests"
 $operations = Read-RepoFile "$source/ManagedOperations.cs"
 $operationStore = Read-RepoFile "$source/SqlServerManagedOperationStore.cs"
 $preparation = Read-RepoFile "$source/RulePreparation.cs"
+$ruleVocabulary = Read-RepoFile 'examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/RuleVocabulary.cs'
 $publication = Read-RepoFile "$source/ManagedRulePublication.cs"
 $readiness = Read-RepoFile "$source/ManagedReadiness.cs"
 $administration = Read-RepoFile "$source/ManagedAdministration.cs"
@@ -79,7 +80,7 @@ Assert-Requirement 11 ($schema -match 'managed_operations' -and $schema -match '
 Assert-Requirement 12 ($schema -match 'base_priority' -and $schema -match 'priority_boost') 'Preparation stores base and dynamic priority separately.'
 Assert-Requirement 13 ($project -match '007_durable_managed_operations.sql' -and $project -match '007_durable_managed_operations.template.sql') 'Migration 007 and its template are packaged.'
 Assert-Requirement 14 ($schemaTemplate -match '\{\{schema\}\}' -and $schemaTemplate -match '\{\{schema_name\}\}' -and $schemaTemplate -notmatch '\{\{DOMAIN_SCHEMA\}\}') 'Migration 007 uses the renderer-supported trusted Domain Namespace tokens.'
-Assert-Requirement 15 ($preparation -match 'RuntimeKernel' -and $preparation -match 'OptionalRare') 'Portable preparation tiers cover kernel through optional rules.'
+Assert-Requirement 15 ($ruleVocabulary -match 'RuntimeKernel' -and $ruleVocabulary -match 'OptionalRare') 'Portable preparation tiers cover kernel through optional rules.'
 Assert-Requirement 16 ($preparation -match 'GetNextPendingAsync' -and $preparation -match 'priority_boost DESC') 'Remaining preparation reads current dynamic priority from durable state.'
 Assert-Requirement 17 ($publication -match 'PrepareMinimumClosure' -and $publication -match 'PrepareRemainingAsync') 'Minimum and remaining preparation are distinct publication stages.'
 Assert-Requirement 18 ($publication -match 'GetNextPendingAsync' -and $publication -match 'MarkReadyAsync') 'Background publication consumes durable preparation state end to end.'

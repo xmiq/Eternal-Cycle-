@@ -44,7 +44,7 @@ They contain generic rule text only and are not a second maintained rules corpus
 
 ## Reference Validation
 
-The optional C# [reference contract](../../examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/CompiledRulesArtifact.cs) parses closed JSON, rejects duplicate properties, validates all semantic relationships, computes content and artifact digests, and returns stable code/path/message errors. It is reference tooling, not the specification.
+The optional C# [reference contract](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/CompiledRulesArtifact.cs) parses closed JSON, rejects duplicate properties, validates all semantic relationships, computes content and artifact digests, and returns stable code/path/message errors. It is reference tooling, not the specification.
 
 The focused tests validate:
 
