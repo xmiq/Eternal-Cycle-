@@ -3075,3 +3075,14 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **Validation:** Release build passed with zero warnings/errors; all 150 reference tests passed; 12 Managed Rule Publication and 16 Managed Worker lifecycle tests passed independently; the exact official 147-chunk/990-selector/768-dependency candidate and all eight full/partial batch statements are covered. The opt-in Stage-to-Activate SQL fixture exists, but the installed LocalDB automatic instance could not start, so product SQL did not run. All FR-011/017/018/019/020/021 and release-neutral harnesses passed. A `win-x64` publish contained the worker app host and shared runtime artifacts.
 - **Current active task:** none after the focused repair commit; Phase 13 Future Revisions remains `[∞]`, `VERSION` remains `1.0.0`, and no later objective is selected.
 - **Exact resume point:** deploy the repaired candidate and retry the existing durable operation through `Stage`, `Publish`, `Activate`, and terminal success. Do not move the RC tag until that live candidate is accepted under the established moving-RC workflow.
+
+## Eternal Cycle v1.1 Future Revision Planning
+
+- **Completed planning:** Reconciled requirements `#1` through `#34`, Canon-integrity cases `8.1` through `8.9`, and work areas WP1 through WP10 against the released architecture and completed FR-011, FR-012, and FR-017 through FR-021 work. Decomposed the remaining scope into dependency-aware Roadmapped objectives FR-022 through FR-036 with explicit ownership, boundaries, acceptance criteria, and traceability.
+- **Current active task:** None. This planning pass authorizes the task graph but does not select an implementation objective.
+- **Files created:** `design/V1_1_FUTURE_REVISION_PLAN.md`.
+- **Files modified:** `design/ROADMAP.md`, `design/FUTURE_REVISIONS.md`, `design/README.md`, `design/DEVELOPER_NOTES.md`, and `tools/validate_repository.ps1`.
+- **Validation:** The complete repository validator passed: all FR-011/017/018/019/020/021 and release-neutral harnesses passed 301 assertions; 289 Markdown files, 7,213 relative links, 208 roadmap tasks, 36 Future Revision entries, navigation, terminology, repository boundaries, and deterministic distribution rules passed. Final diff review remained the last planning checkpoint step.
+- **Terminology and decisions:** No new canonical term or gameplay decision was required. The plan reuses current authority, persistence, Rule Domain, Managed Service, and Future Revision terminology.
+- **Unresolved questions:** None block planning. Implementation evidence may still refine task internals without changing their ownership boundaries.
+- **Exact resume point:** The project owner explicitly selects a dependency-ready Roadmapped objective. FR-022 and FR-030 are the initial independent candidates; do not begin either automatically.

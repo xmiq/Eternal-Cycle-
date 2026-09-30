@@ -58,9 +58,204 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-No Future Revision is currently roadmapped and pending. FR-001 through FR-021 are closed below where present. Promotion authorizes future planning and implementation work only and does not select an execution order.
+FR-022 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
 
-All currently known FR-001 through FR-021 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
+
+### FR-022 - Portable Compiled Rules Artifact Contract
+
+- **Status:** Roadmapped
+- **Issue:** The current derived rule index has no provider-neutral portable artifact contract suitable for offline compilation, validation, import, and release packaging.
+- **Affected systems:** Repository Canon, Rule Compilation, Managed Rule Publication, provenance, compatibility, validation, and release artifacts.
+- **Gameplay impact:** Runtimes remain coupled to source-time compilation and cannot share one reviewed compiled corpus reliably.
+- **Evidence needed:** Conformance fixtures covering identity, provenance, vocabulary, dependencies, applicability, format/compiler versions, manifests, integrity, and compatibility without implementation lock-in.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#2` and `#34` to a bounded artifact-contract prerequisite.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-022 task](V1_1_FUTURE_REVISION_PLAN.md#fr-022---portable-compiled-rules-artifact-contract)
+
+### FR-023 - Deterministic Offline Rules Compiler
+
+- **Status:** Roadmapped
+- **Issue:** Rule compilation currently occurs inside the reference Managed publication path rather than through a separate reproducible offline tool.
+- **Affected systems:** Rule Source manifest, canonical documents, snippet identity, provenance, compiler tooling, validation, and compiled artifacts.
+- **Gameplay impact:** Official and alternate runtimes cannot consume a prebuilt reviewed corpus without reproducing service-side compilation.
+- **Evidence needed:** Repeatable compilation, stable identity, source-change invalidation, source-boundary rejection, and campaign-free operation.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#1`, `#2`, and `#34` after FR-022.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-023 task](V1_1_FUTURE_REVISION_PLAN.md#fr-023---deterministic-offline-rules-compiler)
+
+### FR-024 - Retrieval Vocabulary and Compiler Audit
+
+- **Status:** Roadmapped
+- **Issue:** Existing operation/topic selectors do not provide reviewable weighted alternative terminology or compiler-quality diagnostics.
+- **Affected systems:** Offline compiler, snippet vocabulary, retrieval relevance, diagnostics, reports, and validation.
+- **Gameplay impact:** Ordinary player terminology may miss relevant rules or broad terms may return noisy contexts without explainable evidence.
+- **Evidence needed:** Alternative-term retrieval, false-positive controls, deterministic collision/coverage reports, and reviewable vocabulary provenance.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning separated search-quality work from compiler construction for independent review.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-024 task](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit)
+
+### FR-025 - Provider-Neutral Artifact Acquisition and Import
+
+- **Status:** Roadmapped
+- **Issue:** Rule Source acquisition is provider-separated, but no common Compiled Rules validation/import path serves local files, GitHub Releases, and future providers.
+- **Affected systems:** Artifact acquisition, validation, import, compatibility, local files, GitHub Releases, mirrors, and custom providers.
+- **Gameplay impact:** Deployment portability and offline use remain weaker than the rules architecture intends.
+- **Evidence needed:** Byte-identical local/remote import outcomes, provider-failure isolation, compatibility rejection, and replaceable-provider tests.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#23` through `#26` to one acquisition/import boundary.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
+
+### FR-026 - Compiled Rule Store and Intelligent Retrieval
+
+- **Status:** Roadmapped
+- **Issue:** Runtime selection uses compiled chunks and structural selectors but not the planned portable artifact, reviewed vocabulary ranking, or complete retrieval diagnostics.
+- **Affected systems:** Rule Domain, artifact import, indexes, ranking, dependency closure, Rule Packets, diagnostics, budgets, and World/Ruleset isolation.
+- **Gameplay impact:** Relevant rules may require exact caller vocabulary and runtime search remains less efficient and diagnosable than intended.
+- **Evidence needed:** Explainable alternative-term selection, filter/isolation regressions, dependency completeness, compact packets, Pending behavior, and giant-record replacement proof.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning extends rather than reopens completed FR-018 and FR-021 retrieval foundations.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-026 task](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval)
+
+### FR-027 - Stable Campaign Binding and Managed Gameplay Entry
+
+- **Status:** Roadmapped
+- **Issue:** Canonical configuration exists, but normal gameplay still lacks one authoritative active binding and entry path that prevents conversational campaign rediscovery.
+- **Affected systems:** Campaign Configuration, session binding, gameplay entry, GM Runtime Procedure, player-turn identity, Unknown handling, and AI operation.
+- **Gameplay impact:** A model may select the wrong campaign, begin with conversation search, or treat internal continuation as player authorization.
+- **Evidence needed:** Stable resume, conflict/missing-binding failure, mandatory runtime closure, turn-boundary, Unknown, and conversation-demotion tests.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning preserves FR-021 invariants while assigning the remaining binding/integration gap.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-027 task](V1_1_FUTURE_REVISION_PLAN.md#fr-027---stable-campaign-binding-and-managed-gameplay-entry)
+
+### FR-028 - Active Campaign Canon Working-Set Closure
+
+- **Status:** Roadmapped
+- **Issue:** Campaign reads accept explicit record addresses but do not yet assemble the smallest structurally dependency-complete active Canon closure.
+- **Affected systems:** Context Assembly, Canon ownership, typed references, actors, Relationships, unresolved state, chronology, Unknown handling, and campaign reads.
+- **Gameplay impact:** Partial context can silently omit active threats or facts, while whole-campaign loading does not scale.
+- **Evidence needed:** Bounded structural expansion, required-missing behavior, explicit not-retrieved/nonexistent/Unknown distinctions, chronology preservation, and age-independent closure size.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning maps the campaign-side counterpart to rule dependency closure.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-028 task](V1_1_FUTURE_REVISION_PLAN.md#fr-028---active-campaign-canon-working-set-closure)
+
+### FR-029 - Active State and Correction History Separation
+
+- **Status:** Roadmapped
+- **Issue:** Active records may accumulate correction prose/history despite canonical ownership and chronology rules.
+- **Affected systems:** Campaign records, Timeline, Campaign History, corrections, migrations, active working sets, patches, and validation.
+- **Gameplay impact:** Active reads grow indefinitely and stale corrections can compete with current state or encourage whole-record rewrites.
+- **Evidence needed:** Ownership-preserving migration, bounded active records, traceable history, patch preservation, rollback, and existing-campaign compatibility.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning scopes storage normalization without reopening FR-012 or erasing history.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-029 task](V1_1_FUTURE_REVISION_PLAN.md#fr-029---active-state-and-correction-history-separation)
+
+### FR-030 - Persistence Result and Lost-Acknowledgement Recovery
+
+- **Status:** Roadmapped
+- **Issue:** Compact receipts and retry exist, but a lost response lacks a dedicated bounded status lookup by stable transaction/idempotency identity.
+- **Affected systems:** Persistence results, transactions, idempotency, receipts, retry, context budgets, authorization, and diagnostics.
+- **Gameplay impact:** A completed save may be retried or doubted when tool output is lost, risking duplicate effects or false failure narration.
+- **Evidence needed:** committed/failed/pending lookup, no-replay recovery, compact success payloads, same-transaction retry, and bounded authorized output.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning extends the FR-011/FR-017 recovery contract rather than replacing it.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-030 task](V1_1_FUTURE_REVISION_PLAN.md#fr-030---persistence-result-and-lost-acknowledgement-recovery)
+
+### FR-031 - Context-Economics Instrumentation and Budgets
+
+- **Status:** Roadmapped
+- **Issue:** Rule token estimates exist, but complete model-facing request/response costs are not measured across one gameplay interaction.
+- **Affected systems:** Rule retrieval, Campaign reads, persistence, diagnostics, tool transport, budgets, telemetry, and regression tests.
+- **Gameplay impact:** Tool overhead can exhaust practical model context despite individually bounded rule payloads.
+- **Evidence needed:** Per-operation and per-interaction byte/token measures, approximately 20K practical target regressions, required-closure failure, and final-response headroom.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning separates cross-operation measurement from individual feature implementation.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-031 task](V1_1_FUTURE_REVISION_PLAN.md#fr-031---context-economics-instrumentation-and-budgets)
+
+### FR-032 - Managed Administrative Read Surface
+
+- **Status:** Roadmapped
+- **Issue:** Existing tools expose pieces of state, but developers lack one complete bounded administrative read contract across campaigns, records, transactions, rules, bindings, configuration, and diagnostics.
+- **Affected systems:** Managed Service, MCP tools, authorization, pagination, redaction, campaigns, persistence, Rule Releases, and diagnostics.
+- **Gameplay impact:** Operational defects require AI narration or database archaeology and are harder to reproduce safely.
+- **Evidence needed:** Bounded queries for every planned state family, authorization/redaction tests, pagination, and no arbitrary mutation or SQL.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning distinguishes the service read surface from any replaceable client UI.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-032 task](V1_1_FUTURE_REVISION_PLAN.md#fr-032---managed-administrative-read-surface)
+
+### FR-033 - Administration Client and Portable Diagnostic Report
+
+- **Status:** Roadmapped
+- **Issue:** No simple developer client directly invokes MCP and exports a portable request-to-state diagnostic report outside an AI context window.
+- **Affected systems:** Reference tooling, MCP invocation, compiler/retrieval diagnostics, report export, redaction, and support workflow.
+- **Gameplay impact:** Debugging may lose or obscure actual tool responses and selection evidence.
+- **Evidence needed:** Direct representative calls, state inspection, sanitized Markdown/JSON export, selection/ranking/dependency evidence, timing, warnings, and portability tests.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Medium
+- **Status reason:** Owner-authorized v1.1 planning selects a KISS client boundary after the Managed administrative contract.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-033 task](V1_1_FUTURE_REVISION_PLAN.md#fr-033---administration-client-and-portable-diagnostic-report)
+
+### FR-034 - v1.1 Artifact Packaging and Release Workflow
+
+- **Status:** Roadmapped
+- **Issue:** The repository builds a full review snapshot and a publishable MCP, but v1.1 lacks deliberate Rules-only, Compiled Rules, and target-labelled MCP release assets.
+- **Affected systems:** Distribution tooling, Rules, compiled artifacts, MCP publish, manifests, checksums, GitHub Releases, local acquisition, and release validation.
+- **Gameplay impact:** Users cannot obtain semantically clear official runtime assets without source-time build or compilation.
+- **Evidence needed:** Deterministic packages, declared contents, platform/provenance labels, checksums, local/GitHub parity, forbidden-path rejection, and no required `All.zip`.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning separates artifact packaging from provider-neutral import and from final release authorization.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-034 task](V1_1_FUTURE_REVISION_PLAN.md#fr-034---v11-artifact-packaging-and-release-workflow)
+
+### FR-035 - Canon-Integrity Regression Suite
+
+- **Status:** Roadmapped
+- **Issue:** No deterministic multi-turn suite currently proves actor conservation, Unknown semantics, chronology, fabrication resistance, active closure, patch round trips, and drift resistance together.
+- **Affected systems:** Gameplay entry, Campaign closure, persistence, chronology, actors, Unknowns, regression fixtures, and validation.
+- **Gameplay impact:** Repeated partial context can silently add, remove, resolve, or rewrite established Canon.
+- **Evidence needed:** Named tests for Canon cases `8.1` through `8.9`, using supported runtime/persistence paths and no fixture-specific production logic.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning preserves the illustrative scene only as fixture data and delays abstraction until concrete regressions exist.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-035 task](V1_1_FUTURE_REVISION_PLAN.md#fr-035---canon-integrity-regression-suite)
+
+### FR-036 - Long-Campaign and v1.1 Integrated Acceptance
+
+- **Status:** Roadmapped
+- **Issue:** The final v1.1 paths need integrated proof that substantial history does not cause linear active-context growth or weaken Canon, persistence, portability, and release boundaries.
+- **Affected systems:** Compiled rules, gameplay entry, Campaign closure, persistence, context metrics, administration, artifacts, long-horizon history, and release readiness.
+- **Gameplay impact:** A campaign may work initially but become unreliable or context-prohibitive as history accumulates.
+- **Evidence needed:** Long-history stress, bounded active context, measured tool economics, multi-turn integrity, artifact parity, real-host boundary reporting, and a blocker-aware release-readiness audit.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized v1.1 planning makes integrated acceptance the terminal dependency, not a substitute for focused task validation.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
 

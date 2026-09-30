@@ -251,9 +251,10 @@ foreach ($status in $roadmapStatuses) {
 $featureCompleteState = $roadmap -match '(?m)^\*\*Repository Status: Feature Complete — Gameplay Validation Ongoing\*\*$'
 $releasedState = $roadmap -match '(?m)^\*\*Repository Status: Eternal Cycle v1\.0\.0 — Released\*\*$'
 if ($releasedState) {
-    $unfinished = @($roadmapStatuses | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
+    $prePhase13Roadmap = [regex]::Match($roadmap, '(?ms)\A(?<body>.*?)(?=^## Phase 13 — Future Revisions)').Groups['body'].Value
+    $unfinished = @([regex]::Matches($prePhase13Roadmap, '(?m)^- \[(.)\] ') | Where-Object { $_.Groups[1].Value -notin @('x', '∞') })
     if ($unfinished.Count -gt 0) {
-        Add-ValidationError "Released roadmap contains $($unfinished.Count) unfinished checklist item(s)."
+        Add-ValidationError "Released roadmap contains $($unfinished.Count) unfinished pre-Phase-13 checklist item(s)."
     }
     if ($phaseMatches.Count -eq 1 -and $phaseMatches[0].Groups[1].Value -ne 'Phase 13 — Future Revisions') {
         Add-ValidationError 'Released roadmap must identify Phase 13 — Future Revisions as the current phase.'
@@ -310,9 +311,7 @@ if ($releasedState) {
         '**Release:** Eternal Cycle v1.0.0 — Release 1.',
         '## Phase 13 — Future Revisions',
         '**Status: Active**',
-        '- [∞] **Future Revisions**',
-        '**Approved pending objectives:** None.',
-        '**Selected implementation objective:** None.'
+        '- [∞] **Future Revisions**'
     )) {
         if ($roadmap -notmatch [regex]::Escape($requiredText)) {
             Add-ValidationError "Released roadmap lacks required Phase 12/13 governance: $requiredText"
@@ -328,6 +327,17 @@ if ($releasedState) {
     }
     elseif ($phase13Section.Groups['body'].Value -notmatch '(?s)- \[∞\] \*\*Future Revisions\*\*.*\z') {
         Add-ValidationError 'Future Revisions must remain the final rolling Phase 13 objective.'
+    }
+    else {
+        foreach ($requiredText in @(
+            '**Approved pending objectives:** FR-022 through FR-036',
+            '**Selected implementation objective:** None.',
+            '**Latest completed objective:** FR-021'
+        )) {
+            if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
+                Add-ValidationError "Phase 13 planning state lacks required invariant: $requiredText"
+            }
+        }
     }
 
     $versionPath = Join-Path $rootPath 'VERSION'
@@ -449,6 +459,47 @@ else {
 $allFutureIds = @($futureEntries + $roadmappedEntries + $closedEntries | ForEach-Object { $_.Groups['id'].Value })
 foreach ($duplicate in $allFutureIds | Group-Object | Where-Object { $_.Count -gt 1 }) {
     Add-ValidationError "Duplicate Future Revision ID across lifecycle sections: $($duplicate.Name)"
+}
+
+$v11PlanPath = Join-Path $rootPath 'design/V1_1_FUTURE_REVISION_PLAN.md'
+if (-not (Test-Path -LiteralPath $v11PlanPath)) {
+    Add-ValidationError 'Missing owner-authorized v1.1 Future Revision plan.'
+}
+else {
+    $v11Plan = Get-Content -Raw -LiteralPath $v11PlanPath
+    $v11PlanIds = @(22..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $roadmappedIds = @($roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
+
+    foreach ($id in $v11PlanIds) {
+        if ($v11Plan -notmatch "(?m)^### $id - ") {
+            Add-ValidationError "v1.1 Future Revision plan lacks task section: $id"
+        }
+        if ($roadmappedIds -notcontains $id) {
+            Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
+        }
+        if ($roadmap -notmatch [regex]::Escape("- [ ] **$id")) {
+            Add-ValidationError "v1.1 Future Revision task is not pending in the roadmap: $id"
+        }
+    }
+
+    foreach ($number in 1..34) {
+        $token = '| `#' + $number + '` '
+        if ($v11Plan -notmatch [regex]::Escape($token)) {
+            Add-ValidationError "v1.1 Future Revision plan lacks master traceability for requirement #$number."
+        }
+    }
+    foreach ($number in 1..9) {
+        $token = '| `8.' + $number + '` '
+        if ($v11Plan -notmatch [regex]::Escape($token)) {
+            Add-ValidationError "v1.1 Future Revision plan lacks Canon-integrity traceability for case 8.$number."
+        }
+    }
+    foreach ($number in 1..10) {
+        $token = '| WP' + $number + ' - '
+        if ($v11Plan -notmatch [regex]::Escape($token)) {
+            Add-ValidationError "v1.1 Future Revision plan lacks work-area traceability for WP$number."
+        }
+    }
 }
 
 foreach ($requiredText in @(
