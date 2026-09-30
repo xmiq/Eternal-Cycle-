@@ -4944,6 +4944,22 @@ The compact mandatory set of authority, agency, simulation, ownership, read, unk
 
 A replaceable Derived index of provenance-bearing rule chunks and applicability metadata built from Repository Canon. It owns no rule or campaign fact.
 
+## Compiled Rules Artifact
+
+A provider-neutral, versioned, deterministic Derived representation of Repository Canon containing stable rule-snippet identity, executable text, portable source provenance, applicability, dependencies, optional retrieval metadata, compatibility identity, and integrity evidence. It is an interchange contract, not Rule Canon, Campaign Canon, a provider location, or a runtime search result.
+
+## Artifact Format Version
+
+The independent compatibility version of a Compiled Rules Artifact's serialized semantic contract. It is distinct from Eternal Cycle product version, compiler contract and implementation versions, source release, immutable source identity, and imported Rule Release identity.
+
+## Rule Snippet ID
+
+The stable identity of one compiled executable rule-text unit, formed in artifact format 1 from its Rule Source ID and optional stable source anchor. Array position, build time, provider, token estimate, and retrieval metadata do not determine it.
+
+## Artifact Integrity Digest
+
+The deterministic digest of a Compiled Rules Artifact's normalized semantic projection, excluding the digest field itself. It validates artifact content without making JSON formatting or acquisition metadata authoritative.
+
 ## Rule Context
 
 A bounded Derived selection of the Runtime Rule Kernel and relevant Core, World/Ruleset, optional-module, Campaign Mode, operation, and topic rule chunks for one runtime operation. Campaign Canon is retrieved separately under the same Campaign ID.

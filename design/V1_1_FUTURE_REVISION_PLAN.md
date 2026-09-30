@@ -4,7 +4,7 @@
 
 This document is the owner-authorized Phase 13 implementation plan for the remaining v1.1 work. It reconciles the planning requirements numbered `#1` through `#34` and Canon-integrity cases `8.1` through `8.9` against the released architecture and completed FR-011, FR-012, and FR-017 through FR-021 work.
 
-This is planning governance, not implementation. The tasks below are Roadmapped but none is selected for implementation. Each future change still requires an explicit owner selection, focused validation, audit, and commit.
+This is planning governance, not blanket implementation authorization. Completed task markers preserve implementation history; each remaining change still requires an explicit owner selection, focused validation, audit, and commit.
 
 ## Existing Foundation
 
@@ -63,6 +63,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-022 - Portable Compiled Rules Artifact Contract
 
+- **Status:** Complete. See the [Compiled Rules Artifact](../docs/rules/COMPILED_RULES_ARTIFACT.md) and [FR-022 audit](audits/FR_022_COMPILED_RULES_ARTIFACT_AUDIT.md).
 - **Primary classification:** Eternal Cycle-wide contract.
 - **Scope:** Define a storage- and provider-neutral, versioned artifact for derived snippets, stable snippet identity, executable content, provenance, retrieval vocabulary, weights, dependencies, applicability, compiler/format versions, manifests, integrity, and compatibility.
 - **Boundaries:** Define schemas and conformance fixtures only. Do not implement the compiler, GitHub acquisition, SQL import, or release publication.
@@ -201,7 +202,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 | Requirement | Disposition | Owning task or evidence |
 | --- | --- | --- |
 | `#1` Offline Rules Compiler | Partial in FR-018; remaining work Roadmapped | FR-023, FR-024 |
-| `#2` Portable Compiled Rules artifact | Pending | FR-022, FR-023 |
+| `#2` Portable Compiled Rules artifact | Contract complete; compiler implementation pending | FR-022, FR-023 |
 | `#3` Compiled snippets as normal runtime domain | Partial runtime chunks exist | FR-026 |
 | `#4` Intelligent indexed retrieval | Partial selector/topic retrieval exists | FR-024, FR-026 |
 | `#5` Compact Rule Packets | Implemented by FR-021; retain measurement | [FR-021 audit](audits/FR_021_GM_RUNTIME_BOOTSTRAP_REPAIR_AUDIT.md), FR-026, FR-031 |
@@ -277,4 +278,4 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ## Planning Completion Boundary
 
-This plan authorizes the existence and ordering of FR-022 through FR-036 only. It does not select a current implementation task, change `VERSION`, move a release tag, publish an artifact, alter runtime behavior, or add campaign data. The next implementation begins only when the project owner explicitly selects one Roadmapped revision.
+This plan authorizes the existence and ordering of FR-022 through FR-036 only. It does not by itself select a current implementation task, change `VERSION`, move a release tag, publish an artifact, alter runtime behavior, or add campaign data. After each completed task, the next implementation begins only when the project owner explicitly selects one remaining Roadmapped revision.

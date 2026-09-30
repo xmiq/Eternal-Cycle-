@@ -5417,3 +5417,15 @@ GM Host Configuration is tracked against the current canonical bootstrap revisio
 ## D-1354 — Constrained Record Patches Reuse the Full Persistence Transaction
 
 A Managed implementation may reduce context pressure by accepting set-only patches for existing authoritative object records. The service loads current state, preserves omitted fields, rejects identity/reference changes and creates/deletes, expands the result into full owner-routed mutations, and uses the existing expected-version, revision, idempotency, validation, activation, read-back, and receipt contract. It exposes neither arbitrary SQL nor omission-as-deletion behavior.
+
+## D-1355 — Compiled Rules Artifacts Are Provider-Neutral Derivatives
+
+Repository Canon remains authoritative over every Compiled Rules Artifact, imported representation, search index, and Rule Packet. The portable artifact carries executable snippets, provenance, applicability, dependencies, retrieval metadata, compatibility identity, and integrity without requiring or identifying an acquisition provider, host language, database, operating system, MCP implementation, or installation layout. Acquisition metadata never changes artifact semantic identity.
+
+## D-1356 — Compiled Snippet Identity Is Stable and Source-Bound
+
+Artifact format 1 identifies a snippet by its stable Rule Source ID plus an optional stable source anchor. Array position, build time, provider, token estimate, and retrieval vocabulary do not determine identity. Source and manifest hashes prove provenance, while a length-prefixed UTF-8 semantic digest proves normalized artifact content independently of JSON property order and formatting.
+
+## D-1357 — Retrieval Metadata Cannot Change Rule Meaning
+
+Compiled retrieval terms, weights, relationships, selectors, indexes, and ordering are Derived navigation metadata. They may locate or prioritize executable source-derived text but cannot add, omit, or reinterpret rule meaning. Vocabulary generation and audit remain separate from the artifact carrier, and runtime ranking and Rule Packet assembly remain separate from both.

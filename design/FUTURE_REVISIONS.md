@@ -58,22 +58,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-022 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
+FR-023 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
-
-### FR-022 - Portable Compiled Rules Artifact Contract
-
-- **Status:** Roadmapped
-- **Issue:** The current derived rule index has no provider-neutral portable artifact contract suitable for offline compilation, validation, import, and release packaging.
-- **Affected systems:** Repository Canon, Rule Compilation, Managed Rule Publication, provenance, compatibility, validation, and release artifacts.
-- **Gameplay impact:** Runtimes remain coupled to source-time compilation and cannot share one reviewed compiled corpus reliably.
-- **Evidence needed:** Conformance fixtures covering identity, provenance, vocabulary, dependencies, applicability, format/compiler versions, manifests, integrity, and compatibility without implementation lock-in.
-- **Suggested future phase:** Phase 13 - Future Revisions.
-- **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#2` and `#34` to a bounded artifact-contract prerequisite.
-- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
-- **Planning specification:** [FR-022 task](V1_1_FUTURE_REVISION_PLAN.md#fr-022---portable-compiled-rules-artifact-contract)
 
 ### FR-023 - Deterministic Offline Rules Compiler
 
@@ -258,6 +245,20 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
+
+### FR-022 - Portable Compiled Rules Artifact Contract
+
+- **Status:** Closed
+- **Issue:** The current derived rule index had no provider-neutral portable artifact contract suitable for offline compilation, validation, import, and release packaging.
+- **Affected systems:** Repository Canon, Rule Compilation, Managed Rule Publication, provenance, compatibility, validation, and release artifacts.
+- **Gameplay impact:** Runtimes remained coupled to source-time compilation and could not share one reviewed compiled corpus reliably.
+- **Evidence needed:** Conformance fixtures covering identity, provenance, vocabulary, dependencies, applicability, format/compiler versions, manifests, integrity, and compatibility without implementation lock-in.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Implemented as a normative provider-neutral format-1 contract and JSON Schema, deterministic semantic digest and stable snippet identity rules, small valid fixtures, a strict C# reference validator, malformed-artifact regressions, navigation, governance, and repository validation. The work leaves compiler emission, vocabulary generation, acquisition/import, runtime ranked retrieval, and release packaging to FR-023 through FR-026 and FR-034.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-022 task](V1_1_FUTURE_REVISION_PLAN.md#fr-022---portable-compiled-rules-artifact-contract)
+- **Closure references:** [Compiled Rules Artifact](../docs/rules/COMPILED_RULES_ARTIFACT.md), [format-1 JSON Schema](../docs/rules/contracts/compiled-rules-artifact-v1.schema.json), [conformance fixtures](../examples/conformance/compiled-rules-artifact/v1/), and [FR-022 Audit](audits/FR_022_COMPILED_RULES_ARTIFACT_AUDIT.md)
 
 ### FR-021 - Durable Managed Operations and Progressive Rule Readiness
 

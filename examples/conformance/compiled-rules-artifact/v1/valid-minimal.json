@@ -1,0 +1,55 @@
+{
+  "artifactFormatVersion": 1,
+  "compiler": {
+    "contractVersion": "1",
+    "implementationId": "fixture-compiler",
+    "implementationVersion": "1.0.0"
+  },
+  "ruleset": {
+    "rulesetId": "fixture-rules",
+    "repositoryVersion": "fixture-1",
+    "source": {
+      "scheme": "content-tree-sha256",
+      "value": "fixture-source-minimal"
+    },
+    "manifestPath": "rules/manifest.json",
+    "manifestSha256": "D03BF081342B3A2C4E2754D88C9240CEB83FB6D90B6DC6DD92A743DE206E4839"
+  },
+  "ruleSources": [
+    {
+      "ruleSourceId": "runtime-kernel",
+      "sourcePath": "rules/kernel.md",
+      "sourceSha256": "B67CF3D98B7A8C005CD7F0BD570D802B25ED9B19A0C3FBF4898006089CA59427",
+      "applicability": {
+        "layer": "RuntimeKernel",
+        "worldModelIds": [],
+        "moduleIds": [],
+        "campaignModes": ["*"],
+        "operations": ["*"],
+        "topics": [],
+        "priority": 1000,
+        "alwaysInclude": true,
+        "preparationTier": "RuntimeKernel"
+      },
+      "dependencyRuleSourceIds": []
+    }
+  ],
+  "snippets": [
+    {
+      "snippetId": "runtime-kernel",
+      "ruleSourceId": "runtime-kernel",
+      "sourceAnchor": null,
+      "content": "# Kernel\n\nAuthority remains with Repository Canon.",
+      "contentSha256": "B67CF3D98B7A8C005CD7F0BD570D802B25ED9B19A0C3FBF4898006089CA59427",
+      "estimatedTokens": 16,
+      "retrieval": {
+        "terms": [],
+        "relationships": []
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "SHA-256",
+    "artifactSha256": "32F5B20E3DFD288A0BC15768920BED718E92369971CAC32D652EA6081FE54016"
+  }
+}

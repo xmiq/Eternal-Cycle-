@@ -330,9 +330,9 @@ if ($releasedState) {
     }
     else {
         foreach ($requiredText in @(
-            '**Approved pending objectives:** FR-022 through FR-036',
+            '**Approved pending objectives:** FR-023 through FR-036',
             '**Selected implementation objective:** None.',
-            '**Latest completed objective:** FR-021'
+            '**Latest completed objective:** FR-022'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
                 Add-ValidationError "Phase 13 planning state lacks required invariant: $requiredText"
@@ -468,12 +468,21 @@ if (-not (Test-Path -LiteralPath $v11PlanPath)) {
 else {
     $v11Plan = Get-Content -Raw -LiteralPath $v11PlanPath
     $v11PlanIds = @(22..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $pendingV11PlanIds = @(23..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
     $roadmappedIds = @($roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
+    $closedIds = @($closedEntries | ForEach-Object { $_.Groups['id'].Value })
 
     foreach ($id in $v11PlanIds) {
         if ($v11Plan -notmatch "(?m)^### $id - ") {
             Add-ValidationError "v1.1 Future Revision plan lacks task section: $id"
         }
+    }
+
+    if ($closedIds -notcontains 'FR-022' -or $roadmap -notmatch [regex]::Escape('- [x] **FR-022')) {
+        Add-ValidationError 'Completed v1.1 Future Revision FR-022 must be Closed and complete in the roadmap.'
+    }
+
+    foreach ($id in $pendingV11PlanIds) {
         if ($roadmappedIds -notcontains $id) {
             Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
         }
@@ -655,6 +664,19 @@ else {
     }
     catch {
         Add-ValidationError 'FR-021 control-plane repair regression harness failed.'
+    }
+}
+
+$fr022HarnessPath = Join-Path $rootPath 'tools/test_fr022_compiled_rules_artifact.ps1'
+if (-not (Test-Path -LiteralPath $fr022HarnessPath)) {
+    Add-ValidationError 'Missing FR-022 compiled-rules artifact regression harness.'
+}
+else {
+    try {
+        & $fr022HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-022 compiled-rules artifact regression harness failed.'
     }
 }
 
@@ -1349,6 +1371,7 @@ Write-Output 'FR-019 Managed Data Architecture: Direct/Managed strategy, namespa
 Write-Output 'FR-020 Managed First-Run: readiness, gated bootstrap, source publication, campaign discovery, diagnostics, and RC boundary checked'
 Write-Output 'FR-021 Durable Managed Operations: background publication, restart recovery, progressive readiness, dynamic priority, diagnostics, approval, and RC provenance checked'
 Write-Output 'FR-021 Control-Plane Repair: pre-migration recovery, configuration discovery, fail-safe errors, portable diagnostics, and licensing checked'
+Write-Output 'FR-022 Compiled Rules Artifact: provider neutrality, identity, provenance, applicability, dependencies, retrieval carrier, determinism, integrity, and conformance checked'
 Write-Output 'Campaign lifecycle: released normal-default bootstrap, explicit testing modes, provisional rulings, First-Life separation, and historical compatibility checked'
 Write-Output 'Canonical Visual Identity: sparse ownership, visual context, representation filtering, adoption, and regression cases checked'
 if ($releasedState) {

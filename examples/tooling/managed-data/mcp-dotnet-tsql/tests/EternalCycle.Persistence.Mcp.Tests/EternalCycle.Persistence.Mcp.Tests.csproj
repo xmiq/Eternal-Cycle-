@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EternalCycleRepositoryRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\..\..\..\..'))</EternalCycleRepositoryRoot>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,9 @@
     <ProjectReference Include="..\..\src\EternalCycle.Persistence.Mcp\EternalCycle.Persistence.Mcp.csproj" />
     <None Include="..\..\src\EternalCycle.Persistence.Mcp\DISTRIBUTION.json"
           Link="distribution-metadata.json"
+          CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(EternalCycleRepositoryRoot)\examples\conformance\compiled-rules-artifact\v1\*.json"
+          Link="Fixtures\CompiledRulesArtifact\%(Filename)%(Extension)"
           CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

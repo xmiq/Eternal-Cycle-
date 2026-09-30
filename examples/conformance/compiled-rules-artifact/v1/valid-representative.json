@@ -1,0 +1,102 @@
+{
+  "artifactFormatVersion": 1,
+  "compiler": {
+    "contractVersion": "1",
+    "implementationId": "fixture-compiler",
+    "implementationVersion": "1.0.0"
+  },
+  "ruleset": {
+    "rulesetId": "fixture-rules",
+    "repositoryVersion": "fixture-1",
+    "source": {
+      "scheme": "git-commit",
+      "value": "0123456789ABCDEF0123456789ABCDEF01234567"
+    },
+    "manifestPath": "rules/manifest.json",
+    "manifestSha256": "D03BF081342B3A2C4E2754D88C9240CEB83FB6D90B6DC6DD92A743DE206E4839"
+  },
+  "ruleSources": [
+    {
+      "ruleSourceId": "core-reincarnation",
+      "sourcePath": "rules/reincarnation.md",
+      "sourceSha256": "C259BA386A6910F10798CDC2764E1CD8F9A5462D50AFE3CA13AEF0F32745AD60",
+      "applicability": {
+        "layer": "Core",
+        "worldModelIds": [],
+        "moduleIds": [],
+        "campaignModes": ["NORMAL"],
+        "operations": ["gameplay.resolve", "reincarnation.resolve"],
+        "topics": ["reincarnation", "soul"],
+        "priority": 200,
+        "alwaysInclude": false,
+        "preparationTier": "CampaignBootstrap"
+      },
+      "dependencyRuleSourceIds": ["runtime-kernel"]
+    },
+    {
+      "ruleSourceId": "runtime-kernel",
+      "sourcePath": "rules/kernel.md",
+      "sourceSha256": "B67CF3D98B7A8C005CD7F0BD570D802B25ED9B19A0C3FBF4898006089CA59427",
+      "applicability": {
+        "layer": "RuntimeKernel",
+        "worldModelIds": [],
+        "moduleIds": [],
+        "campaignModes": ["*"],
+        "operations": ["*"],
+        "topics": [],
+        "priority": 1000,
+        "alwaysInclude": true,
+        "preparationTier": "RuntimeKernel"
+      },
+      "dependencyRuleSourceIds": []
+    }
+  ],
+  "snippets": [
+    {
+      "snippetId": "core-reincarnation#continuity",
+      "ruleSourceId": "core-reincarnation",
+      "sourceAnchor": "continuity",
+      "content": "# Reincarnation\n\nThe Soul continues while each incarnation remains a distinct life.",
+      "contentSha256": "C259BA386A6910F10798CDC2764E1CD8F9A5462D50AFE3CA13AEF0F32745AD60",
+      "estimatedTokens": 28,
+      "retrieval": {
+        "terms": [
+          {
+            "term": "past life",
+            "kind": "alternative",
+            "weight": 60
+          },
+          {
+            "term": "reincarnation",
+            "kind": "canonical",
+            "weight": 100
+          }
+        ],
+        "relationships": [
+          {
+            "fromTerm": "past life",
+            "toTerm": "reincarnation",
+            "kind": "related",
+            "weight": 50
+          }
+        ]
+      }
+    },
+    {
+      "snippetId": "runtime-kernel",
+      "ruleSourceId": "runtime-kernel",
+      "sourceAnchor": null,
+      "content": "# Kernel\n\nAuthority remains with Repository Canon.",
+      "contentSha256": "B67CF3D98B7A8C005CD7F0BD570D802B25ED9B19A0C3FBF4898006089CA59427",
+      "estimatedTokens": 16,
+      "retrieval": {
+        "terms": [],
+        "relationships": []
+      }
+    }
+  ],
+  "integrity": {
+    "algorithm": "SHA-256",
+    "artifactSha256": "AF2AF6F5E7C71C7CFEC9FC27904B3FF9A0BE5B95ECAB9CAA37227AA32D835439"
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eternal-cycle:compiled-rules-artifact:1",
+  "title": "Eternal Cycle Compiled Rules Artifact format 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifactFormatVersion",
+    "compiler",
+    "ruleset",
+    "ruleSources",
+    "snippets",
+    "integrity"
+  ],
+  "properties": {
+    "artifactFormatVersion": {
+      "const": 1
+    },
+    "compiler": {
+      "$ref": "#/$defs/compiler"
+    },
+    "ruleset": {
+      "$ref": "#/$defs/ruleset"
+    },
+    "ruleSources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/ruleSource"
+      }
+    },
+    "snippets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/snippet"
+      }
+    },
+    "integrity": {
+      "$ref": "#/$defs/integrity"
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[\\p{L}\\p{N}][^\\s\\p{Cc}#/:\\\\]*$"
+    },
+    "boundedValue": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!.*[\\p{Cc}]).*\\S.*$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)(?!.*[:\\\\\\p{Cc}])[^/]+(?:/[^/]+)*$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9A-F]{64}$"
+    },
+    "selector": {
+      "oneOf": [
+        {
+          "const": "*"
+        },
+        {
+          "$ref": "#/$defs/identifier"
+        }
+      ]
+    },
+    "selectorArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/selector"
+      }
+    },
+    "compiler": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contractVersion",
+        "implementationId",
+        "implementationVersion"
+      ],
+      "properties": {
+        "contractVersion": {
+          "const": "1"
+        },
+        "implementationId": {
+          "$ref": "#/$defs/identifier"
+        },
+        "implementationVersion": {
+          "$ref": "#/$defs/boundedValue"
+        }
+      }
+    },
+    "sourceIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scheme",
+        "value"
+      ],
+      "properties": {
+        "scheme": {
+          "$ref": "#/$defs/identifier"
+        },
+        "value": {
+          "$ref": "#/$defs/boundedValue"
+        }
+      }
+    },
+    "ruleset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rulesetId",
+        "repositoryVersion",
+        "source",
+        "manifestPath",
+        "manifestSha256"
+      ],
+      "properties": {
+        "rulesetId": {
+          "$ref": "#/$defs/identifier"
+        },
+        "repositoryVersion": {
+          "$ref": "#/$defs/boundedValue"
+        },
+        "source": {
+          "$ref": "#/$defs/sourceIdentity"
+        },
+        "manifestPath": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "manifestSha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "layer",
+        "worldModelIds",
+        "moduleIds",
+        "campaignModes",
+        "operations",
+        "topics",
+        "priority",
+        "alwaysInclude",
+        "preparationTier"
+      ],
+      "properties": {
+        "layer": {
+          "enum": [
+            "RuntimeKernel",
+            "Core",
+            "World",
+            "OptionalModule"
+          ]
+        },
+        "worldModelIds": {
+          "$ref": "#/$defs/selectorArray"
+        },
+        "moduleIds": {
+          "$ref": "#/$defs/selectorArray"
+        },
+        "campaignModes": {
+          "$ref": "#/$defs/selectorArray"
+        },
+        "operations": {
+          "$ref": "#/$defs/selectorArray"
+        },
+        "topics": {
+          "$ref": "#/$defs/selectorArray"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": -10000,
+          "maximum": 10000
+        },
+        "alwaysInclude": {
+          "type": "boolean"
+        },
+        "preparationTier": {
+          "enum": [
+            "RuntimeKernel",
+            "CampaignBootstrap",
+            "ImmediateGameplayCore",
+            "CampaignRelevant",
+            "Standard",
+            "OptionalRare"
+          ]
+        }
+      }
+    },
+    "ruleSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ruleSourceId",
+        "sourcePath",
+        "sourceSha256",
+        "applicability",
+        "dependencyRuleSourceIds"
+      ],
+      "properties": {
+        "ruleSourceId": {
+          "$ref": "#/$defs/identifier"
+        },
+        "sourcePath": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "sourceSha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "applicability": {
+          "$ref": "#/$defs/applicability"
+        },
+        "dependencyRuleSourceIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/identifier"
+          }
+        }
+      }
+    },
+    "retrievalTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "term",
+        "kind",
+        "weight"
+      ],
+      "properties": {
+        "term": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "kind": {
+          "$ref": "#/$defs/identifier"
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        }
+      }
+    },
+    "retrievalRelationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fromTerm",
+        "toTerm",
+        "kind",
+        "weight"
+      ],
+      "properties": {
+        "fromTerm": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "toTerm": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "kind": {
+          "$ref": "#/$defs/identifier"
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        }
+      }
+    },
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "terms",
+        "relationships"
+      ],
+      "properties": {
+        "terms": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/retrievalTerm"
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/retrievalRelationship"
+          }
+        }
+      }
+    },
+    "snippet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "snippetId",
+        "ruleSourceId",
+        "sourceAnchor",
+        "content",
+        "contentSha256",
+        "estimatedTokens",
+        "retrieval"
+      ],
+      "properties": {
+        "snippetId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 257
+        },
+        "ruleSourceId": {
+          "$ref": "#/$defs/identifier"
+        },
+        "sourceAnchor": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/identifier"
+            }
+          ]
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentSha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "estimatedTokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "retrieval": {
+          "$ref": "#/$defs/retrieval"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "algorithm",
+        "artifactSha256"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "SHA-256"
+        },
+        "artifactSha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

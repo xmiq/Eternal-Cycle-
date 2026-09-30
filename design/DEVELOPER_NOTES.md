@@ -3086,3 +3086,15 @@ After the FR-018 commit, return to owner-mediated Phase 13 Future Revision intak
 - **Terminology and decisions:** No new canonical term or gameplay decision was required. The plan reuses current authority, persistence, Rule Domain, Managed Service, and Future Revision terminology.
 - **Unresolved questions:** None block planning. Implementation evidence may still refine task internals without changing their ownership boundaries.
 - **Exact resume point:** The project owner explicitly selects a dependency-ready Roadmapped objective. FR-022 and FR-030 are the initial independent candidates; do not begin either automatically.
+
+## Phase 13 Checkpoint - FR-022 Compiled Rules Artifact Contract
+
+- **Completed objective:** FR-022 — Portable Compiled Rules Artifact Contract.
+- **Normative contract:** Added provider-neutral format 1 with stable snippet identity, executable normalized content, portable source/manifest provenance, existing applicability selectors and preparation tiers, source dependencies, optional retrieval metadata, compatibility identity, and deterministic semantic SHA-256.
+- **Portable assets:** Added a closed Draft 2020-12 JSON Schema plus minimal and representative valid fixtures under `examples/conformance/`.
+- **Reference proof:** Added a strict C# parser/validator and 16 focused tests covering valid fixtures, stable IDs, malformed identity/provenance/selectors/content/retrieval, unsupported versions, dangling dependencies, duplicate/unknown/missing JSON, null structure, enum bounds, and digest mismatches.
+- **Schema/migration:** No campaign or Managed database migration was required; the artifact is a portable interchange boundary and no runtime store/import behavior was added.
+- **Downstream boundary:** FR-023 compiler, FR-024 vocabulary audit, FR-025 acquisition/import, FR-026 runtime ranked retrieval/store, and FR-034 release packaging remain pending.
+- **Validation:** 16 focused and 179 complete reference tests passed; the FR-022 harness passed 32 assertions; full repository validation passed across 291 Markdown files, 7,239 links, all existing regression harnesses, governance, navigation, terminology, and repository boundaries.
+- **Current active task:** none after commit; Phase 13 Future Revisions remains `[∞]` and no next objective is selected.
+- **Exact resume point:** the project owner selects a dependency-ready objective. FR-023, FR-025, and FR-030 are available; do not begin one automatically.
