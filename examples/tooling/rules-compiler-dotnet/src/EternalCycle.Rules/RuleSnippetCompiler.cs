@@ -26,7 +26,10 @@ public sealed record RuleSnippetCandidate(
     RuleSnippetApplicability Applicability,
     IReadOnlyList<string> DependencyRuleSourceIds,
     int SourceOrder,
-    int SectionOrder);
+    int SectionOrder)
+{
+    public CompiledRulesRetrievalMetadata Retrieval { get; init; } = new();
+}
 
 public sealed record RuleSnippetSection(
     string? SourceAnchor,

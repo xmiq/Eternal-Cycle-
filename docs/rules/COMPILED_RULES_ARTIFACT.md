@@ -168,6 +168,14 @@ Identifiers are NFC-normalized, begin with a letter or digit, are at most 128 ch
 
 No timestamp, random identifier, host path, locale-formatted value, provider download metadata, or array position participates in semantic identity. JSON object property order and insignificant JSON whitespace do not affect the semantic digest.
 
+### Deterministic Reference Assembly and Serialization
+
+The portable reference compiler assembles a format-1 artifact only from a validated materialized Rule Source snapshot and its deterministic snippet candidates. Artifact Rule Sources and snippets follow format-1 canonical ordering; set-like selector, dependency, term, and relationship collections use ordinal ordering. The assembler preserves exact source-byte hashes separately from normalized snippet content and validates the completed artifact through this contract before emission.
+
+The reference canonical serialization is compact UTF-8 JSON with no byte-order mark or trailing newline. It uses the property order shown by the format-1 schema, emits required nullable fields explicitly, and does not omit required empty arrays. This serialized representation is deterministic for identical semantic artifacts, while the semantic `artifactSha256` remains the length-prefixed digest defined below rather than a hash of JSON bytes.
+
+Deterministic emission applies to identical authoritative inputs. Relocating identical bytes to another physical source root, changing the process working directory, or changing culture does not affect output. Text normalization may make LF and CRLF sources produce equivalent executable snippets, but their exact source-byte hashes remain distinct. Because those hashes participate in format-1 semantic identity, the resulting artifact digests and serialized bytes also remain distinct while each variant remains independently reproducible.
+
 ## Semantic Integrity Digest
 
 Format 1 uses `SHA-256`. The digest is calculated over a length-prefixed UTF-8 semantic projection rather than raw JSON bytes, so property ordering and formatting cannot change artifact identity.
