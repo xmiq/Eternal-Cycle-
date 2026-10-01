@@ -9,6 +9,20 @@ This reference .NET tool compiles an already-materialized Eternal Cycle Rule Sou
 - `tests/EternalCycle.Rules.Tests` validates portable compilation semantics.
 - `tests/EternalCycle.Rules.Compiler.Tests` validates executable behavior, diagnostics, exit codes, filesystem handling, and byte reproducibility.
 
+## Observational Audit
+
+Use `audit` in place of `compile` with the same required options and a **separate** `--output` path. It runs the shared portable compilation pipeline in memory and writes only deterministic audit JSON, not another artifact. `RuleVocabularyAuditor.Analyze(snapshot, compilation, policy)` and `RuleVocabularyAuditWriter.Write(report)` are the direct-library equivalents.
+
+Optional `--audit-policy <path>` accepts a closed JSON object, for example:
+
+```json
+{"minimumBroadTargets":8,"minimumBroadCoveragePercent":50,"largeSnippetTokens":2048,"genericTerms":[]}
+```
+
+All fields are optional; defaults are shown above. Generic terms are explicit reviewer input, not a built-in word list. The [audit contract](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md#observational-quality-audit) defines exact metric arithmetic, severity, stable finding codes, and ordering. Ratios are unrounded numerator/denominator pairs; a zero denominator is undefined. Warnings never mutate metadata or invalidate ordinary compilation.
+
+Reports include covered/uncovered snippets, unused concepts, term/concept/source target sets, coalesced origins, source-only inheritance, exclusive binding support, and explicit breadth/generic/token-boundary review signals. They contain no runtime query scores. Audit output uses existing atomic writes and input protection, may replace only another format-1 audit report, and cannot replace an artifact, policy, source, manifest, directory, or unrecognized prior file. Compile likewise refuses an existing audit report. No report or output parent is created on invalid input.
+
 ## Usage
 
 ```powershell
@@ -35,9 +49,9 @@ Successful diagnostics report the output path, Rule Source and snippet counts, s
 | ---: | --- |
 | `0` | Success or help |
 | `2` | Command or argument usage error |
-| `3` | Materialized source or manifest input error |
+| `3` | Materialized source, manifest, or audit-policy input error |
 | `4` | Snippet compilation or reviewed vocabulary enrichment error |
-| `5` | Artifact assembly, contract, or serialization validation error |
+| `5` | Artifact validation/emission or invalid audit evidence |
 | `6` | Output path or filesystem write error |
 | `70` | Unexpected internal failure or cancellation |
 
@@ -51,6 +65,6 @@ Identical authoritative manifest and source bytes plus identical explicit identi
 
 Normal `compile` automatically processes the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). A validates input, B resolves exact bindings, and C projects each association into a format-1 term: normalized wording, reviewed concept ID as `kind`, and exact reviewed weight. Using concept categories preserves shared terms without conflicting weights. Canonical/alias/phrase origin and review rationale remain in the portable compiler result for the later audit, not in every artifact term.
 
-No-vocabulary compilation retains exact legacy output. Reviewed metadata and exact manifest provenance participate in the existing semantic digest; even normalized-equivalent declarations with different authoritative bytes retain different provenance. No additional command/flag, scoring, synonym generation, or runtime retrieval is added. Quality reports and canonical curation remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md).
+No-vocabulary compilation retains exact legacy output. Reviewed metadata and exact manifest provenance participate in the existing semantic digest; even normalized-equivalent declarations with different authoritative bytes retain different provenance. D adds the separate observational `audit` command; normal compilation is unchanged. No scoring, synonym generation, or runtime retrieval is added. Canonical curation and final acceptance remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md).
 
 The small [integration manifest](fixtures/reviewed-vocabulary/manifest.json) with [core](fixtures/reviewed-vocabulary/core.txt) and [operations](fixtures/reviewed-vocabulary/operations.txt) text is test material only, not canonical Eternal Cycle vocabulary or mechanics. It exercises shared wording, precise/source-wide bindings, overlapping origins, and CLI/library equality.

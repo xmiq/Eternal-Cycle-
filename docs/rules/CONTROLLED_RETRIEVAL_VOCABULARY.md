@@ -4,7 +4,7 @@
 
 Controlled vocabulary is reviewed navigation input for deterministic compilation, not additional executable rules. It connects precise concepts and approved alternative language to selected snippets without asking a runtime AI to invent synonym sets.
 
-**Implementation checkpoint:** FR-024A validates reviewed input; B resolves exact targets and produces term-origin evidence; C integrates those associations into validated format-1 artifacts and normal standalone compilation. Quality reports and canonical corpus curation remain pending under the [FR-024 execution plan](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
+**Implementation checkpoint:** FR-024A validates reviewed input; B resolves exact targets and produces term-origin evidence; C integrates validated artifacts and normal standalone compilation; D supplies observational quality reports. Canonical corpus curation and final acceptance remain pending under the [FR-024 execution plan](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
 
 ## Document Control
 
@@ -18,7 +18,7 @@ Controlled vocabulary is reviewed navigation input for deterministic compilation
 
 A Rule Source manifest may contain an optional `retrievalVocabulary` object. Keeping reviewed input in the manifest makes its exact authoritative bytes part of the existing manifest SHA-256. No extra file lookup or acquisition-provider capability is needed. Omit the property for legacy payloads; explicit `null` is invalid.
 
-This is an additive reference manifest-input extension. It does not change artifact format `1`, compiler contract `"1"`, snippet identity, or the existing artifact carrier. Older compilers are not required to accept this new manifest property; producers using it must select a compiler that supports this input. The canonical manifest remains vocabulary-free through C; E owns corpus curation.
+This is an additive reference manifest-input extension. It does not change artifact format `1`, compiler contract `"1"`, snippet identity, or the existing artifact carrier. Older compilers are not required to accept this new manifest property; producers using it must select a compiler that supports this input. The canonical manifest remains vocabulary-free through D; E owns corpus curation.
 
 The manifest reviewer approves each concept, alternative, weight, and association. An alias is not a new mechanic or a canonical terminology synonym. A weight is a bounded retrieval signal, not a runtime scoring formula, success probability, or mechanical bonus. FR-026 owns query interpretation, ranking, and result selection.
 
@@ -153,7 +153,66 @@ Enrichment fails atomically through `RuleVocabularyEnrichmentException` with a b
 
 The CLI preserves normal exit categories: `3` for invalid materialized/vocabulary input, `4` for snippet compilation or vocabulary enrichment, and `5` for artifact validation/emission. Structured codes and bounded messages are retained; failure creates no partial artifact, does not replace existing output, and does not create output parents before validation. Normal output still uses atomic ordinary-file replacement, compact UTF-8 without BOM or trailing newline, and refuses manifest/source/directory collisions.
 
-Collision breadth, generic wording, weak coverage, unused definitions, and snippet-boundary quality require the later deterministic audit. That report is Derived evidence, never rules authority. Compilation must never invent a missing binding, silently broaden it, or discard a failed required validation.
+Collision breadth, generic wording, weak coverage, unused definitions, and numeric snippet-boundary signals are exposed by the audit below. That report is Derived evidence, never rules authority. Compilation must never invent a missing binding, silently broaden it, or discard a failed required validation.
+
+## Observational Quality Audit
+
+[`RuleVocabularyAuditor.Analyze(snapshot, compilation, policy)`](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/RuleVocabularyAuditor.cs) consumes A's validated definitions and C's successful artifact plus original B candidates/origins. It performs no file reads, text recompilation, prose classification, acquisition, or runtime query evaluation. A/B validation is reused to detect invalid mutable input, stale origins, missing targets, or evidence inconsistent with the artifact; it does not implement a second vocabulary validator.
+
+The structured `RuleVocabularyAuditReport` is a separate analysis report, not a second compiled-rules artifact. It carries report format `1`, artifact/manifest hashes, normalized review policy, summary, snippet coverage, concepts, term target sets, binding support, association origins, and findings. Invalid evidence returns Error findings and empty analysis rows; zero metrics on an invalid report are not successful measurements. Invalid caller policy throws `ArgumentException`; the CLI reports `AUDIT_POLICY_INVALID` as input failure.
+
+Report rows use ordinal semantic ordering: snippet ID; concept ID; term; binding source/scope/anchor; association snippet/concept/term/origin kind. Source/snippet/term target sets are distinct ordinal arrays. Diagnostic identity is `(code, subjectKind, subjectId)`, not an array index. A binding subject is the unambiguous source/scope/nullable-anchor tuple separated by `/`; identifiers cannot contain that separator. Findings sort Error, Warning, Information, then ordinal code/subject kind/subject ID. Messages are fixed and bounded.
+
+`RuleVocabularyAuditWriter.Write(report)` emits one compact UTF-8 JSON representation, without BOM or trailing newline. Record declaration order defines property order; arrays are already canonical, enum names are strings, integers are invariant, and required null/empty values remain explicit. No dictionaries, timestamps, random IDs, acquisition paths, machine identity, or private reasoning enter the report. Only reviewed terms and logical identities are copied; full rationale remains in the original compiler evidence. No additional semantic audit digest is introduced: a report byte SHA-256 can be used for comparison, separately from artifact semantic/byte hashes.
+
+### Metric Definitions
+
+| Metric | Exact meaning |
+| --- | --- |
+| `sourceCount`, `snippetCount` | Validated artifact source and snippet counts. |
+| `conceptCount`, `canonicalTermCount` | Reviewed concepts and their one canonical term each, including unused definitions. |
+| `aliasCount`, `phraseCount`, `bindingCount` | Reviewed alternative declarations by kind and unique source/scope/anchor bindings, not multiplied by target count. |
+| `effectiveAssociationCount`, `retainedOriginCount` | Unique snippet/concept/term/origin-kind associations and the sum of all distinct binding origins supporting them. |
+| `coveredSnippetCount`, `uncoveredSnippetCount` | Snippets with at least one association versus none. Absence does not declare intentional exclusion or defective prose. |
+| `conceptsWithAliases`, `conceptsWithoutAliases` | Concepts with at least one Alias versus zero; a Phrase is not an Alias. |
+| `conceptsWithTargets`, `conceptsWithoutTargets` | Concepts producing at least one effective target versus none. |
+| `uniqueTermCount` | Distinct normalized reviewed text across all concepts, including unused terms. |
+| `multiOriginAssociationCount`, `sourceOnlyAssociationCount` | Associations with multiple binding origins, and associations whose origins are all explicitly source-wide. |
+| `averageAssociationsPerCoveredSnippet`, `maximumAssociationsPerSnippet` | Exact association-count/covered-snippet-count ratio, and largest per-snippet association count. |
+| `averageTargetSnippetsPerTerm`, `maximumTargetSnippetsPerTerm` | Sum of distinct target counts per normalized term divided by unique term count, and largest term target count. Shared concept targets are counted once per term. |
+| `errorCount`, `warningCount`, `informationCount` | Finding counts by severity, not acceptance scores. |
+
+Ratios retain integer `numerator` and `denominator` without reduction or rounding; `0/0` means the average is undefined, not zero. Term `corpusCoverage` is distinct target count / all snippet count; a percentage is that ratio multiplied by 100. Concept rows include canonical wording, aliases/phrases, binding/association counts, target snippets/sources, and shared terms. Binding rows include concepts, target snippets, supported association count, and exclusive association count (origins consisting only of that binding). Term rows expose per-concept origin kinds, exact weights, target sets, source sets, and whether concept target sets differ. Association rows retain every supporting binding identity.
+
+### Severity and Review Policy
+
+Errors invalidate the quality result because input or compiled evidence violates an established invariant. Warnings request review of valid metadata. Information measures or explains valid topology; it is not a penalty. No finding modifies a term, weight, binding, snippet, artifact, or digest, and no warning makes ordinary `compile` fail.
+
+`RuleVocabularyAuditPolicy` has explicit portable defaults:
+
+- `minimumBroadTargets = 8` and `minimumBroadCoveragePercent = 50`: a term or binding warns only when **both** inclusive thresholds hold. Requiring an absolute count and corpus share avoids labelling every small fixture or a small slice of a large corpus broad. These are review triage heuristics, not universal quality laws, scores, or fatal cutoffs. Comparison uses integer cross-multiplication without floating-point rounding.
+- `largeSnippetTokens = 2048`: an informational boundary-review marker based solely on the existing token estimate (one quarter of the ordinary 8K packet target), not a prose judgement or enforced split.
+- `genericTerms = []`: no implicit English stop-word list. Reviewers may explicitly supply up to 256 terms; A's normalization and ordinal deduplication apply. Only exact reviewed wording is flagged; no dictionaries, synonyms, stems, substring matching, or LLMs are consulted.
+
+| Severity | Codes and meaning |
+| --- | --- |
+| Error | Existing A/B codes such as `VOCABULARY_TERM_DUPLICATE`; duplicates of canonical/alias wording are already invalid, not a new subjective warning. |
+| Error | `VOCABULARY_AUDIT_COMPILATION_INVALID`, `VOCABULARY_AUDIT_PROVENANCE_MISMATCH`, `VOCABULARY_AUDIT_EVIDENCE_MISMATCH`: compilation validity, snapshot provenance, or reviewed/artifact support failed. |
+| Warning | `VOCABULARY_UNUSED_CONCEPT`: no effective targets. |
+| Warning | `VOCABULARY_BROAD_TERM`, `VOCABULARY_BINDING_FAN_OUT`: both configured breadth thresholds reached. |
+| Warning | `VOCABULARY_GENERIC_TERM`, `VOCABULARY_ONLY_GENERIC_TERMS`: explicit generic policy matched a term or all wording of a concept. |
+| Information | `VOCABULARY_NO_COVERAGE`, `VOCABULARY_PARTIAL_COVERAGE`, `VOCABULARY_NO_ALIASES`, `VOCABULARY_CONCEPT_EVERYWHERE`: coverage/definition observations; aliases are not mandatory. |
+| Information | `VOCABULARY_AMBIGUOUS_TERM`, `VOCABULARY_DIFFERENT_TARGET_SETS`, `VOCABULARY_MULTI_SOURCE_TERM`: shared normalized wording across concepts, differing exact target sets, or multiple sources. No semantic winner or similarity threshold is inferred. |
+| Information | `VOCABULARY_SOURCE_BINDING`, `VOCABULARY_INHERITED_ONLY`, `VOCABULARY_MULTIPLE_ORIGINS`, `VOCABULARY_BINDING_NO_UNIQUE_ASSOCIATIONS`: explicit inheritance and overlap; lack of exclusive associations does not erase distinct reviewed provenance. |
+| Information | `VOCABULARY_LARGE_SNIPPET`: existing token estimate reaches the review marker; heterogeneous English content requires a human, not metadata inference. |
+
+### CLI and Curation Handoff
+
+The standalone `audit` command uses the same required inputs as `compile`, compiles in memory using C, and writes **only** a separate report to `--output`. Optional `--audit-policy <path>` reads a closed JSON object with the four policy fields above (omitted fields use defaults). Duplicate/unknown properties, null/invalid values, and policy files larger than 1 MiB fail. `compile` does not accept this option or silently generate reports.
+
+Audit writes reuse atomic temporary-file replacement and source/manifest/directory collision guards. The policy input is also protected. Audit may replace an existing format-1 audit object, but never a compiled artifact or unrecognized/truncated file. Compile refuses to replace an audit object; thus the two output types cannot accidentally share a requested path. Invalid compilation/audit input creates no report, preserves prior output, and creates no output parents. Warnings exit successfully without dumping the report to stderr; only compact counts and a separately labelled audit byte hash accompany success.
+
+E should inspect precise term/concept target sets for positive and negative fixtures, unbound concepts and uncovered snippets for review, and overlap/breadth/generic findings with retained B rationale. E must explicitly curate definitions rather than asking D to add aliases or infer author intent. The default canonical corpus currently has no vocabulary: 10 sources, 154 uncovered snippets, zero associations/origins, zero errors/warnings, and two informational findings (no coverage and one token-boundary marker). The C fixture remains 2 sources, 4 covered snippets, 3 concepts, 4 aliases, 2 phrases, 4 bindings, 15 associations, 17 origins, zero errors/warnings, and nine informational findings. Neither corpus nor artifact bytes are changed by this audit.
 
 ## Provenance and Compatibility
 

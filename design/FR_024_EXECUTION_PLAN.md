@@ -4,13 +4,13 @@
 
 FR-024 remains one governed Future Revision: [Retrieval Vocabulary and Compiler Audit](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit). The owner selected it after FR-023 closure at `cc064d3f2644c4c55ac75787fd8ef43c1cfe3941`. A-F below are bounded execution checkpoints, not new Future Revisions or Project Phases. No other objective is selected.
 
-**Current checkpoint:** FR-024A-C complete: reviewed input, exact target resolution, deterministic associations/origins, and shared artifact/CLI integration are implemented and validated. FR-024D-F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit and the owner's requested normal branch push; do not automatically continue to the next package.
+**Current checkpoint:** FR-024A-D complete: reviewed input, exact associations/origins, shared artifact/CLI integration, and observational quality reports are implemented and validated. FR-024E-F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit and the owner's requested normal branch push; do not automatically continue to the next package.
 
 ## Existing Capability and Gaps
 
 FR-022 already supplies format-1 terms, kinds, bounded weights, local term relationships, canonical ordering, semantic integrity, schema, and conformance fixtures. FR-023 supplies safe materialized input, exact-byte provenance, deterministic snippets, candidate retrieval carriers, validated assembly, canonical writing, and an offline CLI. Existing Managed selectors/topic retrieval are compatibility constraints, not the new ranking engine.
 
-Reviewed vocabulary input, precise deterministic enrichment, inspectable term origin, and automatic artifact/CLI integration are now available. Missing work is deterministic coverage/ambiguity/breadth/boundary diagnostics, curated corpus mappings, and corpus quality fixtures. The artifact carrier is unchanged; concept IDs are controlled term categories, while B's richer origin/binding evidence remains available in the portable compilation result for D, not another interchange format. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
+Reviewed input, precise enrichment, automatic artifact/CLI integration, and deterministic coverage/ambiguity/breadth/origin/boundary diagnostics are now available. Missing work is canonical corpus curation, quality fixtures, and final acceptance. The artifact carrier is unchanged; concept IDs remain controlled term categories, while richer origin/binding evidence remains in the portable compilation result and observational audit. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
 
 ## FR-024A - Reviewed Vocabulary Input
 
@@ -50,10 +50,10 @@ Reviewed vocabulary input, precise deterministic enrichment, inspectable term or
 
 ## FR-024D - Deterministic Quality Audit
 
-- **Status:** not started.
+- **Status:** complete.
 - **Purpose:** produce reviewable compiler evidence, not executable rule content.
 - **Inputs:** reviewed definitions, B origin evidence, candidates, and C artifacts.
-- **Outputs:** deterministic metrics and bounded machine-readable audit/report exposed through the existing CLI where useful; errors, warnings, and information are distinct.
+- **Outputs:** `RuleVocabularyAuditor.Analyze(snapshot, compilation, policy)` and canonical JSON report writer; explicit standalone `audit` command with optional closed policy input. Exact counts/ratios, topology, origins, and stable Error/Warning/Information findings remain separate from immutable artifact bytes.
 - **Dependencies:** C (and B origin evidence).
 - **Files/components:** portable audit API, report writer, minimal CLI report surface, deterministic report tests, and audit documentation.
 - **Acceptance:** stable counts/identities/order with no timestamps/paths/random data; coverage, duplicate/collision/ambiguity, over-broad terms, unreachable definitions, inherited-only vocabulary, and poor snippet-boundary signals are inspectable. Explain heuristics and avoid arbitrary acceptance thresholds before corpus evidence. No private reasoning, secrets, or campaign data.
@@ -90,14 +90,14 @@ Reviewed vocabulary input, precise deterministic enrichment, inspectable term or
 | --- | --- | --- |
 | Reviewable controlled concepts, alternatives, weights | Input, associations/evidence, and lossless effective artifact metadata implemented | A, B, C |
 | Representative approved alternative locates its rule | Exact binding/alternative targeting demonstrated in isolated B fixtures; corpus acceptance pending | B, E, F |
-| Irrelevant broad associations rejected/downgraded | Explicit precision model exists; quality evidence pending | B, D, E, F |
+| Irrelevant broad associations rejected/downgraded | Exact precision model and explicit breadth/generic review signals implemented; corpus dispositions pending | B, D, E, F |
 | Vocabulary provenance reviewable | Exact manifest hash participates in artifact identity; concept/term/binding identities and all rationales retained in compilation evidence | A, B, C, F |
-| Deterministic compiler-quality audit | Not started | D, E, F |
+| Deterministic compiler-quality audit | Portable report/CLI, policy boundaries, observational integrity, repeated/relocated/culture/CWD equality validated; corpus curation and acceptance pending | D, E, F |
 | No private reasoning/campaign data | Input boundary enforced and fixtures generic; final report review pending | A-F |
 | Offline reproducibility and CLI equivalence | Legacy baseline unchanged; enriched repeated/relocated/culture/process and CLI/library equality validated; corpus acceptance pending | B, C, E, F |
 
 ## Resume Instructions
 
-On explicit continuation, read this plan, the vocabulary contract, `RuleCompilationPipeline.cs`, `RuleVocabularyEnricher.cs`, and their focused tests before FR-024D. Do not restart A-C or reread unrelated gameplay systems. D consumes retained original candidates, deterministic associations/origins, and the validated artifact from the compilation result; it must not reconstruct evidence from serialized JSON, add runtime ranking, or curate the corpus. Do not begin D automatically after C's commit and owner-requested branch push.
+On explicit continuation, read this plan, the vocabulary/audit contract, `RuleVocabularyAuditor.cs`, its tests, and the current canonical audit baseline before FR-024E. Do not restart A-D or reread unrelated gameplay systems. E reviews exact target sets and findings, curates only authorized vocabulary, and records explicit positive/negative corpus evidence; it does not implement runtime ranking. D left the canonical 10-source/154-snippet corpus unchanged with zero vocabulary and 154 uncovered snippets. Do not begin E automatically after D's commit and owner-requested branch push.
 
 Keep `VERSION` at `1.0.0`, preserve both existing release tags, and keep Future Revisions `[∞]` last. FR-024 remains the selected objective; package continuation still requires an explicit next execution request.
