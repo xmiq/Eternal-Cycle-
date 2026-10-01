@@ -4,7 +4,7 @@
 
 Controlled vocabulary is reviewed navigation input for deterministic compilation, not additional executable rules. It connects precise concepts and approved alternative language to selected snippets without asking a runtime AI to invent synonym sets.
 
-**Implementation checkpoint:** FR-024A validates reviewed input; B resolves exact targets and produces term-origin evidence; C integrates validated artifacts and normal standalone compilation; D supplies observational quality reports. Canonical corpus curation and final acceptance remain pending under the [FR-024 execution plan](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
+**Implementation status:** FR-024A-F are complete: reviewed input, exact targets and term-origin evidence, shared artifact/CLI integration, observational quality reports, canonical curation, and integrated acceptance. The [closure audit](../../design/audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) records behavior, provenance, compatibility, and quality evidence beneath the single [FR-024 objective](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
 
 ## Document Control
 

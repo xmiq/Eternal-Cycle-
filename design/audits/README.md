@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-024 Controlled Retrieval Vocabulary Acceptance Audit](FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) - A-F contract acceptance, exact canonical topology, mutation/provenance tests, deterministic artifact/report bytes, residual-gap review, compatibility, and objective closure.
 - [FR-023 Reproducible Rules Compiler Acceptance Audit](FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md) - portable materialized input, deterministic snippets and artifact bytes, standalone CLI, provenance, provider neutrality, compatibility, and downstream boundaries.
 - [FR-022 Compiled Rules Artifact Audit](FR_022_COMPILED_RULES_ARTIFACT_AUDIT.md) - provider-neutral format, stable snippet identity, portable provenance, applicability, dependencies, retrieval metadata carrier, deterministic integrity, conformance fixtures, and downstream boundaries.
 - [FR-021 GM Runtime Bootstrap and Context-Efficiency Repair Audit](FR_021_GM_RUNTIME_BOOTSTRAP_REPAIR_AUDIT.md) - canonical host bootstrap, mandatory runtime procedure, host-configuration readiness, compact Rule Packets, constrained patches, player-turn boundaries, and remaining live acceptance.

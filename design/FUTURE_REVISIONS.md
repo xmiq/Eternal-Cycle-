@@ -58,23 +58,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-024 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). The owner has selected FR-024 for implementation; its input, enrichment, artifact/CLI integration, and observational quality-audit checkpoints are complete but the objective is not closed. Roadmapping alone does not select a current implementation objective.
+FR-025 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-024 is closed after integrated acceptance; no next implementation objective is selected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
-
-### FR-024 - Retrieval Vocabulary and Compiler Audit
-
-- **Status:** Roadmapped
-- **Issue:** Existing operation/topic selectors do not provide reviewable weighted alternative terminology or compiler-quality diagnostics.
-- **Affected systems:** Offline compiler, snippet vocabulary, retrieval relevance, diagnostics, reports, and validation.
-- **Gameplay impact:** Ordinary player terminology may miss relevant rules or broad terms may return noisy contexts without explainable evidence.
-- **Evidence needed:** Alternative-term retrieval, false-positive controls, deterministic collision/coverage reports, and reviewable vocabulary provenance.
-- **Suggested future phase:** Phase 13 - Future Revisions.
-- **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning separated search-quality work from compiler construction; the owner subsequently selected FR-024 for bounded implementation. It remains Roadmapped until final acceptance and closure.
-- **Execution progress:** FR-024A-E complete and validated: reviewed input, exact associations/origins, shared artifact/CLI integration, deterministic quality reports, and reviewed canonical vocabulary/positive-negative precision fixtures. FR-024F not started; FR-024 remains selected and incomplete. See the [execution plan](FR_024_EXECUTION_PLAN.md), [E audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md), and [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).
-- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
-- **Planning specification:** [FR-024 task](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit)
 
 ### FR-025 - Provider-Neutral Artifact Acquisition and Import
 
@@ -233,6 +219,21 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
+
+### FR-024 - Retrieval Vocabulary and Compiler Audit
+
+- **Status:** Closed
+- **Issue:** Existing operation/topic selectors do not provide reviewable weighted alternative terminology or compiler-quality diagnostics.
+- **Affected systems:** Offline compiler, snippet vocabulary, retrieval relevance, diagnostics, reports, and validation.
+- **Gameplay impact:** Ordinary player terminology may miss relevant rules or broad terms may return noisy contexts without explainable evidence.
+- **Evidence needed:** Alternative-term retrieval, false-positive controls, deterministic collision/coverage reports, and reviewable vocabulary provenance.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized planning separated search-quality work from compiler construction, followed by explicit selection and A-F implementation/acceptance. Exact authored alternatives now resolve to reviewed snippet associations with retained origins; deterministic artifact/CLI/report tests, positive and negative canonical topology fixtures, mutation/provenance regressions, and compatibility checks pass. Runtime ranking remains FR-026, not an inferred FR-024 deliverable.
+- **Execution progress:** FR-024A-F complete. The canonical ten-source/154-snippet corpus has 62 concepts, 773 associations/origins, 122 covered snippets, 32 reviewed residual gaps, and three justified warnings. No next objective was selected.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-024 task](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit)
+- **Closure references:** [Accepted input decision](DECISIONS.md#d-1358--controlled-vocabulary-is-reviewed-manifest-input), subsequent D-1359 through D-1362, [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md), [execution plan](FR_024_EXECUTION_PLAN.md), [E curation audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md), and [integrated acceptance audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md).
 
 ### FR-023 - Deterministic Offline Rules Compiler
 

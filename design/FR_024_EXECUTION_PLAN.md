@@ -4,13 +4,13 @@
 
 FR-024 remains one governed Future Revision: [Retrieval Vocabulary and Compiler Audit](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit). The owner selected it after FR-023 closure at `cc064d3f2644c4c55ac75787fd8ef43c1cfe3941`. A-F below are bounded execution checkpoints, not new Future Revisions or Project Phases. No other objective is selected.
 
-**Current checkpoint:** FR-024A-E complete: reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, and canonical curation/precision fixtures are implemented and validated. FR-024F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit and the owner's requested normal branch push; do not automatically continue to the next package.
+**Current checkpoint:** FR-024A-F complete. Reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, canonical curation/precision fixtures, and integrated mutation/provenance acceptance are validated in the [closure audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md). FR-024 is Closed; no next implementation objective is selected. Stop after the owner's requested normal closure commit and branch push.
 
 ## Existing Capability and Gaps
 
 FR-022 already supplies format-1 terms, kinds, bounded weights, local term relationships, canonical ordering, semantic integrity, schema, and conformance fixtures. FR-023 supplies safe materialized input, exact-byte provenance, deterministic snippets, candidate retrieval carriers, validated assembly, canonical writing, and an offline CLI. Existing Managed selectors/topic retrieval are compatibility constraints, not the new ranking engine.
 
-Reviewed input, precise enrichment, automatic artifact/CLI integration, deterministic quality diagnostics, and canonical positive/negative association fixtures are now available. Missing work is final integrated acceptance. The artifact carrier is unchanged; concept IDs remain controlled term categories, while richer origin/binding evidence remains in the portable compilation result and observational audit. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
+Reviewed input, precise enrichment, automatic artifact/CLI integration, deterministic quality diagnostics, canonical positive/negative association fixtures, and final integrated acceptance are complete. The artifact carrier is unchanged; concept IDs remain controlled term categories, while richer origin/binding evidence remains in the portable compilation result and observational audit. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
 
 ## FR-024A - Reviewed Vocabulary Input
 
@@ -74,7 +74,7 @@ Reviewed input, precise enrichment, automatic artifact/CLI integration, determin
 
 ## FR-024F - Integrated Acceptance and Closure
 
-- **Status:** not started.
+- **Status:** complete; [integrated acceptance audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md).
 - **Purpose:** validate the whole governed objective and close it only after all acceptance criteria have evidence.
 - **Inputs:** A-E implementation, canonical corpus, fixtures, contracts, and reports.
 - **Outputs:** final FR-024 audit and closure links; roadmap/register state updated only if acceptance passes.
@@ -82,22 +82,22 @@ Reviewed input, precise enrichment, automatic artifact/CLI integration, determin
 - **Files/components:** final audit, regressions, governance/navigation, and only genuinely necessary FR-024 corrections.
 - **Acceptance:** approved alternative targets representative rule; irrelevant broad matches rejected/visibly downgraded; reviewable provenance; identical audit output; no private reasoning or campaign data. Portable library/CLI remain offline and dependency-free; FR-022 semantics and Managed compatibility remain intact.
 - **Validation:** portable library and standalone CLI Release builds; complete portable/CLI/Managed suites; FR-022 structural harness; positive/negative vocabulary and deterministic audit tests; canonical 10/154 compilation; CLI/library equality; source relocation, repeated/culture reproducibility; dependency boundary; full repository validator; full diff/whitespace review.
-- **Stop boundary:** one closure commit, no next FR selection, push, release artifact, VERSION change, or tag movement.
+- **Stop boundary:** one closure commit and owner-requested normal `main` push; no next FR selection, release artifact, VERSION change, or tag movement.
 
 ## Acceptance Evidence Map
 
 | Governed requirement | Current state | Completing packages |
 | --- | --- | --- |
 | Reviewable controlled concepts, alternatives, weights | Input, associations/evidence, and lossless effective artifact metadata implemented | A, B, C |
-| Representative approved alternative locates its rule | Canonical 65-case topology fixture validates 115 positive targets across all 62 concepts; final integrated acceptance pending | B, E, F |
+| Representative approved alternative locates its rule | Passed: canonical 65-case topology fixture validates 115 positive targets across all 62 concepts | B, E, F |
 | Irrelevant broad associations rejected/downgraded | 130 negative targets, three reviewed generic warnings, exact ambiguity/target dispositions, and residual-gap evidence validated | B, D, E, F |
 | Vocabulary provenance reviewable | Exact manifest hash participates in artifact identity; concept/term/binding identities and all rationales retained in compilation evidence | A, B, C, F |
-| Deterministic compiler-quality audit | Portable report/CLI and canonical repeated/relocated/culture/CWD equality validated; curation reviewed with zero errors; final acceptance pending | D, E, F |
-| No private reasoning/campaign data | Input boundary enforced and fixtures generic; final report review pending | A-F |
-| Offline reproducibility and CLI equivalence | Frozen legacy baseline unchanged; canonical curated repeated/relocated/culture/process and CLI/library artifact/report equality validated; final acceptance pending | B, C, E, F |
+| Deterministic compiler-quality audit | Passed: portable report/CLI and canonical repeated/relocated/culture/CWD/set-order equality; zero errors and reviewed findings | D, E, F |
+| No private reasoning/campaign data | Passed: ordinary-file input boundary, generic fixtures, bounded diagnostics, and complete diff/report review | A-F |
+| Offline reproducibility and CLI equivalence | Passed: frozen legacy baseline, curated process/library equality, independent exact-byte LF/CRLF provenance, and isolated materialized input without acquisition dependencies | B, C, E, F |
 
-## Resume Instructions
+## Closure and Stop
 
-On explicit continuation, read this plan, the vocabulary/audit contract, and the [E checkpoint audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md) before FR-024F. Do not restart A-E or reread unrelated gameplay systems. E leaves 10 sources/154 unchanged executable snippets, 62 reviewed concepts, 773 associations/origins, 122 covered/32 reviewed residual gaps, and three justified warnings. The exact pre-E byte baseline is frozen separately. F owns integrated acceptance and closure, not runtime ranking. Do not begin F automatically after E's commit and owner-requested branch push.
+A-F are complete beneath the single FR-024 objective. The [E checkpoint audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md) remains historical curation evidence; the closure audit consolidates final behavior and validation. The corpus remains 10 sources/154 unchanged executable snippets, 62 reviewed concepts, 773 associations/origins, 122 covered/32 reviewed residual gaps, and three justified warnings. The exact pre-E byte baseline is frozen separately.
 
-Keep `VERSION` at `1.0.0`, preserve both existing release tags, and keep Future Revisions `[∞]` last. FR-024 remains the selected objective; package continuation still requires an explicit next execution request.
+Keep `VERSION` at `1.0.0`, preserve both existing release tags, and keep Future Revisions `[∞]` last. FR-025/026 and every downstream objective remain pending and unselected; explicit owner selection is required before any new implementation.

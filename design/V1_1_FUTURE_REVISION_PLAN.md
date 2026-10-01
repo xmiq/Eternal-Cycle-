@@ -83,7 +83,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-024 - Retrieval Vocabulary and Compiler Audit
 
-- **Execution state:** Owner-selected and in progress; FR-024A-E reviewed input, enrichment/origin evidence, artifact/CLI integration, observational quality audit, and canonical curation/precision fixture checkpoints complete. [FR-024 execution packages](FR_024_EXECUTION_PLAN.md) bound the remaining integration/closure work without creating new objectives.
+- **Execution state:** Complete and Closed after owner-authorized FR-024F integrated acceptance. [A-F execution checkpoints](FR_024_EXECUTION_PLAN.md) and the [closure audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) preserve implementation, quality, compatibility, and validation evidence. No downstream objective is selected.
 - **Primary classification:** Reference implementation and regression/diagnostic tooling.
 - **Scope:** Add reviewable normalized terms, controlled alternatives, optional weights/relationships, vocabulary-quality checks, and a compiler report for collisions, over-broad terms, weak coverage, and poor snippet boundaries.
 - **Boundaries:** Do not train a model, scrape uncontrolled synonym sources, or make diagnostics authoritative rule content.
@@ -203,10 +203,10 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 | Requirement | Disposition | Owning task or evidence |
 | --- | --- | --- |
-| `#1` Offline Rules Compiler | Compiler complete; vocabulary and compiler-quality audit pending | FR-023, FR-024 |
+| `#1` Offline Rules Compiler | Compiler, reviewed vocabulary, and deterministic compiler-quality audit complete | FR-023, FR-024 |
 | `#2` Portable Compiled Rules artifact | Contract and deterministic compiler complete | FR-022, FR-023 |
 | `#3` Compiled snippets as normal runtime domain | Partial runtime chunks exist | FR-026 |
-| `#4` Intelligent indexed retrieval | Partial selector/topic retrieval exists | FR-024, FR-026 |
+| `#4` Intelligent indexed retrieval | Reviewed metadata complete; runtime indexed/ranked retrieval pending | FR-024, FR-026 |
 | `#5` Compact Rule Packets | Implemented by FR-021; retain measurement | [FR-021 audit](audits/FR_021_GM_RUNTIME_BOOTSTRAP_REPAIR_AUDIT.md), FR-026, FR-031 |
 | `#6` Mandatory gameplay procedure | Implemented by FR-021; integrate stable entry | [GM Runtime Procedure](../docs/rules/GM_RUNTIME_PROCEDURE.md), FR-027, FR-036 |
 | `#7` Active Campaign Canon closure | Pending | FR-028 |
@@ -232,7 +232,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 | `#27` MCP administration interface | Partial tools exist; coherent read surface/client pending | FR-032, FR-033 |
 | `#28` Direct MCP invocation from administration | Pending | FR-033 |
 | `#29` Portable diagnostic/compile report | Error Dump exists; compiler/retrieval report pending | FR-032, FR-033 |
-| `#30` Compiler and retrieval diagnostics | Partial execution diagnostics exist | FR-024, FR-026, FR-033 |
+| `#30` Compiler and retrieval diagnostics | Deterministic compiler audit complete; runtime retrieval diagnostics pending | FR-024, FR-026, FR-033 |
 | `#31` Approximately 20K practical context target | Pending measured contract | FR-031, FR-036 |
 | `#32` Context-economics instrumentation | Pending | FR-026, FR-030, FR-031, FR-033, FR-036 |
 | `#33` Long-campaign scalability regression | Pending | FR-028, FR-029, FR-031, FR-035, FR-036 |

@@ -342,7 +342,7 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 - [x] **FR-021 — Durable Managed Operations and Progressive Rule Readiness** — Added durable asynchronous initial publication, idempotent operation discovery, transport-independent Managed Worker execution with one-click host-blocked recovery, bounded renewable execution ownership and orphan recovery, service-owned timeouts, dependency-tiered progressive readiness, dynamic context priority, service-level diagnostics without Campaign ID, natural informed approval, moving RC display/provenance support, corrective pre-migration recovery, live-acceptance Rule Source/cancellation repairs with exact sanitized command evidence, corrected atomic Rule Store batch staging, and follow-up canonical GM bootstrap/procedure, compact Rule Packet, host-configuration readiness, and constrained patch maintenance while keeping provider technology at the reference layer.
 - [x] **FR-022 — Portable Compiled Rules Artifact Contract** — Defined the provider-neutral format-1 artifact, stable snippet identity, executable content, portable provenance, applicability, dependencies, retrieval-metadata carrier, deterministic integrity, compatibility rules, schema, fixtures, and strict reference validation required by later compiler, import, retrieval, and release work.
 - [x] **FR-023 — Deterministic Offline Rules Compiler** — Added a portable manifest loader, deterministic heading/content snippet compiler, format-1 assembler and canonical writer, and a standalone CLI that compiles materialized Rule Source payloads without campaign, MCP, provider, or network dependency.
-- [~] **FR-024 — Retrieval Vocabulary and Compiler Audit** — FR-024A-E are complete: reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, and canonical curation/precision fixtures are implemented and validated; final acceptance remains pending in the [execution plan](FR_024_EXECUTION_PLAN.md).
+- [x] **FR-024 — Retrieval Vocabulary and Compiler Audit** — Reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, canonical curation/precision fixtures, and integrated mutation/provenance acceptance are complete. The [closure audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) records A-F acceptance without runtime ranking or downstream selection.
 - [ ] **FR-025 — Provider-Neutral Artifact Acquisition and Import** — After FR-022, implement common validation/import with local-file and GitHub Release providers plus a replaceable provider boundary.
 - [ ] **FR-026 — Compiled Rule Store and Intelligent Retrieval** — After FR-023 through FR-025, import compiled snippets into the normal Rule Domain and provide explainable ranked retrieval with complete dependencies and compact packets.
 - [ ] **FR-027 — Stable Campaign Binding and Managed Gameplay Entry** — After FR-026, bind gameplay to authoritative Campaign identity and one supported entry path while preserving mandatory procedure and player-turn invariants.
@@ -359,10 +359,10 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 
 ### Current Position
 
-- **Approved pending objectives:** FR-024 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
-- **Selected implementation objective:** FR-024 — Retrieval Vocabulary and Compiler Audit. The owner selected this objective; execution packages are checkpoints beneath it, not new governed objectives.
-- **Latest completed objective:** FR-023 — Deterministic Offline Rules Compiler.
-- **Next action:** Stop at the validated FR-024E checkpoint after its owner-requested normal branch push. Resume FR-024F only on an explicit continuation request; FR-025, FR-026, and every other objective remain unselected.
+- **Approved pending objectives:** FR-025 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
+- **Selected implementation objective:** None. FR-024 is complete; execution packages remain historical checkpoints beneath it, not separate governed objectives.
+- **Latest completed objective:** FR-024 — Retrieval Vocabulary and Compiler Audit.
+- **Next action:** Stop after FR-024 closure and the owner-requested normal branch push. Await explicit owner selection; FR-025, FR-026, and every other pending objective remain unselected.
 
 ### Governance
 
