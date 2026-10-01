@@ -5091,3 +5091,7 @@ The LLM-facing representation of a dependency-complete selected rule closure. It
 ## Record Merge Patch
 
 A bounded set-only update to an existing authoritative object record. The persistence owner loads current state, preserves omitted fields, rejects identity/reference changes and unsupported structural operations, and applies the expanded result through the normal transaction contract.
+
+## Controlled Retrieval Vocabulary
+
+Reviewed navigation metadata associating distinct canonical retrieval concepts and approved alternatives with explicit rule-source/snippet targets. Terms, weights, and review rationale do not define mechanics or runtime ranking. Its input normalization and provenance are governed by the [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).

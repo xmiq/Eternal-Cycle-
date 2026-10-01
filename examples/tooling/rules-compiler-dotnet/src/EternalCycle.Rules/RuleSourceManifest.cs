@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace EternalCycle.Rules;
 
 public sealed class RuleSourceManifest
@@ -11,6 +13,9 @@ public sealed class RuleSourceManifest
     public string RepositoryVersion { get; init; } = string.Empty;
 
     public IList<RuleSourceManifestEntry> Sources { get; init; } = [];
+
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public RuleRetrievalVocabularyDefinition? RetrievalVocabulary { get; init; }
 }
 
 public sealed class RuleSourceManifestEntry

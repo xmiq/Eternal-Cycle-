@@ -5429,3 +5429,7 @@ Artifact format 1 identifies a snippet by its stable Rule Source ID plus an opti
 ## D-1357 — Retrieval Metadata Cannot Change Rule Meaning
 
 Compiled retrieval terms, weights, relationships, selectors, indexes, and ordering are Derived navigation metadata. They may locate or prioritize executable source-derived text but cannot add, omit, or reinterpret rule meaning. Vocabulary generation and audit remain separate from the artifact carrier, and runtime ranking and Rule Packet assembly remain separate from both.
+
+## D-1358 — Controlled Vocabulary Is Reviewed Manifest Input
+
+The reference compiler accepts optional reviewed vocabulary definitions inside the Rule Source manifest. Exact manifest-byte provenance covers concept identities, canonical retrieval phrases, approved alternatives, weights, rationale, and explicit source/anchor associations. Canonical concepts and retrieval aliases remain distinct; neither defines new mechanics. Conservative NFC, invariant case, and whitespace normalization preserves phrases, punctuation, and hyphens without stemming or uncontrolled synonym expansion. Precise snippet bindings are preferred; source-wide inheritance must be explicit. Existing format-1 retrieval carriers and semantic integrity remain authoritative, while enrichment and quality audit belong to FR-024 and runtime scoring/selection belongs to FR-026. Input validation alone does not establish snippet-target existence or completed vocabulary compilation.

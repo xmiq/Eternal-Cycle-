@@ -85,6 +85,9 @@ public sealed class CompiledRulesArtifactWriterTests(ITestOutputHelper output)
         output.WriteLine("Serialized byte SHA-256: {0}", Sha256(compiled.Write.Bytes.Span));
         Assert.Equal(10, compiled.Artifact.RuleSources.Count);
         Assert.Equal(154, compiled.Artifact.Snippets.Count);
+        // Optional vocabulary input must not perturb the legacy absent-vocabulary artifact.
+        Assert.Equal("4B583A7904CE514B56CF3B497648DB5D778FC04DF2285D30A2E03823A32EA6A4", compiled.Artifact.Integrity.ArtifactSha256);
+        Assert.Equal("802172680FCE33E7F5F9B75EBEBE1D695B702A22B82F1918601DB7B9F44926EC", Sha256(compiled.Write.Bytes.Span));
         Assert.Empty(CompiledRulesArtifactContract.Validate(compiled.Artifact));
     }
 

@@ -331,7 +331,7 @@ if ($releasedState) {
     else {
         foreach ($requiredText in @(
             '**Approved pending objectives:** FR-024 through FR-036',
-            '**Selected implementation objective:** None.',
+            '**Selected implementation objective:** FR-024',
             '**Latest completed objective:** FR-023'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
@@ -489,8 +489,9 @@ else {
         if ($roadmappedIds -notcontains $id) {
             Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
         }
-        if ($roadmap -notmatch [regex]::Escape("- [ ] **$id")) {
-            Add-ValidationError "v1.1 Future Revision task is not pending in the roadmap: $id"
+        $expectedStatus = if ($id -eq 'FR-024') { '[~]' } else { '[ ]' }
+        if ($roadmap -notmatch [regex]::Escape("- $expectedStatus **$id")) {
+            Add-ValidationError "v1.1 Future Revision task has incorrect roadmap status (expected $expectedStatus): $id"
         }
     }
 

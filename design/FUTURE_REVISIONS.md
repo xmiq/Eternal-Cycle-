@@ -58,7 +58,7 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-024 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). Roadmapping authorizes the bounded future work and dependency order; it does not select a current implementation objective.
+FR-024 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). The owner has selected FR-024 for implementation; its input checkpoint is complete but the objective is not closed. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
@@ -71,7 +71,8 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Evidence needed:** Alternative-term retrieval, false-positive controls, deterministic collision/coverage reports, and reviewable vocabulary provenance.
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning separated search-quality work from compiler construction for independent review.
+- **Status reason:** Owner-authorized v1.1 planning separated search-quality work from compiler construction; the owner subsequently selected FR-024 for bounded implementation. It remains Roadmapped until final acceptance and closure.
+- **Execution progress:** FR-024A reviewed vocabulary input implemented and validated; FR-024B-F not started. See the [execution plan](FR_024_EXECUTION_PLAN.md) and [input contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-024 task](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit)
 

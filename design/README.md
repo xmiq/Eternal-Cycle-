@@ -17,6 +17,8 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 
 ## Audits
 
+The [FR-024 Execution Plan](FR_024_EXECUTION_PLAN.md) bounds the currently selected vocabulary/audit objective into independently validated checkpoints. It does not create additional Future Revisions or authorize downstream runtime work.
+
 The [Repository Audit Index](audits/README.md) lists repository, maintenance, and Release 1 reviews. An audit records evidence and documentation corrections; it cannot create gameplay mechanics or silently amend accepted governance.
 
 ## Authority Boundary

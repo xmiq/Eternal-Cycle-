@@ -119,6 +119,9 @@ public static class MaterializedRuleSourceLoader
         }
 
         ValidateDependencies(normalizedEntries, sourceIds);
+        var vocabulary = manifest.RetrievalVocabulary is null
+            ? null
+            : RuleRetrievalVocabulary.NormalizeAndValidate(manifest.RetrievalVocabulary, sourceIds);
 
         var sources = new List<MaterializedRuleSourceDocument>(normalizedEntries.Count);
         foreach (var entry in normalizedEntries)
@@ -137,7 +140,8 @@ public static class MaterializedRuleSourceLoader
             CompilerContractVersion = manifest.CompilerContractVersion,
             RulesetId = manifest.RulesetId,
             RepositoryVersion = manifest.RepositoryVersion,
-            Sources = normalizedEntries
+            Sources = normalizedEntries,
+            RetrievalVocabulary = vocabulary
         };
 
         return new(
@@ -170,6 +174,11 @@ public static class MaterializedRuleSourceLoader
 
             RejectDuplicateProperties(document.RootElement, "$");
             RequireProperties(document.RootElement, "$", RequiredManifestProperties);
+            if (document.RootElement.TryGetProperty("retrievalVocabulary", out var vocabulary) &&
+                vocabulary.ValueKind != JsonValueKind.Object)
+            {
+                Fail("VOCABULARY_STRUCTURE_INVALID", "$.retrievalVocabulary", "An explicit vocabulary declaration must be an object; omit it for legacy payloads.");
+            }
             if (!document.RootElement.TryGetProperty("sources", out var sources) ||
                 sources.ValueKind != JsonValueKind.Array)
             {
@@ -483,7 +492,7 @@ public static class MaterializedRuleSourceLoader
         }
     }
 
-    private static void RequiredIdentifier(string value, string path)
+    internal static void RequiredIdentifier(string value, string path)
     {
         if (string.IsNullOrWhiteSpace(value) ||
             value.Length > 128 ||
