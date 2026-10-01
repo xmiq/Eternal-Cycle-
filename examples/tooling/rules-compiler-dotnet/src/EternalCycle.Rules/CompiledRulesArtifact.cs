@@ -349,6 +349,12 @@ public static class CompiledRulesArtifactContract
             return;
         }
 
+        if (artifact.RuleSources.Any(source => source is null) || artifact.Snippets.Any(snippet => snippet is null))
+        {
+            Error(errors, "STRUCTURE_REQUIRED", "$", "Rule Source and snippet entries cannot be null.");
+            return;
+        }
+
         if (artifact.ArtifactFormatVersion != CurrentArtifactFormatVersion)
         {
             Error(errors, "FORMAT_VERSION_UNSUPPORTED", "$.artifactFormatVersion", "The artifact format version is not supported.");
@@ -450,7 +456,12 @@ public static class CompiledRulesArtifactContract
             }
         }
 
-        ValidateDependencyCycles(sources, errors);
+        // Invalid identities are already rejected above; they cannot safely be
+        // dictionary keys for dependency traversal (including duplicate/null IDs).
+        if (sourceIds.Count == sources.Count && sources.All(source => source.RuleSourceId is not null))
+        {
+            ValidateDependencyCycles(sources, errors);
+        }
     }
 
     private static void ValidateApplicability(
@@ -590,6 +601,12 @@ public static class CompiledRulesArtifactContract
             return;
         }
 
+        if (retrieval.Terms.Any(term => term is null) || retrieval.Relationships.Any(relationship => relationship is null))
+        {
+            Error(errors, "STRUCTURE_REQUIRED", $"{snippetPath}.retrieval", "Retrieval entries cannot be null.");
+            return;
+        }
+
         var orderedTerms = retrieval.Terms
             .Select(term => $"{term.Term}\0{term.Kind}")
             .ToArray();
@@ -641,31 +658,44 @@ public static class CompiledRulesArtifactContract
         var byId = sources.ToDictionary(source => source.RuleSourceId, StringComparer.Ordinal);
         var states = new Dictionary<string, int>(StringComparer.Ordinal);
 
-        bool Visit(string sourceId)
+        // Dependency depth is independent of JSON nesting. Use an explicit DFS
+        // stack so a bounded but deeply chained external artifact cannot overflow
+        // the process stack; ordering and cycle rejection are unchanged.
+        var pending = new Stack<(string SourceId, int NextDependency)>();
+        foreach (var root in byId.Keys)
         {
-            if (states.TryGetValue(sourceId, out var state))
+            if (states.ContainsKey(root))
             {
-                return state == 1;
+                continue;
             }
-
-            states[sourceId] = 1;
-            foreach (var dependency in byId[sourceId].DependencyRuleSourceIds)
+            states[root] = 1;
+            pending.Push((root, 0));
+            while (pending.TryPop(out var current))
             {
-                if (byId.ContainsKey(dependency) && Visit(dependency))
+                var dependencies = byId[current.SourceId].DependencyRuleSourceIds;
+                if (current.NextDependency == dependencies.Count)
                 {
-                    return true;
+                    states[current.SourceId] = 2;
+                    continue;
                 }
-            }
-            states[sourceId] = 2;
-            return false;
-        }
 
-        foreach (var sourceId in byId.Keys)
-        {
-            if (Visit(sourceId))
-            {
-                Error(errors, "DEPENDENCY_CYCLE", "$.ruleSources", "The Rule Source dependency graph contains a cycle.");
-                return;
+                pending.Push((current.SourceId, current.NextDependency + 1));
+                var dependency = dependencies[current.NextDependency];
+                if (dependency is null || !byId.ContainsKey(dependency))
+                {
+                    continue;
+                }
+                if (states.TryGetValue(dependency, out var state))
+                {
+                    if (state == 1)
+                    {
+                        Error(errors, "DEPENDENCY_CYCLE", "$.ruleSources", "The Rule Source dependency graph contains a cycle.");
+                        return;
+                    }
+                    continue;
+                }
+                states[dependency] = 1;
+                pending.Push((dependency, 0));
             }
         }
     }
@@ -701,9 +731,13 @@ public static class CompiledRulesArtifactContract
         string path,
         ICollection<CompiledRulesArtifactValidationError> errors)
     {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            Error(errors, "PATH_INVALID", path, "Paths must be normalized repository-relative paths using forward slashes without traversal.");
+            return;
+        }
         var segments = value.Split('/');
-        if (string.IsNullOrWhiteSpace(value) ||
-            value.Length > 512 ||
+        if (value.Length > 512 ||
             value.StartsWith('/') ||
             value.Contains('\\') ||
             value.Contains(':') ||

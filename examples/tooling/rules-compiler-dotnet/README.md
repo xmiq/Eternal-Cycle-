@@ -63,7 +63,7 @@ Identical authoritative manifest and source bytes plus identical explicit identi
 
 ## Vocabulary Checkpoint
 
-The portable [FR-025A acquisition foundation](../../../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) accepts exact bounded bytes and separate evidence through `ICompiledRulesArtifactProvider`. It deliberately does not parse, approve or import artifacts, add CLI commands, or change compilation output. Real providers and the shared validation/import path remain pending in the [execution plan](../../../design/FR_025_EXECUTION_PLAN.md).
+The portable [FR-025A/B foundations](../../../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) accept exact bounded bytes/evidence through `ICompiledRulesArtifactProvider`, then expose `CompiledRulesArtifactValidation.ValidateAsync` for independent byte checks, existing FR-022 validation and required `ICompiledRulesArtifactTrustPolicy` evaluation. Approved output is immutable and import-eligible, not imported. No default trust, real provider, import, CLI command or compilation-output change is introduced; C-G remain pending in the [execution plan](../../../design/FR_025_EXECUTION_PLAN.md).
 
 Normal `compile` automatically processes the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). A validates input, B resolves exact bindings, and C projects each association into a format-1 term: normalized wording, reviewed concept ID as `kind`, and exact reviewed weight. Using concept categories preserves shared terms without conflicting weights. Canonical/alias/phrase origin and review rationale remain in the portable compiler result for observational audit, not in every artifact term.
 

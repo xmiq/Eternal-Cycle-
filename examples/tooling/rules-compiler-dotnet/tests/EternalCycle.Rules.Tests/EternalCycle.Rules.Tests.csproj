@@ -23,6 +23,7 @@
     <Compile Include="..\Shared\CanonicalVocabularyPayload.cs" Link="CanonicalVocabularyPayload.cs" />
     <Content Include="..\..\fixtures\canonical-vocabulary\*" Link="CanonicalVocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\fixtures\reviewed-vocabulary\*" Link="VocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\..\..\conformance\compiled-rules-artifact\v1\valid-*.json" Link="ArtifactFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

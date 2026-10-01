@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** FR-025A supplies the portable acquisition interface, bounded byte ownership, acquisition evidence, and failure taxonomy. Shared validation/trust, real local/GitHub providers, provider conformance, and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquiring bytes alone does not parse, approve, import, publish, or activate them.
+**Implementation checkpoint:** FR-025A supplies the portable acquisition interface, bounded byte ownership, acquisition evidence, and failure taxonomy. FR-025B implements shared FR-022 validation, explicit trust evaluation, and an immutable import-eligible result. Real local/GitHub providers, provider conformance, and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active are separate states; B writes nothing.
 
 ## Document Control
 
@@ -57,7 +57,48 @@ Keep these claims separate:
 - **Artifact provenance:** immutable source scheme/value, manifest/source hashes, compiler/release identity inside the validated FR-022 artifact. Acquisition evidence never repairs, rewrites, or substitutes for it.
 - **Installation trust:** explicit willingness and authorization to use a technically valid artifact under trusted Ruleset/source/compiler/namespace policy. No trust is inferred from GitHub, official naming, local placement, or a self-consistent hash.
 
-The future shared validator must independently recheck size/hash, strictly decode the exact UTF-8 artifact bytes, invoke the existing FR-022 parser/validator, retain bounded underlying validation codes, and apply explicit compatibility/trust policy before emitting an import-eligible result. It must fail closed on malformed, unsupported, integrity-invalid, or unauthorized input. No new PKI, signature scheme, semantic-equality requirement with official rules, or duplicate validator is authorized.
+The shared validator independently rechecks size/hash, strictly decodes the exact UTF-8 artifact bytes, invokes the existing FR-022 parser/validator, retains bounded underlying validation codes, and applies explicit compatibility/trust policy before emitting an import-eligible result. It fails closed on malformed, unsupported, integrity-invalid, or unauthorized input. No new PKI, signature scheme, semantic-equality requirement with official rules, or duplicate validator is authorized.
+
+## Shared Validation and Explicit Trust
+
+The [B reference implementation](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/CompiledRulesArtifactValidation.cs) accepts an `AcquiredCompiledRulesArtifact`, trusted `CompiledRulesAcquisitionLimits`, a required `ICompiledRulesArtifactTrustPolicy`, and cancellation. It never reopens a provider stream, file, URL, or repository.
+
+```text
+independent byte-limit check
+    -> owned byte snapshot + recomputed acquired-byte SHA-256
+    -> strict UTF-8 decode without JSON rewriting
+    -> CompiledRulesArtifactContract.Read (FR-022 parsing and validation)
+    -> read-only validated artifact + separate bounded acquisition evidence
+    -> explicit policy evaluation
+    -> immutable validated/trusted import-eligible result
+```
+
+| Type / API | Boundary |
+| --- | --- |
+| `CompiledRulesArtifactValidation.ValidateAsync` | Orchestrates these stages; does not duplicate artifact validity rules or import anything. |
+| `ValidatedCompiledRulesArtifact` | Complete format-1 model, exact privately owned bytes, byte hash, semantic digest, and separate acquisition evidence, available only after FR-022 success. |
+| `ICompiledRulesArtifactTrustPolicy.EvaluateAsync` | Receives that validated view and cancellation; returns explicit approval, rejection, or evaluation failure. No default approval policy exists. |
+| `CompiledRulesArtifactTrustDecision` | Closed outcome/reason evidence: explicit approval/rejection, configured expected-byte-hash match/mismatch, policy unavailable/exception/invalid decision. A hash match is not publisher authentication. |
+| `CompiledRulesArtifactValidationResult` | Separates `IsArtifactValid` from `IsImportEligible`, carries bounded diagnostics and optional policy decision, and retains the validated view even after rejection. |
+| `ValidatedTrustedCompiledRulesArtifact` | Exists only after validation and approval; shares the exact view seen by policy. Future F may import it under separately authorized scope; it is not an import receipt. |
+
+Policy is supplied by the caller, outside validation. Identical bytes receive the same FR-022 validity regardless of provider evidence. Configured policy may deliberately approve one evidence set and reject another without changing artifact provenance or semantic identity. Policy must evaluate authorization, not reacquire/repair artifacts, store them, or publish/activate them. The interface does not sandbox arbitrary in-process policy code.
+
+Expected invalid input never invokes policy. Unexpected validator failure is `ARTIFACT_VALIDATION_FAILED`; unexpected policy exceptions or null decisions produce `ARTIFACT_TRUST_POLICY_FAILED`, never approval or raw exception text. Cancellation remains cancellation with its token and a fixed safe message. Caller cancellation stops awaiting an asynchronous policy even if it ignores the token; it does not forcibly terminate third-party code. A cancelled evaluation cannot later return approval.
+
+### Approval Immutability and Losslessness
+
+FR-022 assembly DTOs have mutable collection interfaces. B freezes every source/snippet, selector, dependency, term, and relationship collection once into read-only copies, reusing immutable scalar/leaf values. Caller-owned acquisition metadata is already copied/read-only by A. Policy and the successful result see the same frozen model/evidence; all format-1 provenance, content, hashes, applicability, dependencies, and retrieval metadata remain intact. The unchanged FR-022 writer can serialize and revalidate that model without semantic loss.
+
+B does not expose its owned byte buffer. `CopyBytes()` returns an independent copy; deliberate extraction/mutation of A's backing array before validation causes byte-hash rejection, and mutation after approval cannot alter B's snapshot. There is no extra artifact ID, JSON normalization, or reserialization on this path. This boundary protects ordinary managed aliases, not reflection/unsafe code acting outside the API contract.
+
+The known F gaps remain **unimplemented**: legacy source-based storage uniqueness and incomplete format-1 retrieval metadata retention. B preserves the full input F needs but does not change that storage, its schema, or publication behavior.
+
+### Safe Validation Diagnostics
+
+B returns at most 16 underlying FR-022 diagnostics with explicit truncation, 256-character path/message limits, fixed category messages, and closed policy reasons. Only known format-1 field names and bounded numeric indices survive in locations; unknown/attacker-controlled property names become `$`. Artifact values, raw exception messages, and provider bodies never become explanations. Failure classification is deterministic: malformed JSON/duplicate properties, unsupported format/compiler, integrity failures, then other semantic failures.
+
+The complete artifact and acquisition evidence are explicitly available to policy/future import code but excluded from default `System.Text.Json` serialization of the result/view wrappers. Safe `ToString()` values also omit them. Deliberately serializing the exposed model/evidence still requires authorized field selection/redaction; this is not a universal credential sanitizer, HTTP policy, or permission to disclose Rule payloads.
 
 ## Shared Import Requirement
 
@@ -85,8 +126,10 @@ The legacy Managed store has source-unique releases and transactionally staged c
 | Installation trust rejected | `ARTIFACT_TRUST_REJECTED` | Explicit installation policy |
 | Import conflict | `ARTIFACT_IMPORT_CONFLICT` | Shared importer |
 | Storage failure | `ARTIFACT_STORAGE_FAILED` | Storage adapter |
+| Trust-policy evaluation failed | `ARTIFACT_TRUST_POLICY_FAILED` | Explicit installation policy boundary |
+| Unexpected validator failure | `ARTIFACT_VALIDATION_FAILED` | Shared validation boundary |
 
-A implements configuration, bounded reading, and safe exception representation; the later-stage codes reserve the agreed taxonomy, not implemented validation/import behavior. Retry guidance must reflect actual stage/idempotency evidence, never presume every failure transient. Cancellation remains `OperationCanceledException` in the reference, not a fabricated provider error.
+A implements configuration, bounded reading, and safe exception representation; B implements shared validation/trust and preserves underlying FR-022 codes in safe diagnostics. The two B failure categories append to A's taxonomy without renumbering existing values. Provider/import/storage codes do not claim their pending implementations complete. Retry guidance must reflect actual stage/idempotency evidence, never presume every failure transient. Cancellation remains `OperationCanceledException` in the reference, not a fabricated provider error.
 
 ## Security and Provider Obligations
 
@@ -101,6 +144,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 
 - [FR-025 Execution Plan](../../design/FR_025_EXECUTION_PLAN.md)
 - [FR-025A Investigation Audit](../../design/audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md)
+- [FR-025B Validation and Trust Audit](../../design/audits/FR_025B_VALIDATION_TRUST_AUDIT.md)
 - [Release and Version Provenance](../../design/RELEASE_VERSIONING.md)
 - [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md)
 - [Standalone Compiler Reference](../../examples/tooling/rules-compiler-dotnet/README.md)

@@ -4,7 +4,7 @@
 
 The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import) from clean synchronized `main` at `a34c268d239bc9b195200e2198bb899a60ad380b`, after FR-022/023/024 closure. A-G are execution checkpoints beneath that single Future Revision, not additional objectives or Project Phases. FR-025 remains selected and incomplete; FR-026 and every other objective remain unselected.
 
-**A complete:** investigation, architecture reconciliation, [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md), portable provider/evidence/bounded-byte foundation, and contract regressions. B-G are pending and require explicit continuation. No real acquisition provider, shared trust validator, artifact importer, runtime retrieval change, or migration was implemented by A.
+**A/B complete:** A reconciled architecture and established the [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) and portable provider/evidence/bounded-byte foundation. B implements shared FR-022 validation, explicit trust evaluation, and an immutable import-eligible result; its [audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) records recovery and validation. C-G are pending and require explicit continuation. No real provider, artifact importer, runtime retrieval change, or migration has been implemented by these checkpoints.
 
 ## Existing Architecture Map
 
@@ -15,9 +15,9 @@ The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutr
 | Git/GitHub input | Git source runner and provider | Temporary object acquisition, immutable commit, minimal ordinary manifest payload; not GitHub Releases asset download. |
 | Compiled artifact acquisition | No production provider before A | A adds the portable interface/bounds only; real providers remain pending. |
 | MCP/Managed interface | `ec_configure_rule_source`, `ec_publish_initial_rules`, operation status/readiness, `ec_get_rule_context` | Administrative source publication plus independent durable worker; runtime context reads already-published rules. No format-1 import endpoint. |
-| Artifact parsing / validation | Portable `CompiledRulesArtifactContract.Read` / `Validate` | Closed JSON, compatibility, identity, ordering, dependencies, content/semantic integrity; no provider or installation trust policy. |
+| Artifact parsing / validation | Portable `CompiledRulesArtifactContract.Read` / `Validate`, B `CompiledRulesArtifactValidation.ValidateAsync` | FR-022 owns validity; B owns independent byte checks, orchestration, safe diagnostics, explicit policy evaluation and frozen approval state, not acquisition or storage. |
 | Compilation / writing / audit | FR-023/024 portable pipeline and CLI | Materialized bytes to format 1; reviewed enrichment and observational audit; no acquisition/import. |
-| Trust checks | Manifest compatibility, approval, trusted namespace/configuration, channel/activation policy | Existing source/publication controls, not one provider-neutral artifact acceptance policy. |
+| Trust checks | B `ICompiledRulesArtifactTrustPolicy` plus existing source/publication controls | Required caller policy receives only FR-022-valid artifacts; validity is not approval. No default production policy, storage or activation authority. |
 | Import | No format-1 storage importer | Existing candidate staging accepts a legacy `CompiledRuleIndex`, not artifact bytes/models. |
 | Publication | `ManagedRulePublicationCoordinator`, `IPublishedRuleStore` | Source acquisition, legacy compilation, candidate stage/validate/publish, configured activation, progressive preparation. |
 | Runtime storage | `SqlServerPublishedRuleStore`, migrations 002/006/007 | Shared Domain release/index/chunk/selector/dependency/preparation records; campaign facts live elsewhere. |
@@ -38,7 +38,7 @@ local file / GitHub Release asset / compatible custom provider
     -> FR-026 searchable projection and retrieval
 ```
 
-Missing behavior is real bounded artifact acquisition, shared strict byte-to-artifact validation/trust, custom-provider conformance, and lossless idempotent artifact storage. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found.
+Missing behavior is real bounded artifact acquisition, custom-provider conformance, and lossless idempotent artifact storage. B's shared strict byte-to-artifact validation/trust is implemented. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found; B narrowly hardens malformed-input handling without changing valid format-1 semantics.
 
 The legacy physical key `(ruleset_id, source_identity)` and `CompiledRuleIndex` omit artifact semantic digest identity and full retrieval metadata. F must preserve those historical releases, add only genuinely necessary lossless adaptation, and reject unresolved conflicts rather than overwrite. The complete format-1 artifact must remain retained for FR-026; this does not authorize implementing searchable/ranked storage now.
 
@@ -46,7 +46,7 @@ The legacy physical key `(ruleset_id, source_identity)` and `CompiledRuleIndex` 
 
 The provider interface, evidence, bounds, and shared validation belong in portable `EternalCycle.Rules`; they require only the established standard-library dependencies. Configured provider implementations may depend on filesystem/HTTP APIs in an appropriate adapter component. Managed may consume the portable result and retain storage-specific routing/transactions. Portable code must not depend on Managed, SQL, MCP, hosting, Git/GitHub SDKs, or campaign state.
 
-A's owned byte hash is independent of provider metadata. B must recompute at its boundary and invoke the existing parser/validator rather than trust a provider's assertion or invent another format. Technical validity is not publisher authentication or installation approval. Explicit caller policy, not official naming/provider choice, determines acceptable Ruleset/source/compiler/scope. Valid custom/fork/house-rule artifacts need not match official semantic content. No signing/PKI infrastructure is required.
+A's owned byte hash is independent of provider metadata. B recomputes at its boundary and invokes the existing parser/validator rather than trusting a provider's assertion or inventing another format. Technical validity is not publisher authentication or installation approval. Explicit caller policy, not official naming/provider choice, determines acceptable Ruleset/source/compiler/scope. Valid custom/fork/house-rule artifacts need not match official semantic content. No signing/PKI infrastructure is required.
 
 Provider locators stay in authorized configuration. A path/tag is mutable; byte hash identifies acquired bytes. Optional resolved identity is a bounded provider claim, not the artifact source identity. GitHub asset/release IDs do not prove immutable bytes. Reference exceptions use fixed safe messages; provider evidence requires field-level review/redaction before diagnostics. The [contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md#failure-taxonomy) defines all failure categories, with later-stage execution deferred.
 
@@ -54,12 +54,13 @@ Provider locators stay in authorized configuration. A path/tag is mutable; byte 
 
 | Risk | A control / required later evidence |
 | --- | --- |
-| Unlimited payload or misleading length | A checks buffered payload before copying; shared stream reader stops at limit plus one, no seeking; default 16 MiB. B independently enforces bounds. |
+| Unlimited payload or misleading length | A checks buffered payload before copying; shared stream reader stops at limit plus one, no seeking; default 16 MiB. B independently enforces bounds before its byte snapshot. |
 | Traversal, links/reparse points, unintended local files, TOCTOU | No file traversal in A. C uses explicit ordinary-file policy, checks indirection and open-handle consistency, streams/hash actual bytes, tests races and path cases. FR-023 materialized-root logic is relevant precedent, not blindly transplanted. |
 | Decompression bombs | No archives in this architecture. D must bound any accepted HTTP decompression; never trust compressed Content-Length as decoded size. |
 | Redirects/content type/provider filenames | No network/output paths in A. D validates endpoint/redirect/credential and asset policy; filenames never select local output locations. |
 | Ambiguous assets / mutable refs | D resolves exactly one published asset, rejects ambiguity, records actual resolution and hash; tag names never claim immutability. |
-| Diagnostic leakage | A metadata/count/length/control limits, safe object display and fixed exceptions; no raw inner transport exception retained. Bounds do not replace provider redaction or authorized disclosure policy. |
+| Diagnostic leakage | A bounds evidence; B bounds FR-022 diagnostics and allowlists locations, contains policy exceptions, and excludes raw models/evidence from default result serialization. Explicit evidence disclosure still requires authorization/redaction. |
+| Mutation after approval | B privately snapshots/rehashes exact bytes, freezes all model collections once, and shares immutable policy/import views. Tests mutate byte/evidence aliases and policy-visible lists. |
 | Partial writes / activation | A writes nothing. F tests atomic candidate storage and rollback/preservation; publication/activation remain separately authorized. |
 | Same source but different artifact digest | No physical key change in A. F must detect/reconcile explicitly while preserving history and complete metadata; no silent upsert overwrite. |
 
@@ -74,12 +75,12 @@ Provider locators stay in authorized configuration. A path/tag is mutable; byte 
 
 ## FR-025B - Shared Validation and Trust Gate
 
-- **Status:** pending; **depends on A**.
+- **Status:** complete; **depends on A**; [checkpoint audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md).
 - **Inputs:** acquired bytes/evidence, trusted limits and explicit installation compatibility/trust policy.
 - **Outputs:** one validated import-eligible result retaining exact bytes/hash, existing artifact model/digest, separate evidence, and explicit policy decision; bounded original FR-022 diagnostics on rejection.
-- **Components:** portable acquisition validation alongside `CompiledRulesArtifactContract`, portable tests/conformance fixtures, contract/audit updates.
+- **Components:** `CompiledRulesArtifactValidation.cs`, narrow malformed-input hardening in `CompiledRulesArtifactContract`, 58 focused portable tests using existing conformance fixtures, contract/audit updates.
 - **Acceptance:** independent size/hash checks, strict UTF-8, existing parser/integrity/dependency/compatibility rejection, no provider approval bypass, explicit policy rejection, custom schemes, valid equal bytes identical semantics, invalid input produces no import-eligible value.
-- **Validation:** focused malformed/oversize/UTF-8/hash/format/trust/mutation tests, FR-022, canonical compilation, complete portable suite/boundary, repository/whitespace checks.
+- **Validation:** 58/58 focused malformed/oversize/UTF-8/hash/format/trust/mutation tests; 397 portable, 62 CLI/process, and 181 Managed tests pass; FR-022/023/024/A focused reruns, canonical unchanged, dependency boundaries and full structural/repository/distribution checks pass. Exact-state reruns are recorded in the audit.
 - **Exclusions/stop:** no real provider or storage transaction. Stop at one validated B checkpoint; C/D/E may then be independently authorized.
 
 ## FR-025C - Explicit Local Artifact Provider
@@ -140,4 +141,4 @@ Equal bytes from all providers must traverse the same parser, trust gate and imp
 - **B - Managed Service contract:** shared pre-import validation/trust, lossless scoped/idempotent/atomic storage, authorization, independent durable administrative execution and safe diagnostics.
 - **C - Eternal Cycle-wide:** Repository Canon remains authority; provider choice does not redefine artifact/source identity or restrict valid custom rules; acquisition and hash integrity are not trust or gameplay readiness.
 
-No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. After A's commit/push, wait for explicit B authorization.
+No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. Stop after B's validated commit/push; wait for explicit C-G continuation, selecting nothing else.

@@ -183,7 +183,9 @@ public enum CompiledRulesAcquisitionFailure
     SemanticValidationFailed,
     TrustRejected,
     ImportConflict,
-    StorageFailed
+    StorageFailed,
+    TrustPolicyFailed,
+    ValidationFailed
 }
 
 public sealed class CompiledRulesAcquisitionException : Exception
@@ -213,6 +215,8 @@ public sealed class CompiledRulesAcquisitionException : Exception
         CompiledRulesAcquisitionFailure.TrustRejected => ("ARTIFACT_TRUST_REJECTED", "Installation policy does not permit this artifact."),
         CompiledRulesAcquisitionFailure.ImportConflict => ("ARTIFACT_IMPORT_CONFLICT", "The artifact conflicts with existing imported state."),
         CompiledRulesAcquisitionFailure.StorageFailed => ("ARTIFACT_STORAGE_FAILED", "Validated artifact storage failed."),
+        CompiledRulesAcquisitionFailure.TrustPolicyFailed => ("ARTIFACT_TRUST_POLICY_FAILED", "Artifact trust-policy evaluation could not complete."),
+        CompiledRulesAcquisitionFailure.ValidationFailed => ("ARTIFACT_VALIDATION_FAILED", "Artifact validation could not complete."),
         _ => throw new ArgumentOutOfRangeException(nameof(failure))
     };
 }
