@@ -1,0 +1,5 @@
+## Save
+Keep the progression record durable before reporting success.
+
+## Status
+Report only verified persistence state.

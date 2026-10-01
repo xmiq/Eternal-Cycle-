@@ -4,7 +4,7 @@
 
 Controlled vocabulary is reviewed navigation input for deterministic compilation, not additional executable rules. It connects precise concepts and approved alternative language to selected snippets without asking a runtime AI to invent synonym sets.
 
-**Implementation checkpoint:** FR-024A validates reviewed input; FR-024B resolves exact targets and produces deterministic associations with term-origin evidence beside unchanged snippet candidates. Artifact/CLI integration, quality reports, and canonical corpus curation remain pending under the [FR-024 execution plan](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
+**Implementation checkpoint:** FR-024A validates reviewed input; B resolves exact targets and produces term-origin evidence; C integrates those associations into validated format-1 artifacts and normal standalone compilation. Quality reports and canonical corpus curation remain pending under the [FR-024 execution plan](../../design/FR_024_EXECUTION_PLAN.md). Loading a declaration alone does not establish a snippet target. No retrieval ranking is implemented here.
 
 ## Document Control
 
@@ -18,7 +18,7 @@ Controlled vocabulary is reviewed navigation input for deterministic compilation
 
 A Rule Source manifest may contain an optional `retrievalVocabulary` object. Keeping reviewed input in the manifest makes its exact authoritative bytes part of the existing manifest SHA-256. No extra file lookup or acquisition-provider capability is needed. Omit the property for legacy payloads; explicit `null` is invalid.
 
-This is an additive reference manifest-input extension. It does not change artifact format `1`, compiler contract `"1"`, snippet identity, or the existing artifact carrier. Older compilers are not required to accept this new manifest property; producers using it must select a compiler that supports this input. The current canonical manifest remains unchanged in FR-024A.
+This is an additive reference manifest-input extension. It does not change artifact format `1`, compiler contract `"1"`, snippet identity, or the existing artifact carrier. Older compilers are not required to accept this new manifest property; producers using it must select a compiler that supports this input. The canonical manifest remains vocabulary-free through C; E owns corpus curation.
 
 The manifest reviewer approves each concept, alternative, weight, and association. An alias is not a new mechanic or a canonical terminology synonym. A weight is a bounded retrieval signal, not a runtime scoring formula, success probability, or mechanical bonus. FR-026 owns query interpretation, ranking, and result selection.
 
@@ -100,7 +100,48 @@ Association identity is the target plus `(ConceptId, Term, Kind)`; each origin a
 
 Output keeps FR-023 candidate order. Associations sort ordinally by normalized term, kind, then concept ID. Origins follow A's normalized binding order: source ID, scope name, nullable anchor. Repeating enrichment does not mutate input or accumulate origins. Reordering semantically set-like declarations does not change associations; changing authoritative manifest bytes still changes manifest provenance.
 
-This is an intermediate evidence representation for C, not a second artifact format. It reuses format-1 term values but does not populate candidate retrieval carriers, serialize a vocabulary artifact, wire the CLI, or project multiple-concept evidence into final metadata yet. An absent or empty vocabulary yields empty associations and unchanged candidates, with no invented terms or required vocabulary block. Prose and headings never create terms automatically.
+This B-stage representation is compiler evidence, not a second artifact format. B itself does not modify candidates or serialize evidence. C consumes it as described below. An absent or empty vocabulary yields empty associations and unchanged candidates, with no invented terms or required vocabulary block. Prose and headings never create terms automatically.
+
+## Artifact and CLI Integration
+
+The portable [`RuleCompilationPipeline.Compile(snapshot)`](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/RuleCompilationPipeline.cs) owns the complete in-memory path:
+
+```text
+validated materialized snapshot
+  -> RuleSnippetCompiler
+  -> RuleVocabularyEnricher
+  -> reviewed association projection
+  -> CompiledRulesArtifactAssembler
+  -> FR-022 validation and semantic digest
+  -> CompiledRulesArtifactWriter
+  -> validated artifact + canonical bytes + vocabulary evidence
+```
+
+The normal standalone `compile` command loads the snapshot and calls this same pipeline. A declared vocabulary is integrated automatically, without a new flag or command. Managed runtime retrieval is not wired to this path by C.
+
+Format 1 deliberately leaves retrieval `kind` categories open. This reviewed projection uses the **concept ID as the artifact term category**, not B's origin category:
+
+| Reviewed association | Format-1 semantic metadata |
+| --- | --- |
+| Target snippet | Existing owning snippet ID; content and boundaries remain unchanged. |
+| Concept ID | Retrieval term `kind`, a controlled concept category with the existing identifier bounds. |
+| Normalized term or phrase | Retrieval term `term`, unchanged from A/B. |
+| Reviewed strength | Retrieval term `weight`, unchanged; not a score or aggregate. |
+| Canonical/alias/phrase origin, preferred term, bindings, rationales | Retained in `RuleCompilationResult.Vocabulary` for D, not repeated in every runtime term. |
+
+This mapping is one-to-one for effective associations: A forbids repeated normalized terms within one concept, so `(snippet, concept ID, term)` is unique. Different concepts using the same text remain different `(term, kind)` entries, even with different weights or identical preferred words. No prefix, hash, synthetic term, or category encoding is needed; even a 128-character concept ID fits the existing kind field. Source/snippet overlap still produces one entry with all origins retained in evidence. No reviewed association disappears, no weight is chosen as a winner, and no unreviewed term relationships are synthesized. Relationship arrays remain empty for this input model.
+
+The assembler sorts final terms by text then concept category, sources by source ID, and snippets by snippet ID using FR-022 ordering. B evidence retains original FR-023 candidate order and B origin categories/order. Evidence candidates remain unchanged; only separate projected candidates carry the artifact metadata. `RuleCompilationResult` contains the validated artifact, canonical bytes, B evidence, and existing structured artifact-validation errors. Failed artifact validation returns no artifact or bytes; input/snippet/enrichment failures retain their existing structured exception types.
+
+Rationales and expanded origins are compiler/audit evidence rather than a new runtime artifact field. D can consume the result without reparsing JSON, consulting Managed persistence, or rereading sources. The artifact's exact manifest hash still binds all reviewed input, including preferred terms, origin declarations, rationale, and binding scope.
+
+## Identity and Byte Compatibility
+
+Vocabulary does not change Rule Source IDs, source-byte hashes, snippet IDs, executable text/content hashes, source dependencies, or applicability. Concept, term, or weight changes alter emitted retrieval metadata and therefore the existing semantic digest and canonical bytes. The digest calculation itself remains FR-022's length-prefixed projection, not the JSON file hash.
+
+Exact manifest SHA-256 also participates in that projection. Two differently formatted, ordered, normalized-equivalent, or differently explained declarations may emit identical terms but still have different manifest hashes, artifact digests, and bytes. This is required provenance, not nondeterminism. Identical authoritative bytes and explicit identities produce identical output across repeated processes, source-root relocation, working directories, cultures, and internal set insertion order.
+
+LF/CRLF source variants retain equivalent normalized snippets where appropriate, but different authoritative source hashes and consequently different artifact digests/bytes. An absent vocabulary retains the exact FR-023 canonical 10-source/154-snippet artifact baseline, including the 223,929-byte output; explicit empty vocabulary emits no terms but still has its own exact manifest provenance.
 
 ## Validation and Failure
 
@@ -110,13 +151,15 @@ Unsupported vocabulary version, null structure, duplicate concept/term/binding/r
 
 Enrichment fails atomically through `RuleVocabularyEnrichmentException` with a bounded message, structured `Code`, and logical `Path`. Reused A checks preserve their codes, including `VOCABULARY_SOURCE_MISSING`, `VOCABULARY_CONCEPT_MISSING`, and invalid identifier/scope/duplicate-definition codes. B adds `VOCABULARY_TARGET_MISSING`, `VOCABULARY_TARGET_AMBIGUOUS`, `VOCABULARY_CANDIDATE_INVALID`, `VOCABULARY_CANDIDATE_SOURCE_MISSING`, and `VOCABULARY_CANDIDATE_INCONSISTENT`. A failed required target never produces partial successful enrichment.
 
+The CLI preserves normal exit categories: `3` for invalid materialized/vocabulary input, `4` for snippet compilation or vocabulary enrichment, and `5` for artifact validation/emission. Structured codes and bounded messages are retained; failure creates no partial artifact, does not replace existing output, and does not create output parents before validation. Normal output still uses atomic ordinary-file replacement, compact UTF-8 without BOM or trailing newline, and refuses manifest/source/directory collisions.
+
 Collision breadth, generic wording, weak coverage, unused definitions, and snippet-boundary quality require the later deterministic audit. That report is Derived evidence, never rules authority. Compilation must never invent a missing binding, silently broaden it, or discard a failed required validation.
 
 ## Provenance and Compatibility
 
-Exact manifest bytes preserve the reviewed rationale, concept IDs, scopes, and weights. Source byte hashes and source/anchor snippet IDs remain independent of vocabulary wording. FR-024B/C must retain traceable term origin and use the existing format-1 term/relationship carrier and semantic digest; they must not create a parallel vocabulary artifact or omit vocabulary changes from integrity.
+Exact manifest bytes preserve the reviewed rationale, concept IDs, scopes, and weights. Source byte hashes and source/anchor snippet IDs remain independent of vocabulary wording. C retains traceable term origin alongside the existing format-1 term/relationship carrier and semantic digest; it creates no parallel vocabulary artifact or separate integrity algorithm.
 
-The portable input needs only ordinary materialized files and explicit immutable source/compiler identity. Enrichment operates entirely on supplied memory and adds no Git, network, MCP, SQL, campaign, or host dependency. Existing absent-vocabulary inputs still compile with empty retrieval metadata and unchanged canonical artifact bytes. Managed publication, normal CLI output, and runtime retrieval are not wired to enrichment by A or B.
+The portable input needs only ordinary materialized files and explicit immutable source/compiler identity. Enrichment and assembly operate entirely on supplied memory and add no Git, network, MCP, SQL, campaign, or host dependency. Existing absent-vocabulary inputs still compile with empty retrieval metadata and unchanged canonical artifact bytes. C changes standalone compilation only; Managed publication and runtime retrieval remain unchanged.
 
 ## Related Documents
 

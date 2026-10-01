@@ -4,7 +4,7 @@ This reference .NET tool compiles an already-materialized Eternal Cycle Rule Sou
 
 ## Projects
 
-- `src/EternalCycle.Rules` owns the portable manifest loader, deterministic snippet compiler, format-1 assembly, validation, and canonical writer.
+- `src/EternalCycle.Rules` owns the portable manifest loader, deterministic snippet compiler, reviewed vocabulary enrichment, format-1 assembly, validation, and canonical writer. `RuleCompilationPipeline.Compile(snapshot)` returns the artifact, canonical bytes, and separate origin evidence through one shared pipeline.
 - `src/EternalCycle.Rules.Compiler` is the thin command-line adapter over that portable pipeline.
 - `tests/EternalCycle.Rules.Tests` validates portable compilation semantics.
 - `tests/EternalCycle.Rules.Compiler.Tests` validates executable behavior, diagnostics, exit codes, filesystem handling, and byte reproducibility.
@@ -36,7 +36,7 @@ Successful diagnostics report the output path, Rule Source and snippet counts, s
 | `0` | Success or help |
 | `2` | Command or argument usage error |
 | `3` | Materialized source or manifest input error |
-| `4` | Snippet compilation error |
+| `4` | Snippet compilation or reviewed vocabulary enrichment error |
 | `5` | Artifact assembly, contract, or serialization validation error |
 | `6` | Output path or filesystem write error |
 | `70` | Unexpected internal failure or cancellation |
@@ -49,6 +49,8 @@ Identical authoritative manifest and source bytes plus identical explicit identi
 
 ## Vocabulary Checkpoint
 
-The portable loader accepts the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). FR-024A validates and normalizes that input while preserving exact manifest bytes. FR-024B's portable `RuleVocabularyEnricher.Enrich(snapshot, candidates)` resolves exact bindings and returns reviewed term associations with deterministic origin evidence beside unchanged candidates. It uses only the supplied in-memory snapshot and candidates; no source reread or acquisition is needed.
+Normal `compile` automatically processes the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). A validates input, B resolves exact bindings, and C projects each association into a format-1 term: normalized wording, reviewed concept ID as `kind`, and exact reviewed weight. Using concept categories preserves shared terms without conflicting weights. Canonical/alias/phrase origin and review rationale remain in the portable compiler result for the later audit, not in every artifact term.
 
-The CLI still emits the existing empty retrieval carrier: B does not wire enrichment into artifacts or normal CLI compilation. Pipeline integration, deterministic quality reports, and canonical curation remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md). No vocabulary generation, runtime ranking, or audit CLI option is claimed by this checkpoint.
+No-vocabulary compilation retains exact legacy output. Reviewed metadata and exact manifest provenance participate in the existing semantic digest; even normalized-equivalent declarations with different authoritative bytes retain different provenance. No additional command/flag, scoring, synonym generation, or runtime retrieval is added. Quality reports and canonical curation remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md).
+
+The small [integration manifest](fixtures/reviewed-vocabulary/manifest.json) with [core](fixtures/reviewed-vocabulary/core.txt) and [operations](fixtures/reviewed-vocabulary/operations.txt) text is test material only, not canonical Eternal Cycle vocabulary or mechanics. It exercises shared wording, precise/source-wide bindings, overlapping origins, and CLI/library equality.

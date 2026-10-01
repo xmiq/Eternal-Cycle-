@@ -11,7 +11,7 @@ using Xunit.Abstractions;
 
 namespace EternalCycle.Rules.Compiler.Tests;
 
-public sealed class RulesCompilerCliTests(ITestOutputHelper output)
+public sealed partial class RulesCompilerCliTests(ITestOutputHelper output)
 {
     private const string SourceScheme = "test-source";
     private const string SourceValue = "immutable-source";
@@ -283,6 +283,7 @@ public sealed class RulesCompilerCliTests(ITestOutputHelper output)
         Assert.Equal(0, result.ExitCode);
         Assert.Equal(10, artifact.RuleSources.Count);
         Assert.Equal(154, artifact.Snippets.Count);
+        Assert.Equal(223929, bytes.Length);
         Assert.Equal("4B583A7904CE514B56CF3B497648DB5D778FC04DF2285D30A2E03823A32EA6A4", artifact.Integrity.ArtifactSha256);
         Assert.Equal("802172680FCE33E7F5F9B75EBEBE1D695B702A22B82F1918601DB7B9F44926EC", Sha256(bytes));
         Assert.Equal(direct.Bytes.ToArray(), bytes);

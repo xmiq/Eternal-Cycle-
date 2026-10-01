@@ -20,6 +20,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\EternalCycle.Rules.Compiler\EternalCycle.Rules.Compiler.csproj" />
     <ProjectReference Include="..\..\src\EternalCycle.Rules\EternalCycle.Rules.csproj" />
+    <Compile Include="..\Shared\VocabularyTestPayload.cs" Link="VocabularyTestPayload.cs" />
+    <Content Include="..\..\fixtures\reviewed-vocabulary\*" Link="VocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

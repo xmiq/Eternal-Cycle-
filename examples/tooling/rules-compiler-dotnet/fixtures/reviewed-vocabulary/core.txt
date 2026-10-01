@@ -1,0 +1,5 @@
+## Combat
+Resolve a declared conflict using the applicable procedure.
+
+## Progression
+Record earned character advancement without inventing progress.

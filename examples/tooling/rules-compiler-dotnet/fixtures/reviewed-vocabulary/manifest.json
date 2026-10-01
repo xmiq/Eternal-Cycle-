@@ -1,0 +1,45 @@
+{
+  "manifestFormatVersion": 1,
+  "compilerContractVersion": "1",
+  "rulesetId": "vocabulary-fixture",
+  "repositoryVersion": "test",
+  "sources": [
+    {"ruleSourceId": "core", "path": "core.txt", "layer": "Core", "worldModelIds": [], "moduleIds": [], "campaignModes": ["*"], "operations": ["*"], "topics": [], "dependencies": [], "priority": 0, "alwaysInclude": false, "preparationTier": "Standard"},
+    {"ruleSourceId": "operations", "path": "operations.txt", "layer": "Core", "worldModelIds": [], "moduleIds": [], "campaignModes": ["*"], "operations": ["*"], "topics": [], "dependencies": ["core"], "priority": 0, "alwaysInclude": false, "preparationTier": "Standard"}
+  ],
+  "retrievalVocabulary": {
+    "vocabularyFormatVersion": 1,
+    "concepts": [
+      {
+        "conceptId": "combat", "canonicalTerm": "combat", "weight": 800,
+        "alternatives": [
+          {"term": "fight", "kind": "Alias", "weight": 600, "rationale": "Reviewed conflict wording in this fixture."},
+          {"term": "fighting", "kind": "Alias", "weight": 500, "rationale": "Reviewed activity wording in this fixture."}
+        ],
+        "rationale": "Identifies conflict resolution in the fixture."
+      },
+      {
+        "conceptId": "progression", "canonicalTerm": "progression", "weight": 700,
+        "alternatives": [
+          {"term": "character advancement", "kind": "Phrase", "weight": 650, "rationale": "Reviewed character development wording."},
+          {"term": "experience points", "kind": "Phrase", "weight": 450, "rationale": "Test navigation wording, not an Eternal Cycle mechanic."},
+          {"term": "progress", "kind": "Alias", "weight": 600, "rationale": "Reviewed progression shorthand."}
+        ],
+        "rationale": "Identifies earned advancement and its saved record."
+      },
+      {
+        "conceptId": "persistence", "canonicalTerm": "persistence", "weight": 900,
+        "alternatives": [
+          {"term": "progress", "kind": "Alias", "weight": 400, "rationale": "Reviewed shorthand for saved progress in this fixture."}
+        ],
+        "rationale": "Identifies durable saves and verified status."
+      }
+    ],
+    "bindings": [
+      {"ruleSourceId": "core", "scope": "Snippet", "sourceAnchor": "combat", "conceptIds": ["combat"], "rationale": "Only the conflict section is targeted."},
+      {"ruleSourceId": "core", "scope": "Snippet", "sourceAnchor": "progression", "conceptIds": ["progression"], "rationale": "Only the advancement section is targeted."},
+      {"ruleSourceId": "operations", "scope": "Source", "sourceAnchor": null, "conceptIds": ["persistence"], "rationale": "Both save and status describe persistence."},
+      {"ruleSourceId": "operations", "scope": "Snippet", "sourceAnchor": "save", "conceptIds": ["persistence", "progression"], "rationale": "The save retains advancement; overlapping persistence evidence remains distinct."}
+    ]
+  }
+}

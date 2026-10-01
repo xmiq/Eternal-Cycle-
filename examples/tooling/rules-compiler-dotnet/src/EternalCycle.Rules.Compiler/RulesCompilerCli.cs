@@ -97,10 +97,10 @@ public static class RulesCompilerCli
                 return (int)RulesCompilerExitCode.MaterializedInput;
             }
 
-            IReadOnlyList<RuleSnippetCandidate> candidates;
+            RuleCompilationResult compilation;
             try
             {
-                candidates = RuleSnippetCompiler.Compile(snapshot);
+                compilation = RuleCompilationPipeline.Compile(snapshot);
             }
             catch (RuleSnippetCompilationException exception)
             {
@@ -113,26 +113,28 @@ public static class RulesCompilerCli
                     cancellationToken);
                 return (int)RulesCompilerExitCode.SnippetCompilation;
             }
-
-            var assembly = CompiledRulesArtifactAssembler.Assemble(snapshot, candidates);
-            if (!assembly.IsValid)
+            catch (RuleVocabularyEnrichmentException exception)
             {
-                await WriteValidationErrorsAsync(standardError, "Artifact assembly failed", assembly.Errors, cancellationToken);
+                await WriteFailureAsync(
+                    standardError,
+                    "Reviewed vocabulary enrichment failed",
+                    exception.Code,
+                    exception.Path,
+                    exception.Message,
+                    cancellationToken);
+                return (int)RulesCompilerExitCode.SnippetCompilation;
+            }
+            if (!compilation.IsValid)
+            {
+                await WriteValidationErrorsAsync(standardError, "Artifact compilation failed", compilation.Errors, cancellationToken);
                 return (int)RulesCompilerExitCode.ArtifactValidation;
             }
 
-            var artifact = assembly.Artifact!;
-            var write = CompiledRulesArtifactWriter.Write(artifact);
-            if (!write.IsValid)
-            {
-                await WriteValidationErrorsAsync(standardError, "Artifact serialization failed", write.Errors, cancellationToken);
-                return (int)RulesCompilerExitCode.ArtifactValidation;
-            }
-
+            var artifact = compilation.Artifact!;
             string outputPath;
             try
             {
-                outputPath = await WriteOutputAsync(options, snapshot, write.Bytes, cancellationToken);
+                outputPath = await WriteOutputAsync(options, snapshot, compilation.Bytes, cancellationToken);
             }
             catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException or PathTooLongException)
             {
@@ -140,7 +142,7 @@ public static class RulesCompilerCli
                 return (int)RulesCompilerExitCode.Output;
             }
 
-            var serializedHash = Convert.ToHexString(SHA256.HashData(write.Bytes.Span));
+            var serializedHash = Convert.ToHexString(SHA256.HashData(compilation.Bytes.Span));
             await standardOutput.WriteLineAsync("Compiled Rules artifact written.".AsMemory(), cancellationToken);
             await standardOutput.WriteLineAsync($"Output: {outputPath}".AsMemory(), cancellationToken);
             await standardOutput.WriteLineAsync($"Rule Sources: {artifact.RuleSources.Count}".AsMemory(), cancellationToken);
