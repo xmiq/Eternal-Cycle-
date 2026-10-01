@@ -72,7 +72,7 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** High
 - **Status reason:** Owner-authorized v1.1 planning separated search-quality work from compiler construction; the owner subsequently selected FR-024 for bounded implementation. It remains Roadmapped until final acceptance and closure.
-- **Execution progress:** FR-024A-D complete and validated: reviewed input, exact associations/origins, shared artifact/CLI integration, and deterministic quality reports with explicit review policy and observational integrity. FR-024E-F not started; FR-024 remains selected and incomplete. See the [execution plan](FR_024_EXECUTION_PLAN.md) and [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).
+- **Execution progress:** FR-024A-E complete and validated: reviewed input, exact associations/origins, shared artifact/CLI integration, deterministic quality reports, and reviewed canonical vocabulary/positive-negative precision fixtures. FR-024F not started; FR-024 remains selected and incomplete. See the [execution plan](FR_024_EXECUTION_PLAN.md), [E audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md), and [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-024 task](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit)
 

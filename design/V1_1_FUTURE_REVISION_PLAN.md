@@ -83,7 +83,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-024 - Retrieval Vocabulary and Compiler Audit
 
-- **Execution state:** Owner-selected and in progress; FR-024A-D reviewed input, enrichment/origin evidence, artifact/CLI integration, and observational quality audit checkpoints complete. [FR-024 execution packages](FR_024_EXECUTION_PLAN.md) bound the remaining corpus and closure work without creating new objectives.
+- **Execution state:** Owner-selected and in progress; FR-024A-E reviewed input, enrichment/origin evidence, artifact/CLI integration, observational quality audit, and canonical curation/precision fixture checkpoints complete. [FR-024 execution packages](FR_024_EXECUTION_PLAN.md) bound the remaining integration/closure work without creating new objectives.
 - **Primary classification:** Reference implementation and regression/diagnostic tooling.
 - **Scope:** Add reviewable normalized terms, controlled alternatives, optional weights/relationships, vocabulary-quality checks, and a compiler report for collisions, over-broad terms, weak coverage, and poor snippet boundaries.
 - **Boundaries:** Do not train a model, scrape uncontrolled synonym sources, or make diagnostics authoritative rule content.

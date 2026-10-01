@@ -1,0 +1,107 @@
+{
+  "serializedSha256": "A591012C4C8414A67F05A898941EFCBADBDFD2C0AD314640199B2B50086B6CD6",
+  "artifactBytes": 275622,
+  "uncoveredSnippetIds": [
+    "core-context-assembly",
+    "core-context-assembly#acceptance-criteria",
+    "core-context-assembly#document-control",
+    "core-context-assembly#regression-cases",
+    "core-context-assembly#related-documents",
+    "core-context-assembly#safeguards",
+    "core-context-assembly#storage-neutral-logical-guidance",
+    "core-design-philosophy",
+    "core-development",
+    "core-development#related-documents",
+    "core-development#scope-boundaries",
+    "core-development#system-interactions",
+    "core-monster-evolution",
+    "core-monster-evolution#related-documents",
+    "core-monster-evolution#scope-boundaries",
+    "core-monster-evolution#worked-examples",
+    "core-persistence-authority",
+    "core-persistence-authority#related-documents",
+    "core-persistence-authority#safeguards",
+    "core-persistence-authority#scope-boundaries",
+    "core-persistence-authority#the-authority-layers",
+    "core-persistence-authority#valid-upward-proposals",
+    "core-persistence-authority#worked-examples",
+    "core-reincarnation",
+    "core-reincarnation#examples",
+    "core-reincarnation#related-documents",
+    "core-world-engine",
+    "core-world-engine#related-documents",
+    "gm-runtime-procedure",
+    "gm-runtime-procedure#related-documents",
+    "runtime-kernel",
+    "runtime-kernel#related-documents"
+  ],
+  "summary": {
+    "sourceCount": 10,
+    "snippetCount": 154,
+    "conceptCount": 62,
+    "canonicalTermCount": 62,
+    "aliasCount": 67,
+    "phraseCount": 72,
+    "bindingCount": 122,
+    "effectiveAssociationCount": 773,
+    "retainedOriginCount": 773,
+    "coveredSnippetCount": 122,
+    "uncoveredSnippetCount": 32,
+    "conceptsWithAliases": 62,
+    "conceptsWithoutAliases": 0,
+    "conceptsWithTargets": 62,
+    "conceptsWithoutTargets": 0,
+    "uniqueTermCount": 200,
+    "multiOriginAssociationCount": 0,
+    "sourceOnlyAssociationCount": 3,
+    "averageAssociationsPerCoveredSnippet": {
+      "numerator": 773,
+      "denominator": 122
+    },
+    "maximumAssociationsPerSnippet": 24,
+    "averageTargetSnippetsPerTerm": {
+      "numerator": 773,
+      "denominator": 200
+    },
+    "maximumTargetSnippetsPerTerm": 10,
+    "errorCount": 0,
+    "warningCount": 3,
+    "informationCount": 105
+  },
+  "auditSha256": "A54B088E9FDBDEB6889F8C151EFC9F5C5D04E7584F4EC7E22F4558FE5FDABEC6",
+  "semanticDigest": "56074D713C27846313D0441A63AEC3794371053C8C85BC5FE5AF5891D53CE37B",
+  "findingCounts": [
+    {
+      "code": "VOCABULARY_AMBIGUOUS_TERM",
+      "count": 1
+    },
+    {
+      "code": "VOCABULARY_DIFFERENT_TARGET_SETS",
+      "count": 1
+    },
+    {
+      "code": "VOCABULARY_GENERIC_TERM",
+      "count": 3
+    },
+    {
+      "code": "VOCABULARY_INHERITED_ONLY",
+      "count": 1
+    },
+    {
+      "code": "VOCABULARY_LARGE_SNIPPET",
+      "count": 1
+    },
+    {
+      "code": "VOCABULARY_MULTI_SOURCE_TERM",
+      "count": 99
+    },
+    {
+      "code": "VOCABULARY_PARTIAL_COVERAGE",
+      "count": 1
+    },
+    {
+      "code": "VOCABULARY_SOURCE_BINDING",
+      "count": 1
+    }
+  ]
+}

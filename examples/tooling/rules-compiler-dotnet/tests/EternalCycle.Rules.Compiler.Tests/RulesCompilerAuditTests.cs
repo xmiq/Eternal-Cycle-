@@ -180,10 +180,11 @@ public sealed partial class RulesCompilerCliTests
     }
 
     [Fact]
-    public async Task CanonicalCompileAuditCompileIsObservationalThroughRealCli()
+    public async Task HistoricalCanonicalCompileAuditCompileIsObservationalThroughRealCli()
     {
         using var destination = TestPayload.Empty();
-        var root = FindRepositoryRoot();
+        using var historical = new CanonicalVocabularyPayload(historical: true);
+        var root = historical.Root;
         var artifactPath = Path.Combine(destination.Root, "canonical.json");
         var reportPath = Path.Combine(destination.Root, "audit.json");
         const string manifestPath = "docs/rules/rule-source-manifest.json";

@@ -310,14 +310,12 @@ public sealed class RuleCompilationPipelineTests(ITestOutputHelper output)
     }
 
     [Fact]
-    public void CanonicalNoVocabularyCorpusRetainsFullBaseline()
+    public void HistoricalCanonicalNoVocabularyCorpusRetainsFullBaseline()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
         while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "docs", "rules", "rule-source-manifest.json"))) { directory = directory.Parent; }
         Assert.NotNull(directory);
-        var snapshot = MaterializedRuleSourceLoader.Load(new(directory.FullName, "docs/rules/rule-source-manifest.json",
-            new() { Scheme = "git-commit", Value = "d5028af32cf16fe48878ffef0301867175f98f08" },
-            new() { ContractVersion = "1", ImplementationId = "eternal-cycle-dotnet", ImplementationVersion = "1.0.0" }));
+        var snapshot = CanonicalVocabularyPayload.LoadHistorical(directory.FullName);
         var result = RuleCompilationPipeline.Compile(snapshot);
         AssertValid(result);
         Assert.Equal(10, result.Artifact!.RuleSources.Count);

@@ -39,4 +39,6 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Audit Boundary
 
+The [FR-024E Canonical Vocabulary Curation Audit](FR_024E_CANONICAL_VOCABULARY_AUDIT.md) records reviewed corpus conventions, precise positive/negative fixtures, before/after identities and metrics, and accepted quality findings without closing FR-024.
+
 Audit findings route gameplay concerns to [Future Revisions](../FUTURE_REVISIONS.md), unresolved design questions to [Unresolved Questions](../UNRESOLVED_QUESTIONS.md), and accepted changes through ordinary repository governance. Audit files may correct navigation and documentation inconsistencies within their roadmap scope; they may not invent or rebalance mechanics.

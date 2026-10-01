@@ -137,5 +137,2553 @@
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
     }
-  ]
+  ],
+  "retrievalVocabulary": {
+    "vocabularyFormatVersion": 1,
+    "concepts": [
+      {
+        "conceptId": "gameplay-resolution",
+        "canonicalTerm": "gameplay resolution",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "resolve action",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates the read-resolve-persist-yield procedure for a declared interaction, not permission to choose for the player."
+          },
+          {
+            "term": "gm adjudication",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates the read-resolve-persist-yield procedure for a declared interaction, not permission to choose for the player."
+          },
+          {
+            "term": "player action resolution",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates the read-resolve-persist-yield procedure for a declared interaction, not permission to choose for the player."
+          }
+        ],
+        "rationale": "Locates the read-resolve-persist-yield procedure for a declared interaction, not permission to choose for the player."
+      },
+      {
+        "conceptId": "player-agency",
+        "canonicalTerm": "player agency",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "player choice",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Retrieves the actual-input and unresolved-choice boundary; internal work never grants another player action."
+          },
+          {
+            "term": "wait for player input",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Retrieves the actual-input and unresolved-choice boundary; internal work never grants another player action."
+          },
+          {
+            "term": "one input one interaction",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Retrieves the actual-input and unresolved-choice boundary; internal work never grants another player action."
+          }
+        ],
+        "rationale": "Retrieves the actual-input and unresolved-choice boundary; internal work never grants another player action."
+      },
+      {
+        "conceptId": "host-bootstrap",
+        "canonicalTerm": "gm host bootstrap",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "gm setup",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "The heading-free bootstrap is one complete host instruction contract, not a gameplay mechanic."
+          },
+          {
+            "term": "host instructions",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "The heading-free bootstrap is one complete host instruction contract, not a gameplay mechanic."
+          }
+        ],
+        "rationale": "The heading-free bootstrap is one complete host instruction contract, not a gameplay mechanic."
+      },
+      {
+        "conceptId": "rule-retrieval",
+        "canonicalTerm": "rule retrieval",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "rule lookup",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates relevant reusable rules separately from campaign facts; required specialist sources cannot be guessed."
+          },
+          {
+            "term": "rule packet",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates relevant reusable rules separately from campaign facts; required specialist sources cannot be guessed."
+          },
+          {
+            "term": "specialist rules",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates relevant reusable rules separately from campaign facts; required specialist sources cannot be guessed."
+          }
+        ],
+        "rationale": "Locates relevant reusable rules separately from campaign facts; required specialist sources cannot be guessed."
+      },
+      {
+        "conceptId": "compiled-rule-context",
+        "canonicalTerm": "compiled rules",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "compiled rule context",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "These passages describe delivered compiled rule contexts and World filtering, not compiler algorithms or artifact acquisition."
+          },
+          {
+            "term": "world-specific rule packet",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "These passages describe delivered compiled rule contexts and World filtering, not compiler algorithms or artifact acquisition."
+          }
+        ],
+        "rationale": "These passages describe delivered compiled rule contexts and World filtering, not compiler algorithms or artifact acquisition."
+      },
+      {
+        "conceptId": "rule-dependencies",
+        "canonicalTerm": "rule dependencies",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "dependency closure",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names the required rule closure rather than gameplay prerequisite currency or arbitrary record expansion."
+          },
+          {
+            "term": "dependency-complete rule packet",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names the required rule closure rather than gameplay prerequisite currency or arbitrary record expansion."
+          }
+        ],
+        "rationale": "Names the required rule closure rather than gameplay prerequisite currency or arbitrary record expansion."
+      },
+      {
+        "conceptId": "campaign-binding",
+        "canonicalTerm": "campaign binding",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "campaign identity",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates trusted Campaign identity and configured persistence target resolution before play or resume."
+          },
+          {
+            "term": "canonical campaign target",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates trusted Campaign identity and configured persistence target resolution before play or resume."
+          }
+        ],
+        "rationale": "Locates trusted Campaign identity and configured persistence target resolution before play or resume."
+      },
+      {
+        "conceptId": "repository-canon",
+        "canonicalTerm": "repository canon",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "reusable rules",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Identifies reusable rules and accepted governance, not facts or optional premises established in one campaign."
+          },
+          {
+            "term": "rules authority",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Identifies reusable rules and accepted governance, not facts or optional premises established in one campaign."
+          }
+        ],
+        "rationale": "Identifies reusable rules and accepted governance, not facts or optional premises established in one campaign."
+      },
+      {
+        "conceptId": "campaign-canon",
+        "canonicalTerm": "campaign canon",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "campaign facts",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Identifies campaign-specific established commitments below repository rules, not permission to rewrite reusable mechanics."
+          },
+          {
+            "term": "adopted campaign premises",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Identifies campaign-specific established commitments below repository rules, not permission to rewrite reusable mechanics."
+          }
+        ],
+        "rationale": "Identifies campaign-specific established commitments below repository rules, not permission to rewrite reusable mechanics."
+      },
+      {
+        "conceptId": "canon-conflict",
+        "canonicalTerm": "canon conflict",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "conflict",
+            "kind": "Alias",
+            "weight": 600,
+            "rationale": "Conflict here means incompatible recorded claims; precise phrases distinguish this from combat conflict."
+          },
+          {
+            "term": "contradictory facts",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Conflict here means incompatible recorded claims; precise phrases distinguish this from combat conflict."
+          },
+          {
+            "term": "authority conflict",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Conflict here means incompatible recorded claims; precise phrases distinguish this from combat conflict."
+          }
+        ],
+        "rationale": "Conflict here means incompatible recorded claims; precise phrases distinguish this from combat conflict."
+      },
+      {
+        "conceptId": "uncertainty",
+        "canonicalTerm": "uncertainty",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "unknown information",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "An authoritative unknown is preserved; authority alone never proves certainty or permits a conversational guess."
+          },
+          {
+            "term": "not yet verified",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "An authoritative unknown is preserved; authority alone never proves certainty or permits a conversational guess."
+          }
+        ],
+        "rationale": "An authoritative unknown is preserved; authority alone never proves certainty or permits a conversational guess."
+      },
+      {
+        "conceptId": "information-visibility",
+        "canonicalTerm": "information visibility",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "disclosure",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates audience and observer boundaries; reading GM context does not grant a character the same knowledge."
+          },
+          {
+            "term": "character knowledge",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates audience and observer boundaries; reading GM context does not grant a character the same knowledge."
+          },
+          {
+            "term": "gm secrets",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates audience and observer boundaries; reading GM context does not grant a character the same knowledge."
+          }
+        ],
+        "rationale": "Locates audience and observer boundaries; reading GM context does not grant a character the same knowledge."
+      },
+      {
+        "conceptId": "historical-record",
+        "canonicalTerm": "historical record",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "campaign history",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Events and corrections remain traceable; summaries and current conditions cannot erase established history."
+          },
+          {
+            "term": "durable chronology",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Events and corrections remain traceable; summaries and current conditions cannot erase established history."
+          }
+        ],
+        "rationale": "Events and corrections remain traceable; summaries and current conditions cannot erase established history."
+      },
+      {
+        "conceptId": "current-state",
+        "canonicalTerm": "current campaign state",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "active campaign state",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names integrated current facts and their owners, distinct from history, pending session changes, and derived packets."
+          },
+          {
+            "term": "current state ownership",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names integrated current facts and their owners, distinct from history, pending session changes, and derived packets."
+          }
+        ],
+        "rationale": "Names integrated current facts and their owners, distinct from history, pending session changes, and derived packets."
+      },
+      {
+        "conceptId": "retcon",
+        "canonicalTerm": "authorized retcon",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "continuity correction",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "A retcon is an authorized campaign-level replacement with scope and provenance, not discovery of a false belief."
+          },
+          {
+            "term": "superseded campaign facts",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "A retcon is an authorized campaign-level replacement with scope and provenance, not discovery of a false belief."
+          }
+        ],
+        "rationale": "A retcon is an authorized campaign-level replacement with scope and provenance, not discovery of a false belief."
+      },
+      {
+        "conceptId": "rules-migration",
+        "canonicalTerm": "rules migration",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "campaign conversion",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Repository updates require explicit adoption and validation rather than automatic rewriting of historical outcomes."
+          },
+          {
+            "term": "adopt rule update",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Repository updates require explicit adoption and validation rather than automatic rewriting of historical outcomes."
+          }
+        ],
+        "rationale": "Repository updates require explicit adoption and validation rather than automatic rewriting of historical outcomes."
+      },
+      {
+        "conceptId": "automatic-persistence",
+        "canonicalTerm": "automatic persistence",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "automatic saving",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates the mandatory completion gate; narration or an intended save is not a committed consequence."
+          },
+          {
+            "term": "save before delivery",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates the mandatory completion gate; narration or an intended save is not a committed consequence."
+          }
+        ],
+        "rationale": "Locates the mandatory completion gate; narration or an intended save is not a committed consequence."
+      },
+      {
+        "conceptId": "affected-set",
+        "canonicalTerm": "affected set",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "changed canonical owners",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates explicit complete or empty affected-owner determination, including quiet movement, time, and failed attempts."
+          },
+          {
+            "term": "durable change detection",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates explicit complete or empty affected-owner determination, including quiet movement, time, and failed attempts."
+          }
+        ],
+        "rationale": "Locates explicit complete or empty affected-owner determination, including quiet movement, time, and failed attempts."
+      },
+      {
+        "conceptId": "transaction-commit",
+        "canonicalTerm": "transaction commit",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "commit transaction",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names atomic canonical writes with retained transaction identity, separate from a local candidate or narrative completion."
+          },
+          {
+            "term": "persistence transaction",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names atomic canonical writes with retained transaction identity, separate from a local candidate or narrative completion."
+          },
+          {
+            "term": "atomic owner writes",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names atomic canonical writes with retained transaction identity, separate from a local candidate or narrative completion."
+          }
+        ],
+        "rationale": "Names atomic canonical writes with retained transaction identity, separate from a local candidate or narrative completion."
+      },
+      {
+        "conceptId": "save-evidence",
+        "canonicalTerm": "save validation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "read-back verification",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates expected-state, version, and read-back proof rather than trusting intent or an adapter call alone."
+          },
+          {
+            "term": "canonical change proof",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates expected-state, version, and read-back proof rather than trusting intent or an adapter call alone."
+          },
+          {
+            "term": "unchanged save detection",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates expected-state, version, and read-back proof rather than trusting intent or an adapter call alone."
+          }
+        ],
+        "rationale": "Locates expected-state, version, and read-back proof rather than trusting intent or an adapter call alone."
+      },
+      {
+        "conceptId": "manual-save",
+        "canonicalTerm": "manual save",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "save",
+            "kind": "Alias",
+            "weight": 600,
+            "rationale": "The exact player command is a narrow override; the generic alias save is retained only on its command procedure."
+          },
+          {
+            "term": "force save",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "The exact player command is a narrow override; the generic alias save is retained only on its command procedure."
+          }
+        ],
+        "rationale": "The exact player command is a narrow override; the generic alias save is retained only on its command procedure."
+      },
+      {
+        "conceptId": "save-status",
+        "canonicalTerm": "save status",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "persistence status",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "The marker and status command report actual configured-authority evidence, not backend guesses or decorative icons."
+          },
+          {
+            "term": "local cloud save status",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "The marker and status command report actual configured-authority evidence, not backend guesses or decorative icons."
+          }
+        ],
+        "rationale": "The marker and status command report actual configured-authority evidence, not backend guesses or decorative icons."
+      },
+      {
+        "conceptId": "save-retry",
+        "canonicalTerm": "retry save",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "persistence retry",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Retries resume incomplete stages without replaying costs, chronology, development, or already committed effects."
+          },
+          {
+            "term": "idempotent retry",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Retries resume incomplete stages without replaying costs, chronology, development, or already committed effects."
+          }
+        ],
+        "rationale": "Retries resume incomplete stages without replaying costs, chronology, development, or already committed effects."
+      },
+      {
+        "conceptId": "no-change-turn",
+        "canonicalTerm": "no-change turn",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "determined no-op",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "An explicit empty affected set creates no canonical mutation; a failed action is not automatically unchanged."
+          },
+          {
+            "term": "empty affected set",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "An explicit empty affected set creates no canonical mutation; a failed action is not automatically unchanged."
+          }
+        ],
+        "rationale": "An explicit empty affected set creates no canonical mutation; a failed action is not automatically unchanged."
+      },
+      {
+        "conceptId": "context-assembly",
+        "canonicalTerm": "context assembly",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "context packet",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names bounded owner-backed context selection; convenience packets remain derived and cannot own Canon."
+          },
+          {
+            "term": "relevance-filtered context",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names bounded owner-backed context selection; convenience packets remain derived and cannot own Canon."
+          }
+        ],
+        "rationale": "Names bounded owner-backed context selection; convenience packets remain derived and cannot own Canon."
+      },
+      {
+        "conceptId": "read-set",
+        "canonicalTerm": "read set",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "canonical reads",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates material canonical reads and source verification before adjudication, not loading every connected record."
+          },
+          {
+            "term": "read before resolution",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates material canonical reads and source verification before adjudication, not loading every connected record."
+          }
+        ],
+        "rationale": "Locates material canonical reads and source verification before adjudication, not loading every connected record."
+      },
+      {
+        "conceptId": "derived-context",
+        "canonicalTerm": "derived context",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "context cache",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Summaries and packets navigate owners; invalidation and regeneration follow verified Canon rather than unsaved narration."
+          },
+          {
+            "term": "running summary",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Summaries and packets navigate owners; invalidation and regeneration follow verified Canon rather than unsaved narration."
+          },
+          {
+            "term": "stale context",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Summaries and packets navigate owners; invalidation and regeneration follow verified Canon rather than unsaved narration."
+          }
+        ],
+        "rationale": "Summaries and packets navigate owners; invalidation and regeneration follow verified Canon rather than unsaved narration."
+      },
+      {
+        "conceptId": "visual-context",
+        "canonicalTerm": "canonical visual context",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "appearance context",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Canonical depiction uses established appearance and visibility; incidental generated details are not automatically adopted."
+          },
+          {
+            "term": "image generation context",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Canonical depiction uses established appearance and visibility; incidental generated details are not automatically adopted."
+          }
+        ],
+        "rationale": "Canonical depiction uses established appearance and visibility; incidental generated details are not automatically adopted."
+      },
+      {
+        "conceptId": "character-development",
+        "canonicalTerm": "development",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "progression",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Development means earned domain-specific growth, not a universal level, rule preparation, or arbitrary reward."
+          },
+          {
+            "term": "advancement",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Development means earned domain-specific growth, not a universal level, rule preparation, or arbitrary reward."
+          },
+          {
+            "term": "character advancement",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Development means earned domain-specific growth, not a universal level, rule preparation, or arbitrary reward."
+          }
+        ],
+        "rationale": "Development means earned domain-specific growth, not a universal level, rule preparation, or arbitrary reward."
+      },
+      {
+        "conceptId": "earned-experience",
+        "canonicalTerm": "earned experience",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "xp",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "XP terminology leads to domain-specific adaptation and explicit anti-kill-XP rules; it does not introduce a universal XP pool."
+          },
+          {
+            "term": "experience points",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "XP terminology leads to domain-specific adaptation and explicit anti-kill-XP rules; it does not introduce a universal XP pool."
+          }
+        ],
+        "rationale": "XP terminology leads to domain-specific adaptation and explicit anti-kill-XP rules; it does not introduce a universal XP pool."
+      },
+      {
+        "conceptId": "training",
+        "canonicalTerm": "meaningful training",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "practice",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Real challenge, feedback, correction, and recovery develop capability; elapsed time or rote repetition alone does not."
+          },
+          {
+            "term": "relearning",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Real challenge, feedback, correction, and recovery develop capability; elapsed time or rote repetition alone does not."
+          },
+          {
+            "term": "training feedback",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Real challenge, feedback, correction, and recovery develop capability; elapsed time or rote repetition alone does not."
+          }
+        ],
+        "rationale": "Real challenge, feedback, correction, and recovery develop capability; elapsed time or rote repetition alone does not."
+      },
+      {
+        "conceptId": "current-incarnation",
+        "canonicalTerm": "current incarnation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "current life",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "The present active self and body remain real constraints; historical identities do not operate an empty current shell."
+          },
+          {
+            "term": "present incarnation",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "The present active self and body remain real constraints; historical identities do not operate an empty current shell."
+          }
+        ],
+        "rationale": "The present active self and body remain real constraints; historical identities do not operate an empty current shell."
+      },
+      {
+        "conceptId": "capability-profile",
+        "canonicalTerm": "capability profile",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "capability assessment",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Capability is assessed for an objective, evidence, conditions, and support rather than one overall power score."
+          },
+          {
+            "term": "contextual effectiveness",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Capability is assessed for an objective, evidence, conditions, and support rather than one overall power score."
+          }
+        ],
+        "rationale": "Capability is assessed for an objective, evidence, conditions, and support rather than one overall power score."
+      },
+      {
+        "conceptId": "combat-context",
+        "canonicalTerm": "combat",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "fight",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+          },
+          {
+            "term": "fighting",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+          },
+          {
+            "term": "battle",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+          },
+          {
+            "term": "conflict",
+            "kind": "Alias",
+            "weight": 600,
+            "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+          },
+          {
+            "term": "combat preparation",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+          }
+        ],
+        "rationale": "Combat terminology retrieves contextual capability, terrain, opposition, and victory limits; conflict is a weaker ambiguous alias, not a combat-resolution subsystem."
+      },
+      {
+        "conceptId": "plateau",
+        "canonicalTerm": "plateau",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "breakthrough",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Locates exhausted lessons and route changes; danger or dramatic survival never guarantees a breakthrough."
+          },
+          {
+            "term": "diminishing returns",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Locates exhausted lessons and route changes; danger or dramatic survival never guarantees a breakthrough."
+          }
+        ],
+        "rationale": "Locates exhausted lessons and route changes; danger or dramatic survival never guarantees a breakthrough."
+      },
+      {
+        "conceptId": "progression-safeguards",
+        "canonicalTerm": "progression safeguards",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "grinding",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Repeated solved work, killing, manufactured suffering, and death do not grant universal growth or transferable rewards."
+          },
+          {
+            "term": "kill farming",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Repeated solved work, killing, manufactured suffering, and death do not grant universal growth or transferable rewards."
+          },
+          {
+            "term": "universal xp",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Repeated solved work, killing, manufactured suffering, and death do not grant universal growth or transferable rewards."
+          }
+        ],
+        "rationale": "Repeated solved work, killing, manufactured suffering, and death do not grant universal growth or transferable rewards."
+      },
+      {
+        "conceptId": "retained-development",
+        "canonicalTerm": "retained development",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "cross-life development",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Protected skill/stat history preserves potential while present embodiment and practice still govern expression."
+          },
+          {
+            "term": "retained xp",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Protected skill/stat history preserves potential while present embodiment and practice still govern expression."
+          }
+        ],
+        "rationale": "Protected skill/stat history preserves potential while present embodiment and practice still govern expression."
+      },
+      {
+        "conceptId": "skill-crossover",
+        "canonicalTerm": "skill crossover",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "cross-species skills",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Retained skill requires compatible current expression and real translation, not automatic human-monster conversion."
+          },
+          {
+            "term": "translated technique",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Retained skill requires compatible current expression and real translation, not automatic human-monster conversion."
+          }
+        ],
+        "rationale": "Retained skill requires compatible current expression and real translation, not automatic human-monster conversion."
+      },
+      {
+        "conceptId": "mastery",
+        "canonicalTerm": "mastery",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "specialization",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Broad competence and narrow refinement are distinct and contextual; mastery is not Soul Depth or unlimited throughput."
+          },
+          {
+            "term": "breadth and depth",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Broad competence and narrow refinement are distinct and contextual; mastery is not Soul Depth or unlimited throughput."
+          }
+        ],
+        "rationale": "Broad competence and narrow refinement are distinct and contextual; mastery is not Soul Depth or unlimited throughput."
+      },
+      {
+        "conceptId": "reincarnation",
+        "canonicalTerm": "reincarnation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "rebirth",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names a valid new embodiment after Final Death, not revival, item transport, or rerolling a desired result."
+          },
+          {
+            "term": "next incarnation",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names a valid new embodiment after Final Death, not revival, item transport, or rerolling a desired result."
+          }
+        ],
+        "rationale": "Names a valid new embodiment after Final Death, not revival, item transport, or rerolling a desired result."
+      },
+      {
+        "conceptId": "final-death",
+        "canonicalTerm": "final death",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "completed incarnation",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Death must finish applicable recovery before severance; revival and reincarnation cannot both complete for one incarnation."
+          },
+          {
+            "term": "revival exclusion",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Death must finish applicable recovery before severance; revival and reincarnation cannot both complete for one incarnation."
+          }
+        ],
+        "rationale": "Death must finish applicable recovery before severance; revival and reincarnation cannot both complete for one incarnation."
+      },
+      {
+        "conceptId": "life-reconciliation",
+        "canonicalTerm": "life reconciliation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "life transition accounting",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Classifies what ends bodily, remains in the world, or legitimately persists with the Soul without rewarding death."
+          },
+          {
+            "term": "ends remains persists",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Classifies what ends bodily, remains in the world, or legitimately persists with the Soul without rewarding death."
+          }
+        ],
+        "rationale": "Classifies what ends bodily, remains in the world, or legitimately persists with the Soul without rewarding death."
+      },
+      {
+        "conceptId": "interlife",
+        "canonicalTerm": "interlife",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "between lives",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "External time and world consequences continue between embodiments; the interval is not unlimited stopped-time training."
+          },
+          {
+            "term": "interlife interval",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "External time and world consequences continue between embodiments; the interval is not unlimited stopped-time training."
+          }
+        ],
+        "rationale": "External time and world consequences continue between embodiments; the interval is not unlimited stopped-time training."
+      },
+      {
+        "conceptId": "memory-continuity",
+        "canonicalTerm": "memory continuity",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "past-life recall",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Continuity and practiced intuition do not imply total autobiographical recall or Character Knowledge from GM archives."
+          },
+          {
+            "term": "starting memory",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Continuity and practiced intuition do not imply total autobiographical recall or Character Knowledge from GM archives."
+          }
+        ],
+        "rationale": "Continuity and practiced intuition do not imply total autobiographical recall or Character Knowledge from GM archives."
+      },
+      {
+        "conceptId": "world-contact",
+        "canonicalTerm": "world contact",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "cross-domain travel",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "A living gate crossing is travel; reincarnation placement requires its own established reachable domain and valid candidate."
+          },
+          {
+            "term": "world gate",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "A living gate crossing is travel; reincarnation placement requires its own established reachable domain and valid candidate."
+          },
+          {
+            "term": "cross-domain reincarnation route",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "A living gate crossing is travel; reincarnation placement requires its own established reachable domain and valid candidate."
+          }
+        ],
+        "rationale": "A living gate crossing is travel; reincarnation placement requires its own established reachable domain and valid candidate."
+      },
+      {
+        "conceptId": "monster-evolution",
+        "canonicalTerm": "monster evolution",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "species evolution",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Evolution reorganizes species potential through a valid lasting route, not a reward stack or universal level-up."
+          },
+          {
+            "term": "evolved form",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Evolution reorganizes species potential through a valid lasting route, not a reward stack or universal level-up."
+          }
+        ],
+        "rationale": "Evolution reorganizes species potential through a valid lasting route, not a reward stack or universal level-up."
+      },
+      {
+        "conceptId": "evolution-route",
+        "canonicalTerm": "evolution route",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "evolution branch",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Branches are causally supported possibilities; provenance, closure, and new routes are not an inevitable exhaustive tree."
+          },
+          {
+            "term": "branching evolution",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Branches are causally supported possibilities; provenance, closure, and new routes are not an inevitable exhaustive tree."
+          }
+        ],
+        "rationale": "Branches are causally supported possibilities; provenance, closure, and new routes are not an inevitable exhaustive tree."
+      },
+      {
+        "conceptId": "evolution-transition",
+        "canonicalTerm": "evolution transition",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "metamorphosis",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "A valid transition has resources, duration, vulnerability, agency, and completion evidence; ordinary metamorphosis is not automatically evolution."
+          },
+          {
+            "term": "form reorganization",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "A valid transition has resources, duration, vulnerability, agency, and completion evidence; ordinary metamorphosis is not automatically evolution."
+          }
+        ],
+        "rationale": "A valid transition has resources, duration, vulnerability, agency, and completion evidence; ordinary metamorphosis is not automatically evolution."
+      },
+      {
+        "conceptId": "evolution-readiness",
+        "canonicalTerm": "route readiness",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "preparation",
+            "kind": "Alias",
+            "weight": 600,
+            "rationale": "Preparation here concerns one evolutionary route and current form; it is distinct from combat preparation or provider rule-loading readiness."
+          },
+          {
+            "term": "evolution preparation",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Preparation here concerns one evolutionary route and current form; it is distinct from combat preparation or provider rule-loading readiness."
+          }
+        ],
+        "rationale": "Preparation here concerns one evolutionary route and current form; it is distinct from combat preparation or provider rule-loading readiness."
+      },
+      {
+        "conceptId": "species-potential",
+        "canonicalTerm": "species potential",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "body compatibility",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Anatomy and lifecycle determine available expression; evolution never grants all learned methods or missing resources."
+          },
+          {
+            "term": "current species form",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Anatomy and lifecycle determine available expression; evolution never grants all learned methods or missing resources."
+          }
+        ],
+        "rationale": "Anatomy and lifecycle determine available expression; evolution never grants all learned methods or missing resources."
+      },
+      {
+        "conceptId": "evolution-divergence",
+        "canonicalTerm": "divergent evolution",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "divergence",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "These passages distinguish related branching and similar functions without collapsing ancestry, individual, or population scales."
+          },
+          {
+            "term": "population divergence",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "These passages distinguish related branching and similar functions without collapsing ancestry, individual, or population scales."
+          }
+        ],
+        "rationale": "These passages distinguish related branching and similar functions without collapsing ancestry, individual, or population scales."
+      },
+      {
+        "conceptId": "evolution-trap",
+        "canonicalTerm": "evolutionary trap",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "dependency trap",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Costs and dependencies may become harmful; simplification can be valid and an automatic rescue evolution is not guaranteed."
+          },
+          {
+            "term": "unsustainable evolved form",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Costs and dependencies may become harmful; simplification can be valid and an automatic rescue evolution is not guaranteed."
+          }
+        ],
+        "rationale": "Costs and dependencies may become harmful; simplification can be valid and an automatic rescue evolution is not guaranteed."
+      },
+      {
+        "conceptId": "world-simulation",
+        "canonicalTerm": "world simulation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "world engine",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Objective conditions evolve through established causes at a suitable resolution, not authorial convenience or observation alone."
+          },
+          {
+            "term": "causal world response",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Objective conditions evolve through established causes at a suitable resolution, not authorial convenience or observation alone."
+          }
+        ],
+        "rationale": "Objective conditions evolve through established causes at a suitable resolution, not authorial convenience or observation alone."
+      },
+      {
+        "conceptId": "causal-chains",
+        "canonicalTerm": "causal chains",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "counterforces",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Established pressures produce branching consequences with delays and counterforces, not predetermined destiny."
+          },
+          {
+            "term": "emergent consequences",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Established pressures produce branching consequences with delays and counterforces, not predetermined destiny."
+          }
+        ],
+        "rationale": "Established pressures produce branching consequences with delays and counterforces, not predetermined destiny."
+      },
+      {
+        "conceptId": "offscreen-continuation",
+        "canonicalTerm": "off-screen world continuation",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "offscreen simulation",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Independent world actors continue beyond player observation; this does not authorize a new player-controlled decision."
+          },
+          {
+            "term": "npc activity",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Independent world actors continue beyond player observation; this does not authorize a new player-controlled decision."
+          }
+        ],
+        "rationale": "Independent world actors continue beyond player observation; this does not authorize a new player-controlled decision."
+      },
+      {
+        "conceptId": "world-state",
+        "canonicalTerm": "world state",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "world conditions",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Names scoped world-side conditions and domains, not the whole campaign authority model or an overall world score."
+          },
+          {
+            "term": "population and ecology",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Names scoped world-side conditions and domains, not the whole campaign authority model or an overall world score."
+          }
+        ],
+        "rationale": "Names scoped world-side conditions and domains, not the whole campaign authority model or an overall world score."
+      },
+      {
+        "conceptId": "simulation-resolution",
+        "canonicalTerm": "simulation resolution",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "simulation abstraction",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Detail, scope, and elapsed interval are independently chosen to preserve material choices and uncertainty."
+          },
+          {
+            "term": "focused local regional epochal",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Detail, scope, and elapsed interval are independently chosen to preserve material choices and uncertainty."
+          }
+        ],
+        "rationale": "Detail, scope, and elapsed interval are independently chosen to preserve material choices and uncertainty."
+      },
+      {
+        "conceptId": "fair-mystery",
+        "canonicalTerm": "fair mystery",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "hidden requirements",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Hidden requirements need causal provenance and fair discoverability; mystery is not arbitrary punishment or invented rescue."
+          },
+          {
+            "term": "discoverable clues",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Hidden requirements need causal provenance and fair discoverability; mystery is not arbitrary punishment or invented rescue."
+          }
+        ],
+        "rationale": "Hidden requirements need causal provenance and fair discoverability; mystery is not arbitrary punishment or invented rescue."
+      },
+      {
+        "conceptId": "audit-context",
+        "canonicalTerm": "development context",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "debug inspection",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Authorized operational inspection retains visibility boundaries; it is not character Development or ordinary player-facing plumbing."
+          },
+          {
+            "term": "transaction audit",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Authorized operational inspection retains visibility boundaries; it is not character Development or ordinary player-facing plumbing."
+          }
+        ],
+        "rationale": "Authorized operational inspection retains visibility boundaries; it is not character Development or ordinary player-facing plumbing."
+      },
+      {
+        "conceptId": "rule-gap",
+        "canonicalTerm": "rule gap",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "missing specialist rules",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "A required source or valid foundation must be available; fluency cannot fill gaps with invented mechanics."
+          },
+          {
+            "term": "unsupported resolution",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "A required source or valid foundation must be available; fluency cannot fill gaps with invented mechanics."
+          }
+        ],
+        "rationale": "A required source or valid foundation must be available; fluency cannot fill gaps with invented mechanics."
+      },
+      {
+        "conceptId": "evolution-convergence",
+        "canonicalTerm": "convergent evolution",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "convergence",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Similar functional solutions retain different ancestry, structures, tradeoffs, and ownership; convergence is not divergent branching."
+          },
+          {
+            "term": "similar evolved functions",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Similar functional solutions retain different ancestry, structures, tradeoffs, and ownership; convergence is not divergent branching."
+          }
+        ],
+        "rationale": "Similar functional solutions retain different ancestry, structures, tradeoffs, and ownership; convergence is not divergent branching."
+      },
+      {
+        "conceptId": "evolution-regression",
+        "canonicalTerm": "evolutionary regression",
+        "weight": 900,
+        "alternatives": [
+          {
+            "term": "form simplification",
+            "kind": "Alias",
+            "weight": 700,
+            "rationale": "Reducing costly anatomy may be a sustainable valid route, not automatically failure, a trap, or lost Soul progression."
+          },
+          {
+            "term": "abandoned structures",
+            "kind": "Phrase",
+            "weight": 800,
+            "rationale": "Reducing costly anatomy may be a sustainable valid route, not automatically failure, a trap, or lost Soul progression."
+          }
+        ],
+        "rationale": "Reducing costly anatomy may be a sustainable valid route, not automatically failure, a trap, or lost Soul progression."
+      }
+    ],
+    "bindings": [
+      {
+        "ruleSourceId": "runtime-kernel",
+        "scope": "Snippet",
+        "sourceAnchor": "kernel-invariants",
+        "conceptIds": [
+          "player-agency",
+          "repository-canon",
+          "campaign-binding",
+          "affected-set",
+          "offscreen-continuation",
+          "rule-gap"
+        ],
+        "rationale": "Kernel invariants explicitly constrain authority, player action, independent world response, owner writes, and unsupported gaps."
+      },
+      {
+        "ruleSourceId": "runtime-kernel",
+        "scope": "Snippet",
+        "sourceAnchor": "retrieval-handoff",
+        "conceptIds": [
+          "rule-retrieval",
+          "rule-dependencies",
+          "rule-gap"
+        ],
+        "rationale": "These sections require relevant specialist sources and complete closure or an explicit stop, not broad source reading."
+      },
+      {
+        "ruleSourceId": "runtime-kernel",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "rule-retrieval",
+          "rule-dependencies",
+          "rule-gap"
+        ],
+        "rationale": "These sections require relevant specialist sources and complete closure or an explicit stop, not broad source reading."
+      },
+      {
+        "ruleSourceId": "gm-runtime-procedure",
+        "scope": "Snippet",
+        "sourceAnchor": "gameplay-interaction-lifecycle",
+        "conceptIds": [
+          "gameplay-resolution",
+          "player-agency",
+          "campaign-binding",
+          "automatic-persistence",
+          "transaction-commit",
+          "offscreen-continuation",
+          "rule-gap"
+        ],
+        "rationale": "The ordered lifecycle resolves declared intent, simulates independent responses, writes once, verifies, and yields."
+      },
+      {
+        "ruleSourceId": "gm-runtime-procedure",
+        "scope": "Snippet",
+        "sourceAnchor": "one-input-one-interaction",
+        "conceptIds": [
+          "player-agency"
+        ],
+        "rationale": "This section specifically rejects internal continuation as authority for another player choice."
+      },
+      {
+        "ruleSourceId": "gm-runtime-procedure",
+        "scope": "Snippet",
+        "sourceAnchor": "efficient-execution",
+        "conceptIds": [
+          "gameplay-resolution",
+          "context-assembly",
+          "rule-dependencies"
+        ],
+        "rationale": "Compatible execution steps may combine while retaining dependency closure, lossless information, and transaction evidence."
+      },
+      {
+        "ruleSourceId": "gm-runtime-procedure",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "gameplay-resolution"
+        ],
+        "rationale": "The procedure is the minimum operating lifecycle, not a summary of specialist mechanics."
+      },
+      {
+        "ruleSourceId": "gm-host-bootstrap",
+        "scope": "Source",
+        "sourceAnchor": null,
+        "conceptIds": [
+          "host-bootstrap"
+        ],
+        "rationale": "The source contains exactly one heading-free bootstrap contract; source scope intentionally covers that complete instruction and no other source."
+      },
+      {
+        "ruleSourceId": "core-design-philosophy",
+        "scope": "Snippet",
+        "sourceAnchor": "rule-zero",
+        "conceptIds": [
+          "causal-chains"
+        ],
+        "rationale": "Stories and linked social consequences follow established causes and counterforces rather than narrative convenience."
+      },
+      {
+        "ruleSourceId": "core-design-philosophy",
+        "scope": "Snippet",
+        "sourceAnchor": "emergent-causality",
+        "conceptIds": [
+          "causal-chains"
+        ],
+        "rationale": "Stories and linked social consequences follow established causes and counterforces rather than narrative convenience."
+      },
+      {
+        "ruleSourceId": "core-design-philosophy",
+        "scope": "Snippet",
+        "sourceAnchor": "principles",
+        "conceptIds": [
+          "character-development",
+          "world-simulation"
+        ],
+        "rationale": "Earned progress and remembered consequences are explicit design principles, not quantified rewards."
+      },
+      {
+        "ruleSourceId": "core-design-philosophy",
+        "scope": "Snippet",
+        "sourceAnchor": "fair-mystery",
+        "conceptIds": [
+          "fair-mystery"
+        ],
+        "rationale": "Clues and discoverability govern hidden requirements, not arbitrary punishment."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "reincarnation",
+          "final-death"
+        ],
+        "rationale": "These opening rules connect reliable continuity to Final Death and valid embodiment without promising every Soul reincarnation."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "core-rule",
+        "conceptIds": [
+          "reincarnation",
+          "final-death"
+        ],
+        "rationale": "These opening rules connect reliable continuity to Final Death and valid embodiment without promising every Soul reincarnation."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "eligibility",
+        "conceptIds": [
+          "reincarnation",
+          "final-death"
+        ],
+        "rationale": "These opening rules connect reliable continuity to Final Death and valid embodiment without promising every Soul reincarnation."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "transition-procedure",
+        "conceptIds": [
+          "reincarnation",
+          "final-death",
+          "life-reconciliation",
+          "interlife",
+          "current-incarnation",
+          "fair-mystery"
+        ],
+        "rationale": "The single compiled transition snippet includes all seven stages, candidate validity, choice, and fair hidden properties."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "terms",
+        "conceptIds": [
+          "final-death",
+          "life-reconciliation",
+          "interlife"
+        ],
+        "rationale": "These definitions distinguish ended lives, reconciliation, and the between-life interval."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "starting-memory",
+        "conceptIds": [
+          "current-incarnation",
+          "memory-continuity"
+        ],
+        "rationale": "The current active self and imperfect differentiated memory are explicit here."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "reset-and-persistence-rules",
+        "conceptIds": [
+          "life-reconciliation",
+          "retained-development"
+        ],
+        "rationale": "Body reset, world retention, and protected Soul imprints are classified separately."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "species-and-progression-crossover",
+        "conceptIds": [
+          "skill-crossover",
+          "retained-development"
+        ],
+        "rationale": "Compatible expression and current-life experimentation limit human-monster crossover."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "time-skips-ages-and-world-resets",
+        "conceptIds": [
+          "interlife",
+          "world-simulation"
+        ],
+        "rationale": "Resolve relevant external changes and persist history before next embodiment without making summaries candidate authority."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "world-gates-and-cross-domain-placement",
+        "conceptIds": [
+          "world-contact"
+        ],
+        "rationale": "Gate travel and domain reach do not waive embodiment validity or reincarnation constraints."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "interference-and-failure-states",
+        "conceptIds": [
+          "reincarnation",
+          "memory-continuity"
+        ],
+        "rationale": "Established interference can constrain transition or recall without arbitrary erasure of protected progression."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "exploit-limits",
+        "conceptIds": [
+          "progression-safeguards",
+          "interlife"
+        ],
+        "rationale": "Manufactured death and unlimited between-life training are explicitly rejected."
+      },
+      {
+        "ruleSourceId": "core-reincarnation",
+        "scope": "Snippet",
+        "sourceAnchor": "gm-procedure",
+        "conceptIds": [
+          "reincarnation",
+          "life-reconciliation"
+        ],
+        "rationale": "The GM establishes death, reconciliation, candidates, embodiment, and current access before play."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "character-development"
+        ],
+        "rationale": "These passages define, separate, or adjudicate earned capability domains rather than universal levels."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "core-rule",
+        "conceptIds": [
+          "character-development"
+        ],
+        "rationale": "These passages define, separate, or adjudicate earned capability domains rather than universal levels."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "terms",
+        "conceptIds": [
+          "character-development"
+        ],
+        "rationale": "These passages define, separate, or adjudicate earned capability domains rather than universal levels."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "development-tracks",
+        "conceptIds": [
+          "character-development"
+        ],
+        "rationale": "These passages define, separate, or adjudicate earned capability domains rather than universal levels."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "gm-procedure",
+        "conceptIds": [
+          "character-development"
+        ],
+        "rationale": "These passages define, separate, or adjudicate earned capability domains rather than universal levels."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "why-there-is-no-universal-character-level",
+        "conceptIds": [
+          "character-development",
+          "capability-profile",
+          "combat-context"
+        ],
+        "rationale": "The section rejects totals and conflict prediction detached from objectives, preparation, tools, and uncertainty."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "the-six-layer-capability-model",
+        "conceptIds": [
+          "capability-profile"
+        ],
+        "rationale": "Separate access, expression, reliability, effectiveness, and recognition are evidence-based, not a power score."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "distinguishing-related-qualities",
+        "conceptIds": [
+          "capability-profile"
+        ],
+        "rationale": "Separate access, expression, reliability, effectiveness, and recognition are evidence-based, not a power score."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "contextual-capability-assessment",
+        "conceptIds": [
+          "capability-profile",
+          "combat-context"
+        ],
+        "rationale": "Separate access, expression, reliability, effectiveness, and recognition are evidence-based, not a power score."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "track-separation-and-interaction",
+        "conceptIds": [
+          "character-development",
+          "earned-experience"
+        ],
+        "rationale": "No fungible XP pool or free transfer exists between independently owned Tracks."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "gaining-development",
+        "conceptIds": [
+          "character-development",
+          "earned-experience",
+          "training"
+        ],
+        "rationale": "Training and real experience supply relevant adaptation rather than automatic points."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "what-does-not-grant-development-by-itself",
+        "conceptIds": [
+          "earned-experience",
+          "progression-safeguards"
+        ],
+        "rationale": "Kill, survival, time, and repeated activity alone do not award universal experience or growth."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "anti-grinding-and-anti-farming-rules",
+        "conceptIds": [
+          "earned-experience",
+          "progression-safeguards"
+        ],
+        "rationale": "Kill, survival, time, and repeated activity alone do not award universal experience or growth."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "current-life-effort",
+        "conceptIds": [
+          "current-incarnation",
+          "training",
+          "retained-development"
+        ],
+        "rationale": "Present bodily effort remains necessary while old progression improves method selection and reacquisition."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "retained-progression-and-relearning",
+        "conceptIds": [
+          "retained-development",
+          "training"
+        ],
+        "rationale": "Recognition, calibration, reconstruction, and stabilization remain current-life work."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "retained-stat-xp",
+        "conceptIds": [
+          "retained-development",
+          "earned-experience"
+        ],
+        "rationale": "Stat XP is domain-specific familiarity and does not set starting statistics or buy unrelated capability."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "embodiment-and-species",
+        "conceptIds": [
+          "species-potential",
+          "skill-crossover",
+          "current-incarnation"
+        ],
+        "rationale": "Current anatomy and functional correspondence constrain retained capability and translation."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "human-monster-and-cross-species-development",
+        "conceptIds": [
+          "species-potential",
+          "skill-crossover",
+          "current-incarnation"
+        ],
+        "rationale": "Current anatomy and functional correspondence constrain retained capability and translation."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "breadth-and-mastery",
+        "conceptIds": [
+          "mastery",
+          "capability-profile"
+        ],
+        "rationale": "Breadth, mastery, specialist and generalist tradeoffs are scoped, not universally ordered."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "diminishing-returns",
+        "conceptIds": [
+          "plateau",
+          "training"
+        ],
+        "rationale": "Exhausted stimulus and route changes need relevant feedback; danger alone does not produce a breakthrough."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "plateaus-and-breakthroughs",
+        "conceptIds": [
+          "plateau",
+          "training"
+        ],
+        "rationale": "Exhausted stimulus and route changes need relevant feedback; danger alone does not produce a breakthrough."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "regression-rust-injury-and-suppression",
+        "conceptIds": [
+          "training",
+          "retained-development"
+        ],
+        "rationale": "Reduced performance distinguishes rust, injury, access, and actual regression without silently deleting protected potential."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "local-levels-ranks-and-labels",
+        "conceptIds": [
+          "character-development",
+          "capability-profile"
+        ],
+        "rationale": "Local levels, threat classes, and institutional measures are scoped and fallible, not universal rank."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "power-preparation-and-victory",
+        "conceptIds": [
+          "combat-context",
+          "capability-profile"
+        ],
+        "rationale": "Opposition, terrain, preparation, tools, and objectives explain fight outcomes; these examples do not define a full combat engine."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "worked-examples",
+        "conceptIds": [
+          "combat-context",
+          "capability-profile"
+        ],
+        "rationale": "Opposition, terrain, preparation, tools, and objectives explain fight outcomes; these examples do not define a full combat engine."
+      },
+      {
+        "ruleSourceId": "core-development",
+        "scope": "Snippet",
+        "sourceAnchor": "safeguards-against-reincarnation-snowballing",
+        "conceptIds": [
+          "retained-development",
+          "progression-safeguards"
+        ],
+        "rationale": "Cross-life accumulation is bounded by compatibility, current body, time, and effort rather than recursive multipliers."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "monster-evolution"
+        ],
+        "rationale": "These sections define or adjudicate lasting form reorganization with causal sources, tradeoffs, and ownership."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "core-rule",
+        "conceptIds": [
+          "monster-evolution"
+        ],
+        "rationale": "These sections define or adjudicate lasting form reorganization with causal sources, tradeoffs, and ownership."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "terms",
+        "conceptIds": [
+          "monster-evolution"
+        ],
+        "rationale": "These sections define or adjudicate lasting form reorganization with causal sources, tradeoffs, and ownership."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "gm-procedure",
+        "conceptIds": [
+          "monster-evolution"
+        ],
+        "rationale": "These sections define or adjudicate lasting form reorganization with causal sources, tradeoffs, and ownership."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "ownership-boundaries",
+        "conceptIds": [
+          "monster-evolution",
+          "species-potential"
+        ],
+        "rationale": "Species change is distinct from learned skill, maturation, temporary transformation, magic, or Soul persistence."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "what-evolution-is-not",
+        "conceptIds": [
+          "monster-evolution",
+          "species-potential",
+          "evolution-transition"
+        ],
+        "rationale": "Species change is distinct from learned skill, maturation, temporary transformation, magic, or Soul persistence."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "route-provenance",
+        "conceptIds": [
+          "evolution-route",
+          "fair-mystery"
+        ],
+        "rationale": "Supported branches require real origins and fair discoverable conditions; closure restores only through actual causes."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "branching-without-determinism",
+        "conceptIds": [
+          "evolution-route",
+          "fair-mystery"
+        ],
+        "rationale": "Supported branches require real origins and fair discoverable conditions; closure restores only through actual causes."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "route-closure-reopening-and-further-evolution",
+        "conceptIds": [
+          "evolution-route",
+          "fair-mystery"
+        ],
+        "rationale": "Supported branches require real origins and fair discoverable conditions; closure restores only through actual causes."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "route-readiness",
+        "conceptIds": [
+          "evolution-route",
+          "evolution-readiness",
+          "species-potential"
+        ],
+        "rationale": "Current form, evidence, compatibility, opportunity, and sustainability govern one route rather than a readiness meter."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "the-evolution-transition",
+        "conceptIds": [
+          "evolution-transition",
+          "evolution-readiness"
+        ],
+        "rationale": "Onset, reorganization, material, time, agency, vulnerabilities, and gradual preparation are explicit."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "gradual-evolution",
+        "conceptIds": [
+          "evolution-transition",
+          "evolution-readiness"
+        ],
+        "rationale": "Onset, reorganization, material, time, agency, vulnerabilities, and gradual preparation are explicit."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "individual-and-population-evolution",
+        "conceptIds": [
+          "evolution-divergence"
+        ],
+        "rationale": "Individual, population, ancestry, and similar-function claims retain distinct scales and provenance."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "convergent-evolution",
+        "conceptIds": [
+          "evolution-convergence"
+        ],
+        "rationale": "Individual, population, ancestry, and similar-function claims retain distinct scales and provenance."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "divergent-evolution",
+        "conceptIds": [
+          "evolution-divergence"
+        ],
+        "rationale": "Individual, population, ancestry, and similar-function claims retain distinct scales and provenance."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "specialisation-and-generalisation",
+        "conceptIds": [
+          "evolution-trap"
+        ],
+        "rationale": "Niche gains create costs and dependencies; simpler forms or changed environments may alter sustainability without moral rank."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "evolutionary-regression-and-simplification",
+        "conceptIds": [
+          "evolution-regression"
+        ],
+        "rationale": "Niche gains create costs and dependencies; simpler forms or changed environments may alter sustainability without moral rank."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "evolutionary-traps",
+        "conceptIds": [
+          "evolution-trap"
+        ],
+        "rationale": "Niche gains create costs and dependencies; simpler forms or changed environments may alter sustainability without moral rank."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "what-changes-at-completion",
+        "conceptIds": [
+          "species-potential",
+          "evolution-transition"
+        ],
+        "rationale": "Completion replaces current embodiment and records gained/lost structures, dependencies, skills access, and calibration needs."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "post-transition-development",
+        "conceptIds": [
+          "retained-development",
+          "training"
+        ],
+        "rationale": "New structures open access but still require current-life practice and compatible relearning."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "evolution-and-death",
+        "conceptIds": [
+          "final-death",
+          "retained-development"
+        ],
+        "rationale": "Final Death ends the current form; protected Soul development persists under its own owners, not as portable anatomy."
+      },
+      {
+        "ruleSourceId": "core-monster-evolution",
+        "scope": "Snippet",
+        "sourceAnchor": "safeguards",
+        "conceptIds": [
+          "monster-evolution",
+          "progression-safeguards"
+        ],
+        "rationale": "Level, kill, consumption, free anatomy, forced superiority, and Soul bypasses cannot create valid Evolution."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "world-simulation",
+          "causal-chains"
+        ],
+        "rationale": "Conditions and decisions generate consequences causally; actual world facts remain external."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "shared-state-model",
+        "conceptIds": [
+          "world-state"
+        ],
+        "rationale": "The overview routes scoped population, ecology, resources, institutions, and changing-condition evidence to their domains."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "core-domains",
+        "conceptIds": [
+          "world-state"
+        ],
+        "rationale": "The overview routes scoped population, ecology, resources, institutions, and changing-condition evidence to their domains."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "causal-chains",
+        "conceptIds": [
+          "causal-chains"
+        ],
+        "rationale": "Branches, adaptation, intervention, counterforces, and chance can redirect the example chain."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "simulation-resolution",
+        "conceptIds": [
+          "simulation-resolution",
+          "world-simulation"
+        ],
+        "rationale": "Focused through Epochal detail preserves choices, dependencies, exceptions, and uncertainty without excess bookkeeping."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "architectural-role",
+        "conceptIds": [
+          "world-simulation",
+          "offscreen-continuation",
+          "information-visibility"
+        ],
+        "rationale": "Objective state evolves independently of observation; presentation cannot freeze off-screen processes or reveal hidden truth."
+      },
+      {
+        "ruleSourceId": "core-world-engine",
+        "scope": "Snippet",
+        "sourceAnchor": "magic-interface",
+        "conceptIds": [
+          "causal-chains"
+        ],
+        "rationale": "Established magical causes enter world effects, distribution, responses, delays, and persistent recovery without changing Magic ownership."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "context-assembly",
+          "automatic-persistence"
+        ],
+        "rationale": "Relevant canonical reading and automatic validated saving are the turn's required linked contract."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "runtime-boundary",
+        "conceptIds": [
+          "repository-canon",
+          "rule-gap"
+        ],
+        "rationale": "Contracts and validation do not prove an external host performed I/O; missing authority cannot be pretended."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "core-invariants",
+        "conceptIds": [
+          "automatic-persistence",
+          "read-set",
+          "player-agency"
+        ],
+        "rationale": "Read, save, retry, visibility, and actual-input gates are explicit immutable runtime constraints."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "gameplay-turn-state-machine",
+        "conceptIds": [
+          "gameplay-resolution",
+          "automatic-persistence",
+          "player-agency"
+        ],
+        "rationale": "Ordered states and actual input bound one interaction before verified completion and delivered narration."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "persistence-target-resolution-gate",
+        "conceptIds": [
+          "campaign-binding"
+        ],
+        "rationale": "Canonical location, identity, version, recovery, and strategy must be resolved rather than guessing a missing local database."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "session-start-and-context-reset",
+        "conceptIds": [
+          "campaign-binding"
+        ],
+        "rationale": "Canonical location, identity, version, recovery, and strategy must be resolved rather than guessing a missing local database."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "context-assembly-layer",
+        "conceptIds": [
+          "context-assembly",
+          "rule-retrieval",
+          "compiled-rule-context",
+          "rule-dependencies"
+        ],
+        "rationale": "Relevant rules and owner-backed campaign reads use separate authority paths, dependency closure, World filtering, and bounded contexts."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "relevance-selection",
+        "conceptIds": [
+          "context-assembly",
+          "information-visibility"
+        ],
+        "rationale": "Only material owners and visibility/Knowledge boundaries enter selection; linked records are not all automatically loaded."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "current-scene-context",
+        "conceptIds": [
+          "context-assembly",
+          "current-state",
+          "information-visibility"
+        ],
+        "rationale": "The scene is a derived packet of relevant present owner references, Perspective, intent, and freshness, not new state authority."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose-specific-visual-context",
+        "conceptIds": [
+          "visual-context",
+          "information-visibility"
+        ],
+        "rationale": "Depiction projects established facts and genuine unknowns without adopting generated choices as Canon."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "hierarchical-context",
+        "conceptIds": [
+          "derived-context"
+        ],
+        "rationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "freshness",
+        "conceptIds": [
+          "derived-context"
+        ],
+        "rationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "canon-before-derived-context",
+        "conceptIds": [
+          "derived-context"
+        ],
+        "rationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "mandatory-read-gate",
+        "conceptIds": [
+          "read-set",
+          "uncertainty",
+          "rule-dependencies",
+          "rule-gap"
+        ],
+        "rationale": "Source identity, visibility, time, status, material references, and explicit gaps are checked before resolution."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "resolution-and-affected-set-gate",
+        "conceptIds": [
+          "affected-set",
+          "world-state"
+        ],
+        "rationale": "All changed canonical owners including world/location/time are assessed, even after a quiet or failed action."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "automatic-persistence-gate",
+        "conceptIds": [
+          "automatic-persistence",
+          "affected-set",
+          "transaction-commit"
+        ],
+        "rationale": "One complete owner-routed transaction validates, verifies configured authority, and only then activates the Save Point."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "player-visible-persistence-status",
+        "conceptIds": [
+          "save-status",
+          "save-evidence"
+        ],
+        "rationale": "Local, cloud, pending, failed, and Managed receipt statuses require actual completion evidence."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "manual-persistence-commands",
+        "conceptIds": [
+          "manual-save",
+          "save-status",
+          "save-retry"
+        ],
+        "rationale": "The three exact commands force, inspect, or safely resume normal persistence without replaying narrative effects."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "canonical-change-proof-and-unchanged-save-detector",
+        "conceptIds": [
+          "save-evidence"
+        ],
+        "rationale": "Expected owner/version/hash/read-back changes prove a save; unchanged expected state fails the turn."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "no-change-turns",
+        "conceptIds": [
+          "no-change-turn",
+          "visual-context"
+        ],
+        "rationale": "Verified empty affected sets and ordinary rendering perform no mutation; explicit later adoption changes that boundary."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "failure-and-retry",
+        "conceptIds": [
+          "save-retry",
+          "rule-gap"
+        ],
+        "rationale": "Read failure stays explicit, parent Save Points remain validated, and retries preserve identity and effects once."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "next-turn-verification",
+        "conceptIds": [
+          "save-evidence",
+          "read-set"
+        ],
+        "rationale": "The next turn retrieves committed owner state from persistence instead of conversation or old packets."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "specialist-integrations",
+        "conceptIds": [
+          "memory-continuity",
+          "visual-context",
+          "historical-record"
+        ],
+        "rationale": "Relevant Archive/history/Memory and appearance records remain owner-backed and visibility-limited; retrieval grants no recall."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "existing-campaign-adoption",
+        "conceptIds": [
+          "rules-migration"
+        ],
+        "rationale": "Backup, owner audit, configured gates, validation, and provenance precede adoption without rewriting a populated campaign here."
+      },
+      {
+        "ruleSourceId": "core-context-assembly",
+        "scope": "Snippet",
+        "sourceAnchor": "development-context-and-auditability",
+        "conceptIds": [
+          "audit-context"
+        ],
+        "rationale": "Authorized operational traces may expose Read/Affected Sets and evidence while retaining Secrets and ordinary UX boundaries."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "purpose",
+        "conceptIds": [
+          "repository-canon",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "core-rule",
+        "conceptIds": [
+          "repository-canon",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-is-claim-specific",
+        "conceptIds": [
+          "repository-canon",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "repository-canon",
+        "conceptIds": [
+          "repository-canon"
+        ],
+        "rationale": "Reusable rules, accepted governance, safeguards, and repository conflicts own mechanics but no populated campaign facts."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "campaign-canon",
+        "conceptIds": [
+          "campaign-canon",
+          "campaign-binding"
+        ],
+        "rationale": "Campaign identity, selected profile, premises, retcons, and stable assignments are campaign-specific commitments."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "historical-record",
+        "conceptIds": [
+          "historical-record"
+        ],
+        "rationale": "Durable events and traceable supersession distinguish fact from dated belief or narration."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-campaign-state",
+        "conceptIds": [
+          "current-state",
+          "historical-record"
+        ],
+        "rationale": "Integrated current conditions follow actual history and cannot erase unsaved valid session events."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-session",
+        "conceptIds": [
+          "affected-set",
+          "transaction-commit"
+        ],
+        "rationale": "Confirmed deltas remain pending integration rather than drafts or fully validated Save Points."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-narration",
+        "conceptIds": [
+          "canon-conflict"
+        ],
+        "rationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "conflict-classification-procedure",
+        "conceptIds": [
+          "canon-conflict"
+        ],
+        "rationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "rules-authority-and-persistence-authority",
+        "conceptIds": [
+          "repository-canon",
+          "campaign-canon"
+        ],
+        "rationale": "The rule-status and campaign-fact hierarchies answer distinct questions; Living Codex is not another campaign truth layer."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-visibility",
+        "conceptIds": [
+          "information-visibility"
+        ],
+        "rationale": "Which claim governs is separate from who can see it; GM-private notes gain no extra fact authority."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-certainty",
+        "conceptIds": [
+          "uncertainty"
+        ],
+        "rationale": "Unknown, estimated, disputed, and unverified remain authoritative information statuses, not gaps to guess."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-actor-control",
+        "conceptIds": [
+          "player-agency"
+        ],
+        "rationale": "Recorded aims, relationships, plans, titles, and prophecy do not preselect future deliberate choices."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "valid-downward-updates",
+        "conceptIds": [
+          "historical-record",
+          "transaction-commit"
+        ],
+        "rationale": "Owned events and authorized migrations propagate with explicit scope and dependencies, not silent overwrite."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "repository-revision-changes",
+        "conceptIds": [
+          "rules-migration"
+        ],
+        "rationale": "A new available rules version does not automatically alter active profiles, history, capability, or retcon authority."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authorized-retcons",
+        "conceptIds": [
+          "retcon",
+          "historical-record"
+        ],
+        "rationale": "Campaign authority approves exact replacement and provenance while preserving superseded material and dependent choices."
+      }
+    ]
+  }
 }

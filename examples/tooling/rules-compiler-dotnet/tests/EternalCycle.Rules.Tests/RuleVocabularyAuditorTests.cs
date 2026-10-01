@@ -326,14 +326,12 @@ public sealed class RuleVocabularyAuditorTests(ITestOutputHelper output)
     }
 
     [Fact]
-    public void CanonicalCorpusAuditDoesNotCurateOrChangeTheArtifact()
+    public void HistoricalCanonicalCorpusAuditDoesNotCurateOrChangeTheArtifact()
     {
         var root = new DirectoryInfo(AppContext.BaseDirectory);
         while (root is not null && !File.Exists(Path.Combine(root.FullName, "docs", "rules", "rule-source-manifest.json"))) { root = root.Parent; }
         Assert.NotNull(root);
-        var snapshot = MaterializedRuleSourceLoader.Load(new(root.FullName, "docs/rules/rule-source-manifest.json",
-            new() { Scheme = "git-commit", Value = "d5028af32cf16fe48878ffef0301867175f98f08" },
-            new() { ContractVersion = "1", ImplementationId = "eternal-cycle-dotnet", ImplementationVersion = "1.0.0" }));
+        var snapshot = CanonicalVocabularyPayload.LoadHistorical(root.FullName);
         var before = RuleCompilationPipeline.Compile(snapshot);
         var report = RuleVocabularyAuditor.Analyze(snapshot, before);
         var after = RuleCompilationPipeline.Compile(snapshot);

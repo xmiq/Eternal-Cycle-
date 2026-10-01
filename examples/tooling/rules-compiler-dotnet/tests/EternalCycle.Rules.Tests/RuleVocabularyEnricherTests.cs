@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using EternalCycle.Rules.Testing;
 using Xunit;
 
 namespace EternalCycle.Rules.Tests;
@@ -346,7 +347,7 @@ public sealed class RuleVocabularyEnricherTests
     }
 
     [Fact]
-    public void CanonicalNoVocabularyCorpusRetainsLegacyArtifactBytesAndAllCandidateSemantics()
+    public void HistoricalCanonicalNoVocabularyCorpusRetainsLegacyArtifactBytesAndAllCandidateSemantics()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
         while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "docs", "rules", "rule-source-manifest.json")))
@@ -354,9 +355,7 @@ public sealed class RuleVocabularyEnricherTests
             directory = directory.Parent;
         }
         Assert.NotNull(directory);
-        var snapshot = MaterializedRuleSourceLoader.Load(new(directory.FullName, "docs/rules/rule-source-manifest.json",
-            new() { Scheme = "git-commit", Value = "d5028af32cf16fe48878ffef0301867175f98f08" },
-            new() { ContractVersion = "1", ImplementationId = "eternal-cycle-dotnet", ImplementationVersion = "1.0.0" }));
+        var snapshot = CanonicalVocabularyPayload.LoadHistorical(directory.FullName);
         var candidates = RuleSnippetCompiler.Compile(snapshot);
         var result = RuleVocabularyEnricher.Enrich(snapshot, candidates);
         var assembly = CompiledRulesArtifactAssembler.Assemble(snapshot, result.Snippets.Select(snippet => snippet.Candidate).ToArray());

@@ -4,13 +4,13 @@
 
 FR-024 remains one governed Future Revision: [Retrieval Vocabulary and Compiler Audit](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit). The owner selected it after FR-023 closure at `cc064d3f2644c4c55ac75787fd8ef43c1cfe3941`. A-F below are bounded execution checkpoints, not new Future Revisions or Project Phases. No other objective is selected.
 
-**Current checkpoint:** FR-024A-D complete: reviewed input, exact associations/origins, shared artifact/CLI integration, and observational quality reports are implemented and validated. FR-024E-F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit and the owner's requested normal branch push; do not automatically continue to the next package.
+**Current checkpoint:** FR-024A-E complete: reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, and canonical curation/precision fixtures are implemented and validated. FR-024F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit and the owner's requested normal branch push; do not automatically continue to the next package.
 
 ## Existing Capability and Gaps
 
 FR-022 already supplies format-1 terms, kinds, bounded weights, local term relationships, canonical ordering, semantic integrity, schema, and conformance fixtures. FR-023 supplies safe materialized input, exact-byte provenance, deterministic snippets, candidate retrieval carriers, validated assembly, canonical writing, and an offline CLI. Existing Managed selectors/topic retrieval are compatibility constraints, not the new ranking engine.
 
-Reviewed input, precise enrichment, automatic artifact/CLI integration, and deterministic coverage/ambiguity/breadth/origin/boundary diagnostics are now available. Missing work is canonical corpus curation, quality fixtures, and final acceptance. The artifact carrier is unchanged; concept IDs remain controlled term categories, while richer origin/binding evidence remains in the portable compilation result and observational audit. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
+Reviewed input, precise enrichment, automatic artifact/CLI integration, deterministic quality diagnostics, and canonical positive/negative association fixtures are now available. Missing work is final integrated acceptance. The artifact carrier is unchanged; concept IDs remain controlled term categories, while richer origin/binding evidence remains in the portable compilation result and observational audit. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
 
 ## FR-024A - Reviewed Vocabulary Input
 
@@ -62,7 +62,7 @@ Reviewed input, precise enrichment, automatic artifact/CLI integration, and dete
 
 ## FR-024E - Canonical Vocabulary and Quality Fixtures
 
-- **Status:** not started.
+- **Status:** complete; [curation audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md).
 - **Purpose:** review actual corpus associations rather than generate an uncontrolled dictionary.
 - **Inputs:** current canonical ten-source corpus, C compiler, D audit, and canonical terminology.
 - **Outputs:** bounded reviewed manifest vocabulary and corpus-derived positive/negative fixtures; baseline metrics with explainable review dispositions.
@@ -89,15 +89,15 @@ Reviewed input, precise enrichment, automatic artifact/CLI integration, and dete
 | Governed requirement | Current state | Completing packages |
 | --- | --- | --- |
 | Reviewable controlled concepts, alternatives, weights | Input, associations/evidence, and lossless effective artifact metadata implemented | A, B, C |
-| Representative approved alternative locates its rule | Exact binding/alternative targeting demonstrated in isolated B fixtures; corpus acceptance pending | B, E, F |
-| Irrelevant broad associations rejected/downgraded | Exact precision model and explicit breadth/generic review signals implemented; corpus dispositions pending | B, D, E, F |
+| Representative approved alternative locates its rule | Canonical 65-case topology fixture validates 115 positive targets across all 62 concepts; final integrated acceptance pending | B, E, F |
+| Irrelevant broad associations rejected/downgraded | 130 negative targets, three reviewed generic warnings, exact ambiguity/target dispositions, and residual-gap evidence validated | B, D, E, F |
 | Vocabulary provenance reviewable | Exact manifest hash participates in artifact identity; concept/term/binding identities and all rationales retained in compilation evidence | A, B, C, F |
-| Deterministic compiler-quality audit | Portable report/CLI, policy boundaries, observational integrity, repeated/relocated/culture/CWD equality validated; corpus curation and acceptance pending | D, E, F |
+| Deterministic compiler-quality audit | Portable report/CLI and canonical repeated/relocated/culture/CWD equality validated; curation reviewed with zero errors; final acceptance pending | D, E, F |
 | No private reasoning/campaign data | Input boundary enforced and fixtures generic; final report review pending | A-F |
-| Offline reproducibility and CLI equivalence | Legacy baseline unchanged; enriched repeated/relocated/culture/process and CLI/library equality validated; corpus acceptance pending | B, C, E, F |
+| Offline reproducibility and CLI equivalence | Frozen legacy baseline unchanged; canonical curated repeated/relocated/culture/process and CLI/library artifact/report equality validated; final acceptance pending | B, C, E, F |
 
 ## Resume Instructions
 
-On explicit continuation, read this plan, the vocabulary/audit contract, `RuleVocabularyAuditor.cs`, its tests, and the current canonical audit baseline before FR-024E. Do not restart A-D or reread unrelated gameplay systems. E reviews exact target sets and findings, curates only authorized vocabulary, and records explicit positive/negative corpus evidence; it does not implement runtime ranking. D left the canonical 10-source/154-snippet corpus unchanged with zero vocabulary and 154 uncovered snippets. Do not begin E automatically after D's commit and owner-requested branch push.
+On explicit continuation, read this plan, the vocabulary/audit contract, and the [E checkpoint audit](audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md) before FR-024F. Do not restart A-E or reread unrelated gameplay systems. E leaves 10 sources/154 unchanged executable snippets, 62 reviewed concepts, 773 associations/origins, 122 covered/32 reviewed residual gaps, and three justified warnings. The exact pre-E byte baseline is frozen separately. F owns integrated acceptance and closure, not runtime ranking. Do not begin F automatically after E's commit and owner-requested branch push.
 
 Keep `VERSION` at `1.0.0`, preserve both existing release tags, and keep Future Revisions `[∞]` last. FR-024 remains the selected objective; package continuation still requires an explicit next execution request.

@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
+using EternalCycle.Rules.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -499,20 +500,7 @@ public sealed class CompiledRulesArtifactWriterTests(ITestOutputHelper output)
         string.Join(Environment.NewLine, errors.Select(error => $"{error.Code} {error.Path}: {error.Message}"));
 
     private static MaterializedRuleSourceSnapshot LoadCanonical(string root) =>
-        MaterializedRuleSourceLoader.Load(new(
-            root,
-            "docs/rules/rule-source-manifest.json",
-            new CompiledRulesSourceIdentity
-            {
-                Scheme = "git-commit",
-                Value = "d5028af32cf16fe48878ffef0301867175f98f08"
-            },
-            new CompiledRulesCompilerIdentity
-            {
-                ContractVersion = CompiledRulesArtifactContract.CurrentCompilerContractVersion,
-                ImplementationId = "eternal-cycle-dotnet",
-                ImplementationVersion = "1.0.0"
-            }));
+        CanonicalVocabularyPayload.LoadHistorical(root);
 
     private static TemporaryPayload CanonicalPayloadCopy()
     {

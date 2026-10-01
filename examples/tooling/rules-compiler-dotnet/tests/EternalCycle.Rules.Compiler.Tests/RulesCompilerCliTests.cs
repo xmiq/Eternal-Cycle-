@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using EternalCycle.Rules;
 using EternalCycle.Rules.Compiler;
+using EternalCycle.Rules.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -257,9 +258,10 @@ public sealed partial class RulesCompilerCliTests(ITestOutputHelper output)
     }
 
     [Fact]
-    public async Task CanonicalCorpusMatchesDirectPortablePipeline()
+    public async Task HistoricalCanonicalCorpusMatchesDirectPortablePipeline()
     {
-        var root = FindRepositoryRoot();
+        using var historical = new CanonicalVocabularyPayload(historical: true);
+        var root = historical.Root;
         using var outputDirectory = TestPayload.Empty();
         var outputPath = Path.Combine(outputDirectory.Root, "eternal-cycle-compiled-rules.json");
         var arguments = Arguments(

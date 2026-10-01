@@ -21,6 +21,8 @@
     <ProjectReference Include="..\..\src\EternalCycle.Rules.Compiler\EternalCycle.Rules.Compiler.csproj" />
     <ProjectReference Include="..\..\src\EternalCycle.Rules\EternalCycle.Rules.csproj" />
     <Compile Include="..\Shared\VocabularyTestPayload.cs" Link="VocabularyTestPayload.cs" />
+    <Compile Include="..\Shared\CanonicalVocabularyPayload.cs" Link="CanonicalVocabularyPayload.cs" />
+    <Content Include="..\..\fixtures\canonical-vocabulary\*" Link="CanonicalVocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\fixtures\reviewed-vocabulary\*" Link="VocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 

@@ -1,0 +1,6 @@
+{
+  "minimumBroadTargets": 8,
+  "minimumBroadCoveragePercent": 50,
+  "largeSnippetTokens": 2048,
+  "genericTerms": ["action", "change", "conflict", "data", "level", "preparation", "rule", "save", "source", "state", "system", "world"]
+}
