@@ -17,6 +17,8 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 
 ## Audits
 
+The [FR-025 Execution Plan](FR_025_EXECUTION_PLAN.md) maps the selected acquisition/import objective, existing Managed boundaries, portable contracts, and independently validated continuation packages. Its [A checkpoint audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md) does not claim later provider or import behavior complete.
+
 The [FR-024 Execution Plan](FR_024_EXECUTION_PLAN.md) preserves completed vocabulary/audit checkpoints and their [closure evidence](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md). It does not create additional Future Revisions or select downstream runtime work.
 
 The [Repository Audit Index](audits/README.md) lists repository, maintenance, and Release 1 reviews. An audit records evidence and documentation corrections; it cannot create gameplay mechanics or silently amend accepted governance.

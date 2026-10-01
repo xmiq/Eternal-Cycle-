@@ -176,6 +176,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [GM Host Bootstrap](rules/GM_HOST_BOOTSTRAP.txt) - compact versioned execution contract for the highest instruction level supported by a host.
 - [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
 - [Compiled Rules Artifact](rules/COMPILED_RULES_ARTIFACT.md) - provider-neutral format-1 contract, stable snippet identity, portable provenance, applicability, dependencies, deterministic integrity, schema, and conformance fixtures.
+- [Compiled Rules Acquisition and Import](rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) - provider-neutral bounded acquisition/evidence and shared validation/trust/import boundaries; FR-025A foundation, not completed providers or storage.
 - [Controlled Retrieval Vocabulary](rules/CONTROLLED_RETRIEVAL_VOCABULARY.md) - accepted reviewed input, exact associations/origins, automatic artifact/CLI integration, observational quality reports, canonical curation, and integrated acceptance; runtime ranking remains downstream.
 - [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) - service-owned source acquisition, versioned publication, activation, update policy, compatibility, and bounded Rule Packets.
 

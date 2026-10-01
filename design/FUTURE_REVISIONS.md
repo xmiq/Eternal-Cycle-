@@ -58,7 +58,7 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-025 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-024 is closed after integrated acceptance; no next implementation objective is selected. Roadmapping alone does not select a current implementation objective.
+FR-025 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-024 is closed; the owner selected FR-025 for bounded acquisition/import work. FR-025 is incomplete and all other objectives remain unselected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
@@ -71,7 +71,8 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Evidence needed:** Byte-identical local/remote import outcomes, provider-failure isolation, compatibility rejection, and replaceable-provider tests.
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#23` through `#26` to one acquisition/import boundary.
+- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#23` through `#26` to one acquisition/import boundary; the owner explicitly selected FR-025 after FR-024 closure.
+- **Execution progress:** A complete: existing architecture reconciled, portable bounded acquisition bytes/evidence/interface and contract regressions implemented. B-G remain pending under the [execution plan](FR_025_EXECUTION_PLAN.md); [A audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md) and [shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) record scope. No artifact validator/trust gate/importer or real provider is claimed complete by A.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
 

@@ -4960,6 +4960,18 @@ The stable identity of one compiled executable rule-text unit, formed in artifac
 
 The deterministic digest of a Compiled Rules Artifact's normalized semantic projection, excluding the digest field itself. It validates artifact content without making JSON formatting or acquisition metadata authoritative.
 
+## Compiled Artifact Provider
+
+A configured byte-acquisition implementation for an already-produced Compiled Rules Artifact. It returns bounded exact bytes and separate acquisition evidence; it does not define artifact semantics, grant installation trust, or own a separate importer. It is distinct from a Rule Source Provider that supplies material for compilation.
+
+## Acquisition Evidence
+
+Bounded provider-reported observations about obtaining artifact bytes, including provider kind and resolved identity where actually established. This untrusted evidence remains separate from validated artifact/source provenance and requires authorized sanitization before disclosure.
+
+## Artifact Byte Hash
+
+SHA-256 of exact acquired serialized artifact bytes, calculated independently of provider claims. It is distinct from the semantic Artifact Integrity Digest and does not authenticate a publisher or approve installation trust.
+
 ## Rule Context
 
 A bounded Derived selection of the Runtime Rule Kernel and relevant Core, World/Ruleset, optional-module, Campaign Mode, operation, and topic rule chunks for one runtime operation. Campaign Canon is retrieved separately under the same Campaign ID.
