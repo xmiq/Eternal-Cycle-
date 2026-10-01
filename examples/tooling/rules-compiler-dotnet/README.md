@@ -47,6 +47,8 @@ Structured portable error codes remain visible in bounded diagnostics. Expected 
 
 Identical authoritative manifest and source bytes plus identical explicit identities produce byte-identical artifacts. Physical source-root location, working directory, and culture do not enter artifact identity. Executable normalization does not erase exact-byte provenance: LF and CRLF source variants may compile to equivalent normalized snippets while retaining different source hashes, semantic artifact identities, and serialized bytes.
 
-## Vocabulary Input Checkpoint
+## Vocabulary Checkpoint
 
-The portable loader accepts the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). FR-024A validates and normalizes that input while preserving exact manifest bytes. It does not yet enrich snippets: the CLI still emits the existing empty retrieval carrier. Enrichment, pipeline integration, and deterministic quality reports remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md). No vocabulary generation, runtime ranking, or audit CLI option is claimed by this checkpoint.
+The portable loader accepts the optional reviewed [`retrievalVocabulary` manifest block](../../../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md). FR-024A validates and normalizes that input while preserving exact manifest bytes. FR-024B's portable `RuleVocabularyEnricher.Enrich(snapshot, candidates)` resolves exact bindings and returns reviewed term associations with deterministic origin evidence beside unchanged candidates. It uses only the supplied in-memory snapshot and candidates; no source reread or acquisition is needed.
+
+The CLI still emits the existing empty retrieval carrier: B does not wire enrichment into artifacts or normal CLI compilation. Pipeline integration, deterministic quality reports, and canonical curation remain later [FR-024 packages](../../../design/FR_024_EXECUTION_PLAN.md). No vocabulary generation, runtime ranking, or audit CLI option is claimed by this checkpoint.

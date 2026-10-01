@@ -176,7 +176,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [GM Host Bootstrap](rules/GM_HOST_BOOTSTRAP.txt) - compact versioned execution contract for the highest instruction level supported by a host.
 - [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
 - [Compiled Rules Artifact](rules/COMPILED_RULES_ARTIFACT.md) - provider-neutral format-1 contract, stable snippet identity, portable provenance, applicability, dependencies, deterministic integrity, schema, and conformance fixtures.
-- [Controlled Retrieval Vocabulary](rules/CONTROLLED_RETRIEVAL_VOCABULARY.md) - optional reviewed manifest input, concept/alternative distinctions, precise bindings, normalization, and validation; compiled enrichment and audit remain pending.
+- [Controlled Retrieval Vocabulary](rules/CONTROLLED_RETRIEVAL_VOCABULARY.md) - reviewed manifest input, exact deterministic bindings, term associations, normalization, and origin evidence; artifact/CLI integration and quality audit remain pending.
 - [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) - service-owned source acquisition, versioned publication, activation, update policy, compatibility, and bounded Rule Packets.
 
 ## Campaign Persistence Engine

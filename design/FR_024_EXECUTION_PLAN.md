@@ -4,16 +4,17 @@
 
 FR-024 remains one governed Future Revision: [Retrieval Vocabulary and Compiler Audit](V1_1_FUTURE_REVISION_PLAN.md#fr-024---retrieval-vocabulary-and-compiler-audit). The owner selected it after FR-023 closure at `cc064d3f2644c4c55ac75787fd8ef43c1cfe3941`. A-F below are bounded execution checkpoints, not new Future Revisions or Project Phases. No other objective is selected.
 
-**Current checkpoint:** FR-024A input model and validation implemented. FR-024B-F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit; do not automatically continue to the next package.
+**Current checkpoint:** FR-024A and FR-024B complete: reviewed input, exact target resolution, deterministic associations, and term-origin evidence are implemented and validated. FR-024C-F not started. FR-024 is incomplete and remains Roadmapped in the register while active in the roadmap. Stop after each validated focused commit; do not automatically continue to the next package.
 
 ## Existing Capability and Gaps
 
 FR-022 already supplies format-1 terms, kinds, bounded weights, local term relationships, canonical ordering, semantic integrity, schema, and conformance fixtures. FR-023 supplies safe materialized input, exact-byte provenance, deterministic snippets, candidate retrieval carriers, validated assembly, canonical writing, and an offline CLI. Existing Managed selectors/topic retrieval are compatibility constraints, not the new ranking engine.
 
-Missing work is reviewed vocabulary input, precise deterministic enrichment, inspectable term origin, CLI equivalence, deterministic coverage/ambiguity/breadth/boundary diagnostics, curated corpus mappings, and positive/negative quality fixtures. The artifact carrier is sufficient; no format conflict was found. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
+Reviewed vocabulary input, precise deterministic enrichment, and inspectable term origin are now available. Missing work is artifact/CLI integration, deterministic coverage/ambiguity/breadth/boundary diagnostics, curated corpus mappings, and corpus quality fixtures. The artifact carrier is unchanged; B's richer concept/binding evidence remains an intermediate input to C, not another interchange format. Runtime ranking and searchable storage belong to FR-026; acquisition/import belongs to FR-025.
 
 ## FR-024A - Reviewed Vocabulary Input
 
+- **Status:** complete.
 - **Purpose:** establish controlled concepts, alternatives, explicit binding scope, weights, review rationale, and conservative normalization.
 - **Inputs:** already-materialized source manifest and ordinary source files; explicit immutable source/compiler identities.
 - **Outputs:** optional validated `retrievalVocabulary` in the materialized snapshot; [input contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md); structured validation errors.
@@ -25,9 +26,10 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 ## FR-024B - Deterministic Snippet Enrichment
 
+- **Status:** complete.
 - **Purpose:** attach only justified vocabulary to precise existing snippet candidates and retain explainable term origin.
 - **Inputs:** validated A snapshot and FR-023 snippet candidates.
-- **Outputs:** enriched candidates using the existing format-1 carrier, controlled kind/relationship mapping, and deterministic origin evidence referencing the reviewed manifest definitions.
+- **Outputs:** `RuleVocabularyEnrichment` beside original candidates: existing format-1 term values retain canonical/alias/phrase origin kinds and reviewed weights, with concept identity, composite binding identity, and rationales. C owns projection into final candidate/artifact retrieval metadata; B does not emit term relationships or modify candidates.
 - **Dependencies:** A; preserve FR-023 snippet boundaries and identities.
 - **Files/components:** portable enrichment API, candidate/retrieval models only where necessary, focused fixtures/tests, and input-contract extension.
 - **Acceptance:** exact source/anchor binding existence; explicit source inheritance distinguishable from precise binding; no blanket copying or synonym generation; canonical concept versus Alias/Phrase origins reviewable; deterministic merge/collision handling; malformed/unresolved references fail. Resolve any carrier limitation through governance rather than silently changing format 1.
@@ -36,6 +38,7 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 ## FR-024C - Pipeline and Identity Integration
 
+- **Status:** not started.
 - **Purpose:** make library and standalone CLI compilation consume the same enrichment without duplicating FR-023 logic.
 - **Inputs:** A snapshot, B enrichment, existing assembler/writer/CLI.
 - **Outputs:** validated enriched format-1 artifacts and equivalent CLI/library bytes with manifest-bound provenance.
@@ -47,6 +50,7 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 ## FR-024D - Deterministic Quality Audit
 
+- **Status:** not started.
 - **Purpose:** produce reviewable compiler evidence, not executable rule content.
 - **Inputs:** reviewed definitions, B origin evidence, candidates, and C artifacts.
 - **Outputs:** deterministic metrics and bounded machine-readable audit/report exposed through the existing CLI where useful; errors, warnings, and information are distinct.
@@ -58,6 +62,7 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 ## FR-024E - Canonical Vocabulary and Quality Fixtures
 
+- **Status:** not started.
 - **Purpose:** review actual corpus associations rather than generate an uncontrolled dictionary.
 - **Inputs:** current canonical ten-source corpus, C compiler, D audit, and canonical terminology.
 - **Outputs:** bounded reviewed manifest vocabulary and corpus-derived positive/negative fixtures; baseline metrics with explainable review dispositions.
@@ -69,6 +74,7 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 ## FR-024F - Integrated Acceptance and Closure
 
+- **Status:** not started.
 - **Purpose:** validate the whole governed objective and close it only after all acceptance criteria have evidence.
 - **Inputs:** A-E implementation, canonical corpus, fixtures, contracts, and reports.
 - **Outputs:** final FR-024 audit and closure links; roadmap/register state updated only if acceptance passes.
@@ -82,16 +88,16 @@ Missing work is reviewed vocabulary input, precise deterministic enrichment, ins
 
 | Governed requirement | Current state | Completing packages |
 | --- | --- | --- |
-| Reviewable controlled concepts, alternatives, weights | Input model implemented; compiled terms pending | A, B, C |
-| Representative approved alternative locates its rule | Not yet demonstrated; no enrichment yet | B, E, F |
+| Reviewable controlled concepts, alternatives, weights | Input and intermediate associations/evidence implemented; artifact integration pending | A, B, C |
+| Representative approved alternative locates its rule | Exact binding/alternative targeting demonstrated in isolated B fixtures; corpus acceptance pending | B, E, F |
 | Irrelevant broad associations rejected/downgraded | Explicit precision model exists; quality evidence pending | B, D, E, F |
-| Vocabulary provenance reviewable | Input rationale and exact manifest hash retained; emitted origin evidence pending | A, B, C, F |
+| Vocabulary provenance reviewable | Exact manifest hash, concept/term/binding identities, and all rationales retained in B evidence; artifact integration pending | A, B, C, F |
 | Deterministic compiler-quality audit | Not started | D, E, F |
 | No private reasoning/campaign data | Input boundary enforced and fixtures generic; final report review pending | A-F |
 | Offline reproducibility and CLI equivalence | Existing FR-023 behavior preserved; enriched integration pending | B, C, E, F |
 
 ## Resume Instructions
 
-Read this plan, the input contract, `RuleRetrievalVocabulary.cs`, and the materialized snapshot/candidate types before FR-024B. Do not reread unrelated gameplay systems or restart A. Reuse the existing `RuleSnippetCandidate.Retrieval`, artifact validator, and canonical writer. First test exact binding-target resolution and origin mapping with isolated fixtures; do not begin corpus curation or CLI work in B.
+On explicit continuation, read this plan, the vocabulary contract, `RuleVocabularyEnricher.cs`, and the existing assembler/writer/CLI before FR-024C. Do not restart A/B or reread unrelated gameplay systems. C must map B's intermediate evidence into existing retrieval carriers without losing inspectable origins, preserve distinct concepts/weights, reuse the artifact validator and canonical writer, and prove CLI/library equivalence. Do not begin C automatically after B's commit and owner-requested branch push.
 
 Keep `VERSION` at `1.0.0`, preserve both existing release tags, and keep Future Revisions `[∞]` last. FR-024 remains the selected objective; package continuation still requires an explicit next execution request.
