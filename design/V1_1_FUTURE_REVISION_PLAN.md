@@ -93,7 +93,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-025 - Provider-Neutral Artifact Acquisition and Import
 
-- **Execution state:** Owner-selected and incomplete; A/B's architecture/acquisition foundation and shared validation/explicit trust gate are complete. [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) bound remaining providers, import and acceptance without creating new objectives. FR-026 remains unselected.
+- **Execution state:** Owner-selected and incomplete; A-C's acquisition foundation, shared validation/explicit trust and local ordinary-file provider are complete. [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) bound remaining GitHub acquisition, custom conformance, import and acceptance without creating new objectives. FR-026 remains unselected.
 - **Primary classification:** Managed Service contract with reference providers.
 - **Scope:** Separate artifact-byte acquisition from shared validation and import. Support local files and a GitHub Releases default while preserving extension points for mirrors, private repositories, and compatible custom providers.
 - **Boundaries:** Do not privilege GitHub inside the artifact contract, implement rule ranking, or publish v1.1 assets.

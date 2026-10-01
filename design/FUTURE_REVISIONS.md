@@ -72,7 +72,7 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** High
 - **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#23` through `#26` to one acquisition/import boundary; the owner explicitly selected FR-025 after FR-024 closure.
-- **Execution progress:** A/B complete: reconciled architecture, portable bounded acquisition contract, shared FR-022 validation, explicit trust evaluation and immutable import-eligible result. C-G remain pending under the [execution plan](FR_025_EXECUTION_PLAN.md); [A audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) and [shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) record scope and validation. No real provider or importer is claimed complete.
+- **Execution progress:** A-C complete: portable acquisition foundation, shared FR-022 validation/explicit trust and local ordinary-file provider. D-G remain pending under the [execution plan](FR_025_EXECUTION_PLAN.md); [A audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C audit](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) and [shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) record scope and validation. No GitHub provider or importer is claimed complete.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
 

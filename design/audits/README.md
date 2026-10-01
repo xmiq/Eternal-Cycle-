@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-025C Local Provider Audit](FR_025C_LOCAL_PROVIDER_AUDIT.md) - explicit ordinary-file input, component/handle checks, bounded exact-byte acquisition, privacy, cancellation, real link tests, and honest filesystem-race limitations.
 - [FR-025A Acquisition Architecture Audit](FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md) - existing source/publication/storage investigation, provider-neutral acquisition foundation, trust/import boundaries, security review, and pending continuation work.
 - [FR-025B Validation and Trust Audit](FR_025B_VALIDATION_TRUST_AUDIT.md) - interrupted-work recovery, shared FR-022 validation, explicit policy decisions, immutable approval, safe diagnostics, and deferred storage gaps.
 - [FR-024 Controlled Retrieval Vocabulary Acceptance Audit](FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) - A-F contract acceptance, exact canonical topology, mutation/provenance tests, deterministic artifact/report bytes, residual-gap review, compatibility, and objective closure.

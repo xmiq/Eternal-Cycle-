@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** FR-025A supplies the portable acquisition interface, bounded byte ownership, acquisition evidence, and failure taxonomy. FR-025B implements shared FR-022 validation, explicit trust evaluation, and an immutable import-eligible result. Real local/GitHub providers, provider conformance, and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active are separate states; B writes nothing.
+**Implementation checkpoint:** FR-025A supplies the portable acquisition interface, bounded byte ownership, acquisition evidence, and failure taxonomy. FR-025B implements shared FR-022 validation, explicit trust evaluation, and an immutable import-eligible result. FR-025C adds the explicit local ordinary-file provider. GitHub acquisition, custom-provider conformance, and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active are separate states; C only reads configured file bytes.
 
 ## Document Control
 
@@ -46,6 +46,41 @@ The [reference contract](../../examples/tooling/rules-compiler-dotnet/src/Eterna
 The bounded stream reader never relies on declared length, seeking, or filesystem layout. It reads at most the allowed bytes plus a one-byte overflow probe, rejects excess before appending it, returns its temporary buffer, and leaves stream ownership with the provider. Already-buffered construction checks size before copying. Cancellation propagates as cancellation, not transport failure. Providers must also bound transport/decompression and honor cancellation; the interface is not a sandbox for arbitrary in-process provider code.
 
 Evidence is copied, read-only, and limited to 16 metadata entries, 128-character keys, and 1,024-character values; provider kind/identity scheme are at most 128 characters, identity value at most 1,024. Empty/control-containing values and duplicate keys fail structurally. Metadata is not artifact content and does not enter its digest. Default object string representations never echo evidence or payloads.
+
+## Explicit Local File Provider
+
+The [C reference provider](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/LocalCompiledRulesArtifactProvider.cs), `LocalCompiledRulesArtifactProvider`, implements the existing interface. Its only public configuration is an explicit fully qualified artifact path. Relative, drive-relative and control-containing paths fail; accepted paths are normalized once using the platform's `Path` APIs. There is no implicit base, CWD lookup, repository/installation discovery, directory scan, Git, HTTP, manifest requirement or Campaign ID.
+
+```text
+explicit absolute ordinary file
+    -> component checks
+    -> one read-only opened stream + handle checks
+    -> existing A bounded streaming/hash result
+    -> caller invokes B with explicit trust policy
+```
+
+### File Safety and Race Boundary
+
+The provider rejects reparse/symbolic-link/device attributes on the root and every normalized parent/final component; parents must be directories and the final target must not be a directory. Windows device namespaces and alternate data streams are rejected. Normal platform paths (including filesystem share paths) retain ordinary OS access semantics, not a new URL/network provider. The opened handle's attributes and the stream's readable/seekable capabilities are checked before reading. Components are rechecked after opening and after reading. Like FR-023, indirection is rejected rather than followed; its manifest/root-specific private logic is not copied into a general filesystem framework or changed by C.
+
+All bytes are acquired from the same opened `FileStream` through A's limit-plus-one reader. No pre-read length/timestamp selects content identity or overrides streaming bounds. A's default remains 16 MiB; overbound reads never yield truncated success. Bytes are not decoded, newline-normalized, BOM-stripped or rewritten. The reference uses read-only access and `FileShare.Read`, requests asynchronous sequential reads, and disposes the handle on every outcome. Cancellation is checked around filesystem steps and passed into reads; cancellation cannot become acquisition success.
+
+These controls **do not prove race-free filesystem containment or a coherent file snapshot**. Portable checks cannot atomically lock every ancestor or detect a replace-and-restore link race between observations; handle attributes identify the opened object's type, not an atomic identity match with every inspected path. Ordinary content may change on platforms whose sharing semantics permit it. The authoritative hash covers the exact acquired bytes, even if concurrent mutation creates a mixed observation; B still must validate those bytes. Synchronous OS metadata/open calls cannot be forcibly cancelled while blocked. Not every platform exposes all special-object types before open; detected device/nonseekable objects are rejected, but C is not a sandbox against hostile filesystem races/special objects. Use an explicitly authorized ordinary file in controlled storage. Windows cases are executed evidence; non-Windows special-file/race behavior requires platform acceptance, not inferred proof.
+
+### Local Evidence and Failures
+
+Successful output is exactly `AcquiredCompiledRulesArtifact`, directly consumable by B. Minimal evidence is the constant provider kind `local-file`, no resolved immutable identity, and no locator metadata. The private configured path is not an artifact ID and is omitted from provider display/default serialization and returned evidence. Byte count/hash remain in A's result; FR-022 provenance is untouched. Same bytes at different paths have identical byte/semantic identity; changing bytes at the same path changes actual acquisition identity.
+
+| Local condition | Existing A category / code |
+| --- | --- |
+| Missing/null/blank configuration | `ProviderConfigurationInvalid` / `ARTIFACT_PROVIDER_CONFIGURATION_INVALID` |
+| Invalid/relative path, directory, non-directory parent, prohibited indirection/device/alternate stream or detected nonordinary handle | `LocatorInvalid` / `ARTIFACT_LOCATOR_INVALID` |
+| Missing file/component, permission/security denial | `Unavailable` / `ARTIFACT_UNAVAILABLE` |
+| OS open/read I/O failure | `TransportFailed` / `ARTIFACT_TRANSPORT_FAILED` |
+| Streaming limit exceeded | `PayloadTooLarge` / `ARTIFACT_PAYLOAD_TOO_LARGE` |
+| Cancellation | `OperationCanceledException`, not rejection or provider failure |
+
+Failure code/message are fixed and retain no raw OS exception or inner exception. Diagnostic callers select those safe fields rather than exposing stack traces or private configuration. No permission to log local paths follows from successful acquisition. Malformed JSON, invalid UTF-8 and empty files are valid acquisition outcomes; only B determines artifact validity/trust. Local placement never implies approval, import, publication or readiness.
 
 ## Identity, Integrity, and Trust
 
@@ -134,7 +169,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 ## Security and Provider Obligations
 
 - All acquired bytes/evidence are untrusted. Evidence is not approved for logging or client serialization; producers must remove secrets and consumers must explicitly select/sanitize authorized fields. Bounded length and safe `ToString()` are not universal credential redaction.
-- Local acquisition uses an explicit ordinary file without repository layout or provider-controlled output paths. C must inspect indirection/access policy, reject directories and unintended filesystem targets, read/hash the same opened handle, enforce streaming bounds, and handle concurrent-file changes honestly rather than trusting earlier path/length checks.
+- C's local acquisition uses an explicit ordinary file without repository layout or provider-controlled output paths, rejects observable indirection/nonordinary objects, checks/reads one handle, enforces A's streaming bounds and documents residual filesystem races rather than trusting pre-read path/length metadata.
 - GitHub acquisition selects one published artifact asset, not a repository clone, tag archive, or assumed asset attached to every tag. D must explicitly constrain schemes/endpoints/redirects/credential forwarding, reject ambiguous assets, enforce status/content/stream/time limits, and record actual resolved evidence plus independent byte hash. Tags and discovery pointers remain mutable.
 - Consume one ordinary format-1 file. No archive extraction or decompression infrastructure is required; compressed responses, if accepted by a provider, must be bounded after decompression as well as in transport.
 - Custom providers use the same limits, evidence, validation, trust, and importer. They need not imitate GitHub or assert equality with official rules. No provider may bypass validation or turn payload text into host instructions, filesystem authority, SQL, or campaign permission.
@@ -145,6 +180,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 - [FR-025 Execution Plan](../../design/FR_025_EXECUTION_PLAN.md)
 - [FR-025A Investigation Audit](../../design/audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md)
 - [FR-025B Validation and Trust Audit](../../design/audits/FR_025B_VALIDATION_TRUST_AUDIT.md)
+- [FR-025C Local Provider Audit](../../design/audits/FR_025C_LOCAL_PROVIDER_AUDIT.md)
 - [Release and Version Provenance](../../design/RELEASE_VERSIONING.md)
 - [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md)
 - [Standalone Compiler Reference](../../examples/tooling/rules-compiler-dotnet/README.md)

@@ -17,7 +17,7 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 
 ## Audits
 
-The [FR-025 Execution Plan](FR_025_EXECUTION_PLAN.md) maps the selected acquisition/import objective, existing Managed boundaries, portable contracts, and independently validated continuation packages. The [A acquisition audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md) and [B validation/trust audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) preserve provider and import work as pending.
+The [FR-025 Execution Plan](FR_025_EXECUTION_PLAN.md) maps the selected acquisition/import objective, existing Managed boundaries, portable contracts, and independently validated continuation packages. The [A acquisition audit](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B validation/trust audit](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) and [C local provider audit](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) preserve GitHub/custom provider acceptance and import work as pending.
 
 The [FR-024 Execution Plan](FR_024_EXECUTION_PLAN.md) preserves completed vocabulary/audit checkpoints and their [closure evidence](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md). It does not create additional Future Revisions or select downstream runtime work.
 
