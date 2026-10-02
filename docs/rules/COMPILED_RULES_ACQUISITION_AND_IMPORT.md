@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C/D local/GitHub providers, E custom-provider conformance, and F lossless atomic/idempotent import. G's integrated objective acceptance remains pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, published, and active remain separate; providers do not parse, approve, import or activate artifacts.
+**Implementation status:** FR-025 A-G complete: portable acquisition, shared validation/explicit trust, local/GitHub providers, custom-provider conformance, lossless atomic/idempotent import and integrated acceptance. The [closure audit](../../design/audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) records real disposable LocalDB and deterministic transport evidence. Acquired, valid, trusted, imported, published, and active remain separate; providers do not parse, approve, import or activate artifacts. Searchable runtime retrieval remains FR-026.
 
 ## Document Control
 

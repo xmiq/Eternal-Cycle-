@@ -343,7 +343,7 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 - [x] **FR-022 — Portable Compiled Rules Artifact Contract** — Defined the provider-neutral format-1 artifact, stable snippet identity, executable content, portable provenance, applicability, dependencies, retrieval-metadata carrier, deterministic integrity, compatibility rules, schema, fixtures, and strict reference validation required by later compiler, import, retrieval, and release work.
 - [x] **FR-023 — Deterministic Offline Rules Compiler** — Added a portable manifest loader, deterministic heading/content snippet compiler, format-1 assembler and canonical writer, and a standalone CLI that compiles materialized Rule Source payloads without campaign, MCP, provider, or network dependency.
 - [x] **FR-024 — Retrieval Vocabulary and Compiler Audit** — Reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, canonical curation/precision fixtures, and integrated mutation/provenance acceptance are complete. The [closure audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) records A-F acceptance without runtime ranking or downstream selection.
-- [~] **FR-025 — Provider-Neutral Artifact Acquisition and Import** — Owner-selected; A-F complete: acquisition/shared validation/trust, local/GitHub providers, custom conformance and lossless atomic/idempotent import. G's final acceptance remains pending in the [execution plan](FR_025_EXECUTION_PLAN.md).
+- [x] **FR-025 — Provider-Neutral Artifact Acquisition and Import** — A-G complete: bounded local/GitHub/custom acquisition, shared validation and explicit immutable trust approval, lossless atomic/idempotent import and artifact-local history. The [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) records integrated real LocalDB acceptance with separate publication/activation.
 - [ ] **FR-026 — Compiled Rule Store and Intelligent Retrieval** — After FR-023 through FR-025, import compiled snippets into the normal Rule Domain and provide explainable ranked retrieval with complete dependencies and compact packets.
 - [ ] **FR-027 — Stable Campaign Binding and Managed Gameplay Entry** — After FR-026, bind gameplay to authoritative Campaign identity and one supported entry path while preserving mandatory procedure and player-turn invariants.
 - [ ] **FR-028 — Active Campaign Canon Working-Set Closure** — After FR-027, assemble bounded structurally complete Campaign Canon reads with explicit missing, Unknown, and nonexistent distinctions.
@@ -359,10 +359,10 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 
 ### Current Position
 
-- **Approved pending objectives:** FR-025 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
-- **Selected implementation objective:** FR-025 — Provider-Neutral Artifact Acquisition and Import. A-G are execution checkpoints beneath this single owner-selected objective.
-- **Latest completed objective:** FR-024 — Retrieval Vocabulary and Compiler Audit.
-- **Next action:** Stop after the validated FR-025F checkpoint and owner-requested normal branch push. G requires explicit continuation; FR-026 and every other objective remain unselected.
+- **Approved pending objectives:** FR-026 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
+- **Selected implementation objective:** None. FR-025 A-G are complete beneath the single closed objective.
+- **Latest completed objective:** FR-025 — Provider-Neutral Artifact Acquisition and Import.
+- **Next action:** Stop after FR-025 closure and the owner-requested normal branch push. FR-026 and every other objective remain pending/unselected; further implementation requires explicit authorization.
 
 ### Governance
 

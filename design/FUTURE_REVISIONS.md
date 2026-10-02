@@ -58,23 +58,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-025 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-024 is closed; the owner selected FR-025 for bounded acquisition/import work. FR-025 is incomplete and all other objectives remain unselected. Roadmapping alone does not select a current implementation objective.
+FR-026 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-025 is closed after A-G acceptance; no implementation objective is selected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
-
-### FR-025 - Provider-Neutral Artifact Acquisition and Import
-
-- **Status:** Roadmapped
-- **Issue:** Rule Source acquisition is provider-separated, but no common Compiled Rules validation/import path serves local files, GitHub Releases, and future providers.
-- **Affected systems:** Artifact acquisition, validation, import, compatibility, local files, GitHub Releases, mirrors, and custom providers.
-- **Gameplay impact:** Deployment portability and offline use remain weaker than the rules architecture intends.
-- **Evidence needed:** Byte-identical local/remote import outcomes, provider-failure isolation, compatibility rejection, and replaceable-provider tests.
-- **Suggested future phase:** Phase 13 - Future Revisions.
-- **Priority:** High
-- **Status reason:** Owner-authorized v1.1 planning mapped master requirements `#23` through `#26` to one acquisition/import boundary; the owner explicitly selected FR-025 after FR-024 closure.
-- **Execution progress:** A-F complete: acquisition, shared validation/explicit trust, local/GitHub providers, custom conformance and lossless atomic/idempotent import. G remains pending under the [execution plan](FR_025_EXECUTION_PLAN.md); [A](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md), [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md), [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md), [F](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) audits and [shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) record checkpoints. Final objective closure is not claimed complete.
-- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
-- **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
 
 ### FR-026 - Compiled Rule Store and Intelligent Retrieval
 
@@ -220,6 +206,21 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
+
+### FR-025 - Provider-Neutral Artifact Acquisition and Import
+
+- **Status:** Closed
+- **Issue:** Rule Source acquisition was provider-separated, but no common Compiled Rules validation/import path served local files, GitHub Releases, and future providers.
+- **Affected systems:** Artifact acquisition, validation, import, compatibility, local files, GitHub Releases, mirrors, and custom providers.
+- **Gameplay impact:** Deployment portability and offline use required an explicit shared artifact boundary.
+- **Evidence needed:** Byte-identical local/remote import outcomes, provider-failure isolation, compatibility rejection, and replaceable-provider tests.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** High
+- **Status reason:** Owner-authorized v1.1 planning and selection led to A-G implementation/acceptance. Real disposable LocalDB proves common C/D/E import identity, full semantics/exact bytes, explicit trust/scope rejection, rollback/idempotency, additive migration and preserved publication history/current behavior. Deterministic GitHub transport is not live delivery acceptance.
+- **Execution progress:** A-G complete; [execution plan](FR_025_EXECUTION_PLAN.md) and [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) retain the requirement matrix and package evidence. Canonical 10 sources/154 snippets/773 terms remain unchanged. FR-026 is pending/unselected; no next objective was selected.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
+- **Closure references:** [Shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md), D-1363 through D-1366, [A](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md), [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md), [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md), and [F](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) audits.
 
 ### FR-024 - Retrieval Vocabulary and Compiler Audit
 

@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-025 Acquisition and Import Closure Audit](FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) - complete requirement matrix, C/D/E convergence, trust/scope boundaries, real LocalDB import/migration/history and final validation with explicit operational limits.
 - [FR-025F Lossless Artifact Import Audit](FR_025F_LOSSLESS_IMPORT_AUDIT.md) - trusted-only scoped import, exact-byte/semantic retention, additive artifact-owned SQL storage, atomic rollback, idempotency/concurrency and preserved active/history state.
 - [FR-025E Custom Provider Conformance Audit](FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) - public-only external implementation, canonical C/D/E equivalence, opaque evidence/trust, failure/bounds/cancellation and mutation safety with no production correction.
 - [FR-025D GitHub Provider Audit](FR_025D_GITHUB_PROVIDER_AUDIT.md) - exact Release asset resolution, HTTPS/redirect/credential boundaries, bounded streaming, safe failures, C/D equivalence and explicit external-acceptance limits.

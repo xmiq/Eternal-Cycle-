@@ -93,7 +93,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-025 - Provider-Neutral Artifact Acquisition and Import
 
-- **Execution state:** Owner-selected and incomplete; A-F's acquisition/shared validation/trust, local/GitHub providers, custom conformance and lossless atomic/idempotent import are complete. [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) preserve G's final acceptance as pending without creating new objectives. FR-026 remains unselected.
+- **Execution state:** Complete/Closed after [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) and [integrated acceptance](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md). Shared acquisition, validation/explicit trust and lossless atomic/idempotent import are complete. Publication/activation remain separate; FR-026 remains pending/unselected.
 - **Primary classification:** Managed Service contract with reference providers.
 - **Scope:** Separate artifact-byte acquisition from shared validation and import. Support local files and a GitHub Releases default while preserving extension points for mirrors, private repositories, and compatible custom providers.
 - **Boundaries:** Do not privilege GitHub inside the artifact contract, implement rule ranking, or publish v1.1 assets.
@@ -226,10 +226,10 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 | `#20` Compiled-Rules release artifact | Pending | FR-034 |
 | `#21` MCP release artifact | Partial publishable reference exists; deliberate package pending | FR-034 |
 | `#22` No required `All` artifact | Accepted packaging boundary; enforce in release tooling | FR-034 |
-| `#23` GitHub Releases default | Pending for v1.1 | FR-025, FR-034 |
-| `#24` Acquisition separated from validation/import | Partial Rule Source separation exists; artifact path pending | FR-025, FR-034 |
-| `#25` Local-file acquisition | Pending for compiled artifacts | FR-025 |
-| `#26` Future/custom providers | Rule Source freedom exists; artifact-provider extension pending | FR-025 |
+| `#23` GitHub Releases default | Exact Release-asset provider complete; v1.1 distribution assets/default workflow pending | FR-025, FR-034 |
+| `#24` Acquisition separated from validation/import | Shared artifact path complete; release workflow pending | FR-025, FR-034 |
+| `#25` Local-file acquisition | Complete for compiled artifacts | FR-025 |
+| `#26` Future/custom providers | Public contract and unchanged validation/import conformance complete | FR-025 |
 | `#27` MCP administration interface | Partial tools exist; coherent read surface/client pending | FR-032, FR-033 |
 | `#28` Direct MCP invocation from administration | Pending | FR-033 |
 | `#29` Portable diagnostic/compile report | Error Dump exists; compiler/retrieval report pending | FR-032, FR-033 |

@@ -2,9 +2,9 @@
 
 ## Authority and Current Checkpoint
 
-The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import) from clean synchronized `main` at `a34c268d239bc9b195200e2198bb899a60ad380b`, after FR-022/023/024 closure. A-G are execution checkpoints beneath that single Future Revision, not additional objectives or Project Phases. FR-025 remains selected and incomplete; FR-026 and every other objective remain unselected.
+The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import) from clean synchronized `main` at `a34c268d239bc9b195200e2198bb899a60ad380b`, after FR-022/023/024 closure. A-G are execution checkpoints beneath that single Future Revision, not additional objectives or Project Phases. FR-025 is complete/Closed; FR-026 and every other objective remain unselected.
 
-**A-F complete:** A established the [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md); [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) implements shared validation/explicit trust; [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) acquires local files and [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md) exact GitHub Release assets. [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) proves custom-provider replaceability. [F](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) implements trusted-only lossless atomic/idempotent import with additive migration 011. G requires explicit continuation; no runtime retrieval change, publication bypass or objective closure is implemented.
+**A-G complete:** A established the [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md); [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) implements shared validation/explicit trust; [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) acquires local files and [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md) exact GitHub Release assets. [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) proves custom-provider replaceability. [F](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) implements trusted-only lossless atomic/idempotent import with additive migration 011. [G's closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) records integrated acceptance with no production correction, runtime retrieval change or publication bypass.
 
 ## Existing Architecture Map
 
@@ -38,7 +38,7 @@ local file / GitHub Release asset / compatible custom provider
     -> FR-026 searchable projection and retrieval
 ```
 
-Final integrated objective acceptance remains pending. Shared validation/trust, all provider foundations and F's lossless idempotent artifact storage are implemented. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found.
+Final integrated objective acceptance is complete. Shared validation/trust, all providers and F's lossless storage compose without a production correction. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found.
 
 The legacy physical key `(ruleset_id, source_identity)` and `CompiledRuleIndex` omit artifact semantic digest identity and full retrieval metadata. F preserves them unchanged and uses artifact-local source/snippet/dependency storage plus exact first-approved bytes. Full retrieval metadata is retained in normative snippet JSON. Conflicting readback fails rather than overwriting history. This does not authorize implementing searchable/ranked storage now.
 
@@ -125,7 +125,7 @@ Provider locators stay in authorized configuration. A path/tag is mutable; byte 
 
 ## FR-025G - Integrated Acceptance and Closure
 
-- **Status:** pending; **depends on A-F**.
+- **Status:** complete; **depends on A-F**. [Closure evidence](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md).
 - **Inputs:** providers, common validation/trust/import, fixtures and actual storage evidence; original governed FR-025 acceptance.
 - **Outputs:** durable requirement matrix and security/compatibility audit; closure only after evidence supports it.
 - **Components:** integrated tests, audit/governance/navigation, only narrow defects in FR-025 if found.
@@ -141,4 +141,4 @@ Equal bytes from all providers must traverse the same parser, trust gate and imp
 - **B - Managed Service contract:** shared pre-import validation/trust, lossless scoped/idempotent/atomic storage, authorization, independent durable administrative execution and safe diagnostics.
 - **C - Eternal Cycle-wide:** Repository Canon remains authority; provider choice does not redefine artifact/source identity or restrict valid custom rules; acquisition and hash integrity are not trust or gameplay readiness.
 
-No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. Stop after F's validated commit/push; wait for explicit G continuation, selecting nothing else.
+No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. Stop after G's validated closure commit/push, selecting nothing else.

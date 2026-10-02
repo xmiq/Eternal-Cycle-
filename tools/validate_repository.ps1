@@ -330,9 +330,9 @@ if ($releasedState) {
     }
     else {
         foreach ($requiredText in @(
-            '**Approved pending objectives:** FR-025 through FR-036',
-            '**Selected implementation objective:** FR-025',
-            '**Latest completed objective:** FR-024'
+            '**Approved pending objectives:** FR-026 through FR-036',
+            '**Selected implementation objective:** None',
+            '**Latest completed objective:** FR-025'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
                 Add-ValidationError "Phase 13 planning state lacks required invariant: $requiredText"
@@ -468,8 +468,8 @@ if (-not (Test-Path -LiteralPath $v11PlanPath)) {
 else {
     $v11Plan = Get-Content -Raw -LiteralPath $v11PlanPath
     $v11PlanIds = @(22..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
-    $completedV11PlanIds = @(22..24 | ForEach-Object { 'FR-{0:D3}' -f $_ })
-    $pendingV11PlanIds = @(25..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $completedV11PlanIds = @(22..25 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $pendingV11PlanIds = @(26..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
     $roadmappedIds = @($roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
     $closedIds = @($closedEntries | ForEach-Object { $_.Groups['id'].Value })
 
@@ -489,7 +489,7 @@ else {
         if ($roadmappedIds -notcontains $id) {
             Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
         }
-        $expectedStatus = if ($id -eq 'FR-025') { '[~]' } else { '[ ]' }
+        $expectedStatus = '[ ]'
         if ($roadmap -notmatch [regex]::Escape("- $expectedStatus **$id")) {
             Add-ValidationError "v1.1 Future Revision task has incorrect roadmap status (expected $expectedStatus): $id"
         }

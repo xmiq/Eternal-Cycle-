@@ -31,7 +31,7 @@ public sealed class CompiledRulesArtifactImportPackagingTests
     }
 }
 
-public sealed class CompiledRulesArtifactSqlImportTests : IAsyncLifetime
+public sealed partial class CompiledRulesArtifactSqlImportTests : IAsyncLifetime
 {
     private readonly string database = "EC_Import_" + Guid.NewGuid().ToString("N");
     private const string Domain = "import_domain";
