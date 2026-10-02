@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C the local ordinary-file provider, and D the GitHub Release asset provider. Custom-provider conformance and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active remain separate; neither provider parses, approves, imports or activates artifacts.
+**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C/D local/GitHub providers, and E custom-provider conformance. Storage integration and final acceptance remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active remain separate; providers do not parse, approve, import or activate artifacts.
 
 ## Document Control
 
@@ -126,6 +126,18 @@ The whole acquisition, including metadata, pagination, redirects and body reads,
 
 Safe codes/messages are A's unchanged fixed taxonomy. Rate-limit responses with explicit evidence are distinguishable from not-found by category; unknown 403 causes are not inferred from bodies. No raw API body, error HTML, signed redirect URL, token, header dump or exception is echoed. Tests prove C/D same-byte equivalence and intentional evidence-sensitive B policy; real Release/private-auth delivery is separate external acceptance, not implied by HTTP substitutes. See the [D audit](../../design/audits/FR_025D_GITHUB_PROVIDER_AUDIT.md).
 
+## Custom Provider Implementer Boundary
+
+An external implementation needs only the public `ICompiledRulesArtifactProvider.AcquireAsync(limits, cancellationToken)` contract. Select/configure the provider explicitly outside A/B; object keys, endpoints, credentials, transport lifetime and any deadline are provider responsibilities. There is no provider registry, priority, discovery or fallback chain. A logical object key need not be a file path or URL.
+
+Return `AcquiredCompiledRulesArtifact` directly. For a stream, use its public `ReadAsync` helper with trusted `CompiledRulesAcquisitionLimits` and `CompiledRulesAcquisitionEvidence`; the provider must dispose its stream. For already buffered bytes, its constructor bounds and copies the payload before calculating SHA-256. Do not decode, repair, normalize, approve or store bytes during acquisition. Propagate cancellation and map expected acquisition failures to the existing fixed `CompiledRulesAcquisitionException` categories without raw transport messages. Transport/decompression limits and cooperative cancellation remain implementer obligations, not an in-process sandbox.
+
+Provider kind and resolved identity scheme/value are open bounded strings, not built-in enums or interpreted locators. Optional metadata can carry opaque object versions/generations, subject to A's existing count/text/control/duplicate bounds. Remove secrets before constructing evidence; bounded evidence is not automatically safe to disclose. Resolved identities are observations/claims, not artifact provenance or trust. Only an explicitly supplied B policy may interpret them for authorization.
+
+After acquisition, the caller invokes unchanged `CompiledRulesArtifactValidation.ValidateAsync` with trusted limits and a required `ICompiledRulesArtifactTrustPolicy`. B independently snapshots/rehashes bytes, validates FR-022, freezes the model and evaluates policy. A owns copies of provider source buffers and metadata; deliberate extraction of A's public `ReadOnlyMemory` backing array is detected before validation and cannot alter B's already-approved snapshot. Approved byte copies and read-only collections preserve the existing ordinary-alias guarantees, not protection against reflection/unsafe code.
+
+The [E memory-store fixture](../../examples/tooling/rules-compiler-dotnet/tests/Shared/MemoryStoreCompiledRulesArtifactProvider.cs) implements only this surface; it is test-only, not a third production transport or URI scheme. It is also compiled in the existing CLI test assembly **without friend access**, proving public API sufficiency. [Conformance tests](../../examples/tooling/rules-compiler-dotnet/tests/EternalCycle.Rules.Tests/CompiledRulesProviderConformanceTests.cs) compare actual C/D/E providers using identical canonical bytes through unchanged B, exercise opaque evidence-sensitive policies and validate bounds, failures, cancellation and mutation safety. The [E audit](../../design/audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) records the matrix and limitations. There are no production corrections, importer/SQL changes or new plugin infrastructure in E.
+
 ## Identity, Integrity, and Trust
 
 Keep these claims separate:
@@ -226,6 +238,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 - [FR-025B Validation and Trust Audit](../../design/audits/FR_025B_VALIDATION_TRUST_AUDIT.md)
 - [FR-025C Local Provider Audit](../../design/audits/FR_025C_LOCAL_PROVIDER_AUDIT.md)
 - [FR-025D GitHub Provider Audit](../../design/audits/FR_025D_GITHUB_PROVIDER_AUDIT.md)
+- [FR-025E Custom Provider Conformance Audit](../../design/audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md)
 - [Release and Version Provenance](../../design/RELEASE_VERSIONING.md)
 - [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md)
 - [Standalone Compiler Reference](../../examples/tooling/rules-compiler-dotnet/README.md)

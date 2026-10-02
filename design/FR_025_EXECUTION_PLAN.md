@@ -4,7 +4,7 @@
 
 The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import) from clean synchronized `main` at `a34c268d239bc9b195200e2198bb899a60ad380b`, after FR-022/023/024 closure. A-G are execution checkpoints beneath that single Future Revision, not additional objectives or Project Phases. FR-025 remains selected and incomplete; FR-026 and every other objective remain unselected.
 
-**A-D complete:** A established the [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md); [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) implements shared validation/explicit trust; [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) acquires local files and [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md) exact published GitHub Release assets through the same A result. E-G require explicit continuation. No custom conformance, importer, runtime retrieval change or migration has been implemented by these checkpoints.
+**A-E complete:** A established the [acquisition/import contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md); [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md) implements shared validation/explicit trust; [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md) acquires local files and [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md) exact GitHub Release assets. [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) proves a test-only custom provider uses public A/B unchanged. F-G require explicit continuation; no importer, runtime retrieval change or migration is implemented.
 
 ## Existing Architecture Map
 
@@ -13,7 +13,7 @@ The owner selected [FR-025](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutr
 | Rule Source acquisition | Managed `IRuleSourceProvider`, `GitRuleSourceProvider`, persisted `RuleSourceConfiguration` | Acquires canonical source material and resolves Git provenance; not compiled artifacts. |
 | Local filesystem input | FR-023 `MaterializedRuleSourceLoader`; Managed Git provider; C `LocalCompiledRulesArtifactProvider` | C reads one explicit absolute ordinary artifact file into A bytes/evidence; materialized manifest sources and committed Git inputs remain separate. |
 | Git/GitHub input | Managed Git source runner/provider; D standard .NET HTTP artifact adapter | Source materialization remains separate; D resolves/downloads an exact published Release asset without Git or local compilation. |
-| Compiled artifact acquisition | A portable interface/bounds; C local and D GitHub providers | Two concrete providers use the same byte result; broader custom conformance remains pending. |
+| Compiled artifact acquisition | A portable interface/bounds; C local, D GitHub and E test-only custom providers | Same byte result; E proves replaceability without production transport or public-contract changes. |
 | MCP/Managed interface | `ec_configure_rule_source`, `ec_publish_initial_rules`, operation status/readiness, `ec_get_rule_context` | Administrative source publication plus independent durable worker; runtime context reads already-published rules. No format-1 import endpoint. |
 | Artifact parsing / validation | Portable `CompiledRulesArtifactContract.Read` / `Validate`, B `CompiledRulesArtifactValidation.ValidateAsync` | FR-022 owns validity; B owns independent byte checks, orchestration, safe diagnostics, explicit policy evaluation and frozen approval state, not acquisition or storage. |
 | Compilation / writing / audit | FR-023/024 portable pipeline and CLI | Materialized bytes to format 1; reviewed enrichment and observational audit; no acquisition/import. |
@@ -38,7 +38,7 @@ local file / GitHub Release asset / compatible custom provider
     -> FR-026 searchable projection and retrieval
 ```
 
-Missing behavior is custom-provider conformance and lossless idempotent artifact storage. B's shared validation/trust and C/D byte providers are implemented. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found; B's narrow malformed-input hardening and D's HTTP policy do not change valid format-1 semantics.
+Missing behavior is lossless idempotent artifact storage and final integrated acceptance. B's shared validation/trust, C/D byte providers and E's public-contract conformance are implemented. Git source acquisition is retained, not repurposed into a release-asset importer. No established FR-022/023/024 contract conflict was found; E requires no production correction.
 
 The legacy physical key `(ruleset_id, source_identity)` and `CompiledRuleIndex` omit artifact semantic digest identity and full retrieval metadata. F must preserve those historical releases, add only genuinely necessary lossless adaptation, and reject unresolved conflicts rather than overwrite. The complete format-1 artifact must remain retained for FR-026; this does not authorize implementing searchable/ranked storage now.
 
@@ -105,12 +105,12 @@ Provider locators stay in authorized configuration. A path/tag is mutable; byte 
 
 ## FR-025E - Custom Provider Conformance
 
-- **Status:** pending; **depends on A/B**, compares C/D if present.
+- **Status:** complete; **depends on A/B**, compares C/D; [checkpoint audit](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md).
 - **Inputs:** documented provider contract and distinct third-party-style in-memory/custom fixture with no Managed/GitHub inheritance.
 - **Outputs:** reusable provider conformance evidence demonstrating replaceability, equal validated identity and provider-failure isolation.
-- **Components:** conformance fixtures/tests, implementer guide, plan/audit evidence.
+- **Components:** test-only `MemoryStoreCompiledRulesArtifactProvider` linked into two existing test assemblies, `CompiledRulesProviderConformanceTests`, non-friend `ExternalProviderConformanceTests`, implementer guidance and audit; no production/project/package dependency change.
 - **Acceptance:** custom source/evidence schemes, equal bytes equal artifact identity, metadata cannot bypass limits/hash/FR-022/trust, cancellation/failure safe, no importer rewrite; unsupported provider claims do not rewrite artifact provenance.
-- **Validation:** focused conformance matrix, complete portable/adapter suites, dependency/repository/whitespace checks.
+- **Validation:** 34 portable plus two non-friend conformance cases pass; A-E 246 portable cases, complete portable 551 / CLI 64 / Managed 181 pass (796 unique). FR-022/023/024, dependency, structural/repository/distribution and exact staged-state checks are recorded in the audit. Canonical C/D/E matrix retains equal complete artifact identity, hashes and approved bytes.
 - **Exclusions/stop:** no new production transport, importer or provider registry framework. Stop after E.
 
 ## FR-025F - Shared Import and Managed Storage Integration
@@ -141,4 +141,4 @@ Equal bytes from all providers must traverse the same parser, trust gate and imp
 - **B - Managed Service contract:** shared pre-import validation/trust, lossless scoped/idempotent/atomic storage, authorization, independent durable administrative execution and safe diagnostics.
 - **C - Eternal Cycle-wide:** Repository Canon remains authority; provider choice does not redefine artifact/source identity or restrict valid custom rules; acquisition and hash integrity are not trust or gameplay readiness.
 
-No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. Stop after D's validated commit/push; wait for explicit E-G continuation, selecting nothing else.
+No new governed revision, scoring/query/ranking, Compiled Rule Store/search index, campaign persistence change, compiler/vocabulary change, release packaging, or hidden GitHub dependency is included. `VERSION` stays `1.0.0`; tags stay fixed; Phase 13 remains Active and Future Revisions `[∞]` last. Stop after E's validated commit/push; wait for explicit F-G continuation, selecting nothing else.
