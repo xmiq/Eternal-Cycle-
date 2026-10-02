@@ -41,17 +41,21 @@ public sealed record CompiledRuleCandidateCounts(
 public sealed class CompiledRuleCandidateSet
 {
     internal CompiledRuleCandidateSet(PreparedCompiledRuleRetrievalRequest request,
-        IReadOnlyList<CompiledRuleCandidate> candidates, CompiledRuleCandidateCounts counts)
+        IReadOnlyList<CompiledRuleCandidate> candidates, CompiledRuleCandidateCounts counts,
+        CompiledRulesArtifact? artifact = null)
     {
         Request = request;
         Candidates = candidates;
         Counts = counts;
+        Artifact = artifact;
     }
 
     [JsonIgnore] public PreparedCompiledRuleRetrievalRequest Request { get; }
     public CompiledRuleStoreScope Scope => Request.Scope;
     public IReadOnlyList<CompiledRuleCandidate> Candidates { get; }
     public CompiledRuleCandidateCounts Counts { get; }
+    // Keep B's validated, frozen authority available to later portable stages.
+    internal CompiledRulesArtifact? Artifact { get; }
     public override string ToString() => nameof(CompiledRuleCandidateSet);
 }
 
@@ -185,16 +189,21 @@ public sealed class CompiledRuleCandidateIndex
         }
         cancellationToken.ThrowIfCancellationRequested();
         return new(request, result.AsReadOnly(), new(artifact.Snippets.Count, matched,
-            matched - excluded, excluded, artifact.Snippets.Count - matched));
+            matched - excluded, excluded, artifact.Snippets.Count - matched), artifact);
     }
 
     private static bool IsApplicable(CompiledRulesArtifactApplicability metadata,
         PreparedCompiledRuleRetrievalRequest request, IReadOnlySet<string> modules, IReadOnlySet<string> topics) =>
+        IsDependencyCompatible(metadata, request, modules) && MatchesSet(metadata.Topics, topics);
+
+    // A declared prerequisite is necessary regardless of query topics, but
+    // must still be executable in the selected world/modules/mode/operation.
+    internal static bool IsDependencyCompatible(CompiledRulesArtifactApplicability metadata,
+        PreparedCompiledRuleRetrievalRequest request, IReadOnlySet<string> modules) =>
         (metadata.WorldModelIds.Count == 0 || request.WorldModelId is not null && Matches(metadata.WorldModelIds, request.WorldModelId)) &&
         (metadata.ModuleIds.Count == 0 || modules.Count > 0 && MatchesSet(metadata.ModuleIds, modules)) &&
         Matches(metadata.CampaignModes, request.CampaignMode) &&
-        Matches(metadata.Operations, request.Operation) &&
-        MatchesSet(metadata.Topics, topics);
+        Matches(metadata.Operations, request.Operation);
 
     private static bool Matches(IList<string> selectors, string value) =>
         selectors.Count == 0 || selectors.Contains("*", StringComparer.Ordinal) || selectors.Contains(value, StringComparer.OrdinalIgnoreCase);

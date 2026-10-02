@@ -103,7 +103,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-026 - Compiled Rule Store and Intelligent Retrieval
 
-- **Execution state:** Selected/incomplete under the owner-authorized [A-H execution plan](FR_026_EXECUTION_PLAN.md). A request preparation, B exact applicable candidates and C deterministic ranking complete; D-H remain pending. FR-027 is unselected.
+- **Execution state:** Selected/incomplete under the owner-authorized [A-H execution plan](FR_026_EXECUTION_PLAN.md). A request preparation, B exact applicable candidates, C deterministic ranking and D complete dependency closure are complete; E-H remain pending. FR-027 is unselected.
 - **Primary classification:** Managed Service behavior plus reference implementation.
 - **Scope:** Import FR-022 artifacts into the normal searchable Rule Domain, replace giant-document search records with reviewed snippets, rank normalized/weighted vocabulary with structural selectors, expand dependencies, retain diagnostics, and return the existing compact model-facing packet.
 - **Boundaries:** Repository Canon remains authoritative. Do not retrieve Campaign Canon, alter the player-turn contract, or expose service-only metadata in ordinary packets.
