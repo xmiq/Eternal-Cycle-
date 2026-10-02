@@ -177,7 +177,7 @@ Use the [Canonical Document Registry](DOCUMENT_REGISTRY.md) to identify every do
 - [Rule Compilation and Context-Efficient Retrieval](rules/RULE_COMPILATION_AND_RETRIEVAL.md) - provenance-bearing compilation, Core and World/Ruleset applicability, optional modules, retrieval order, 8K target, and failure behavior.
 - [Compiled Rules Artifact](rules/COMPILED_RULES_ARTIFACT.md) - provider-neutral format-1 contract, stable snippet identity, portable provenance, applicability, dependencies, deterministic integrity, schema, and conformance fixtures.
 - [Compiled Rules Acquisition and Import](rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md) - completed FR-025 provider-neutral bounded acquisition/evidence, explicit validation/trust and lossless atomic/idempotent import; publication/activation remain separate.
-- [Compiled Rule Store Retrieval](rules/COMPILED_RULE_STORE_RETRIEVAL.md) - selected FR-026 query contract; explicit semantic artifact scope and controlled query preparation, not yet ranked/durable retrieval.
+- [Compiled Rule Store Retrieval](rules/COMPILED_RULE_STORE_RETRIEVAL.md) - selected FR-026 explicit semantic scope, controlled query preparation and exact applicable unranked candidates; no ranked/durable retrieval yet.
 - [Controlled Retrieval Vocabulary](rules/CONTROLLED_RETRIEVAL_VOCABULARY.md) - accepted reviewed input, exact associations/origins, automatic artifact/CLI integration, observational quality reports, canonical curation, and integrated acceptance; runtime ranking remains downstream.
 - [Managed Rule Publication](rules/MANAGED_RULE_PUBLICATION.md) - service-owned source acquisition, versioned publication, activation, update policy, compatibility, and bounded Rule Packets.
 

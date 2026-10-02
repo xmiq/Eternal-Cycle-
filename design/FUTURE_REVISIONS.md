@@ -72,7 +72,7 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** Critical
 - **Status reason:** Owner-authorized FR-026 selection begins bounded implementation after FR-022 through FR-025 closure; it extends rather than reopens completed FR-018 and FR-021 retrieval foundations.
-- **Execution progress:** A query-contract checkpoint complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md) records 59 focused and 900 complete-suite tests. B-H remain pending under the [execution plan](FR_026_EXECUTION_PLAN.md). Selection does not imply ranked retrieval, compact compiled packets or SQL lookup already exists.
+- **Execution progress:** A/B query-contract and exact applicable-candidate checkpoints complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md) retains its historical evidence and [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md) records 157 focused and 1,057 complete-suite tests. C-H remain pending under the [execution plan](FR_026_EXECUTION_PLAN.md). Candidate lookup does not imply ranking, compact compiled packets or SQL retrieval already exists.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-026 task](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval)
 

@@ -70,7 +70,8 @@ public sealed class ValidatedCompiledRulesArtifact
 
     // FR-022 DTOs intentionally support assembly through IList. Freeze every
     // collection once without reserialization, normalization, or provenance loss.
-    private static CompiledRulesArtifact Freeze(CompiledRulesArtifact artifact) => new()
+    // Candidate indexing reuses this copy to keep retrieval and approval equally immutable.
+    internal static CompiledRulesArtifact Freeze(CompiledRulesArtifact artifact) => new()
     {
         ArtifactFormatVersion = artifact.ArtifactFormatVersion,
         Compiler = artifact.Compiler,
