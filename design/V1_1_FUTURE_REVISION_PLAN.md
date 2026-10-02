@@ -93,7 +93,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-025 - Provider-Neutral Artifact Acquisition and Import
 
-- **Execution state:** Complete/Closed after [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) and [integrated acceptance](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md). Shared acquisition, validation/explicit trust and lossless atomic/idempotent import are complete. Publication/activation remain separate; FR-026 remains pending/unselected.
+- **Execution state:** Complete/Closed after [A-G execution checkpoints](FR_025_EXECUTION_PLAN.md) and [integrated acceptance](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md). Shared acquisition, validation/explicit trust and lossless atomic/idempotent import are complete. Publication/activation remain separate; later owner selection of FR-026 does not reopen this objective.
 - **Primary classification:** Managed Service contract with reference providers.
 - **Scope:** Separate artifact-byte acquisition from shared validation and import. Support local files and a GitHub Releases default while preserving extension points for mirrors, private repositories, and compatible custom providers.
 - **Boundaries:** Do not privilege GitHub inside the artifact contract, implement rule ranking, or publish v1.1 assets.
@@ -103,6 +103,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-026 - Compiled Rule Store and Intelligent Retrieval
 
+- **Execution state:** Selected/incomplete under the owner-authorized [A-H execution plan](FR_026_EXECUTION_PLAN.md). A request preparation complete; B-H remain pending. FR-027 is unselected.
 - **Primary classification:** Managed Service behavior plus reference implementation.
 - **Scope:** Import FR-022 artifacts into the normal searchable Rule Domain, replace giant-document search records with reviewed snippets, rank normalized/weighted vocabulary with structural selectors, expand dependencies, retain diagnostics, and return the existing compact model-facing packet.
 - **Boundaries:** Repository Canon remains authoritative. Do not retrieve Campaign Canon, alter the player-turn contract, or expose service-only metadata in ordinary packets.

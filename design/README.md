@@ -17,7 +17,7 @@ Files under `design/` govern project scope, accepted decisions, vocabulary, repo
 
 ## Audits
 
-The completed [FR-025 Execution Plan](FR_025_EXECUTION_PLAN.md) and [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) map integrated acquisition/import acceptance. [A acquisition](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B validation/trust](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C local](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md), [D GitHub](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md), [E custom conformance](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) and [F lossless import](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) audits retain historical checkpoints. No downstream objective is selected.
+The completed [FR-025 Execution Plan](FR_025_EXECUTION_PLAN.md) and [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) map integrated acquisition/import acceptance. [A acquisition](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B validation/trust](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C local](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md), [D GitHub](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md), [E custom conformance](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md) and [F lossless import](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) audits retain historical checkpoints. The subsequently owner-selected [FR-026 Execution Plan](FR_026_EXECUTION_PLAN.md) maps the existing runtime gaps and bounded A-H retrieval packages; no FR-027 work is selected.
 
 The [FR-024 Execution Plan](FR_024_EXECUTION_PLAN.md) preserves completed vocabulary/audit checkpoints and their [closure evidence](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md). It does not create additional Future Revisions or select downstream runtime work.
 

@@ -58,7 +58,7 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-026 through FR-036 are Roadmapped and pending under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-025 is closed after A-G acceptance; no implementation objective is selected. Roadmapping alone does not select a current implementation objective.
+FR-026 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-025 is closed after A-G acceptance. FR-026 is the sole selected incomplete objective; FR-027 through FR-036 remain pending/unselected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
@@ -71,7 +71,8 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Evidence needed:** Explainable alternative-term selection, filter/isolation regressions, dependency completeness, compact packets, Pending behavior, and giant-record replacement proof.
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** Critical
-- **Status reason:** Owner-authorized v1.1 planning extends rather than reopens completed FR-018 and FR-021 retrieval foundations.
+- **Status reason:** Owner-authorized FR-026 selection begins bounded implementation after FR-022 through FR-025 closure; it extends rather than reopens completed FR-018 and FR-021 retrieval foundations.
+- **Execution progress:** A query-contract checkpoint complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md) records 59 focused and 900 complete-suite tests. B-H remain pending under the [execution plan](FR_026_EXECUTION_PLAN.md). Selection does not imply ranked retrieval, compact compiled packets or SQL lookup already exists.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-026 task](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval)
 
@@ -217,7 +218,7 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** High
 - **Status reason:** Owner-authorized v1.1 planning and selection led to A-G implementation/acceptance. Real disposable LocalDB proves common C/D/E import identity, full semantics/exact bytes, explicit trust/scope rejection, rollback/idempotency, additive migration and preserved publication history/current behavior. Deterministic GitHub transport is not live delivery acceptance.
-- **Execution progress:** A-G complete; [execution plan](FR_025_EXECUTION_PLAN.md) and [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) retain the requirement matrix and package evidence. Canonical 10 sources/154 snippets/773 terms remain unchanged. FR-026 is pending/unselected; no next objective was selected.
+- **Execution progress:** A-G complete; [execution plan](FR_025_EXECUTION_PLAN.md) and [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) retain the requirement matrix and package evidence. Canonical 10 sources/154 snippets/773 terms remain unchanged. Closure selected no next objective; subsequent explicit owner selection of FR-026 does not reopen FR-025.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-025 task](V1_1_FUTURE_REVISION_PLAN.md#fr-025---provider-neutral-artifact-acquisition-and-import)
 - **Closure references:** [Shared contract](../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md), D-1363 through D-1366, [A](audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md), [B](audits/FR_025B_VALIDATION_TRUST_AUDIT.md), [C](audits/FR_025C_LOCAL_PROVIDER_AUDIT.md), [D](audits/FR_025D_GITHUB_PROVIDER_AUDIT.md), [E](audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md), and [F](audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) audits.

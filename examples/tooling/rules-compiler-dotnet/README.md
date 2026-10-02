@@ -1,5 +1,7 @@
 # Standalone Rules Compiler
 
+The portable library also exposes [FR-026A request preparation](../../../docs/rules/COMPILED_RULE_STORE_RETRIEVAL.md): `CompiledRuleRetrieval.Prepare` accepts explicit Ruleset/semantic artifact identity, concrete selectors and bounded controlled query entries, producing an immutable normalized request. It neither retrieves nor ranks rules and does not change CLI/compiler output. Candidate, dependency, packet and storage work remain pending in the [FR-026 plan](../../../design/FR_026_EXECUTION_PLAN.md).
+
 This reference .NET tool compiles an already-materialized Eternal Cycle Rule Source payload into the provider-neutral [format-1 Compiled Rules Artifact](../../../docs/rules/COMPILED_RULES_ARTIFACT.md). It is standalone compilation tooling: it does not acquire sources, contact a network, access campaign state, import artifacts, publish releases, or depend on MCP, SQL Server, or the Managed Data Service.
 
 ## Projects
