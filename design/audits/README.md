@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-026C Ranking Audit](FR_026C_RANKING_AUDIT.md) - exact reviewed-weight sum, priority/ordinal ties, zero-score inclusion reasons, bounded immutable explanations and canonical compatibility; no closure, budget or SQL/runtime integration claim.
 - [FR-026B Candidate Matching Audit](FR_026B_CANDIDATE_MATCHING_AUDIT.md) - exact reviewed term/concept evidence, all-selector applicability, mandatory/explicit reasons and immutable neutral candidates with canonical and compatibility results; no ranking/closure/packet/SQL claim.
 - [FR-026A Retrieval Contract Audit](FR_026A_RETRIEVAL_CONTRACT_AUDIT.md) - pre-implementation requirement/gap matrix, bounded A-H plan, portable explicit artifact scope/query preparation and compatibility evidence; no ranked or durable retrieval claim.
 - [FR-025 Acquisition and Import Closure Audit](FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) - complete requirement matrix, C/D/E convergence, trust/scope boundaries, real LocalDB import/migration/history and final validation with explicit operational limits.

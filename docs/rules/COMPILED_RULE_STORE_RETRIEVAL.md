@@ -2,15 +2,15 @@
 
 ## Document Control
 
-- **Owner:** portable compiled Rule Store request scope, controlled-query preparation, exact candidate matching, applicability and retrieval-stage failure boundaries.
+- **Owner:** portable compiled Rule Store request scope, controlled-query preparation, exact candidate matching, applicability, deterministic ranking and retrieval-stage failure boundaries.
 - **Dependencies:** [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md), [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md), [Acquisition and Import](COMPILED_RULES_ACQUISITION_AND_IMPORT.md), and [existing retrieval/packet rules](RULE_COMPILATION_AND_RETRIEVAL.md).
-- **Extensions:** FR-026 ranking, dependency, packet and storage checkpoints; FR-027 may bind an authorized Campaign to this machinery later.
+- **Extensions:** FR-026 dependency, packet and storage checkpoints; FR-027 may bind an authorized Campaign to this machinery later.
 - **Consumers:** Managed providers, portable retrieval implementations, diagnostics and conformance tests.
 - **Boundary:** Repository Canon retrieval only; no Campaign Canon, provider/source-file access, compiler invocation, trust approval or implicit activation.
 
 ## Implementation State
 
-[FR-026 execution plan](../../design/FR_026_EXECUTION_PLAN.md) separates the work. A establishes request preparation; B adds artifact-local applicable **unranked** candidates. Ranking, dependency expansion, compact packet construction and durable retrieval remain pending. Existing Managed legacy retrieval remains unchanged until its authorized adapter checkpoint. The [B audit](../../design/audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md) records reference semantics and executed compatibility evidence, not ranking quality.
+[FR-026 execution plan](../../design/FR_026_EXECUTION_PLAN.md) separates the work. A establishes request preparation; B adds artifact-local applicable **unranked** candidates; C orders them with reviewed weights and bounded explanations. Dependency expansion, compact packet construction and durable retrieval remain pending. Existing Managed legacy retrieval remains unchanged until its authorized adapter checkpoint. The [B audit](../../design/audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md) records eligibility and the [C audit](../../design/audits/FR_026C_RANKING_AUDIT.md) records ranking semantics and canonical examples, not final gameplay retrieval acceptance.
 
 ## Explicit Rule Store Scope
 
@@ -62,9 +62,29 @@ This follows FR-026's explicit applicability gates. The legacy unconditional Ker
 
 Candidates preserve the artifact's validated ordinal snippet order; matches preserve ordinal term/kind order. Neither order is relevance ranking. No weight aggregation, priority sorting, preparation bonus, dependency expansion, truncation, top-K or packet construction occurs. Counts distinguish vocabulary-matched, applicable matched, inapplicable matched and unmatched snippets without returning a rejected-candidate dump. Evidence is bounded by the valid artifact and A's prepared query, with no arbitrary cap that loses legitimate associations. Empty/no-match queries return only applicable mandatory/always-include/explicit roots, never the whole corpus.
 
+## Deterministic Ranking
+
+`CompiledRuleRanking.Rank(candidateSet)` consumes B's immutable applicable candidates, never raw artifacts, query prose or source files. It ranks every input candidate exactly once without rematching, adding candidates or filtering zero scores. Scope, counts, candidate identities, graph metadata and inclusion reasons remain unchanged.
+
+The vocabulary score is the exact sum of reviewed weights over B's distinct matched `(term, kind)` associations. Same wording under different legitimate concepts contributes once per concept; multiple query entries contribute their actual associations without an extra coverage bonus. Canonical/alias/phrase origins are not in the runtime carrier and cannot create additional boosts. Identical duplicate keys, conflicting duplicate weights or out-of-order match evidence violate B's strict term/kind invariant and fail rather than inflate a score.
+
+Ordering is complete and storage-independent:
+
+1. Vocabulary score descending.
+2. Authored source priority descending, only when vocabulary scores tie.
+3. Stable snippet ID using ordinal ascending comparison, equivalent to format-1 neutral artifact order for tied candidates.
+
+Priority retains the established larger-is-higher direction but cannot outweigh reviewed relevance. Source layer, preparation tier, dependencies, estimated tokens and readiness add no score. Mandatory Kernel, operation-scoped procedure, always-include and explicit required identities retain separate inclusion flags, not fake vocabulary contributions. With no genuine match their score is zero; with a match they receive exactly its reviewed weight. Zero is valid and never means omission. An ordinary positive match therefore precedes even a higher-priority zero-score mandatory root; later dependency/presentation/budget stages still owe all required content.
+
+`RankedCompiledRuleCandidate` retains the original frozen candidate, its unchanged read-only matches/reasons, `VocabularyScore` and `Priority`. These fields and `SnippetId` explain every numeric contribution and tie without reading executable prose. `RankedCompiledRuleCandidateSet` retains the original input/scope/counts and a read-only ordered collection. There is no compiler-audit origin dump, second serialization format or player-facing explanation payload. Existing disclosure policy applies to service-side term evidence.
+
+Scores use checked signed 64-bit integer addition: format-1 weights are positive integers 1-1000, and even an Int32-sized association list times 1000 fits Int64. No floating point, rounding, saturation or arbitrary match cap applies. Local malformed ranking metadata, duplicate candidate identity, invalid weights/priority/reasons and impossible arithmetic failure use the existing fixed inconsistent-artifact error without raw input or inner exceptions. B remains the artifact/scope/eligibility gate; C does not repeat full validation, authorization or query matching.
+
+Cancellation checks precede ranking, run during candidate/evidence accumulation and surround the synchronous sort. Cancellation retains the supplied token and exposes no partial success; sort comparison uses only exact integers and ordinal identities. Repeated runs, changed culture and shuffled candidate enumeration produce the same ordering/evidence. Preparation urgency and the reviewed English term `preparation` remain different signals.
+
 ## Result and Failure Boundary
 
-A returns a prepared request; B returns unranked candidates, neither a packet, score nor readiness acknowledgement. Expected failures use `CompiledRuleRetrievalException`, a fixed safe code/category/message with no echoed caller/artifact input or raw inner exception. B uses invalid-request for scope/required-identity mismatch and inconsistent-artifact for malformed input or missing applicable mandatory structure. Unavailable artifact, dependency, insufficient complete-packet budget and storage failures remain reserved for their implementing checkpoints.
+A returns a prepared request, B unranked candidates and C ranked candidates/explanations, none a packet or readiness acknowledgement. Expected failures use `CompiledRuleRetrievalException`, a fixed safe code/category/message with no echoed caller/artifact input or raw inner exception. B uses invalid-request for scope/required-identity mismatch and inconsistent-artifact for malformed input or missing applicable mandatory structure; C uses inconsistent-artifact for local ranking invariant violations. Unavailable artifact, dependency, insufficient complete-packet budget and storage failures remain reserved for their implementing checkpoints.
 
 Cancellation remains `OperationCanceledException` with the supplied token; it is never empty results, storage failure or partial success. A checks during preparation; B checks around snapshot validation, during index construction, selectors, identities, term hits, candidate selection and before returning. The existing full FR-022 validation call is synchronous and checks cancellation at its boundary. No partial index/set escapes. Read-only copies prevent later caller mutation; callers must not concurrently mutate assembly DTOs while copying them. Default string representations are fixed type names. Candidate source/content and prepared request are excluded from implicit JSON diagnostics; match evidence is service-facing, not ordinary player context.
 
