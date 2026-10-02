@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-025D GitHub Provider Audit](FR_025D_GITHUB_PROVIDER_AUDIT.md) - exact Release asset resolution, HTTPS/redirect/credential boundaries, bounded streaming, safe failures, C/D equivalence and explicit external-acceptance limits.
 - [FR-025C Local Provider Audit](FR_025C_LOCAL_PROVIDER_AUDIT.md) - explicit ordinary-file input, component/handle checks, bounded exact-byte acquisition, privacy, cancellation, real link tests, and honest filesystem-race limitations.
 - [FR-025A Acquisition Architecture Audit](FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md) - existing source/publication/storage investigation, provider-neutral acquisition foundation, trust/import boundaries, security review, and pending continuation work.
 - [FR-025B Validation and Trust Audit](FR_025B_VALIDATION_TRUST_AUDIT.md) - interrupted-work recovery, shared FR-022 validation, explicit policy decisions, immutable approval, safe diagnostics, and deferred storage gaps.

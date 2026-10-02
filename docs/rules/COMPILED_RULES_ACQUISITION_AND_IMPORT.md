@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** FR-025A supplies the portable acquisition interface, bounded byte ownership, acquisition evidence, and failure taxonomy. FR-025B implements shared FR-022 validation, explicit trust evaluation, and an immutable import-eligible result. FR-025C adds the explicit local ordinary-file provider. GitHub acquisition, custom-provider conformance, and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active are separate states; C only reads configured file bytes.
+**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C the local ordinary-file provider, and D the GitHub Release asset provider. Custom-provider conformance and storage integration remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active remain separate; neither provider parses, approves, imports or activates artifacts.
 
 ## Document Control
 
@@ -81,6 +81,50 @@ Successful output is exactly `AcquiredCompiledRulesArtifact`, directly consumabl
 | Cancellation | `OperationCanceledException`, not rejection or provider failure |
 
 Failure code/message are fixed and retain no raw OS exception or inner exception. Diagnostic callers select those safe fields rather than exposing stack traces or private configuration. No permission to log local paths follows from successful acquisition. Malformed JSON, invalid UTF-8 and empty files are valid acquisition outcomes; only B determines artifact validity/trust. Local placement never implies approval, import, publication or readiness.
+
+## GitHub Release Asset Provider
+
+The [D reference provider](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/GitHubReleaseCompiledRulesArtifactProvider.cs), `GitHubReleaseCompiledRulesArtifactProvider`, takes explicit owner, repository, release tag and asset name, optional prerelease permission, bearer token, whole-acquisition timeout and trusted HTTP handler. It requires no Git/checkout, compiler, manifest, installation layout, campaign, SDK or host. It uses standard .NET HTTP in the existing portable library; common A/B APIs remain unchanged. The provider owns/disposes its client/default handler; injected handlers remain caller-owned. Dispose the provider after use, reusing it across acquisitions where appropriate.
+
+```text
+explicit repository + tag + exact asset name
+    -> repository and published release metadata
+    -> bounded complete asset-list selection
+    -> asset-ID endpoint / constrained redirects
+    -> A exact-byte result
+    -> caller invokes B validation / explicit trust
+```
+
+### Resolution and Evidence
+
+Selectors are bounded ASCII components, not arbitrary URLs: owner at most 39 characters, repository 100, tag/asset name 256; letters/digits and `-_.+` are accepted, with nonempty slash-separated tag segments also allowed. Traversal/control/URL syntax is rejected; tags are URI-escaped. Tags and asset names match exactly; repository naming is case-insensitive. There is no latest-release search, fuzzy extension matching, fallback, asset-name convention for future releases or source-archive extraction. Draft/unpublished releases are refused; prereleases require explicit permission.
+
+Resolution reads repository ID/full name, the exact published tag release, then constructs asset-list pagination itself (`per_page=100`, maximum ten pages). It ignores server Link/download URLs as routing instructions, bounds each metadata response to 1 MiB/depth 16, validates required fields/duplicate object properties, IDs and API asset URL consistency, and exhausts the bounded list before accepting one exact uploaded asset. Missing matches fail; repeated IDs, malformed entries, ambiguous names and exhausted pagination fail closed. Mutable pagination is not an atomic remote snapshot; actual downloaded bytes, not metadata size, determine acquisition identity.
+
+Evidence uses `github-release`, resolved scheme `github-release-asset` with observed `repositoryId/releaseId/assetId`, and nine bounded requested/resolved repository/tag/name/ID fields. Numeric IDs identify observed objects, **not permanent or immutable bytes**; tags/assets can be replaced/deleted. Byte count and independent SHA-256 remain in A, and artifact source/compiler/manifest provenance is untouched. Expected byte-hash/publisher approval belongs to B policy, not D. Signed URLs, headers, tokens, timestamps and response bodies are not retained as evidence.
+
+### HTTP and Credential Policy
+
+Metadata is fetched only from constructed HTTPS `api.github.com` endpoints with GitHub JSON Accept, User-Agent and supported API-version headers. The numeric asset endpoint uses `Accept: application/octet-stream`; GitHub documents direct `200` and redirected `302` binary delivery. Metadata redirects are not followed. Asset redirects are handled manually, at most three, rejecting loops/missing Location, HTTP downgrade, userinfo, fragments, non-443 ports and arbitrary hosts. Only the exact original API asset endpoint or HTTPS `release-assets.githubusercontent.com` is allowed; relative CDN redirects are resolved and revalidated. This deliberately narrow documented delivery-host policy fails closed if GitHub changes hosts. It is not a DNS/IP pinning or rebinding defense.
+
+Bearer authentication is private constructor configuration, never URL data or a public serialized setting. It is sent only to initial API requests, never replayed across any asset redirect. Requests contain no cookies/default credentials/referrer or carried response headers. Default automatic redirects, decompression and cookie handling are disabled; unsafe built-in injected handlers are rejected. Arbitrary custom handlers are trusted code and must preserve these policies; this API cannot sandbox their logging/egress. Operating-system TLS/DNS/proxy configuration and explicitly enabled external HTTP tracing remain deployment responsibilities, not permission to log signed URLs or secrets.
+
+Requests ask for identity encoding and reject encoded responses; no ZIP or decompression path exists. Metadata must select JSON. Vendor GitHub JSON at the asset endpoint is rejected as wrong representation; ordinary JSON or odd file media types do not decide artifact validity. Declared oversized file content can fail early, but A's limit-plus-one stream reader independently enforces the actual bytes (default 16 MiB). No BOM/newline/JSON transformation occurs.
+
+The whole acquisition, including metadata, pagination, redirects and body reads, has a two-minute default deadline, explicitly configurable up to ten minutes; default connect timeout is 30 seconds and headers are bounded. Caller cancellation propagates with a fixed message/token; provider deadline becomes transport failure. No automatic retries occur. Requests/responses/body streams are disposed on every outcome; cancellation remains cooperative for injected transport code.
+
+### GitHub Failure Mapping
+
+| Condition | Existing A category |
+| --- | --- |
+| Missing configuration, invalid token/timeout, unsafe built-in handler | `ProviderConfigurationInvalid` |
+| Invalid selectors, ambiguous asset, rejected/looping/excess redirect | `LocatorInvalid` |
+| 404/401/non-rate-limit 403, absent asset, draft/disallowed prerelease, unuploaded asset | `Unavailable` |
+| 429 or 403 with Retry-After/zero remaining quota, other non-200 status, malformed/overbound metadata, negotiation/encoding failure, network/read/deadline failure | `TransportFailed` |
+| Actual/declared asset bound exceeded | `PayloadTooLarge` |
+| Caller/transport cancellation | `OperationCanceledException`, never partial success |
+
+Safe codes/messages are A's unchanged fixed taxonomy. Rate-limit responses with explicit evidence are distinguishable from not-found by category; unknown 403 causes are not inferred from bodies. No raw API body, error HTML, signed redirect URL, token, header dump or exception is echoed. Tests prove C/D same-byte equivalence and intentional evidence-sensitive B policy; real Release/private-auth delivery is separate external acceptance, not implied by HTTP substitutes. See the [D audit](../../design/audits/FR_025D_GITHUB_PROVIDER_AUDIT.md).
 
 ## Identity, Integrity, and Trust
 
@@ -170,7 +214,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 
 - All acquired bytes/evidence are untrusted. Evidence is not approved for logging or client serialization; producers must remove secrets and consumers must explicitly select/sanitize authorized fields. Bounded length and safe `ToString()` are not universal credential redaction.
 - C's local acquisition uses an explicit ordinary file without repository layout or provider-controlled output paths, rejects observable indirection/nonordinary objects, checks/reads one handle, enforces A's streaming bounds and documents residual filesystem races rather than trusting pre-read path/length metadata.
-- GitHub acquisition selects one published artifact asset, not a repository clone, tag archive, or assumed asset attached to every tag. D must explicitly constrain schemes/endpoints/redirects/credential forwarding, reject ambiguous assets, enforce status/content/stream/time limits, and record actual resolved evidence plus independent byte hash. Tags and discovery pointers remain mutable.
+- D acquires one exact published GitHub Release asset through bounded metadata, HTTPS/API and constrained credential-free redirects; it does not clone sources or assume every tag has an artifact. Its observed IDs/evidence and byte hash do not make tags/assets immutable or approve them.
 - Consume one ordinary format-1 file. No archive extraction or decompression infrastructure is required; compressed responses, if accepted by a provider, must be bounded after decompression as well as in transport.
 - Custom providers use the same limits, evidence, validation, trust, and importer. They need not imitate GitHub or assert equality with official rules. No provider may bypass validation or turn payload text into host instructions, filesystem authority, SQL, or campaign permission.
 - Failures retain bounded safe codes, not unrestricted response bodies/exception text. Invalid/failed work preserves current active rules. No normal gameplay UX exposes technical locators or secrets.
@@ -181,6 +225,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 - [FR-025A Investigation Audit](../../design/audits/FR_025A_ACQUISITION_ARCHITECTURE_AUDIT.md)
 - [FR-025B Validation and Trust Audit](../../design/audits/FR_025B_VALIDATION_TRUST_AUDIT.md)
 - [FR-025C Local Provider Audit](../../design/audits/FR_025C_LOCAL_PROVIDER_AUDIT.md)
+- [FR-025D GitHub Provider Audit](../../design/audits/FR_025D_GITHUB_PROVIDER_AUDIT.md)
 - [Release and Version Provenance](../../design/RELEASE_VERSIONING.md)
 - [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md)
 - [Standalone Compiler Reference](../../examples/tooling/rules-compiler-dotnet/README.md)
