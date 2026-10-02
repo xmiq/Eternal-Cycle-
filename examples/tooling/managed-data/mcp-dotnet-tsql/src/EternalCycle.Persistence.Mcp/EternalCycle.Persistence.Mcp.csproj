@@ -53,6 +53,8 @@
     <None Include="Schema\009_managed_operation_execution_leases.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\010_gm_host_configuration.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\010_gm_host_configuration.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\011_compiled_artifact_import.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\011_compiled_artifact_import.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(OfficialDistributionMetadataSource)"
           Link="distribution-metadata.json"
           CopyToOutputDirectory="PreserveNewest"

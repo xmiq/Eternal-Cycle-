@@ -22,6 +22,7 @@
     <Compile Include="..\Shared\VocabularyTestPayload.cs" Link="VocabularyTestPayload.cs" />
     <Compile Include="..\Shared\CanonicalVocabularyPayload.cs" Link="CanonicalVocabularyPayload.cs" />
     <Compile Include="..\Shared\MemoryStoreCompiledRulesArtifactProvider.cs" Link="MemoryStoreCompiledRulesArtifactProvider.cs" />
+    <Compile Include="..\Shared\CompiledRulesImportFixtures.cs" Link="CompiledRulesImportFixtures.cs" />
     <Content Include="..\..\fixtures\canonical-vocabulary\*" Link="CanonicalVocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\fixtures\reviewed-vocabulary\*" Link="VocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\..\..\conformance\compiled-rules-artifact\v1\valid-*.json" Link="ArtifactFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />

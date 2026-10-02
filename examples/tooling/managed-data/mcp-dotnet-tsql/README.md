@@ -132,10 +132,28 @@ First-run bootstrap applies and validates these assets after approval. Advanced/
 8. [`008_diagnostic_operation_correlation.sql`](src/EternalCycle.Persistence.Mcp/Schema/008_diagnostic_operation_correlation.sql) to join durable Operation IDs directly to persisted diagnostic evidence.
 9. [`009_managed_operation_execution_leases.sql`](src/EternalCycle.Persistence.Mcp/Schema/009_managed_operation_execution_leases.sql) to add renewable worker ownership, bounded orphan detection, and execution-attempt evidence without replacing operation identity.
 10. [`010_gm_host_configuration.sql`](src/EternalCycle.Persistence.Mcp/Schema/010_gm_host_configuration.sql) to persist Ruleset-scoped bootstrap revision and `Required`, `InstructionsPresented`, `UserConfirmed`, or `Verified` readiness without storing host prompts or credentials.
+11. [`011_compiled_artifact_import.sql`](src/EternalCycle.Persistence.Mcp/Schema/011_compiled_artifact_import.sql), or its routed [template](src/EternalCycle.Persistence.Mcp/Schema/011_compiled_artifact_import.template.sql), to retain artifact-owned format-1 candidates losslessly without changing legacy publication/history or active pointers.
 
 New deployments should prefer the `ec_` discoverability convention, such as `ec_mainworld` or `ec_fantasyworld`. Existing `ec` deployments remain supported. Physical schema names do not become Campaign IDs, World IDs, RuleSet IDs, or Logical Data Namespace IDs.
 
-`ec_domain` stores only shared service data and Derived rule publications: RuleSets, Rule Releases, compiled chunks, selectors, dependencies, active-release pointers, provenance, update checks, and redacted Managed-operation diagnostics. World-specific Campaign Canon remains in the selected world schema.
+`ec_domain` stores only shared service data and Derived rule publications/candidates: RuleSets, Rule Releases, compiled chunks, selectors, dependencies, active-release pointers, provenance, update checks, redacted Managed-operation diagnostics, and complete imported format-1 artifacts. World-specific Campaign Canon remains in the selected world schema.
+
+## Compiled Artifact Import
+
+FR-025F adds a configured `SqlServerCompiledRulesArtifactStore` implementing the [portable import contract](../../../../docs/rules/COMPILED_RULES_ACQUISITION_AND_IMPORT.md#shared-authorized-import). Construct it with trusted persistence options and the authorized Ruleset ID; pass only `ValidatedTrustedCompiledRulesArtifact` from B through `CompiledRulesArtifactImport.ImportAsync`. F adds no MCP command or default trust policy. The importer neither fetches Rule Sources nor publishes/activates its stored candidate.
+
+Migration 011 adds artifact headers/exact bytes, ordinal source and snippet records, and artifact-local dependency edges. Full selectors, hashes, preparation metadata and retrieval term/kind/weight/relationship arrays remain in validated normative JSON, not lossy legacy chunks. A serializable transaction and deterministic key enforce atomic/idempotent import; readback must match both FR-022-valid exact bytes and the complete semantic projection. Formatting-only reimports retain the first approved bytes/hash. Raw SQL exceptions and connection details never appear in compact failures/receipts. Legacy source-based compilation/publication, active state and campaign schema remain unchanged.
+
+Upgrade is additive/repeat-safe; no down migration is promised. Keep a verified deployment backup and use controlled restore for rollback. Missing 011 returns `ARTIFACT_IMPORT_SCHEMA_INCOMPATIBLE`; setup planning offers the migration, without making import capability a new gameplay-readiness prerequisite. [F's audit](../../../../design/audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) documents retained history and actual disposable LocalDB tests.
+
+Run the focused SQL suite only against its automatically created disposable test databases:
+
+```powershell
+$env:ETERNAL_CYCLE_RUN_SQL_INTEGRATION = "1"
+dotnet test examples/tooling/managed-data/mcp-dotnet-tsql/tests/EternalCycle.Persistence.Mcp.Tests/EternalCycle.Persistence.Mcp.Tests.csproj -c Release --filter "FullyQualifiedName~CompiledRulesArtifactSqlImportTests|FullyQualifiedName~CompiledRulesArtifactImportPackagingTests"
+```
+
+With the opt-in absent, SQL cases skip and the database-free migration-packaging check still runs. Tests never select an existing campaign database.
 
 ## Trusted Configuration
 

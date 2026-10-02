@@ -69,9 +69,9 @@ public sealed class PreMigrationControlPlaneIntegrationTests
                 CompilerContractVersion: snapshot.CompilerContractVersion,
                 VersionMetadata: snapshot.VersionMetadata);
             var plan = RulePublicationWritePlan.Create(release.Index);
-            Assert.Equal(147, plan.ChunkRows);
-            Assert.Equal(990, plan.SelectorRows);
-            Assert.Equal(768, plan.DependencyRows);
+            Assert.Equal(154, plan.ChunkRows);
+            Assert.Equal(1004, plan.SelectorRows);
+            Assert.Equal(803, plan.DependencyRows);
 
             var store = new SqlServerPublishedRuleStore(persistence);
             await store.StageCandidateAsync(release, CancellationToken.None);
@@ -206,7 +206,9 @@ public sealed class PreMigrationControlPlaneIntegrationTests
             [
                 "007_durable_managed_operations",
                 "008_diagnostic_operation_correlation",
-                "009_managed_operation_execution_leases"
+                "009_managed_operation_execution_leases",
+                "010_gm_host_configuration",
+                "011_compiled_artifact_import"
             ],
             plan.MigrationIds);
 
@@ -254,7 +256,9 @@ public sealed class PreMigrationControlPlaneIntegrationTests
             [
                 "007_durable_managed_operations",
                 "008_diagnostic_operation_correlation",
-                "009_managed_operation_execution_leases"
+                "009_managed_operation_execution_leases",
+                "010_gm_host_configuration",
+                "011_compiled_artifact_import"
             ],
             initialized.Data!.AppliedMigrationIds);
             Assert.True(await CampaignExistsAsync(databaseConnectionString, "the-second-turn"));

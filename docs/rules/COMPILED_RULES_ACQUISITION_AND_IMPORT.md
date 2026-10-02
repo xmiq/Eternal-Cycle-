@@ -4,7 +4,7 @@
 
 This contract separates acquisition of an already-produced [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md) from shared validation, installation trust, import, publication, activation, and retrieval. Local/manual distribution, GitHub Releases, mirrors, private stores, and compatible custom providers are alternative byte sources, not different artifact authorities.
 
-**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C/D local/GitHub providers, and E custom-provider conformance. Storage integration and final acceptance remain pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, and published/active remain separate; providers do not parse, approve, import or activate artifacts.
+**Implementation checkpoint:** A supplies portable acquisition, B shared validation/explicit trust, C/D local/GitHub providers, E custom-provider conformance, and F lossless atomic/idempotent import. G's integrated objective acceptance remains pending in the [FR-025 execution plan](../../design/FR_025_EXECUTION_PLAN.md). Acquired, valid, trusted, imported, published, and active remain separate; providers do not parse, approve, import or activate artifacts.
 
 ## Document Control
 
@@ -171,7 +171,7 @@ independent byte-limit check
 | `ICompiledRulesArtifactTrustPolicy.EvaluateAsync` | Receives that validated view and cancellation; returns explicit approval, rejection, or evaluation failure. No default approval policy exists. |
 | `CompiledRulesArtifactTrustDecision` | Closed outcome/reason evidence: explicit approval/rejection, configured expected-byte-hash match/mismatch, policy unavailable/exception/invalid decision. A hash match is not publisher authentication. |
 | `CompiledRulesArtifactValidationResult` | Separates `IsArtifactValid` from `IsImportEligible`, carries bounded diagnostics and optional policy decision, and retains the validated view even after rejection. |
-| `ValidatedTrustedCompiledRulesArtifact` | Exists only after validation and approval; shares the exact view seen by policy. Future F may import it under separately authorized scope; it is not an import receipt. |
+| `ValidatedTrustedCompiledRulesArtifact` | Exists only after validation and approval; shares the exact view seen by policy. F imports only this value under separately authorized scope; it is not an import receipt. |
 
 Policy is supplied by the caller, outside validation. Identical bytes receive the same FR-022 validity regardless of provider evidence. Configured policy may deliberately approve one evidence set and reject another without changing artifact provenance or semantic identity. Policy must evaluate authorization, not reacquire/repair artifacts, store them, or publish/activate them. The interface does not sandbox arbitrary in-process policy code.
 
@@ -183,7 +183,7 @@ FR-022 assembly DTOs have mutable collection interfaces. B freezes every source/
 
 B does not expose its owned byte buffer. `CopyBytes()` returns an independent copy; deliberate extraction/mutation of A's backing array before validation causes byte-hash rejection, and mutation after approval cannot alter B's snapshot. There is no extra artifact ID, JSON normalization, or reserialization on this path. This boundary protects ordinary managed aliases, not reflection/unsafe code acting outside the API contract.
 
-The known F gaps remain **unimplemented**: legacy source-based storage uniqueness and incomplete format-1 retrieval metadata retention. B preserves the full input F needs but does not change that storage, its schema, or publication behavior.
+B preserves the full input F needs without changing legacy storage or publication behavior. F resolves the source-identity and metadata-retention gaps through artifact-owned storage described below, not by weakening B or redefining format 1.
 
 ### Safe Validation Diagnostics
 
@@ -191,7 +191,7 @@ B returns at most 16 underlying FR-022 diagnostics with explicit truncation, 256
 
 The complete artifact and acquisition evidence are explicitly available to policy/future import code but excluded from default `System.Text.Json` serialization of the result/view wrappers. Safe `ToString()` values also omit them. Deliberately serializing the exposed model/evidence still requires authorized field selection/redaction; this is not a universal credential sanitizer, HTTP policy, or permission to disclose Rule payloads.
 
-## Shared Import Requirement
+## Shared Authorized Import
 
 After validation and explicit trust approval, one importer consumes the validated result and a separately authorized storage scope. Providers cannot supply a Campaign ID, datastore route, active-release pointer, SQL, or publication permission through evidence.
 
@@ -199,7 +199,36 @@ Within that scope, imported semantic identity is the validated Ruleset and FR-02
 
 Import must retain complete artifact provenance, snippets, selectors, dependencies, and retrieval metadata losslessly. Candidate storage must be atomic; invalid input causes no storage writes, and storage failure exposes no half-written corpus. Publication, activation, campaign adoption, and readiness remain separate gates under existing authorization, compatibility, preparation, and migration rules. A successful import is not itself gameplay readiness.
 
-The legacy Managed store has source-unique releases and transactionally staged chunks, not a format-1 importer. FR-025 integration must preserve its history and active release and either reconcile a conflicting source identity explicitly or return `ARTIFACT_IMPORT_CONFLICT`; it must not silently overwrite an older release. Storage work is deferred, not claimed complete by this contract. FR-026 owns searchable projections/ranking, not alternate provider validation.
+The [portable F API](../../examples/tooling/rules-compiler-dotnet/src/EternalCycle.Rules/CompiledRulesArtifactImport.cs), `CompiledRulesArtifactImport.ImportAsync`, accepts only B's `ValidatedTrustedCompiledRulesArtifact`, an explicitly authorized Ruleset ID and an `ICompiledRulesArtifactImportStore`. Both orchestration and the configured reference store enforce exact ordinal Ruleset scope. No raw-byte, parsed-model, valid-but-untrusted or provider-specific write overload exists. F neither reacquires bytes nor reevaluates trust. A store is an authorized persistence adapter, not another provider.
+
+### Artifact Ownership and Idempotency
+
+The reference import ID is `ARTIFACT-` plus SHA-256 of a domain-separated, UTF-8 length-framed Ruleset ID and the validated semantic digest. This storage key is distinct from the semantic digest, first-retained acquired-byte hash, source ID, publication ID and acquisition evidence. No locator, provider, timestamp or generated random value selects it. Equal artifacts acquired through different providers converge on one durable import.
+
+Identical semantic content reuses that import, including different JSON formatting with the same semantics. Exact first-approved bytes and their SHA-256 are retained for export and forensic/projection verification; later equivalent bytes do not overwrite them. The receipt explicitly identifies the **retained** byte hash. This deliberate bounded duplication is not another mutable authority: the stored semantic projection must agree with those bytes. Acquisition observations stay outside artifact storage; F needs no provider-evidence/event table. Timestamped storage audit metadata does not participate in identity.
+
+A digest/key match alone cannot authorize reuse. Readback validates the complete reconstructed model and original bytes through FR-022, checks the acquired-byte hash and derived storage key, and compares complete canonical semantic serialization with the incoming approved model. A contradictory/corrupt representation fails as an integrity conflict without overwriting history. A compact receipt reports storage ID, Ruleset/digests, created/reused state and source/snippet/retrieval-term/relationship counts, not publication acknowledgement or the full payload.
+
+### Reference Storage and Transaction
+
+The [SQL Server adapter](../../examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/SqlServerCompiledRulesArtifactStore.cs) stores four artifact-owned structures in the existing logical Rule Domain:
+
+| Structure | Retained ownership |
+| --- | --- |
+| `imported_rule_artifacts` | Complete format-1 header, unique authorized Ruleset/semantic identity, first exact bytes/hash; incidental import audit time |
+| `imported_rule_sources` | Explicit source ordinal and artifact-local stable source ID; complete source provenance, hashes, layer, preparation, priority, always-include and applicability JSON |
+| `imported_rule_snippets` | Explicit snippet/source ordinals; complete snippet identity, anchor, executable text/hash, token estimate and normative retrieval term/kind/weight/relationship arrays |
+| `imported_rule_dependencies` | Ordered artifact-local source dependency edges with both endpoint foreign keys |
+
+Source IDs can repeat across imports, with different hashes/content attached to the correct artifact. Ordinal/BIN2 key comparisons preserve case-sensitive format-1 identities. JSON retains full normative records rather than inventing another reduced runtime model; compiler-only reviewed-origin evidence absent from format 1 is not manufactured. Snippet IDs remain semantic JSON fields rather than acquiring an arbitrary SQL key-length limit. FR-022 validates their uniqueness; SQL enforces artifact/source ownership, ordinals, source uniqueness and dependency integrity. Readback restores explicit order, never insertion/index order.
+
+One serializable transaction range-locks the deterministic key, inserts bounded set-based header/source/snippet/dependency batches, verifies readback and commits before returning success. Equal concurrent imports wait, verify and reuse. Failure or cancellation disposes/rolls back the uncommitted transaction; no successful partial artifact or orphan children become visible. Missing import schema is a separate failure from generic storage/transaction failure. Raw SQL/connection details and provider evidence are not error payloads.
+
+### Compatibility and Separate Publication
+
+Additive [migration 011](../../examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/Schema/011_compiled_artifact_import.template.sql) creates these structures and is packaged with the default rendered SQL. Trusted setup planning offers it when missing. It does not drop the legacy `(ruleset_id, source_identity)` release uniqueness, rewrite old chunks/metadata/history, change active pointers or alter campaign schema. Existing source compilation/staging/publication/activation continues to use its existing representation. Import availability is not a new gameplay-readiness gate.
+
+An imported complete format-1 candidate is the clean input for a later separately authorized publication/projection operation. F does not register a new MCP import command, project into active chunks, publish, activate, adopt campaigns, or implement another runtime retrieval path. FR-026 owns searchable projections/ranking. Migration is forward/additive and repeat-safe, with no promised down migration; follow existing backup/validation/controlled restore procedures for deployment rollback. See the [F audit](../../design/audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md) for actual upgrade, active-state, concurrent import, rollback and canonical round-trip evidence.
 
 ## Failure Taxonomy
 
@@ -216,11 +245,13 @@ The legacy Managed store has source-unique releases and transactionally staged c
 | Semantic validation failure | `ARTIFACT_SEMANTIC_INVALID` | Shared FR-022 validation |
 | Installation trust rejected | `ARTIFACT_TRUST_REJECTED` | Explicit installation policy |
 | Import conflict | `ARTIFACT_IMPORT_CONFLICT` | Shared importer |
+| Invalid import input/scope | `ARTIFACT_IMPORT_INPUT_INVALID` | Shared importer / authorized store |
+| Missing/incompatible import schema | `ARTIFACT_IMPORT_SCHEMA_INCOMPATIBLE` | Storage adapter |
 | Storage failure | `ARTIFACT_STORAGE_FAILED` | Storage adapter |
 | Trust-policy evaluation failed | `ARTIFACT_TRUST_POLICY_FAILED` | Explicit installation policy boundary |
 | Unexpected validator failure | `ARTIFACT_VALIDATION_FAILED` | Shared validation boundary |
 
-A implements configuration, bounded reading, and safe exception representation; B implements shared validation/trust and preserves underlying FR-022 codes in safe diagnostics. The two B failure categories append to A's taxonomy without renumbering existing values. Provider/import/storage codes do not claim their pending implementations complete. Retry guidance must reflect actual stage/idempotency evidence, never presume every failure transient. Cancellation remains `OperationCanceledException` in the reference, not a fabricated provider error.
+A implements configuration, bounded reading, and safe exception representation; B implements shared validation/trust and preserves underlying FR-022 codes in safe diagnostics. F adds scoped import/integrity/schema/storage failures with fixed messages and no raw inner exceptions; existing A/B values are not renumbered. Retry guidance must reflect actual stage/idempotency evidence, never presume every failure transient. Cancellation remains `OperationCanceledException` in the reference, not a fabricated provider or storage error.
 
 ## Security and Provider Obligations
 
@@ -239,6 +270,7 @@ A implements configuration, bounded reading, and safe exception representation; 
 - [FR-025C Local Provider Audit](../../design/audits/FR_025C_LOCAL_PROVIDER_AUDIT.md)
 - [FR-025D GitHub Provider Audit](../../design/audits/FR_025D_GITHUB_PROVIDER_AUDIT.md)
 - [FR-025E Custom Provider Conformance Audit](../../design/audits/FR_025E_CUSTOM_PROVIDER_CONFORMANCE_AUDIT.md)
+- [FR-025F Lossless Import Audit](../../design/audits/FR_025F_LOSSLESS_IMPORT_AUDIT.md)
 - [Release and Version Provenance](../../design/RELEASE_VERSIONING.md)
 - [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md)
 - [Standalone Compiler Reference](../../examples/tooling/rules-compiler-dotnet/README.md)

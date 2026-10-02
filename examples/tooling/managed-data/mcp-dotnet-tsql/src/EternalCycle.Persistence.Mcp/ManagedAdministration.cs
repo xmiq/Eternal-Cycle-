@@ -850,6 +850,14 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 RenderDomain("010_gm_host_configuration.template.sql")));
         }
 
+        if (SqlServerCompiledRulesArtifactStore.Tables.Any(table => !domainTables.Contains(table)))
+        {
+            migrations.Add(new(
+                "011_compiled_artifact_import",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("011_compiled_artifact_import.template.sql")));
+        }
+
         return migrations;
     }
 
