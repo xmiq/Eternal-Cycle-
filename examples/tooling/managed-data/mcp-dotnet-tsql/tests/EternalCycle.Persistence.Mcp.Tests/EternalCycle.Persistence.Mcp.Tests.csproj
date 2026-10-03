@@ -24,6 +24,9 @@
     <Using Include="EternalCycle.Rules" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CompiledRulesImportFixtures.cs" Link="Shared\CompiledRulesImportFixtures.cs" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CanonicalVocabularyPayload.cs" Link="Shared\CanonicalVocabularyPayload.cs" />
+    <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CompiledRuleQualityEvidence.cs" Link="Shared\CompiledRuleQualityEvidence.cs" />
+    <None Include="..\..\..\..\rules-compiler-dotnet\fixtures\compiled-rule-retrieval\*"
+          Link="RetrievalQualityFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\MemoryStoreCompiledRulesArtifactProvider.cs" Link="Shared\MemoryStoreCompiledRulesArtifactProvider.cs" />
     <None Include="..\..\..\..\rules-compiler-dotnet\fixtures\canonical-vocabulary\*.json"
           Link="CanonicalVocabularyFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />

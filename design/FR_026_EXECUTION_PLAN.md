@@ -4,7 +4,7 @@
 
 Owner-authorized [FR-026](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval) begins from clean, synchronized `main` at `2e6497c6f4720229f9a0fd0d2ffba65af1136167`. FR-022 through FR-025 are complete/Closed. FR-026 is the sole selected incomplete objective; A-H below are execution checkpoints, not new Future Revisions. Phase 13 stays Active, Future Revisions stays last, VERSION stays `1.0.0`, and both release/RC tags remain unchanged.
 
-**Current state: A-F complete; G-H pending.** This plan and matrix were recorded with A-H pending before A implementation. The [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md), [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md), [C audit](audits/FR_026C_RANKING_AUDIT.md), [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md), [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md) and [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) record executed evidence, not file-based inference. Later checkpoints require separate owner authorization; this task stops after F's validated commit and normal `main` push.
+**Current state: A-G complete; H pending.** This plan and matrix were recorded with A-H pending before A implementation. The [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md), [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md), [C audit](audits/FR_026C_RANKING_AUDIT.md), [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md), [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md), [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) and [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md) record executed evidence, not file-based inference. H requires separate owner authorization; this task stops after G's validated commit and normal `main` push.
 
 ## Recovered Architecture
 
@@ -56,7 +56,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026A - Requirement Audit and Portable Query Contract
 
-- **Status:** complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md). B-F are complete; G-H remain pending.
+- **Status:** complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md). B-G are complete; H remains pending.
 - **Prerequisites:** closed FR-022/023/024/025; no further infrastructure.
 - **Files:** this plan; portable `CompiledRuleRetrieval.cs` and focused tests; retrieval contract/navigation; governance and existing status assertions.
 - **Scope:** explicit Ruleset/semantic artifact scope, concrete selectors, bounded query terms/phrases, exact required IDs, immutable prepared request, shared FR-024 normalization and fixed safe failure taxonomy. No matching/ranking engine or store implementation.
@@ -66,7 +66,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026B - Candidate Lookup and Applicability
 
-- **Status:** complete; [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md). C-F are complete; G-H remain pending.
+- **Status:** complete; [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md). C-G are complete; H remains pending.
 - **Prerequisite:** A.
 - **Files:** portable candidate/index API and tests; format-1 applicability models, A request contract; no SQL changes.
 - **Scope:** reusable artifact-scoped candidate view, exact normalized whole query-entry matches, explicit identities, applicable mandatory roots, source selectors. Empty queries mean structural/mandatory/explicit selection, not all snippets. Preserve distinct `(term, kind, weight)` matches.
@@ -76,7 +76,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026C - Deterministic Ranking and Bounded Evidence
 
-- **Status:** complete; [C audit](audits/FR_026C_RANKING_AUDIT.md). D-F are complete; G-H remain pending.
+- **Status:** complete; [C audit](audits/FR_026C_RANKING_AUDIT.md). D-G are complete; H remains pending.
 - **Prerequisite:** B.
 - **Files:** portable ranking/result/evidence types, focused tests and contract section.
 - **Scope:** define transparent controlled-match weight/priority ranking and ordinal ties from actual candidate fields. Distinguish mandatory/explicit/direct reasons; no invented alias-origin label or preparation relevance boost.
@@ -87,7 +87,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026D - Artifact-Local Dependency Closure
 
-- **Status:** complete; [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md). E/F are complete; G-H remain pending.
+- **Status:** complete; [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md). E-G are complete; H remains pending.
 - **Prerequisites:** B, C.
 - **Files:** portable closure types/engine/tests; source graph adapters, contract section.
 - **Scope:** transitive source dependency expansion, all applicable snippets of required source, duplicate-free prerequisite order and inclusion reasons; targeted corrupt/missing/cyclic/inapplicable dependency rejection.
@@ -98,7 +98,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026E - Compact Packet Admission and Presentation
 
-- **Status:** complete; [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md). F is complete; G-H remain pending.
+- **Status:** complete; [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md). F/G are complete; H remains pending.
 - **Prerequisites:** C, D.
 - **Files:** portable selection/budget engine, existing Managed `RulePacketFormatter` adaptation only if needed, compact packet tests and documentation.
 - **Scope:** whole-closure admission under existing 8K estimated-token ceiling; mandatory/explicit required overflow fails; deterministic prerequisite presentation and source-grouped existing model packet. Zero matches do not load all rules.
@@ -109,7 +109,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026F - Durable Rule Store Adapter and Publication Boundary
 
-- **Status:** complete; [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md). Verified 011 readback feeds unchanged A-E through a separately authorized compiled runtime path. Opt-in migration 012 adds only imported-artifact publication/activation associations. Imported artifacts are complete rather than progressively prepared; legacy Pending/priority behavior remains unchanged. G-H remain pending.
+- **Status:** complete; [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md). Verified 011 readback feeds unchanged A-E through a separately authorized compiled runtime path. Opt-in migration 012 adds only imported-artifact publication/activation associations. Imported artifacts are complete rather than progressively prepared; legacy Pending/priority behavior remains unchanged. G is complete; H remains pending.
 - **Prerequisites:** B-E and FR-025 migration 011.
 - **Files:** `SqlServerCompiledRulesArtifactStore`/new narrow retrieval adapter, published store/preparation interfaces, Managed tests; additive schema/template migration only if actual query shape justifies it.
 - **Scope:** authorized explicit Ruleset/semantic lookup maps to import identity; parameterized snippet/term/dependency access feeding the portable engine. Review JSON term access/index needs with evidence before migrating. Reconcile the normal Rule Domain/publication integration without automatic activation or a competing store; retain legacy publication and progressive readiness semantics. Active lookup must resolve one authorized artifact, not infer a Campaign.
@@ -119,6 +119,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026G - Canonical Quality and Local Cost Acceptance
 
+- **Status:** complete; [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md). Fifty-four canonical cases, deterministic reports, real SQL/reference equality and synthetic isolation measure the frozen A-F semantics. No production behavior or schema changes; H remains pending.
 - **Prerequisites:** A-F.
 - **Files:** curated FR-026 request fixtures/tests; FR-024 quality fixture reader reuse; diagnostic/cost audit.
 - **Scope:** representative natural alternative query entries and structural operation requests across combat, save, evolution/preparation, Canon, knowledge, mandatory procedure and dependencies. Review all 65 topology cases for suitability; do not turn all 115 positives into top-rank assertions or confuse prerequisite inclusion with unwanted direct matches.
@@ -138,4 +139,4 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 Canonical frozen fixture: 10 sources, 154 snippets, 773 format-1 terms, 275,622 bytes; semantic digest `56074D713C27846313D0441A63AEC3794371053C8C85BC5FE5AF5891D53CE37B`; serialized SHA-256 `A591012C4C8414A67F05A898941EFCBADBDFD2C0AD314640199B2B50086B6CD6`. These are test/audit evidence, never production constants. A-E, compiler, manifest, vocabulary, migration 011, legacy publication/gameplay and acquisition remain unchanged. F's opt-in 012 association is not a Campaign binding or retrieval algorithm change.
 
-No blocking prerequisite conflict was found. F uses complete verified readback without a term index or global cache; G owns measured quality/cost evidence and H owns integrated closure. Completed reference/runtime checkpoints do not imply those later acceptances.
+No blocking prerequisite conflict was found. F uses complete verified readback without a term index or global cache; G records measured local quality/cost evidence and H still owns integrated closure. No live deployment, production SLA or whole-runtime context acceptance is implied.
