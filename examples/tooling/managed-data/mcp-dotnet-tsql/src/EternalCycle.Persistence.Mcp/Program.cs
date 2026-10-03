@@ -36,6 +36,13 @@ builder.Services
     .AddOptions<ManagedRuleServiceOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Rules"));
 
+builder.Services.AddOptions<CompiledRuleRuntimeOptions>()
+    .Bind(builder.Configuration.GetSection("EternalCycle:CompiledRules"));
+builder.Services.AddSingleton(services => new SqlServerCompiledRulesArtifactStore(
+    services.GetRequiredService<Microsoft.Extensions.Options.IOptions<SqlServerPersistenceOptions>>(),
+    services.GetRequiredService<Microsoft.Extensions.Options.IOptions<ManagedRuleServiceOptions>>().Value.RulesetId));
+builder.Services.AddSingleton<CompiledRuleRuntime>();
+
 builder.Services
     .AddOptions<ManagedAdministrationOptions>()
     .Bind(builder.Configuration.GetSection("EternalCycle:Administration"));

@@ -60,6 +60,7 @@ public sealed class ManagedConfigurationService(IConfiguration configuration) : 
             ValidateConnectionString,
             sensitive: true),
         Optional("EternalCycle:Persistence:CommandTimeoutSeconds", "Database command timeout", "Maximum duration for one database command.", "Persistence", "integer", "30", "30", "AdvancedOperator", ValidatePositiveInteger),
+        Optional("EternalCycle:CompiledRules:Enabled", "Compiled artifact runtime", "Enables explicitly scoped compiled retrieval and its separate publication migration; does not import, publish, activate or bind a campaign.", "Rules", "boolean", "true", "false", "Operator", ValidateBoolean),
         Optional("EternalCycle:Persistence:RequireRecoveryPointForCompletion", "Require recovery point", "Requires configured recovery-point durability before a turn may complete.", "Persistence", "boolean", "false", "false", "AdvancedOperator", ValidateBoolean),
         Optional("EternalCycle:Persistence:RecoveryPointDirectory", "Recovery-point directory", "Optional deployment-owned recovery-point destination.", "Persistence", "path", null, null, "AdvancedOperator", ValidateOptionalText),
         Optional("EternalCycle:Persistence:DomainSchema", "Rule Domain schema", "Validated SQL schema used by the reference Managed rule domain.", "Persistence", "identifier", "ec_domain", "ec_domain", "AdvancedOperator", ValidateSchemaIdentifier),

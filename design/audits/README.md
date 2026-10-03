@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-026F SQL Runtime Retrieval Audit](FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) - verified artifact-owned SQL readback, separate runtime/admin/publication gates, opt-in activation association, unchanged A-E semantics, real SQL equivalence and legacy compatibility; no Campaign binding or final quality/cost acceptance.
 - [FR-026E Closure-Aware Packet Audit](FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md) - complete required reservation, greedy optional admission, unique dependency costs, compact model packets and bounded service evidence; no SQL/runtime or final quality acceptance.
 - [FR-026D Dependency Closure Audit](FR_026D_DEPENDENCY_CLOSURE_AUDIT.md) - complete iterative artifact-local source closure, preserved ranked roots, all direct-parent evidence, prerequisite-first groups, canonical compatibility finding and deep/corrupt graph validation; no budgeting/packet/SQL claim.
 - [FR-026C Ranking Audit](FR_026C_RANKING_AUDIT.md) - exact reviewed-weight sum, priority/ordinal ties, zero-score inclusion reasons, bounded immutable explanations and canonical compatibility; no closure, budget or SQL/runtime integration claim.

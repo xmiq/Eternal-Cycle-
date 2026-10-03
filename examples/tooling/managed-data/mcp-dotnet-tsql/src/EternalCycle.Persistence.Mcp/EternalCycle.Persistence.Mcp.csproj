@@ -55,6 +55,8 @@
     <None Include="Schema\010_gm_host_configuration.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\011_compiled_artifact_import.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Schema\011_compiled_artifact_import.template.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\012_compiled_artifact_publication.sql" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Schema\012_compiled_artifact_publication.template.sql" CopyToOutputDirectory="PreserveNewest" />
     <None Include="$(OfficialDistributionMetadataSource)"
           Link="distribution-metadata.json"
           CopyToOutputDirectory="PreserveNewest"

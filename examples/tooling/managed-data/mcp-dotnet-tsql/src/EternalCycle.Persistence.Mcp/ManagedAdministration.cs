@@ -659,7 +659,8 @@ public sealed class SqlServerRuleSourceConfigurationStore(
 
 public sealed class SqlServerSchemaBootstrapExecutor(
     IOptions<SqlServerPersistenceOptions> persistenceOptions,
-    ICampaignSchemaResolver schemaResolver) : ISchemaBootstrapExecutor
+    ICampaignSchemaResolver schemaResolver,
+    IOptions<CompiledRuleRuntimeOptions>? compiledRules = null) : ISchemaBootstrapExecutor
 {
     private static readonly Regex BatchSeparator = new(
         @"^\s*GO\s*$",
@@ -856,6 +857,16 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 "011_compiled_artifact_import",
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("011_compiled_artifact_import.template.sql")));
+        }
+
+        // Legacy deployments do not acquire a new mandatory runtime schema.
+        if (compiledRules?.Value.Enabled == true &&
+            SqlServerCompiledRulesArtifactStore.PublicationTables.Any(table => !domainTables.Contains(table)))
+        {
+            migrations.Add(new(
+                "012_compiled_artifact_publication",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("012_compiled_artifact_publication.template.sql")));
         }
 
         return migrations;

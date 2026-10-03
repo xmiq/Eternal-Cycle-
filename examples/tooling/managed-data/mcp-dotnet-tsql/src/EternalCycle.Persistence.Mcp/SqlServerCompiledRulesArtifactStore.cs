@@ -9,7 +9,7 @@ namespace EternalCycle.Persistence.Mcp;
 
 internal enum ArtifactImportStage { Header, Sources, SnippetsAndRetrieval, Dependencies, Verified }
 
-public sealed class SqlServerCompiledRulesArtifactStore : ICompiledRulesArtifactImportStore
+public sealed partial class SqlServerCompiledRulesArtifactStore : ICompiledRulesArtifactImportStore
 {
     internal static readonly string[] Tables = ["imported_rule_artifacts", "imported_rule_sources", "imported_rule_snippets", "imported_rule_dependencies"];
     private readonly SqlServerPersistenceOptions settings;

@@ -374,7 +374,8 @@ public sealed class SqlServerManagedInfrastructureInspector(
     IOptions<ManagedAdministrationOptions> administrationOptions,
     ICampaignSchemaResolver schemaResolver,
     IManagedConfigurationService? configuration = null,
-    SanitizedDiagnosticFallbackState? diagnosticFallback = null) : IManagedInfrastructureInspector
+    SanitizedDiagnosticFallbackState? diagnosticFallback = null,
+    IOptions<CompiledRuleRuntimeOptions>? compiledRules = null) : IManagedInfrastructureInspector
 {
     internal static readonly string[] CampaignTables =
     [
@@ -452,6 +453,12 @@ public sealed class SqlServerManagedInfrastructureInspector(
                 await GmHostConfigurationColumnsReadyAsync(connection, cancellationToken);
             if (domainCoreReady &&
                 (!ruleSourceCompatibilityReady || !durableOperationsReady || !gmHostConfigurationReady))
+            {
+                domainSchema = ManagedComponentStatus.Outdated;
+            }
+            if (domainCoreReady && compiledRules?.Value.Enabled == true &&
+                SqlServerCompiledRulesArtifactStore.Tables.Concat(SqlServerCompiledRulesArtifactStore.PublicationTables)
+                    .Any(table => !domainTables.Contains(table)))
             {
                 domainSchema = ManagedComponentStatus.Outdated;
             }

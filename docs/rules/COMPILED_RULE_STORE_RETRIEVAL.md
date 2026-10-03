@@ -2,21 +2,21 @@
 
 ## Document Control
 
-- **Owner:** portable compiled Rule Store request scope, controlled-query preparation, exact candidate matching, applicability, deterministic ranking, complete dependency closure, closure-aware packets and retrieval-stage failure boundaries.
+- **Owner:** portable compiled Rule Store request scope, controlled-query preparation, exact candidate matching, applicability, deterministic ranking, complete dependency closure, closure-aware packets, authorized durable retrieval and retrieval-stage failure boundaries.
 - **Dependencies:** [Compiled Rules Artifact](COMPILED_RULES_ARTIFACT.md), [Controlled Retrieval Vocabulary](CONTROLLED_RETRIEVAL_VOCABULARY.md), [Acquisition and Import](COMPILED_RULES_ACQUISITION_AND_IMPORT.md), and [existing retrieval/packet rules](RULE_COMPILATION_AND_RETRIEVAL.md).
-- **Extensions:** FR-026 packet and storage checkpoints; FR-027 may bind an authorized Campaign to this machinery later.
+- **Extensions:** FR-026 quality/cost acceptance and closure; FR-027 may bind an authorized Campaign to this machinery later.
 - **Consumers:** Managed providers, portable retrieval implementations, diagnostics and conformance tests.
 - **Boundary:** Repository Canon retrieval only; no Campaign Canon, provider/source-file access, compiler invocation, trust approval or implicit activation.
 
 ## Implementation State
 
-[FR-026 execution plan](../../design/FR_026_EXECUTION_PLAN.md) separates the work. A establishes request preparation; B adds artifact-local applicable **unranked** candidates; C orders them with reviewed weights and bounded explanations; D expands complete source dependencies; E admits complete closures and builds compact packets. Durable retrieval remains pending. Existing Managed legacy retrieval remains unchanged until its authorized adapter checkpoint. The [B audit](../../design/audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md) records eligibility, the [C audit](../../design/audits/FR_026C_RANKING_AUDIT.md) ranking, the [D audit](../../design/audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md) closure and compatibility findings, and the [E audit](../../design/audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md) budgeted reference packets, not final gameplay retrieval acceptance.
+[FR-026 execution plan](../../design/FR_026_EXECUTION_PLAN.md) separates the work. A prepares; B matches applicable candidates; C ranks; D expands dependencies; E builds closure-aware compact packets. F supplies authorized durable readback and a separately selected runtime path; the [F audit](../../design/audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) records SQL/reference equivalence. Existing legacy Campaign retrieval remains unchanged. G quality/cost acceptance and H closure remain pending; FR-027 owns Campaign binding.
 
 ## Explicit Rule Store Scope
 
 A request names **Ruleset ID + semantic artifact SHA-256** from format-1. This identifies one imported semantic artifact, not a provider locator, discovery tag, acquired byte hash, source path, Campaign ID or current clock. Same snippet/source IDs in different historical artifacts cannot establish shared storage ownership.
 
-The configured service must authorize that exact scope before lookup. A syntactically valid scope is not authorization, proof of existence, trust, readiness or publication. Imported candidates do not become active simply because they are queried. Existing active Rule Release lookup is distinct from imported-artifact identity; later integration must resolve an authorized scope explicitly and preserve publication/activation gates. FR-027 owns stable Campaign binding.
+The configured service must authorize that exact scope before lookup. A syntactically valid scope is not authorization, proof of existence, trust, readiness or publication. Imported candidates do not become active simply because they are queried. Legacy active Rule Release lookup remains distinct from the explicitly selected compiled path; neither substitutes for the other. FR-027 owns stable Campaign binding.
 
 ## Bounded Request
 
@@ -114,11 +114,25 @@ Totals expose requested/used/remaining/required estimates, selected roots, uniqu
 
 ## Result and Failure Boundary
 
-A returns a prepared request, B unranked candidates, C ranked candidates/explanations, D complete dependency closure and E a compact packet plus service evidence; none acknowledges readiness. Expected failures use `CompiledRuleRetrievalException`, a fixed safe code/category/message with no echoed caller/artifact input or raw inner exception. B uses invalid-request for scope/required-identity mismatch and inconsistent-artifact for malformed input or missing applicable mandatory structure; C uses inconsistent-artifact for local ranking invariant violations. D uses invalid-request for scope mismatch, inconsistent-artifact for absent/mixed roots or graph ownership, and dependency-failed for missing, empty, cyclic, malformed or incompatible reachable dependencies. E uses invalid-request for scope mismatch, inconsistent-artifact for local membership/estimate violations and insufficient-packet-budget for required overflow. No partial successful closure or packet escapes. Unavailable artifact and storage failures remain reserved for durable integration.
+A returns a prepared request, B unranked candidates, C ranked candidates/explanations, D complete dependency closure and E a compact packet plus service evidence; none acknowledges readiness. Expected failures use `CompiledRuleRetrievalException`, a fixed safe code/category/message with no echoed caller/artifact input or raw inner exception. B uses invalid-request for scope/required-identity mismatch and inconsistent-artifact for malformed input or missing applicable mandatory structure; C uses inconsistent-artifact for local ranking invariant violations. D uses invalid-request for scope mismatch, inconsistent-artifact for absent/mixed roots or graph ownership, and dependency-failed for missing, empty, cyclic, malformed or incompatible reachable dependencies. E uses invalid-request for scope mismatch, inconsistent-artifact for local membership/estimate violations and insufficient-packet-budget for required overflow. No partial successful closure or packet escapes. F uses unavailable/inconsistent artifact and storage categories plus bounded authorization, migration, publication/activation and host-confirmation failures at its durable boundary.
 
 Cancellation remains `OperationCanceledException` with the supplied token; it is never empty results, storage failure or partial success. A checks during preparation; B checks around snapshot validation, during index construction, selectors, identities, term hits, candidate selection and before returning. The existing full FR-022 validation call is synchronous and checks cancellation at its boundary. No partial index/set escapes. Read-only copies prevent later caller mutation; callers must not concurrently mutate assembly DTOs while copying them. Default string representations are fixed type names. Candidate source/content and prepared request are excluded from implicit JSON diagnostics; match evidence is service-facing, not ordinary player context.
 
-## Later Retrieval Invariants
+## Durable Runtime Boundary
+
+Authorize the explicit Ruleset/artifact scope before existence or content lookup. Administrative import/read, informed publication approval, activation approval and runtime retrieval are separate privileges. The reference's runtime opt-in is a deployment grant scoped to its configured Ruleset, not an artifact-provided permission or caller-supplied approval flag. Multi-user deployments must authenticate and establish grants before invoking this service; the single-user reference is not a multi-user authentication system.
+
+Import remains a complete durable candidate only. Separate publication makes it eligible for activation; separate atomic activation selects one compiled artifact per Ruleset. A request must name that exact active digest. Historical candidates remain administratively readable, not substituted or searched as a mixed corpus. Legacy Campaign-pinned/active release resolution remains authoritative for the legacy entry path. Compiled retrieval is selected explicitly, not because an import exists. Corruption, missing selection or incompatible closure never falls back to legacy or another artifact.
+
+The reference reuses migration 011's complete FR-025 readback: ordered artifact-owned sources/snippets and dependency edges reconstruct format 1, verify all normative fields against retained exact bytes, and check byte hash, semantic digest and ownership. Selection, publication, activation and reconstruction use one serializable transaction. SQL supplies data only; A-E alone prepare, match, filter, rank, expand closure and budget. No provider, original source file or compiler is required at runtime. The reference re-verifies per read without a global mutable cache; cost/optimization acceptance remains G.
+
+A published imported artifact is already complete, including estimates and terms. It need not re-enter source acquisition/preparation or invent Pending rows. Missing/corrupt imported data fails closed. Existing source-based progressive Pending/priority behavior remains unchanged. Successful selected-closure retrieval establishes rule-context readiness, not whole-game GameplayReady, Campaign availability or full-ruleset readiness. For gameplay.resolve, durable host acknowledgment must match this artifact's canonical Host Bootstrap hash and be UserConfirmed or Verified; A-E still require Kernel/procedure closure and budget.
+
+Normal delivery returns E's compact packet only. Scores, matches, dependency support, exclusions, provenance and verification evidence remain service-side. Expected failures expose fixed bounded categories; cancellation returns no partial packet. Administrative/debug disclosure needs its own authorized surface.
+
+An opt-in additive reference migration is required only because 011 has no imported-artifact publication/active association. It adds no term index, reinterpreted legacy release, artifact field or Campaign binding and does not prescribe SQL for other providers. See [reference deployment guidance](../../examples/tooling/managed-data/mcp-dotnet-tsql/README.md#explicit-compiled-artifact-runtime).
+
+## Remaining Acceptance
 
 The [requirement matrix](../../design/FR_026_EXECUTION_PLAN.md#normative-requirement-and-gap-matrix) owns package/evidence routing. Applicability gates relevance and always-include; mandatory Kernel/operation-scoped GM Procedure cannot be omitted by query choice. Reviewed concept ID and weight survive matching; canonical/alias/phrase origin is compiler-only and cannot be invented from runtime `kind`.
 

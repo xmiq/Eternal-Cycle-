@@ -92,6 +92,8 @@ Compact delivery removes repeated per-chunk metadata from the model-facing envel
 
 ## Managed Publication
 
+The explicit [format-1 compiled retrieval path](COMPILED_RULE_STORE_RETRIEVAL.md#durable-runtime-boundary) uses authorized lossless readback followed by the shared A-E engine. It does not reuse this legacy score or infer Campaign selectors. Requests supply artifact identity and applicability explicitly; FR-027 retains Campaign binding. Legacy retrieval above continues unchanged when that path is not selected.
+
 The [Managed Rule Publication](MANAGED_RULE_PUBLICATION.md) contract owns Rule Source Providers, immutable Git commit provenance, candidate validation, publication, activation policy, automatic update checks, offline fallback, and campaign compatibility. In the T-SQL reference implementation, published reusable rules live in `ec_domain`; world campaign schemas contain no duplicate reusable rules.
 
 ## World Isolation
