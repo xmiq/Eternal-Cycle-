@@ -345,7 +345,7 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 - [x] **FR-024 — Retrieval Vocabulary and Compiler Audit** — Reviewed input, exact associations/origins, shared artifact/CLI integration, observational quality reports, canonical curation/precision fixtures, and integrated mutation/provenance acceptance are complete. The [closure audit](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) records A-F acceptance without runtime ranking or downstream selection.
 - [x] **FR-025 — Provider-Neutral Artifact Acquisition and Import** — A-G complete: bounded local/GitHub/custom acquisition, shared validation and explicit immutable trust approval, lossless atomic/idempotent import and artifact-local history. The [closure audit](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) records integrated real LocalDB acceptance with separate publication/activation.
 - [x] **FR-026 — Compiled Rule Store and Intelligent Retrieval** — A-H complete after R2_ACCEPTED_FOR_H. The [execution plan](FR_026_EXECUTION_PLAN.md) and [R2 acceptance audit](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) record complete ordinary authority/context, actual bounded fixtures, SQL/reference equivalence and immutable historical artifacts. Exceptional adoption retains complete-authority/evidence and atomic-activation boundaries; orchestration and whole-context acceptance remain deferred.
-- [ ] **FR-027 — Stable Campaign Binding and Managed Gameplay Entry** — After FR-026, bind gameplay to authoritative Campaign identity and one supported entry path while preserving mandatory procedure and player-turn invariants.
+- [~] **FR-027 — Stable Campaign Binding and Managed Gameplay Entry** — Sole selected objective. A is complete as [binding/entry contract and architecture](FR_027_EXECUTION_PLAN.md); B-G implementation/acceptance remain pending. Durable routing, actual-input authorization and mandatory entry/read/persistence/decision/yield gates are specified, not yet enforced by the service.
 - [ ] **FR-028 — Active Campaign Canon Working-Set Closure** — After FR-027, assemble bounded structurally complete Campaign Canon reads with explicit missing, Unknown, and nonexistent distinctions.
 - [ ] **FR-029 — Active State and Correction History Separation** — After FR-028, normalize active records and historical corrections without duplicating ownership or erasing provenance.
 - [ ] **FR-030 — Persistence Result and Lost-Acknowledgement Recovery** — Extend completed persistence contracts with compact results and stable transaction outcome lookup without replay.
@@ -360,9 +360,9 @@ Phase 13 is the owner-mediated rolling post-release phase. It preserves stable `
 ### Current Position
 
 - **Approved pending objectives:** FR-027 through FR-036, with dependencies and acceptance boundaries in the [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md).
-- **Selected implementation objective:** None. FR-026 is complete/Closed; no downstream objective is selected.
+- **Selected implementation objective:** FR-027. Owner-authorized A contract/design checkpoint is complete; B-G remain pending. No later objective is selected.
 - **Latest completed objective:** FR-026 — Compiled Rule Store and Intelligent Retrieval.
-- **Next action:** Await owner selection of the next bounded objective. [R2 acceptance](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) resolves ordinary H closure without implementing adoption orchestration, Campaign binding or whole-runtime context budgets. Phase 13 and owner-mediated Future Revisions remain Active.
+- **Next action:** Stop after the validated FR-027A commit/push. Await explicit selection of a bounded continuation package before B; preserve the adoption host/specialist boundary and exceptional complete-authority stop. Phase 13 and owner-mediated Future Revisions remain Active.
 
 ### Governance
 

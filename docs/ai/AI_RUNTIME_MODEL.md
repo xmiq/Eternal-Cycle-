@@ -2,6 +2,8 @@
 
 ## Purpose
 
+The [FR-027A Campaign Binding and Mandatory Gameplay Entry contract](CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) specifies durable routing and actual-input authorization around this model's existing lifecycle. Its service enforcement is pending; A does not add a tool, mutate persistence behavior, or change compiled rules.
+
 This document defines the implementation-neutral architecture through which an AI Game Master operates Eternal Cycle. It connects the player, AI operator, execution profile, persistence implementation, canonical Campaign State, and rules repository without transferring authority among them.
 
 The model is operational documentation. It does not define fictional mechanics, create campaign facts, prescribe a storage product, or replace the [Game Master Framework](../gm/GAME_MASTER_FRAMEWORK.md) or [Campaign Persistence Engine](../persistence/README.md).

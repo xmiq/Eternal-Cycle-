@@ -58,7 +58,7 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-027 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-026 is Closed after A-H/R2 acceptance. No implementation objective is selected. Roadmapping alone does not select a current implementation objective.
+FR-027 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-026 is Closed after A-H/R2 acceptance. FR-027 alone is selected/in progress: A contract/design is complete, B-G remain pending. FR-028 through FR-036 are unselected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
@@ -71,7 +71,8 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Evidence needed:** Stable resume, conflict/missing-binding failure, mandatory runtime closure, turn-boundary, Unknown, and conversation-demotion tests.
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** Critical
-- **Status reason:** Owner-authorized v1.1 planning preserves FR-021 invariants while assigning the remaining binding/integration gap.
+- **Status reason:** Owner explicitly selected FR-027A after closed FR-026/R2. The accepted [Campaign Binding and Mandatory Gameplay Entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) specifies service-enforced durable routing, actual-input authorization, read/rule/persistence and decision/yield gates; A adds no runtime enforcement.
+- **Execution progress:** A complete (contract only); B-G pending under the [execution plan](FR_027_EXECUTION_PLAN.md) and [A audit/scenarios](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md). FR-027 remains incomplete/Roadmapped, not Closed; downstream objectives remain unselected.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-027 task](V1_1_FUTURE_REVISION_PLAN.md#fr-027---stable-campaign-binding-and-managed-gameplay-entry)
 

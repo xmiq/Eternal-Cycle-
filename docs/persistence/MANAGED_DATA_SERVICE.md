@@ -122,6 +122,7 @@ The repository includes an optional [.NET / MCP / T-SQL reference implementation
 
 ## Related Documents
 
+- [Campaign Binding and Mandatory Gameplay Entry](../ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) - accepted FR-027A control-plane contract; implementation pending, not a capability already enforced by current tools.
 - [Persistence Strategy Selection](PERSISTENCE_STRATEGY_SELECTION.md)
 - [Logical Data Namespace](LOGICAL_DATA_NAMESPACE.md)
 - [MCP Managed Service Interface](MCP_PERSISTENCE_MODE.md)

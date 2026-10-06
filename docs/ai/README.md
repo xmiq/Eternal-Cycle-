@@ -90,6 +90,8 @@ An AI GM must:
 
 ## Procedure Status
 
+The [Campaign Binding and Mandatory Gameplay Entry contract](CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) is accepted FR-027A architecture: durable campaign routing, actual-submission Player Interaction, entry/read/rule gates and player-decision/mutation/narration/yield authorization. It is distinct from the Save Protocol's bounded Gameplay Interaction. Service enforcement is pending B-G; no new tool or compiled Rule Source is delivered by A.
+
 These are canonical operating procedures, but they grant no gameplay effect. Following a checklist cannot establish success, progression, knowledge, relationship change, world change, or a saved state. Each such claim still requires its factual owner, mechanical owner, evidence, authority, and persistence route.
 
 ## Related Documents

@@ -331,7 +331,7 @@ if ($releasedState) {
     else {
         foreach ($requiredText in @(
             '**Approved pending objectives:** FR-027 through FR-036',
-            '**Selected implementation objective:** None',
+            '**Selected implementation objective:** FR-027',
             '**Latest completed objective:** FR-026'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
@@ -489,7 +489,7 @@ else {
         if ($roadmappedIds -notcontains $id) {
             Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
         }
-        $expectedStatus = '[ ]'
+        $expectedStatus = if ($id -eq 'FR-027') { '[~]' } else { '[ ]' }
         if ($roadmap -notmatch [regex]::Escape("- $expectedStatus **$id")) {
             Add-ValidationError "v1.1 Future Revision task has incorrect roadmap status (expected $expectedStatus): $id"
         }
@@ -690,6 +690,19 @@ else {
     }
     catch {
         Add-ValidationError 'FR-022 compiled-rules artifact regression harness failed.'
+    }
+}
+
+$fr027HarnessPath = Join-Path $rootPath 'tools/test_fr027_gameplay_entry_contract.ps1'
+if (-not (Test-Path -LiteralPath $fr027HarnessPath)) {
+    Add-ValidationError 'Missing FR-027A gameplay-entry contract structural harness.'
+}
+else {
+    try {
+        & $fr027HarnessPath -Quiet
+    }
+    catch {
+        Add-ValidationError 'FR-027A gameplay-entry contract structural harness failed.'
     }
 }
 

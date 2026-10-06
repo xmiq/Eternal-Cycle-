@@ -61,6 +61,8 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Audit Boundary
 
+The [FR-027A Campaign Binding and Gameplay Entry Contract Audit](FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md) records the two motivating owner-reported regressions, inspected control-plane gaps, accepted logical contract, 40 later acceptance scenarios, trusted-host limitations and B-G decomposition. A is design only; service enforcement is pending.
+
 The [FR-024E Canonical Vocabulary Curation Audit](FR_024E_CANONICAL_VOCABULARY_AUDIT.md) records reviewed corpus conventions, precise positive/negative fixtures, before/after identities and metrics, and accepted quality findings without closing FR-024.
 
 Audit findings route gameplay concerns to [Future Revisions](../FUTURE_REVISIONS.md), unresolved design questions to [Unresolved Questions](../UNRESOLVED_QUESTIONS.md), and accepted changes through ordinary repository governance. Audit files may correct navigation and documentation inconsistencies within their roadmap scope; they may not invent or rebalance mechanics.

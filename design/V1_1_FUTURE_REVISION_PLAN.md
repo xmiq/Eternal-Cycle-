@@ -103,7 +103,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-026 - Compiled Rule Store and Intelligent Retrieval
 
-- **Execution state:** Complete/Closed under the owner-authorized [A-H execution plan](FR_026_EXECUTION_PLAN.md) after [R2_ACCEPTED_FOR_H](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md). Portable request/matching/ranking/closure/packets, authorized SQL integration and actual ordinary authority/context acceptance pass. FR-027 through FR-036 remain pending/unselected.
+- **Execution state:** Complete/Closed under the owner-authorized [A-H execution plan](FR_026_EXECUTION_PLAN.md) after [R2_ACCEPTED_FOR_H](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md). Portable request/matching/ranking/closure/packets, authorized SQL integration and actual ordinary authority/context acceptance pass. Subsequent owner selection of FR-027A does not reopen FR-026; FR-028 through FR-036 remain pending/unselected.
 - **Historical design evidence:** [Initial blocked H](audits/FR_026_COMPILED_RULE_RETRIEVAL_AUDIT.md), [granularity investigation](audits/FR_026H_DEPENDENCY_GRANULARITY_INVESTIGATION.md), [R1 inventory](audits/FR_026H_R1_AUTHORITY_PARTITION_REVIEW.md), [R1.5 design](audits/FR_026H_R1_5_EXECUTABLE_AUTHORITY_INVESTIGATION.md) and [R1.6 WORKFLOW_READY](audits/FR_026H_R1_6_ADOPTION_WORKFLOW_ATOMICITY_REVIEW.md) retain then-blocked findings. R2 closes ordinary H without claiming universal 8K adoption, phased adoption execution, Campaign binding or whole-runtime context acceptance.
 - **Primary classification:** Managed Service behavior plus reference implementation.
 - **Scope:** Import FR-022 artifacts into the normal searchable Rule Domain, replace giant-document search records with reviewed snippets, rank normalized/weighted vocabulary with structural selectors, expand dependencies, retain diagnostics, and return the existing compact model-facing packet.
@@ -114,6 +114,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-027 - Stable Campaign Binding and Managed Gameplay Entry
 
+- **Execution state:** Sole selected/in-progress objective. [A-G plan](FR_027_EXECUTION_PLAN.md): A contract/design complete; B-G pending. [Canonical binding/entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) and [A audit](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md) specify durable routing, trusted actual-input identity, entry/read/decision/mutation/narration gates. No service/API/SQL behavior is implemented in A.
 - **Primary classification:** Eternal Cycle-wide gameplay invariant and Managed Service contract.
 - **Scope:** Establish an authoritative active Campaign binding and supported gameplay entry that carries interaction identity, invokes `gameplay.resolve`, obtains mandatory rules, and demotes conversation search to non-authoritative diagnostics.
 - **Boundaries:** Preserve the existing GM Runtime Procedure, Unknown rules, and player-agency contract rather than rewriting them.

@@ -4192,6 +4192,26 @@ The canonical post-interaction transaction that determines the Affected Set, con
 
 One bounded unit of play whose material intent, adjudication, immediate outcome, costs, information effects, and currently resolvable consequences are established enough to persist.
 
+## Campaign Session Binding
+
+The authoritative durable routing of an authenticated logical gameplay session to one Campaign, verified canonical version/profile and readiness. It outlives individual inputs and transports; story resemblance and conversation never establish it. [FR-027A](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) defines the contract; service implementation is pending.
+
+## Player Interaction
+
+The authorization envelope for one actual submitted player gameplay input, identified through trusted ingress and bound to one Campaign Session Binding generation. Tool work, retries and same-input simulation remain inside it. It is distinct from the persistence protocol's bounded Gameplay Interaction; an ID alone is not authorization.
+
+## Player Interaction ID
+
+The durable identity of one Player Interaction, reused for repeated delivery/recovery of the same actual submission. Identical text in separate submissions does not imply identical identity, and model-created identifiers cannot prove a new user input.
+
+## Pending Player Decision
+
+Durable unresolved player-owned question/control state originating in a yielded interaction. Alternatives are proposals, not authority to choose; only a new related actual user submission may supply the decision. It is control-plane state, not an executed fictional outcome.
+
+## GM Turn Trace
+
+Bounded authorized operational evidence of binding/input, entry, selected rules, required/read Canon revisions, resolution, Affected Set, transactions/receipts, resulting version, narration gate and yield. It contains no private chain-of-thought, raw conversations or secret-bearing campaign dump.
+
 ## Save Transaction
 
 One idempotent, owner-routed campaign update from a single parent Campaign Version through a bounded Affected Set and Write Set to a validated candidate Save Point.
