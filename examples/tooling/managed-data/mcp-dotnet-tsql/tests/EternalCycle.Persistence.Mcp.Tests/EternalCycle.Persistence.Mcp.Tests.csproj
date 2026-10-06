@@ -25,6 +25,7 @@
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CompiledRulesImportFixtures.cs" Link="Shared\CompiledRulesImportFixtures.cs" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CanonicalVocabularyPayload.cs" Link="Shared\CanonicalVocabularyPayload.cs" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\CompiledRuleQualityEvidence.cs" Link="Shared\CompiledRuleQualityEvidence.cs" />
+    <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\OrdinaryAuthorityCandidate.cs" Link="Shared\OrdinaryAuthorityCandidate.cs" />
     <None Include="..\..\..\..\rules-compiler-dotnet\fixtures\compiled-rule-retrieval\*"
           Link="RetrievalQualityFixture\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <Compile Include="..\..\..\..\rules-compiler-dotnet\tests\Shared\MemoryStoreCompiledRulesArtifactProvider.cs" Link="Shared\MemoryStoreCompiledRulesArtifactProvider.cs" />

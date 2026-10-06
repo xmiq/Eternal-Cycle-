@@ -1,0 +1,419 @@
+{
+  "sourceDispositions": [
+    {
+      "sourceId": "core-persistence-authority",
+      "disposition": "split-ordinary-owner-preserved"
+    },
+    {
+      "sourceId": "core-context-assembly",
+      "disposition": "split-ordinary-owner-preserved"
+    },
+    {
+      "sourceId": "core-authority-governance",
+      "disposition": "new"
+    },
+    {
+      "sourceId": "core-context-adoption",
+      "disposition": "proposed-source-not-materialized"
+    }
+  ],
+  "snippets": [
+    {
+      "oldSnippetId": "core-persistence-authority",
+      "targetSnippetId": "core-persistence-authority",
+      "disposition": "preserved",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#purpose",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#core-rule",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#authority-is-claim-specific",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#the-authority-layers",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#repository-canon",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#campaign-canon",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#historical-record",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#current-campaign-state",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#current-session",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#current-narration",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#rules-authority-and-persistence-authority",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#authority-does-not-equal-visibility",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#authority-does-not-equal-certainty",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#authority-does-not-equal-actor-control",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#valid-downward-updates",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#valid-upward-proposals",
+      "targetSnippetId": "core-authority-governance#governed-changes",
+      "disposition": "moved-and-coalesced",
+      "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+      "reason": "Exceptional higher-layer governance coalesces in complete G; G depends on complete P."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#conflict-classification-procedure",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#repository-revision-changes",
+      "targetSnippetId": "core-authority-governance#governed-changes",
+      "disposition": "moved-and-coalesced",
+      "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+      "reason": "Exceptional higher-layer governance coalesces in complete G; G depends on complete P."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#authorized-retcons",
+      "targetSnippetId": "core-authority-governance#governed-changes",
+      "disposition": "moved-and-coalesced",
+      "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+      "reason": "Exceptional higher-layer governance coalesces in complete G; G depends on complete P."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#worked-examples",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+      "reason": "Supporting examples/navigation have no unique executable duties."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#safeguards",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#scope-boundaries",
+      "targetSnippetId": "core-persistence-authority#executable-authority",
+      "disposition": "coalesced",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+      "reason": "One complete self-contained body carries all ordinary definitions and procedures."
+    },
+    {
+      "oldSnippetId": "core-persistence-authority#related-documents",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+      "reason": "Supporting examples/navigation have no unique executable duties."
+    },
+    {
+      "oldSnippetId": "core-context-assembly",
+      "targetSnippetId": "core-context-assembly",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#purpose",
+      "targetSnippetId": "core-context-assembly#purpose",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#document-control",
+      "targetSnippetId": "core-context-assembly#document-control",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#runtime-boundary",
+      "targetSnippetId": "core-context-assembly#runtime-boundary",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#core-invariants",
+      "targetSnippetId": "core-context-assembly#core-invariants",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#gameplay-turn-state-machine",
+      "targetSnippetId": "core-context-assembly#gameplay-turn-state-machine",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#persistence-target-resolution-gate",
+      "targetSnippetId": "core-context-assembly#persistence-target-resolution-gate",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#context-assembly-layer",
+      "targetSnippetId": "core-context-assembly#context-assembly-layer",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#relevance-selection",
+      "targetSnippetId": "core-context-assembly#relevance-selection",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#current-scene-context",
+      "targetSnippetId": "core-context-assembly#current-scene-context",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#purpose-specific-visual-context",
+      "targetSnippetId": "core-context-assembly#purpose-specific-visual-context",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#hierarchical-context",
+      "targetSnippetId": "core-context-assembly#hierarchical-context",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#freshness",
+      "targetSnippetId": "core-context-assembly#freshness",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#mandatory-read-gate",
+      "targetSnippetId": "core-context-assembly#mandatory-read-gate",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#resolution-and-affected-set-gate",
+      "targetSnippetId": "core-context-assembly#resolution-and-affected-set-gate",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#automatic-persistence-gate",
+      "targetSnippetId": "core-context-assembly#automatic-persistence-gate",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#player-visible-persistence-status",
+      "targetSnippetId": "core-context-assembly#player-visible-persistence-status",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#manual-persistence-commands",
+      "targetSnippetId": "core-context-assembly#manual-persistence-commands",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#canonical-change-proof-and-unchanged-save-detector",
+      "targetSnippetId": "core-context-assembly#canonical-change-proof-and-unchanged-save-detector",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#canon-before-derived-context",
+      "targetSnippetId": "core-context-assembly#canon-before-derived-context",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#no-change-turns",
+      "targetSnippetId": "core-context-assembly#no-change-turns",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#failure-and-retry",
+      "targetSnippetId": "core-context-assembly#failure-and-retry",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#next-turn-verification",
+      "targetSnippetId": "core-context-assembly#next-turn-verification",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#session-start-and-context-reset",
+      "targetSnippetId": "core-context-assembly#session-start-and-context-reset",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#specialist-integrations",
+      "targetSnippetId": "core-context-assembly#specialist-integrations",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#existing-campaign-adoption",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+      "reason": "Eight exceptional adoption steps remain canonical host/specialist procedure; no runtime adoption orchestrator."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#development-context-and-auditability",
+      "targetSnippetId": "core-context-assembly#development-context-and-auditability",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#storage-neutral-logical-guidance",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+      "reason": "Optional storage and host conformance assert executable owners, not new model obligations."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#regression-cases",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+      "reason": "Optional storage and host conformance assert executable owners, not new model obligations."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#acceptance-criteria",
+      "targetSnippetId": null,
+      "disposition": "retired-from-runtime",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+      "reason": "Optional storage and host conformance assert executable owners, not new model obligations."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#safeguards",
+      "targetSnippetId": "core-context-assembly#safeguards",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    },
+    {
+      "oldSnippetId": "core-context-assembly#related-documents",
+      "targetSnippetId": "core-context-assembly#related-documents",
+      "disposition": "preserved",
+      "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+      "reason": "Same logical identity; any changed bytes receive new hashes."
+    }
+  ],
+  "newSnippetIds": [
+    "core-persistence-authority#executable-authority",
+    "core-authority-governance",
+    "core-authority-governance#governed-changes"
+  ]
+}

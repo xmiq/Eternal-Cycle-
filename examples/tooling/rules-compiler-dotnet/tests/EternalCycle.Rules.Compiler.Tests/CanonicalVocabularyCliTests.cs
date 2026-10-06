@@ -8,6 +8,31 @@ namespace EternalCycle.Rules.Compiler.Tests;
 public sealed partial class RulesCompilerCliTests
 {
     [Fact]
+    public async Task R2_CurrentCorpusCompileAuditRepetitionRelocationAndLibraryEquality()
+    {
+        using var first = new CanonicalVocabularyPayload(current: true);
+        using var second = new CanonicalVocabularyPayload(current: true);
+        using var destination = TestPayload.Empty();
+        var snapshot = first.LoadContentAddressed();
+        var direct = RuleCompilationPipeline.Compile(snapshot);
+        var report = RuleVocabularyAuditWriter.Write(RuleVocabularyAuditor.Analyze(snapshot, direct, CanonicalVocabularyPayload.AuditPolicy()));
+        foreach (var payload in new[] { first, second })
+        {
+            foreach (var audit in new[] { false, true, false, true })
+            {
+                var path = Path.Combine(destination.Root, audit ? "r2-audit.json" : "r2-artifact.json");
+                var args = Arguments(payload.Root, path, CanonicalVocabularyPayload.ManifestPath,
+                    snapshot.SourceIdentity.Scheme, snapshot.SourceIdentity.Value);
+                if (audit) { args[0] = "audit"; args = args.Concat(["--audit-policy", CanonicalVocabularyPayload.FixturePath("audit-policy.json")]).ToArray(); }
+                var result = await RunProcessAsync(args, destination.Root);
+                Assert.Equal(0, result.ExitCode);
+                Assert.Empty(result.StandardError);
+                Assert.Equal(audit ? report.ToArray() : direct.Bytes.ToArray(), await File.ReadAllBytesAsync(path));
+            }
+        }
+    }
+
+    [Fact]
     public async Task CanonicalVocabularyCompileAuditCompileAuditMatchesLibraryAndFrozenEvidence()
     {
         using var payload = new CanonicalVocabularyPayload();

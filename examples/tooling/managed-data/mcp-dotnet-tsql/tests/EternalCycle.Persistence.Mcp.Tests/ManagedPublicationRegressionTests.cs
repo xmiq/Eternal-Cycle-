@@ -19,11 +19,12 @@ public sealed class ManagedPublicationRegressionTests
         var (documentCount, index) = await CompileOfficialRuleIndexAsync();
         var plan = RulePublicationWritePlan.Create(index);
 
-        Assert.Equal(10, documentCount);
-        Assert.Equal(154, plan.ChunkRows);
-        Assert.Equal(1004, plan.SelectorRows);
-        Assert.Equal(803, plan.DependencyRows);
-        Assert.Equal(9, plan.StagingCommandCount);
+        // R2 partitions complete authority/context sources, not batch mechanics.
+        Assert.Equal(11, documentCount);
+        Assert.Equal(130, plan.ChunkRows);
+        Assert.Equal(834, plan.SelectorRows);
+        Assert.Equal(95, plan.DependencyRows);
+        Assert.Equal(7, plan.StagingCommandCount);
     }
 
     [Fact]
@@ -41,9 +42,9 @@ public sealed class ManagedPublicationRegressionTests
             .Select(rows => ("Dependency", rows, RulePublicationBatchSql.DependencyInsert(rows))));
 
         Assert.Equal(plan.StagingCommandCount - 1, commands.Count);
-        Assert.Equal([100, 54], commands.Where(value => value.Kind == "Chunk").Select(value => value.Rows));
-        Assert.Equal([300, 300, 300, 104], commands.Where(value => value.Kind == "Selector").Select(value => value.Rows));
-        Assert.Equal([500, 303], commands.Where(value => value.Kind == "Dependency").Select(value => value.Rows));
+        Assert.Equal([100, 30], commands.Where(value => value.Kind == "Chunk").Select(value => value.Rows));
+        Assert.Equal([300, 300, 234], commands.Where(value => value.Kind == "Selector").Select(value => value.Rows));
+        Assert.Equal([95], commands.Where(value => value.Kind == "Dependency").Select(value => value.Rows));
         Assert.All(commands, batch =>
         {
             Assert.False(string.IsNullOrWhiteSpace(batch.Text));

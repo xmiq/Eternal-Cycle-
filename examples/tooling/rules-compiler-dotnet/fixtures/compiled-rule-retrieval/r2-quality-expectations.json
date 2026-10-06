@@ -1,0 +1,969 @@
+{
+  "expectations": [
+    {
+      "id": "gameplay-resolution",
+      "conceptId": "gameplay-resolution",
+      "term": "gm adjudication",
+      "presentOn": [
+        "gm-runtime-procedure#gameplay-interaction-lifecycle",
+        "core-context-assembly#gameplay-turn-state-machine"
+      ],
+      "absentFrom": [
+        "core-development#gaining-development",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Ordered interaction work, not advancement or repository governance alone."
+    },
+    {
+      "id": "player-agency",
+      "conceptId": "player-agency",
+      "term": "wait for player input",
+      "presentOn": [
+        "gm-runtime-procedure#one-input-one-interaction",
+        "core-persistence-authority#executable-authority"
+      ],
+      "absentFrom": [
+        "core-context-assembly#automatic-persistence-gate",
+        "core-monster-evolution#route-provenance"
+      ],
+      "rationale": "Yield at actual player choices; writes and route history do not authorize them."
+    },
+    {
+      "id": "host-bootstrap",
+      "conceptId": "host-bootstrap",
+      "term": "host instructions",
+      "presentOn": [
+        "gm-host-bootstrap"
+      ],
+      "absentFrom": [
+        "gm-runtime-procedure#gameplay-interaction-lifecycle",
+        "runtime-kernel#purpose"
+      ],
+      "rationale": "Source-wide bootstrap reaches its sole heading-free snippet, not other instruction sources."
+    },
+    {
+      "id": "rule-retrieval",
+      "conceptId": "rule-retrieval",
+      "term": "rule packet",
+      "presentOn": [
+        "runtime-kernel#retrieval-handoff",
+        "core-context-assembly#context-assembly-layer"
+      ],
+      "absentFrom": [
+        "core-development#contextual-capability-assessment",
+        "core-context-assembly#automatic-persistence-gate"
+      ],
+      "rationale": "Rule context delivery is not a combat assessment or canonical write."
+    },
+    {
+      "id": "compiled-rule-context",
+      "conceptId": "compiled-rule-context",
+      "term": "compiled rules",
+      "presentOn": [
+        "core-context-assembly#context-assembly-layer"
+      ],
+      "absentFrom": [
+        "core-development#gaining-development",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Delivered compiled context, not character growth or stored history."
+    },
+    {
+      "id": "rule-dependencies",
+      "conceptId": "rule-dependencies",
+      "term": "dependency-complete rule packet",
+      "presentOn": [
+        "core-context-assembly#mandatory-read-gate",
+        "gm-runtime-procedure#efficient-execution"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#route-readiness",
+        "core-development#plateaus-and-breakthroughs"
+      ],
+      "rationale": "Rule closure is distinct from bodily prerequisites."
+    },
+    {
+      "id": "campaign-binding",
+      "conceptId": "campaign-binding",
+      "term": "campaign identity",
+      "presentOn": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#persistence-target-resolution-gate"
+      ],
+      "absentFrom": [
+        "core-reincarnation#starting-memory",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Trusted campaign identity is not reusable rules or current personality. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "repository-canon",
+      "conceptId": "repository-canon",
+      "term": "rules authority",
+      "presentOn": [
+        "core-persistence-authority#executable-authority"
+      ],
+      "absentFrom": [
+        "core-development#current-life-effort",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Reusable rule authority stays separate from campaign commitments and capability. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "campaign-canon",
+      "conceptId": "campaign-canon",
+      "term": "campaign canon",
+      "presentOn": [
+        "core-persistence-authority#executable-authority"
+      ],
+      "absentFrom": [
+        "core-development#core-rule",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Do not smear campaign facts over repository-only rules or Development. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "canon-conflict",
+      "conceptId": "canon-conflict",
+      "term": "conflict",
+      "presentOn": [
+        "core-persistence-authority#executable-authority"
+      ],
+      "absentFrom": [
+        "core-development#power-preparation-and-victory",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "This concept means conflicting claims, not a fight or saving command."
+    },
+    {
+      "id": "uncertainty",
+      "conceptId": "uncertainty",
+      "term": "not yet verified",
+      "presentOn": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#mandatory-read-gate"
+      ],
+      "absentFrom": [
+        "core-development#retained-stat-xp",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "Honest missing evidence is not XP or a persistence command."
+    },
+    {
+      "id": "information-visibility",
+      "conceptId": "information-visibility",
+      "term": "gm secrets",
+      "presentOn": [
+        "core-persistence-authority#executable-authority",
+        "core-world-engine#architectural-role"
+      ],
+      "absentFrom": [
+        "core-authority-governance#governed-changes",
+        "core-development#gaining-development"
+      ],
+      "rationale": "Visibility gates disclosure, not the legitimacy of a retcon or training."
+    },
+    {
+      "id": "historical-record",
+      "conceptId": "historical-record",
+      "term": "campaign history",
+      "presentOn": [
+        "core-persistence-authority#executable-authority",
+        "core-authority-governance#governed-changes"
+      ],
+      "absentFrom": [
+        "core-context-assembly#freshness",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "Historical events persist; reusable rules and packet cache freshness are different. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "current-state",
+      "conceptId": "current-state",
+      "term": "current state ownership",
+      "presentOn": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#current-scene-context"
+      ],
+      "absentFrom": [
+        "core-world-engine#causal-chains",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Present facts and owner references are not a historical event or causal model. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "retcon",
+      "conceptId": "retcon",
+      "term": "authorized retcon",
+      "presentOn": [
+        "core-authority-governance#governed-changes"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "A superseding campaign decision differs from unknown evidence or retry."
+    },
+    {
+      "id": "rules-migration",
+      "conceptId": "rules-migration",
+      "term": "adopt rule update",
+      "presentOn": [
+        "core-authority-governance#governed-changes"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-reincarnation#transition-procedure"
+      ],
+      "rationale": "Rule-profile adoption is not prose correction or a Soul changing body."
+    },
+    {
+      "id": "automatic-persistence",
+      "conceptId": "automatic-persistence",
+      "term": "save before delivery",
+      "presentOn": [
+        "core-context-assembly#automatic-persistence-gate",
+        "gm-runtime-procedure#gameplay-interaction-lifecycle"
+      ],
+      "absentFrom": [
+        "core-development#gaining-development",
+        "core-world-engine#core-domains"
+      ],
+      "rationale": "Completion waits for persistence, not merely successful practice or a world domain listing."
+    },
+    {
+      "id": "affected-set",
+      "conceptId": "affected-set",
+      "term": "affected set",
+      "presentOn": [
+        "core-context-assembly#resolution-and-affected-set-gate",
+        "core-context-assembly#automatic-persistence-gate"
+      ],
+      "absentFrom": [
+        "core-development#retained-stat-xp",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Changed campaign owners are not a progression pool or reusable rules inventory."
+    },
+    {
+      "id": "transaction-commit",
+      "conceptId": "transaction-commit",
+      "term": "atomic owner writes",
+      "presentOn": [
+        "core-context-assembly#automatic-persistence-gate",
+        "gm-runtime-procedure#gameplay-interaction-lifecycle"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#the-evolution-transition",
+        "core-development#gaining-development"
+      ],
+      "rationale": "Atomic canonical commit is not the in-world evolutionary process."
+    },
+    {
+      "id": "save-evidence",
+      "conceptId": "save-evidence",
+      "term": "read-back verification",
+      "presentOn": [
+        "core-context-assembly#canonical-change-proof-and-unchanged-save-detector",
+        "core-context-assembly#next-turn-verification"
+      ],
+      "absentFrom": [
+        "core-development#contextual-capability-assessment",
+        "core-reincarnation#starting-memory"
+      ],
+      "rationale": "Persisted-state proof differs from skill evidence and subjective recall."
+    },
+    {
+      "id": "manual-save",
+      "conceptId": "manual-save",
+      "term": "save",
+      "presentOn": [
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "absentFrom": [
+        "core-context-assembly#automatic-persistence-gate",
+        "core-reincarnation#reset-and-persistence-rules"
+      ],
+      "rationale": "The literal command remains narrow; automatic saving and Soul retention have stronger dedicated phrases."
+    },
+    {
+      "id": "save-status",
+      "conceptId": "save-status",
+      "term": "local cloud save status",
+      "presentOn": [
+        "core-context-assembly#player-visible-persistence-status",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-world-engine#shared-state-model"
+      ],
+      "rationale": "Status reflects configured persistence evidence, not broad rule/world authority."
+    },
+    {
+      "id": "save-retry",
+      "conceptId": "save-retry",
+      "term": "idempotent retry",
+      "presentOn": [
+        "core-context-assembly#failure-and-retry",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "absentFrom": [
+        "core-reincarnation#transition-procedure",
+        "core-development#retained-progression-and-relearning"
+      ],
+      "rationale": "Resume the same transaction, not replay a Life or redo Development."
+    },
+    {
+      "id": "no-change-turn",
+      "conceptId": "no-change-turn",
+      "term": "empty affected set",
+      "presentOn": [
+        "core-context-assembly#no-change-turns"
+      ],
+      "absentFrom": [
+        "core-context-assembly#resolution-and-affected-set-gate",
+        "core-monster-evolution#gradual-evolution"
+      ],
+      "rationale": "No-op requires explicit absence of durable effects, not a generic quiet action."
+    },
+    {
+      "id": "context-assembly",
+      "conceptId": "context-assembly",
+      "term": "context packet",
+      "presentOn": [
+        "core-context-assembly#context-assembly-layer",
+        "core-context-assembly#current-scene-context"
+      ],
+      "absentFrom": [
+        "core-development#contextual-capability-assessment",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "A runtime packet is not a Capability Profile or pending session delta."
+    },
+    {
+      "id": "read-set",
+      "conceptId": "read-set",
+      "term": "read before resolution",
+      "presentOn": [
+        "core-context-assembly#mandatory-read-gate",
+        "core-context-assembly#next-turn-verification"
+      ],
+      "absentFrom": [
+        "core-context-assembly#manual-persistence-commands",
+        "core-development#gaining-development"
+      ],
+      "rationale": "Required reads precede adjudication; saving and training are distinct."
+    },
+    {
+      "id": "derived-context",
+      "conceptId": "derived-context",
+      "term": "running summary",
+      "presentOn": [
+        "core-context-assembly#hierarchical-context",
+        "core-context-assembly#canon-before-derived-context"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "A cache/index cannot become historical or campaign authority."
+    },
+    {
+      "id": "visual-context",
+      "conceptId": "visual-context",
+      "term": "image generation context",
+      "presentOn": [
+        "core-context-assembly#purpose-specific-visual-context",
+        "core-context-assembly#no-change-turns"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-development#embodiment-and-species"
+      ],
+      "rationale": "Depiction context does not adopt incidental details or create anatomy."
+    },
+    {
+      "id": "character-development",
+      "conceptId": "character-development",
+      "term": "character advancement",
+      "presentOn": [
+        "core-development#gaining-development",
+        "core-development#core-rule"
+      ],
+      "absentFrom": [
+        "core-context-assembly#context-assembly-layer",
+        "core-monster-evolution#route-readiness"
+      ],
+      "rationale": "Earned Development is distinct from rule delivery and route readiness."
+    },
+    {
+      "id": "earned-experience",
+      "conceptId": "earned-experience",
+      "term": "experience points",
+      "presentOn": [
+        "core-development#retained-stat-xp",
+        "core-development#anti-grinding-and-anti-farming-rules"
+      ],
+      "absentFrom": [
+        "core-context-assembly#context-assembly-layer",
+        "core-monster-evolution#the-evolution-transition"
+      ],
+      "rationale": "XP wording locates domain-specific rules and anti-universal-XP limits, not compiler or transformation rewards."
+    },
+    {
+      "id": "training",
+      "conceptId": "training",
+      "term": "practice",
+      "presentOn": [
+        "core-development#gaining-development",
+        "core-monster-evolution#post-transition-development"
+      ],
+      "absentFrom": [
+        "core-context-assembly#mandatory-read-gate",
+        "core-reincarnation#eligibility"
+      ],
+      "rationale": "Practice develops present expression; loading rules or eligible death does not."
+    },
+    {
+      "id": "current-incarnation",
+      "conceptId": "current-incarnation",
+      "term": "current incarnation",
+      "presentOn": [
+        "core-reincarnation#starting-memory",
+        "core-development#current-life-effort"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#session-start-and-context-reset"
+      ],
+      "rationale": "Current-life self/body is not campaign identity or a fresh runtime instance."
+    },
+    {
+      "id": "capability-profile",
+      "conceptId": "capability-profile",
+      "term": "contextual effectiveness",
+      "presentOn": [
+        "core-development#contextual-capability-assessment",
+        "core-development#the-six-layer-capability-model"
+      ],
+      "absentFrom": [
+        "core-context-assembly#current-scene-context",
+        "core-context-assembly#freshness"
+      ],
+      "rationale": "Capability assessment is not runtime context metadata or cache validity."
+    },
+    {
+      "id": "combat-context",
+      "conceptId": "combat-context",
+      "term": "fighting",
+      "presentOn": [
+        "core-development#power-preparation-and-victory",
+        "core-development#contextual-capability-assessment"
+      ],
+      "absentFrom": [
+        "core-context-assembly#automatic-persistence-gate",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Fighting retrieves scoped contest capability, not data writes or contradictory records."
+    },
+    {
+      "id": "plateau",
+      "conceptId": "plateau",
+      "term": "breakthrough",
+      "presentOn": [
+        "core-development#plateaus-and-breakthroughs",
+        "core-development#diminishing-returns"
+      ],
+      "absentFrom": [
+        "core-context-assembly#context-assembly-layer",
+        "core-monster-evolution#the-evolution-transition"
+      ],
+      "rationale": "Growth-route review does not declare a provider preparation or form-transition reward."
+    },
+    {
+      "id": "progression-safeguards",
+      "conceptId": "progression-safeguards",
+      "term": "kill farming",
+      "presentOn": [
+        "core-development#anti-grinding-and-anti-farming-rules",
+        "core-monster-evolution#safeguards"
+      ],
+      "absentFrom": [
+        "core-context-assembly#manual-persistence-commands",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Kill count and repetition cannot manufacture progress; persistence retries are not farming."
+    },
+    {
+      "id": "retained-development",
+      "conceptId": "retained-development",
+      "term": "retained xp",
+      "presentOn": [
+        "core-development#retained-stat-xp",
+        "core-reincarnation#reset-and-persistence-rules"
+      ],
+      "absentFrom": [
+        "core-context-assembly#hierarchical-context",
+        "core-world-engine#simulation-resolution"
+      ],
+      "rationale": "Retained earned potential differs from archived context and coarse world simulation."
+    },
+    {
+      "id": "skill-crossover",
+      "conceptId": "skill-crossover",
+      "term": "translated technique",
+      "presentOn": [
+        "core-reincarnation#species-and-progression-crossover",
+        "core-development#human-monster-and-cross-species-development"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#branching-without-determinism",
+        "core-context-assembly#context-assembly-layer"
+      ],
+      "rationale": "Technique translation is not species branching or rule compilation."
+    },
+    {
+      "id": "mastery",
+      "conceptId": "mastery",
+      "term": "breadth and depth",
+      "presentOn": [
+        "core-development#breadth-and-mastery"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#specialisation-and-generalisation",
+        "core-context-assembly#relevance-selection"
+      ],
+      "rationale": "Capability mastery is distinct from species niche and runtime selection breadth."
+    },
+    {
+      "id": "reincarnation",
+      "conceptId": "reincarnation",
+      "term": "rebirth",
+      "presentOn": [
+        "core-reincarnation#core-rule",
+        "core-reincarnation#transition-procedure"
+      ],
+      "absentFrom": [
+        "core-context-assembly#session-start-and-context-reset",
+        "core-monster-evolution#the-evolution-transition"
+      ],
+      "rationale": "A Soul's new Life is not restarting a runtime or a within-Life species change."
+    },
+    {
+      "id": "final-death",
+      "conceptId": "final-death",
+      "term": "revival exclusion",
+      "presentOn": [
+        "core-reincarnation#transition-procedure",
+        "core-monster-evolution#evolution-and-death"
+      ],
+      "absentFrom": [
+        "core-context-assembly#failure-and-retry",
+        "core-development#regression-rust-injury-and-suppression"
+      ],
+      "rationale": "Final Death differs from recoverable transaction failure or reduced performance."
+    },
+    {
+      "id": "life-reconciliation",
+      "conceptId": "life-reconciliation",
+      "term": "ends remains persists",
+      "presentOn": [
+        "core-reincarnation#transition-procedure",
+        "core-reincarnation#reset-and-persistence-rules"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "Life-transition classification is not record-discrepancy reconciliation or a save command."
+    },
+    {
+      "id": "interlife",
+      "conceptId": "interlife",
+      "term": "between lives",
+      "presentOn": [
+        "core-reincarnation#time-skips-ages-and-world-resets",
+        "core-reincarnation#transition-procedure"
+      ],
+      "absentFrom": [
+        "core-context-assembly#session-start-and-context-reset",
+        "core-development#gaining-development"
+      ],
+      "rationale": "Between embodiments is not a chat gap or unlimited training interval."
+    },
+    {
+      "id": "memory-continuity",
+      "conceptId": "memory-continuity",
+      "term": "past-life recall",
+      "presentOn": [
+        "core-reincarnation#starting-memory",
+        "core-context-assembly#specialist-integrations"
+      ],
+      "absentFrom": [
+        "core-context-assembly#freshness",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Access to history or fresh packets does not itself grant recall."
+    },
+    {
+      "id": "world-contact",
+      "conceptId": "world-contact",
+      "term": "world gate",
+      "presentOn": [
+        "core-reincarnation#world-gates-and-cross-domain-placement"
+      ],
+      "absentFrom": [
+        "core-context-assembly#persistence-target-resolution-gate",
+        "core-world-engine#shared-state-model"
+      ],
+      "rationale": "World routes are not cloud database locations or generic state variables."
+    },
+    {
+      "id": "monster-evolution",
+      "conceptId": "monster-evolution",
+      "term": "evolved form",
+      "presentOn": [
+        "core-monster-evolution#core-rule",
+        "core-monster-evolution#ownership-boundaries"
+      ],
+      "absentFrom": [
+        "core-context-assembly#automatic-persistence-gate",
+        "core-reincarnation#core-rule"
+      ],
+      "rationale": "Lasting current-form change remains separate from a write or a new Life."
+    },
+    {
+      "id": "evolution-route",
+      "conceptId": "evolution-route",
+      "term": "branching evolution",
+      "presentOn": [
+        "core-monster-evolution#branching-without-determinism",
+        "core-monster-evolution#route-closure-reopening-and-further-evolution"
+      ],
+      "absentFrom": [
+        "core-development#gaining-development",
+        "core-context-assembly#relevance-selection"
+      ],
+      "rationale": "Causal branch access is not generic practice or query expansion."
+    },
+    {
+      "id": "evolution-transition",
+      "conceptId": "evolution-transition",
+      "term": "metamorphosis",
+      "presentOn": [
+        "core-monster-evolution#what-evolution-is-not",
+        "core-monster-evolution#the-evolution-transition"
+      ],
+      "absentFrom": [
+        "core-reincarnation#transition-procedure",
+        "core-context-assembly#gameplay-turn-state-machine"
+      ],
+      "rationale": "Lifecycle metamorphosis may need the evolution distinction; it is not automatically Final Death or a runtime state machine."
+    },
+    {
+      "id": "evolution-readiness",
+      "conceptId": "evolution-readiness",
+      "term": "preparation",
+      "presentOn": [
+        "core-monster-evolution#route-readiness",
+        "core-monster-evolution#gradual-evolution"
+      ],
+      "absentFrom": [
+        "core-development#power-preparation-and-victory",
+        "core-context-assembly#context-assembly-layer"
+      ],
+      "rationale": "This generic wording is narrowly owned by route readiness, not combat or provider loading."
+    },
+    {
+      "id": "species-potential",
+      "conceptId": "species-potential",
+      "term": "body compatibility",
+      "presentOn": [
+        "core-monster-evolution#route-readiness",
+        "core-development#embodiment-and-species"
+      ],
+      "absentFrom": [
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Embodiment compatibility is not persistence-format compatibility."
+    },
+    {
+      "id": "evolution-divergence",
+      "conceptId": "evolution-divergence",
+      "term": "population divergence",
+      "presentOn": [
+        "core-monster-evolution#divergent-evolution",
+        "core-monster-evolution#individual-and-population-evolution"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#convergent-evolution",
+        "core-context-assembly#freshness"
+      ],
+      "rationale": "Related populations diverge; similar functions in unrelated origins are a separate concept."
+    },
+    {
+      "id": "evolution-convergence",
+      "conceptId": "evolution-convergence",
+      "term": "similar evolved functions",
+      "presentOn": [
+        "core-monster-evolution#convergent-evolution"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#divergent-evolution",
+        "core-development#track-separation-and-interaction"
+      ],
+      "rationale": "Functional convergence preserves distinct origins and does not imply shared ancestry or pooled Tracks."
+    },
+    {
+      "id": "evolution-regression",
+      "conceptId": "evolution-regression",
+      "term": "form simplification",
+      "presentOn": [
+        "core-monster-evolution#evolutionary-regression-and-simplification"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#evolutionary-traps",
+        "core-development#regression-rust-injury-and-suppression"
+      ],
+      "rationale": "A sustainable simpler species route is not automatically a trap or lost trained capability."
+    },
+    {
+      "id": "evolution-trap",
+      "conceptId": "evolution-trap",
+      "term": "dependency trap",
+      "presentOn": [
+        "core-monster-evolution#evolutionary-traps",
+        "core-monster-evolution#specialisation-and-generalisation"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#evolutionary-regression-and-simplification",
+        "core-context-assembly#mandatory-read-gate"
+      ],
+      "rationale": "Ecological dependencies may become harmful; valid simplification and rule closure are distinct."
+    },
+    {
+      "id": "world-simulation",
+      "conceptId": "world-simulation",
+      "term": "world engine",
+      "presentOn": [
+        "core-world-engine#simulation-resolution",
+        "core-world-engine#architectural-role"
+      ],
+      "absentFrom": [
+        "core-context-assembly#hierarchical-context",
+        "core-development#gaining-development"
+      ],
+      "rationale": "Objective causal simulation differs from context hierarchy and personal growth."
+    },
+    {
+      "id": "causal-chains",
+      "conceptId": "causal-chains",
+      "term": "counterforces",
+      "presentOn": [
+        "core-world-engine#causal-chains",
+        "core-design-philosophy#emergent-causality"
+      ],
+      "absentFrom": [
+        "core-context-assembly#automatic-persistence-gate",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "World reactions are not database effects or authority discrepancy resolution."
+    },
+    {
+      "id": "offscreen-continuation",
+      "conceptId": "offscreen-continuation",
+      "term": "npc activity",
+      "presentOn": [
+        "core-world-engine#architectural-role",
+        "gm-runtime-procedure#gameplay-interaction-lifecycle"
+      ],
+      "absentFrom": [
+        "gm-runtime-procedure#one-input-one-interaction",
+        "core-context-assembly#manual-persistence-commands"
+      ],
+      "rationale": "Independent actors may respond, but cannot supply another player choice or a save operation."
+    },
+    {
+      "id": "world-state",
+      "conceptId": "world-state",
+      "term": "population and ecology",
+      "presentOn": [
+        "core-world-engine#core-domains",
+        "core-world-engine#shared-state-model"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#freshness"
+      ],
+      "rationale": "World-side conditions are not every campaign commitment or derived-cache validity."
+    },
+    {
+      "id": "simulation-resolution",
+      "conceptId": "simulation-resolution",
+      "term": "focused local regional epochal",
+      "presentOn": [
+        "core-world-engine#simulation-resolution"
+      ],
+      "absentFrom": [
+        "core-context-assembly#hierarchical-context",
+        "core-development#local-levels-ranks-and-labels"
+      ],
+      "rationale": "Simulation detail is not context depth or a local character rank."
+    },
+    {
+      "id": "fair-mystery",
+      "conceptId": "fair-mystery",
+      "term": "discoverable clues",
+      "presentOn": [
+        "core-design-philosophy#fair-mystery",
+        "core-monster-evolution#route-provenance"
+      ],
+      "absentFrom": [
+        "core-context-assembly#persistence-target-resolution-gate",
+        "core-persistence-authority#executable-authority"
+      ],
+      "rationale": "Fair in-world hidden requirements differ from missing storage or unverified information."
+    },
+    {
+      "id": "audit-context",
+      "conceptId": "audit-context",
+      "term": "transaction audit",
+      "presentOn": [
+        "core-context-assembly#development-context-and-auditability"
+      ],
+      "absentFrom": [
+        "core-development#core-rule",
+        "core-world-engine#simulation-resolution"
+      ],
+      "rationale": "Development Context is operational inspection, not character Development."
+    },
+    {
+      "id": "rule-gap",
+      "conceptId": "rule-gap",
+      "term": "missing specialist rules",
+      "presentOn": [
+        "runtime-kernel#retrieval-handoff",
+        "core-context-assembly#mandatory-read-gate"
+      ],
+      "absentFrom": [
+        "core-development#plateaus-and-breakthroughs",
+        "core-monster-evolution#route-readiness"
+      ],
+      "rationale": "Unavailable required rules cannot be guessed; bodily plateaus/readiness remain in-world mechanics."
+    },
+    {
+      "id": "combat-conflict-overlap",
+      "conceptId": "combat-context",
+      "term": "conflict",
+      "presentOn": [
+        "core-development#power-preparation-and-victory"
+      ],
+      "absentFrom": [
+        "core-persistence-authority#executable-authority",
+        "core-context-assembly#automatic-persistence-gate"
+      ],
+      "rationale": "The same term's combat concept retains a distinct target set from canon-conflict."
+    },
+    {
+      "id": "campaign-facts-precision",
+      "conceptId": "campaign-canon",
+      "term": "campaign facts",
+      "presentOn": [
+        "core-persistence-authority#executable-authority"
+      ],
+      "absentFrom": [
+        "runtime-kernel#related-documents",
+        "core-authority-governance#governed-changes"
+      ],
+      "rationale": "Natural campaign wording does not attach to a repository-only authority or link list. R2 reviews the complete-owner boundary rather than obsolete section isolation."
+    },
+    {
+      "id": "xp-not-readiness",
+      "conceptId": "earned-experience",
+      "term": "xp",
+      "presentOn": [
+        "core-development#what-does-not-grant-development-by-itself"
+      ],
+      "absentFrom": [
+        "core-monster-evolution#route-readiness",
+        "core-context-assembly#context-assembly-layer"
+      ],
+      "rationale": "XP directs to anti-automatic-award rules, not a points meter."
+    }
+  ],
+  "negativeDispositions": [
+    {
+      "fixtureId": "campaign-binding",
+      "oldNegative": [
+        "core-persistence-authority#repository-canon"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "Retired section or coalesced complete owner cannot retain an intra-section isolation expectation; distinct exceptional/routine owner still must not acquire this concept."
+    },
+    {
+      "fixtureId": "repository-canon",
+      "oldNegative": [
+        "core-persistence-authority#campaign-canon"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "Retired section or coalesced complete owner cannot retain an intra-section isolation expectation; distinct exceptional/routine owner still must not acquire this concept."
+    },
+    {
+      "fixtureId": "campaign-canon",
+      "oldNegative": [
+        "core-persistence-authority#repository-canon"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "Retired section or coalesced complete owner cannot retain an intra-section isolation expectation; distinct exceptional/routine owner still must not acquire this concept."
+    },
+    {
+      "fixtureId": "historical-record",
+      "oldNegative": [
+        "core-persistence-authority#repository-canon"
+      ],
+      "newNegative": "core-context-assembly#manual-persistence-commands",
+      "reason": "G03 owns traceable superseded history and correctly retains the historical-record binding from old retcon guidance. Manual save mechanics do not own this reviewed history concept."
+    },
+    {
+      "fixtureId": "current-state",
+      "oldNegative": [
+        "core-persistence-authority#historical-record"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "Retired section or coalesced complete owner cannot retain an intra-section isolation expectation; distinct exceptional/routine owner still must not acquire this concept."
+    },
+    {
+      "fixtureId": "campaign-facts-precision",
+      "oldNegative": [
+        "core-persistence-authority#repository-canon"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "Retired section or coalesced complete owner cannot retain an intra-section isolation expectation; distinct exceptional/routine owner still must not acquire this concept."
+    },
+    {
+      "fixtureId": "affected-set",
+      "oldNegative": [
+        "core-persistence-authority#current-narration"
+      ],
+      "newNegative": "core-authority-governance#governed-changes",
+      "reason": "E12 explicitly owns affected-record integration; the complete P body correctly acquires its coalesced affected-set binding. Governance does not."
+    }
+  ],
+  "acceptedWarnings": [
+    {
+      "code": "VOCABULARY_GENERIC_TERM",
+      "subjectId": "conflict",
+      "rationale": "A 600-weight alias covers four combat-context snippets and five claim-conflict snippets as separate concepts; stronger phrases distinguish meanings."
+    },
+    {
+      "code": "VOCABULARY_GENERIC_TERM",
+      "subjectId": "preparation",
+      "rationale": "A 600-weight alias covers only three evolution-readiness snippets; combat preparation and provider rule preparation remain distinct."
+    },
+    {
+      "code": "VOCABULARY_GENERIC_TERM",
+      "subjectId": "save",
+      "rationale": "The exact 600-weight player command reaches only the manual-persistence-commands snippet; stronger automatic/status/retry phrases carry other intents."
+    }
+  ]
+}

@@ -253,15 +253,15 @@ public sealed class RuleSnippetCompilerTests(ITestOutputHelper output)
     }
 
     [Fact]
-    public void CanonicalTenSourcePayloadCompilesDeterministically()
+    public void CurrentCanonicalPayloadCompilesDeterministically()
     {
         var snapshot = LoadCanonical(FindRepositoryRoot());
 
         var candidates = RuleSnippetCompiler.Compile(snapshot);
 
         output.WriteLine("Canonical candidate count: {0}", candidates.Count);
-        Assert.Equal(10, candidates.Select(candidate => candidate.RuleSourceId).Distinct(StringComparer.Ordinal).Count());
-        Assert.NotEmpty(candidates);
+        Assert.Equal(11, candidates.Select(candidate => candidate.RuleSourceId).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(130, candidates.Count);
         Assert.Equal(candidates.Count, candidates.Select(candidate => candidate.SnippetId).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(Fingerprint(candidates), Fingerprint(RuleSnippetCompiler.Compile(snapshot)));
     }

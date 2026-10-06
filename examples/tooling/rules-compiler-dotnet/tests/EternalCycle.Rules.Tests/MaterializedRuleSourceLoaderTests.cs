@@ -28,7 +28,7 @@ public sealed class MaterializedRuleSourceLoaderTests
     }
 
     [Fact]
-    public void LoadsCanonicalTenSourcePayload()
+    public void LoadsCurrentCanonicalPayload()
     {
         var root = FindRepositoryRoot();
 
@@ -38,7 +38,7 @@ public sealed class MaterializedRuleSourceLoaderTests
             "git-commit",
             "be948d5880b19c051d9833979a1114295a15a6b1"));
 
-        Assert.Equal(10, snapshot.Sources.Count);
+        Assert.Equal(11, snapshot.Sources.Count);
         Assert.Contains(snapshot.Sources, source =>
             source.ManifestEntry.RuleSourceId == "gm-host-bootstrap" &&
             source.ManifestEntry.Path.EndsWith("GM_HOST_BOOTSTRAP.txt", StringComparison.Ordinal));

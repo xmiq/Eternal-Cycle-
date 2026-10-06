@@ -10,12 +10,8 @@
       "layer": "RuntimeKernel",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "*"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["*"],
       "topics": [],
       "priority": 1000,
       "alwaysInclude": true,
@@ -27,16 +23,10 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve"],
       "topics": [],
-      "dependencies": [
-        "runtime-kernel"
-      ],
+      "dependencies": ["runtime-kernel"],
       "priority": 1000,
       "alwaysInclude": true,
       "preparationTier": "RuntimeKernel"
@@ -47,16 +37,10 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "setup.gm-host"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["setup.gm-host"],
       "topics": [],
-      "dependencies": [
-        "runtime-kernel"
-      ],
+      "dependencies": ["runtime-kernel"],
       "priority": 1000,
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
@@ -67,19 +51,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve",
-        "world.simulate",
-        "gm.adjudicate"
-      ],
-      "topics": [
-        "core",
-        "agency",
-        "consequences"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "world.simulate", "gm.adjudicate"],
+      "topics": ["core", "agency", "consequences"],
       "priority": 100,
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
@@ -90,18 +64,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve",
-        "reincarnation.resolve"
-      ],
-      "topics": [
-        "soul",
-        "death",
-        "reincarnation"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "reincarnation.resolve"],
+      "topics": ["soul", "death", "reincarnation"],
       "priority": 200,
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
@@ -112,18 +77,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve",
-        "development.evaluate"
-      ],
-      "topics": [
-        "development",
-        "training",
-        "capability"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "development.evaluate"],
+      "topics": ["development", "training", "capability"],
       "priority": 150,
       "alwaysInclude": false,
       "preparationTier": "ImmediateGameplayCore"
@@ -134,19 +90,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve",
-        "evolution.resolve",
-        "world.simulate"
-      ],
-      "topics": [
-        "monster",
-        "species",
-        "evolution"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "evolution.resolve", "world.simulate"],
+      "topics": ["monster", "species", "evolution"],
       "priority": 150,
       "alwaysInclude": false,
       "preparationTier": "CampaignRelevant"
@@ -157,19 +103,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "gameplay.resolve",
-        "world.simulate",
-        "time.advance"
-      ],
-      "topics": [
-        "world",
-        "simulation",
-        "causality"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["gameplay.resolve", "world.simulate", "time.advance"],
+      "topics": ["world", "simulation", "causality"],
       "priority": 125,
       "alwaysInclude": false,
       "preparationTier": "ImmediateGameplayCore"
@@ -180,23 +116,10 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "context.assemble",
-        "gameplay.resolve",
-        "persistence.commit"
-      ],
-      "topics": [
-        "context",
-        "persistence",
-        "read-set",
-        "affected-set"
-      ],
-      "dependencies": [
-        "core-persistence-authority"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["context.assemble", "gameplay.resolve", "persistence.commit"],
+      "topics": ["context", "persistence", "read-set", "affected-set"],
+      "dependencies": ["core-persistence-authority"],
       "priority": 300,
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
@@ -207,46 +130,9 @@
       "layer": "Core",
       "worldModelIds": [],
       "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "context.assemble",
-        "gameplay.resolve",
-        "persistence.read",
-        "persistence.commit"
-      ],
-      "topics": [
-        "authority",
-        "canon",
-        "persistence"
-      ],
-      "priority": 300,
-      "alwaysInclude": false,
-      "preparationTier": "CampaignBootstrap"
-    },
-    {
-      "ruleSourceId": "core-authority-governance",
-      "path": "docs/persistence/AUTHORITY_GOVERNANCE.md",
-      "layer": "Core",
-      "worldModelIds": [],
-      "moduleIds": [],
-      "campaignModes": [
-        "*"
-      ],
-      "operations": [
-        "context.assemble",
-        "persistence.read",
-        "persistence.commit"
-      ],
-      "topics": [
-        "authority",
-        "canon",
-        "persistence"
-      ],
-      "dependencies": [
-        "core-persistence-authority"
-      ],
+      "campaignModes": ["*"],
+      "operations": ["context.assemble", "persistence.read", "persistence.commit"],
+      "topics": ["authority", "canon", "persistence"],
       "priority": 300,
       "alwaysInclude": false,
       "preparationTier": "CampaignBootstrap"
@@ -2619,15 +2505,13 @@
         "rationale": "Relevant Archive/history/Memory and appearance records remain owner-backed and visibility-limited; retrieval grants no recall."
       },
       {
-        "ruleSourceId": "core-authority-governance",
+        "ruleSourceId": "core-context-assembly",
         "scope": "Snippet",
-        "sourceAnchor": "governed-changes",
+        "sourceAnchor": "existing-campaign-adoption",
         "conceptIds": [
-          "rules-migration",
-          "retcon",
-          "historical-record"
+          "rules-migration"
         ],
-        "rationale": "Governed repository revision, conversion and retcon work requires authorized higher-layer changes and complete Routine Authority. Former revision/retcon and Context adoption bindings coalesce here; the exceptional host adoption procedure preserves its independent steps without becoming ordinary runtime rules."
+        "rationale": "Backup, owner audit, configured gates, validation, and provenance precede adoption without rewriting a populated campaign here."
       },
       {
         "ruleSourceId": "core-context-assembly",
@@ -2641,21 +2525,164 @@
       {
         "ruleSourceId": "core-persistence-authority",
         "scope": "Snippet",
-        "sourceAnchor": "executable-authority",
+        "sourceAnchor": "purpose",
         "conceptIds": [
           "repository-canon",
-          "canon-conflict",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "core-rule",
+        "conceptIds": [
+          "repository-canon",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-is-claim-specific",
+        "conceptIds": [
+          "repository-canon",
+          "canon-conflict"
+        ],
+        "rationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "repository-canon",
+        "conceptIds": [
+          "repository-canon"
+        ],
+        "rationale": "Reusable rules, accepted governance, safeguards, and repository conflicts own mechanics but no populated campaign facts."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "campaign-canon",
+        "conceptIds": [
           "campaign-canon",
-          "campaign-binding",
-          "historical-record",
+          "campaign-binding"
+        ],
+        "rationale": "Campaign identity, selected profile, premises, retcons, and stable assignments are campaign-specific commitments."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "historical-record",
+        "conceptIds": [
+          "historical-record"
+        ],
+        "rationale": "Durable events and traceable supersession distinguish fact from dated belief or narration."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-campaign-state",
+        "conceptIds": [
           "current-state",
+          "historical-record"
+        ],
+        "rationale": "Integrated current conditions follow actual history and cannot erase unsaved valid session events."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-session",
+        "conceptIds": [
           "affected-set",
-          "transaction-commit",
-          "information-visibility",
-          "uncertainty",
+          "transaction-commit"
+        ],
+        "rationale": "Confirmed deltas remain pending integration rather than drafts or fully validated Save Points."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "current-narration",
+        "conceptIds": [
+          "canon-conflict"
+        ],
+        "rationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "conflict-classification-procedure",
+        "conceptIds": [
+          "canon-conflict"
+        ],
+        "rationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "rules-authority-and-persistence-authority",
+        "conceptIds": [
+          "repository-canon",
+          "campaign-canon"
+        ],
+        "rationale": "The rule-status and campaign-fact hierarchies answer distinct questions; Living Codex is not another campaign truth layer."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-visibility",
+        "conceptIds": [
+          "information-visibility"
+        ],
+        "rationale": "Which claim governs is separate from who can see it; GM-private notes gain no extra fact authority."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-certainty",
+        "conceptIds": [
+          "uncertainty"
+        ],
+        "rationale": "Unknown, estimated, disputed, and unverified remain authoritative information statuses, not gaps to guess."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authority-does-not-equal-actor-control",
+        "conceptIds": [
           "player-agency"
         ],
-        "rationale": "Complete ordinary authority jointly owns claim precedence, Repository/Campaign/history/current/session/narration distinctions, Codex and rule-status limits, visibility, uncertainty, player agency and all conflict steps. Coalesced section bindings retain their reviewed concepts and weights; R2's disposition map retains each former origin."
+        "rationale": "Recorded aims, relationships, plans, titles, and prophecy do not preselect future deliberate choices."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "valid-downward-updates",
+        "conceptIds": [
+          "historical-record",
+          "transaction-commit"
+        ],
+        "rationale": "Owned events and authorized migrations propagate with explicit scope and dependencies, not silent overwrite."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "repository-revision-changes",
+        "conceptIds": [
+          "rules-migration"
+        ],
+        "rationale": "A new available rules version does not automatically alter active profiles, history, capability, or retcon authority."
+      },
+      {
+        "ruleSourceId": "core-persistence-authority",
+        "scope": "Snippet",
+        "sourceAnchor": "authorized-retcons",
+        "conceptIds": [
+          "retcon",
+          "historical-record"
+        ],
+        "rationale": "Campaign authority approves exact replacement and provenance while preserving superseded material and dependent choices."
       }
     ]
   }

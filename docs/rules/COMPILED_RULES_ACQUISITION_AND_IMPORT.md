@@ -37,7 +37,7 @@ The [reference contract](../../examples/tooling/rules-compiler-dotnet/src/Eterna
 | Type | Meaning |
 | --- | --- |
 | `ICompiledRulesArtifactProvider` | An already-configured provider accepts trusted byte limits and cancellation, then returns acquired bytes/evidence or a structured failure. It does not expose a semantic-validity assertion. |
-| `CompiledRulesAcquisitionLimits` | Positive installation-selected maximum payload bytes; the reference default is 16 MiB, comfortably above the current 275,622-byte artifact. This is a resource policy, not an artifact-format limit. |
+| `CompiledRulesAcquisitionLimits` | Positive installation-selected maximum payload bytes; the reference default is 16 MiB, comfortably above the historical 275,622-byte artifact. This is a resource policy, not an artifact-format limit. |
 | `AcquiredCompiledRulesArtifact` | An owned copy of exact bytes, independently calculated uppercase byte SHA-256, and separate acquisition evidence. Even malformed/empty/non-UTF-8 bytes can be acquired; shared validation must reject them later. |
 | `CompiledRulesAcquisitionEvidence` | Open provider kind, optional resolved provider identity, and bounded ordinal metadata. No artifact provenance fields or trust grant. |
 | `CompiledRulesAcquisitionIdentity` | Provider-reported scheme/value for resolved acquisition identity where established; absence is legitimate. A tag or requested path cannot masquerade as an immutable resolution. |

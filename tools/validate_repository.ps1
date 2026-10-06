@@ -330,9 +330,9 @@ if ($releasedState) {
     }
     else {
         foreach ($requiredText in @(
-            '**Approved pending objectives:** FR-026 through FR-036',
-            '**Selected implementation objective:** FR-026',
-            '**Latest completed objective:** FR-025'
+            '**Approved pending objectives:** FR-027 through FR-036',
+            '**Selected implementation objective:** None',
+            '**Latest completed objective:** FR-026'
         )) {
             if ($phase13Section.Groups['body'].Value -notmatch [regex]::Escape($requiredText)) {
                 Add-ValidationError "Phase 13 planning state lacks required invariant: $requiredText"
@@ -468,8 +468,8 @@ if (-not (Test-Path -LiteralPath $v11PlanPath)) {
 else {
     $v11Plan = Get-Content -Raw -LiteralPath $v11PlanPath
     $v11PlanIds = @(22..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
-    $completedV11PlanIds = @(22..25 | ForEach-Object { 'FR-{0:D3}' -f $_ })
-    $pendingV11PlanIds = @(26..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $completedV11PlanIds = @(22..26 | ForEach-Object { 'FR-{0:D3}' -f $_ })
+    $pendingV11PlanIds = @(27..36 | ForEach-Object { 'FR-{0:D3}' -f $_ })
     $roadmappedIds = @($roadmappedEntries | ForEach-Object { $_.Groups['id'].Value })
     $closedIds = @($closedEntries | ForEach-Object { $_.Groups['id'].Value })
 
@@ -489,7 +489,7 @@ else {
         if ($roadmappedIds -notcontains $id) {
             Add-ValidationError "v1.1 Future Revision task is not in the Roadmapped register: $id"
         }
-        $expectedStatus = if ($id -eq 'FR-026') { '[~]' } else { '[ ]' }
+        $expectedStatus = '[ ]'
         if ($roadmap -notmatch [regex]::Escape("- $expectedStatus **$id")) {
             Add-ValidationError "v1.1 Future Revision task has incorrect roadmap status (expected $expectedStatus): $id"
         }
@@ -531,6 +531,10 @@ if (-not (Test-Path -LiteralPath $contextAssemblyPath)) {
 }
 else {
     $contextAssembly = Get-Content -Raw -LiteralPath $contextAssemblyPath
+    $contextConformancePath = Join-Path $rootPath 'docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md'
+    $contextAdoptionPath = Join-Path $rootPath 'docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md'
+    $contextConformance = if (Test-Path -LiteralPath $contextConformancePath) { Get-Content -Raw -LiteralPath $contextConformancePath } else { '' }
+    $contextAdoption = if (Test-Path -LiteralPath $contextAdoptionPath) { Get-Content -Raw -LiteralPath $contextAdoptionPath } else { '' }
     foreach ($requiredText in @(
         'Conversation context is a convenience layer only; it is not Canon.',
         'TURN_OPEN',
@@ -574,8 +578,13 @@ else {
         '### T. Idempotent Retry',
         '### U. Unchanged Canonical Save'
     )) {
-        if ($contextAssembly -notmatch [regex]::Escape($requiredText)) {
-            Add-ValidationError "FR-011 Context Assembly lacks required invariant: $requiredText"
+        # R2 changes ownership, not conformance: test each predicate in its explicit
+        # owner rather than accidentally requiring host tests in executable context.
+        $owner = if ($requiredText -match '^### [A-U]\. ' -or $requiredText -eq 'host tests exercise Regression Cases A through U') { $contextConformance }
+        elseif ($requiredText -in @('## Existing Campaign Adoption', 'This repository performs no migration of a populated campaign.')) { $contextAdoption }
+        else { $contextAssembly }
+        if ($owner -notmatch [regex]::Escape($requiredText)) {
+            Add-ValidationError "FR-011 Context Assembly owner lacks required invariant: $requiredText"
         }
     }
 }

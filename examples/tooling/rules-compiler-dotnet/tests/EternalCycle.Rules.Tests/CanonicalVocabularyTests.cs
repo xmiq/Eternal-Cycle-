@@ -192,12 +192,16 @@ public sealed class CanonicalVocabularyTests
     }
 
     [Fact]
-    public void CapturedByteFixtureCannotHideCanonicalProseChanges()
+    public void LiveMaterializationExposesProseChangesWithoutRewritingHistoricalEvidence()
     {
         using var checkout = new CanonicalVocabularyPayload();
         var path = Path.Combine(checkout.Root, Snapshot.Sources[0].ManifestEntry.Path.Replace('/', Path.DirectorySeparatorChar));
         File.AppendAllText(path, "\nAltered rule prose.");
-        Assert.Throws<InvalidOperationException>(() => new CanonicalVocabularyPayload(checkout.Root));
+        using var changed = new CanonicalVocabularyPayload(checkout.Root, current: true);
+        Assert.NotEqual(Compilation.Artifact!.Integrity.ArtifactSha256,
+            RuleCompilationPipeline.Compile(changed.Load()).Artifact!.Integrity.ArtifactSha256);
+        using var frozen = new CanonicalVocabularyPayload();
+        Assert.Equal(Compilation.Bytes.ToArray(), RuleCompilationPipeline.Compile(frozen.Load()).Bytes.ToArray());
     }
 
     private static void Compare(MaterializedRuleSourceSnapshot snapshot)

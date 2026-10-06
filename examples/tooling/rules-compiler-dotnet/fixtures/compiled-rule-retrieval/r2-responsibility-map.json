@@ -1,0 +1,2186 @@
+[
+  {
+    "clauseId": "PA-01",
+    "oldAnchor": "purpose",
+    "obligation": "`purpose`: incompatible campaign claims use authority, not recency, stale notes or convenience",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-02",
+    "oldAnchor": "purpose",
+    "obligation": "`purpose`: campaign-fact authority is distinct from GM rule-status hierarchy",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-03",
+    "oldAnchor": "core-rule",
+    "obligation": "`core-rule`: ordered Repository, Campaign, History, State, Session, Narration layers",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-04",
+    "oldAnchor": "core-rule",
+    "obligation": "`core-rule`: lower authority never silently overwrites higher",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-05",
+    "oldAnchor": "core-rule",
+    "obligation": "`core-rule`: compare the same subject/scope/time; replacement needs authorized correction/retcon/migration",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01/E13/G03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-06",
+    "oldAnchor": "authority-is-claim-specific",
+    "obligation": "`authority-is-claim-specific`: compare claims, not document prestige; inventory/reset premise, loss, present possession, new recovery and appearance have different owners; new valid recovery integrates rather than erases loss",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01/E04-E07/E08",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-07",
+    "oldAnchor": "repository-canon",
+    "obligation": "`repository-canon`: highest reusable rules and accepted governance authority",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-08",
+    "oldAnchor": "repository-canon",
+    "obligation": "`repository-canon`: includes docs rules, accepted decisions, terminology, explicit owners/scopes, safeguards/foundations",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-09",
+    "oldAnchor": "repository-canon",
+    "obligation": "`repository-canon`: interprets mechanical meaning; contains no populated campaign facts",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-10",
+    "oldAnchor": "repository-canon",
+    "obligation": "`repository-canon`: changed repository does not rewrite history; recorded active profile remains until explicit conversion, subject to mandatory safety/approved correction",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03/G02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-11",
+    "oldAnchor": "repository-canon",
+    "obligation": "`repository-canon` / Repository Conflicts: conflicting rules/governance neither silently wins; resolve both before calling affected material complete",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-12",
+    "oldAnchor": "campaign-canon",
+    "obligation": "`campaign-canon`: highest permitted campaign-specific authority; identity/profile/premises/setting/control/retcons/interpretations/conversions/stable IDs belong here",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-13",
+    "oldAnchor": "campaign-canon",
+    "obligation": "`campaign-canon`: permitted options/external experiment/older version do not canonize incompatible mechanics",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-14",
+    "oldAnchor": "campaign-canon",
+    "obligation": "`campaign-canon`: changes need authorized decision, provenance, scope, date, affected records and migration consequences; narration/preference/theory/repeated error/file edits cannot authorize",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03/G01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-15",
+    "oldAnchor": "historical-record",
+    "obligation": "`historical-record`: durable ordered established events/transitions/discoveries/corrections/consequences",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E04",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-16",
+    "oldAnchor": "historical-record",
+    "obligation": "`historical-record`: event support includes what/time/place/actors/owners/adjudication/changes/unresolved/supersession",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E04",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-17",
+    "oldAnchor": "historical-record",
+    "obligation": "`historical-record`: append normally; correction adds trace/supersession, retcon records Campaign Canon action then propagates",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E04/E12/G03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-18",
+    "oldAnchor": "historical-record",
+    "obligation": "`historical-record`: dated testimony/belief/research/narration retains status rather than becoming fact",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E04/E10",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-19",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: latest authoritative structured now, within covered scopes",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-20",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: bodies/Soul/relations/placement/assets/institutions/projects/research/world/processes use State Model and Structured Architecture logical owners",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05/E15",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-21",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: derived from Campaign Canon/history; material consequences require valid new event/correction/retcon/migration to change",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-22",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: stale state cannot erase later history; repair missed updates from authoritative history/adjudication",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05/E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-23",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: outranks informal memory/narration for latest integrated condition",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-24",
+    "oldAnchor": "current-campaign-state",
+    "obligation": "`current-campaign-state`: valid unintegrated session event is pending, not nonexistent",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05/E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-25",
+    "oldAnchor": "current-session",
+    "obligation": "`current-session`: bounded working facts/outcomes/decisions/traces/deltas/uncertainty since last confirmed integration",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-26",
+    "oldAnchor": "current-session",
+    "obligation": "`current-session`: valid resolved change differs from proposal/draft/plan/hypothetical/uncommitted branch",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-27",
+    "oldAnchor": "current-session",
+    "obligation": "`current-session`: no Campaign/Repository amendment; classify contradiction; incomplete recording requires recovery, not discarding session",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06/E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-28",
+    "oldAnchor": "current-session",
+    "obligation": "`current-session`: Save Update integrates confirmed changes; identifiable Session Delta before atomic activation is neither draft nor validated Save Point",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06/E12",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-29",
+    "oldAnchor": "current-narration",
+    "obligation": "`current-narration`: immediate presentation is lowest persistence authority",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E07",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-30",
+    "oldAnchor": "current-narration",
+    "obligation": "`current-narration`: ordinary detail/new event permitted only with GM authority and no higher conflict; incomplete/observer-limited/metaphorical/mistaken/ambiguous/stale/contradicted/inconsistent presentations stay bounded",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E07",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-31",
+    "oldAnchor": "current-narration",
+    "obligation": "`current-narration`: vivid/recent/repeated/momentarily accepted wording gains no authority",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01/E07",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-32",
+    "oldAnchor": "current-narration",
+    "obligation": "`current-narration`: stop relying on conflicting prose; continuity resolution, not defending an already narrated error",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E07/E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-33",
+    "oldAnchor": "rules-authority-and-persistence-authority",
+    "obligation": "`rules-authority-and-persistence-authority`: Codex is reusable design below Repository Canon, not campaign Truth Layer; configuration stores adopted Codex Version, Campaign Canon presence/divergences; no silent later migration",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E08",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-34",
+    "oldAnchor": "rules-authority-and-persistence-authority",
+    "obligation": "`rules-authority-and-persistence-authority`: ownership table assigns mechanics, adopted premises, established events, integrated now, pending interaction and audience presentation to distinct owners",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02-E08/E09",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-35",
+    "oldAnchor": "rules-authority-and-persistence-authority",
+    "obligation": "`rules-authority-and-persistence-authority`: higher persistence cannot invent mechanics; lower rule status cannot rewrite facts; both valid for material claim",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-36",
+    "oldAnchor": "authority-does-not-equal-visibility",
+    "obligation": "`authority-does-not-equal-visibility`: every layer can contain restricted material; narration reveals only an Observer View, not all accessed truth",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E09",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-37",
+    "oldAnchor": "authority-does-not-equal-visibility",
+    "obligation": "`authority-does-not-equal-visibility`: Truth Layers owns visibility; authority answers which claim, not who may access",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E09/E15",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-38",
+    "oldAnchor": "authority-does-not-equal-certainty",
+    "obligation": "`authority-does-not-equal-certainty`: Unknown/Not Yet Verified/Estimated/Disputed/Requires Source Recovery/Pending Resolution are valid authoritative statuses",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E10",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-39",
+    "oldAnchor": "authority-does-not-equal-certainty",
+    "obligation": "`authority-does-not-equal-certainty`: unsupported certainty/lower guess cannot overwrite higher unknown",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E10",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-40",
+    "oldAnchor": "authority-does-not-equal-actor-control",
+    "obligation": "`authority-does-not-equal-actor-control`: prior statements/obligations/plans/beliefs/pressures do not preselect deliberate choices",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E11",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-41",
+    "oldAnchor": "authority-does-not-equal-actor-control",
+    "obligation": "`authority-does-not-equal-actor-control`: relations/faction plans/prophecy/Soul Titles/player objectives do not compel affection, obedience, execution, events or next player action",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E11",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-42",
+    "oldAnchor": "authority-does-not-equal-actor-control",
+    "obligation": "`authority-does-not-equal-actor-control`: remember choices/conditions rather than converting records to scripts",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E11",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-43",
+    "oldAnchor": "valid-downward-updates",
+    "obligation": "`valid-downward-updates`: migration, retcon, valid historical event, integrated session and state-to-narration propagation use explicit owning procedures",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E12",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-44",
+    "oldAnchor": "valid-downward-updates",
+    "obligation": "`valid-downward-updates`: every update states source/scope/affected records/unresolved conflicts; no silent overwrite",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E12",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-45",
+    "oldAnchor": "valid-upward-proposals",
+    "obligation": "`valid-upward-proposals`: narration/session/state/history/play evidence may propose higher review, not enact it",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G01",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-46",
+    "oldAnchor": "valid-upward-proposals",
+    "obligation": "`valid-upward-proposals`: higher layer changes only through its own authority process",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G01",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-47",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 1: exact subject/property/scope/time claim",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-48",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 2: identify both layers, not file versus transcript",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-49",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 3: identify establishing/constraining specialist owner",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-50",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 4: check chronology/region/observer/meaning before claiming contradiction",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-51",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 5: separate fact/proposal/belief/theory/estimate/secret/narration status",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-52",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 6: preserve higher claim, stop propagating lower conflict",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-53",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 7: classify narration error/stale state/incomplete save/corruption/source gap/authorized retcon/migration/deception",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-54",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 8: route owning correction/migration/save/continuity procedure",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13/E12/G02-G03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-55",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 9: record change/reason/authorizer/dependent review",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13/E12",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-56",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure` / 10: resume coherent state; unaffected play may continue, dispute not prematurely settled",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E13/E10",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-57",
+    "oldAnchor": "conflict-classification-procedure",
+    "obligation": "`conflict-classification-procedure`: expanded continuity document does not change lower-recency versus higher-provenance result",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01/E13",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-58",
+    "oldAnchor": "repository-revision-changes",
+    "obligation": "`repository-revision-changes`: available update does not auto-change profile/outcomes/records/causality/capabilities/provisional review or authorize retcon",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G02",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-59",
+    "oldAnchor": "repository-revision-changes",
+    "obligation": "`repository-revision-changes`: compare versions, decide adoption/conversion, migrate affected records, preserve interpretation, validate through Migration owner",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G02/E03",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-60",
+    "oldAnchor": "authorized-retcons",
+    "obligation": "`authorized-retcons`: Campaign-Canon-approved deliberate correction/replacement, not discovery of false belief",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G03",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-61",
+    "oldAnchor": "authorized-retcons",
+    "obligation": "`authorized-retcons`: grantor/prior claim/replacement/reason/scope/history/state/knowledge/relationship/progression/consequence dependencies/material player-choice remedy recorded",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G03/E11",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-62",
+    "oldAnchor": "authorized-retcons",
+    "obligation": "`authorized-retcons`: old record remains traceable superseded material for migration/continuity audit",
+    "ownerDocument": "docs/persistence/AUTHORITY_GOVERNANCE.md",
+    "executableOwners": "G03/E04",
+    "classification": "exceptional-governance"
+  },
+  {
+    "clauseId": "PA-63",
+    "oldAnchor": "worked-examples",
+    "obligation": "`worked-examples` / lost item: established loss prevails absent valid recovery/reconstruction/illusion/replica/event; correct scene, never invent hidden recovery to defend prose",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+    "executableOwners": "E01/E05-E07/E10/E13",
+    "classification": "supporting-example"
+  },
+  {
+    "clauseId": "PA-64",
+    "oldAnchor": "worked-examples",
+    "obligation": "`worked-examples` / unsaved gate: recover adjudication, append history/update state, validate dependent travel/communication/Reincarnation routes",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+    "executableOwners": "E04-E06/E12/E13",
+    "classification": "supporting-example"
+  },
+  {
+    "clauseId": "PA-65",
+    "oldAnchor": "worked-examples",
+    "obligation": "`worked-examples` / false history: knowledge-belief remains consequential without replacing differently scoped historical truth",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+    "executableOwners": "E01/E04/E09-E10",
+    "classification": "supporting-example"
+  },
+  {
+    "clauseId": "PA-66",
+    "oldAnchor": "worked-examples",
+    "obligation": "`worked-examples` / Soul revision: compare former provisional ruling/consequences, authorized conversion, current-state update, preserve former profile's historical scenes",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+    "executableOwners": "E03/E08/G02",
+    "classification": "supporting-example"
+  },
+  {
+    "clauseId": "PA-67",
+    "oldAnchor": "worked-examples",
+    "obligation": "`worked-examples` / private death note: secrecy grants no authority; classify plan/draft/missing-evidence event/omission; cannot overwrite survival before validation",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY_CONFORMANCE.md",
+    "executableOwners": "E05-E07/E09-E10/E13",
+    "classification": "supporting-example"
+  },
+  {
+    "clauseId": "PA-68",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 1: lower never silently overwrites higher",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-69",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 2: recency/repetition/drama/storage location creates no authority",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E01",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-70",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 3: Campaign cannot amend Repository Canon",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-71",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 4: repository update needs adoption/migration, not historical rewrite",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E03/G02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-72",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 5: corrections/retcons preserve traceable history",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E04/G03",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-73",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 6: failed integration cannot erase valid event",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E05/E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-74",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 7: drafts/hypotheticals/branches not established outcomes",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-75",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 8: narration must not defend/compound known error",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E07",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-76",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 9: unknown stays unknown at every layer",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E10",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-77",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 10: numerical changes need owned event or explicit correction",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E09-E11",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-78",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 11: authority does not collapse truth/visibility/certainty/agency",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E06",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-79",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 12: no populated authority record in reusable repository",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E02",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "PA-80",
+    "oldAnchor": "scope-boundaries",
+    "obligation": "`scope-boundaries`: precedence/routing is not architecture, truth/visibility/lifetimes/schemas/migration/full-continuity/save/validators/templates ownership; blank templates do not gain authority",
+    "ownerDocument": "docs/persistence/PERSISTENCE_AUTHORITY.md",
+    "executableOwners": "E15",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-01",
+    "oldAnchor": "purpose",
+    "obligation": "`purpose`: canonical read and automatic persistence form valid turn; compact persistence-backed context wraps existing Read Set/Save Update",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "purpose",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-02",
+    "oldAnchor": "purpose",
+    "obligation": "`purpose`: no ordinary manual-save requirement; state-changing turn completes only after validated transaction available to later reads",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "purpose",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-03",
+    "oldAnchor": "document-control",
+    "obligation": "`document-control`: owns turn, packet, relevance/hierarchy/read/save/next-turn verification, not other state owners",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "document-control",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-04",
+    "oldAnchor": "document-control",
+    "obligation": "`document-control`: depends on State Model/Data Ownership/Save Update/Validation/AI Runtime and configured Direct/Managed provider",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "document-control",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-05",
+    "oldAnchor": "document-control",
+    "obligation": "`document-control`: parameterized queries/views/builders/disposable caches/visual packets extend navigation without new authority",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "document-control",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-06",
+    "oldAnchor": "document-control",
+    "obligation": "`document-control`: execution profiles/tools/boot/play/representation/save/recovery/debug/handoff consume this contract",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "document-control",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-07",
+    "oldAnchor": "document-control",
+    "obligation": "`document-control`: no populated state/packet/schema/credential/private locator/provider configuration in repository contract",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "document-control",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-08",
+    "oldAnchor": "runtime-boundary",
+    "obligation": "`runtime-boundary`: no universal host/populated DB; conforming host executes actual configured reads/writes/validation/readback",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "runtime-boundary",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-09",
+    "oldAnchor": "runtime-boundary",
+    "obligation": "`runtime-boundary`: structural validation is not observed host I/O/conformance; acceptance cases must be satisfied",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "runtime-boundary",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-10",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 1: conversation is convenience, not Canon",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-11",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 2: required Canon read before material resolution",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-12",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 3: context relevance-filtered/persistence-backed",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-13",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 4: packets/Running/Session summaries are Derived/Caches, own no mutable Canon",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-14",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 5: every resolution explicitly determines Affected Set, including empty",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-15",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 6: non-empty triggers automatic persistence without command",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-16",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 7: state-changing turn cannot close before successful validated transaction",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-17",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 8: explicit failed reads/writes, never concealed by conversation memory",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-18",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 9: retry retains interaction/transaction identity, no duplicate effects",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-19",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 10: relevant Turn N+1 reads committed Turn N",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-20",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 11: successful plumbing backstage in ordinary Gameplay Context",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-21",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 12: AI GM operates through, owns neither rules nor campaign state",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-22",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 13: resolve/verify configured canonical target before state-changing play",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-23",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 14: visible status is adapter evidence, not intent/narration",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-24",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 15: derived refresh after canonical validation/readback, no unsaved promotion",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-25",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 16: canonical depiction gets purpose-specific visibility-filtered visual context, not conversation authority",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-26",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 17: only real new player input begins new turn; tools/internal continuation stay originating interaction",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-27",
+    "oldAnchor": "core-invariants",
+    "obligation": "`core-invariants` / 18: yield at unresolved player-owned choice, never choose via internal continuation",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "core-invariants",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-28",
+    "oldAnchor": "gameplay-turn-state-machine",
+    "obligation": "`gameplay-turn-state-machine`: ordered target/context/read/resolve/Affected/write/validate/authority/derived/complete gates; externally read-resolve-save-verify-deliver",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "gameplay-turn-state-machine",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-29",
+    "oldAnchor": "gameplay-turn-state-machine",
+    "obligation": "`gameplay-turn-state-machine`: actual input boundary; hidden reasoning/continuation/tools/results/retry/read/retrieval/persistence/validation/same-input simulation stay originating interaction; stop for next player-owned choice",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "gameplay-turn-state-machine",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-30",
+    "oldAnchor": "persistence-target-resolution-gate",
+    "obligation": "`persistence-target-resolution-gate`: read identity/strategy/authority/complete chain or interface/durability/version/Save Point/concurrency/open transaction/sync/working-copy freshness; locate/fetch/contact/verify; Direct remote lookup and Managed namespace/binding differ",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "persistence-target-resolution-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-31",
+    "oldAnchor": "persistence-target-resolution-gate",
+    "obligation": "`persistence-target-resolution-gate`: no blank replacement because assumed local path missing; unresolved/ambiguous/inaccessible authority blocks changing play with truthful pending/failure",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "persistence-target-resolution-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-32",
+    "oldAnchor": "context-assembly-layer",
+    "obligation": "`context-assembly-layer`: smallest complete Read Set materially affecting intent/resolution/consequence/uncertainty/disclosure; implementations navigate owners, not create owner",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "context-assembly-layer",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-33",
+    "oldAnchor": "context-assembly-layer",
+    "obligation": "`context-assembly-layer`: published dependency-complete Managed packet, no AI crawl/compile; Kernel/Core/selected World/enabled modules/operation-topic rules; separate same-Campaign Canon; at-most-8K target without omitted required rules/unrelated worlds/hidden uncounted prompt",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "context-assembly-layer",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-34",
+    "oldAnchor": "relevance-selection",
+    "obligation": "`relevance-selection`: include presence/intent/immediate consequence/relationships/assignments/hazards/invoked systems/history/visibility-memory-visual materiality; stop immaterial reference expansion, correctness before marginal brevity",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "relevance-selection",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-35",
+    "oldAnchor": "current-scene-context",
+    "obligation": "`current-scene-context`: relevant interaction/Save Point/time/location/perspective/entity/intent/boundary/entities/autonomous/groups/relationships/conditions/assets/projects/world/rules/events/source-owner-ID-version/deep-reference/freshness-provenance fields",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "current-scene-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-36",
+    "oldAnchor": "current-scene-context",
+    "obligation": "`current-scene-context`: navigation IDs/owner paths/table names/transaction plumbing not ordinary narration",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "current-scene-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-37",
+    "oldAnchor": "current-scene-context",
+    "obligation": "`current-scene-context`: GM archive/memory access grants no recall; player sees only bounded incarnation Character Knowledge Recall Manifestation",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "current-scene-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-38",
+    "oldAnchor": "purpose-specific-visual-context",
+    "obligation": "`purpose-specific-visual-context`: smallest complete sourced visual projection with IDs/established traits/form/model/assets/conditions/environment/observer/secrets/unknown/rendering freedom",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "purpose-specific-visual-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-39",
+    "oldAnchor": "purpose-specific-visual-context",
+    "obligation": "`purpose-specific-visual-context`: packet owns no appearance; Current Appearance assembled from owners; unspecified/generated detail not Canon",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "purpose-specific-visual-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-40",
+    "oldAnchor": "purpose-specific-visual-context",
+    "obligation": "`purpose-specific-visual-context`: ordinary depiction empty Affected Set; explicit authorized trait adoption/correction/durable change uses owner Save Transaction",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "purpose-specific-visual-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-41",
+    "oldAnchor": "hierarchical-context",
+    "obligation": "`hierarchical-context`: scene/Running/Session/Long-Horizon/Life/full read depth, smallest sufficient, direct alternate branches allowed; retrieval hierarchy not authority, owner records outrank all Derived",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "hierarchical-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-42",
+    "oldAnchor": "hierarchical-context",
+    "obligation": "`hierarchical-context` / Running: short-lived scene/intent/entities/committed changes/open action/observations/owner pointers; regenerate after relevant Canon change",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "hierarchical-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-43",
+    "oldAnchor": "hierarchical-context",
+    "obligation": "`hierarchical-context` / Session: event/discovery/relation/project/infrastructure/Skill/Development/open-thread pointers, not History or specialist owner",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "hierarchical-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-44",
+    "oldAnchor": "hierarchical-context",
+    "obligation": "`hierarchical-context` / History: relevant intervals/Life identity/retained development/Skills/relations/death/legacy/support queries only, not all eras/Lives per turn",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "hierarchical-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-45",
+    "oldAnchor": "freshness",
+    "obligation": "`freshness`: game-time/interval,parent Version/Save Point,model/migration versions,interaction/source IDs,revisions/hashes,visibility/audience,generation provenance detect staleness",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "freshness",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-46",
+    "oldAnchor": "freshness",
+    "obligation": "`freshness`: wall-clock age insufficient; relevant source changes invalidate/regenerate",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "freshness",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-47",
+    "oldAnchor": "freshness",
+    "obligation": "`freshness`: owner wins conflict, mark stale/incorrect, repair from owners, never edit Canon to fit packet",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "freshness",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-48",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 1: Save Index/version/Save Point/session/open recovery",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-49",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 2: intent/perspective/entity/time/placement",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-50",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 3: narrowest rule and campaign owner per material claim",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-51",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 4: build relevance-filtered initial Read Set",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-52",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 6: verify identity/version/status/Truth Layer/visibility/effective-time/supersession",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-53",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 7: classify material gaps as Unknown/Not Yet Verified/Estimated/Disputed/Requires Source Recovery",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-54",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate`: State Model remains authoritative; no conversation substitute after failed read, only genuinely immaterial/canon-permitted uncertainty may proceed",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-55",
+    "oldAnchor": "resolution-and-affected-set-gate",
+    "obligation": "`resolution-and-affected-set-gate`: determine every changed/created persistent owner; all 14 listed categories including bodies, development, placement, custody, effects, relations/knowledge, processes, autonomous/network/assignments, equipment, species/Soul/world/location/history/visual adoption",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "resolution-and-affected-set-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-56",
+    "oldAnchor": "resolution-and-affected-set-gate",
+    "obligation": "`resolution-and-affected-set-gate`: movement/time/spending/failure/discovery/observation/social reaction can change state; quiet narration does not prove empty set",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "resolution-and-affected-set-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-57",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 1: retain Interaction ID, assign/reuse Transaction ID",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-58",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 2: recheck parent Save Point/Read Set",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-59",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 3: dependency-complete Affected Set/Session Delta",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-60",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 4: stage once per Authoritative Record Owner",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-61",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 5: chronology/history append only under own rules",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-62",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 6: atomic owner commit through configured chain/service",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-63",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 7: implementation and semantic validation",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-64",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 8: critical readback/expected comparison/version verification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-65",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 9: verify configured cloud synchronization/Managed completion evidence",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-66",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 10: activate new Save Point only at configured authority boundary",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-67",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 11: regenerate/invalidate derived summaries/scene from verified Canon",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-68",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / 12 and postcondition: only then complete/deliver evidence marker; no command required; local-only call or unvalidated service success insufficient",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-69",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / Patch: service reads existing JSON object, preserves omissions, supplied set-only values enter normal full owner-mutation/version/revision/transaction/validation/activation/readback/receipt path",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-70",
+    "oldAnchor": "automatic-persistence-gate",
+    "obligation": "`automatic-persistence-gate` / Patch limits: no create/delete/identity-reference changes/arbitrary SQL/owner bypass/omission deletion; unsupported uses full mutation; same retry identity, failure activates nothing",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "automatic-persistence-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-71",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: exactly one compact truthful end marker on ordinary response",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-72",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: local saved requires commit/validation/readback",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-73",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: cloud saved requires remote sync/readback/verification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-74",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: pending means incomplete/recoverable pending; failure means required write/sync/change-proof/validation/readback failed",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-75",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: Managed local-style marker means validated service expected Transaction/active Version receipt; no client backend/cloud classification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-76",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: narration/summary/local candidate/upload/requested sync/intent never prove saved",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-77",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: cloud local success stays pending through required remote/semantic/backup checks; cloud failure retains validated local candidate for idempotent retry",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-78",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: verified no-op may show existing authority marker, no new save; ordinary success shows only marker except requested status/debug/needed concise technical failure",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-79",
+    "oldAnchor": "player-visible-persistence-status",
+    "obligation": "`player-visible-persistence-status`: pending/unresolved failure blocks next changing turn until saved/recovered last validated authority/explicit stop",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "player-visible-persistence-status",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-80",
+    "oldAnchor": "manual-persistence-commands",
+    "obligation": "`manual-persistence-commands`: override/recovery, automatic persistence still mandatory",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "manual-persistence-commands",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-81",
+    "oldAnchor": "manual-persistence-commands",
+    "obligation": "`manual-persistence-commands` / save: determine pending set, normal transaction immediately with same IDs, no repeated resolution/costs/events/progression/inventory/relations/effects; if empty verify current target, no invented event",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "manual-persistence-commands",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-82",
+    "oldAnchor": "manual-persistence-commands",
+    "obligation": "`manual-persistence-commands` / status: only authorized marker/version/Save Point/strategy/authority/chain-sync or service-evidence/pending/local/cloud/failure facts",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "manual-persistence-commands",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-83",
+    "oldAnchor": "manual-persistence-commands",
+    "obligation": "`manual-persistence-commands` / retry: earliest incomplete stage, inspect committed first; cloud-only continuation after valid local commit; Managed same Transaction/idempotency key; no replay/resources/events/second Save Point",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "manual-persistence-commands",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-84",
+    "oldAnchor": "canonical-change-proof-and-unchanged-save-detector",
+    "obligation": "`canonical-change-proof-and-unchanged-save-detector`: active profile requires sufficient version/revision/owner-row/chronology/Index/Save Point/artifact-hash/remote-sync/readback evidence",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "canonical-change-proof-and-unchanged-save-detector",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-85",
+    "oldAnchor": "canonical-change-proof-and-unchanged-save-detector",
+    "obligation": "`canonical-change-proof-and-unchanged-save-detector`: unchanged expected Canon is failure even if call succeeds; preserve retry evidence, failure marker, forbid complete",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "canonical-change-proof-and-unchanged-save-detector",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-86",
+    "oldAnchor": "canon-before-derived-context",
+    "obligation": "`canon-before-derived-context`: owner write -> authority validation/readback -> Running -> Session -> Scene -> marker -> turn complete",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "canon-before-derived-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-87",
+    "oldAnchor": "canon-before-derived-context",
+    "obligation": "`canon-before-derived-context`: failure leaves/rebuilds summaries from last validated point, never prepared narration",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "canon-before-derived-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-88",
+    "oldAnchor": "no-change-turns",
+    "obligation": "`no-change-turns`: explicit ephemeral/transactional empty-set provenance, no mutation/plumbing Timeline event; failed action can spend time/assets/harm/relations/knowledge/process progress",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "no-change-turns",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-89",
+    "oldAnchor": "no-change-turns",
+    "obligation": "`no-change-turns`: rendering is no mutation/new save; existing verified marker allowed; explicit later trait adoption has non-empty set",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "no-change-turns",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-90",
+    "oldAnchor": "failure-and-retry",
+    "obligation": "`failure-and-retry` / Read: honest source-recovery/continuity/clarification/blocked state; preserve intent/evidence, no fabricated missing value or claimed Canon read from memory",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "failure-and-retry",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-91",
+    "oldAnchor": "failure-and-retry",
+    "obligation": "`failure-and-retry` / Write: determined result not committed transaction; keep validated parent, staged IDs/changes/version/failure evidence; no committed dependent delivery",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "failure-and-retry",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-92",
+    "oldAnchor": "failure-and-retry",
+    "obligation": "`failure-and-retry` / Retry: retain identity, verify applied operations before writing",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "failure-and-retry",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-93",
+    "oldAnchor": "failure-and-retry",
+    "obligation": "`failure-and-retry` / No duplicates: chronology/resources/inventory/relationships/Skills/Development/project/research/autonomous/time/consequences",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "failure-and-retry",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-94",
+    "oldAnchor": "failure-and-retry",
+    "obligation": "`failure-and-retry` / Concurrency: changed parent means rebuild relevant Read Set and resolve conflict before retry",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "failure-and-retry",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-95",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification` / 1: active Save Index/version",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-96",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification` / 2: invalidate parent-version mismatch packets",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-97",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification` / 3: query relevant owners",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-98",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification` / 4: confirm relevant expected prior-turn state",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-99",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification` / 5: rebuild scene from persisted records, not conversation/prior packet",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-100",
+    "oldAnchor": "next-turn-verification",
+    "obligation": "`next-turn-verification`: missing supposedly saved change is continuity/persistence defect, not narrative workaround",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "next-turn-verification",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-101",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 1: Configuration/latest Save Index",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-102",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 2: persisted strategy and Direct authority or Managed interface/binding",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-103",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 3: persisted summaries only caches",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-104",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 4: verify parent/source/visibility/freshness",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-105",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 5: discard/regenerate stale packets",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-106",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 6: relevant canonical Read Set",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-107",
+    "oldAnchor": "session-start-and-context-reset",
+    "obligation": "`session-start-and-context-reset` / 7: validated Save Point/open interaction only; no prior transcript required on fresh runtime",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "session-start-and-context-reset",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-108",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Life Archive: stable Life IDs/detail paths, GM access not current-character recall",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-109",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Long-Horizon: period IDs/tags/hooks/references, only material intervals",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-110",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Ownership: packet references owners, scene/Running/Session not competing stores",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-111",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Autonomous: relevant ID/model/controller/autonomy/placement/assignment/condition/report/network/resources/maintenance only, not every unit",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-112",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Memory: GM Context not Character Memory; FR-011 retrieves, does not implement continuity/fading/recall",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-113",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Companion: causal identity/reincarnation/encounter/separation/recognition/history materiality only; retrieval creates no bond, reveals no protected identity/route/timing",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-114",
+    "oldAnchor": "specialist-integrations",
+    "obligation": "`specialist-integrations` / Visual: Identity owns sparse established traits, Derived request composes form/model/assets/conditions/location/perspective; invalidation, no new appearance owner",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "specialist-integrations",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-115",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 1: back up latest canonical save",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-116",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 2: validate active version/owner graph",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-117",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 3: audit/preserve valid existing owner queries",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-118",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 4: configure/regenerate caches, no Canon rewrite",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-119",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 5: enable automatic turn transactions in host/profile",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-120",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 6: verify adapters/validation/readback requirements",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-121",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 8 and boundary: provenance, activation only after validation; repository does not migrate populated campaign",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-122",
+    "oldAnchor": "development-context-and-auditability",
+    "obligation": "`development-context-and-auditability`: authorized IDs/Read Set/revisions/relevance/Affected owners/adapters/validation/readback/Save Point/cache outcomes",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "development-context-and-auditability",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-123",
+    "oldAnchor": "storage-neutral-logical-guidance",
+    "obligation": "`storage-neutral-logical-guidance`: equivalent Direct/Managed metadata/provenance structures optional, not a mandated format",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "storage-neutral-logical-guidance",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-124",
+    "oldAnchor": "storage-neutral-logical-guidance",
+    "obligation": "`storage-neutral-logical-guidance` / packet fields: ID/key, scene-running-session kind constraint, interaction, non-null parent Version/Save Point/audience/provenance, optional game time, generation and fresh-stale-invalid constraint",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "storage-neutral-logical-guidance",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-125",
+    "oldAnchor": "storage-neutral-logical-guidance",
+    "obligation": "`storage-neutral-logical-guidance` / references: packet/owner/record composite key, optional revision/path, required relevance, parent foreign key",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "storage-neutral-logical-guidance",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-126",
+    "oldAnchor": "storage-neutral-logical-guidance",
+    "obligation": "`storage-neutral-logical-guidance` / index and content: parent Version/Save Point/freshness index; transient/separate content allowed, derivation references only, no copied-fact ownership; existing IDs/names allowed",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "storage-neutral-logical-guidance",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-127",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 5: expand initial Read Set through material Typed References",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-128",
+    "oldAnchor": "mandatory-read-gate",
+    "obligation": "`mandatory-read-gate` / 8: READ_COMPLETE only when every material dependency resolved or validly bounded",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "mandatory-read-gate",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-129",
+    "oldAnchor": "existing-campaign-adoption",
+    "obligation": "`existing-campaign-adoption` / 7: harmless fixture/isolated validation transaction covering read/write/rollback/reload",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md",
+    "executableOwners": "existing-campaign-adoption",
+    "classification": "exceptional-host-workflow"
+  },
+  {
+    "clauseId": "CA-130",
+    "oldAnchor": "gameplay-turn-state-machine",
+    "obligation": "`gameplay-turn-state-machine`: verified explicit empty set skips write via VALIDATED; determined no-op, not assumption",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "gameplay-turn-state-machine",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-131",
+    "oldAnchor": "gameplay-turn-state-machine",
+    "obligation": "`gameplay-turn-state-machine`: prepared narration not delivered durable consequence; strict ordered authority verification; no background/async/decorative/later-save promise",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "gameplay-turn-state-machine",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-132",
+    "oldAnchor": "gameplay-turn-state-machine",
+    "obligation": "`gameplay-turn-state-machine`: TURN_COMPLETE/final output invalid absent required write/validation/readback/expected-change evidence",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "gameplay-turn-state-machine",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-133",
+    "oldAnchor": "manual-persistence-commands",
+    "obligation": "`manual-persistence-commands` / status privacy: no credentials/private locators/GM Secrets/unrelated campaign data",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "manual-persistence-commands",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-134",
+    "oldAnchor": "development-context-and-auditability",
+    "obligation": "`development-context-and-auditability`: debug obeys visibility/Secrets; ordinary successful plumbing omitted unless asked or actionable Operational Failure",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "development-context-and-auditability",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-135",
+    "oldAnchor": "current-scene-context",
+    "obligation": "`current-scene-context` / References: each hop identifies authoritative domain; reference paths grant neither visibility nor Character Knowledge",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "current-scene-context",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S01",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 1: no whole-campaign default load",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S02",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 2: no material dependency omission to shorten context",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S03",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 3: no narrative-summary-only save",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S04",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 4: no duplicate current-state owner caches",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S05",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 5: failed action not automatically unchanged",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S06",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 6: no asynchronous/background save promise",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S07",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 7: no ordinary storage/protected IDs",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S08",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 8: GM retrieval grants no Character Knowledge",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S09",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 9: no FR-015/016 implementation here",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-S10",
+    "oldAnchor": "safeguards",
+    "obligation": "`safeguards` / 10: no populated packets/campaign fixtures in repository",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md",
+    "executableOwners": "safeguards",
+    "classification": "ordinary-executable"
+  },
+  {
+    "clauseId": "CA-R01",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / A: read Skill identity/Development/embodiment/access/condition/opposition before resolving",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R02",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / B: automatic body-owner save, validate, next-turn read, no save command",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R03",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / C: promise updates Relationship in same transaction, summaries reference only",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R04",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / D: movement/item changes all four listed owners, one interaction/complete transaction/effect once",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R05",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / E: accepted autonomous assignment updates Registry/Project, irrelevant units excluded",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R06",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / F: no new perception/time -> explicit empty set, no mutation",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R07",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / G: validation failure keeps parent active, no saved completion, same-ID retry",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R08",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / H: consumed inventory owner beats conversation, regenerate packet",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R09",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / I: next-turn persisted changed Location ID before resolution",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R10",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / J: old-version Running Summary invalidated/rebuilt, no Canon overwrite",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R11",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / K: historical companion query follows Entity/Life/Period/Relationship/source only as needed",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R12",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / L: transcript-free reset restores Index/summary checks/Read Set/persisted state",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R13",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / M: all listed infrastructure/research/equipment/network/autonomous/knowledge/chronology/history changes read, once persisted, proved/reloaded; correct saved marker; narration-only fails",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R14",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / N: absent local path -> exact configured remote fetch/identity-version verification/working copy/chain, no false missing/blank replacement",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R15",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / O: local SQLite commit/validation/read-only reopen/change proof/activation/local marker",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R16",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / P: validated SQLite candidate/Drive exact replacement/remote comparison/required backup/cloud marker",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R17",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / Q: incomplete cloud pending blocks next change; failed cloud retains validated local candidate, not active authority",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R18",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / R: upload without verified readback cannot cloud-save/close turn, retain failure evidence",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R19",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / S: save pending once, no replay; status authorized marker/version/authority/sync/pending/verified boundaries",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R20",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / T: cloud retry same transaction, no repeated owner writes; saved only after remote verification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R21",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / U: narrated non-empty set but unchanged expected owner/chronology/version/artifact -> failure marker, no turn complete",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R22",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / V: Managed stages/validates/activates/readbacks multi-domain, expected-ID/version receipt, local-style marker/no backend disclosure",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R23",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / W: interface returns no validated receipt -> pending/failure/no complete, original-ID retry/no replay",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R24",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / X: DuckDB concurrency conflict fails candidate/reloads parent, no last-writer-wins/false saved",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-R25",
+    "oldAnchor": "regression-cases",
+    "obligation": "`regression-cases` / Y: World A Kernel/Core/World-operation-topic rules plus Campaign A Canon, World B/Campaign B excluded; provenance and 8K target",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "regression-cases",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A01",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 1: no ordinary manual-save requirement",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A02",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 2: every non-empty set automatically persists",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A03",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 3: material reads before resolution",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A04",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 4: conversation never replaces owner read",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A05",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 5: explicit failed reads/writes",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A06",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 6: later turn reads committed prior change when material",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A07",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 7: Derived cannot override Canon",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A08",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 8: internal relevant IDs/owners/drill-down references",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A09",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 9: relevance-filtered selection",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A10",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 10: fresh sessions rebuild from persistence",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A11",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 11: target resolved before changing play, not guessed from one path",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A12",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 12: non-empty set proves expected change before complete",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A13",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 13: local saved only after validated readback",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A14",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 14: cloud saved only after required sync/remote verification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A15",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 15: Managed saved only receipt/no backend disclosure",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A16",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 16: persisted explicit Direct/Managed selection/reuse, no silent cross-mode fallback",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A17",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 17: pending/unresolved failure blocks next changing play",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A18",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 18: all three manual commands idempotent",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A19",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 19: Derived refresh after verification",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A20",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 20: configured-mode host tests exercise A-U",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A21",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 21: mode-specific host tests exercise V-X",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A22",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 22: retrieval tests exercise Y/provenance/8K-world isolation",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  },
+  {
+    "clauseId": "CA-A23",
+    "oldAnchor": "acceptance-criteria",
+    "obligation": "`acceptance-criteria` / 23: repository mock-adapter state-machine harness passes",
+    "ownerDocument": "docs/ai/CONTEXT_ASSEMBLY_CONFORMANCE.md",
+    "executableOwners": "acceptance-criteria",
+    "classification": "host-conformance"
+  }
+]

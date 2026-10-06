@@ -10,31 +10,46 @@ internal sealed class CanonicalVocabularyPayload : IDisposable
     public const string SourceIdentity = "d5028af32cf16fe48878ffef0301867175f98f08";
     public string Root { get; } = Path.Combine(Path.GetTempPath(), "EternalCycle.CanonicalVocabulary", Guid.NewGuid().ToString("N"));
 
-    public CanonicalVocabularyPayload(string? sourceRoot = null, bool historical = false)
+    public CanonicalVocabularyPayload(string? sourceRoot = null, bool historical = false, bool current = false)
     {
-        var source = Load(sourceRoot ?? FindRepositoryRoot());
         var baseline = Baseline();
-        // Fixture preparation, not compiler normalization: retain the exact captured
-        // materialization across Git checkout newline policies. Any prose change fails.
-        foreach (var item in source.Sources)
+        if (current)
         {
-            var bytes = Convert.FromBase64String(baseline.SourceBytes.Single(entry => entry.RuleSourceId == item.ManifestEntry.RuleSourceId).BytesBase64);
-            if (Encoding.UTF8.GetString(bytes).ReplaceLineEndings("\n") != item.DecodedText.ReplaceLineEndings("\n"))
+            var source = Load(sourceRoot ?? FindRepositoryRoot());
+            // An explicit LF test materialization makes checkout policy irrelevant.
+            // The compiler still hashes every exact byte of this materialized payload.
+            Write(ManifestPath, Encoding.UTF8.GetBytes(Encoding.UTF8.GetString(source.AuthoritativeManifestBytes.Span).ReplaceLineEndings("\n")));
+            foreach (var item in source.Sources)
             {
-                throw new InvalidOperationException("Canonical source text changed since the pre-E checkpoint: " + item.ManifestEntry.RuleSourceId);
+                Write(item.ManifestEntry.Path, Encoding.UTF8.GetBytes(item.DecodedText.ReplaceLineEndings("\n")));
             }
+            return;
         }
-        // Validate before creating files, so rejected prose does not leak a partial fixture.
+        // Historical FR-023/024/026 evidence is immutable, not a golden silently
+        // regenerated from changed current authority. R2 has separate live-corpus tests.
         Write(ManifestPath, historical ? Convert.FromBase64String(baseline.ManifestBytesBase64) :
-            Encoding.UTF8.GetBytes(Encoding.UTF8.GetString(source.AuthoritativeManifestBytes.Span).ReplaceLineEndings("\n")));
-        foreach (var item in source.Sources)
+            File.ReadAllBytes(FixturePath("before-r2-manifest.json")));
+        using var manifest = JsonDocument.Parse(Convert.FromBase64String(baseline.ManifestBytesBase64));
+        var paths = manifest.RootElement.GetProperty("sources").EnumerateArray().ToDictionary(
+            entry => entry.GetProperty("ruleSourceId").GetString()!, entry => entry.GetProperty("path").GetString()!, StringComparer.Ordinal);
+        foreach (var item in baseline.SourceBytes)
         {
-            Write(item.ManifestEntry.Path, Convert.FromBase64String(baseline.SourceBytes.Single(entry =>
-                entry.RuleSourceId == item.ManifestEntry.RuleSourceId).BytesBase64));
+            Write(paths[item.RuleSourceId], Convert.FromBase64String(item.BytesBase64));
         }
     }
 
     public MaterializedRuleSourceSnapshot Load() => Load(Root);
+
+    public MaterializedRuleSourceSnapshot LoadContentAddressed()
+    {
+        var source = Load();
+        // Delimited IDs and exact byte hashes avoid ambiguous byte concatenation.
+        var evidence = source.ManifestSha256 + "\n" + string.Join("\n", source.Sources.Select(
+            item => item.ManifestEntry.RuleSourceId + ":" + item.SourceSha256));
+        var identity = Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(Encoding.UTF8.GetBytes(evidence)));
+        return MaterializedRuleSourceLoader.Load(new(Root, ManifestPath,
+            new() { Scheme = "materialized-sha256", Value = identity }, source.CompilerIdentity));
+    }
 
     public static MaterializedRuleSourceSnapshot Load(string root) => MaterializedRuleSourceLoader.Load(new(root, ManifestPath,
         new() { Scheme = "git-commit", Value = SourceIdentity },

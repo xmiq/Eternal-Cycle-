@@ -10,6 +10,7 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 1. [Campaign Persistence Philosophy](CAMPAIGN_PERSISTENCE_PHILOSOPHY.md) establishes why persistence exists, what it owns, and how it relates to the World Engine and GM Toolkit.
 2. [Persistence Authority](PERSISTENCE_AUTHORITY.md) defines the authority chain from Repository Canon through Current Narration, conflict routing, explicit correction, and the separation of authority from visibility, certainty, and agency.
+   [Authority Governance](AUTHORITY_GOVERNANCE.md) owns exceptional higher-layer changes and depends on complete ordinary authority. [Authority Conformance](PERSISTENCE_AUTHORITY_CONFORMANCE.md) preserves subordinate worked examples, not another runtime rule source.
 3. [Structured Persistence Architecture](STRUCTURED_PERSISTENCE_ARCHITECTURE.md) defines storage-neutral modules, record contracts, stable identities, typed references, ownership, indexes, partitioning, and dependency closure.
 4. [Canonical Data Ownership](CANONICAL_DATA_OWNERSHIP.md) defines one logical owner per mutable canonical fact, the persistent Entity identity anchor, normalized domain ownership, reference and historical boundaries, and the reserved Autonomous Registry domain.
 5. [Life Archive and Old-Soul Indexing](LIFE_ARCHIVE.md) defines stable Life identity, Soul Overview indexing, finalized Life Summaries, Life Over views, and scalable historical retrieval.

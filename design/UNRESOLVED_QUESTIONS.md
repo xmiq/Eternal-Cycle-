@@ -8,8 +8,6 @@ Questions remain here until resolved through project governance. Suspected issue
 
 Questions that prevent a roadmap task from being completed.
 
-No blocking questions are currently recorded.
-
 ## Non-Blocking
 
 Questions that may remain open while current work continues.
@@ -17,6 +15,8 @@ Questions that may remain open while current work continues.
 ## Resolved
 
 Resolved questions should be moved here temporarily and their accepted outcomes recorded in `design/DECISIONS.md`.
+
+- FR-026 ordinary closure-model acceptance is resolved by owner-approved Architecture B and actual [R2/H acceptance](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md), recorded in D-1373. Complete ordinary authority/context passes supported fixtures using unchanged complete-source dependencies and whole-closure admission. R1.6 remains WORKFLOW_READY design, not universal 8K adoption acceptance; indivisible exceptional decisions still require complete authority/evidence and must stop when unsupported. The historical question and successive blocked conclusions remain in the preserved H/R1/R1.5/R1.6 audits. No Campaign binding, orchestration or whole-context-budget implementation is selected.
 
 - Retained Stat XP and Skill history now aggregate through bounded additive saturation, capability-specific Embodiment Relevance, and Historical Territory. Campaigns may configure local numeric caps, while canon requires meaningful current effort and no universal percentage. Accepted outcomes are recorded in D-1257 through D-1263.
 

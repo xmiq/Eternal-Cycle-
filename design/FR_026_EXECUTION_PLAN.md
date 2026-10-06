@@ -2,13 +2,21 @@
 
 ## Authority and Checkpoint
 
-Owner-authorized [FR-026](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval) begins from clean, synchronized `main` at `2e6497c6f4720229f9a0fd0d2ffba65af1136167`. FR-022 through FR-025 are complete/Closed. FR-026 is the sole selected incomplete objective; A-H below are execution checkpoints, not new Future Revisions. Phase 13 stays Active, Future Revisions stays last, VERSION stays `1.0.0`, and both release/RC tags remain unchanged.
+Owner-authorized [FR-026](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval) begins from clean, synchronized `main` at `2e6497c6f4720229f9a0fd0d2ffba65af1136167`. FR-022 through FR-025 are complete/Closed. At that initial checkpoint FR-026 was the sole selected incomplete objective; A-H below are execution checkpoints, not new Future Revisions. Phase 13 stays Active, Future Revisions stays last, VERSION stays `1.0.0`, and both release/RC tags remain unchanged.
 
-**Current state: A-G complete; H pending.** This plan and matrix were recorded with A-H pending before A implementation. The [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md), [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md), [C audit](audits/FR_026C_RANKING_AUDIT.md), [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md), [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md), [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) and [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md) record executed evidence, not file-based inference. H requires separate owner authorization; this task stops after G's validated commit and normal `main` push.
+**Current state: A-H Complete; FR-026 Closed after R2_ACCEPTED_FOR_H.** The [R2 acceptance audit](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) records the owner-authorized complete ordinary correction, actual fixtures, SQL/reference equivalence and exact-state validation. FR-027 through FR-036 remain pending/unselected. Historical A-G and initial blocked H evidence remain immutable.
+
+The following investigation paragraphs describe their historical, pre-R2 design checkpoints. Their then-unapproved/blocked conclusions are superseded only by the authorized implementation and acceptance above, not silently rewritten.
+
+The [corrective architecture investigation](audits/FR_026H_DEPENDENCY_GRANULARITY_INVESTIGATION.md) provisionally recommended bounded authority sources with selective context-source partitioning. Owner-authorized design-only [R1 review](audits/FR_026H_R1_AUTHORITY_PARTITION_REVIEW.md) accounts for every clause, adds required authority to the 2,572-unit subset, and finds the conservative format-1 graph still does not fit every supported closure at 8K. R2 is not ready or authorized; the blocker remains active. R1-R4 are corrective checkpoints beneath FR-026, not new Future Revisions, and no implementation is started by the review.
 
 ## Recovered Architecture
 
-The normative objective traces master requirements `#3`, `#4`, `#5`, `#30`, `#31`, `#32`, and `#34` (WP2/WP3): useful compiled snippets, controlled indexed retrieval, existing compact packets, deterministic diagnostics, the practical approximately 20K context target, context-cost instrumentation, and integrated compatibility validation. FR-026 contributes bounded rule contexts; FR-031/036 retain whole-context measurement/acceptance, not an invented 20K rule-packet ceiling. [FR-022](../docs/rules/COMPILED_RULES_ARTIFACT.md) owns the artifact; [FR-023 acceptance](audits/FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md) owns compilation; [FR-024 acceptance](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) owns reviewed metadata; [FR-025 acceptance](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) owns acquisition/trust/import. None owns this missing runtime ranking.
+The subsequent design-only [R1.6 adoption atomicity review](audits/FR_026H_R1_6_ADOPTION_WORKFLOW_ATOMICITY_REVIEW.md) exits WORKFLOW_READY: existing Backup/Audit/Merge/Validation carriers support phased host work without hidden model memory, followed by atomic validated activation. B is a proposed R2 baseline, not implementation authorization. Phase floors exclude unknown campaign/specialist payloads; the conservative compound-remedy floor is still 8,186 and cannot be claimed as an accepted 8K phase. Review the supported exceptional-consumer boundary, complete local authority design and ordinary correction before R2. H and the unresolved-question gate remain blocked; no workflow, binding or budget change is implemented.
+
+The design-only [R1.5 executable-authority investigation](audits/FR_026H_R1_5_EXECUTABLE_AUTHORITY_INVESTIGATION.md) measures a clause-complete compact routine specimen at 2,393 units plus 324 governance units. Individual gameplay closures fit; the combined query has optional Evolution exclusions. Complete adoption retains a 14,536-unit dependency closure. Primary exit is BUDGET_REVIEW_REQUIRED for that exceptional workflow, not permission to raise the normal 8K ceiling or begin R2. H remains blocked.
+
+The normative objective traces master requirements `#3`, `#4`, `#5`, `#30`, `#31`, `#32`, and `#34` (WP2/WP3): useful compiled snippets, controlled indexed retrieval, existing compact packets, deterministic diagnostics, the practical approximately 20K context target, context-cost instrumentation, and integrated compatibility validation. FR-026 contributes bounded rule contexts; FR-031/036 retain whole-context measurement/acceptance, not an invented 20K rule-packet ceiling. [FR-022](../docs/rules/COMPILED_RULES_ARTIFACT.md) owns the artifact; [FR-023 acceptance](audits/FR_023_REPRODUCIBLE_RULES_COMPILER_AUDIT.md) owns compilation; [FR-024 acceptance](audits/FR_024_CONTROLLED_RETRIEVAL_VOCABULARY_AUDIT.md) owns reviewed metadata; [FR-025 acceptance](audits/FR_025_ACQUISITION_AND_IMPORT_AUDIT.md) owns acquisition/trust/import. These prerequisites did not own the runtime ranking subsequently implemented by FR-026.
 
 Actual reference components inspected:
 
@@ -56,7 +64,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026A - Requirement Audit and Portable Query Contract
 
-- **Status:** complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md). B-G are complete; H remains pending.
+- **Status:** complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md). B-G are complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisites:** closed FR-022/023/024/025; no further infrastructure.
 - **Files:** this plan; portable `CompiledRuleRetrieval.cs` and focused tests; retrieval contract/navigation; governance and existing status assertions.
 - **Scope:** explicit Ruleset/semantic artifact scope, concrete selectors, bounded query terms/phrases, exact required IDs, immutable prepared request, shared FR-024 normalization and fixed safe failure taxonomy. No matching/ranking engine or store implementation.
@@ -66,7 +74,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026B - Candidate Lookup and Applicability
 
-- **Status:** complete; [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md). C-G are complete; H remains pending.
+- **Status:** complete; [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md). C-G are complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisite:** A.
 - **Files:** portable candidate/index API and tests; format-1 applicability models, A request contract; no SQL changes.
 - **Scope:** reusable artifact-scoped candidate view, exact normalized whole query-entry matches, explicit identities, applicable mandatory roots, source selectors. Empty queries mean structural/mandatory/explicit selection, not all snippets. Preserve distinct `(term, kind, weight)` matches.
@@ -76,7 +84,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026C - Deterministic Ranking and Bounded Evidence
 
-- **Status:** complete; [C audit](audits/FR_026C_RANKING_AUDIT.md). D-G are complete; H remains pending.
+- **Status:** complete; [C audit](audits/FR_026C_RANKING_AUDIT.md). D-G are complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisite:** B.
 - **Files:** portable ranking/result/evidence types, focused tests and contract section.
 - **Scope:** define transparent controlled-match weight/priority ranking and ordinal ties from actual candidate fields. Distinguish mandatory/explicit/direct reasons; no invented alias-origin label or preparation relevance boost.
@@ -87,29 +95,29 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026D - Artifact-Local Dependency Closure
 
-- **Status:** complete; [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md). E-G are complete; H remains pending.
+- **Status:** complete; [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md). E-G are complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisites:** B, C.
 - **Files:** portable closure types/engine/tests; source graph adapters, contract section.
 - **Scope:** transitive source dependency expansion, all applicable snippets of required source, duplicate-free prerequisite order and inclusion reasons; targeted corrupt/missing/cyclic/inapplicable dependency rejection.
-- **Implemented semantics:** all snippets of each required source; world/module/mode/operation compatibility, not query-topic rematching. Iterative source closure, all direct parents, preserved C roots and separate prerequisite-first union plus shared complete per-root groups. The canonical gameplay `save`/combined requests currently fail closed on the declared persistence-authority operation mismatch; D does not edit the manifest to hide that finding.
+- **Implemented semantics:** all snippets of each required source; world/module/mode/operation compatibility, not query-topic rematching. Iterative source closure, all direct parents, preserved C roots and separate prerequisite-first union plus shared complete per-root groups. The frozen pre-R2 artifact's gameplay `save`/combined requests fail closed on the declared persistence-authority operation mismatch; D does not edit the manifest to hide that finding.
 - **Acceptance:** dependencies do not need rank hits; no cross-artifact reference; root and prerequisite reasons/order distinguished; cancellation cannot expose partial success.
 - **Validation:** small graph cases plus canonical dependency-heavy cases, shuffled inputs/history isolation, A-C/full portable and repository checks.
 - **Stop:** complete closures only; no budget admission, SQL or packet format.
 
 ### FR-026E - Compact Packet Admission and Presentation
 
-- **Status:** complete; [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md). F/G are complete; H remains pending.
+- **Status:** complete; [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md). F/G are complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisites:** C, D.
 - **Files:** portable selection/budget engine, existing Managed `RulePacketFormatter` adaptation only if needed, compact packet tests and documentation.
 - **Scope:** whole-closure admission under existing 8K estimated-token ceiling; mandatory/explicit required overflow fails; deterministic prerequisite presentation and source-grouped existing model packet. Zero matches do not load all rules.
-- **Implemented semantics:** reserve complete mandatory/explicit/always-include closure first, then optional roots in C order with unique incremental estimates and whole-closure admission or exclusion. Retain D presentation and C evidence separately; compact artifact-scoped envelope cannot fabricate legacy Campaign/Rule Release binding. Canonical gameplay required cost 2,027, context Kernel cost 1,010; save/combined dependency failures remain unchanged.
+- **Implemented semantics:** reserve complete mandatory/explicit/always-include closure first, then optional roots in C order with unique incremental estimates and whole-closure admission or exclusion. Retain D presentation and C evidence separately; compact artifact-scoped envelope cannot fabricate legacy Campaign/Rule Release binding. Canonical gameplay required cost 2,027, context Kernel cost 1,010; frozen pre-R2 save/combined dependency failures remain unchanged; the R2 corpus resolves them without altering E.
 - **Acceptance:** closure completeness, no duplicate token charge, existing authority envelope, detailed reasons service-only, missing required readiness never becomes guessed content.
 - **Validation:** overflow/exact fit/shared dependencies/mandatory gameplay.resolve/no-match/broad query fixtures, packet size regression, full portable/CLI/Managed compatibility and structural/repository checks.
 - **Stop:** in-memory compiled retrieval/packet semantics; no new campaign entry or durable query adapter.
 
 ### FR-026F - Durable Rule Store Adapter and Publication Boundary
 
-- **Status:** complete; [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md). Verified 011 readback feeds unchanged A-E through a separately authorized compiled runtime path. Opt-in migration 012 adds only imported-artifact publication/activation associations. Imported artifacts are complete rather than progressively prepared; legacy Pending/priority behavior remains unchanged. G is complete; H remains pending.
+- **Status:** complete; [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md). Verified 011 readback feeds unchanged A-E through a separately authorized compiled runtime path. Opt-in migration 012 adds only imported-artifact publication/activation associations. Imported artifacts are complete rather than progressively prepared; legacy Pending/priority behavior remains unchanged. G is complete; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisites:** B-E and FR-025 migration 011.
 - **Files:** `SqlServerCompiledRulesArtifactStore`/new narrow retrieval adapter, published store/preparation interfaces, Managed tests; additive schema/template migration only if actual query shape justifies it.
 - **Scope:** authorized explicit Ruleset/semantic lookup maps to import identity; parameterized snippet/term/dependency access feeding the portable engine. Review JSON term access/index needs with evidence before migrating. Reconcile the normal Rule Domain/publication integration without automatic activation or a competing store; retain legacy publication and progressive readiness semantics. Active lookup must resolve one authorized artifact, not infer a Campaign.
@@ -119,7 +127,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026G - Canonical Quality and Local Cost Acceptance
 
-- **Status:** complete; [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md). Fifty-four canonical cases, deterministic reports, real SQL/reference equality and synthetic isolation measure the frozen A-F semantics. No production behavior or schema changes; H remains pending.
+- **Status:** complete; [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md). Fifty-four canonical cases, deterministic reports, real SQL/reference equality and synthetic isolation measure the frozen A-F semantics. No production behavior or schema changes; H is now complete after R2; the linked audit retains this package's original checkpoint.
 - **Prerequisites:** A-F.
 - **Files:** curated FR-026 request fixtures/tests; FR-024 quality fixture reader reuse; diagnostic/cost audit.
 - **Scope:** representative natural alternative query entries and structural operation requests across combat, save, evolution/preparation, Canon, knowledge, mandatory procedure and dependencies. Review all 65 topology cases for suitability; do not turn all 115 positives into top-rank assertions or confuse prerequisite inclusion with unwanted direct matches.
@@ -129,6 +137,7 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ### FR-026H - Integrated Acceptance and Closure
 
+- **Status:** Complete after [R2 acceptance](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md). The [initial blocked audit](audits/FR_026_COMPILED_RULE_RETRIEVAL_AUDIT.md) remains historical evidence. Complete ordinary authority/context partition resolves all six supported fixtures without changing A-E or their budget; exceptional phased adoption orchestration is explicitly deferred, not claimed implemented.
 - **Prerequisites:** A-G accepted; all matrix rows evidence-backed.
 - **Files:** final FR-026 audit, remaining integrated tests, plan/status/nav/validator assertions.
 - **Scope:** review every requirement and exact staged tree; repair only actual FR-026 defects. Close only after integrated artifact/import/retrieval/filter/rank/closure/readiness/packet/history acceptance and owner authorization.
@@ -137,6 +146,6 @@ Each package rereads only this matrix, its linked authority and directly affecte
 
 ## Compatibility Evidence to Preserve
 
-Canonical frozen fixture: 10 sources, 154 snippets, 773 format-1 terms, 275,622 bytes; semantic digest `56074D713C27846313D0441A63AEC3794371053C8C85BC5FE5AF5891D53CE37B`; serialized SHA-256 `A591012C4C8414A67F05A898941EFCBADBDFD2C0AD314640199B2B50086B6CD6`. These are test/audit evidence, never production constants. A-E, compiler, manifest, vocabulary, migration 011, legacy publication/gameplay and acquisition remain unchanged. F's opt-in 012 association is not a Campaign binding or retrieval algorithm change.
+Historical frozen fixture: 10 sources, 154 snippets, 773 format-1 terms, 275,622 bytes; semantic digest `56074D713C27846313D0441A63AEC3794371053C8C85BC5FE5AF5891D53CE37B`; serialized SHA-256 `A591012C4C8414A67F05A898941EFCBADBDFD2C0AD314640199B2B50086B6CD6`. These remain immutable test/audit evidence, never production constants. R2 deliberately changes current source/manifest/binding topology to 11 sources/130 snippets/729 terms; unchanged A-E, compiler, migration 011/012, acquisition and historical publication semantics are proved separately. F's opt-in 012 association is not a Campaign binding.
 
-No blocking prerequisite conflict was found. F uses complete verified readback without a term index or global cache; G records measured local quality/cost evidence and H still owns integrated closure. No live deployment, production SLA or whole-runtime context acceptance is implied.
+Closed FR-022 through FR-025 prerequisites remain intact. F uses complete verified readback without a term index or global cache; G records historical local quality/cost evidence. R2 resolves H's canonical closure-model blocker and closes FR-026. No live deployment, production SLA, universal adoption or whole-runtime context acceptance is implied.

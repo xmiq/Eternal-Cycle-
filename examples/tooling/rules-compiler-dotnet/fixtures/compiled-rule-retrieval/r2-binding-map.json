@@ -1,0 +1,458 @@
+[
+  {
+    "oldTarget": "core-context-assembly#purpose",
+    "conceptIds": [
+      "context-assembly",
+      "automatic-persistence"
+    ],
+    "oldRationale": "Relevant canonical reading and automatic validated saving are the turn's required linked contract.",
+    "target": "core-context-assembly#purpose",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#runtime-boundary",
+    "conceptIds": [
+      "repository-canon",
+      "rule-gap"
+    ],
+    "oldRationale": "Contracts and validation do not prove an external host performed I/O; missing authority cannot be pretended.",
+    "target": "core-context-assembly#runtime-boundary",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#core-invariants",
+    "conceptIds": [
+      "automatic-persistence",
+      "read-set",
+      "player-agency"
+    ],
+    "oldRationale": "Read, save, retry, visibility, and actual-input gates are explicit immutable runtime constraints.",
+    "target": "core-context-assembly#core-invariants",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#gameplay-turn-state-machine",
+    "conceptIds": [
+      "gameplay-resolution",
+      "automatic-persistence",
+      "player-agency"
+    ],
+    "oldRationale": "Ordered states and actual input bound one interaction before verified completion and delivered narration.",
+    "target": "core-context-assembly#gameplay-turn-state-machine",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#persistence-target-resolution-gate",
+    "conceptIds": [
+      "campaign-binding"
+    ],
+    "oldRationale": "Canonical location, identity, version, recovery, and strategy must be resolved rather than guessing a missing local database.",
+    "target": "core-context-assembly#persistence-target-resolution-gate",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#session-start-and-context-reset",
+    "conceptIds": [
+      "campaign-binding"
+    ],
+    "oldRationale": "Canonical location, identity, version, recovery, and strategy must be resolved rather than guessing a missing local database.",
+    "target": "core-context-assembly#session-start-and-context-reset",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#context-assembly-layer",
+    "conceptIds": [
+      "context-assembly",
+      "rule-retrieval",
+      "compiled-rule-context",
+      "rule-dependencies"
+    ],
+    "oldRationale": "Relevant rules and owner-backed campaign reads use separate authority paths, dependency closure, World filtering, and bounded contexts.",
+    "target": "core-context-assembly#context-assembly-layer",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#relevance-selection",
+    "conceptIds": [
+      "context-assembly",
+      "information-visibility"
+    ],
+    "oldRationale": "Only material owners and visibility/Knowledge boundaries enter selection; linked records are not all automatically loaded.",
+    "target": "core-context-assembly#relevance-selection",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#current-scene-context",
+    "conceptIds": [
+      "context-assembly",
+      "current-state",
+      "information-visibility"
+    ],
+    "oldRationale": "The scene is a derived packet of relevant present owner references, Perspective, intent, and freshness, not new state authority.",
+    "target": "core-context-assembly#current-scene-context",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#purpose-specific-visual-context",
+    "conceptIds": [
+      "visual-context",
+      "information-visibility"
+    ],
+    "oldRationale": "Depiction projects established facts and genuine unknowns without adopting generated choices as Canon.",
+    "target": "core-context-assembly#purpose-specific-visual-context",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#hierarchical-context",
+    "conceptIds": [
+      "derived-context"
+    ],
+    "oldRationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries.",
+    "target": "core-context-assembly#hierarchical-context",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#freshness",
+    "conceptIds": [
+      "derived-context"
+    ],
+    "oldRationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries.",
+    "target": "core-context-assembly#freshness",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#canon-before-derived-context",
+    "conceptIds": [
+      "derived-context"
+    ],
+    "oldRationale": "Summary depth and invalidation navigate verified owners; unsaved narration cannot refresh canonical summaries.",
+    "target": "core-context-assembly#canon-before-derived-context",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#mandatory-read-gate",
+    "conceptIds": [
+      "read-set",
+      "uncertainty",
+      "rule-dependencies",
+      "rule-gap"
+    ],
+    "oldRationale": "Source identity, visibility, time, status, material references, and explicit gaps are checked before resolution.",
+    "target": "core-context-assembly#mandatory-read-gate",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#resolution-and-affected-set-gate",
+    "conceptIds": [
+      "affected-set",
+      "world-state"
+    ],
+    "oldRationale": "All changed canonical owners including world/location/time are assessed, even after a quiet or failed action.",
+    "target": "core-context-assembly#resolution-and-affected-set-gate",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#automatic-persistence-gate",
+    "conceptIds": [
+      "automatic-persistence",
+      "affected-set",
+      "transaction-commit"
+    ],
+    "oldRationale": "One complete owner-routed transaction validates, verifies configured authority, and only then activates the Save Point.",
+    "target": "core-context-assembly#automatic-persistence-gate",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#player-visible-persistence-status",
+    "conceptIds": [
+      "save-status",
+      "save-evidence"
+    ],
+    "oldRationale": "Local, cloud, pending, failed, and Managed receipt statuses require actual completion evidence.",
+    "target": "core-context-assembly#player-visible-persistence-status",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#manual-persistence-commands",
+    "conceptIds": [
+      "manual-save",
+      "save-status",
+      "save-retry"
+    ],
+    "oldRationale": "The three exact commands force, inspect, or safely resume normal persistence without replaying narrative effects.",
+    "target": "core-context-assembly#manual-persistence-commands",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#canonical-change-proof-and-unchanged-save-detector",
+    "conceptIds": [
+      "save-evidence"
+    ],
+    "oldRationale": "Expected owner/version/hash/read-back changes prove a save; unchanged expected state fails the turn.",
+    "target": "core-context-assembly#canonical-change-proof-and-unchanged-save-detector",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#no-change-turns",
+    "conceptIds": [
+      "no-change-turn",
+      "visual-context"
+    ],
+    "oldRationale": "Verified empty affected sets and ordinary rendering perform no mutation; explicit later adoption changes that boundary.",
+    "target": "core-context-assembly#no-change-turns",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#failure-and-retry",
+    "conceptIds": [
+      "save-retry",
+      "rule-gap"
+    ],
+    "oldRationale": "Read failure stays explicit, parent Save Points remain validated, and retries preserve identity and effects once.",
+    "target": "core-context-assembly#failure-and-retry",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#next-turn-verification",
+    "conceptIds": [
+      "save-evidence",
+      "read-set"
+    ],
+    "oldRationale": "The next turn retrieves committed owner state from persistence instead of conversation or old packets.",
+    "target": "core-context-assembly#next-turn-verification",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#specialist-integrations",
+    "conceptIds": [
+      "memory-continuity",
+      "visual-context",
+      "historical-record"
+    ],
+    "oldRationale": "Relevant Archive/history/Memory and appearance records remain owner-backed and visibility-limited; retrieval grants no recall.",
+    "target": "core-context-assembly#specialist-integrations",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-context-assembly#existing-campaign-adoption",
+    "conceptIds": [
+      "rules-migration"
+    ],
+    "oldRationale": "Backup, owner audit, configured gates, validation, and provenance precede adoption without rewriting a populated campaign here.",
+    "target": "core-authority-governance#governed-changes",
+    "disposition": "moved-and-coalesced",
+    "reason": "Governance owns the reviewed revision/retcon concept; eight adoption steps retain a nonruntime specialist owner."
+  },
+  {
+    "oldTarget": "core-context-assembly#development-context-and-auditability",
+    "conceptIds": [
+      "audit-context"
+    ],
+    "oldRationale": "Authorized operational traces may expose Read/Affected Sets and evidence while retaining Secrets and ordinary UX boundaries.",
+    "target": "core-context-assembly#development-context-and-auditability",
+    "disposition": "preserved",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#purpose",
+    "conceptIds": [
+      "repository-canon",
+      "canon-conflict"
+    ],
+    "oldRationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#core-rule",
+    "conceptIds": [
+      "repository-canon",
+      "canon-conflict"
+    ],
+    "oldRationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#authority-is-claim-specific",
+    "conceptIds": [
+      "repository-canon",
+      "canon-conflict"
+    ],
+    "oldRationale": "Claim-specific hierarchy prevents recent prose or stale summaries from silently defeating higher-authority evidence.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#repository-canon",
+    "conceptIds": [
+      "repository-canon"
+    ],
+    "oldRationale": "Reusable rules, accepted governance, safeguards, and repository conflicts own mechanics but no populated campaign facts.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#campaign-canon",
+    "conceptIds": [
+      "campaign-canon",
+      "campaign-binding"
+    ],
+    "oldRationale": "Campaign identity, selected profile, premises, retcons, and stable assignments are campaign-specific commitments.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#historical-record",
+    "conceptIds": [
+      "historical-record"
+    ],
+    "oldRationale": "Durable events and traceable supersession distinguish fact from dated belief or narration.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#current-campaign-state",
+    "conceptIds": [
+      "current-state",
+      "historical-record"
+    ],
+    "oldRationale": "Integrated current conditions follow actual history and cannot erase unsaved valid session events.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#current-session",
+    "conceptIds": [
+      "affected-set",
+      "transaction-commit"
+    ],
+    "oldRationale": "Confirmed deltas remain pending integration rather than drafts or fully validated Save Points.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#current-narration",
+    "conceptIds": [
+      "canon-conflict"
+    ],
+    "oldRationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#conflict-classification-procedure",
+    "conceptIds": [
+      "canon-conflict"
+    ],
+    "oldRationale": "Presentation and discrepancy routing cannot invent a hidden fact merely to defend recent wording.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#rules-authority-and-persistence-authority",
+    "conceptIds": [
+      "repository-canon",
+      "campaign-canon"
+    ],
+    "oldRationale": "The rule-status and campaign-fact hierarchies answer distinct questions; Living Codex is not another campaign truth layer.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#authority-does-not-equal-visibility",
+    "conceptIds": [
+      "information-visibility"
+    ],
+    "oldRationale": "Which claim governs is separate from who can see it; GM-private notes gain no extra fact authority.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#authority-does-not-equal-certainty",
+    "conceptIds": [
+      "uncertainty"
+    ],
+    "oldRationale": "Unknown, estimated, disputed, and unverified remain authoritative information statuses, not gaps to guess.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#authority-does-not-equal-actor-control",
+    "conceptIds": [
+      "player-agency"
+    ],
+    "oldRationale": "Recorded aims, relationships, plans, titles, and prophecy do not preselect future deliberate choices.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#valid-downward-updates",
+    "conceptIds": [
+      "historical-record",
+      "transaction-commit"
+    ],
+    "oldRationale": "Owned events and authorized migrations propagate with explicit scope and dependencies, not silent overwrite.",
+    "target": "core-persistence-authority#executable-authority",
+    "disposition": "coalesced",
+    "reason": "Complete routine authority or unchanged Context owns this concept."
+  },
+  {
+    "oldTarget": "core-persistence-authority#repository-revision-changes",
+    "conceptIds": [
+      "rules-migration"
+    ],
+    "oldRationale": "A new available rules version does not automatically alter active profiles, history, capability, or retcon authority.",
+    "target": "core-authority-governance#governed-changes",
+    "disposition": "moved-and-coalesced",
+    "reason": "Governance owns the reviewed revision/retcon concept; eight adoption steps retain a nonruntime specialist owner."
+  },
+  {
+    "oldTarget": "core-persistence-authority#authorized-retcons",
+    "conceptIds": [
+      "retcon",
+      "historical-record"
+    ],
+    "oldRationale": "Campaign authority approves exact replacement and provenance while preserving superseded material and dependent choices.",
+    "target": "core-authority-governance#governed-changes",
+    "disposition": "moved-and-coalesced",
+    "reason": "Governance owns the reviewed revision/retcon concept; eight adoption steps retain a nonruntime specialist owner."
+  }
+]

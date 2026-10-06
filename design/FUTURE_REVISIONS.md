@@ -58,23 +58,9 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-026 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-025 is closed after A-G acceptance. FR-026 is the sole selected incomplete objective; FR-027 through FR-036 remain pending/unselected. Roadmapping alone does not select a current implementation objective.
+FR-027 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-026 is Closed after A-H/R2 acceptance. No implementation objective is selected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
-
-### FR-026 - Compiled Rule Store and Intelligent Retrieval
-
-- **Status:** Roadmapped
-- **Issue:** Runtime selection uses compiled chunks and structural selectors but not the planned portable artifact, reviewed vocabulary ranking, or complete retrieval diagnostics.
-- **Affected systems:** Rule Domain, artifact import, indexes, ranking, dependency closure, Rule Packets, diagnostics, budgets, and World/Ruleset isolation.
-- **Gameplay impact:** Relevant rules may require exact caller vocabulary and runtime search remains less efficient and diagnosable than intended.
-- **Evidence needed:** Explainable alternative-term selection, filter/isolation regressions, dependency completeness, compact packets, Pending behavior, and giant-record replacement proof.
-- **Suggested future phase:** Phase 13 - Future Revisions.
-- **Priority:** Critical
-- **Status reason:** Owner-authorized FR-026 selection begins bounded implementation after FR-022 through FR-025 closure; it extends rather than reopens completed FR-018 and FR-021 retrieval foundations.
-- **Execution progress:** A-G checkpoints complete; [A audit](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md), [B audit](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md), [C audit](audits/FR_026C_RANKING_AUDIT.md), [D audit](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md) and [E audit](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md) retain historical reference evidence. The [F audit](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) records authorized lossless SQL readback, separate publication/activation, unchanged legacy routing and exact A-E equivalence. The [G audit](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md) records canonical positive/negative quality, dependency/budget integrity, deterministic reports and local SQL/context counters. H remains pending under the [execution plan](FR_026_EXECUTION_PLAN.md); local rule-context evidence does not imply whole-runtime acceptance or Campaign binding.
-- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
-- **Planning specification:** [FR-026 task](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval)
 
 ### FR-027 - Stable Campaign Binding and Managed Gameplay Entry
 
@@ -207,6 +193,22 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Planning specification:** [FR-036 task](V1_1_FUTURE_REVISION_PLAN.md#fr-036---long-campaign-and-v11-integrated-acceptance)
 
 ## Closed
+
+### FR-026 - Compiled Rule Store and Intelligent Retrieval
+
+- **Status:** Closed
+- **Issue:** Runtime selection required portable artifacts, reviewed vocabulary ranking, complete diagnostics and executable ordinary authority/context closures.
+- **Affected systems:** Rule Domain, artifact import, indexes, ranking, dependencies, Rule Packets, diagnostics, budgets and World/Ruleset isolation.
+- **Gameplay impact:** Supported gameplay requires complete applicable authority without hidden memory, missing prerequisites or full-corpus context.
+- **Evidence needed:** Explainable selection, exact isolation, dependency completeness, compact packets, durable/reference equivalence and historical integrity.
+- **Suggested future phase:** Phase 13 - Future Revisions.
+- **Priority:** Critical
+- **Status reason:** Owner-authorized Architecture B/R2 passes ordinary H acceptance. Complete routine authority, governance and context own all 273 reviewed responsibilities; six H cases execute through unchanged reference/SQL semantics. No format/ranking/budget extension or new schema migration is required. Exceptional adoption remains a canonical host/specialist procedure with complete local authority/evidence and atomic activation, not a universally affordable or implemented phased orchestrator.
+- **Execution progress:** A-H complete. [A](audits/FR_026A_RETRIEVAL_CONTRACT_AUDIT.md), [B](audits/FR_026B_CANDIDATE_MATCHING_AUDIT.md), [C](audits/FR_026C_RANKING_AUDIT.md), [D](audits/FR_026D_DEPENDENCY_CLOSURE_AUDIT.md), [E](audits/FR_026E_CLOSURE_AWARE_PACKET_AUDIT.md), [F](audits/FR_026F_SQL_RUNTIME_RETRIEVAL_AUDIT.md) and [G](audits/FR_026G_RETRIEVAL_QUALITY_COST_AUDIT.md) evidence is retained. The [blocked H audit](audits/FR_026_COMPILED_RULE_RETRIEVAL_AUDIT.md), [granularity investigation](audits/FR_026H_DEPENDENCY_GRANULARITY_INVESTIGATION.md), [R1 clause review](audits/FR_026H_R1_AUTHORITY_PARTITION_REVIEW.md), [R1.5 specimen](audits/FR_026H_R1_5_EXECUTABLE_AUTHORITY_INVESTIGATION.md) and [R1.6 WORKFLOW_READY review](audits/FR_026H_R1_6_ADOPTION_WORKFLOW_ATOMICITY_REVIEW.md) remain immutable historical checkpoints. Their then-blocked findings are resolved only by [R2 acceptance](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md), not retroactively rewritten.
+- **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
+- **Planning specification:** [FR-026 task](V1_1_FUTURE_REVISION_PLAN.md#fr-026---compiled-rule-store-and-intelligent-retrieval)
+- **Closure references:** D-1373, [complete authority](../docs/persistence/PERSISTENCE_AUTHORITY.md), [governance](../docs/persistence/AUTHORITY_GOVERNANCE.md), [context](../docs/ai/CONTEXT_ASSEMBLY_AND_TURN_PERSISTENCE.md), [adoption boundary](../docs/ai/CONTEXT_ASSEMBLY_ADOPTION.md), [execution plan](FR_026_EXECUTION_PLAN.md) and [R2 audit](audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md).
+
 
 ### FR-025 - Provider-Neutral Artifact Acquisition and Import
 

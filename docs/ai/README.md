@@ -33,6 +33,8 @@ Repository-wide ownership, dependency, extension, and consumer metadata is maint
 
 ## Runtime-Specific Profiles
 
+The [Context Assembly Conformance](CONTEXT_ASSEMBLY_CONFORMANCE.md) companion preserves host/schema tests and acceptance criteria. [Context Assembly Adoption](CONTEXT_ASSEMBLY_ADOPTION.md) retains the exceptional host/specialist setup procedure and the explicit bounded-execution stop gate; it is not an implemented adoption orchestrator or an ordinary runtime Rule Source.
+
 - [ChatGPT GM Universal Instructions](chatgpt/CHATGPT_GM_UNIVERSAL_INSTRUCTIONS.md) - ChatGPT-specific Gameplay and Development Contexts, boot, action fidelity, world simulation, strict Save-Before-Delivery, correction, and failure behavior.
 
 Runtime-specific profiles are replaceable operational extensions. They do not redefine gameplay mechanics, Campaign Persistence semantics, or shared human and AI GM responsibilities.

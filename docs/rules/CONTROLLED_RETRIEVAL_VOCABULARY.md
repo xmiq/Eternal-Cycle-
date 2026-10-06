@@ -141,7 +141,7 @@ Vocabulary does not change Rule Source IDs, source-byte hashes, snippet IDs, exe
 
 Exact manifest SHA-256 also participates in that projection. Two differently formatted, ordered, normalized-equivalent, or differently explained declarations may emit identical terms but still have different manifest hashes, artifact digests, and bytes. This is required provenance, not nondeterminism. Identical authoritative bytes and explicit identities produce identical output across repeated processes, source-root relocation, working directories, cultures, and internal set insertion order.
 
-LF/CRLF source variants retain equivalent normalized snippets where appropriate, but different authoritative source hashes and consequently different artifact digests/bytes. An absent vocabulary retains the exact FR-023 canonical 10-source/154-snippet artifact baseline, including the 223,929-byte output; explicit empty vocabulary emits no terms but still has its own exact manifest provenance.
+LF/CRLF source variants retain equivalent normalized snippets where appropriate, but different authoritative source hashes and consequently different artifact digests/bytes. For the same frozen historical authoritative inputs, absent vocabulary retains the exact FR-023 10-source/154-snippet artifact baseline, including the 223,929-byte output; explicit empty vocabulary emits no terms but still has its own exact manifest provenance.
 
 ## Validation and Failure
 
@@ -216,7 +216,9 @@ Corpus curation inspects precise positive/negative targets, uncovered snippets, 
 
 ### Canonical Curation Convention
 
-The canonical manifest now explicitly reviews 62 concepts, 67 aliases, 72 phrases, and 122 bindings across the same 10 sources/154 snippets. Canonical terms use weight 900, useful phrases 800, aliases 700, and three justified generic aliases 600. These weights are not retrieval scores. Concepts distinguish campaign/repository authority, experience/rule preparation, and evolution convergence/divergence/regression; they never change executable meaning.
+The historical FR-024E canonical manifest reviewed 62 concepts, 67 aliases, 72 phrases, and 122 bindings across the same 10 sources/154 snippets. Canonical terms use weight 900, useful phrases 800, aliases 700, and three justified generic aliases 600. These weights are not retrieval scores. Concepts distinguish campaign/repository authority, experience/rule preparation, and evolution convergence/divergence/regression; they never change executable meaning.
+
+The [FR-026H R2 correction](../../design/audits/FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) preserves those 62 concepts, terms and weights while explicitly remapping authority/context ownership: 106 bindings across 11 sources/130 snippets emit 729 associations/origins. Historical bindings, artifacts and quality expectations remain frozen; changed whole-source ownership receives reviewed precision dispositions rather than falsified old identity.
 
 Bindings are snippet-specific except the single-snippet heading-free bootstrap. Generic wording is normally replaced by discriminating phrases. Retained ambiguity requires precise target sets and concise rationale. Positive/negative fixtures assert association presence/absence, not a runtime ranking. Curation aims at useful precision, not universal coverage. See the [E audit](../../design/audits/FR_024E_CANONICAL_VOCABULARY_AUDIT.md) for before/after identities, 115 positive/130 negative expectations, 32 reviewed residual gaps, and all three unsuppressed warning dispositions under the explicit reviewer policy. This does not authorize runtime matching or ranking.
 
