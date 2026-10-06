@@ -104,7 +104,23 @@ Administrative tools are separately configuration-gated and require explicit inf
 
 No tool accepts arbitrary SQL, a caller-supplied schema, a connection string, or a credential. Source publication and schema mutation remain administrative responsibilities even when exposed through the explicitly gated setup surface.
 
-## Build and Test
+## Durable Campaign Binding Checkpoint
+
+FR-027B implements routing only; [C-G](../../../../design/FR_027_EXECUTION_PLAN.md) still own trusted input, entry, mutation/yield and live acceptance. No `ec_begin_gameplay_interaction` tool or gameplay authorization is available from a binding. Legacy setup, persistence and retrieval are unchanged when the new opt-in is disabled.
+
+The deployment configures `EternalCycle:CampaignBinding:Enabled`, `PrincipalId`, `LogicalSessionId`, a non-secret logical `AuthorityId`, the explicit `AuthorizedCampaignIds` array, and separate `AllowSoleCampaignResume`, `AllowSelection`, `AllowSwitch` grants. Configuration discovery exposes their exact environment keys without returning principal/session/access values. The configured logical session must survive reconnect; it is not a PID, conversation fingerprint, tool argument or attestation of a real player input. An empty access array grants no access. A multi-user host must provide an authenticated per-session adapter rather than sharing these single-session settings between users.
+
+`ec_resolve_campaign_binding` recovers/verifies the current binding, or returns zero/one/multiple eligible campaign results and meaningful safe choice handles. `ec_select_campaign_binding` takes the selected current handle, stable Request ID, expected Binding ID/revision and actual selection approval. `ec_switch_campaign_binding` creates a successor, never retargets the old handle; `ec_suspend_campaign_binding` preserves history. Technical identities stay in machine evidence, not primary player UX. None accepts story text or a caller-supplied session/principal.
+
+Additive [013](src/EternalCycle.Persistence.Mcp/Schema/013_campaign_session_binding.sql) and its [routed template](src/EternalCycle.Persistence.Mcp/Schema/013_campaign_session_binding.template.sql) create only binding aggregates and retry receipts. Setup offers this migration only when binding is enabled. No existing campaign is guessed or rewritten. Repeat-safe upgrade preserves all save/rule history; downgrade uses verified backup/controlled restore, not a promised down migration.
+
+Evidence covers configured authority/namespace/world/schema/rules profile, active validated Campaign Version, active selected legacy release or compiled artifact, immutable source identity, minimum preparation, bootstrap hash/state/revision and incomplete save transaction reference. `UserConfirmed` is not `Verified`; binding validity is not full gameplay readiness or an interaction grant. D must still perform entry/rule/Canon verification.
+
+Production switching and changed-profile reconfirmation deliberately return `BINDING_SWITCH_BLOCKED` until C supplies `ISqlCampaignBindingSwitchSafety`. Its implementation must participate in the same transaction-owned session lock as interaction admission and test open work, pending decisions and recovery. A test-only substitute proves atomic successor behavior, not player-input enforcement. All non-Completed existing save transactions conservatively block switching. The reference cannot yet classify every lost acknowledgment/current-session uncertainty; later interaction recovery must supply that evidence without redirecting old writes.
+
+See [B acceptance](../../../../design/audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) for exact SQL/process tests and limits.
+
+## Build and Test Commands
 
 ```powershell
 dotnet build examples/tooling/managed-data/mcp-dotnet-tsql/src/EternalCycle.Persistence.Mcp/EternalCycle.Persistence.Mcp.csproj

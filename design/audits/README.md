@@ -4,6 +4,8 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-027B Durable Campaign Binding Acceptance](FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) - durable routing only; C-G authorization/entry/mutation and live acceptance remain pending.
+
 - [FR-026H R2 Authority/Context Acceptance](FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) - accepted complete ordinary partition, all 273 responsibilities, actual six-fixture SQL/reference evidence and historical isolation; FR-026 Closed, exceptional orchestration and whole-context/live acceptance remain deferred. The five preceding H/R1 investigations below are immutable historical evidence, not current blockers.
 
 - [FR-026H-R1.6 Adoption Workflow Atomicity Review](FR_026H_R1_6_ADOPTION_WORKFLOW_ATOMICITY_REVIEW.md) - durable four-stage reasoning versus atomic activation; WORKFLOW_READY design with explicit local-context/admission limits, pending owner approval and no implemented workflow or H closure.

@@ -4,7 +4,7 @@
 
 FR-027 is the sole owner-selected incomplete Future Revision. Its [governed objective](V1_1_FUTURE_REVISION_PLAN.md#fr-027---stable-campaign-binding-and-managed-gameplay-entry) is **Stable Campaign Binding and Managed Gameplay Entry**. A-G are execution checkpoints beneath it, not new Future Revisions. The owner selected A from clean synchronized `main` at `8b0168da8654fb5b40666f3a2ed01ade54814d34`, after closed FR-026/R2.
 
-**A Complete (contract only); B-G Pending. FR-027 remains selected/in progress and Roadmapped, not Closed.** The [canonical contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) and [A audit](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md) are the authority for implementation. Runtime enforcement remains absent in A. Phase 13 stays Active; FR-028 through FR-036 stay pending/unselected. VERSION remains `1.0.0`; no tag/release action is authorized.
+**A Complete (contract only); B Complete (binding only); C-G Pending. FR-027 remains selected/in progress and Roadmapped, not Closed.** The [canonical contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md), [A audit](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md) and [B acceptance](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) distinguish durable routing from still-absent input/entry/mutation enforcement. Phase 13 stays Active; FR-028 through FR-036 stay pending/unselected. VERSION remains `1.0.0`; no tag/release action is authorized.
 
 ## Architectural Inventory
 
@@ -27,7 +27,8 @@ Do not expose partially wired capabilities: persistence compatibility remains un
 
 ### FR-027B - Durable Campaign Session Binding
 
-- **Status:** Pending. **Prerequisites:** A; current FR-020 discovery, canonical configuration/Save Index and authorization.
+- **Status:** Complete, binding only. **Prerequisites:** A; current FR-020 discovery, canonical configuration/Save Index and authorization.
+- **Actual checkpoint:** `CampaignBindingService` / `ICampaignBindingStore` with SQL aggregate/receipt storage in additive opt-in migration 013. Trusted configured principal/logical session and explicit access policy never come from model tool arguments. Existing directory descriptors and validated campaign/rules/bootstrap evidence support choices, recovery and suspension. Serializable session-scoped transitions and idempotent receipts preserve successor history. Four reference binding tools are not gameplay entry. Production switching and profile reconfirmation fail closed until C supplies `ISqlCampaignBindingSwitchSafety` under the same transaction/session lock. See the B audit for actual tests and host limitations.
 - **Objective:** implement session-scoped durable bindings, safe zero/one/multiple discovery/selection, verified version/profile references, recovery/suspension and explicit switch generations. Decide the actual trusted logical-session adapter/configuration, never a transport PID or story fingerprint.
 - **Likely files:** new small binding contract/store and tests within Managed reference tooling; `ManagedAdministration.cs`, schema/migration packaging only if required, existing routing/readiness integration, A contract and B audit. Portable rule library remains untouched.
 - **Acceptance:** matrix S01-S06/S24/S30/S31/S34/S35/S40; exact campaign/access/generation isolation, meaningful selection, no semantic matching, atomic successor switching, no retargeted old handle; setup/adoption handoff only to verified authority. Persistence/entry callers cannot yet claim enforcement.

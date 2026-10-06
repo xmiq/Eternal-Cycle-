@@ -4,7 +4,7 @@
 
 This contract defines authoritative campaign routing and player-input authorization. It sequences existing owners; it grants no new mechanic, player choice, campaign fact, or persistence authority.
 
-**Contract accepted in FR-027A; service enforcement is not implemented in A.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates this design checkpoint from B-G implementation and acceptance. Existing tools must not be described as enforcing this contract merely because they accept an Interaction ID. The reference operation name below is reserved, not an available MCP tool.
+**Contract accepted in FR-027A; durable binding implemented in FR-027B only.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates binding from C-G input, entry, mutation and live acceptance. Existing tools must not be described as enforcing gameplay authorization merely because they accept an Interaction ID. The reference gameplay-entry operation below remains reserved, not an available MCP tool.
 
 ## Document Control
 
@@ -81,6 +81,12 @@ Cancellation preserves validated committed effects; it is not rollback or permis
 `Continue the game` recovers/reuses a binding or follows zero/one/multiple discovery above. A pure resume can return current verified presentation read-only; it does not invent an action. Resume plus an explicit action can use mandatory entry for that same actual submission once bound. Multiple-campaign ambiguity requires a real choice first.
 
 Validated adoption remains a separate [host/specialist workflow](CONTEXT_ASSEMBLY_ADOPTION.md). Its eventual atomic activation refreshes or establishes the binding's adopted profile/version; later gameplay uses entry. This contract neither orchestrates adoption nor places it inside `gameplay.resolve`.
+
+## Binding Implementation Checkpoint
+
+The [B acceptance audit](../../design/audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) records the reference's opt-in durable binding, authenticated deployment/session scope, exact authorized choices, version/profile/readiness verification, suspension and successor history. Binding validity is not Player Interaction authorization. The reference's configured session adapter is not proof of real-host human submission origin.
+
+Switch and changed-profile reconfirmation require a transaction-scoped interaction/decision safety check plus known persistence disposition. Until C supplies that check, the deployed reference fails closed; a deterministic test substitute proves successor atomicity without pretending real interaction storage exists. Missing safety evidence is not a switch permission. No campaign write or pending decision is transferred.
 
 ## Player Interaction State Machine
 

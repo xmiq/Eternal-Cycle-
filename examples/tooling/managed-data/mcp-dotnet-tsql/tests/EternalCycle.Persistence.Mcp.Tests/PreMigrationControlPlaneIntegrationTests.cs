@@ -69,9 +69,11 @@ public sealed class PreMigrationControlPlaneIntegrationTests
                 CompilerContractVersion: snapshot.CompilerContractVersion,
                 VersionMetadata: snapshot.VersionMetadata);
             var plan = RulePublicationWritePlan.Create(release.Index);
-            Assert.Equal(154, plan.ChunkRows);
-            Assert.Equal(1004, plan.SelectorRows);
-            Assert.Equal(803, plan.DependencyRows);
+            // This test acquires current HEAD, not the frozen pre-R2 corpus.
+            // Keep the accepted R2 plan explicit; historical fixtures stay unchanged.
+            Assert.Equal(130, plan.ChunkRows);
+            Assert.Equal(834, plan.SelectorRows);
+            Assert.Equal(95, plan.DependencyRows);
 
             var store = new SqlServerPublishedRuleStore(persistence);
             await store.StageCandidateAsync(release, CancellationToken.None);

@@ -92,6 +92,9 @@ builder.Services.AddSingleton<IGmHostConfigurationService, GmHostConfigurationSe
 builder.Services.AddSingleton<ISchemaBootstrapExecutor, SqlServerSchemaBootstrapExecutor>();
 builder.Services.AddSingleton<ICampaignDirectoryService, SqlServerCampaignDirectoryService>();
 builder.Services.AddSingleton<IManagedAdministrationService, ManagedAdministrationService>();
+builder.Services.AddOptions<CampaignBindingOptions>().Bind(builder.Configuration.GetSection("EternalCycle:CampaignBinding"));
+builder.Services.AddSingleton<ICampaignBindingStore, SqlServerCampaignBindingStore>();
+builder.Services.AddSingleton<CampaignBindingService>();
 builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersistenceStore>();
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();

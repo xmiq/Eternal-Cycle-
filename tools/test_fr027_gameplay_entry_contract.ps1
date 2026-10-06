@@ -32,7 +32,7 @@ $registry = Read-RepoFile 'docs/DOCUMENT_REGISTRY.md'
 $index = Read-RepoFile 'docs/ai/README.md'
 $manifest = Read-RepoFile 'docs/rules/rule-source-manifest.json'
 
-Assert-Requirement 1 ($contract -match 'service enforcement is not implemented in A' -and $audit -match 'specified, not executed in A') 'Contract acceptance is distinct from runtime and live acceptance.'
+Assert-Requirement 1 ($contract -match 'C-G input, entry, mutation and live acceptance' -and $contract -match 'not Player Interaction authorization' -and $audit -match 'specified, not executed in A') 'Contract and binding acceptance are distinct from runtime and live acceptance.'
 Assert-Requirement 2 ($contract -match 'Every actual newly submitted player gameplay input creates exactly one' -and $contract -match 'service-owned interaction authorization') 'Actual input and service-owned mutation authorization are required.'
 Assert-Requirement 3 ($contract -match 'semantic similarity' -and $contract -match 'Conversation search cannot choose among campaigns') 'Campaign selection rejects story and conversation inference.'
 Assert-Requirement 4 ($contract -match 'last-verified time is optional' -and $contract -match 'Binding identity and generation' -and $contract -match 'Rules/profile reference') 'Binding records minimal identity, version, profile and readiness evidence.'
@@ -63,7 +63,7 @@ $scenarioIds = @([regex]::Matches($audit, '(?m)^\| (S\d{2}) \|') | ForEach-Objec
 $expectedIds = @(1..40 | ForEach-Object { 'S{0:D2}' -f $_ })
 Assert-Requirement 27 (($scenarioIds -join ',') -ceq ($expectedIds -join ',')) 'All 40 unique ordered later acceptance scenarios are present.'
 Assert-Requirement 28 ($audit -match 'S05 and S17 are first-class motivating regressions' -and $audit -match 'not replayed live tests in A') 'Both motivating regressions preserve evidence attribution.'
-Assert-Requirement 29 ($plan -match 'A Complete \(contract only\); B-G Pending' -and @([regex]::Matches($plan, '(?m)^### FR-027[A-G] - ')).Count -eq 7 -and $plan -match 'A -> B -> C -> D -> E -> F -> G') 'Bounded A-G checkpoints preserve dependencies and stopping boundaries.'
+Assert-Requirement 29 ($plan -match 'A Complete \(contract only\); B Complete \(binding only\); C-G Pending' -and @([regex]::Matches($plan, '(?m)^### FR-027[A-G] - ')).Count -eq 7 -and $plan -match 'A -> B -> C -> D -> E -> F -> G') 'Bounded A-G checkpoints preserve dependencies and stopping boundaries.'
 Assert-Requirement 30 ($roadmap -match '- \[~\] \*\*FR-027' -and $roadmap -match 'Selected implementation objective:\*\* FR-027' -and $roadmap -match '- \[x\] \*\*FR-026' -and $future -match 'FR-028 through FR-036 are unselected') 'Only FR-027 is selected/in progress while FR-026 remains closed.'
 Assert-Requirement 31 ($decisions -match 'D-1374' -and $decisions -match 'D-1375' -and $decisions -match 'D-1376' -and $terms -match '## Campaign Session Binding' -and $terms -match '## Player Interaction ID' -and $registry -match 'CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md' -and $index -match 'CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md') 'Accepted decisions, terminology and canonical navigation are connected.'
 Assert-Requirement 32 ($manifest -notmatch 'CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY' -and $contract -match 'FR-029 correction-history separation' -and $contract -match 'FR-030 compact persistence/lost-ack APIs' -and $contract -match 'FR-031 end-to-end economics') 'A adds no compiled source or downstream implementation authority.'

@@ -660,7 +660,8 @@ public sealed class SqlServerRuleSourceConfigurationStore(
 public sealed class SqlServerSchemaBootstrapExecutor(
     IOptions<SqlServerPersistenceOptions> persistenceOptions,
     ICampaignSchemaResolver schemaResolver,
-    IOptions<CompiledRuleRuntimeOptions>? compiledRules = null) : ISchemaBootstrapExecutor
+    IOptions<CompiledRuleRuntimeOptions>? compiledRules = null,
+    IOptions<CampaignBindingOptions>? campaignBinding = null) : ISchemaBootstrapExecutor
 {
     private static readonly Regex BatchSeparator = new(
         @"^\s*GO\s*$",
@@ -867,6 +868,17 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 "012_compiled_artifact_publication",
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("012_compiled_artifact_publication.template.sql")));
+        }
+
+        // B remains an explicit control-plane opt-in, not a new prerequisite for
+        // legacy gameplay before C-E can enforce interaction admission.
+        if (campaignBinding?.Value.Enabled == true &&
+            new[] { "campaign_session_bindings", "campaign_binding_receipts" }.Any(table => !domainTables.Contains(table)))
+        {
+            migrations.Add(new(
+                "013_campaign_session_binding",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("013_campaign_session_binding.template.sql")));
         }
 
         return migrations;
@@ -1180,7 +1192,7 @@ public sealed class SqlServerCampaignDirectoryService(
     }
 }
 
-public class ManagedServiceException(string code, string safeMessage) : Exception(safeMessage)
+public class ManagedServiceException(string code, string safeMessage, Exception? innerException = null) : Exception(safeMessage, innerException)
 {
     public string Code { get; } = code;
 

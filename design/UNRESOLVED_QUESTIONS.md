@@ -12,6 +12,8 @@ Questions that prevent a roadmap task from being completed.
 
 Questions that may remain open while current work continues.
 
+- FR-027B's durable binding is tested with an explicit trusted deployment principal/logical-session adapter, not a real AI host's authenticated input-origin integration. C-G must implement/prove trusted ingress and interaction/decision/recovery admission under the same session transaction boundary. Missing switching evidence remains blocked, so this is not a weakened B invariant or a claim of live acceptance. See the [B audit](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md).
+
 ## Resolved
 
 Resolved questions should be moved here temporarily and their accepted outcomes recorded in `design/DECISIONS.md`.
