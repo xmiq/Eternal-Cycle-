@@ -4,7 +4,7 @@
 
 This contract defines authoritative campaign routing and player-input authorization. It sequences existing owners; it grants no new mechanic, player choice, campaign fact, or persistence authority.
 
-**Contract accepted in FR-027A; durable binding implemented in FR-027B only.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates binding from C-G input, entry, mutation and live acceptance. Existing tools must not be described as enforcing gameplay authorization merely because they accept an Interaction ID. The reference gameplay-entry operation below remains reserved, not an available MCP tool.
+**Contract accepted in FR-027A; durable binding implemented in FR-027B; trusted interaction control plane implemented in FR-027C.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates these checkpoints from D-G entry, mutation, trace and live acceptance. Existing tools must not be described as enforcing gameplay authorization merely because they accept an Interaction ID. The reference gameplay-entry operation below remains reserved, not an available MCP tool.
 
 ## Document Control
 
@@ -86,7 +86,15 @@ Validated adoption remains a separate [host/specialist workflow](CONTEXT_ASSEMBL
 
 The [B acceptance audit](../../design/audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) records the reference's opt-in durable binding, authenticated deployment/session scope, exact authorized choices, version/profile/readiness verification, suspension and successor history. Binding validity is not Player Interaction authorization. The reference's configured session adapter is not proof of real-host human submission origin.
 
-Switch and changed-profile reconfirmation require a transaction-scoped interaction/decision safety check plus known persistence disposition. Until C supplies that check, the deployed reference fails closed; a deterministic test substitute proves successor atomicity without pretending real interaction storage exists. Missing safety evidence is not a switch permission. No campaign write or pending decision is transferred.
+Switch and changed-profile reconfirmation require a transaction-scoped interaction/decision safety check plus known persistence disposition. C supplies that check over durable control records under B's same session transaction lock. Disabled or missing interaction storage still fails closed. Missing safety evidence is not a switch permission. No campaign write or pending decision is transferred. B's original test substitute remains historical evidence of successor atomicity, not production interaction authority.
+
+## Trusted Interaction Implementation Checkpoint
+
+The [C acceptance audit](../../design/audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) records one trusted adapter boundary, durable submission deduplication, immutable binding/baseline scope, restricted pre-entry/recovery transitions and pending-decision linkage. A genuine submission is initially RECEIVED, not OPEN. Only the selected trusted host adapter may attest its occurrence; no model-facing tool creates a submission or changes lifecycle state.
+
+The current reference stdio MCP transport provides tool requests, not authenticated human-message events. No production ingress is fabricated from a model flag, token, environment setting or configured session identity. An authorized integration must supply that adapter; without it, intake returns `TRUSTED_SUBMISSION_REQUIRED`. The reference exposes only read-only `ec_get_player_interaction_status`, including safe historical decision disposition and current binding identity. SQL/test-host acceptance is not real-host acceptance.
+
+C records a real response's relation to a pending decision without interpreting it as an answer. The decision remains Pending until the appropriate later owner classifies the trusted response and atomically records answered/superseded disposition. The original input remains yielded. Explicit authorized recovery abandonment is distinct from answering. C's clarification operation is entry-only with known empty/no-started persistence; general gameplay response admission, OPEN, persistence completion and mutation/yield enforcement remain D/E. Existing legacy write tools are not yet interaction-gated.
 
 ## Player Interaction State Machine
 

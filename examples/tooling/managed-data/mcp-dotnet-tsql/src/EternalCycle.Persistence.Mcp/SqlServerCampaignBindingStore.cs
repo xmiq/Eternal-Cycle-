@@ -198,7 +198,7 @@ public sealed class SqlServerCampaignBindingStore(IOptions<SqlServerPersistenceO
         { throw new ManagedServiceException("BINDING_STORAGE_FAILED", "Binding persistence could not be completed. Recover the same request identity before retrying.", error); }
     }
 
-    private async Task<CampaignSessionBinding> RefreshAsync(SqlConnection connection, SqlTransaction transaction,
+    internal async Task<CampaignSessionBinding> RefreshAsync(SqlConnection connection, SqlTransaction transaction,
         CampaignBindingScope scope, CampaignSessionBinding binding, bool explicitSelection, CancellationToken token)
     {
         var evidence = scope.Allows(binding.CampaignId) ? await EvidenceAsync(connection, transaction, scope, binding.CampaignId, token) : null;
@@ -231,10 +231,10 @@ public sealed class SqlServerCampaignBindingStore(IOptions<SqlServerPersistenceO
             throw new ManagedServiceException("BINDING_SWITCH_BLOCKED", "Reconcile the current campaign's persistence outcome before switching.");
         var safety = switchSafety is null ? CampaignSwitchSafety.Unknown : await switchSafety.CheckAsync(connection, transaction, binding, token);
         if (safety != CampaignSwitchSafety.Clear)
-            throw new ManagedServiceException("BINDING_SWITCH_BLOCKED", "Switching requires verified closed interaction, decision and recovery evidence. It is not available at this checkpoint.");
+            throw new ManagedServiceException("BINDING_SWITCH_BLOCKED", "Switching requires verified closed interaction, decision and recovery evidence from the configured safety check.");
     }
 
-    private async Task<CampaignBindingEvidence?> EvidenceAsync(SqlConnection connection, SqlTransaction transaction,
+    internal async Task<CampaignBindingEvidence?> EvidenceAsync(SqlConnection connection, SqlTransaction transaction,
         CampaignBindingScope scope, string campaignId, CancellationToken token)
     {
         CampaignSchemaRoute route;
@@ -359,7 +359,7 @@ public sealed class SqlServerCampaignBindingStore(IOptions<SqlServerPersistenceO
             throw new ManagedServiceException("BINDING_CONFLICT", "The session is busy. Recover current binding evidence and retry.");
     }
 
-    private async Task<CampaignSessionBinding?> ReadAsync(SqlConnection connection, SqlTransaction transaction,
+    internal async Task<CampaignSessionBinding?> ReadAsync(SqlConnection connection, SqlTransaction transaction,
         string scope, string? id, CancellationToken token)
     {
         await using var command = Command(connection, transaction, """

@@ -106,7 +106,7 @@ No tool accepts arbitrary SQL, a caller-supplied schema, a connection string, or
 
 ## Durable Campaign Binding Checkpoint
 
-FR-027B implements routing only; [C-G](../../../../design/FR_027_EXECUTION_PLAN.md) still own trusted input, entry, mutation/yield and live acceptance. No `ec_begin_gameplay_interaction` tool or gameplay authorization is available from a binding. Legacy setup, persistence and retrieval are unchanged when the new opt-in is disabled.
+FR-027B implements routing and C implements the trusted interaction control plane; [D-G](../../../../design/FR_027_EXECUTION_PLAN.md) still own entry, mutation/yield, trace and live acceptance. No `ec_begin_gameplay_interaction` tool or gameplay authorization is available from a binding or intake record. Legacy setup, persistence and retrieval remain unchanged; C does not gate existing gameplay writes.
 
 The deployment configures `EternalCycle:CampaignBinding:Enabled`, `PrincipalId`, `LogicalSessionId`, a non-secret logical `AuthorityId`, the explicit `AuthorizedCampaignIds` array, and separate `AllowSoleCampaignResume`, `AllowSelection`, `AllowSwitch` grants. Configuration discovery exposes their exact environment keys without returning principal/session/access values. The configured logical session must survive reconnect; it is not a PID, conversation fingerprint, tool argument or attestation of a real player input. An empty access array grants no access. A multi-user host must provide an authenticated per-session adapter rather than sharing these single-session settings between users.
 
@@ -116,9 +116,19 @@ Additive [013](src/EternalCycle.Persistence.Mcp/Schema/013_campaign_session_bind
 
 Evidence covers configured authority/namespace/world/schema/rules profile, active validated Campaign Version, active selected legacy release or compiled artifact, immutable source identity, minimum preparation, bootstrap hash/state/revision and incomplete save transaction reference. `UserConfirmed` is not `Verified`; binding validity is not full gameplay readiness or an interaction grant. D must still perform entry/rule/Canon verification.
 
-Production switching and changed-profile reconfirmation deliberately return `BINDING_SWITCH_BLOCKED` until C supplies `ISqlCampaignBindingSwitchSafety`. Its implementation must participate in the same transaction-owned session lock as interaction admission and test open work, pending decisions and recovery. A test-only substitute proves atomic successor behavior, not player-input enforcement. All non-Completed existing save transactions conservatively block switching. The reference cannot yet classify every lost acknowledgment/current-session uncertainty; later interaction recovery must supply that evidence without redirecting old writes.
+Production switching and changed-profile reconfirmation now use C's `ISqlCampaignBindingSwitchSafety` under the same transaction-owned session lock as interaction admission. Disabled/missing interaction storage remains unknown and blocked. Unresolved interactions, Pending decisions and unknown persistence block; all non-Completed existing save transactions still conservatively block. The old B test substitute remains only historical successor-storage evidence. No old input, pending write or decision moves to a successor.
 
 See [B acceptance](../../../../design/audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) for exact SQL/process tests and limits.
+
+## Trusted Player Interaction Checkpoint
+
+Enable `EternalCycle:PlayerInteraction:Enabled` together with binding to preview/apply additive [014](src/EternalCycle.Persistence.Mcp/Schema/014_player_interactions.sql) and its [template](src/EternalCycle.Persistence.Mcp/Schema/014_player_interactions.template.sql). This provisions storage only, not trusted origin or gameplay entry. `AllowRecoveryCancellation` separately grants trusted internal recovery coordinators cancellation with known persistence and explicit decision abandonment; default false. Neither setting is a player choice, test credential or human-event attestation.
+
+An authorized host integration implements `ITrustedPlayerSubmissionIngress` and invokes `PlayerInteractionService.AcceptAsync` outside the model-facing tool surface. It resolves an authenticated actual event, stable principal/session/submission identity, exact binding, protected immutable input/hash and optional exact pending-decision relationship. No Git, network, model inference, conversation search or arbitrary tool token supplies origin. Separate actual submissions with identical text remain separate; redelivery reuses the original interaction and conflicting evidence fails.
+
+**No production human-event adapter exists for this stdio transport.** No environment flag downgrades that boundary. The service returns `TRUSTED_SUBMISSION_REQUIRED` for intake without an adapter; the deterministic adapter is test-assembly-only. `ec_get_player_interaction_status` reads authorized safe status, current versus historical binding identity and decision disposition across reconnect. It cannot create submissions, set lifecycle state, resolve options or grant entry/mutation. Protected input/question references are not returned in that model projection.
+
+Intake is RECEIVED. Internal owner methods prepare ENTRY_PENDING, record entry-only clarification with known persistence, block/resume the original entry gate, or explicitly cancel/abandon under recovery policy. C has no OPEN or gameplay completion writer. A linked reply leaves its decision Pending, not selected; later owners must classify the response and atomically seal answered/superseded disposition. Only C records are protected at this checkpoint: D/E must still connect entry and every gameplay write/yield path. See [C acceptance](../../../../design/audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) for the full host boundary and actual SQL/process evidence.
 
 ## Build and Test Commands
 

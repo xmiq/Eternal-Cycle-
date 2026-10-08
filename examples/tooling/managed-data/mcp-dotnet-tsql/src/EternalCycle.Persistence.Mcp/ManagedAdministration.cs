@@ -661,7 +661,8 @@ public sealed class SqlServerSchemaBootstrapExecutor(
     IOptions<SqlServerPersistenceOptions> persistenceOptions,
     ICampaignSchemaResolver schemaResolver,
     IOptions<CompiledRuleRuntimeOptions>? compiledRules = null,
-    IOptions<CampaignBindingOptions>? campaignBinding = null) : ISchemaBootstrapExecutor
+    IOptions<CampaignBindingOptions>? campaignBinding = null,
+    IOptions<PlayerInteractionOptions>? playerInteraction = null) : ISchemaBootstrapExecutor
 {
     private static readonly Regex BatchSeparator = new(
         @"^\s*GO\s*$",
@@ -879,6 +880,15 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 "013_campaign_session_binding",
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("013_campaign_session_binding.template.sql")));
+        }
+
+        if (campaignBinding?.Value.Enabled == true && playerInteraction?.Value.Enabled == true &&
+            new[] { "player_interactions", "player_pending_decisions", "player_interaction_receipts" }.Any(table => !domainTables.Contains(table)))
+        {
+            migrations.Add(new(
+                "014_player_interactions",
+                $"Domain schema {settings.DomainSchema}",
+                RenderDomain("014_player_interactions.template.sql")));
         }
 
         return migrations;

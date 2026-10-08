@@ -4,7 +4,8 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
-- [FR-027B Durable Campaign Binding Acceptance](FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) - durable routing only; C-G authorization/entry/mutation and live acceptance remain pending.
+- [FR-027C Trusted Player Interaction Acceptance](FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) - trusted-origin seam, durable intake/decision/recovery, transaction-safe switching and real SQL/MCP tests; no OPEN, mutation enforcement or production human-event adapter.
+- [FR-027B Durable Campaign Binding Acceptance](FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) - historical durable-routing checkpoint before C; its original C-G limits are preserved.
 
 - [FR-026H R2 Authority/Context Acceptance](FR_026H_R2_AUTHORITY_CONTEXT_ACCEPTANCE.md) - accepted complete ordinary partition, all 273 responsibilities, actual six-fixture SQL/reference evidence and historical isolation; FR-026 Closed, exceptional orchestration and whole-context/live acceptance remain deferred. The five preceding H/R1 investigations below are immutable historical evidence, not current blockers.
 

@@ -93,8 +93,14 @@ builder.Services.AddSingleton<ISchemaBootstrapExecutor, SqlServerSchemaBootstrap
 builder.Services.AddSingleton<ICampaignDirectoryService, SqlServerCampaignDirectoryService>();
 builder.Services.AddSingleton<IManagedAdministrationService, ManagedAdministrationService>();
 builder.Services.AddOptions<CampaignBindingOptions>().Bind(builder.Configuration.GetSection("EternalCycle:CampaignBinding"));
-builder.Services.AddSingleton<ICampaignBindingStore, SqlServerCampaignBindingStore>();
+builder.Services.AddSingleton<SqlServerCampaignBindingStore>();
+builder.Services.AddSingleton<ICampaignBindingStore>(provider => provider.GetRequiredService<SqlServerCampaignBindingStore>());
 builder.Services.AddSingleton<CampaignBindingService>();
+builder.Services.AddOptions<PlayerInteractionOptions>().Bind(builder.Configuration.GetSection("EternalCycle:PlayerInteraction"));
+builder.Services.AddSingleton<ISqlCampaignBindingSwitchSafety, SqlPlayerInteractionSwitchSafety>();
+builder.Services.AddSingleton<IPlayerInteractionStore, SqlServerPlayerInteractionStore>();
+builder.Services.AddSingleton<PlayerInteractionService>();
+// No trusted ingress is registered by stdio: tool requests cannot attest a user event.
 builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersistenceStore>();
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();

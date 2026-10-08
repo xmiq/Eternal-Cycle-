@@ -114,7 +114,7 @@ FR-023 and FR-025 may proceed in parallel after FR-022. FR-030 may proceed in pa
 
 ### FR-027 - Stable Campaign Binding and Managed Gameplay Entry
 
-- **Execution state:** Sole selected/in-progress objective. [A-G plan](FR_027_EXECUTION_PLAN.md): A contract/design and B durable binding complete; C-G pending. [Canonical binding/entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md), [A audit](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md) and [B acceptance](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) distinguish durable session routing from still-pending input, entry, decision, mutation and narration gates.
+- **Execution state:** Sole selected/in-progress objective. [A-G plan](FR_027_EXECUTION_PLAN.md): A contract/design, B durable binding and C trusted interaction control plane complete; D-G pending. [Canonical binding/entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md), [A audit](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md), [B acceptance](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) and [C acceptance](audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) distinguish durable routing/intake from still-pending entry, mutation, narration and live-host gates.
 - **Primary classification:** Eternal Cycle-wide gameplay invariant and Managed Service contract.
 - **Scope:** Establish an authoritative active Campaign binding and supported gameplay entry that carries interaction identity, invokes `gameplay.resolve`, obtains mandatory rules, and demotes conversation search to non-authoritative diagnostics.
 - **Boundaries:** Preserve the existing GM Runtime Procedure, Unknown rules, and player-agency contract rather than rewriting them.

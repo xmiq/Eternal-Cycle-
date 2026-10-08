@@ -4194,7 +4194,7 @@ One bounded unit of play whose material intent, adjudication, immediate outcome,
 
 ## Campaign Session Binding
 
-The authoritative durable routing of an authenticated logical gameplay session to one Campaign, verified canonical version/profile and readiness. It outlives individual inputs and transports; story resemblance and conversation never establish it. [FR-027A](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) defines the contract; service implementation is pending.
+The authoritative durable routing of an authenticated logical gameplay session to one Campaign, verified canonical version/profile and readiness. It outlives individual inputs and transports; story resemblance and conversation never establish it. [FR-027A](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) defines the contract; B implements durable binding and C its transaction-safe interaction/decision switching check. Binding validity is not gameplay entry.
 
 ## Player Interaction
 
@@ -4203,6 +4203,14 @@ The authorization envelope for one actual submitted player gameplay input, ident
 ## Player Interaction ID
 
 The durable identity of one Player Interaction, reused for repeated delivery/recovery of the same actual submission. Identical text in separate submissions does not imply identical identity, and model-created identifiers cannot prove a new user input.
+
+## Trusted Player Submission
+
+An actual human input event attested by an authenticated authorized host or human-facing integration, with stable session-scoped identity and immutable input/protected reference. A model claim, tool invocation or configured session identity alone cannot establish its occurrence.
+
+## Yielded Interaction
+
+The derived no-forward-authority disposition of COMPLETED, AWAITING_PLAYER_INPUT, BLOCKED or CANCELLED. It is not a separately mutable lifecycle state, and read-only recovery cannot reopen the submitted intent.
 
 ## Pending Player Decision
 

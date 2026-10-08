@@ -12,7 +12,7 @@ Questions that prevent a roadmap task from being completed.
 
 Questions that may remain open while current work continues.
 
-- FR-027B's durable binding is tested with an explicit trusted deployment principal/logical-session adapter, not a real AI host's authenticated input-origin integration. C-G must implement/prove trusted ingress and interaction/decision/recovery admission under the same session transaction boundary. Missing switching evidence remains blocked, so this is not a weakened B invariant or a claim of live acceptance. See the [B audit](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md).
+- FR-027C tests trusted ingress, interaction/decision recovery and B's switching check with a test-assembly human-event adapter and real disposable SQL/MCP processes. The current stdio host supplies no authenticated human-event evidence; production intake therefore returns `TRUSTED_SUBMISSION_REQUIRED` rather than accepting model assertions. A permits this fail-closed provider-neutral checkpoint; an authorized real-host adapter and live proof remain required for supported gameplay. D-G retain entry, mutation/yield, trace and live acceptance. See the [C audit](audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md); no current architectural blocker is concealed or B invariant weakened.
 
 ## Resolved
 
