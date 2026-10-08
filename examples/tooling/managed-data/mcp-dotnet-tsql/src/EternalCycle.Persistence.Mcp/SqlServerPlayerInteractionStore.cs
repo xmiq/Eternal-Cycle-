@@ -6,8 +6,10 @@ using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
-public sealed class SqlServerPlayerInteractionStore(IOptions<SqlServerPersistenceOptions> options,
-    SqlServerCampaignBindingStore bindings, IOptions<PlayerInteractionOptions> interactionOptions) : IPlayerInteractionStore
+public sealed partial class SqlServerPlayerInteractionStore(IOptions<SqlServerPersistenceOptions> options,
+    SqlServerCampaignBindingStore bindings, IOptions<PlayerInteractionOptions> interactionOptions,
+    IOptions<GameplayEntryOptions>? entryOptions = null,
+    SqlServerCampaignPersistenceStore? entryPersistence = null) : IPlayerInteractionStore, IGameplayEntryStore
 {
     // Intake and switching must agree on missing decision evidence as well as
     // active states. A deleted control row is not proof that a choice was answered.
@@ -239,12 +241,13 @@ public sealed class SqlServerPlayerInteractionStore(IOptions<SqlServerPersistenc
         }
         var blocked = await BlockingInteractionAsync(connection, transaction, scope.Key, value.BindingId, token);
         var persistenceKnown = current is not null && current.PendingTransactionId is null && !value.PersistenceUnknown;
-        return new(value.InteractionId, value.BindingId, value.CampaignId, value.BindingGeneration, value.StartingEvidence.CampaignVersion,
+        return new PlayerInteractionStatus(value.InteractionId, value.BindingId, value.CampaignId, value.BindingGeneration, value.StartingEvidence.CampaignVersion,
             value.State, value.Revision, value.CorrelationId, PlayerInteractionLifecycle.Yielded(value.State), valid,
             valid && !blocked && persistenceKnown, blocked || decision is not null || !persistenceKnown,
             visibleDecision is null ? null : new(visibleDecision.DecisionId, visibleDecision.OriginInteractionId, visibleDecision.State, visibleDecision.Revision, visibleDecision.RelatedInteractionId),
             value.RespondingToDecisionId, value.SuccessorInteractionId, value.Origin, value.SubmissionHash, current?.PendingTransactionId,
-            currentBinding?.BindingId, currentBinding?.State);
+            currentBinding?.BindingId, currentBinding?.State)
+        { GameplayEntryCompleted = entryOptions?.Value.Enabled == true && (await ReadEntryAsync(connection, transaction, scope.Key, value.InteractionId, null, token))?.Receipt is not null };
     }
 
     private async Task<T> TransactionAsync<T>(CampaignBindingScope scope, Func<SqlConnection, SqlTransaction, Task<T>> execute, CancellationToken token)

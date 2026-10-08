@@ -4,7 +4,7 @@
 
 This contract defines authoritative campaign routing and player-input authorization. It sequences existing owners; it grants no new mechanic, player choice, campaign fact, or persistence authority.
 
-**Contract accepted in FR-027A; durable binding implemented in FR-027B; trusted interaction control plane implemented in FR-027C.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates these checkpoints from D-G entry, mutation, trace and live acceptance. Existing tools must not be described as enforcing gameplay authorization merely because they accept an Interaction ID. The reference gameplay-entry operation below remains reserved, not an available MCP tool.
+**Contract accepted in FR-027A; durable binding implemented in FR-027B; trusted interaction control plane implemented in FR-027C; mandatory entry checkpoint implemented in FR-027D.** The [execution plan](../../design/FR_027_EXECUTION_PLAN.md) separates these checkpoints from E-G mutation/yield, trace and live acceptance. Existing tools must not be described as enforcing gameplay authorization merely because they accept an Interaction ID. `ec_begin_gameplay_interaction` is an opt-in reference entry tool, not a default supported gameplay route until E gates alternate writes; stdio cannot itself attest human input. See [D acceptance](../../design/audits/FR_027D_MANDATORY_GAMEPLAY_ENTRY_ACCEPTANCE.md).
 
 ## Document Control
 

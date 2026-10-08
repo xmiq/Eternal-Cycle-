@@ -46,8 +46,8 @@ public sealed record PlayerInteractionStatus(string InteractionId, string Bindin
     TrustedSubmissionOrigin TrustedOrigin, string SubmissionIdentityHash, string? PendingTransactionId,
     string? CurrentBindingId, CampaignBindingState? CurrentBindingState)
 {
-    // D/E own these gates. Durable intake/status alone never grants either one.
-    public bool GameplayEntryCompleted => false;
+    // A durable D receipt records entry, never a general mutation grant (E).
+    public bool GameplayEntryCompleted { get; init; }
     public bool GameplayMutationAuthorized => false;
 }
 

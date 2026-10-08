@@ -662,7 +662,8 @@ public sealed class SqlServerSchemaBootstrapExecutor(
     ICampaignSchemaResolver schemaResolver,
     IOptions<CompiledRuleRuntimeOptions>? compiledRules = null,
     IOptions<CampaignBindingOptions>? campaignBinding = null,
-    IOptions<PlayerInteractionOptions>? playerInteraction = null) : ISchemaBootstrapExecutor
+    IOptions<PlayerInteractionOptions>? playerInteraction = null,
+    IOptions<GameplayEntryOptions>? gameplayEntry = null) : ISchemaBootstrapExecutor
 {
     private static readonly Regex BatchSeparator = new(
         @"^\s*GO\s*$",
@@ -890,6 +891,10 @@ public sealed class SqlServerSchemaBootstrapExecutor(
                 $"Domain schema {settings.DomainSchema}",
                 RenderDomain("014_player_interactions.template.sql")));
         }
+
+        if (campaignBinding?.Value.Enabled == true && playerInteraction?.Value.Enabled == true && gameplayEntry?.Value.Enabled == true &&
+            !domainTables.Contains("gameplay_entries"))
+            migrations.Add(new("015_gameplay_entry", $"Domain schema {settings.DomainSchema}", RenderDomain("015_gameplay_entry.template.sql")));
 
         return migrations;
     }

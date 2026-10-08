@@ -327,7 +327,7 @@ public sealed partial class CompiledRulesArtifactSqlImportTests : IAsyncLifetime
     }
     private Task<int> CountAsync(string table)
     {
-        Assert.True(SqlServerCompiledRulesArtifactStore.Tables.Contains(table) || table == "campaign_session_bindings");
+        Assert.True(SqlServerCompiledRulesArtifactStore.Tables.Contains(table) || table is "campaign_session_bindings" or "gameplay_entries" or "player_interactions");
         return ScalarAsync($"SELECT COUNT(*) FROM [import_domain].[{table}];");
     }
     private static async Task ExecuteAtAsync(string connectionString, string sql)

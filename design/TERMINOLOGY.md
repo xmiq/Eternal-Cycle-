@@ -5135,3 +5135,7 @@ A bounded set-only update to an existing authoritative object record. The persis
 ## Controlled Retrieval Vocabulary
 
 Reviewed navigation metadata associating distinct canonical retrieval concepts and approved alternatives with explicit rule-source/snippet targets. Terms, weights, and review rationale do not define mechanics or runtime ranking. Its input normalization and provenance are governed by the [vocabulary contract](../docs/rules/CONTROLLED_RETRIEVAL_VOCABULARY.md).
+
+## Gameplay Entry Receipt
+
+Bounded durable evidence that an existing trusted Player Interaction passed mandatory binding/profile/readiness, required-rule and minimum Canon read gates at a captured version/revision. It commits atomically with OPEN and is recovered under the original identity; it is not a persistence receipt, fresh input or general mutation grant. See the [entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md#entry-sequence-and-result).

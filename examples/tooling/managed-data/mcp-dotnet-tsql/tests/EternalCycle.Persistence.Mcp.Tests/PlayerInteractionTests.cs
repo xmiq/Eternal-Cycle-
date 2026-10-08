@@ -599,7 +599,7 @@ public sealed partial class CompiledRulesArtifactSqlImportTests
             await Send("""{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}""");
             var listed = (await Reply(2)).GetProperty("result").GetProperty("tools");
             Assert.Single(listed.EnumerateArray(), tool => tool.GetProperty("name").GetString() == "ec_get_player_interaction_status");
-            Assert.DoesNotContain("ec_begin_gameplay_interaction", listed.GetRawText()); Assert.DoesNotContain("ec_accept_player_submission", listed.GetRawText());
+            Assert.Single(listed.EnumerateArray(), tool => tool.GetProperty("name").GetString() == "ec_begin_gameplay_interaction"); Assert.DoesNotContain("ec_accept_player_submission", listed.GetRawText());
             await Send("""{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"ec_accept_player_submission","arguments":{"isNewPlayerMessage":true,"origin":"user","choice":"A"}}}""");
             var forged = await Reply(3); Assert.True(forged.TryGetProperty("error", out _) || forged.GetProperty("result").GetProperty("isError").GetBoolean());
             await Send("""{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"ec_get_player_interaction_status","arguments":{}}}""");

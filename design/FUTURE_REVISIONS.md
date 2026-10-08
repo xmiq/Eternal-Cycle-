@@ -58,7 +58,7 @@ Anecdotes may create a Candidate. They do not by themselves authorize a revision
 
 ## Roadmapped
 
-FR-027 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-026 is Closed after A-H/R2 acceptance. FR-027 alone is selected/in progress: A contract/design, B durable binding and C trusted interaction control plane are complete, D-G remain pending. FR-028 through FR-036 are unselected. Roadmapping alone does not select a current implementation objective.
+FR-027 through FR-036 are Roadmapped under the owner-authorized [v1.1 Future Revision Plan](V1_1_FUTURE_REVISION_PLAN.md). FR-026 is Closed after A-H/R2 acceptance. FR-027 alone is selected/in progress: A contract/design, B durable binding, C trusted interaction control plane and D mandatory entry checkpoint are complete, E-G remain pending. FR-028 through FR-036 are unselected. Roadmapping alone does not select a current implementation objective.
 
 All currently known FR-001 through FR-036 entries are explicitly Roadmapped or Closed. A detailed Knowledge System beyond FR-015's approved memory scope remains unpromoted, and new gameplay findings still enter this register through maintainer mediation.
 
@@ -72,7 +72,7 @@ All currently known FR-001 through FR-036 entries are explicitly Roadmapped or C
 - **Suggested future phase:** Phase 13 - Future Revisions.
 - **Priority:** Critical
 - **Status reason:** Owner explicitly selected FR-027A after closed FR-026/R2. The accepted [Campaign Binding and Mandatory Gameplay Entry contract](../docs/ai/CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md) specifies service-enforced durable routing, actual-input authorization, read/rule/persistence and decision/yield gates; A adds no runtime enforcement.
-- **Execution progress:** A complete (contract only), B complete (durable binding only), C complete (trusted interaction control plane only); D-G pending under the [execution plan](FR_027_EXECUTION_PLAN.md), [A scenarios](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md), [B acceptance](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) and [C acceptance](audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md). FR-027 remains incomplete/Roadmapped, not Closed; downstream objectives remain unselected.
+- **Execution progress:** A complete (contract only), B complete (durable binding only), C complete (trusted interaction control plane only), D complete (mandatory entry checkpoint); E-G pending under the [execution plan](FR_027_EXECUTION_PLAN.md), [A scenarios](audits/FR_027A_CAMPAIGN_BINDING_GAMEPLAY_ENTRY_CONTRACT.md), [B acceptance](audits/FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md), [C acceptance](audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) and [D acceptance](audits/FR_027D_MANDATORY_GAMEPLAY_ENTRY_ACCEPTANCE.md). FR-027 remains incomplete/Roadmapped, not Closed; downstream objectives remain unselected.
 - **Authorized roadmap link:** [Phase 13 - Future Revisions](ROADMAP.md#phase-13--future-revisions)
 - **Planning specification:** [FR-027 task](V1_1_FUTURE_REVISION_PLAN.md#fr-027---stable-campaign-binding-and-managed-gameplay-entry)
 

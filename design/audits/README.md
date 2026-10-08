@@ -4,6 +4,7 @@ These Phase 11 audits record repository-wide review methods, findings, and docum
 
 ## Completed Audits
 
+- [FR-027D Mandatory Gameplay Entry Acceptance](FR_027D_MANDATORY_GAMEPLAY_ENTRY_ACCEPTANCE.md) - existing trusted interaction, automatic rules/minimum owner reads, atomic receipt/OPEN and real SQL/MCP restart; not legacy write/yield enforcement or live-host attestation.
 - [FR-027C Trusted Player Interaction Acceptance](FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md) - trusted-origin seam, durable intake/decision/recovery, transaction-safe switching and real SQL/MCP tests; no OPEN, mutation enforcement or production human-event adapter.
 - [FR-027B Durable Campaign Binding Acceptance](FR_027B_DURABLE_CAMPAIGN_BINDING_ACCEPTANCE.md) - historical durable-routing checkpoint before C; its original C-G limits are preserved.
 

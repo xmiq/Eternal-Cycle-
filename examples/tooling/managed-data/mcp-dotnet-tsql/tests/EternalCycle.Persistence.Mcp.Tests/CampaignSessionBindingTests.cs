@@ -517,7 +517,7 @@ public sealed partial class CompiledRulesArtifactSqlImportTests
             await Send("""{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}""");
             var tools = (await Reply(2)).GetRawText();
             Assert.Contains("ec_resolve_campaign_binding", tools); Assert.Contains("ec_select_campaign_binding", tools);
-            Assert.Contains("ec_switch_campaign_binding", tools); Assert.DoesNotContain("ec_begin_gameplay_interaction", tools);
+            Assert.Contains("ec_switch_campaign_binding", tools); Assert.Contains("ec_begin_gameplay_interaction", tools);
             await Send("""{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"ec_resolve_campaign_binding","arguments":{}}}""");
             var response = await Reply(3);
             Assert.False(response.TryGetProperty("error", out _), response.GetRawText());

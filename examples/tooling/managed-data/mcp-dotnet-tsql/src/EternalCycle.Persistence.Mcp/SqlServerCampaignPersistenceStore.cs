@@ -671,7 +671,7 @@ public sealed class SqlServerCampaignPersistenceStore(
             : Convert.ToInt64(value, System.Globalization.CultureInfo.InvariantCulture);
     }
 
-    private async Task<CanonicalRecord?> ReadEffectiveRecordAsync(
+    internal async Task<CanonicalRecord?> ReadEffectiveRecordAsync(
         SqlConnection connection,
         SqlTransaction? transaction,
         string campaignId,

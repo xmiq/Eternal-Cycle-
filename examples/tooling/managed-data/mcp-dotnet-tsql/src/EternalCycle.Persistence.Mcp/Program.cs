@@ -98,10 +98,16 @@ builder.Services.AddSingleton<ICampaignBindingStore>(provider => provider.GetReq
 builder.Services.AddSingleton<CampaignBindingService>();
 builder.Services.AddOptions<PlayerInteractionOptions>().Bind(builder.Configuration.GetSection("EternalCycle:PlayerInteraction"));
 builder.Services.AddSingleton<ISqlCampaignBindingSwitchSafety, SqlPlayerInteractionSwitchSafety>();
-builder.Services.AddSingleton<IPlayerInteractionStore, SqlServerPlayerInteractionStore>();
+builder.Services.AddOptions<GameplayEntryOptions>().Bind(builder.Configuration.GetSection("EternalCycle:GameplayEntry"));
+builder.Services.AddSingleton<SqlServerPlayerInteractionStore>();
+builder.Services.AddSingleton<IPlayerInteractionStore>(services => services.GetRequiredService<SqlServerPlayerInteractionStore>());
+builder.Services.AddSingleton<IGameplayEntryStore>(services => services.GetRequiredService<SqlServerPlayerInteractionStore>());
+builder.Services.AddSingleton<IGameplayEntryCanonReader, GameplayEntryCanonReader>();
+builder.Services.AddSingleton<GameplayEntryService>();
 builder.Services.AddSingleton<PlayerInteractionService>();
 // No trusted ingress is registered by stdio: tool requests cannot attest a user event.
-builder.Services.AddSingleton<ICampaignPersistenceStore, SqlServerCampaignPersistenceStore>();
+builder.Services.AddSingleton<SqlServerCampaignPersistenceStore>();
+builder.Services.AddSingleton<ICampaignPersistenceStore>(services => services.GetRequiredService<SqlServerCampaignPersistenceStore>());
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();
 builder.Services.AddSingleton<IServiceDiagnostics, ServiceDiagnostics>();

@@ -12,7 +12,7 @@ Questions that prevent a roadmap task from being completed.
 
 Questions that may remain open while current work continues.
 
-- FR-027C tests trusted ingress, interaction/decision recovery and B's switching check with a test-assembly human-event adapter and real disposable SQL/MCP processes. The current stdio host supplies no authenticated human-event evidence; production intake therefore returns `TRUSTED_SUBMISSION_REQUIRED` rather than accepting model assertions. A permits this fail-closed provider-neutral checkpoint; an authorized real-host adapter and live proof remain required for supported gameplay. D-G retain entry, mutation/yield, trace and live acceptance. See the [C audit](audits/FR_027C_TRUSTED_PLAYER_INTERACTION_ACCEPTANCE.md); no current architectural blocker is concealed or B invariant weakened.
+- FR-027C/D test trusted ingress, durable entry/decision recovery and B's switching check with a test-assembly human-event adapter and real disposable SQL/MCP processes. The current stdio host supplies no authenticated human-event evidence; production intake/entry without admitted input therefore returns `TRUSTED_SUBMISSION_REQUIRED` rather than accepting model assertions. A permits this fail-closed provider-neutral checkpoint; an authorized real-host adapter and live proof remain required for supported gameplay. The reference Current Session projection must be adapted to actual campaign owners and input-bound obligations; no compatibility or live host is inferred from test fixtures. E-G retain mutation/yield, trace and live acceptance, and FR-028 scalable closure. See the [D audit](audits/FR_027D_MANDATORY_GAMEPLAY_ENTRY_ACCEPTANCE.md); no current architectural blocker is concealed or B invariant weakened.
 
 ## Resolved
 
