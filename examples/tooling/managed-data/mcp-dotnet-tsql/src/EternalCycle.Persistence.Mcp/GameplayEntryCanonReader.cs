@@ -30,6 +30,7 @@ public sealed class GameplayEntryCanonReader(ICampaignPersistenceStore persisten
                 throw new EntryCanonException("GAMEPLAY_ENTRY_CANON_STALE", evidence);
             if (!PlayerInteractionService.Bounded(plan.CampaignMode, 128) || plan.Reads.Count > MaximumReads - 1 ||
                 plan.Reads.Any(read => read.Role == EntryCanonRole.CurrentSession || !Enum.IsDefined(read.Role) || !Enum.IsDefined(read.Visibility)) ||
+                !GameplayAuthority.ValidPermissions(plan.MutationScope, session) ||
                 RequiredRoles.Any(role => plan.Reads.Count(read => read.Role == role) != 1) ||
                 plan.Reads.Where(read => read.Address is not null).Select(read => read.Address).Append(session).Distinct().Count() !=
                     plan.Reads.Count(read => read.Address is not null) + 1)
@@ -65,7 +66,7 @@ public sealed class GameplayEntryCanonReader(ICampaignPersistenceStore persisten
                 if (bytes > MaximumCanonBytes) throw Missing(read.Role, read.Address, EntryCanonStatus.Incomplete);
                 records.Add(record);
             }
-            return new(plan with { Reads = Array.AsReadOnly(plan.Reads.ToArray()) }, records.AsReadOnly(), evidence.AsReadOnly());
+            return new(plan with { Reads = Array.AsReadOnly(plan.Reads.ToArray()), MutationScope = Array.AsReadOnly(plan.MutationScope.ToArray()) }, records.AsReadOnly(), evidence.AsReadOnly());
         }
         catch (OperationCanceledException) { throw; }
         catch (Exception error) when (error is not EntryCanonException and not CompiledRuleRetrievalException and not OutOfMemoryException)

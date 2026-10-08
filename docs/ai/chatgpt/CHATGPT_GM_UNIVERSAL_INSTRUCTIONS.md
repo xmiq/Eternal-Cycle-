@@ -136,6 +136,8 @@ A valid No-Op follows the Save Update Protocol without inventing a state change.
 
 ChatGPT must not deliver narration that asserts durable consequences before those consequences have been successfully persisted, activated, and validated under the active profile.
 
+For the configured FR-027 Managed gameplay route, consume the service-admitted [interaction disposition](../CAMPAIGN_BINDING_AND_GAMEPLAY_ENTRY.md): require mandatory entry before mutation, `CompletedNarrationAuthorized` before completed consequences, and `QuestionPresentationAuthorized` before presenting protected alternatives. A validated individual save still requires interaction conclusion with an explicit verified Affected Set. Record the pending decision and revoke forward authority before presenting it; assistant continuation, lookup, receipt recovery and manual saves cannot supply a player choice. Only a new trusted response can resolve it; clarification does not select an alternative. Unknown persistence requires reconciliation of the original frozen transaction, not a replacement effect. A host unable to attest player input or enforce admitted delivery must stop rather than claim conformance.
+
 This is an AI execution constraint. It is not fictional physics, an in-world delay, a character experience, or a universal requirement that changes how human GMs describe play.
 
 If persistence or required validation fails:

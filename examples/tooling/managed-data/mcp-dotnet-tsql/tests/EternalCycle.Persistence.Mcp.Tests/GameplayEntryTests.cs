@@ -469,13 +469,13 @@ public sealed partial class CompiledRulesArtifactSqlImportTests
     public async Task D_ActualMcpWithoutTrustedIntakeFailsClosedAndCannotMintInput()
     {
         var binding = await CSetupAsync(); await DSchemaAsync();
-        var result = await DProcessAsync(new("missing-input", 1));
+        var result = await DProcessAsync(new GameplayEntryRequest("missing-input", 1));
         Assert.False(result.GetProperty("success").GetBoolean()); Assert.Equal("TRUSTED_SUBMISSION_REQUIRED", result.GetProperty("code").GetString());
         Assert.Equal(0, await CountAsync("player_interactions")); Assert.Equal(0, await CountAsync("gameplay_entries"));
         Assert.Equal(1, await CountAsync("campaign_session_bindings")); Assert.NotNull(binding);
     }
 
-    private async Task<JsonElement> DProcessAsync(GameplayEntryRequest request)
+    private async Task<JsonElement> DProcessAsync(object request, string toolName = "ec_begin_gameplay_interaction", bool wrapRequest = true)
     {
         using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(45));
         var start = new ProcessStartInfo("dotnet") { UseShellExecute = false, RedirectStandardInput = true, RedirectStandardOutput = true, RedirectStandardError = true, CreateNoWindow = true };
@@ -499,7 +499,7 @@ public sealed partial class CompiledRulesArtifactSqlImportTests
             var tool = Assert.Single(listed.EnumerateArray(), item => item.GetProperty("name").GetString() == "ec_begin_gameplay_interaction");
             Assert.DoesNotContain("campaignId", tool.GetProperty("inputSchema").GetRawText());
             Assert.DoesNotContain("ec_accept_player_submission", listed.GetRawText());
-            await Send(JsonSerializer.Serialize(new { jsonrpc = "2.0", id = 3, method = "tools/call", @params = new { name = "ec_begin_gameplay_interaction", arguments = new { request } } }));
+            await Send(JsonSerializer.Serialize(new { jsonrpc = "2.0", id = 3, method = "tools/call", @params = new { name = toolName, arguments = wrapRequest ? (object)new { request } : request } }));
             var response = await Reply(3);
             Assert.False(response.TryGetProperty("error", out _), response.GetRawText());
             using var result = JsonDocument.Parse(response.GetProperty("result").GetProperty("content")[0].GetProperty("text").GetString()!);

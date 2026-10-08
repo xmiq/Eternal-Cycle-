@@ -8,13 +8,47 @@ using Microsoft.Extensions.Options;
 
 namespace EternalCycle.Persistence.Mcp;
 
-public sealed class SqlServerCampaignPersistenceStore(
-    IOptions<SqlServerPersistenceOptions> options,
-    ICampaignSchemaResolver schemaResolver,
-    IDurabilityService durabilityService,
-    ILogger<SqlServerCampaignPersistenceStore> logger) : ICampaignPersistenceStore
+public sealed class SqlServerCampaignPersistenceStore : ICampaignPersistenceStore
 {
-    private readonly SqlServerPersistenceOptions settings = options.Value;
+    private readonly SqlServerPersistenceOptions settings;
+    private readonly ICampaignSchemaResolver schemaResolver;
+    private readonly IDurabilityService durabilityService;
+    private readonly ILogger<SqlServerCampaignPersistenceStore> logger;
+    private readonly CampaignBindingOptions bindingPolicy;
+    private readonly GameplayAuthorityOptions authorityPolicy;
+    private readonly SqlServerPlayerInteractionStore? gameplay;
+    internal Func<CancellationToken, Task>? BeforeGameplayActivation { get; init; }
+
+    public SqlServerCampaignPersistenceStore(IOptions<SqlServerPersistenceOptions> options,
+        ICampaignSchemaResolver schemaResolver, IDurabilityService durabilityService,
+        ILogger<SqlServerCampaignPersistenceStore> logger, SqlServerCampaignBindingStore? bindings = null,
+        IOptions<CampaignBindingOptions>? bindingOptions = null, IOptions<PlayerInteractionOptions>? interactionOptions = null,
+        IOptions<GameplayEntryOptions>? entryOptions = null, IOptions<GameplayAuthorityOptions>? authorityOptions = null)
+    {
+        settings = options.Value; this.schemaResolver = schemaResolver; this.durabilityService = durabilityService; this.logger = logger;
+        bindingPolicy = bindingOptions?.Value ?? new(); authorityPolicy = authorityOptions?.Value ?? new();
+        // A stateless transaction adapter reuses C/D's exact authority methods.
+        // Constructing it here avoids a DI cycle with D's canonical reader; both
+        // service instances coordinate through the same authoritative SQL rows.
+        if (bindings is not null) gameplay = new(options, bindings, interactionOptions ?? Options.Create(new PlayerInteractionOptions()), entryOptions, this);
+    }
+
+    private async Task GateAsync(SqlConnection connection, SqlTransaction transaction, CommitCampaignRequest request,
+        string hash, GameplayPersistencePhase phase, CancellationToken token)
+    {
+        if (!bindingPolicy.Enabled && authorityPolicy.AdministrativeCampaignIds.Contains(request.CampaignId, StringComparer.Ordinal)) return;
+        var scope = GameplayAuthority.Scope(bindingPolicy);
+        if (gameplay is null) throw GameplayAuthority.Error("GAMEPLAY_ENTRY_REQUIRED", "The configured gameplay authority adapter is unavailable.");
+        await gameplay.GatePersistenceAsync(connection, transaction, scope, request, hash, phase, token);
+    }
+
+    private async Task InspectAsync(CommitCampaignRequest request, string hash, CancellationToken token)
+    {
+        await using var connection = await OpenConnectionAsync(token);
+        await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(IsolationLevel.Serializable, token);
+        await GateAsync(connection, transaction, request, hash, GameplayPersistencePhase.Inspect, token);
+        await transaction.CommitAsync(token);
+    }
 
     public async Task<PersistenceStatus> GetStatusAsync(
         string campaignId,
@@ -106,6 +140,31 @@ public sealed class SqlServerCampaignPersistenceStore(
         string requestHash,
         CancellationToken cancellationToken)
     {
+        try
+        {
+            var result = await CommitCoreAsync(request, requestHash, cancellationToken);
+            if (result.Marker != PersistenceMarkers.Saved) await BlockIncompleteAsync(request.CampaignId, request.TransactionId);
+            return result;
+        }
+        catch { await BlockIncompleteAsync(request.CampaignId, request.TransactionId); throw; }
+    }
+
+    private async Task BlockIncompleteAsync(string campaign, string transactionId)
+    {
+        if (!bindingPolicy.Enabled || gameplay is null) return;
+        // Transport cancellation must not erase an admitted outcome. A bounded
+        // independent recovery write marks it yielded/unknown when SQL is available.
+        using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+        try { await gameplay.BlockIncompleteGameplayAsync(GameplayAuthority.Scope(bindingPolicy), campaign, transactionId, timeout.Token); }
+        catch (Exception error) when (error is not OutOfMemoryException) { /* Persisted PERSISTING/unknown evidence remains fail-closed if recovery itself is interrupted. */ }
+    }
+
+    private async Task<CommitResult> CommitCoreAsync(CommitCampaignRequest request, string requestHash, CancellationToken cancellationToken)
+    {
+        request = request with { AffectedOwnerDomains = Array.AsReadOnly(request.AffectedOwnerDomains.ToArray()),
+            Mutations = Array.AsReadOnly(request.Mutations.Select(mutation => mutation with
+                { References = mutation.References is null ? null : Array.AsReadOnly(mutation.References.ToArray()) }).ToArray()) };
+        await InspectAsync(request, requestHash, cancellationToken);
         var existing = await FindTransactionAsync(
             request.CampaignId,
             request.TransactionId,
@@ -116,7 +175,7 @@ public sealed class SqlServerCampaignPersistenceStore(
         {
             if (!string.Equals(existing.RequestHash, requestHash, StringComparison.Ordinal))
             {
-                return Failure(existing.CandidateVersion, "The transaction or idempotency key was reused with a different request.");
+                throw GameplayAuthority.Error("GAMEPLAY_REPLAY_CONFLICT", "The transaction or idempotency key has a conflicting frozen payload.");
             }
 
             return await ResumeAsync(request.CampaignId, existing.TransactionId, cancellationToken);
@@ -127,19 +186,30 @@ public sealed class SqlServerCampaignPersistenceStore(
             await StageCandidateAsync(request, requestHash, cancellationToken);
             return await ResumeAsync(request.CampaignId, request.TransactionId, cancellationToken);
         }
-        catch (Exception exception) when (exception is not OperationCanceledException)
+        catch (Exception exception) when (exception is not OperationCanceledException and not ManagedServiceException)
         {
-            logger.LogWarning(exception, "Eternal Cycle persistence transaction {TransactionId} failed before activation.", request.TransactionId);
-            await MarkFailedAsync(request.CampaignId, request.TransactionId, "FailedValidation", exception.Message, cancellationToken);
-            return Failure(null, exception.Message);
+            const string reason = "Candidate staging or validation failed. Recover the original transaction using authorized diagnostics.";
+            logger.LogWarning("Eternal Cycle transaction {TransactionId} failed before activation ({ExceptionType}).", request.TransactionId, exception.GetType().Name);
+            await MarkFailedAsync(request.CampaignId, request.TransactionId, "FailedValidation", reason, cancellationToken);
+            return Failure(null, reason, exception);
         }
     }
 
-    public Task<CommitResult> RetryAsync(
+    public async Task<CommitResult> RetryAsync(
         string campaignId,
         string transactionId,
-        CancellationToken cancellationToken) =>
-        ResumeAsync(campaignId, transactionId, cancellationToken);
+        CancellationToken cancellationToken)
+    {
+        if (bindingPolicy.Enabled && !GameplayAuthority.Scope(bindingPolicy).Allows(campaignId))
+            throw GameplayAuthority.Error("GAMEPLAY_AUTHORITY_INVALID", "The transaction is unavailable in this authorized session.");
+        try
+        {
+            var result = await ResumeAsync(campaignId, transactionId, cancellationToken);
+            if (result.Marker != PersistenceMarkers.Saved) await BlockIncompleteAsync(campaignId, transactionId);
+            return result;
+        }
+        catch { await BlockIncompleteAsync(campaignId, transactionId); throw; }
+    }
 
     private async Task StageCandidateAsync(
         CommitCampaignRequest request,
@@ -151,6 +221,20 @@ public sealed class SqlServerCampaignPersistenceStore(
             IsolationLevel.Serializable,
             cancellationToken);
 
+        await GateAsync(connection, transaction, request, requestHash, GameplayPersistencePhase.Inspect, cancellationToken);
+        // Recheck under the authority lock, not merely the earlier preflight.
+        await using (var existing = CreateCampaignCommand(connection, transaction, request.CampaignId,
+            "SELECT request_hash FROM {{schema}}.save_transactions WHERE campaign_id=@campaign_id AND (transaction_id=@transaction_id OR idempotency_key=@key);"))
+        {
+            AddParameter(existing, "@campaign_id", request.CampaignId); AddParameter(existing, "@transaction_id", request.TransactionId); AddParameter(existing, "@key", request.IdempotencyKey);
+            if (await existing.ExecuteScalarAsync(cancellationToken) is string saved)
+            {
+                if (saved != requestHash) throw GameplayAuthority.Error("GAMEPLAY_REPLAY_CONFLICT", "The durable transaction identity has another payload.");
+                await transaction.CommitAsync(cancellationToken); return;
+            }
+        }
+        await GateAsync(connection, transaction, request, requestHash, GameplayPersistencePhase.Admit, cancellationToken);
+
         var activeVersion = await GetActiveVersionAsync(
             connection,
             transaction,
@@ -161,6 +245,14 @@ public sealed class SqlServerCampaignPersistenceStore(
         {
             throw new InvalidOperationException(
                 $"Stale parent version. Expected {request.ExpectedParentVersion}, canonical state is {activeVersion}.");
+        }
+
+        await using (var pending = CreateCampaignCommand(connection, transaction, request.CampaignId,
+            "SELECT TOP (1) transaction_id FROM {{schema}}.save_transactions WHERE campaign_id=@campaign_id AND status<>N'Completed';"))
+        {
+            AddParameter(pending, "@campaign_id", request.CampaignId);
+            if (await pending.ExecuteScalarAsync(cancellationToken) is string)
+                throw GameplayAuthority.Error("GAMEPLAY_PERSISTENCE_UNKNOWN", "Reconcile the existing campaign transaction before staging a competing candidate version.");
         }
 
         var candidateVersion = checked(activeVersion + 1);
@@ -335,6 +427,10 @@ public sealed class SqlServerCampaignPersistenceStore(
         var stored = await FindTransactionAsync(campaignId, transactionId, null, cancellationToken)
             ?? throw new InvalidOperationException("The requested persistence transaction does not exist.");
 
+        var request = JsonSerializer.Deserialize<CommitCampaignRequest>(stored.RequestJson)
+            ?? throw GameplayAuthority.Error("GAMEPLAY_PERSISTENCE_UNKNOWN", "The frozen transaction requires integrity recovery.");
+        await InspectAsync(request, stored.RequestHash, cancellationToken);
+
         if (stored.Status == "Completed")
         {
             return await ReadCompletedResultAsync(campaignId, transactionId, cancellationToken);
@@ -347,7 +443,7 @@ public sealed class SqlServerCampaignPersistenceStore(
 
         if (stored.Status is "FailedActivation")
         {
-            return Failure(stored.CandidateVersion, stored.FailureReason ?? "Activation failed and requires continuity resolution.");
+            return Failure(stored.CandidateVersion, "Activation failed and requires continuity resolution of the original transaction.");
         }
 
         try
@@ -358,14 +454,15 @@ public sealed class SqlServerCampaignPersistenceStore(
                 ?? throw new InvalidOperationException("Activated transaction could not be reloaded.");
             return await FinalizeActivationReadbackAsync(refreshed, cancellationToken);
         }
-        catch (Exception exception) when (exception is not OperationCanceledException)
+        catch (Exception exception) when (exception is not OperationCanceledException and not ManagedServiceException)
         {
-            logger.LogWarning(exception, "Eternal Cycle persistence transaction {TransactionId} failed validation or activation.", transactionId);
+            logger.LogWarning("Eternal Cycle transaction {TransactionId} failed validation or activation ({ExceptionType}).", transactionId, exception.GetType().Name);
             var failureStatus = exception.Message.Contains("active version", StringComparison.OrdinalIgnoreCase)
                 ? "FailedActivation"
                 : "FailedValidation";
-            await MarkFailedAsync(campaignId, transactionId, failureStatus, exception.Message, cancellationToken);
-            return Failure(stored.CandidateVersion, exception.Message);
+            const string reason = "Candidate validation or activation failed. Recover the original transaction using authorized diagnostics.";
+            await MarkFailedAsync(campaignId, transactionId, failureStatus, reason, cancellationToken);
+            return Failure(stored.CandidateVersion, reason, exception);
         }
     }
 
@@ -420,7 +517,8 @@ public sealed class SqlServerCampaignPersistenceStore(
 
             UPDATE {{schema}}.save_transactions
             SET status = N'CandidateValidated', failure_reason = NULL
-            WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id;
+            WHERE campaign_id = @campaign_id AND transaction_id = @transaction_id
+              AND status NOT IN (N'Completed', N'ActivatedPendingReadback', N'FailedReadback', N'FailedDurability');
             """))
         {
             AddParameter(validation, "@validation_id", $"VAL-{Guid.NewGuid():N}");
@@ -435,10 +533,22 @@ public sealed class SqlServerCampaignPersistenceStore(
 
     private async Task ActivateCandidateAsync(StoredTransaction stored, CancellationToken cancellationToken)
     {
+        if (BeforeGameplayActivation is not null) await BeforeGameplayActivation(cancellationToken);
         await using var connection = await OpenConnectionAsync(cancellationToken);
         await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(
             IsolationLevel.Serializable,
             cancellationToken);
+
+        var request = JsonSerializer.Deserialize<CommitCampaignRequest>(stored.RequestJson)!;
+        await GateAsync(connection, transaction, request, stored.RequestHash, GameplayPersistencePhase.Inspect, cancellationToken);
+        await using (var status = CreateCampaignCommand(connection, transaction, stored.CampaignId,
+            "SELECT status FROM {{schema}}.save_transactions WHERE campaign_id=@campaign_id AND transaction_id=@transaction_id;"))
+        {
+            AddParameter(status, "@campaign_id", stored.CampaignId); AddParameter(status, "@transaction_id", stored.TransactionId);
+            if (await status.ExecuteScalarAsync(cancellationToken) is "Completed" or "ActivatedPendingReadback" or "FailedReadback" or "FailedDurability")
+            { await transaction.CommitAsync(cancellationToken); return; }
+        }
+        await GateAsync(connection, transaction, request, stored.RequestHash, GameplayPersistencePhase.Activate, cancellationToken);
 
         var activeVersion = await GetActiveVersionAsync(
             connection,
@@ -515,7 +625,16 @@ public sealed class SqlServerCampaignPersistenceStore(
                 stored.CandidateVersion,
                 cancellationToken);
 
-            await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(cancellationToken);
+            await using var transaction = (SqlTransaction)await connection.BeginTransactionAsync(IsolationLevel.Serializable, cancellationToken);
+            var request = JsonSerializer.Deserialize<CommitCampaignRequest>(stored.RequestJson)!;
+            await GateAsync(connection, transaction, request, stored.RequestHash, GameplayPersistencePhase.Inspect, cancellationToken);
+            await using (var status = CreateCampaignCommand(connection, transaction, stored.CampaignId,
+                "SELECT status FROM {{schema}}.save_transactions WHERE campaign_id=@campaign_id AND transaction_id=@transaction_id;"))
+            {
+                AddParameter(status, "@campaign_id", stored.CampaignId); AddParameter(status, "@transaction_id", stored.TransactionId);
+                if (await status.ExecuteScalarAsync(cancellationToken) is "Completed")
+                { await transaction.CommitAsync(cancellationToken); return await ReadCompletedResultAsync(stored.CampaignId, stored.TransactionId, cancellationToken); }
+            }
             await using var command = CreateCampaignCommand(connection, transaction, stored.CampaignId, """
                 UPDATE {{schema}}.persistence_receipts
                 SET
@@ -536,18 +655,20 @@ public sealed class SqlServerCampaignPersistenceStore(
             AddParameter(command, "@transaction_id", stored.TransactionId);
             AddParameter(command, "@validation_evidence", $"Candidate and activated campaign version were read back successfully. {durabilityEvidence}");
             await command.ExecuteNonQueryAsync(cancellationToken);
+            await GateAsync(connection, transaction, request, stored.RequestHash, GameplayPersistencePhase.ValidateReceipt, cancellationToken);
             await transaction.CommitAsync(cancellationToken);
 
             return await ReadCompletedResultAsync(stored.CampaignId, stored.TransactionId, cancellationToken);
         }
-        catch (Exception exception) when (exception is not OperationCanceledException)
+        catch (Exception exception) when (exception is not OperationCanceledException and not ManagedServiceException)
         {
             var failureStatus = exception.Message.Contains("recovery", StringComparison.OrdinalIgnoreCase) ||
                 exception.Message.Contains("durability", StringComparison.OrdinalIgnoreCase)
                 ? "FailedDurability"
                 : "FailedReadback";
-            await MarkFailedAsync(stored.CampaignId, stored.TransactionId, failureStatus, exception.Message, cancellationToken);
-            return Failure(stored.CandidateVersion, exception.Message);
+            const string reason = "Activated readback or durability verification failed. Reconcile the original transaction before completion.";
+            await MarkFailedAsync(stored.CampaignId, stored.TransactionId, failureStatus, reason, cancellationToken);
+            return Failure(stored.CandidateVersion, reason, exception);
         }
     }
 
@@ -585,7 +706,8 @@ public sealed class SqlServerCampaignPersistenceStore(
             PersistenceMarkers.Saved,
             reader.GetString(2),
             reader.GetFieldValue<DateTimeOffset>(3));
-        return new CommitResult(PersistenceMarkers.Saved, "Completed", true, receipt.CampaignVersion, receipt, null);
+        return new CommitResult(PersistenceMarkers.Saved, "Completed", !bindingPolicy.Enabled, receipt.CampaignVersion, receipt, null)
+        { GameplayCompletionRequired = bindingPolicy.Enabled };
     }
 
     private async Task<StoredTransaction?> FindTransactionAsync(
@@ -774,7 +896,7 @@ public sealed class SqlServerCampaignPersistenceStore(
     private SqlCommand CreateCommand(SqlConnection connection, SqlTransaction? transaction, string text) =>
         new(text, connection, transaction) { CommandTimeout = settings.CommandTimeoutSeconds };
 
-    private SqlCommand CreateCampaignCommand(
+    internal SqlCommand CreateCampaignCommand(
         SqlConnection connection,
         SqlTransaction? transaction,
         string campaignId,
@@ -790,8 +912,8 @@ public sealed class SqlServerCampaignPersistenceStore(
     private static string ComputeHash(string value) =>
         Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
 
-    private static CommitResult Failure(long? version, string reason) =>
-        new(PersistenceMarkers.Failed, "Failed", false, version, null, reason);
+    private static CommitResult Failure(long? version, string reason, Exception? cause = null) =>
+        new(PersistenceMarkers.Failed, "Failed", false, version, null, reason) { FailureCause = cause };
 
     private sealed record StoredTransaction(
         string TransactionId,

@@ -90,7 +90,8 @@ public sealed partial class SqlServerPlayerInteractionStore
         var receipt = new GameplayEntryReceipt("ENTRY-" + entry.Fingerprint, entry.Request.RequestId, value.InteractionId,
             binding.BindingId, value.CampaignId, binding.Generation, next.Revision, binding.Evidence, rules,
             context.Canon.Evidence, decision is null ? null : new(status.PendingDecision!, decision.ProtectedQuestionReference,
-                decision.AllowedResponseScopeReference), next.UpdatedAt, value.CorrelationId);
+                decision.AllowedResponseScopeReference), next.UpdatedAt, value.CorrelationId)
+        { MutationScope = Array.AsReadOnly(context.Canon.Plan.MutationScope.ToArray()) };
         await WriteEntryAsync(connection, transaction, scope.Key, value.InteractionId, prior with { Receipt = receipt, FailureCode = null, Reads = context.Canon.Evidence }, false, token);
         await SaveAsync(connection, transaction, next, false, token);
         BeforeEntryCommit?.Invoke();

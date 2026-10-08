@@ -65,7 +65,14 @@ public sealed record CommitResult(
     bool TurnMayComplete,
     long? CampaignVersion,
     PersistenceReceipt? Receipt,
-    string? FailureReason);
+    string? FailureReason)
+{
+    // A validated save unit is not a completed Player Interaction. E seals the
+    // response disposition separately after the complete affected-set check.
+    public bool GameplayCompletionRequired { get; init; }
+    // Keep the cause available to authorized diagnostic code, never MCP JSON.
+    internal Exception? FailureCause { get; init; }
+}
 
 public sealed record PersistenceStatus(
     string Marker,

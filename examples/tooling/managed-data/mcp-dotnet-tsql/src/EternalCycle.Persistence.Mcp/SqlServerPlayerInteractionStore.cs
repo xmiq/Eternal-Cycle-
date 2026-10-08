@@ -18,7 +18,8 @@ public sealed partial class SqlServerPlayerInteractionStore(IOptions<SqlServerPe
          OR (interactions.interaction_state = N'AWAITING_PLAYER_INPUT' AND NOT EXISTS (
              SELECT 1 FROM {{schema}}.player_pending_decisions AS decisions
              WHERE decisions.scope_key = interactions.scope_key AND decisions.binding_id = interactions.binding_id
-               AND decisions.origin_interaction_id = interactions.interaction_id
+               AND (decisions.origin_interaction_id = interactions.interaction_id OR
+                    decisions.decision_id = JSON_VALUE(interactions.interaction_json, '$.RespondingToDecisionId'))
                AND decisions.decision_id = JSON_VALUE(interactions.interaction_json, '$.PendingDecisionId'))))
         """;
     private readonly SqlServerPersistenceOptions settings = options.Value;
@@ -62,7 +63,8 @@ public sealed partial class SqlServerPlayerInteractionStore(IOptions<SqlServerPe
         var value = new PlayerInteractionRecord("PI-" + Guid.NewGuid().ToString("N"), scope.Key, submissionHash, fingerprint,
             binding.BindingId, binding.Generation, binding.CampaignId, binding.Evidence, evidence.Origin,
             evidence.ProvenanceReference, evidence.InputReference, evidence.InputSha256, evidence.SubmittedAt, correlationId,
-            PlayerInteractionState.RECEIVED, 1, null, decision?.DecisionId, null, null, false, now, now);
+            PlayerInteractionState.RECEIVED, 1, null, decision?.DecisionId, null, null, false, now, now)
+        { DecisionResponse = evidence.DecisionResponse };
         await SaveAsync(connection, transaction, value, insert: true, token);
         AfterInteractionInsert?.Invoke(); // Deterministic rollback/cancellation tests; no production injection.
         if (decision is not null)
@@ -241,13 +243,18 @@ public sealed partial class SqlServerPlayerInteractionStore(IOptions<SqlServerPe
         }
         var blocked = await BlockingInteractionAsync(connection, transaction, scope.Key, value.BindingId, token);
         var persistenceKnown = current is not null && current.PendingTransactionId is null && !value.PersistenceUnknown;
+        var entryReceipt = entryOptions?.Value.Enabled == true ? (await ReadEntryAsync(connection, transaction, scope.Key, value.InteractionId, null, token))?.Receipt : null;
         return new PlayerInteractionStatus(value.InteractionId, value.BindingId, value.CampaignId, value.BindingGeneration, value.StartingEvidence.CampaignVersion,
             value.State, value.Revision, value.CorrelationId, PlayerInteractionLifecycle.Yielded(value.State), valid,
             valid && !blocked && persistenceKnown, blocked || decision is not null || !persistenceKnown,
             visibleDecision is null ? null : new(visibleDecision.DecisionId, visibleDecision.OriginInteractionId, visibleDecision.State, visibleDecision.Revision, visibleDecision.RelatedInteractionId),
             value.RespondingToDecisionId, value.SuccessorInteractionId, value.Origin, value.SubmissionHash, current?.PendingTransactionId,
             currentBinding?.BindingId, currentBinding?.State)
-        { GameplayEntryCompleted = entryOptions?.Value.Enabled == true && (await ReadEntryAsync(connection, transaction, scope.Key, value.InteractionId, null, token))?.Receipt is not null };
+        { GameplayEntryCompleted = entryReceipt is not null, GameplayEntryReceiptId = entryReceipt?.ReceiptId,
+            Gameplay = value.Gameplay is null ? null : new(value.Gameplay.Baseline.CampaignVersion, value.Gameplay.PendingTransactionId,
+                Array.AsReadOnly(value.Gameplay.Admissions.Where(item => item.TransactionId != value.Gameplay.PendingTransactionId).Select(item => item.TransactionId).ToArray()),
+                value.State == PlayerInteractionState.COMPLETED && value.Gameplay.CompletedNarrationAuthorized,
+                value.State == PlayerInteractionState.AWAITING_PLAYER_INPUT && value.Gameplay.QuestionPresentationAuthorized && visibleDecision?.State == PlayerDecisionState.Pending) };
     }
 
     private async Task<T> TransactionAsync<T>(CampaignBindingScope scope, Func<SqlConnection, SqlTransaction, Task<T>> execute, CancellationToken token)
@@ -318,6 +325,8 @@ public sealed partial class SqlServerPlayerInteractionStore(IOptions<SqlServerPe
 
     private async Task SaveAsync(SqlConnection connection, SqlTransaction transaction, PlayerInteractionRecord value, bool insert, CancellationToken token)
     {
+        if (JsonSerializer.Serialize(value, Json).Length > 65_536)
+            throw Error("GAMEPLAY_AUTHORITY_INVALID", "Interaction evidence exceeds its supported bound; narrow the work unit.");
         await using var command = Command(connection, transaction, insert ? """
             INSERT INTO {{schema}}.player_interactions
                 (scope_key, interaction_id, submission_hash, submission_fingerprint, binding_id, binding_generation, campaign_id,

@@ -99,6 +99,7 @@ builder.Services.AddSingleton<CampaignBindingService>();
 builder.Services.AddOptions<PlayerInteractionOptions>().Bind(builder.Configuration.GetSection("EternalCycle:PlayerInteraction"));
 builder.Services.AddSingleton<ISqlCampaignBindingSwitchSafety, SqlPlayerInteractionSwitchSafety>();
 builder.Services.AddOptions<GameplayEntryOptions>().Bind(builder.Configuration.GetSection("EternalCycle:GameplayEntry"));
+builder.Services.AddOptions<GameplayAuthorityOptions>().Bind(builder.Configuration.GetSection("EternalCycle:GameplayAuthority"));
 builder.Services.AddSingleton<SqlServerPlayerInteractionStore>();
 builder.Services.AddSingleton<IPlayerInteractionStore>(services => services.GetRequiredService<SqlServerPlayerInteractionStore>());
 builder.Services.AddSingleton<IGameplayEntryStore>(services => services.GetRequiredService<SqlServerPlayerInteractionStore>());
@@ -110,6 +111,7 @@ builder.Services.AddSingleton<SqlServerCampaignPersistenceStore>();
 builder.Services.AddSingleton<ICampaignPersistenceStore>(services => services.GetRequiredService<SqlServerCampaignPersistenceStore>());
 builder.Services.AddSingleton<IDurabilityService, SqlServerDurabilityService>();
 builder.Services.AddSingleton<PersistenceCoordinator>();
+builder.Services.AddSingleton<GameplayAuthorityService>();
 builder.Services.AddSingleton<IServiceDiagnostics, ServiceDiagnostics>();
 
 if (workerCommand is not null)

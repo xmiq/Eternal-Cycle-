@@ -26,7 +26,12 @@ public interface ITrustedPlayerSubmissionIngress
 public sealed record TrustedPlayerSubmission(string PrincipalId, string LogicalSessionId, string AuthorityId,
     string SubmissionId, string BindingId, TrustedSubmissionOrigin Origin, string ProvenanceReference,
     string InputReference, string InputSha256, DateTimeOffset SubmittedAt,
-    string? PendingDecisionId = null, long? PendingDecisionRevision = null);
+    string? PendingDecisionId = null, long? PendingDecisionRevision = null)
+{
+    // Only the trusted ingress can attest interpretation of this actual response.
+    [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]
+    public TrustedDecisionResponse? DecisionResponse { get; init; }
+}
 
 // The normal storage entry point cannot take raw bytes or an unverified assertion.
 // Only the service, after invoking the trusted adapter, constructs this input.
@@ -48,7 +53,9 @@ public sealed record PlayerInteractionStatus(string InteractionId, string Bindin
 {
     // A durable D receipt records entry, never a general mutation grant (E).
     public bool GameplayEntryCompleted { get; init; }
+    public string? GameplayEntryReceiptId { get; init; }
     public bool GameplayMutationAuthorized => false;
+    public GameplayProgressStatus? Gameplay { get; init; }
 }
 
 public sealed record PlayerInteractionAcceptance(PlayerInteractionStatus Status, bool Reused);
@@ -66,12 +73,22 @@ internal sealed record PlayerInteractionRecord(string InteractionId, string Scop
     string InputReference, string InputSha256, DateTimeOffset SubmittedAt, string CorrelationId,
     PlayerInteractionState State, long Revision, string? PendingDecisionId, string? RespondingToDecisionId,
     string? SuccessorInteractionId, PlayerInteractionState? RecoveryState, bool PersistenceUnknown,
-    DateTimeOffset CreatedAt, DateTimeOffset UpdatedAt);
+    DateTimeOffset CreatedAt, DateTimeOffset UpdatedAt)
+{
+    [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]
+    public GameplayProgress? Gameplay { get; init; }
+    [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]
+    public TrustedDecisionResponse? DecisionResponse { get; init; }
+}
 
 internal sealed record PlayerDecisionRecord(string DecisionId, string ScopeKey, string BindingId,
     string CampaignId, string OriginInteractionId, long StartingCampaignVersion, string ProtectedQuestionReference,
     string AllowedResponseScopeReference, PlayerDecisionState State, long Revision, string? RelatedInteractionId,
-    string CorrelationId);
+    string CorrelationId)
+{
+    [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)]
+    public TrustedDecisionResponse? Response { get; init; }
+}
 
 internal enum PlayerInteractionOwner { Entry, Persistence, Yield, Recovery }
 
@@ -117,7 +134,8 @@ public sealed class PlayerInteractionService(IPlayerInteractionStore store, IOpt
                 !Bounded(evidence.InputSha256, 64) || evidence.InputSha256.Length != 64 || evidence.InputSha256.Any(value => !char.IsAsciiHexDigit(value)) ||
                 evidence.InputSha256 != evidence.InputSha256.ToUpperInvariant() || evidence.SubmittedAt == default ||
                 (evidence.PendingDecisionId is null) != (evidence.PendingDecisionRevision is null) ||
-                evidence.PendingDecisionId is not null && (!Bounded(evidence.PendingDecisionId, 128) || evidence.PendingDecisionRevision <= 0))
+                evidence.PendingDecisionId is not null && (!Bounded(evidence.PendingDecisionId, 128) || evidence.PendingDecisionRevision <= 0) ||
+                !GameplayAuthority.ValidResponse(evidence.DecisionResponse, evidence.PendingDecisionId))
                 throw InvalidProvenance();
             return await store.AcceptAsync(scope, new VerifiedPlayerSubmission(evidence), correlation, token);
         }, token);

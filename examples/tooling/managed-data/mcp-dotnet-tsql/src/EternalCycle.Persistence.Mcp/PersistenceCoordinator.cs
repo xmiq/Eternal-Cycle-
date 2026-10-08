@@ -45,6 +45,9 @@ public sealed class PersistenceCoordinator(ICampaignPersistenceStore store)
         CancellationToken cancellationToken)
     {
         Validate(request);
+        request = request with { AffectedOwnerDomains = Array.AsReadOnly(request.AffectedOwnerDomains.ToArray()),
+            Mutations = Array.AsReadOnly(request.Mutations.Select(mutation => mutation with
+                { References = mutation.References is null ? null : Array.AsReadOnly(mutation.References.ToArray()) }).ToArray()) };
         var requestHash = ComputeHash(JsonSerializer.Serialize(request, CanonicalJsonOptions));
         var result = await store.CommitAsync(request, requestHash, cancellationToken);
         return EnforceReceiptBoundary(result);
@@ -55,6 +58,7 @@ public sealed class PersistenceCoordinator(ICampaignPersistenceStore store)
         CancellationToken cancellationToken)
     {
         Validate(request);
+        request = request with { AffectedOwnerDomains = Array.AsReadOnly(request.AffectedOwnerDomains.ToArray()), Patches = Array.AsReadOnly(request.Patches.ToArray()) };
         var requestHash = ComputeHash(JsonSerializer.Serialize(request, CanonicalJsonOptions));
         var records = await store.ReadRecordsAsync(
             request.CampaignId,
@@ -280,7 +284,8 @@ public sealed class PersistenceCoordinator(ICampaignPersistenceStore store)
     private static CommitResult EnforceReceiptBoundary(CommitResult result)
     {
         if (result.Marker == PersistenceMarkers.Saved &&
-            (!result.TurnMayComplete || result.Receipt is null || result.Status != "Completed"))
+            ((!result.TurnMayComplete && !result.GameplayCompletionRequired) || result.Receipt is null || result.Status != "Completed" ||
+                result.GameplayCompletionRequired && result.TurnMayComplete))
         {
             return new CommitResult(
                 PersistenceMarkers.Failed,

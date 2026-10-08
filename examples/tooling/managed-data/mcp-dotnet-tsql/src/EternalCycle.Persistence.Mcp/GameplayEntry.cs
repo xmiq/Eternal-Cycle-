@@ -31,7 +31,11 @@ public sealed record GameplayEntryReadRequirement(EntryCanonRole Role, RecordAdd
 public sealed record GameplayEntrySessionPlan(string InputSha256, string CampaignMode,
     IReadOnlyList<string> ModuleIds, IReadOnlyList<string> QueryTerms,
     IReadOnlyList<string> RequiredRuleSourceIds, IReadOnlyList<string> RequiredSnippetIds,
-    IReadOnlyList<GameplayEntryReadRequirement> Reads);
+    IReadOnlyList<GameplayEntryReadRequirement> Reads)
+{
+    // Exact existing-owner permissions, authored in Canon, never a tool grant.
+    public IReadOnlyList<GameplayMutationPermission> MutationScope { get; init; } = [];
+}
 
 public sealed record GameplayEntryReadEvidence(EntryCanonRole Role, RecordAddress? Address, long? Revision,
     string? PayloadSha256, EntryCanonStatus Status, EntryCanonVisibility Visibility, string? AbsenceReason = null);
@@ -46,7 +50,10 @@ public sealed record GameplayEntryReceipt(string ReceiptId, string RequestId, st
     string BindingId, string CampaignId, long BindingGeneration, long InteractionRevision,
     CampaignBindingEvidence Baseline, GameplayEntryRuleEvidence Rules,
     IReadOnlyList<GameplayEntryReadEvidence> Reads, GameplayEntryDecisionContext? Decision,
-    DateTimeOffset EnteredAt, string CorrelationId);
+    DateTimeOffset EnteredAt, string CorrelationId)
+{
+    public IReadOnlyList<GameplayMutationPermission> MutationScope { get; init; } = [];
+}
 
 public sealed record GameplayEntryDecisionContext(PlayerDecisionStatus Status,
     string ProtectedQuestionReference, string AllowedResponseScopeReference);
@@ -205,7 +212,7 @@ public sealed class GameplayEntryService(IGameplayEntryStore store, IGameplayEnt
                 // recover the receipt, not a competing or newly interpreted context.
                 if (!completed.Recovered) completed = completed with { Context = new(compiled, legacy, canon.Records) };
                 result = new(true, completed.Recovered ? "GAMEPLAY_ENTRY_RECOVERED" : "GAMEPLAY_ENTRY_OPEN",
-                    "Mandatory entry evidence is durable. Legacy mutation/yield enforcement remains a separate gate.", completed, RetrySafe: true);
+                    "Mandatory entry evidence is durable. Every write and response disposition requires the interaction authority gate.", completed, RetrySafe: true);
             }
         }
         catch (OperationCanceledException) { throw; }
@@ -258,6 +265,6 @@ public sealed class GameplayEntryService(IGameplayEntryStore store, IGameplayEnt
 public sealed class GameplayEntryTools(GameplayEntryService service)
 {
     [McpServerTool(Name = "ec_begin_gameplay_interaction", Idempotent = true),
-     Description("Validate mandatory rules and minimum Canon for an existing trusted player interaction. Cannot create input, select a campaign, choose an option or apply gameplay effects. Entry integration checkpoint; legacy writes are not yet interaction-gated.")]
+     Description("Validate mandatory rules and minimum Canon for an existing trusted player interaction. Cannot create input, select a campaign, choose an option or apply gameplay effects. All writes and completed responses require separate durable authority checks.")]
     public Task<ManagedOperationResult<GameplayEntryResult>> BeginAsync(GameplayEntryRequest request, CancellationToken token) => service.BeginAsync(request, token);
 }
